@@ -1,0 +1,81 @@
+-- @version 		$Id:$
+-- @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+-- @author			caballeroantonio (caballeroantonio.com)
+-- @package			com_jtca
+-- @subpackage		com_jtca.admin
+-- @copyright		Copyright (c) 2017 - 2020. All Rights Reserved
+-- @license			GNU General Public License version 3 or later - See http://www.gnu.org/copyleft/gpl.html 
+--
+-- The following Component Architect header section must remain in any distribution of this file
+--
+-- @CAversion		Id:1.0.0.sql 19 2012-01-12 16:33:49Z BrianWade $
+-- @CAauthor		Component Architect (www.componentarchitect.com)
+-- @CApackage		architectcomp
+-- @CAsubpackage	architectcomp.admin
+-- @CAtemplate		joomla_3_4_standard (Release 1.0.1)
+-- @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved
+-- @CAlicense		GNU General Public License version 3 or later - See http://www.gnu.org/copyleft/gpl.html
+--
+-- This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+--
+-- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY, without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+-- --------------------------------------------------------
+--
+-- Updates to table `jt_ljc01s`
+--
+--
+-- Updates to table `jt_ljc02s`
+--
+--
+-- Updates to table `jt_ljc03s`
+--
+--
+-- Updates to table `jt_ljc04s`
+--
+--
+-- Updates to table `jt_ljc05s`
+--
+--
+-- Updates to table `jt_ljc06s`
+--
+--
+-- Updates to table `jt_ljc07s`
+--
+--
+-- Updates to table `jt_ljc08s`
+--
+--
+-- Updates to table `jt_ljc09s`
+--
+--
+-- Updates to table `jt_ljc10s`
+--
+--
+-- Updates to table `jt_ljc12s`
+--
+--
+-- Updates to table `jt_ljc13s`
+--
+--
+-- Updates to table `jt_ljc14s`
+--
+--
+-- Updates to table `jt_ljc16s`
+--
+--
+-- Updates to table `jt_ljc17s`
+--
+--
+-- Updates to table `jt_ljc18s`
+--
+--
+-- Updates to table `jt_ljc19s`
+--
+--
+-- Updates to table `jt_ljc20s`
+--
+--
+-- Updates to table `jt_ljc21s`
+--
