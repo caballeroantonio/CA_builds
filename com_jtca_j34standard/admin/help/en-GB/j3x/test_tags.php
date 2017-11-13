@@ -2388,9 +2388,9 @@ architectcomp=jtca
             {OBJECT_FIELD}
             FIELD_NAME=Expediente
             FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
+            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p><br/> El expediente es opcional en los libros de oficios
+            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p><br/> El expediente es opcional en los libros de oficios
+            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p><br/> El expediente es opcional en los libros de oficios 
             FIELDTYPE_ID=33
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
@@ -2398,7 +2398,7 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=Expediente
             FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
+            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente El expediente es opcional en los libros de oficios
             
 
 

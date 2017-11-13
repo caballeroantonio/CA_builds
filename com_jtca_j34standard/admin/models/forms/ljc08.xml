@@ -89,7 +89,6 @@
             label="COM_JTCA_LJC08S_FIELD_ID_EXPEDIENTE_LABEL"
             description="COM_JTCA_LJC08S_FIELD_ID_EXPEDIENTE_DESC"
             class="modal"
-			required="true"
 			default="0"
         >
         </field>  
