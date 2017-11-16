@@ -112,8 +112,8 @@
 		/>
     </fieldset>
     <fieldset
-        name="fieldset_jc03_fs"
-        label="COM_JTCA_LJC03S_FIELDSET_JC03_FS_LABEL"
+        name="fieldset_ljc03_fs"
+        label="COM_JTCA_LJC03S_FIELDSET_LJC03_FS_LABEL"
     >
 
         <field

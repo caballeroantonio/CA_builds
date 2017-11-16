@@ -54,6 +54,83 @@ class JtCaControllerLjc16 extends JControllerForm
 		$this->view_list = 'ljc16s';
 	}
 	/**
+	 * Method override to check if you can add a new record.
+	 *
+	 * @param	array	$data	An array of input data.
+	 *
+	 * @return	boolean
+	 * 
+	 */
+	protected function allowAdd($data = array())
+	{
+
+		$user		= JFactory::getUser();
+		// Check create access on the object.
+		$result = $user->authorise('core.create', 'com_jtca');
+		if($result === null)
+		{
+			// In the absense of better information, revert to the component permissions.
+			return parent::allowAdd($data);		
+		}
+		else
+		{
+			return $result;
+		}		
+	}			
+	/**
+	 * Method override to check if you can edit an existing record.
+	 *
+	 * @param	array	$data	An array of input data.
+	 * @param	string	$key	The name of the key for the primary key.
+	 *
+	 * @return	boolean
+	 * 
+	 */
+	protected function allowEdit($data = array(), $key = 'id')
+	{
+
+		$record_id	= (int) isset($data[$key]) ? $data[$key] : 0;
+		$user		= JFactory::getUser();
+		$user_id		= $user->get('id');
+		// Check general edit permission first.
+		if ($user->authorise('core.edit', 'com_jtca'))
+		{
+			return true;
+		}
+		// Fallback on edit.own.
+		// First test if the permission is available.
+		if ($user->authorise('core.edit.own', 'com_jtca'))
+		{
+			// Now test the owner is the user.
+			$owner_id = 0;
+
+			if ( isset($data['created_by']))
+			{
+				$owner_id	= (int) $data['created_by'];
+			}
+
+			if ($owner_id == 0 AND $record_id) 
+			{
+				// Need to do a lookup from the model.
+				$record		= $this->getModel()->getItem($record_id);
+
+				if (empty($record)) 
+				{
+					return false;
+				}
+				$owner_id = $record->created_by;
+			}
+
+			// If the owner matches 'me' then do the test.
+			if ($owner_id == $user_id) 
+			{
+				return true;
+			}
+		}
+		// Since there is no asset tracking, revert to the component permissions.
+		return parent::allowEdit($data, $key);
+	}
+	/**
 	 * Function that allows child controller access to model data after the data has been saved.
 	 *
 	 * @param   JModelLegacy  $model  The data model object.

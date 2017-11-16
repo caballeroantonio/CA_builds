@@ -79,6 +79,42 @@ class JtCaModelLjc14 extends JModelItem
 
 		parent::__construct($config);
 	}
+	/**	
+	 * Method to test whether a record can be deleted.
+	 *
+	 * @param	object	record	A record object.
+	 * @return	boolean	True if allowed to delete the record. Defaults to the permission set in the component.
+	 */
+	protected function canDelete($record)
+	{
+		$user = JFactory::getUser();
+	
+		if ($record->state != -2)
+		{
+			return ;
+		}
+		if (!empty($record->id))
+		{
+			return $user->authorise('core.delete', 'com_jtca')
+					  OR ($user->authorise('core.delete.own', 'com_jtca')
+					  AND $record->created_by == $user->id);
+		}
+		return ;
+	}
+
+	/**
+	 * Method to test whether a record can have its state changed.
+	 *
+	 * @param	object	A record object.
+	 * @return	boolean	True if allowed to change the state of the record. Defaults to the permission set in the component.
+	 */
+	protected function canEditState($record)
+	{
+		$user = JFactory::getUser();
+
+		// Default to component settings.			
+		return $user->authorise('core.edit.state', 'com_jtca');
+	}
 	/**
 	 * Method to auto-populate the model state.
 	 *
@@ -113,7 +149,14 @@ class JtCaModelLjc14 extends JModelItem
 		// TODO: Tune these values based on other permissions.
 		$user		= JFactory::getUser();
 			
-		$this->setState('filter.published', 1);			
+		if ((!$user->authorise('core.edit.state', 'com_jtca')) AND  (!$user->authorise('core.edit', 'com_jtca')))
+		{
+			$this->setState('filter.published', 1);
+		}
+		else
+		{
+			$this->setState('filter.published', array(0, 1, 2));
+		}		
 
 		if ($params->get('filter_ljc14_archived'))
 		{
@@ -179,11 +222,13 @@ class JtCaModelLjc14 extends JModelItem
 				
 					
 
+				$can_publish = $user->authorise('core.edit.state', 'com_jtca');
 				//  Do not show unless today's date is within the publish up and down dates (or they are empty)
 				// Filter by published status.
 				$published = $this->getState('filter.published');
 				$archived = $this->getState('filter.archived');
 				if (is_numeric($published) 
+						AND !$can_publish
 					)
 				{
 					$query->where('('.$db->quoteName('a.state').' = ' . (int) $published . ' OR '.$db->quoteName('a.state').' = ' . (int) $archived . ')');
@@ -305,6 +350,63 @@ class JtCaModelLjc14 extends JModelItem
 				}
 
 
+				// Compute selected asset permissions.
+
+				// Technically guest could edit an ljc14, but lets not check that to improve performance a little.
+				if (!$user->get('guest')) 
+				{
+					$user_id	= $user->get('id');
+					$asset	= 'com_jtca';
+
+					// Check general edit permission first.
+					if ($user->authorise('core.edit', $asset)) 
+					{
+						$item->params->set('access-edit', true);
+					}
+					// Now check if edit.own is available.
+					else
+					{ 
+						if (!empty($user_id) AND $user->authorise('core.edit.own', $asset)) 
+						{
+						// Check for a valid user and that they are the owner.
+							if ($user_id == $item->created_by) 
+							{
+								$item->params->set('access-edit', true);
+								// If owner allow them to edit state in front end
+								$item->params->set('access-change', true);
+								
+							}
+						}
+					}
+
+					if ($user->authorise('core.create', $asset))
+					{
+						$item->params->set('access-create', true);
+					}	
+					
+					if ($user->authorise('core.delete', $asset)) 
+					{
+						$item->params->set('access-delete', true);
+					}
+					// Now check if delete.own is available.
+					else
+					{
+						
+						if (!empty($user_id) AND $user->authorise('core.delete.own', $asset)) 
+						{
+							// Check for a valid user and that they are the owner.
+							if ($user_id == $item->created_by) 
+							{
+								$item->params->set('access-delete', true);
+							}
+						}
+					}
+				// Check edit state permission.
+					if ($user->authorise('core.edit.state', $asset)) 
+					{				
+						$item->params->set('access-change', true);
+					}											
+				}
 
 
 				$this->_item[$pk] = $item;
@@ -347,6 +449,22 @@ class JtCaModelLjc14 extends JModelItem
 		// Include the jtca plugins for the change of state event.
 		JPluginHelper::importPlugin('jtca');
 
+		// Access checks.
+		foreach ($pks as $i => $pk)
+		{
+			$table->reset();
+
+			if ($table->load($pk))
+			{
+				if (!$this->canEditState($table))
+				{
+					// Prune items that you can't change.
+					unset($pks[$i]);
+					JError::raiseWarning(403, JText::_('JLIB_APPLICATION_ERROR_EDITSTATE_NOT_PERMITTED'));
+					return false;
+				}
+			}
+		}
 
 		// Attempt to change the state of the records.
 		if (!$table->publish($pks, $value, $user->get('id')))
@@ -411,6 +529,15 @@ class JtCaModelLjc14 extends JModelItem
 
 			if ($table->load($pk))
 			{
+				// Access checks.
+				if (!$this->canEditState($table))
+				{
+					// Prune items that you can't change.
+					unset($pks[$i]);
+					JError::raiseWarning(403, JText::_('JLIB_APPLICATION_ERROR_EDITSTATE_NOT_PERMITTED'));
+					$allowed = false;
+					continue;
+				}
 				
 				$where = array();
 				$where = $this->getReorderConditions($table);
@@ -469,7 +596,14 @@ class JtCaModelLjc14 extends JModelItem
 		{
 			$table->load((int) $pk);
 
-			if ($table->ordering != $order[$i])
+			// Access checks.
+			if (!$this->canEditState($table))
+			{
+				// Prune items that you can't change.
+				unset($pks[$i]);
+				JError::raiseWarning(403, JText::_('JLIB_APPLICATION_ERROR_EDITSTATE_NOT_PERMITTED'));
+			}
+			elseif ($table->ordering != $order[$i])
 			{
 				$table->ordering = $order[$i];
 
@@ -537,6 +671,8 @@ class JtCaModelLjc14 extends JModelItem
 
 			if ($table->load($pk))
 			{
+				if ($this->canDelete($table))
+				{
 					// Trigger the BeforeDelete event.
 					$result = $dispatcher->trigger('onLjc14BeforeDelete', array('com_jtca.ljc14', &$table));
 					if (in_array(false, $result, true))
@@ -552,6 +688,23 @@ class JtCaModelLjc14 extends JModelItem
 
 					// Trigger the AfterDelete event.
 					$dispatcher->trigger('onLjc14AfterDelete', array('com_jtca.ljc14', &$table));
+				}
+				else
+				{
+					// Prune items that you can't change.
+					unset($pks[$i]);
+					$error = $this->getError();
+					if ($error)
+					{
+						JError::raiseWarning(500, $error);
+						return false;
+					}
+					else
+					{
+						JError::raiseWarning(403, JText::_('JLIB_APPLICATION_ERROR_DELETE_NOT_PERMITTED'));
+						return false;
+					}
+				}
 			}
 			else
 			{

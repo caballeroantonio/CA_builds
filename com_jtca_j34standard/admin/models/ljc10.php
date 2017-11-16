@@ -81,6 +81,36 @@ class JtCaModelLjc10 extends JModelAdmin
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}	
+	/**	
+	 * Method to test whether a record can be deleted.
+	 *
+	 * @param	object	record	A record object.
+	 * @return	boolean	True if allowed to delete the record. Defaults to the permission set in the component.
+	 */
+	protected function canDelete($record)
+	{
+		$user = JFactory::getUser();
+	
+		if ($record->state != -2)
+		{
+			return false;
+		}
+		return $user->authorise('core.delete', 'com_jtca');
+	}
+
+	/**
+	 * Method to test whether a record can have its state changed.
+	 *
+	 * @param	object	A record object.
+	 * @return	boolean	True if allowed to change the state of the record. Defaults to the permission set in the component.
+	 */
+	protected function canEditState($record)
+	{
+		$user = JFactory::getUser();
+
+		// Default to component settings.			
+		return parent::canEditState($record);
+	}
 	/**
 	 * Method to get a single record.
 	 *
@@ -140,6 +170,19 @@ class JtCaModelLjc10 extends JModelAdmin
 		{
 			$id =  $jinput->get('id', 0);
 		}		
+		// Modify the form based on access controls.
+		if (!$this->canEditState((object) $data))
+		{
+			// Disable fields for display.
+
+			$form->setFieldAttribute('ordering', 'disabled', 'true');
+			$form->setFieldAttribute('state', 'disabled', 'true');
+
+			// Disable fields while saving.
+			// The controller has already verified this is a record you can edit.
+			$form->setFieldAttribute('ordering', 'filter', 'unset');
+			$form->setFieldAttribute('state', 'filter', 'unset');
+		}
 
 		
 		return $form;

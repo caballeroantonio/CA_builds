@@ -60,6 +60,7 @@ $list_dirn	= $this->state->get('list.direction');
 
 $layout		= $this->params->get('ljc21_layout', 'default');
 
+$can_create	= $user->authorise('core.create', 'com_jtca');
 // Get from global settings the text to use for an empty field
 $component = JComponentHelper::getComponent( 'com_jtca' );
 $empty = $component->params->get('default_empty_field', '');
@@ -145,9 +146,11 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JHtml::_('grid.sort',  'COM_JTCA_HEADING_ORDERING', 'a.ordering', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>	
+					<?php if ($show_actions) : ?>
 						<th width="12%" class="list-actions">
 							<?php echo JText::_('COM_JTCA_HEADING_ACTIONS'); ?>						
 						</th> 					
+					<?php endif; ?>
 				</tr>
 			</thead>
 			<?php endif; ?>
@@ -156,6 +159,10 @@ $empty = $component->params->get('default_empty_field', '');
 
 				<?php foreach ($this->items as $i => $item) :
 				
+					$can_edit	= $item->params->get('access-edit');
+			
+					$can_delete	= $item->params->get('access-delete');
+
 							
 				?>			
 					<?php $params = $item->params; ?>		
@@ -341,16 +348,24 @@ $empty = $component->params->get('default_empty_field', '');
 						</td>
 					<?php endif; ?>
 					
+					<?php if ($show_actions) : ?>
 						<td class="list-actions">
+							<?php if ($can_edit OR $can_delete ) : ?>
 								<ul class="actions">
+									<?php if ($can_edit ) : ?>
 										<li class="edit-icon">
 											<?php echo JHtml::_('ljc21icon.edit',$item, $params); ?>
 										</li>
+									<?php endif; ?>					
+									<?php if ($can_delete) : ?>
 										<li class="delete-icon">
 											<?php echo JHtml::_('ljc21icon.delete',$item, $params); ?>
 										</li>
+									<?php endif; ?>					
 								</ul>
+							<?php endif; ?>
 						</td>															
+					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
@@ -380,7 +395,9 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php endif; ?>
 		<?php // Code to add a link to submit an ljc21. ?>
 		<?php if ($this->params->get('show_ljc21_add_link', 1)) : ?>
-			<?php echo JHtml::_('ljc21icon.create', $this->params); ?>
+			<?php if ($can_create) : ?>
+				<?php echo JHtml::_('ljc21icon.create', $this->params); ?>
+			<?php  endif; ?>
 		<?php endif; ?>		
                 <?php echo '<button>export</button>'//JHtml::_('ljc21icon.create', $this->params); ?>
 	</form>

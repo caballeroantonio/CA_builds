@@ -52,6 +52,7 @@ class JtCaViewLjc21 extends JViewLegacy
 		$this->form		= $this->get('Form');
 		$this->item		= $this->get('Item');
 		$this->state	= $this->get('State');
+		$this->can_do = JHelperContent::getActions('com_jtca');
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
@@ -86,19 +87,32 @@ class JtCaViewLjc21 extends JViewLegacy
 				'ljc21s.png'
 		);
 
+		// If not checked out, can save the item.
+		if (($this->can_do->get('core.edit') 
+			OR $this->can_do->get('core.create') 
+			OR ($this->can_do->get('core.edit.own') AND $this->item->created_by == $user_id)
+			)
+			) 
+		{
+			JToolbarHelper::apply('ljc21.apply', 'JTOOLBAR_APPLY');
+			JToolbarHelper::save('ljc21.save', 'JTOOLBAR_SAVE');
 
-		JToolbarHelper::apply('ljc21.apply', 'JTOOLBAR_APPLY');
-		JToolbarHelper::save('ljc21.save', 'JTOOLBAR_SAVE');
-
-		JToolbarHelper::custom('ljc21.save2new', 'save-new.png', 'save-new_f2.png', 'JTOOLBAR_SAVE_AND_NEW', false);
+			if ($this->can_do->get('core.create'))
+			{
+				JToolbarHelper::custom('ljc21.save2new', 'save-new.png', 'save-new_f2.png', 'JTOOLBAR_SAVE_AND_NEW', false);
+			}
+		}
 		// If an existing item, can save to a copy.
-		if (!$is_new )
+		if (!$is_new AND $this->can_do->get('core.create'))		
 		{
 			JToolbarHelper::custom('ljc21.save2copy', 'save-copy.png', 'save-copy_f2.png', 'JTOOLBAR_SAVE_AS_COPY', false);
 		}
 
 		if ($this->state->params->get('save_history', 1) AND $this->state->params->get('ljc21_save_history', 1)
 			AND !$is_new  
+				AND ($this->can_do->get('core.edit') 
+				OR ($this->can_do->get('core.edit.own') AND $this->item->created_by == $user_id)
+				)
 			)
 		{
 			$item_id = $this->item->id;

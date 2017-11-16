@@ -113,6 +113,13 @@ class JtCaTableLjc19s extends JTable
 		{
 			$array['field8_isMoral'] = '0';
 		}
+		
+		// Bind the rules.
+		if (isset($array['rules']) AND is_array($array['rules']))
+		{
+			$rules = new JAccessRules($array['rules']);
+			$this->setRules($rules);
+		}
 
 		return parent::bind($array, $ignore);
 	}
@@ -224,5 +231,53 @@ class JtCaTableLjc19s extends JTable
 		// Attempt to store the data.
 		return parent::store($update_nulls);
 	}	
+	/**
+	 * Method to compute the default name of the asset.
+	 * The default name is in the form `table_name.id`
+	 * where id is the value of the primary key of the table.
+	 *
+	 * @return      string
+	 * 
+	 */
+	protected function _getAssetName()
+	{
+		return 'com_jtca';
+	}
+	
+	/**
+	 * Method to return the title to use for the asset table.
+	 *
+	 * @return      string
+	 * 
+	 */
+	protected function _getAssetTitle()
+	{
+		return $this->id;
+		
+	}
+	
+	/**
+	 * Get the parent asset id for the record
+	 *
+	 * @param   JTable   $table  A JTable object for the asset parent.
+	 * @param	integer  $id     Id to look up
+	 * 
+	 * @return  integer
+	 * 
+	 */
+	protected function _getAssetParentId(JTable $table = null, $id = null)
+	{
+		
+		$asset = JTable::getInstance('Asset');
+		
+		if ($asset->loadByName('com_jtca'))
+		{
+			return $asset->id;
+		}
+		else
+		{		
+			return $asset->getRootId();
+		}	
+	}
 }
 

@@ -118,7 +118,7 @@ $params = $this->state->get('params');
 <?php */?>
         			<!-- end fields basic-details-->
                     <!-- begin fields fieldset-[%%FIELDSET_CODE_NAME%%]-->
-					<?php foreach($this->form->getFieldset('fieldset_jc13_fs') as $field): ?>
+					<?php foreach($this->form->getFieldset('fieldset_ljc13_fs') as $field): ?>
 						<?php if (!$field->hidden) : ?>
 							<?php $fieldname = (string) $field->fieldname; ?>
 							
@@ -188,8 +188,10 @@ $params = $this->state->get('params');
 		<fieldset>
 <?php /*?>			<ul class="nav nav-tabs">
 				<li class="active"><a href="#basic-details" data-toggle="tab"><?php echo JText::_('COM_JTCA_LJC13S_FIELDSET_DETAILS_LABEL');?></a></li>
-				<li><a href="#fieldset-jc13_fs" data-toggle="tab"><?php echo JText::_('COM_JTCA_LJC13S_FIELDSET_JC13_FS_LABEL');?></a></li>
+				<li><a href="#fieldset-ljc13_fs" data-toggle="tab"><?php echo JText::_('COM_JTCA_LJC13S_FIELDSET_LJC13_FS_LABEL');?></a></li>
+				<?php if ($this->item->params->get('access-change')): ?>
 				<li><a href="#publishing" data-toggle="tab"><?php echo JText::_('COM_JTCA_FIELDSET_PUBLISHING_LABEL');?></a></li>
+				<?php endif; ?>				
 			</ul>		<?php */?>
 		
 		
@@ -200,7 +202,9 @@ $params = $this->state->get('params');
 
 
 				
+				<?php if ($this->item->params->get('access-change')): ?>
 						
+				<?php endif; ?>
 				<input type="hidden" name="task" value="" />
 				<input type="hidden" name="form_id" id="form_id" value="ljc13-form" />
 				<input type="hidden" name="return" value="<?php echo $this->return_page;?>" />

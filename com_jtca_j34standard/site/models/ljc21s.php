@@ -130,7 +130,15 @@ class JtCaModelLjc21s extends JModelList
 		$id_expediente = $app->getUserStateFromRequest($this->context.'.filter.id_expediente', 'filter_id_expediente', '', 'int');
 		$this->setState('filter.id_expediente', $id_expediente);
 				
-		$this->setState('filter.published', 1);		
+		if ((!$user->authorise('core.edit.state', 'com_jtca')) AND  (!$user->authorise('core.edit', 'com_jtca')))
+		{
+			// filter on status of published for those who do not have edit or edit.state rights.
+			$this->setState('filter.published', 1);
+		}
+		else
+		{
+			$this->setState('filter.published', array(0, 1, 2));
+		}		
 
 		
 		if ($params->get('filter_ljc21_archived'))
@@ -549,6 +557,52 @@ class JtCaModelLjc21s extends JModelList
 						default:
 							$item->display_date = 0;
 							break;
+					}
+				}
+				// Compute the asset access permissions.
+				// Technically guest could edit an ljc21, but lets not check that to improve performance a little.
+				if (!$guest) 
+				{
+					$asset	= 'com_jtca';
+
+					// Check general edit permission first.
+					if ($user->authorise('core.edit', $asset))
+					{
+						$item->params->set('access-edit', true);
+					}
+					// Now check if edit.own is available.
+					else
+					{ 
+						if (!empty($user_id) AND $user->authorise('core.edit.own', $asset)) 
+						{
+							// Check for a valid user and that they are the owner.
+							if ($user_id == $item->created_by) 
+							{
+								$item->params->set('access-edit', true);
+							}
+						}
+					}
+					if ($user->authorise('core.create', $asset))
+					{
+						$item->params->set('access-create', true);
+					}	
+						
+					
+					if ($user->authorise('core.delete', $asset)) 
+					{
+						$item->params->set('access-delete', true);
+					}
+					// Now check if delete.own is available.
+					else
+					{ 
+						if (!empty($user_id) AND $user->authorise('core.delete.own', $asset)) 
+						{
+							// Check for a valid user and that they are the owner.
+							if ($user_id == $item->created_by) 
+							{
+								$item->params->set('access-delete', true);
+							}
+						}
 					}
 				}
 

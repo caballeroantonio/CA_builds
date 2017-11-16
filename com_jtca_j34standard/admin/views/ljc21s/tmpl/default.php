@@ -65,6 +65,7 @@ $search		= $this->state->get('filter.search','');
 // Get from global settings the text to use for an empty field
 $component = JComponentHelper::getComponent( 'com_jtca' );
 $empty = $component->params->get('default_empty_field', '');
+$can_order	= $user->authorise('core.edit.state', 'com_jtca');
 
 $save_order	= ($list_order=='ordering' OR $list_order=='a.ordering');
 
@@ -139,6 +140,13 @@ if ($save_order)
 				$item->max_ordering = 0; //??
 				$ordering	= ($list_order=='ordering' OR $list_order=='a.ordering');
 				$can_change = true;
+				$can_edit	= $user->authorise('core.edit',	'com_jtca');
+		
+				$can_edit_own	= $user->authorise('core.edit.own',		'com_jtca') 
+								AND $item->created_by == $user_id
+								;
+				$can_change	= $user->authorise('core.edit.state',	'com_jtca') 
+								;
 							
 				?>
 				<tr class="row<?php echo $i % 2; ?>">

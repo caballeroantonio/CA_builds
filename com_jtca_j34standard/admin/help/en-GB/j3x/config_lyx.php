@@ -66,6 +66,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LJC19S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC19S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC20S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC20S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC21S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC21S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= '\textbf{' . $this->jtext2lyx('COM_JTCA_PERMISSIONS_LABEL'). '} & \textbf{' . $this->jtext2lyx('COM_JTCA_PERMISSIONS_DESC'). '} \tabularnewline\hline '. "\r\n";
 
         return $output;
     }

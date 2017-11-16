@@ -61,6 +61,21 @@ class JtCaViewLjc03Form extends JViewLegacy
 		$item = $this->item;
 
 
+		if (empty($item->id))
+		{
+			$authorised = $user->authorise('core.create', 'com_jtca') 
+			;
+		}
+		else
+		{
+			$authorised = $item->params->get('access-edit');
+		}
+
+		if ($authorised !== true)
+		{
+			JError::raiseError(403, JText::_('JERROR_ALERTNOAUTHOR'));
+			return false;
+		}
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))

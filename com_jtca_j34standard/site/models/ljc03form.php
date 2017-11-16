@@ -204,6 +204,56 @@ class JtCaModelLjc03Form extends JtCaModelLjc03
 			$item->modified_by_name = $user->name;
 		}
 		
+		$asset	= 'com_jtca';
+
+		// Check general edit permission first.
+		if ($user->authorise('core.edit', $asset)) 
+		{
+			$item->params->set('access-edit', true);
+		}
+		// Now check if edit.own is available.
+		else 
+		{
+			if (!empty($user_id) AND $user->authorise('core.edit.own', $asset)) 
+			{
+				// Check for a valid user and that they are the owner.
+				if ($user_id == $item->created_by) 
+				{
+					$item->params->set('access-edit', true);
+				}
+			}
+		}
+		if ($user->authorise('core.create', $asset))
+		{
+			$item->params->set('access-create', true);
+		}	
+		if ($user->authorise('core.delete', $asset)) 
+		{
+			$item->params->set('access-delete', true);
+		}
+		// Now check if delete.own is available.
+		else
+		{ 
+			if (!empty($user_id) AND $user->authorise('core.delete.own', $asset)) 
+			{
+				// Check for a valid user and that they are the owner.
+				if ($user_id == $item->created_by) 
+				{
+					$item->params->set('access-delete', true);
+				}
+			}
+		}
+		// Check edit state permission.
+		if ($item_id)
+		{
+			// Existing item
+			$item->params->set('access-change', $user->authorise('core.edit.state', $asset));
+		}
+		else
+		{
+			// New item.
+			$item->params->set('access-change', $user->authorise('core.edit.state', 'com_jtca'));
+		}
 		
 
 				
@@ -222,10 +272,20 @@ class JtCaModelLjc03Form extends JtCaModelLjc03
 	 */
 	public function validate($form, $data, $group = null)
 	{
+		$this->setAccessFilters($form, $data);
 
 		return parent::validate($form, $data, $group);
 	}
 
+	protected function setAccessFilters(&$form, $data)
+	{
+		$user = JFactory::getUser();
+
+		if (!$user->authorise('core.edit.state', 'com_jtca'))
+		{
+			$form->setFieldAttribute('state', 'filter', 'unset');
+		}
+	}
 
 	/**
 	 * Method to get the data that should be injected in the form.
@@ -280,6 +340,17 @@ class JtCaModelLjc03Form extends JtCaModelLjc03
 		{
 			$table->load($pk);
 			$is_new = false;
+		}
+		else
+		{
+			// Save the default (empty) rules for the component
+			$actions = JAccess::getActions('com_jtca');
+			$action_array = array();
+			foreach ($actions as $action)
+			{
+				$action_array[$action->name] = array(); 
+			}
+			$data['rules'] = $action_array;
 		}
 		
 		// Bind the data.

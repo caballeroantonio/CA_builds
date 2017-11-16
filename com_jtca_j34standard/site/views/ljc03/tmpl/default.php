@@ -52,6 +52,8 @@ if ($lang->isRTL())
 $params		= &$this->item->params;
 $user		= JFactory::getUser();
 
+$can_edit	= $params->get('access-edit');
+$can_delete	= $params->get('access-delete');
 // Get from global settings the text to use for an empty field
 $component = JComponentHelper::getComponent( 'com_jtca' );
 $empty = $component->params->get('default_empty_field', '');
@@ -72,6 +74,8 @@ $empty = $component->params->get('default_empty_field', '');
 	<?php if ($params->get('show_ljc03_icons',-1) >= 0) : ?>
 		<?php if ($params->get('show_ljc03_print_icon') 
 			OR $params->get('show_ljc03_email_icon') 
+			OR $can_edit 
+			OR $can_delete 
 			): ?>
 			<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
@@ -88,12 +92,16 @@ $empty = $component->params->get('default_empty_field', '');
 										<?php echo JHtml::_('ljc03icon.email',  $this->item, $params); ?>
 								</li>
 							<?php endif; ?>
+							<?php if ($can_edit) : ?>
 								<li class="edit-icon">
 									<?php echo JHtml::_('ljc03icon.edit', $this->item, $params); ?>
 								</li>
+							<?php endif; ?>
+							<?php if ($can_delete) : ?>
 								<li class="delete-icon">
 									<?php echo JHtml::_('ljc03icon.delete',$this->item, $params); ?>
 								</li>					
+							<?php endif; ?>
 					<?php else : ?>
 						<li>
 							<?php echo JHtml::_('ljc03icon.print_screen',  $this->item, $params); ?>
@@ -144,7 +152,7 @@ $empty = $component->params->get('default_empty_field', '');
 			?>
 			<?php if ($display_fieldset) : ?>				
 				<fieldset>	
-					<legend><?php echo JText::_('COM_JTCA_LJC03S_FIELDSET_JC03_FS_LABEL'); ?></legend>
+					<legend><?php echo JText::_('COM_JTCA_LJC03S_FIELDSET_LJC03_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
 						<?php if ($params->get('show_ljc03_id_expediente')) : ?>
@@ -557,6 +565,7 @@ $empty = $component->params->get('default_empty_field', '');
 					</time>
 				</div>
 			<?php endif; ?>	
+			<?php if ($params->get('access-change')): ?>
 				<?php if ($params->get('show_ljc03_admin')) : ?>
 				
 					<div class="formelm">
@@ -592,6 +601,7 @@ $empty = $component->params->get('default_empty_field', '');
 					</div>	
 				<?php endif; ?>
 				
+			<?php endif; ?>
 			
 			<?php if ($display_fieldset) : ?>				
 					</fieldset>	

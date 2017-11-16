@@ -104,9 +104,9 @@ $input = $app->input;
                         echo $this->form->renderField('version_note', null, null, array('group_id' => 'field_version_note')); 
 					 ?>
 			<?php echo JHtml::_('bootstrap.endTab'); ?>
-			<?php echo JHtml::_('bootstrap.addTab', 'ljc17-tabs', 'fieldset-jc17_fs', JText::_('COM_JTCA_LJC17S_FIELDSET_JC17_FS_LABEL', true)); ?>
+			<?php echo JHtml::_('bootstrap.addTab', 'ljc17-tabs', 'fieldset-ljc17_fs', JText::_('COM_JTCA_LJC17S_FIELDSET_LJC17_FS_LABEL', true)); ?>
 			<div class="row-fluid form-horizontal-desktop">
-				<?php foreach($this->form->getFieldset('fieldset_jc17_fs') as $field): ?>
+				<?php foreach($this->form->getFieldset('fieldset_ljc17_fs') as $field): ?>
 					<?php if (!$field->hidden) : ?>
 						<?php $fieldname = (string) $field->fieldname; ?>
 						

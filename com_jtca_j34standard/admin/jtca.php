@@ -30,6 +30,11 @@ defined('_JEXEC') or die;
 
 JHtml::_('behavior.tabstate');
 
+// Access check.
+if (!JFactory::getUser()->authorise('core.manage', 'com_jtca'))
+{
+	return JError::raiseWarning(404, JText::_('JERROR_ALERTNOAUTHOR'));
+}
 
 // Include dependancies
 JLoader::register('JtCaHelper', __DIR__ . '/helpers/jtca.php');

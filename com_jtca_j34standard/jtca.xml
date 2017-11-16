@@ -397,6 +397,21 @@
                     <option	value="0">JNO</option>
                 </field>
             </fieldset>
+            <fieldset
+                name="global-permissions"
+                label="COM_JTCA_PERMISSIONS_LABEL"
+                description="COM_JTCA_PERMISSIONS_DESC"
+	        >
+                <field
+                    name="rules"
+                    type="rules"
+                    label="COM_JTCA_PERMISSIONS_LABEL"
+                    filter="rules"
+                    validate="rules"
+                    component="com_jtca"
+                    section="component"
+		        />
+            </fieldset>
         </fields>
     </config>    
 </extension>

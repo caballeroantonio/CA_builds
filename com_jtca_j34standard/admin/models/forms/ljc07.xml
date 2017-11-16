@@ -79,9 +79,9 @@
 		/>
     </fieldset>
     <fieldset
-        name="fieldset_jc07_fs"
-        label="COM_JTCA_LJC07S_FIELDSET_JC07_FS_LABEL"
-        description="COM_JTCA_LJC07S_FIELDSET_JC07_FS_DESC"
+        name="fieldset_ljc07_fs"
+        label="COM_JTCA_LJC07S_FIELDSET_LJC07_FS_LABEL"
+        description="COM_JTCA_LJC07S_FIELDSET_LJC07_FS_DESC"
     >
         <field
             name="id_expediente"

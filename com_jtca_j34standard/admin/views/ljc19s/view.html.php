@@ -38,6 +38,7 @@ class JtCaViewLjc19s extends JViewLegacy
 	protected $pagination;
 	protected $state;
 	protected $creators;
+	protected $can_do;
 	protected $id_expediente_values;
 
 	/**
@@ -56,6 +57,7 @@ class JtCaViewLjc19s extends JViewLegacy
 		$this->filterForm    = $this->get('FilterForm');
 		$this->activeFilters = $this->get('ActiveFilters');
 		
+		$this->can_do = JHelperContent::getActions('com_jtca');
 				
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
@@ -85,9 +87,17 @@ class JtCaViewLjc19s extends JViewLegacy
 			
 		JToolbarHelper::title(JText::_('COM_JTCA_LJC19S_LIST_HEADER'), 'stack ljc19s');
 
-		JToolbarHelper::addNew('ljc19.add','JTOOLBAR_NEW');
+		if ($this->can_do->get('core.create')) 
+		{
+			JToolbarHelper::addNew('ljc19.add','JTOOLBAR_NEW');
+		}
 		
-		JToolbarHelper::editList('ljc19.edit','JTOOLBAR_EDIT');
+		if ($this->can_do->get('core.edit') OR $this->can_do->get('core.edit.own')) 
+		{
+			JToolbarHelper::editList('ljc19.edit','JTOOLBAR_EDIT');
+		}
+		if ($this->can_do->get('core.edit.state') ) 
+		{
 
 			if ($this->state->get('filter.state') != 2)
 			{
@@ -109,22 +119,32 @@ class JtCaViewLjc19s extends JViewLegacy
 					}
 				}
 			}
+		}
 		
 
 	
 		if ($this->state->get('filter.state') == -2)
 		{
-			JToolbarHelper::deleteList('', 'ljc19s.delete','JTOOLBAR_EMPTY_TRASH');
+			if ($this->can_do->get('core.delete'))
+			{
+				JToolbarHelper::deleteList('', 'ljc19s.delete','JTOOLBAR_EMPTY_TRASH');
+			}
 		}
 		else 
 		{
-			JToolbarHelper::trash('ljc19s.trash','JTOOLBAR_TRASH');
+			if ($this->can_do->get('core.edit.state')) 
+			{
+				JToolbarHelper::trash('ljc19s.trash','JTOOLBAR_TRASH');
+			}
 		}
                         
                 JToolbarHelper::custom('ljc19s.export', 'download','download', 'JTOOLBAR_EXPORT', FALSE);
 
 				
-		JToolbarHelper::preferences('com_jtca');
+		if ($user->authorise('core.admin', 'com_jtca') OR $user->authorise('core.options', 'com_jtca')) 
+		{
+			JToolbarHelper::preferences('com_jtca');
+		}
 		JToolbarHelper::help('JHELP_COMPONENTS_COM_JTCA_LJC19', true, null, 'com_jtca');
 	}
 	/**

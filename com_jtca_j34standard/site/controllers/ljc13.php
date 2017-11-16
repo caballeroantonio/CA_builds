@@ -61,6 +61,142 @@ class JtCaControllerLjc13 extends JControllerForm
 	}
 
 	/**
+	 * Method override to check if you can add a new record.
+	 *
+	 * @param	array	$data	An array of input data.
+	 *
+	 * @return	boolean
+	 * 
+	 */
+	protected function allowAdd($data = array())
+	{
+		$user		= JFactory::getUser();
+		$allow		= null;
+		if ($allow === null)
+		{
+			// In the absense of better information, revert to the component permissions.
+			return parent::allowAdd();
+		}
+		else
+		{
+			return $allow;
+		}
+	}
+
+	/**
+	 * Method override to check if you can edit an existing record.
+	 *
+	 * @param	array	$data	An array of input data.
+	 * @param	string	$key	The name of the key for the primary key; default is id
+	 *
+	 * @return	boolean
+	 * 
+	 */
+	protected function allowEdit($data = array(), $key = 'id')
+	{
+		$record_id	= (int) isset($data[$key]) ? $data[$key] : 0;
+		$user		= JFactory::getUser();
+		$asset		= 'com_jtca';
+		// Check general edit permission first.
+		if ($user->authorise('core.edit', $asset))
+		{
+			return true;
+		}
+
+		// Fallback on edit.own.
+		// First test if the permission is available.
+		if ($user->authorise('core.edit.own', $asset))
+		{
+			$owner_id = 0;
+			// Now test the owner is the user.
+			if (isset($data['created_by']))
+			{ 
+				$owner_id	= (int) $data['created_by'];
+			}
+			if (empty($owner_id) AND $record_id)
+			{
+				// Need to do a lookup from the model.
+				$record		= $this->getModel('ljc13form')->getItem($record_id);
+
+				if (empty($record))
+				{
+					return false;
+				}
+
+				$owner_id = $record->created_by;
+			}
+
+			// If the owner matches 'me' then do the test.
+			if ($owner_id == $user->id)
+			{
+				return true;
+			}
+		}
+
+		// Since there is no asset tracking, revert to the component permissions.
+		return parent::allowEdit($data, $key);
+	}
+	/**
+	 * Method override to check if you can delete an existing record.
+	 *
+	 * @param	array	$data	An array of input data.
+	 * @param	string	$key	The name of the key for the primary key; default is id
+	 *
+	 * @return	boolean
+	 *
+	 */
+	protected function allowDelete($data = array(), $key = 'id')
+	{
+		$record_id	= (int) isset($data[$key]) ? $data[$key] : 0;
+		$user		= JFactory::getUser();
+		$asset		= 'com_jtca';
+
+		// Check general delete permission.
+		if ($user->authorise('core.delete', $asset))
+		{
+			return true;
+		}
+
+		// Fallback on delete.own.
+		// First test if the permission is available.
+		if ($user->authorise('core.delete.own', $asset))
+		{
+			$owner_id = 0;
+			// Now test the owner is the user.
+			if (isset($data['created_by']))
+			{ 
+				$owner_id	= (int) $data['created_by'];
+			}
+			if (empty($owner_id) AND $record_id)
+			{
+				// Need to do a lookup from the model.
+				$record		= $this->getModel('ljc13form')->getItem($record_id);
+
+				if (empty($record))
+				{
+					return false;
+				}
+
+				$owner_id = $record->created_by;
+			}
+
+			// If the owner matches 'me' then do the test.
+			if ($owner_id == $user_id)
+			{
+				return true;
+			}
+			// If the owner matches 'me' then do the test.
+			if ($owner_id == $user->id)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}		
+	}	
+	/**
 	 * Method to get a model object, loading it if required.
 	 *
 	 * @param	string	$name	The model name. Optional.
@@ -189,6 +325,13 @@ class JtCaControllerLjc13 extends JControllerForm
 		// Get the id of the group to edit.
 		$record_id =  (int) (empty($ids) ? $this->input->getInt('id') : array_pop($ids));
 
+		// Access check
+		if (!$this->allowEdit(array('id' => $record_id))) 
+		{
+			JError::raiseError(403, JText::_('JERROR_ALERTNOAUTHOR'));
+
+			return false;
+		}
 
 		// Get the menu item model.
 		$model = $this->getModel('ljc13form');
@@ -441,6 +584,13 @@ class JtCaControllerLjc13 extends JControllerForm
 		// Get the id of the group to edit.
 		$id =  (int) (empty($ids) ? $this->input->getInt('id') : array_pop($ids));
 
+		// Access check
+		if (!$this->allowDelete(array('id' => $id))) 
+		{
+			JError::raiseError(403, JText::_('JERROR_ALERTNOAUTHOR'));
+
+			return false;
+		}
 
 		// Get the menu item model.
 		$model = $this->getModel('ljc13');
