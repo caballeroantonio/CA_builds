@@ -88,3 +88,8 @@ DELETE FROM `#__assets` WHERE `name` LIKE '%com_jtca%';
 DELETE FROM `#__extensions` WHERE `name`='com_jtca' AND `type`='component';
 DELETE FROM `#__menu` WHERE `title`='COM_JTCA' AND `type`='component';
 
+#[ %%IF GENERATE_CATEGORIES%%] 
+DELETE FROM `#__categories` WHERE `extension`='com_jtca';
+DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.category';
+DELETE FROM `#__menu` WHERE `title`='COM_JTCA_CATEGORIES' AND `type`='component';
+#[ %%ENDIF GENERATE_CATEGORIES%%]

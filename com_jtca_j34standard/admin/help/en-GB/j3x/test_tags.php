@@ -33,14 +33,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC01
     compobject=ljc01
+    CompObject=Ljc01
     
     compobject_name=libro de gobierno
+    CompObject_name=LIBRO DE GOBIERNO
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC01S
     compobjectplural=ljc01s
+    CompObjectPlural=Ljc01s
     compobject_plural_name=jc01
     CompObject_plural_name=Jc01
     compobject_short_plural_name=jc01
@@ -363,14 +366,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC02
     compobject=ljc02
+    CompObject=Ljc02
     
     compobject_name=libro de ingresos de valores
+    CompObject_name=LIBRO DE INGRESOS DE VALORES
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC02S
     compobjectplural=ljc02s
+    CompObjectPlural=Ljc02s
     compobject_plural_name=jc02
     CompObject_plural_name=Jc02
     compobject_short_plural_name=jc02
@@ -633,14 +639,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC03
     compobject=ljc03
+    CompObject=Ljc03
     
     compobject_name=libro de egresos de valores
+    CompObject_name=LIBRO DE EGRESOS DE VALORES
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC03S
     compobjectplural=ljc03s
+    CompObjectPlural=Ljc03s
     compobject_plural_name=jc03
     CompObject_plural_name=Jc03
     compobject_short_plural_name=jc03
@@ -1183,14 +1192,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC04
     compobject=ljc04
+    CompObject=Ljc04
     
     compobject_name=libro de registro de promociones
+    CompObject_name=LIBRO DE REGISTRO DE PROMOCIONES
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC04S
     compobjectplural=ljc04s
+    CompObjectPlural=Ljc04s
     compobject_plural_name=jc04
     CompObject_plural_name=Jc04
     compobject_short_plural_name=jc04
@@ -1373,14 +1385,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC05
     compobject=ljc05
+    CompObject=Ljc05
     
     compobject_name=libro de turno para sentencia
+    CompObject_name=LIBRO DE TURNO PARA SENTENCIA
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC05S
     compobjectplural=ljc05s
+    CompObjectPlural=Ljc05s
     compobject_plural_name=jc05
     CompObject_plural_name=Jc05
     compobject_short_plural_name=jc05
@@ -1663,14 +1678,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC06
     compobject=ljc06
+    CompObject=Ljc06
     
     compobject_name=libro de recursos de apelacin
+    CompObject_name=LIBRO DE RECURSOS DE APELACIN
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC06S
     compobjectplural=ljc06s
+    CompObjectPlural=Ljc06s
     compobject_plural_name=jc06
     CompObject_plural_name=Jc06
     compobject_short_plural_name=jc06
@@ -2033,14 +2051,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC07
     compobject=ljc07
+    CompObject=Ljc07
     
     compobject_name=libro de exhortos
+    CompObject_name=LIBRO DE EXHORTOS
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC07S
     compobjectplural=ljc07s
+    CompObjectPlural=Ljc07s
     compobject_plural_name=jc07
     CompObject_plural_name=Jc07
     compobject_short_plural_name=jc07
@@ -2363,14 +2384,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC08
     compobject=ljc08
+    CompObject=Ljc08
     
     compobject_name=libro de oficios
+    CompObject_name=LIBRO DE OFICIOS
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC08S
     compobjectplural=ljc08s
+    CompObjectPlural=Ljc08s
     compobject_plural_name=jc08
     CompObject_plural_name=Jc08
     compobject_short_plural_name=jc08
@@ -2593,14 +2617,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC09
     compobject=ljc09
+    CompObject=Ljc09
     
     compobject_name=libro de actuarios
+    CompObject_name=LIBRO DE ACTUARIOS
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC09S
     compobjectplural=ljc09s
+    CompObjectPlural=Ljc09s
     compobject_plural_name=jc09
     CompObject_plural_name=Jc09
     compobject_short_plural_name=jc09
@@ -2903,14 +2930,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC10
     compobject=ljc10
+    CompObject=Ljc10
     
     compobject_name=libro de auxiliares de la administracin de justicia
+    CompObject_name=LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC10S
     compobjectplural=ljc10s
+    CompObjectPlural=Ljc10s
     compobject_plural_name=jc10
     CompObject_plural_name=Jc10
     compobject_short_plural_name=jc10
@@ -3233,14 +3263,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC12
     compobject=ljc12
+    CompObject=Ljc12
     
     compobject_name=libro de registro de amparos
+    CompObject_name=LIBRO DE REGISTRO DE AMPAROS
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC12S
     compobjectplural=ljc12s
+    CompObjectPlural=Ljc12s
     compobject_plural_name=jc12
     CompObject_plural_name=Jc12
     compobject_short_plural_name=jc12
@@ -3623,14 +3656,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC13
     compobject=ljc13
+    CompObject=Ljc13
     
     compobject_name=libro de control de fianzas
+    CompObject_name=LIBRO DE CONTROL DE FIANZAS
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC13S
     compobjectplural=ljc13s
+    CompObjectPlural=Ljc13s
     compobject_plural_name=jc13
     CompObject_plural_name=Jc13
     compobject_short_plural_name=jc13
@@ -3933,14 +3969,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC14
     compobject=ljc14
+    CompObject=Ljc14
     
     compobject_name=libro de control de multas
+    CompObject_name=LIBRO DE CONTROL DE MULTAS
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC14S
     compobjectplural=ljc14s
+    CompObjectPlural=Ljc14s
     compobject_plural_name=jc14
     CompObject_plural_name=Jc14
     compobject_short_plural_name=jc14
@@ -4263,14 +4302,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC16
     compobject=ljc16
+    CompObject=Ljc16
     
     compobject_name=agenda de audiencias
+    CompObject_name=AGENDA DE AUDIENCIAS
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC16S
     compobjectplural=ljc16s
+    CompObjectPlural=Ljc16s
     compobject_plural_name=jc16
     CompObject_plural_name=Jc16
     compobject_short_plural_name=jc16
@@ -4493,14 +4535,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC17
     compobject=ljc17
+    CompObject=Ljc17
     
     compobject_name=libro de remisin al archivo
+    CompObject_name=LIBRO DE REMISIN AL ARCHIVO
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC17S
     compobjectplural=ljc17s
+    CompObjectPlural=Ljc17s
     compobject_plural_name=jc17
     CompObject_plural_name=Jc17
     compobject_short_plural_name=jc17
@@ -4783,14 +4828,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC18
     compobject=ljc18
+    CompObject=Ljc18
     
     compobject_name=libro de remisin de documentos al archivo
+    CompObject_name=LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC18S
     compobjectplural=ljc18s
+    CompObjectPlural=Ljc18s
     compobject_plural_name=jc18
     CompObject_plural_name=Jc18
     compobject_short_plural_name=jc18
@@ -5113,14 +5161,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC19
     compobject=ljc19
+    CompObject=Ljc19
     
     compobject_name=libro de envo de expedientes al archivo judicial para su destruccin
+    CompObject_name=LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC19S
     compobjectplural=ljc19s
+    CompObjectPlural=Ljc19s
     compobject_plural_name=jc19
     CompObject_plural_name=Jc19
     compobject_short_plural_name=jc19
@@ -5403,14 +5454,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC20
     compobject=ljc20
+    CompObject=Ljc20
     
     compobject_name=libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica
+    CompObject_name=LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIN PBLICA
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC20S
     compobjectplural=ljc20s
+    CompObjectPlural=Ljc20s
     compobject_plural_name=jc20
     CompObject_plural_name=Jc20
     compobject_short_plural_name=jc20
@@ -5633,14 +5687,17 @@ architectcomp=jtca
 	
     COMPOBJECT=LJC21
     compobject=ljc21
+    CompObject=Ljc21
     
     compobject_name=libro de ministerio pblico
+    CompObject_name=LIBRO DE MINISTERIO PBLICO
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
     
     COMPOBJECTPLURAL=LJC21S
     compobjectplural=ljc21s
+    CompObjectPlural=Ljc21s
     compobject_plural_name=jc21
     CompObject_plural_name=Jc21
     compobject_short_plural_name=jc21

@@ -730,6 +730,41 @@ Configuraciones del control de versiones
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/administrator_option=com_config&view=component&component=_allowHistoryOnSite.png
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Permisos para que usuarios Registrados visualicen los cambios
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 Al ingresar en el modo de edición de un registro aparece el botón 
 \begin_inset Quotes eld
@@ -739,7 +774,23 @@ Versions
 \begin_inset Quotes erd
 \end_inset
 
- y al presionarlo se visualiza el histórico del registro
+ y al presionarlo se visualiza el histórico del registro.
+\end_layout
+
+\begin_layout Itemize
+Los botones se ocultan con los cambios ad-hoc realizados en administrator
+\backslash
+components
+\backslash
+com_contenthistory
+\backslash
+views
+\backslash
+history
+\backslash
+tmpl
+\backslash
+modal.php
 \end_layout
 
 \begin_layout Standard
@@ -751,7 +802,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/administrator_index.phpoption=com_contenthistory&view=history&layout=modal&tmpl=component&item_id=1.jpg
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/administrator_option=com_contenthistory&view=history&layout=modal&tmpl=component&item_id=1.jpg
 	lyxscale 40
 	width 80text%
 
@@ -839,66 +890,6 @@ status open
 
 \begin_layout Plain Layout
 Preview de un registro
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-SELECT 
-\end_layout
-
-\begin_layout Plain Layout
-
-t.type_title, t.content_history_options, h.version_note #, l.*
-\end_layout
-
-\begin_layout Plain Layout
-
-FROM jpruebas.jos_ucm_history h
-\end_layout
-
-\begin_layout Plain Layout
-
-INNER JOIN jpruebas.jos_content_types t ON t.type_id = h.ucm_type_id
-\end_layout
-
-\begin_layout Plain Layout
-
-#INNER JOIN jos_jtsca_ls01s l ON l.id = h.ucm_item_id #variable dependiente
- de t.table
-\end_layout
-
-\begin_layout Plain Layout
-
-WHERE 1
-\end_layout
-
-\begin_layout Plain Layout
-
-AND t.type_id = 10100
-\end_layout
-
-\begin_layout Plain Layout
-
-ORDER BY h.version_id desc;
 \end_layout
 
 \end_inset
