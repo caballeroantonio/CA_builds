@@ -219,7 +219,7 @@ class JtCaModelLjc10 extends JModelAdmin
 		$date = JFactory::getDate();
 		$user = JFactory::getUser();
 		
-		// Increment the libro de auxiliares de la administracin de justicia version number.
+		// Increment the libro de auxiliares de la administración de justicia version number.
 		$table->version++;
 		
 		if (empty($table->id) OR $table->id == 0)

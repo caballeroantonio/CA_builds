@@ -119,11 +119,11 @@ class JtCaModelLjc18Form extends JtCaModelLjc18
 	}
 
 	/**
-	 * Method to get libro de remisin de documentos al archivo data.
+	 * Method to get libro de remisión de documentos al archivo data.
 	 *
-	 * @param	integer	$item_id	The id of the libro de remisin de documentos al archivo.
+	 * @param	integer	$item_id	The id of the libro de remisión de documentos al archivo.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO item data object on success, false on failure.
+	 * @return	mixed	LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{
@@ -367,7 +367,7 @@ class JtCaModelLjc18Form extends JtCaModelLjc18
 			return false;
 		}
 
-		// Reorder the jc18 so the new libro de remisin de documentos al archivo is first
+		// Reorder the jc18 so the new libro de remisión de documentos al archivo is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);

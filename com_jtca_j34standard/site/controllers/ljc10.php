@@ -276,7 +276,7 @@ class JtCaControllerLjc10 extends JControllerForm
 	/**
 	 * Method to add a new record.
 	 *
-	 * @return  mixed  True if the LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA can be added, a error object if not.
+	 * @return  mixed  True if the LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA can be added, a error object if not.
 	 *
 	 */
 	public function add()

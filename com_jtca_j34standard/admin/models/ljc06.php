@@ -219,7 +219,7 @@ class JtCaModelLjc06 extends JModelAdmin
 		$date = JFactory::getDate();
 		$user = JFactory::getUser();
 		
-		// Increment the libro de recursos de apelacin version number.
+		// Increment the libro de recursos de apelación version number.
 		$table->version++;
 		
 		if (empty($table->id) OR $table->id == 0)

@@ -97,7 +97,7 @@ class JtCaModelLjc19s extends JModelList
 		
 		$item_id = $app->input->getInt('id', 0) . ':' .$app->input->getInt('Itemid', 0);
 
-		// Check to see if a single libro de envo de expedientes al archivo judicial para su destruccin has been specified either as a parameter or in the url Request
+		// Check to see if a single libro de envío de expedientes al archivo judicial para su destrucción has been specified either as a parameter or in the url Request
 		$pk = $params->get('ljc19_id', '') == '' ? $app->input->getInt('id', '') : $params->get('ljc19_id');
 		$this->setState('filter.ljc19_id', $pk);
 		

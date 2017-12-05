@@ -219,7 +219,7 @@ class JtCaModelLjc17 extends JModelAdmin
 		$date = JFactory::getDate();
 		$user = JFactory::getUser();
 		
-		// Increment the libro de remisin al archivo version number.
+		// Increment the libro de remisión al archivo version number.
 		$table->version++;
 		
 		if (empty($table->id) OR $table->id == 0)

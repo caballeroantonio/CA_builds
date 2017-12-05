@@ -276,7 +276,7 @@ class JtCaControllerLjc17 extends JControllerForm
 	/**
 	 * Method to add a new record.
 	 *
-	 * @return  mixed  True if the LIBRO DE REMISIN AL ARCHIVO can be added, a error object if not.
+	 * @return  mixed  True if the LIBRO DE REMISIÓN AL ARCHIVO can be added, a error object if not.
 	 *
 	 */
 	public function add()

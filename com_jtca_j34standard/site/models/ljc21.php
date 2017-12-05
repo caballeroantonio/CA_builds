@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * TSJ CDMX Libros TxCA Component LIBRO DE MINISTERIO PBLICO Model
+ * TSJ CDMX Libros TxCA Component LIBRO DE MINISTERIO PÚBLICO Model
  *
  */
 class JtCaModelLjc21 extends JModelItem
@@ -178,9 +178,9 @@ class JtCaModelLjc21 extends JModelItem
 		return JTable::getInstance($type, $prefix, $config);
 	}
 	/**
-	 * Method to get LIBRO DE MINISTERIO PBLICO data.
+	 * Method to get LIBRO DE MINISTERIO PÚBLICO data.
 	 *
-	 * @param	integer	$pk	The id of the libro de ministerio pblico.
+	 * @param	integer	$pk	The id of the libro de ministerio público.
 	 *
 	 * @return	mixed	Menu item data object on success, false on failure.
 	 */

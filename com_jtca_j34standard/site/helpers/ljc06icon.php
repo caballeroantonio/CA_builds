@@ -84,7 +84,7 @@ class JHTMLLjc06Icon
 	/**
 	 * Display an edit icon for the ljc06.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de recursos de apelacin is trashed.
+	 * This icon will not display in a popup window, nor if the libro de recursos de apelación is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljc06	The ljc06 in question.
@@ -165,7 +165,7 @@ class JHTMLLjc06Icon
 	/**
 	 * Display an delete icon for the ljc06.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de recursos de apelacin is trashed.
+	 * This icon will not display in a popup window, nor if the libro de recursos de apelación is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljc06	The ljc06 in question.

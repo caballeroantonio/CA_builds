@@ -79,7 +79,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -87,9 +87,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -99,7 +99,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -107,9 +107,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -119,7 +119,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -127,9 +127,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -159,7 +159,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=CUANTA
+            FIELD_NAME=CUANTÍA
             FIELD_CODE_NAME_UPPER=FIELD6
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -167,9 +167,9 @@ architectcomp=jtca
             FIELDTYPE_ID=38
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field6` INT(10) DEFAULT NULL CUANTA
+            FIELD_DB=`field6` INT(10) DEFAULT NULL CUANTÍA
             
-            FIELD_NAME_LATEX=CUANTA
+            FIELD_NAME_LATEX=CUANT\'IA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
@@ -219,7 +219,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=TIPO DE RESOLUCIN
+            FIELD_NAME=TIPO DE RESOLUCIÓN
             FIELD_CODE_NAME_UPPER=FIELD8
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -227,9 +227,9 @@ architectcomp=jtca
             FIELDTYPE_ID=38
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field8` INT(10) DEFAULT NULL TIPO DE RESOLUCIN
+            FIELD_DB=`field8` INT(10) DEFAULT NULL TIPO DE RESOLUCIÓN
             
-            FIELD_NAME_LATEX=TIPO DE RESOLUCIN
+            FIELD_NAME_LATEX=TIPO DE RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
@@ -239,7 +239,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE LA RESOLUCIN
+            FIELD_NAME=FECHA DE LA RESOLUCIÓN
             FIELD_CODE_NAME_UPPER=FIELD9
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -247,9 +247,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field9` DATETIME DEFAULT NULL FECHA DE LA RESOLUCIN
+            FIELD_DB=`field9` DATETIME DEFAULT NULL FECHA DE LA RESOLUCIÓN
             
-            FIELD_NAME_LATEX=FECHA DE LA RESOLUCIN
+            FIELD_NAME_LATEX=FECHA DE LA RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
@@ -259,7 +259,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=SENTIDO DE LA RESOLUCIN
+            FIELD_NAME=SENTIDO DE LA RESOLUCIÓN
             FIELD_CODE_NAME_UPPER=FIELD10
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -267,9 +267,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field10` VARCHAR(45) DEFAULT NULL SENTIDO DE LA RESOLUCIN
+            FIELD_DB=`field10` VARCHAR(45) DEFAULT NULL SENTIDO DE LA RESOLUCIÓN
             
-            FIELD_NAME_LATEX=SENTIDO DE LA RESOLUCIN
+            FIELD_NAME_LATEX=SENTIDO DE LA RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
@@ -279,7 +279,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE LA RESOLUCIN DE LA SALA
+            FIELD_NAME=FECHA DE LA RESOLUCIÓN DE LA SALA
             FIELD_CODE_NAME_UPPER=FIELD11
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -287,9 +287,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE LA RESOLUCIN DE LA SALA
+            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE LA RESOLUCIÓN DE LA SALA
             
-            FIELD_NAME_LATEX=FECHA DE LA RESOLUCIN DE LA SALA
+            FIELD_NAME_LATEX=FECHA DE LA RESOLUCI\'ON DE LA SALA
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
@@ -299,7 +299,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=SENTIDO DE LA RESOLUCIN DE LA SALA
+            FIELD_NAME=SENTIDO DE LA RESOLUCIÓN DE LA SALA
             FIELD_CODE_NAME_UPPER=FIELD12
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -307,9 +307,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field12` VARCHAR(45) DEFAULT NULL SENTIDO DE LA RESOLUCIN DE LA SALA
+            FIELD_DB=`field12` VARCHAR(45) DEFAULT NULL SENTIDO DE LA RESOLUCIÓN DE LA SALA
             
-            FIELD_NAME_LATEX=SENTIDO DE LA RESOLUCIN DE LA SALA
+            FIELD_NAME_LATEX=SENTIDO DE LA RESOLUCI\'ON DE LA SALA
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
@@ -412,7 +412,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -420,9 +420,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -432,7 +432,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -440,9 +440,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -452,7 +452,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -460,9 +460,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -532,7 +532,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=No DEL DOCUMENTO
+            FIELD_NAME=No. DEL DOCUMENTO
             FIELD_CODE_NAME_UPPER=FIELD4
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -540,9 +540,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field4` VARCHAR(45) DEFAULT NULL No DEL DOCUMENTO
+            FIELD_DB=`field4` VARCHAR(45) DEFAULT NULL No. DEL DOCUMENTO
             
-            FIELD_NAME_LATEX=No DEL DOCUMENTO
+            FIELD_NAME_LATEX=No. DEL DOCUMENTO
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
@@ -685,7 +685,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -693,9 +693,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -705,7 +705,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -713,9 +713,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -725,7 +725,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -733,9 +733,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -745,7 +745,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=BENEFICIARIO (a paterno)
+            FIELD_NAME=BENEFICIARIO (a. paterno)
             FIELD_CODE_NAME_UPPER=FIELD1_PATERNO
             FIELD_INTRO=apellido paterno
             FIELD_DESCRIPTION_INI=apellido paterno
@@ -753,9 +753,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field1_paterno` VARCHAR(255) DEFAULT NULL BENEFICIARIO (a paterno)
+            FIELD_DB=`field1_paterno` VARCHAR(255) DEFAULT NULL BENEFICIARIO (a. paterno)
             
-            FIELD_NAME_LATEX=BENEFICIARIO (a paterno)
+            FIELD_NAME_LATEX=BENEFICIARIO (a. paterno)
             FIELD_CODE_NAME_LATEX=field1\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
             
@@ -765,7 +765,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=BENEFICIARIO (a materno)
+            FIELD_NAME=BENEFICIARIO (a. materno)
             FIELD_CODE_NAME_UPPER=FIELD1_MATERNO
             FIELD_INTRO=apellido materno
             FIELD_DESCRIPTION_INI=apellido materno
@@ -773,9 +773,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field1_materno` VARCHAR(45) DEFAULT NULL BENEFICIARIO (a materno)
+            FIELD_DB=`field1_materno` VARCHAR(45) DEFAULT NULL BENEFICIARIO (a. materno)
             
-            FIELD_NAME_LATEX=BENEFICIARIO (a materno)
+            FIELD_NAME_LATEX=BENEFICIARIO (a. materno)
             FIELD_CODE_NAME_LATEX=field1\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
@@ -905,7 +905,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=NOMBRE DE QUIEN RECIBE (a paterno)
+            FIELD_NAME=NOMBRE DE QUIEN RECIBE (a. paterno)
             FIELD_CODE_NAME_UPPER=FIELD6_PATERNO
             FIELD_INTRO=apellido paterno
             FIELD_DESCRIPTION_INI=apellido paterno
@@ -913,9 +913,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field6_paterno` VARCHAR(255) DEFAULT NULL NOMBRE DE QUIEN RECIBE (a paterno)
+            FIELD_DB=`field6_paterno` VARCHAR(255) DEFAULT NULL NOMBRE DE QUIEN RECIBE (a. paterno)
             
-            FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (a paterno)
+            FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (a. paterno)
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
             
@@ -925,7 +925,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=NOMBRE DE QUIEN RECIBE (a materno)
+            FIELD_NAME=NOMBRE DE QUIEN RECIBE (a. materno)
             FIELD_CODE_NAME_UPPER=FIELD6_MATERNO
             FIELD_INTRO=apellido materno
             FIELD_DESCRIPTION_INI=apellido materno
@@ -933,9 +933,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field6_materno` VARCHAR(45) DEFAULT NULL NOMBRE DE QUIEN RECIBE (a materno)
+            FIELD_DB=`field6_materno` VARCHAR(45) DEFAULT NULL NOMBRE DE QUIEN RECIBE (a. materno)
             
-            FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (a materno)
+            FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (a. materno)
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
@@ -1025,7 +1025,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=DATOS DE IDENTIFICACIN
+            FIELD_NAME=DATOS DE IDENTIFICACIÓN
             FIELD_CODE_NAME_UPPER=FIELD8
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1033,9 +1033,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field8` VARCHAR(45) DEFAULT NULL DATOS DE IDENTIFICACIN
+            FIELD_DB=`field8` VARCHAR(45) DEFAULT NULL DATOS DE IDENTIFICACIÓN
             
-            FIELD_NAME_LATEX=DATOS DE IDENTIFICACIN
+            FIELD_NAME_LATEX=DATOS DE IDENTIFICACI\'ON
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
@@ -1125,7 +1125,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA  DEL AUTO QUE ORDENA LA DEVOLUCIN
+            FIELD_NAME=FECHA  DEL AUTO QUE ORDENA LA DEVOLUCIÓN
             FIELD_CODE_NAME_UPPER=FIELD14
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1133,9 +1133,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field14` DATETIME DEFAULT NULL FECHA  DEL AUTO QUE ORDENA LA DEVOLUCIN
+            FIELD_DB=`field14` DATETIME DEFAULT NULL FECHA  DEL AUTO QUE ORDENA LA DEVOLUCIÓN
             
-            FIELD_NAME_LATEX=FECHA  DEL AUTO QUE ORDENA LA DEVOLUCIN
+            FIELD_NAME_LATEX=FECHA  DEL AUTO QUE ORDENA LA DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
@@ -1238,7 +1238,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1246,9 +1246,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -1258,7 +1258,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1266,9 +1266,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -1278,7 +1278,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -1286,9 +1286,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -1298,7 +1298,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA Y HORA DE RECEPCIN
+            FIELD_NAME=FECHA Y HORA DE RECEPCIÓN
             FIELD_CODE_NAME_UPPER=FIELD1
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1306,9 +1306,9 @@ architectcomp=jtca
             FIELDTYPE_ID=36
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field1` DATETIME DEFAULT NULL FECHA Y HORA DE RECEPCIN
+            FIELD_DB=`field1` DATETIME DEFAULT NULL FECHA Y HORA DE RECEPCIÓN
             
-            FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCIN
+            FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
@@ -1431,7 +1431,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1439,9 +1439,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -1451,7 +1451,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1459,9 +1459,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -1471,7 +1471,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -1479,9 +1479,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -1491,7 +1491,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=NMERO DE FOJAS
+            FIELD_NAME=NÚMERO DE FOJAS
             FIELD_CODE_NAME_UPPER=FIELD2
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1499,9 +1499,9 @@ architectcomp=jtca
             FIELDTYPE_ID=22
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field2` INT(10) DEFAULT NULL NMERO DE FOJAS
+            FIELD_DB=`field2` INT(10) DEFAULT NULL NÚMERO DE FOJAS
             
-            FIELD_NAME_LATEX=NMERO DE FOJAS
+            FIELD_NAME_LATEX=N\'UMERO DE FOJAS
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
@@ -1511,7 +1511,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE CITACIN
+            FIELD_NAME=FECHA DE CITACIÓN
             FIELD_CODE_NAME_UPPER=FIELD6
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1519,9 +1519,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field6` DATETIME DEFAULT NULL FECHA DE CITACIN
+            FIELD_DB=`field6` DATETIME DEFAULT NULL FECHA DE CITACIÓN
             
-            FIELD_NAME_LATEX=FECHA DE CITACIN
+            FIELD_NAME_LATEX=FECHA DE CITACI\'ON
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
@@ -1531,7 +1531,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE LA PUBLICACIN DE LA CITACIN
+            FIELD_NAME=FECHA DE LA PUBLICACIÓN DE LA CITACIÓN
             FIELD_CODE_NAME_UPPER=FIELD7
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1539,9 +1539,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field7` DATETIME DEFAULT NULL FECHA DE LA PUBLICACIN DE LA CITACIN
+            FIELD_DB=`field7` DATETIME DEFAULT NULL FECHA DE LA PUBLICACIÓN DE LA CITACIÓN
             
-            FIELD_NAME_LATEX=FECHA DE LA PUBLICACIN DE LA CITACIN
+            FIELD_NAME_LATEX=FECHA DE LA PUBLICACI\'ON DE LA CITACI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
@@ -1611,7 +1611,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE PUBLICACIN BOLETN JUDICIAL
+            FIELD_NAME=FECHA DE PUBLICACIÓN BOLETÍN JUDICIAL
             FIELD_CODE_NAME_UPPER=FIELD11
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1619,9 +1619,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE PUBLICACIN BOLETN JUDICIAL
+            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE PUBLICACIÓN BOLETÍN JUDICIAL
             
-            FIELD_NAME_LATEX=FECHA DE PUBLICACIN BOLETN JUDICIAL
+            FIELD_NAME_LATEX=FECHA DE PUBLICACI\'ON BOLET\'IN JUDICIAL
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
@@ -1673,15 +1673,15 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de recursos de apelacin
+    Compobject_name=Libro de recursos de apelación
     Compobject_description_ini=
 	
     COMPOBJECT=LJC06
     compobject=ljc06
     CompObject=Ljc06
     
-    compobject_name=libro de recursos de apelacin
-    CompObject_name=LIBRO DE RECURSOS DE APELACIN
+    compobject_name=libro de recursos de apelación
+    CompObject_name=LIBRO DE RECURSOS DE APELACIÓN
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
@@ -1724,7 +1724,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1732,9 +1732,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -1744,7 +1744,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1752,9 +1752,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -1764,7 +1764,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -1772,9 +1772,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -1784,7 +1784,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA EN QUE SE INTERPUSO LA APELACIN
+            FIELD_NAME=FECHA EN QUE SE INTERPUSO LA APELACIÓN
             FIELD_CODE_NAME_UPPER=FIELD17
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1792,9 +1792,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field17` DATETIME DEFAULT NULL FECHA EN QUE SE INTERPUSO LA APELACIN
+            FIELD_DB=`field17` DATETIME DEFAULT NULL FECHA EN QUE SE INTERPUSO LA APELACIÓN
             
-            FIELD_NAME_LATEX=FECHA EN QUE SE INTERPUSO LA APELACIN
+            FIELD_NAME_LATEX=FECHA EN QUE SE INTERPUSO LA APELACI\'ON
             FIELD_CODE_NAME_LATEX=field17
             FIELD_DBCOMMENT_LATEX=
             
@@ -1804,7 +1804,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE RESOLUCIN  APELADA
+            FIELD_NAME=FECHA DE RESOLUCIÓN  APELADA
             FIELD_CODE_NAME_UPPER=FIELD5
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1812,9 +1812,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field5` DATETIME DEFAULT NULL FECHA DE RESOLUCIN  APELADA
+            FIELD_DB=`field5` DATETIME DEFAULT NULL FECHA DE RESOLUCIÓN  APELADA
             
-            FIELD_NAME_LATEX=FECHA DE RESOLUCIN  APELADA
+            FIELD_NAME_LATEX=FECHA DE RESOLUCI\'ON  APELADA
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
@@ -1864,7 +1864,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE CONTESTACIN DE AGRAVIOS O REBELDA
+            FIELD_NAME=FECHA DE CONTESTACIÓN DE AGRAVIOS O REBELDÍA
             FIELD_CODE_NAME_UPPER=FIELD8
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1872,9 +1872,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field8` DATETIME DEFAULT NULL FECHA DE CONTESTACIN DE AGRAVIOS O REBELDA
+            FIELD_DB=`field8` DATETIME DEFAULT NULL FECHA DE CONTESTACIÓN DE AGRAVIOS O REBELDÍA
             
-            FIELD_NAME_LATEX=FECHA DE CONTESTACIN DE AGRAVIOS O REBELDA
+            FIELD_NAME_LATEX=FECHA DE CONTESTACI\'ON DE AGRAVIOS O REBELD\'IA
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
@@ -1884,7 +1884,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE REMISIN A  LA SALA
+            FIELD_NAME=FECHA DE REMISIÓN A  LA SALA
             FIELD_CODE_NAME_UPPER=FIELD9
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1892,9 +1892,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field9` DATETIME DEFAULT NULL FECHA DE REMISIN A  LA SALA
+            FIELD_DB=`field9` DATETIME DEFAULT NULL FECHA DE REMISIÓN A  LA SALA
             
-            FIELD_NAME_LATEX=FECHA DE REMISIN A  LA SALA
+            FIELD_NAME_LATEX=FECHA DE REMISI\'ON A  LA SALA
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
@@ -1904,7 +1904,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=No DE OFICIO DE REMISIN
+            FIELD_NAME=No. DE OFICIO DE REMISIÓN
             FIELD_CODE_NAME_UPPER=FIELD10
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1912,9 +1912,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field10` VARCHAR(45) DEFAULT NULL No DE OFICIO DE REMISIN
+            FIELD_DB=`field10` VARCHAR(45) DEFAULT NULL No. DE OFICIO DE REMISIÓN
             
-            FIELD_NAME_LATEX=No DE OFICIO DE REMISIN
+            FIELD_NAME_LATEX=No. DE OFICIO DE REMISI\'ON
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
@@ -1924,7 +1924,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE RECEPCIN DE LA SALA
+            FIELD_NAME=FECHA DE RECEPCIÓN DE LA SALA
             FIELD_CODE_NAME_UPPER=FIELD11
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1932,9 +1932,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE RECEPCIN DE LA SALA
+            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE RECEPCIÓN DE LA SALA
             
-            FIELD_NAME_LATEX=FECHA DE RECEPCIN DE LA SALA
+            FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON DE LA SALA
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
@@ -1964,7 +1964,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE DEVOLUCIN
+            FIELD_NAME=FECHA DE DEVOLUCIÓN
             FIELD_CODE_NAME_UPPER=FIELD13
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1972,9 +1972,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field13` DATETIME DEFAULT NULL FECHA DE DEVOLUCIN
+            FIELD_DB=`field13` DATETIME DEFAULT NULL FECHA DE DEVOLUCIÓN
             
-            FIELD_NAME_LATEX=FECHA DE DEVOLUCIN
+            FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
@@ -2097,7 +2097,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2105,9 +2105,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -2117,7 +2117,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2125,9 +2125,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -2137,7 +2137,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -2145,9 +2145,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -2157,7 +2157,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=No DE EXHORTO
+            FIELD_NAME=No. DE EXHORTO
             FIELD_CODE_NAME_UPPER=FIELD1
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2165,9 +2165,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field1` VARCHAR(45) DEFAULT NULL No DE EXHORTO
+            FIELD_DB=`field1` VARCHAR(45) DEFAULT NULL No. DE EXHORTO
             
-            FIELD_NAME_LATEX=No DE EXHORTO
+            FIELD_NAME_LATEX=No. DE EXHORTO
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
@@ -2217,7 +2217,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=AUTO DE RADICACIN
+            FIELD_NAME=AUTO DE RADICACIÓN
             FIELD_CODE_NAME_UPPER=FIELD7
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2225,9 +2225,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field7` VARCHAR(45) DEFAULT NULL AUTO DE RADICACIN
+            FIELD_DB=`field7` VARCHAR(45) DEFAULT NULL AUTO DE RADICACIÓN
             
-            FIELD_NAME_LATEX=AUTO DE RADICACIN
+            FIELD_NAME_LATEX=AUTO DE RADICACI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
@@ -2257,7 +2257,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE DILIGENCIACIN
+            FIELD_NAME=FECHA DE DILIGENCIACIÓN
             FIELD_CODE_NAME_UPPER=FIELD9
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2265,9 +2265,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field9` DATETIME DEFAULT NULL FECHA DE DILIGENCIACIN
+            FIELD_DB=`field9` DATETIME DEFAULT NULL FECHA DE DILIGENCIACIÓN
             
-            FIELD_NAME_LATEX=FECHA DE DILIGENCIACIN
+            FIELD_NAME_LATEX=FECHA DE DILIGENCIACI\'ON
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
@@ -2277,7 +2277,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=SE CUMPLIMENT
+            FIELD_NAME=SE CUMPLIMENTÓ
             FIELD_CODE_NAME_UPPER=FIELD10
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2285,9 +2285,9 @@ architectcomp=jtca
             FIELDTYPE_ID=16
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field10` TINYINT(1) DEFAULT NULL SE CUMPLIMENT
+            FIELD_DB=`field10` TINYINT(1) DEFAULT NULL SE CUMPLIMENTÓ
             
-            FIELD_NAME_LATEX=SE CUMPLIMENT
+            FIELD_NAME_LATEX=SE CUMPLIMENT\'O
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
@@ -2297,7 +2297,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE DEVOLUCIN
+            FIELD_NAME=FECHA DE DEVOLUCIÓN
             FIELD_CODE_NAME_UPPER=FIELD11
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2305,9 +2305,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE DEVOLUCIN
+            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE DEVOLUCIÓN
             
-            FIELD_NAME_LATEX=FECHA DE DEVOLUCIN
+            FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
@@ -2317,7 +2317,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=No DE OFICIO DE DEVOLUCIN
+            FIELD_NAME=No. DE OFICIO DE DEVOLUCIÓN
             FIELD_CODE_NAME_UPPER=FIELD12
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2325,9 +2325,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field12` VARCHAR(45) DEFAULT NULL No DE OFICIO DE DEVOLUCIN
+            FIELD_DB=`field12` VARCHAR(45) DEFAULT NULL No. DE OFICIO DE DEVOLUCIÓN
             
-            FIELD_NAME_LATEX=No DE OFICIO DE DEVOLUCIN
+            FIELD_NAME_LATEX=No. DE OFICIO DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
@@ -2430,7 +2430,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2438,9 +2438,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -2450,7 +2450,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2458,9 +2458,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -2470,7 +2470,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -2478,9 +2478,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -2510,7 +2510,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=No DE OFICIO
+            FIELD_NAME=No. DE OFICIO
             FIELD_CODE_NAME_UPPER=FIELD10
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2518,9 +2518,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field10` VARCHAR(45) DEFAULT NULL No DE OFICIO
+            FIELD_DB=`field10` VARCHAR(45) DEFAULT NULL No. DE OFICIO
             
-            FIELD_NAME_LATEX=No DE OFICIO
+            FIELD_NAME_LATEX=No. DE OFICIO
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
@@ -2663,7 +2663,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2671,9 +2671,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -2683,7 +2683,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2691,9 +2691,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -2703,7 +2703,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -2711,9 +2711,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -2723,7 +2723,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=NMERO DE CUADERNOS O CDULAS
+            FIELD_NAME=NÚMERO DE CUADERNOS O CÉDULAS
             FIELD_CODE_NAME_UPPER=FIELD5
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2731,9 +2731,9 @@ architectcomp=jtca
             FIELDTYPE_ID=22
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field5` INT(10) DEFAULT NULL NMERO DE CUADERNOS O CDULAS
+            FIELD_DB=`field5` INT(10) DEFAULT NULL NÚMERO DE CUADERNOS O CÉDULAS
             
-            FIELD_NAME_LATEX=NMERO DE CUADERNOS O CDULAS
+            FIELD_NAME_LATEX=N\'UMERO DE CUADERNOS O C\'EDULAS
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
@@ -2823,7 +2823,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE LA DEVOLUCIN
+            FIELD_NAME=FECHA DE LA DEVOLUCIÓN
             FIELD_CODE_NAME_UPPER=FIELD11
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2831,9 +2831,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE LA DEVOLUCIN
+            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE LA DEVOLUCIÓN
             
-            FIELD_NAME_LATEX=FECHA DE LA DEVOLUCIN
+            FIELD_NAME_LATEX=FECHA DE LA DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
@@ -2843,7 +2843,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=USO DE LA FUERZA PBLICA
+            FIELD_NAME=USO DE LA FUERZA PÚBLICA
             FIELD_CODE_NAME_UPPER=FIELD14
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2851,9 +2851,9 @@ architectcomp=jtca
             FIELDTYPE_ID=16
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field14` TINYINT(1) DEFAULT NULL USO DE LA FUERZA PBLICA
+            FIELD_DB=`field14` TINYINT(1) DEFAULT NULL USO DE LA FUERZA PÚBLICA
             
-            FIELD_NAME_LATEX=USO DE LA FUERZA PBLICA
+            FIELD_NAME_LATEX=USO DE LA FUERZA P\'UBLICA
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
@@ -2863,7 +2863,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=DETALLE DEL USO DE LA FUERZA PBLICA
+            FIELD_NAME=DETALLE DEL USO DE LA FUERZA PÚBLICA
             FIELD_CODE_NAME_UPPER=FIELD15
             FIELD_INTRO=Breve descripción para presentar reporte por convenios con la SSP
             FIELD_DESCRIPTION_INI=Breve descripción para presentar reporte por convenios con la SSP
@@ -2871,9 +2871,9 @@ architectcomp=jtca
             FIELDTYPE_ID=4
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field15` TEXT DEFAULT NULL DETALLE DEL USO DE LA FUERZA PBLICA
+            FIELD_DB=`field15` TEXT DEFAULT NULL DETALLE DEL USO DE LA FUERZA PÚBLICA
             
-            FIELD_NAME_LATEX=DETALLE DEL USO DE LA FUERZA PBLICA
+            FIELD_NAME_LATEX=DETALLE DEL USO DE LA FUERZA P\'UBLICA
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=Breve descripci\'on para presentar reporte por convenios con la SSP
             
@@ -2925,15 +2925,15 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de auxiliares de la administracin de justicia
+    Compobject_name=Libro de auxiliares de la administración de justicia
     Compobject_description_ini=
 	
     COMPOBJECT=LJC10
     compobject=ljc10
     CompObject=Ljc10
     
-    compobject_name=libro de auxiliares de la administracin de justicia
-    CompObject_name=LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA
+    compobject_name=libro de auxiliares de la administración de justicia
+    CompObject_name=LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
@@ -2976,7 +2976,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -2984,9 +2984,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -2996,7 +2996,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3004,9 +3004,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -3016,7 +3016,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -3024,9 +3024,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -3036,7 +3036,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=NOMBRE DEL PERITO (a paterno)
+            FIELD_NAME=NOMBRE DEL PERITO (a. paterno)
             FIELD_CODE_NAME_UPPER=FIELD5_PATERNO
             FIELD_INTRO=apellido paterno
             FIELD_DESCRIPTION_INI=apellido paterno
@@ -3044,9 +3044,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field5_paterno` VARCHAR(255) DEFAULT NULL NOMBRE DEL PERITO (a paterno)
+            FIELD_DB=`field5_paterno` VARCHAR(255) DEFAULT NULL NOMBRE DEL PERITO (a. paterno)
             
-            FIELD_NAME_LATEX=NOMBRE DEL PERITO (a paterno)
+            FIELD_NAME_LATEX=NOMBRE DEL PERITO (a. paterno)
             FIELD_CODE_NAME_LATEX=field5\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
             
@@ -3056,7 +3056,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=NOMBRE DEL PERITO (a materno)
+            FIELD_NAME=NOMBRE DEL PERITO (a. materno)
             FIELD_CODE_NAME_UPPER=FIELD5_MATERNO
             FIELD_INTRO=apellido materno
             FIELD_DESCRIPTION_INI=apellido materno
@@ -3064,9 +3064,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field5_materno` VARCHAR(45) DEFAULT NULL NOMBRE DEL PERITO (a materno)
+            FIELD_DB=`field5_materno` VARCHAR(45) DEFAULT NULL NOMBRE DEL PERITO (a. materno)
             
-            FIELD_NAME_LATEX=NOMBRE DEL PERITO (a materno)
+            FIELD_NAME_LATEX=NOMBRE DEL PERITO (a. materno)
             FIELD_CODE_NAME_LATEX=field5\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
@@ -3136,7 +3136,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DEL AUTO DE DESIGNACIN
+            FIELD_NAME=FECHA DEL AUTO DE DESIGNACIÓN
             FIELD_CODE_NAME_UPPER=FIELD7
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3144,9 +3144,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field7` DATETIME DEFAULT NULL FECHA DEL AUTO DE DESIGNACIN
+            FIELD_DB=`field7` DATETIME DEFAULT NULL FECHA DEL AUTO DE DESIGNACIÓN
             
-            FIELD_NAME_LATEX=FECHA DEL AUTO DE DESIGNACIN
+            FIELD_NAME_LATEX=FECHA DEL AUTO DE DESIGNACI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
@@ -3156,7 +3156,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE NOTIFICACIN DEL AUTO DE DESIGNACIN
+            FIELD_NAME=FECHA DE NOTIFICACIÓN DEL AUTO DE DESIGNACIÓN
             FIELD_CODE_NAME_UPPER=FIELD8
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3164,9 +3164,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field8` DATETIME DEFAULT NULL FECHA DE NOTIFICACIN DEL AUTO DE DESIGNACIN
+            FIELD_DB=`field8` DATETIME DEFAULT NULL FECHA DE NOTIFICACIÓN DEL AUTO DE DESIGNACIÓN
             
-            FIELD_NAME_LATEX=FECHA DE NOTIFICACIN DEL AUTO DE DESIGNACIN
+            FIELD_NAME_LATEX=FECHA DE NOTIFICACI\'ON DEL AUTO DE DESIGNACI\'ON
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
@@ -3176,7 +3176,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE ACEPTACIN
+            FIELD_NAME=FECHA DE ACEPTACIÓN
             FIELD_CODE_NAME_UPPER=FIELD9
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3184,9 +3184,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field9` DATETIME DEFAULT NULL FECHA DE ACEPTACIN
+            FIELD_DB=`field9` DATETIME DEFAULT NULL FECHA DE ACEPTACIÓN
             
-            FIELD_NAME_LATEX=FECHA DE ACEPTACIN
+            FIELD_NAME_LATEX=FECHA DE ACEPTACI\'ON
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
@@ -3309,7 +3309,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3317,9 +3317,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -3329,7 +3329,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3337,9 +3337,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -3349,7 +3349,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -3357,9 +3357,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -3389,7 +3389,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=QUEJOSO (a paterno)
+            FIELD_NAME=QUEJOSO (a. paterno)
             FIELD_CODE_NAME_UPPER=FIELD6_PATERNO
             FIELD_INTRO=apellido paterno
             FIELD_DESCRIPTION_INI=apellido paterno
@@ -3397,9 +3397,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field6_paterno` VARCHAR(255) DEFAULT NULL QUEJOSO (a paterno)
+            FIELD_DB=`field6_paterno` VARCHAR(255) DEFAULT NULL QUEJOSO (a. paterno)
             
-            FIELD_NAME_LATEX=QUEJOSO (a paterno)
+            FIELD_NAME_LATEX=QUEJOSO (a. paterno)
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
             
@@ -3409,7 +3409,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=QUEJOSO (a materno)
+            FIELD_NAME=QUEJOSO (a. materno)
             FIELD_CODE_NAME_UPPER=FIELD6_MATERNO
             FIELD_INTRO=apellido materno
             FIELD_DESCRIPTION_INI=apellido materno
@@ -3417,9 +3417,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field6_materno` VARCHAR(45) DEFAULT NULL QUEJOSO (a materno)
+            FIELD_DB=`field6_materno` VARCHAR(45) DEFAULT NULL QUEJOSO (a. materno)
             
-            FIELD_NAME_LATEX=QUEJOSO (a materno)
+            FIELD_NAME_LATEX=QUEJOSO (a. materno)
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
@@ -3469,7 +3469,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=RGANO DE PROCEDENCIA
+            FIELD_NAME=ÓRGANO DE PROCEDENCIA
             FIELD_CODE_NAME_UPPER=FIELD7
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3477,9 +3477,9 @@ architectcomp=jtca
             FIELDTYPE_ID=38
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field7` INT(10) DEFAULT NULL RGANO DE PROCEDENCIA
+            FIELD_DB=`field7` INT(10) DEFAULT NULL ÓRGANO DE PROCEDENCIA
             
-            FIELD_NAME_LATEX=RGANO DE PROCEDENCIA
+            FIELD_NAME_LATEX=\'ORGANO DE PROCEDENCIA
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
@@ -3489,7 +3489,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=No DE AMPARO
+            FIELD_NAME=No. DE AMPARO
             FIELD_CODE_NAME_UPPER=FIELD8
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3497,9 +3497,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field8` VARCHAR(45) DEFAULT NULL No DE AMPARO
+            FIELD_DB=`field8` VARCHAR(45) DEFAULT NULL No. DE AMPARO
             
-            FIELD_NAME_LATEX=No DE AMPARO
+            FIELD_NAME_LATEX=No. DE AMPARO
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
@@ -3549,7 +3549,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE ENVO DEL INFORME
+            FIELD_NAME=FECHA DE ENVÍO DEL INFORME
             FIELD_CODE_NAME_UPPER=FIELD13
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3557,9 +3557,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field13` DATETIME DEFAULT NULL FECHA DE ENVO DEL INFORME
+            FIELD_DB=`field13` DATETIME DEFAULT NULL FECHA DE ENVÍO DEL INFORME
             
-            FIELD_NAME_LATEX=FECHA DE ENVO DEL INFORME
+            FIELD_NAME_LATEX=FECHA DE ENV\'IO DEL INFORME
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
@@ -3569,7 +3569,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=SENTIDO DE LA RESOLUCIN DE AMPARO
+            FIELD_NAME=SENTIDO DE LA RESOLUCIÓN DE AMPARO
             FIELD_CODE_NAME_UPPER=FIELD14
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3577,9 +3577,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field14` VARCHAR(45) DEFAULT NULL SENTIDO DE LA RESOLUCIN DE AMPARO
+            FIELD_DB=`field14` VARCHAR(45) DEFAULT NULL SENTIDO DE LA RESOLUCIÓN DE AMPARO
             
-            FIELD_NAME_LATEX=SENTIDO DE LA RESOLUCIN DE AMPARO
+            FIELD_NAME_LATEX=SENTIDO DE LA RESOLUCI\'ON DE AMPARO
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
@@ -3702,7 +3702,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3710,9 +3710,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -3722,7 +3722,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3730,9 +3730,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -3742,7 +3742,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -3750,9 +3750,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -3762,7 +3762,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=GARANTE (a paterno)
+            FIELD_NAME=GARANTE (a. paterno)
             FIELD_CODE_NAME_UPPER=FIELD2_PATERNO
             FIELD_INTRO=apellido paterno
             FIELD_DESCRIPTION_INI=apellido paterno
@@ -3770,9 +3770,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field2_paterno` VARCHAR(255) DEFAULT NULL GARANTE (a paterno)
+            FIELD_DB=`field2_paterno` VARCHAR(255) DEFAULT NULL GARANTE (a. paterno)
             
-            FIELD_NAME_LATEX=GARANTE (a paterno)
+            FIELD_NAME_LATEX=GARANTE (a. paterno)
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
             
@@ -3782,7 +3782,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=GARANTE (a materno)
+            FIELD_NAME=GARANTE (a. materno)
             FIELD_CODE_NAME_UPPER=FIELD2_MATERNO
             FIELD_INTRO=apellido materno
             FIELD_DESCRIPTION_INI=apellido materno
@@ -3790,9 +3790,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field2_materno` VARCHAR(45) DEFAULT NULL GARANTE (a materno)
+            FIELD_DB=`field2_materno` VARCHAR(45) DEFAULT NULL GARANTE (a. materno)
             
-            FIELD_NAME_LATEX=GARANTE (a materno)
+            FIELD_NAME_LATEX=GARANTE (a. materno)
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
@@ -3842,7 +3842,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA EN QUE SE RECIBE LA PLIZA DE FIANZA
+            FIELD_NAME=FECHA EN QUE SE RECIBE LA PÓLIZA DE FIANZA
             FIELD_CODE_NAME_UPPER=FIELD4
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3850,9 +3850,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field4` DATETIME DEFAULT NULL FECHA EN QUE SE RECIBE LA PLIZA DE FIANZA
+            FIELD_DB=`field4` DATETIME DEFAULT NULL FECHA EN QUE SE RECIBE LA PÓLIZA DE FIANZA
             
-            FIELD_NAME_LATEX=FECHA EN QUE SE RECIBE LA PLIZA DE FIANZA
+            FIELD_NAME_LATEX=FECHA EN QUE SE RECIBE LA P\'OLIZA DE FIANZA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
@@ -3882,7 +3882,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=MONTO DE LA PLIZA DE FIANZA
+            FIELD_NAME=MONTO DE LA PÓLIZA DE FIANZA
             FIELD_CODE_NAME_UPPER=FIELD6
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3890,9 +3890,9 @@ architectcomp=jtca
             FIELDTYPE_ID=37
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field6` DECIMAL(11,2) DEFAULT NULL MONTO DE LA PLIZA DE FIANZA
+            FIELD_DB=`field6` DECIMAL(11,2) DEFAULT NULL MONTO DE LA PÓLIZA DE FIANZA
             
-            FIELD_NAME_LATEX=MONTO DE LA PLIZA DE FIANZA
+            FIELD_NAME_LATEX=MONTO DE LA P\'OLIZA DE FIANZA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
@@ -3902,7 +3902,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=SI SE HACE EFECTIVA LA GARANTA ANOTAR EL MOTIVO POR EL CUAL SE HIZO EFECTIVA
+            FIELD_NAME=SI SE HACE EFECTIVA LA GARANTÍA, ANOTAR EL MOTIVO POR EL CUAL SE HIZO EFECTIVA
             FIELD_CODE_NAME_UPPER=FIELD7
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -3910,9 +3910,9 @@ architectcomp=jtca
             FIELDTYPE_ID=37
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field7` DECIMAL(11,2) DEFAULT NULL SI SE HACE EFECTIVA LA GARANTA ANOTAR EL MOTIVO POR EL CUAL SE HIZO EFECTIVA
+            FIELD_DB=`field7` DECIMAL(11,2) DEFAULT NULL SI SE HACE EFECTIVA LA GARANTÍA, ANOTAR EL MOTIVO POR EL CUAL SE HIZO EFECTIVA
             
-            FIELD_NAME_LATEX=SI SE HACE EFECTIVA LA GARANTA ANOTAR EL MOTIVO POR EL CUAL SE HIZO EFECTIVA
+            FIELD_NAME_LATEX=SI SE HACE EFECTIVA LA GARANT\'IA, ANOTAR EL MOTIVO POR EL CUAL SE HIZO EFECTIVA
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
@@ -4015,7 +4015,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4023,9 +4023,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -4035,7 +4035,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4043,9 +4043,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -4055,7 +4055,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -4063,9 +4063,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -4075,7 +4075,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE LA RESOLUCIN QUE LA DECRETA
+            FIELD_NAME=FECHA DE LA RESOLUCIÓN QUE LA DECRETA
             FIELD_CODE_NAME_UPPER=FIELD4
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4083,9 +4083,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field4` DATETIME DEFAULT NULL FECHA DE LA RESOLUCIN QUE LA DECRETA
+            FIELD_DB=`field4` DATETIME DEFAULT NULL FECHA DE LA RESOLUCIÓN QUE LA DECRETA
             
-            FIELD_NAME_LATEX=FECHA DE LA RESOLUCIN QUE LA DECRETA
+            FIELD_NAME_LATEX=FECHA DE LA RESOLUCI\'ON QUE LA DECRETA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
@@ -4095,7 +4095,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a paterno)
+            FIELD_NAME=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a. paterno)
             FIELD_CODE_NAME_UPPER=FIELD5_PATERNO
             FIELD_INTRO=apellido paterno
             FIELD_DESCRIPTION_INI=apellido paterno
@@ -4103,9 +4103,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field5_paterno` VARCHAR(255) DEFAULT NULL NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a paterno)
+            FIELD_DB=`field5_paterno` VARCHAR(255) DEFAULT NULL NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a. paterno)
             
-            FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a paterno)
+            FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a. paterno)
             FIELD_CODE_NAME_LATEX=field5\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
             
@@ -4115,7 +4115,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a materno)
+            FIELD_NAME=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a. materno)
             FIELD_CODE_NAME_UPPER=FIELD5_MATERNO
             FIELD_INTRO=apellido materno
             FIELD_DESCRIPTION_INI=apellido materno
@@ -4123,9 +4123,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field5_materno` VARCHAR(45) DEFAULT NULL NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a materno)
+            FIELD_DB=`field5_materno` VARCHAR(45) DEFAULT NULL NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a. materno)
             
-            FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a materno)
+            FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a. materno)
             FIELD_CODE_NAME_LATEX=field5\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
@@ -4175,7 +4175,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=No DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIN
+            FIELD_NAME=No. DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIÓN
             FIELD_CODE_NAME_UPPER=FIELD6
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4183,9 +4183,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field6` VARCHAR(45) DEFAULT NULL No DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIN
+            FIELD_DB=`field6` VARCHAR(45) DEFAULT NULL No. DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIÓN
             
-            FIELD_NAME_LATEX=No DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIN
+            FIELD_NAME_LATEX=No. DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCI\'ON
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
@@ -4195,7 +4195,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIN
+            FIELD_NAME=FECHA DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIÓN
             FIELD_CODE_NAME_UPPER=FIELD7
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4203,9 +4203,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field7` DATETIME DEFAULT NULL FECHA DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIN
+            FIELD_DB=`field7` DATETIME DEFAULT NULL FECHA DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIÓN
             
-            FIELD_NAME_LATEX=FECHA DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIN
+            FIELD_NAME_LATEX=FECHA DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
@@ -4348,7 +4348,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4356,9 +4356,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -4368,7 +4368,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4376,9 +4376,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -4388,7 +4388,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -4396,9 +4396,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -4408,7 +4408,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DEL AUTO EN QUE SE SEALA LA AUDIENCIA
+            FIELD_NAME=FECHA DEL AUTO EN QUE SE SEÑALA LA AUDIENCIA
             FIELD_CODE_NAME_UPPER=FIELD5
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4416,9 +4416,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field5` DATETIME DEFAULT NULL FECHA DEL AUTO EN QUE SE SEALA LA AUDIENCIA
+            FIELD_DB=`field5` DATETIME DEFAULT NULL FECHA DEL AUTO EN QUE SE SEÑALA LA AUDIENCIA
             
-            FIELD_NAME_LATEX=FECHA DEL AUTO EN QUE SE SEALA LA AUDIENCIA
+            FIELD_NAME_LATEX=FECHA DEL AUTO EN QUE SE SE\~NALA LA AUDIENCIA
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
@@ -4530,15 +4530,15 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de remisin al archivo
+    Compobject_name=Libro de remisión al archivo
     Compobject_description_ini=
 	
     COMPOBJECT=LJC17
     compobject=ljc17
     CompObject=Ljc17
     
-    compobject_name=libro de remisin al archivo
-    CompObject_name=LIBRO DE REMISIN AL ARCHIVO
+    compobject_name=libro de remisión al archivo
+    CompObject_name=LIBRO DE REMISIÓN AL ARCHIVO
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
@@ -4581,7 +4581,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4589,9 +4589,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -4601,7 +4601,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4609,9 +4609,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -4621,7 +4621,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -4629,9 +4629,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -4641,7 +4641,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=NMERO DE FOJAS
+            FIELD_NAME=NÚMERO DE FOJAS
             FIELD_CODE_NAME_UPPER=FIELD5
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4649,9 +4649,9 @@ architectcomp=jtca
             FIELDTYPE_ID=22
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field5` INT(10) DEFAULT NULL NMERO DE FOJAS
+            FIELD_DB=`field5` INT(10) DEFAULT NULL NÚMERO DE FOJAS
             
-            FIELD_NAME_LATEX=NMERO DE FOJAS
+            FIELD_NAME_LATEX=N\'UMERO DE FOJAS
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
@@ -4661,7 +4661,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=No Y DESCRIPCIN DE LOS EXPEDIENTES
+            FIELD_NAME=No. Y DESCRIPCIÓN DE LOS EXPEDIENTES
             FIELD_CODE_NAME_UPPER=FIELD6
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4669,9 +4669,9 @@ architectcomp=jtca
             FIELDTYPE_ID=4
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field6` TEXT DEFAULT NULL No Y DESCRIPCIN DE LOS EXPEDIENTES
+            FIELD_DB=`field6` TEXT DEFAULT NULL No. Y DESCRIPCIÓN DE LOS EXPEDIENTES
             
-            FIELD_NAME_LATEX=No Y DESCRIPCIN DE LOS EXPEDIENTES
+            FIELD_NAME_LATEX=No. Y DESCRIPCI\'ON DE LOS EXPEDIENTES
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
@@ -4681,7 +4681,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DEL AUTO DE REMISIN
+            FIELD_NAME=FECHA DEL AUTO DE REMISIÓN
             FIELD_CODE_NAME_UPPER=FIELD7
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4689,9 +4689,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field7` DATETIME DEFAULT NULL FECHA DEL AUTO DE REMISIN
+            FIELD_DB=`field7` DATETIME DEFAULT NULL FECHA DEL AUTO DE REMISIÓN
             
-            FIELD_NAME_LATEX=FECHA DEL AUTO DE REMISIN
+            FIELD_NAME_LATEX=FECHA DEL AUTO DE REMISI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
@@ -4721,7 +4721,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE RECEPCIN DEL ARCHIVO JUDICIAL
+            FIELD_NAME=FECHA DE RECEPCIÓN DEL ARCHIVO JUDICIAL
             FIELD_CODE_NAME_UPPER=FIELD9
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4729,9 +4729,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field9` DATETIME DEFAULT NULL FECHA DE RECEPCIN DEL ARCHIVO JUDICIAL
+            FIELD_DB=`field9` DATETIME DEFAULT NULL FECHA DE RECEPCIÓN DEL ARCHIVO JUDICIAL
             
-            FIELD_NAME_LATEX=FECHA DE RECEPCIN DEL ARCHIVO JUDICIAL
+            FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON DEL ARCHIVO JUDICIAL
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
@@ -4741,7 +4741,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE DEVOLUCIN
+            FIELD_NAME=FECHA DE DEVOLUCIÓN
             FIELD_CODE_NAME_UPPER=FIELD11
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4749,9 +4749,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE DEVOLUCIN
+            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE DEVOLUCIÓN
             
-            FIELD_NAME_LATEX=FECHA DE DEVOLUCIN
+            FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
@@ -4761,7 +4761,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=MOTIVO DE LA REMISIN AL ARCHIVO
+            FIELD_NAME=MOTIVO DE LA REMISIÓN AL ARCHIVO
             FIELD_CODE_NAME_UPPER=FIELD15
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4769,9 +4769,9 @@ architectcomp=jtca
             FIELDTYPE_ID=38
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field15` INT(10) DEFAULT NULL MOTIVO DE LA REMISIN AL ARCHIVO
+            FIELD_DB=`field15` INT(10) DEFAULT NULL MOTIVO DE LA REMISIÓN AL ARCHIVO
             
-            FIELD_NAME_LATEX=MOTIVO DE LA REMISIN AL ARCHIVO
+            FIELD_NAME_LATEX=MOTIVO DE LA REMISI\'ON AL ARCHIVO
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
             
@@ -4823,15 +4823,15 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de remisin de documentos al archivo
+    Compobject_name=Libro de remisión de documentos al archivo
     Compobject_description_ini=
 	
     COMPOBJECT=LJC18
     compobject=ljc18
     CompObject=Ljc18
     
-    compobject_name=libro de remisin de documentos al archivo
-    CompObject_name=LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO
+    compobject_name=libro de remisión de documentos al archivo
+    CompObject_name=LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
@@ -4874,7 +4874,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4882,9 +4882,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -4894,7 +4894,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4902,9 +4902,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -4914,7 +4914,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -4922,9 +4922,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -4954,7 +4954,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=No Y DESCRIPCIN DE DOCUMENTOS
+            FIELD_NAME=No. Y DESCRIPCIÓN DE DOCUMENTOS
             FIELD_CODE_NAME_UPPER=FIELD6
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4962,9 +4962,9 @@ architectcomp=jtca
             FIELDTYPE_ID=4
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field6` TEXT DEFAULT NULL No Y DESCRIPCIN DE DOCUMENTOS
+            FIELD_DB=`field6` TEXT DEFAULT NULL No. Y DESCRIPCIÓN DE DOCUMENTOS
             
-            FIELD_NAME_LATEX=No Y DESCRIPCIN DE DOCUMENTOS
+            FIELD_NAME_LATEX=No. Y DESCRIPCI\'ON DE DOCUMENTOS
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
@@ -4974,7 +4974,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DEL AUTO DE REMISIN
+            FIELD_NAME=FECHA DEL AUTO DE REMISIÓN
             FIELD_CODE_NAME_UPPER=FIELD7
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -4982,9 +4982,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field7` DATETIME DEFAULT NULL FECHA DEL AUTO DE REMISIN
+            FIELD_DB=`field7` DATETIME DEFAULT NULL FECHA DEL AUTO DE REMISIÓN
             
-            FIELD_NAME_LATEX=FECHA DEL AUTO DE REMISIN
+            FIELD_NAME_LATEX=FECHA DEL AUTO DE REMISI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
@@ -4994,7 +4994,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE RECEPCIN DEL ARCHIVO JUDICIAL
+            FIELD_NAME=FECHA DE RECEPCIÓN DEL ARCHIVO JUDICIAL
             FIELD_CODE_NAME_UPPER=FIELD9
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5002,9 +5002,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field9` DATETIME DEFAULT NULL FECHA DE RECEPCIN DEL ARCHIVO JUDICIAL
+            FIELD_DB=`field9` DATETIME DEFAULT NULL FECHA DE RECEPCIÓN DEL ARCHIVO JUDICIAL
             
-            FIELD_NAME_LATEX=FECHA DE RECEPCIN DEL ARCHIVO JUDICIAL
+            FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON DEL ARCHIVO JUDICIAL
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
@@ -5014,7 +5014,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=PERSONA QUE RECIBI DEL ARCHIVO (a paterno)
+            FIELD_NAME=PERSONA QUE RECIBIÓ DEL ARCHIVO (a. paterno)
             FIELD_CODE_NAME_UPPER=FIELD10_PATERNO
             FIELD_INTRO=apellido paterno
             FIELD_DESCRIPTION_INI=apellido paterno
@@ -5022,9 +5022,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field10_paterno` VARCHAR(255) DEFAULT NULL PERSONA QUE RECIBI DEL ARCHIVO (a paterno)
+            FIELD_DB=`field10_paterno` VARCHAR(255) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (a. paterno)
             
-            FIELD_NAME_LATEX=PERSONA QUE RECIBI DEL ARCHIVO (a paterno)
+            FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (a. paterno)
             FIELD_CODE_NAME_LATEX=field10\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
             
@@ -5034,7 +5034,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=PERSONA QUE RECIBI DEL ARCHIVO (a materno)
+            FIELD_NAME=PERSONA QUE RECIBIÓ DEL ARCHIVO (a. materno)
             FIELD_CODE_NAME_UPPER=FIELD10_MATERNO
             FIELD_INTRO=apellido materno
             FIELD_DESCRIPTION_INI=apellido materno
@@ -5042,9 +5042,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field10_materno` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBI DEL ARCHIVO (a materno)
+            FIELD_DB=`field10_materno` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (a. materno)
             
-            FIELD_NAME_LATEX=PERSONA QUE RECIBI DEL ARCHIVO (a materno)
+            FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (a. materno)
             FIELD_CODE_NAME_LATEX=field10\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
@@ -5054,7 +5054,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=PERSONA QUE RECIBI DEL ARCHIVO (nombre)
+            FIELD_NAME=PERSONA QUE RECIBIÓ DEL ARCHIVO (nombre)
             FIELD_CODE_NAME_UPPER=FIELD10_NOMBRE
             FIELD_INTRO=nombre
             FIELD_DESCRIPTION_INI=nombre
@@ -5062,9 +5062,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field10_nombre` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBI DEL ARCHIVO (nombre)
+            FIELD_DB=`field10_nombre` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (nombre)
             
-            FIELD_NAME_LATEX=PERSONA QUE RECIBI DEL ARCHIVO (nombre)
+            FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (nombre)
             FIELD_CODE_NAME_LATEX=field10\_nombre
             FIELD_DBCOMMENT_LATEX=nombre
             
@@ -5074,7 +5074,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=PERSONA QUE RECIBI DEL ARCHIVO (es Moral)
+            FIELD_NAME=PERSONA QUE RECIBIÓ DEL ARCHIVO (es Moral)
             FIELD_CODE_NAME_UPPER=FIELD10_ISMORAL
             FIELD_INTRO=es Moral
             FIELD_DESCRIPTION_INI=es Moral
@@ -5082,9 +5082,9 @@ architectcomp=jtca
             FIELDTYPE_ID=16
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field10_isMoral` TINYINT(1) DEFAULT NULL PERSONA QUE RECIBI DEL ARCHIVO (es Moral)
+            FIELD_DB=`field10_isMoral` TINYINT(1) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (es Moral)
             
-            FIELD_NAME_LATEX=PERSONA QUE RECIBI DEL ARCHIVO (es Moral)
+            FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (es Moral)
             FIELD_CODE_NAME_LATEX=field10\_isMoral
             FIELD_DBCOMMENT_LATEX=es Moral
             
@@ -5094,7 +5094,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE DEVOLUCIN
+            FIELD_NAME=FECHA DE DEVOLUCIÓN
             FIELD_CODE_NAME_UPPER=FIELD11
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5102,9 +5102,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE DEVOLUCIN
+            FIELD_DB=`field11` DATETIME DEFAULT NULL FECHA DE DEVOLUCIÓN
             
-            FIELD_NAME_LATEX=FECHA DE DEVOLUCIN
+            FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
@@ -5156,15 +5156,15 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de envo de expedientes al archivo judicial para su destruccin
+    Compobject_name=Libro de envío de expedientes al archivo judicial para su destrucción
     Compobject_description_ini=
 	
     COMPOBJECT=LJC19
     compobject=ljc19
     CompObject=Ljc19
     
-    compobject_name=libro de envo de expedientes al archivo judicial para su destruccin
-    CompObject_name=LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN
+    compobject_name=libro de envío de expedientes al archivo judicial para su destrucción
+    CompObject_name=LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
@@ -5207,7 +5207,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5215,9 +5215,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -5227,7 +5227,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5235,9 +5235,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -5247,7 +5247,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -5255,9 +5255,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -5267,7 +5267,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=NMERO DE FOJAS
+            FIELD_NAME=NÚMERO DE FOJAS
             FIELD_CODE_NAME_UPPER=FIELD5
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5275,9 +5275,9 @@ architectcomp=jtca
             FIELDTYPE_ID=22
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field5` INT(10) DEFAULT NULL NMERO DE FOJAS
+            FIELD_DB=`field5` INT(10) DEFAULT NULL NÚMERO DE FOJAS
             
-            FIELD_NAME_LATEX=NMERO DE FOJAS
+            FIELD_NAME_LATEX=N\'UMERO DE FOJAS
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
@@ -5287,7 +5287,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DEL AUTO DE REMISIN PARA ANLISIS DE COTECIAD
+            FIELD_NAME=FECHA DEL AUTO DE REMISIÓN PARA ANÁLISIS DE COTECIAD
             FIELD_CODE_NAME_UPPER=FIELD6
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5295,9 +5295,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field6` DATETIME DEFAULT NULL FECHA DEL AUTO DE REMISIN PARA ANLISIS DE COTECIAD
+            FIELD_DB=`field6` DATETIME DEFAULT NULL FECHA DEL AUTO DE REMISIÓN PARA ANÁLISIS DE COTECIAD
             
-            FIELD_NAME_LATEX=FECHA DEL AUTO DE REMISIN PARA ANLISIS DE COTECIAD
+            FIELD_NAME_LATEX=FECHA DEL AUTO DE REMISI\'ON PARA AN\'ALISIS DE COTECIAD
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
@@ -5307,7 +5307,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE RECEPCIN EN EL ARCHIVO JUDICIAL
+            FIELD_NAME=FECHA DE RECEPCIÓN EN EL ARCHIVO JUDICIAL
             FIELD_CODE_NAME_UPPER=FIELD7
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5315,9 +5315,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field7` DATETIME DEFAULT NULL FECHA DE RECEPCIN EN EL ARCHIVO JUDICIAL
+            FIELD_DB=`field7` DATETIME DEFAULT NULL FECHA DE RECEPCIÓN EN EL ARCHIVO JUDICIAL
             
-            FIELD_NAME_LATEX=FECHA DE RECEPCIN EN EL ARCHIVO JUDICIAL
+            FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON EN EL ARCHIVO JUDICIAL
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
@@ -5327,7 +5327,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=PERSONA QUE RECIBI DEL ARCHIVO (a paterno)
+            FIELD_NAME=PERSONA QUE RECIBIÓ DEL ARCHIVO (a. paterno)
             FIELD_CODE_NAME_UPPER=FIELD8_PATERNO
             FIELD_INTRO=apellido paterno
             FIELD_DESCRIPTION_INI=apellido paterno
@@ -5335,9 +5335,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field8_paterno` VARCHAR(255) DEFAULT NULL PERSONA QUE RECIBI DEL ARCHIVO (a paterno)
+            FIELD_DB=`field8_paterno` VARCHAR(255) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (a. paterno)
             
-            FIELD_NAME_LATEX=PERSONA QUE RECIBI DEL ARCHIVO (a paterno)
+            FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (a. paterno)
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
             
@@ -5347,7 +5347,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=PERSONA QUE RECIBI DEL ARCHIVO (a materno)
+            FIELD_NAME=PERSONA QUE RECIBIÓ DEL ARCHIVO (a. materno)
             FIELD_CODE_NAME_UPPER=FIELD8_MATERNO
             FIELD_INTRO=apellido materno
             FIELD_DESCRIPTION_INI=apellido materno
@@ -5355,9 +5355,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field8_materno` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBI DEL ARCHIVO (a materno)
+            FIELD_DB=`field8_materno` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (a. materno)
             
-            FIELD_NAME_LATEX=PERSONA QUE RECIBI DEL ARCHIVO (a materno)
+            FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (a. materno)
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
@@ -5367,7 +5367,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=PERSONA QUE RECIBI DEL ARCHIVO (nombre)
+            FIELD_NAME=PERSONA QUE RECIBIÓ DEL ARCHIVO (nombre)
             FIELD_CODE_NAME_UPPER=FIELD8_NOMBRE
             FIELD_INTRO=nombre
             FIELD_DESCRIPTION_INI=nombre
@@ -5375,9 +5375,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field8_nombre` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBI DEL ARCHIVO (nombre)
+            FIELD_DB=`field8_nombre` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (nombre)
             
-            FIELD_NAME_LATEX=PERSONA QUE RECIBI DEL ARCHIVO (nombre)
+            FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (nombre)
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=nombre
             
@@ -5387,7 +5387,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=PERSONA QUE RECIBI DEL ARCHIVO (es Moral)
+            FIELD_NAME=PERSONA QUE RECIBIÓ DEL ARCHIVO (es Moral)
             FIELD_CODE_NAME_UPPER=FIELD8_ISMORAL
             FIELD_INTRO=es Moral
             FIELD_DESCRIPTION_INI=es Moral
@@ -5395,9 +5395,9 @@ architectcomp=jtca
             FIELDTYPE_ID=16
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field8_isMoral` TINYINT(1) DEFAULT NULL PERSONA QUE RECIBI DEL ARCHIVO (es Moral)
+            FIELD_DB=`field8_isMoral` TINYINT(1) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (es Moral)
             
-            FIELD_NAME_LATEX=PERSONA QUE RECIBI DEL ARCHIVO (es Moral)
+            FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (es Moral)
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=es Moral
             
@@ -5449,15 +5449,15 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica
+    Compobject_name=Libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública
     Compobject_description_ini=
 	
     COMPOBJECT=LJC20
     compobject=ljc20
     CompObject=Ljc20
     
-    compobject_name=libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica
-    CompObject_name=LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIN PBLICA
+    compobject_name=libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública
+    CompObject_name=LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
@@ -5500,7 +5500,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5508,9 +5508,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -5520,7 +5520,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5528,9 +5528,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -5540,7 +5540,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -5548,9 +5548,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -5600,7 +5600,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=ESTA DE ACUERDO
+            FIELD_NAME=ESTA DE ACUERDO?
             FIELD_CODE_NAME_UPPER=FIELD7
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5608,9 +5608,9 @@ architectcomp=jtca
             FIELDTYPE_ID=16
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field7` TINYINT(1) DEFAULT NULL ESTA DE ACUERDO
+            FIELD_DB=`field7` TINYINT(1) DEFAULT NULL ESTA DE ACUERDO?
             
-            FIELD_NAME_LATEX=ESTA DE ACUERDO
+            FIELD_NAME_LATEX=ESTA DE ACUERDO?
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
@@ -5682,15 +5682,15 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de ministerio pblico
+    Compobject_name=Libro de ministerio público
     Compobject_description_ini=
 	
     COMPOBJECT=LJC21
     compobject=ljc21
     CompObject=Ljc21
     
-    compobject_name=libro de ministerio pblico
-    CompObject_name=LIBRO DE MINISTERIO PBLICO
+    compobject_name=libro de ministerio público
+    CompObject_name=LIBRO DE MINISTERIO PÚBLICO
     CompObject_short_name=2
     Compobject_short_name=2
     compobject_short_name=2
@@ -5733,7 +5733,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=rgano
+            FIELD_NAME=Órgano
             FIELD_CODE_NAME_UPPER=ID_ORGANO
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5741,9 +5741,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL rgano
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
             
-            FIELD_NAME_LATEX=rgano
+            FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
@@ -5753,7 +5753,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Secretara
+            FIELD_NAME=Secretaría
             FIELD_CODE_NAME_UPPER=ID_SECRETARIA
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5761,9 +5761,9 @@ architectcomp=jtca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretara
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
             
-            FIELD_NAME_LATEX=Secretara
+            FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
@@ -5773,7 +5773,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Ao j
+            FIELD_NAME=Año j.
             FIELD_CODE_NAME_UPPER=ANOJ
             FIELD_INTRO=<p>Año judicial</p>
             FIELD_DESCRIPTION_INI=<p>Año judicial</p>
@@ -5781,9 +5781,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Ao j
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
             
-            FIELD_NAME_LATEX=Ao j
+            FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
@@ -5813,7 +5813,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE PUBLICACIN DE AUTO QUE ORDENA LA VISTA
+            FIELD_NAME=FECHA DE PUBLICACIÓN DE AUTO QUE ORDENA LA VISTA
             FIELD_CODE_NAME_UPPER=FIELD6
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5821,9 +5821,9 @@ architectcomp=jtca
             FIELDTYPE_ID=5
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field6` DATETIME DEFAULT NULL FECHA DE PUBLICACIN DE AUTO QUE ORDENA LA VISTA
+            FIELD_DB=`field6` DATETIME DEFAULT NULL FECHA DE PUBLICACIÓN DE AUTO QUE ORDENA LA VISTA
             
-            FIELD_NAME_LATEX=FECHA DE PUBLICACIN DE AUTO QUE ORDENA LA VISTA
+            FIELD_NAME_LATEX=FECHA DE PUBLICACI\'ON DE AUTO QUE ORDENA LA VISTA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
@@ -5853,7 +5853,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=NOMBRE DEL MP (a paterno)
+            FIELD_NAME=NOMBRE DEL MP (a. paterno)
             FIELD_CODE_NAME_UPPER=FIELD8_PATERNO
             FIELD_INTRO=apellido paterno
             FIELD_DESCRIPTION_INI=apellido paterno
@@ -5861,9 +5861,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field8_paterno` VARCHAR(255) DEFAULT NULL NOMBRE DEL MP (a paterno)
+            FIELD_DB=`field8_paterno` VARCHAR(255) DEFAULT NULL NOMBRE DEL MP (a. paterno)
             
-            FIELD_NAME_LATEX=NOMBRE DEL MP (a paterno)
+            FIELD_NAME_LATEX=NOMBRE DEL MP (a. paterno)
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
             
@@ -5873,7 +5873,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=NOMBRE DEL MP (a materno)
+            FIELD_NAME=NOMBRE DEL MP (a. materno)
             FIELD_CODE_NAME_UPPER=FIELD8_MATERNO
             FIELD_INTRO=apellido materno
             FIELD_DESCRIPTION_INI=apellido materno
@@ -5881,9 +5881,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field8_materno` VARCHAR(45) DEFAULT NULL NOMBRE DEL MP (a materno)
+            FIELD_DB=`field8_materno` VARCHAR(45) DEFAULT NULL NOMBRE DEL MP (a. materno)
             
-            FIELD_NAME_LATEX=NOMBRE DEL MP (a materno)
+            FIELD_NAME_LATEX=NOMBRE DEL MP (a. materno)
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
@@ -5973,7 +5973,7 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=FECHA DE DEVOLUCIN DEL MP
+            FIELD_NAME=FECHA DE DEVOLUCIÓN DEL MP
             FIELD_CODE_NAME_UPPER=FIELD11
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -5981,9 +5981,9 @@ architectcomp=jtca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field11` VARCHAR(45) DEFAULT NULL FECHA DE DEVOLUCIN DEL MP
+            FIELD_DB=`field11` VARCHAR(45) DEFAULT NULL FECHA DE DEVOLUCIÓN DEL MP
             
-            FIELD_NAME_LATEX=FECHA DE DEVOLUCIN DEL MP
+            FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON DEL MP
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             

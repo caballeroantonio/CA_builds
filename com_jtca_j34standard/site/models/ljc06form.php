@@ -119,11 +119,11 @@ class JtCaModelLjc06Form extends JtCaModelLjc06
 	}
 
 	/**
-	 * Method to get libro de recursos de apelacin data.
+	 * Method to get libro de recursos de apelación data.
 	 *
-	 * @param	integer	$item_id	The id of the libro de recursos de apelacin.
+	 * @param	integer	$item_id	The id of the libro de recursos de apelación.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	LIBRO DE RECURSOS DE APELACIN item data object on success, false on failure.
+	 * @return	mixed	LIBRO DE RECURSOS DE APELACIÓN item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{
@@ -367,7 +367,7 @@ class JtCaModelLjc06Form extends JtCaModelLjc06
 			return false;
 		}
 
-		// Reorder the jc06 so the new libro de recursos de apelacin is first
+		// Reorder the jc06 so the new libro de recursos de apelación is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);

@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML LIBRO DE MINISTERIO PBLICO View class for the TSJ CDMX Libros TxCA component
+ * HTML LIBRO DE MINISTERIO PÚBLICO View class for the TSJ CDMX Libros TxCA component
  *
  */
 class JtCaViewLjc21 extends JViewLegacy

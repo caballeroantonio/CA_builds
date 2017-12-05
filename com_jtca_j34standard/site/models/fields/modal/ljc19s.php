@@ -31,7 +31,7 @@ defined('JPATH_BASE') or die;
 jimport('joomla.form.formfield');
 
 /**
- * Supports a modal libro de envo de expedientes al archivo judicial para su destruccin picker.
+ * Supports a modal libro de envío de expedientes al archivo judicial para su destrucción picker.
  *
  */
 class JFormFieldModal_Ljc19s extends JFormField

@@ -31,7 +31,7 @@ defined('JPATH_BASE') or die;
 jimport('joomla.form.formfield');
 
 /**
- * Supports a modal libro de auxiliares de la administracin de justicia picker.
+ * Supports a modal libro de auxiliares de la administración de justicia picker.
  *
  */
 class JFormFieldModal_Ljc10s extends JFormField

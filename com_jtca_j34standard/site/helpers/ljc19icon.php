@@ -84,7 +84,7 @@ class JHTMLLjc19Icon
 	/**
 	 * Display an edit icon for the ljc19.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de envo de expedientes al archivo judicial para su destruccin is trashed.
+	 * This icon will not display in a popup window, nor if the libro de envío de expedientes al archivo judicial para su destrucción is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljc19	The ljc19 in question.
@@ -165,7 +165,7 @@ class JHTMLLjc19Icon
 	/**
 	 * Display an delete icon for the ljc19.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de envo de expedientes al archivo judicial para su destruccin is trashed.
+	 * This icon will not display in a popup window, nor if the libro de envío de expedientes al archivo judicial para su destrucción is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljc19	The ljc19 in question.

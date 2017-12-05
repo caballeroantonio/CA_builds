@@ -185,7 +185,7 @@ class JtCaTableLjc17s extends JTable
 
 		
 	/**
-	 * Stores a LIBRO DE REMISIN AL ARCHIVO
+	 * Stores a LIBRO DE REMISIÓN AL ARCHIVO
 	 *
 	 * @param	boolean	$update_nulls	True to update fields even if they are null.
 	 * 
@@ -200,7 +200,7 @@ class JtCaTableLjc17s extends JTable
 		
 		if (empty($this->id))
 		{
-			// New LIBRO DE REMISIN AL ARCHIVO. A created and created_by field can be set by the user,
+			// New LIBRO DE REMISIÓN AL ARCHIVO. A created and created_by field can be set by the user,
 			// so we don't touch either of these if they are set.
 			if (!intval($this->created))
 			{

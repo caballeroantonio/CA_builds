@@ -31,7 +31,7 @@ defined('JPATH_BASE') or die;
 jimport('joomla.form.formfield');
 
 /**
- * Supports a modal libro de remisin al archivo picker.
+ * Supports a modal libro de remisión al archivo picker.
  *
  */
 class JFormFieldModal_Ljc17s extends JFormField

@@ -97,7 +97,7 @@ class JtCaModelLjc06s extends JModelList
 		
 		$item_id = $app->input->getInt('id', 0) . ':' .$app->input->getInt('Itemid', 0);
 
-		// Check to see if a single libro de recursos de apelacin has been specified either as a parameter or in the url Request
+		// Check to see if a single libro de recursos de apelación has been specified either as a parameter or in the url Request
 		$pk = $params->get('ljc06_id', '') == '' ? $app->input->getInt('id', '') : $params->get('ljc06_id');
 		$this->setState('filter.ljc06_id', $pk);
 		

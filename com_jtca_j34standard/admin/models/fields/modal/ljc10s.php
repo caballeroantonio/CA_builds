@@ -28,7 +28,7 @@
 
 defined('JPATH_BASE') or die;
 /**
- * Supports a modal libro de auxiliares de la administracin de justicia picker.
+ * Supports a modal libro de auxiliares de la administración de justicia picker.
  *
  */
 class JFormFieldModal_Ljc10s extends JFormField
@@ -112,18 +112,18 @@ class JFormFieldModal_Ljc10s extends JFormField
 			$value = (int)$this->value;
 		}
 
-		// The current libro de auxiliares de la administracin de justicia display field.
+		// The current libro de auxiliares de la administración de justicia display field.
 		$html[] = '<span class="input-append">';
 		$html[] = '<input type="text" class="input-medium" id="'.$this->id.'_name" value="'.$title.'" disabled="disabled" size="35" />';
 		$html[] = '<a class="modal btn hasTooltip" title="'.JHtml::tooltipText('COM_JTCA_LJC10S_SELECT_BUTTON_DESC').'"  href="'.$link.'&amp;'.JSession::getFormToken().'=1" rel="{handler: \'iframe\', size: {x: 800, y: 450}}"><i class="icon-file"></i> '.JText::_('JSELECT').'</a>';
 
-		// Edit libro de auxiliares de la administracin de justicia button
+		// Edit libro de auxiliares de la administración de justicia button
 		if ($allow_edit)
 		{
 			$html[] = '<a class="btn hasTooltip'.($value ? '' : ' hidden').'" href="index.php?option=com_jtca&layout=modal&tmpl=component&task=ljc10.edit&id=' . $value. '" target="_blank" title="'.JHtml::tooltipText('COM_JTCA_LJC10S_EDIT_DESC').'" ><span class="icon-edit"></span> ' . JText::_('JACTION_EDIT') . '</a>';
 		}
 
-		// Clear libro de auxiliares de la administracin de justicia button
+		// Clear libro de auxiliares de la administración de justicia button
 		if ($allow_clear)
 		{
 			$html[] = '<button id="'.$this->id.'_clear" class="btn'.($value ? '' : ' hidden').'" onclick="return jClearLjc10(\''.$this->id.'\')"><span class="icon-remove"></span> ' . JText::_('JCLEAR') . '</button>';

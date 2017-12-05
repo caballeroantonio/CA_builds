@@ -190,7 +190,7 @@ class JtCaTableLjc21s extends JTable
 
 		
 	/**
-	 * Stores a LIBRO DE MINISTERIO PBLICO
+	 * Stores a LIBRO DE MINISTERIO PÚBLICO
 	 *
 	 * @param	boolean	$update_nulls	True to update fields even if they are null.
 	 * 
@@ -205,7 +205,7 @@ class JtCaTableLjc21s extends JTable
 		
 		if (empty($this->id))
 		{
-			// New LIBRO DE MINISTERIO PBLICO. A created and created_by field can be set by the user,
+			// New LIBRO DE MINISTERIO PÚBLICO. A created and created_by field can be set by the user,
 			// so we don't touch either of these if they are set.
 			if (!intval($this->created))
 			{

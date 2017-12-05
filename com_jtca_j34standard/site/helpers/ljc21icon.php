@@ -84,7 +84,7 @@ class JHTMLLjc21Icon
 	/**
 	 * Display an edit icon for the ljc21.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de ministerio pblico is trashed.
+	 * This icon will not display in a popup window, nor if the libro de ministerio público is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljc21	The ljc21 in question.
@@ -165,7 +165,7 @@ class JHTMLLjc21Icon
 	/**
 	 * Display an delete icon for the ljc21.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de ministerio pblico is trashed.
+	 * This icon will not display in a popup window, nor if the libro de ministerio público is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljc21	The ljc21 in question.

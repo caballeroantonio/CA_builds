@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * TSJ CDMX Libros TxCA Component LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN Model
+ * TSJ CDMX Libros TxCA Component LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN Model
  *
  */
 class JtCaModelLjc19 extends JModelItem
@@ -175,9 +175,9 @@ class JtCaModelLjc19 extends JModelItem
 		return JTable::getInstance($type, $prefix, $config);
 	}
 	/**
-	 * Method to get LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN data.
+	 * Method to get LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN data.
 	 *
-	 * @param	integer	$pk	The id of the libro de envo de expedientes al archivo judicial para su destruccin.
+	 * @param	integer	$pk	The id of the libro de envío de expedientes al archivo judicial para su destrucción.
 	 *
 	 * @return	mixed	Menu item data object on success, false on failure.
 	 */

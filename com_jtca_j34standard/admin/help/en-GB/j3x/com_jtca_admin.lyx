@@ -1028,7 +1028,7 @@ Configuración de LIBRO DE TURNO PARA SENTENCIA
 \end_layout
 
 \begin_layout Subsection
-Configuración de LIBRO DE RECURSOS DE APELACIN
+Configuración de LIBRO DE RECURSOS DE APELACIÓN
 \end_layout
 
 \begin_layout Standard
@@ -1092,7 +1092,7 @@ Configuración de LIBRO DE ACTUARIOS
 \end_layout
 
 \begin_layout Subsection
-Configuración de LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA
+Configuración de LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA
 \end_layout
 
 \begin_layout Standard
@@ -1172,7 +1172,7 @@ Configuración de AGENDA DE AUDIENCIAS
 \end_layout
 
 \begin_layout Subsection
-Configuración de LIBRO DE REMISIN AL ARCHIVO
+Configuración de LIBRO DE REMISIÓN AL ARCHIVO
 \end_layout
 
 \begin_layout Standard
@@ -1188,7 +1188,7 @@ Configuración de LIBRO DE REMISIN AL ARCHIVO
 \end_layout
 
 \begin_layout Subsection
-Configuración de LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO
+Configuración de LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO
 \end_layout
 
 \begin_layout Standard
@@ -1204,7 +1204,7 @@ Configuración de LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO
 \end_layout
 
 \begin_layout Subsection
-Configuración de LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN
+Configuración de LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN
 \end_layout
 
 \begin_layout Standard
@@ -1220,7 +1220,7 @@ Configuración de LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTR
 \end_layout
 
 \begin_layout Subsection
-Configuración de LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIN PBLICA
+Configuración de LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA
 \end_layout
 
 \begin_layout Standard
@@ -1236,7 +1236,7 @@ Configuración de LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN
 \end_layout
 
 \begin_layout Subsection
-Configuración de LIBRO DE MINISTERIO PBLICO
+Configuración de LIBRO DE MINISTERIO PÚBLICO
 \end_layout
 
 \begin_layout Standard
@@ -7209,7 +7209,7 @@ Create LIBRO DE TURNO PARA SENTENCIA
 \end_layout
 
 \begin_layout Subsubsection
-Libro de recursos de apelacin
+Libro de recursos de apelación
 \end_layout
 
 \begin_layout Subparagraph
@@ -7288,7 +7288,7 @@ status open
 
 
 \backslash
-caption{Lista de campos en Libro de recursos de apelacin}
+caption{Lista de campos en Libro de recursos de apelación}
 \backslash
 
 \backslash
@@ -7470,7 +7470,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc06 - Single LIBRO DE RECURSOS DE APELACIN Layout"
+name "Jc06 - Single LIBRO DE RECURSOS DE APELACIÓN Layout"
 target "SERVER?option=com_jtca&view=ljc06&id=1"
 
 \end_inset
@@ -7500,7 +7500,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE RECURSOS DE APELACIN Layout
+Single LIBRO DE RECURSOS DE APELACIÓN Layout
 \end_layout
 
 \end_inset
@@ -7516,7 +7516,7 @@ Single LIBRO DE RECURSOS DE APELACIN Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc06 - Single LIBRO DE RECURSOS DE APELACIN Article Layout"
+name "Jc06 - Single LIBRO DE RECURSOS DE APELACIÓN Article Layout"
 target "SERVER?option=com_jtca&view=ljc06&layout=article&id=1"
 
 \end_inset
@@ -7546,7 +7546,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE RECURSOS DE APELACIN Article Layout
+Single LIBRO DE RECURSOS DE APELACIÓN Article Layout
 \end_layout
 
 \end_inset
@@ -7562,7 +7562,7 @@ Single LIBRO DE RECURSOS DE APELACIN Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc06 - Create LIBRO DE RECURSOS DE APELACIN"
+name "Jc06 - Create LIBRO DE RECURSOS DE APELACIÓN"
 target "SERVER?option=com_jtca&view=ljc06form&layout=edit&id=1"
 
 \end_inset
@@ -7592,7 +7592,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Create LIBRO DE RECURSOS DE APELACIN
+Create LIBRO DE RECURSOS DE APELACIÓN
 \end_layout
 
 \end_inset
@@ -8834,7 +8834,7 @@ Create LIBRO DE ACTUARIOS
 \end_layout
 
 \begin_layout Subsubsection
-Libro de auxiliares de la administracin de justicia
+Libro de auxiliares de la administración de justicia
 \end_layout
 
 \begin_layout Subparagraph
@@ -8913,7 +8913,7 @@ status open
 
 
 \backslash
-caption{Lista de campos en Libro de auxiliares de la administracin de justicia}
+caption{Lista de campos en Libro de auxiliares de la administración de justicia}
 \backslash
 
 \backslash
@@ -9095,7 +9095,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc10 - Single LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA Layout"
+name "Jc10 - Single LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA Layout"
 target "SERVER?option=com_jtca&view=ljc10&id=1"
 
 \end_inset
@@ -9125,7 +9125,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA Layout
+Single LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA Layout
 \end_layout
 
 \end_inset
@@ -9141,7 +9141,7 @@ Single LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc10 - Single LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA Article Layout"
+name "Jc10 - Single LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA Article Layout"
 target "SERVER?option=com_jtca&view=ljc10&layout=article&id=1"
 
 \end_inset
@@ -9171,7 +9171,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA Article Layout
+Single LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA Article Layout
 \end_layout
 
 \end_inset
@@ -9187,7 +9187,7 @@ Single LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc10 - Create LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA"
+name "Jc10 - Create LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA"
 target "SERVER?option=com_jtca&view=ljc10form&layout=edit&id=1"
 
 \end_inset
@@ -9217,7 +9217,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Create LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA
+Create LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA
 \end_layout
 
 \end_inset
@@ -10865,7 +10865,7 @@ Create AGENDA DE AUDIENCIAS
 \end_layout
 
 \begin_layout Subsubsection
-Libro de remisin al archivo
+Libro de remisión al archivo
 \end_layout
 
 \begin_layout Subparagraph
@@ -10944,7 +10944,7 @@ status open
 
 
 \backslash
-caption{Lista de campos en Libro de remisin al archivo}
+caption{Lista de campos en Libro de remisión al archivo}
 \backslash
 
 \backslash
@@ -11126,7 +11126,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc17 - Single LIBRO DE REMISIN AL ARCHIVO Layout"
+name "Jc17 - Single LIBRO DE REMISIÓN AL ARCHIVO Layout"
 target "SERVER?option=com_jtca&view=ljc17&id=1"
 
 \end_inset
@@ -11156,7 +11156,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE REMISIN AL ARCHIVO Layout
+Single LIBRO DE REMISIÓN AL ARCHIVO Layout
 \end_layout
 
 \end_inset
@@ -11172,7 +11172,7 @@ Single LIBRO DE REMISIN AL ARCHIVO Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc17 - Single LIBRO DE REMISIN AL ARCHIVO Article Layout"
+name "Jc17 - Single LIBRO DE REMISIÓN AL ARCHIVO Article Layout"
 target "SERVER?option=com_jtca&view=ljc17&layout=article&id=1"
 
 \end_inset
@@ -11202,7 +11202,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE REMISIN AL ARCHIVO Article Layout
+Single LIBRO DE REMISIÓN AL ARCHIVO Article Layout
 \end_layout
 
 \end_inset
@@ -11218,7 +11218,7 @@ Single LIBRO DE REMISIN AL ARCHIVO Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc17 - Create LIBRO DE REMISIN AL ARCHIVO"
+name "Jc17 - Create LIBRO DE REMISIÓN AL ARCHIVO"
 target "SERVER?option=com_jtca&view=ljc17form&layout=edit&id=1"
 
 \end_inset
@@ -11248,7 +11248,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Create LIBRO DE REMISIN AL ARCHIVO
+Create LIBRO DE REMISIÓN AL ARCHIVO
 \end_layout
 
 \end_inset
@@ -11271,7 +11271,7 @@ Create LIBRO DE REMISIN AL ARCHIVO
 \end_layout
 
 \begin_layout Subsubsection
-Libro de remisin de documentos al archivo
+Libro de remisión de documentos al archivo
 \end_layout
 
 \begin_layout Subparagraph
@@ -11350,7 +11350,7 @@ status open
 
 
 \backslash
-caption{Lista de campos en Libro de remisin de documentos al archivo}
+caption{Lista de campos en Libro de remisión de documentos al archivo}
 \backslash
 
 \backslash
@@ -11532,7 +11532,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc18 - Single LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO Layout"
+name "Jc18 - Single LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO Layout"
 target "SERVER?option=com_jtca&view=ljc18&id=1"
 
 \end_inset
@@ -11562,7 +11562,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO Layout
+Single LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO Layout
 \end_layout
 
 \end_inset
@@ -11578,7 +11578,7 @@ Single LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc18 - Single LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO Article Layout"
+name "Jc18 - Single LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO Article Layout"
 target "SERVER?option=com_jtca&view=ljc18&layout=article&id=1"
 
 \end_inset
@@ -11608,7 +11608,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO Article Layout
+Single LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO Article Layout
 \end_layout
 
 \end_inset
@@ -11624,7 +11624,7 @@ Single LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc18 - Create LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO"
+name "Jc18 - Create LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO"
 target "SERVER?option=com_jtca&view=ljc18form&layout=edit&id=1"
 
 \end_inset
@@ -11654,7 +11654,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Create LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO
+Create LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO
 \end_layout
 
 \end_inset
@@ -11677,7 +11677,7 @@ Create LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO
 \end_layout
 
 \begin_layout Subsubsection
-Libro de envo de expedientes al archivo judicial para su destruccin
+Libro de envío de expedientes al archivo judicial para su destrucción
 \end_layout
 
 \begin_layout Subparagraph
@@ -11756,7 +11756,7 @@ status open
 
 
 \backslash
-caption{Lista de campos en Libro de envo de expedientes al archivo judicial para su destruccin}
+caption{Lista de campos en Libro de envío de expedientes al archivo judicial para su destrucción}
 \backslash
 
 \backslash
@@ -11938,7 +11938,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc19 - Single LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN Layout"
+name "Jc19 - Single LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN Layout"
 target "SERVER?option=com_jtca&view=ljc19&id=1"
 
 \end_inset
@@ -11968,7 +11968,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN Layout
+Single LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN Layout
 \end_layout
 
 \end_inset
@@ -11984,7 +11984,7 @@ Single LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN Layou
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc19 - Single LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN Article Layout"
+name "Jc19 - Single LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN Article Layout"
 target "SERVER?option=com_jtca&view=ljc19&layout=article&id=1"
 
 \end_inset
@@ -12014,7 +12014,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN Article Layout
+Single LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN Article Layout
 \end_layout
 
 \end_inset
@@ -12030,7 +12030,7 @@ Single LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN Artic
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc19 - Create LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN"
+name "Jc19 - Create LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN"
 target "SERVER?option=com_jtca&view=ljc19form&layout=edit&id=1"
 
 \end_inset
@@ -12060,7 +12060,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Create LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN
+Create LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN
 \end_layout
 
 \end_inset
@@ -12083,7 +12083,7 @@ Create LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN
 \end_layout
 
 \begin_layout Subsubsection
-Libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica
+Libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública
 \end_layout
 
 \begin_layout Subparagraph
@@ -12162,7 +12162,7 @@ status open
 
 
 \backslash
-caption{Lista de campos en Libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica}
+caption{Lista de campos en Libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública}
 \backslash
 
 \backslash
@@ -12344,7 +12344,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc20 - Single LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIN PBLICA Layout"
+name "Jc20 - Single LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA Layout"
 target "SERVER?option=com_jtca&view=ljc20&id=1"
 
 \end_inset
@@ -12374,7 +12374,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIN PBLICA Layout
+Single LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA Layout
 \end_layout
 
 \end_inset
@@ -12390,7 +12390,7 @@ Single LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 D
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc20 - Single LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIN PBLICA Article Layout"
+name "Jc20 - Single LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA Article Layout"
 target "SERVER?option=com_jtca&view=ljc20&layout=article&id=1"
 
 \end_inset
@@ -12420,7 +12420,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIN PBLICA Article Layout
+Single LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA Article Layout
 \end_layout
 
 \end_inset
@@ -12436,7 +12436,7 @@ Single LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 D
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc20 - Create LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIN PBLICA"
+name "Jc20 - Create LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA"
 target "SERVER?option=com_jtca&view=ljc20form&layout=edit&id=1"
 
 \end_inset
@@ -12466,7 +12466,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Create LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIN PBLICA
+Create LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA
 \end_layout
 
 \end_inset
@@ -12489,7 +12489,7 @@ Create LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 D
 \end_layout
 
 \begin_layout Subsubsection
-Libro de ministerio pblico
+Libro de ministerio público
 \end_layout
 
 \begin_layout Subparagraph
@@ -12568,7 +12568,7 @@ status open
 
 
 \backslash
-caption{Lista de campos en Libro de ministerio pblico}
+caption{Lista de campos en Libro de ministerio público}
 \backslash
 
 \backslash
@@ -12750,7 +12750,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc21 - Single LIBRO DE MINISTERIO PBLICO Layout"
+name "Jc21 - Single LIBRO DE MINISTERIO PÚBLICO Layout"
 target "SERVER?option=com_jtca&view=ljc21&id=1"
 
 \end_inset
@@ -12780,7 +12780,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE MINISTERIO PBLICO Layout
+Single LIBRO DE MINISTERIO PÚBLICO Layout
 \end_layout
 
 \end_inset
@@ -12796,7 +12796,7 @@ Single LIBRO DE MINISTERIO PBLICO Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc21 - Single LIBRO DE MINISTERIO PBLICO Article Layout"
+name "Jc21 - Single LIBRO DE MINISTERIO PÚBLICO Article Layout"
 target "SERVER?option=com_jtca&view=ljc21&layout=article&id=1"
 
 \end_inset
@@ -12826,7 +12826,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE MINISTERIO PBLICO Article Layout
+Single LIBRO DE MINISTERIO PÚBLICO Article Layout
 \end_layout
 
 \end_inset
@@ -12842,7 +12842,7 @@ Single LIBRO DE MINISTERIO PBLICO Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Jc21 - Create LIBRO DE MINISTERIO PBLICO"
+name "Jc21 - Create LIBRO DE MINISTERIO PÚBLICO"
 target "SERVER?option=com_jtca&view=ljc21form&layout=edit&id=1"
 
 \end_inset
@@ -12872,7 +12872,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Create LIBRO DE MINISTERIO PBLICO
+Create LIBRO DE MINISTERIO PÚBLICO
 \end_layout
 
 \end_inset

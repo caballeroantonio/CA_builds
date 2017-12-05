@@ -276,7 +276,7 @@ class JtCaControllerLjc19 extends JControllerForm
 	/**
 	 * Method to add a new record.
 	 *
-	 * @return  mixed  True if the LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN can be added, a error object if not.
+	 * @return  mixed  True if the LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN can be added, a error object if not.
 	 *
 	 */
 	public function add()

@@ -119,11 +119,11 @@ class JtCaModelLjc20Form extends JtCaModelLjc20
 	}
 
 	/**
-	 * Method to get libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica data.
+	 * Method to get libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública data.
 	 *
-	 * @param	integer	$item_id	The id of the libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica.
+	 * @param	integer	$item_id	The id of the libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIN PBLICA item data object on success, false on failure.
+	 * @return	mixed	LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{
@@ -367,7 +367,7 @@ class JtCaModelLjc20Form extends JtCaModelLjc20
 			return false;
 		}
 
-		// Reorder the jc20 so the new libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica is first
+		// Reorder the jc20 so the new libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);

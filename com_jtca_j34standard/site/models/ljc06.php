@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * TSJ CDMX Libros TxCA Component LIBRO DE RECURSOS DE APELACIN Model
+ * TSJ CDMX Libros TxCA Component LIBRO DE RECURSOS DE APELACIÓN Model
  *
  */
 class JtCaModelLjc06 extends JModelItem
@@ -179,9 +179,9 @@ class JtCaModelLjc06 extends JModelItem
 		return JTable::getInstance($type, $prefix, $config);
 	}
 	/**
-	 * Method to get LIBRO DE RECURSOS DE APELACIN data.
+	 * Method to get LIBRO DE RECURSOS DE APELACIÓN data.
 	 *
-	 * @param	integer	$pk	The id of the libro de recursos de apelacin.
+	 * @param	integer	$pk	The id of the libro de recursos de apelación.
 	 *
 	 * @return	mixed	Menu item data object on success, false on failure.
 	 */

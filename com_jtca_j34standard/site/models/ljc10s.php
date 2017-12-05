@@ -97,7 +97,7 @@ class JtCaModelLjc10s extends JModelList
 		
 		$item_id = $app->input->getInt('id', 0) . ':' .$app->input->getInt('Itemid', 0);
 
-		// Check to see if a single libro de auxiliares de la administracin de justicia has been specified either as a parameter or in the url Request
+		// Check to see if a single libro de auxiliares de la administración de justicia has been specified either as a parameter or in the url Request
 		$pk = $params->get('ljc10_id', '') == '' ? $app->input->getInt('id', '') : $params->get('ljc10_id');
 		$this->setState('filter.ljc10_id', $pk);
 		

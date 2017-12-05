@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * TSJ CDMX Libros TxCA Component LIBRO DE REMISIN AL ARCHIVO Model
+ * TSJ CDMX Libros TxCA Component LIBRO DE REMISIÓN AL ARCHIVO Model
  *
  */
 class JtCaModelLjc17 extends JModelItem
@@ -175,9 +175,9 @@ class JtCaModelLjc17 extends JModelItem
 		return JTable::getInstance($type, $prefix, $config);
 	}
 	/**
-	 * Method to get LIBRO DE REMISIN AL ARCHIVO data.
+	 * Method to get LIBRO DE REMISIÓN AL ARCHIVO data.
 	 *
-	 * @param	integer	$pk	The id of the libro de remisin al archivo.
+	 * @param	integer	$pk	The id of the libro de remisión al archivo.
 	 *
 	 * @return	mixed	Menu item data object on success, false on failure.
 	 */

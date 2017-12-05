@@ -97,7 +97,7 @@ class JtCaModelLjc17s extends JModelList
 		
 		$item_id = $app->input->getInt('id', 0) . ':' .$app->input->getInt('Itemid', 0);
 
-		// Check to see if a single libro de remisin al archivo has been specified either as a parameter or in the url Request
+		// Check to see if a single libro de remisión al archivo has been specified either as a parameter or in the url Request
 		$pk = $params->get('ljc17_id', '') == '' ? $app->input->getInt('id', '') : $params->get('ljc17_id');
 		$this->setState('filter.ljc17_id', $pk);
 		

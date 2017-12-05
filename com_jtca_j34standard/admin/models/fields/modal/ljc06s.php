@@ -28,7 +28,7 @@
 
 defined('JPATH_BASE') or die;
 /**
- * Supports a modal libro de recursos de apelacin picker.
+ * Supports a modal libro de recursos de apelación picker.
  *
  */
 class JFormFieldModal_Ljc06s extends JFormField
@@ -112,18 +112,18 @@ class JFormFieldModal_Ljc06s extends JFormField
 			$value = (int)$this->value;
 		}
 
-		// The current libro de recursos de apelacin display field.
+		// The current libro de recursos de apelación display field.
 		$html[] = '<span class="input-append">';
 		$html[] = '<input type="text" class="input-medium" id="'.$this->id.'_name" value="'.$title.'" disabled="disabled" size="35" />';
 		$html[] = '<a class="modal btn hasTooltip" title="'.JHtml::tooltipText('COM_JTCA_LJC06S_SELECT_BUTTON_DESC').'"  href="'.$link.'&amp;'.JSession::getFormToken().'=1" rel="{handler: \'iframe\', size: {x: 800, y: 450}}"><i class="icon-file"></i> '.JText::_('JSELECT').'</a>';
 
-		// Edit libro de recursos de apelacin button
+		// Edit libro de recursos de apelación button
 		if ($allow_edit)
 		{
 			$html[] = '<a class="btn hasTooltip'.($value ? '' : ' hidden').'" href="index.php?option=com_jtca&layout=modal&tmpl=component&task=ljc06.edit&id=' . $value. '" target="_blank" title="'.JHtml::tooltipText('COM_JTCA_LJC06S_EDIT_DESC').'" ><span class="icon-edit"></span> ' . JText::_('JACTION_EDIT') . '</a>';
 		}
 
-		// Clear libro de recursos de apelacin button
+		// Clear libro de recursos de apelación button
 		if ($allow_clear)
 		{
 			$html[] = '<button id="'.$this->id.'_clear" class="btn'.($value ? '' : ' hidden').'" onclick="return jClearLjc06(\''.$this->id.'\')"><span class="icon-remove"></span> ' . JText::_('JCLEAR') . '</button>';

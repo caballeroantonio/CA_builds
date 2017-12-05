@@ -119,11 +119,11 @@ class JtCaModelLjc19Form extends JtCaModelLjc19
 	}
 
 	/**
-	 * Method to get libro de envo de expedientes al archivo judicial para su destruccin data.
+	 * Method to get libro de envío de expedientes al archivo judicial para su destrucción data.
 	 *
-	 * @param	integer	$item_id	The id of the libro de envo de expedientes al archivo judicial para su destruccin.
+	 * @param	integer	$item_id	The id of the libro de envío de expedientes al archivo judicial para su destrucción.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN item data object on success, false on failure.
+	 * @return	mixed	LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{
@@ -367,7 +367,7 @@ class JtCaModelLjc19Form extends JtCaModelLjc19
 			return false;
 		}
 
-		// Reorder the jc19 so the new libro de envo de expedientes al archivo judicial para su destruccin is first
+		// Reorder the jc19 so the new libro de envío de expedientes al archivo judicial para su destrucción is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);

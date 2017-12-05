@@ -276,7 +276,7 @@ class JtCaControllerLjc21 extends JControllerForm
 	/**
 	 * Method to add a new record.
 	 *
-	 * @return  mixed  True if the LIBRO DE MINISTERIO PBLICO can be added, a error object if not.
+	 * @return  mixed  True if the LIBRO DE MINISTERIO PÚBLICO can be added, a error object if not.
 	 *
 	 */
 	public function add()

@@ -119,11 +119,11 @@ class JtCaModelLjc21Form extends JtCaModelLjc21
 	}
 
 	/**
-	 * Method to get libro de ministerio pblico data.
+	 * Method to get libro de ministerio público data.
 	 *
-	 * @param	integer	$item_id	The id of the libro de ministerio pblico.
+	 * @param	integer	$item_id	The id of the libro de ministerio público.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	LIBRO DE MINISTERIO PBLICO item data object on success, false on failure.
+	 * @return	mixed	LIBRO DE MINISTERIO PÚBLICO item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{
@@ -367,7 +367,7 @@ class JtCaModelLjc21Form extends JtCaModelLjc21
 			return false;
 		}
 
-		// Reorder the jc21 so the new libro de ministerio pblico is first
+		// Reorder the jc21 so the new libro de ministerio público is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);

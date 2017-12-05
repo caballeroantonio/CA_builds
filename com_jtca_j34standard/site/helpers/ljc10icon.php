@@ -84,7 +84,7 @@ class JHTMLLjc10Icon
 	/**
 	 * Display an edit icon for the ljc10.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de auxiliares de la administracin de justicia is trashed.
+	 * This icon will not display in a popup window, nor if the libro de auxiliares de la administración de justicia is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljc10	The ljc10 in question.
@@ -165,7 +165,7 @@ class JHTMLLjc10Icon
 	/**
 	 * Display an delete icon for the ljc10.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de auxiliares de la administracin de justicia is trashed.
+	 * This icon will not display in a popup window, nor if the libro de auxiliares de la administración de justicia is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljc10	The ljc10 in question.

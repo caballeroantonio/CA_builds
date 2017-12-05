@@ -84,7 +84,7 @@ class JHTMLLjc18Icon
 	/**
 	 * Display an edit icon for the ljc18.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de remisin de documentos al archivo is trashed.
+	 * This icon will not display in a popup window, nor if the libro de remisión de documentos al archivo is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljc18	The ljc18 in question.
@@ -165,7 +165,7 @@ class JHTMLLjc18Icon
 	/**
 	 * Display an delete icon for the ljc18.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de remisin de documentos al archivo is trashed.
+	 * This icon will not display in a popup window, nor if the libro de remisión de documentos al archivo is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljc18	The ljc18 in question.

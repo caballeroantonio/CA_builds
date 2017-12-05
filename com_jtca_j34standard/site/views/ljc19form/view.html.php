@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN View class for the TSJ CDMX Libros TxCA component
+ * HTML LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN View class for the TSJ CDMX Libros TxCA component
  *
  */
 class JtCaViewLjc19Form extends JViewLegacy

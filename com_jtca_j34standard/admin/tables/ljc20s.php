@@ -190,7 +190,7 @@ class JtCaTableLjc20s extends JTable
 
 		
 	/**
-	 * Stores a LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIN PBLICA
+	 * Stores a LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA
 	 *
 	 * @param	boolean	$update_nulls	True to update fields even if they are null.
 	 * 
@@ -205,7 +205,7 @@ class JtCaTableLjc20s extends JTable
 		
 		if (empty($this->id))
 		{
-			// New LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIN PBLICA. A created and created_by field can be set by the user,
+			// New LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA. A created and created_by field can be set by the user,
 			// so we don't touch either of these if they are set.
 			if (!intval($this->created))
 			{

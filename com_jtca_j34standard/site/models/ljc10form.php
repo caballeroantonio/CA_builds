@@ -119,11 +119,11 @@ class JtCaModelLjc10Form extends JtCaModelLjc10
 	}
 
 	/**
-	 * Method to get libro de auxiliares de la administracin de justicia data.
+	 * Method to get libro de auxiliares de la administración de justicia data.
 	 *
-	 * @param	integer	$item_id	The id of the libro de auxiliares de la administracin de justicia.
+	 * @param	integer	$item_id	The id of the libro de auxiliares de la administración de justicia.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA item data object on success, false on failure.
+	 * @return	mixed	LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{
@@ -367,7 +367,7 @@ class JtCaModelLjc10Form extends JtCaModelLjc10
 			return false;
 		}
 
-		// Reorder the jc10 so the new libro de auxiliares de la administracin de justicia is first
+		// Reorder the jc10 so the new libro de auxiliares de la administración de justicia is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);

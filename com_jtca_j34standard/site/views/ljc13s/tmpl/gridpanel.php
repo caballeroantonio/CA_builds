@@ -56,7 +56,7 @@ function getFields(){
     $fields['id_expediente'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'rgano',
+        'FIELD_NAME' => 'Órgano',
         'FIELD_CODE_NAME' => 'id_organo',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 18,
@@ -67,9 +67,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) DEFAULT NULL rgano
+                FIELD_DB=`` INT(10) DEFAULT NULL Órgano
 
-                FIELD_NAME_LATEX=rgano
+                FIELD_NAME_LATEX=\'Organo
                 FIELD_CODE_NAME_LATEX=id\_organo
                 FIELD_DBCOMMENT_LATEX=
 
@@ -78,7 +78,7 @@ function getFields(){
     $fields['id_organo'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'Secretara',
+        'FIELD_NAME' => 'Secretaría',
         'FIELD_CODE_NAME' => 'id_secretaria',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 18,
@@ -89,9 +89,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) DEFAULT NULL Secretara
+                FIELD_DB=`` INT(10) DEFAULT NULL Secretaría
 
-                FIELD_NAME_LATEX=Secretara
+                FIELD_NAME_LATEX=Secretar\'i{}a
                 FIELD_CODE_NAME_LATEX=id\_secretaria
                 FIELD_DBCOMMENT_LATEX=
 
@@ -100,7 +100,7 @@ function getFields(){
     $fields['id_secretaria'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'Ao j',
+        'FIELD_NAME' => 'Año j.',
         'FIELD_CODE_NAME' => 'anoj',
         'FIELD_DESCRIPTION' => '<p>Año judicial</p>',//<p>Año judicial</p>
         'FIELDTYPE_ID' => 1,
@@ -111,9 +111,9 @@ function getFields(){
                 FIELD_INTRO=<p>Año judicial</p>
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` YEAR(4) DEFAULT NULL Ao j
+                FIELD_DB=`` YEAR(4) DEFAULT NULL Año j.
 
-                FIELD_NAME_LATEX=Ao j
+                FIELD_NAME_LATEX=A\~no j.
                 FIELD_CODE_NAME_LATEX=anoj
                 FIELD_DBCOMMENT_LATEX=A\~no judicial
 
@@ -122,7 +122,7 @@ function getFields(){
     $fields['anoj'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'GARANTE (a paterno)',
+        'FIELD_NAME' => 'GARANTE (a. paterno)',
         'FIELD_CODE_NAME' => 'field2_paterno',
         'FIELD_DESCRIPTION' => 'apellido paterno',//apellido paterno
         'FIELDTYPE_ID' => 1,
@@ -133,9 +133,9 @@ function getFields(){
                 FIELD_INTRO=apellido paterno
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(255) DEFAULT NULL GARANTE (a paterno)
+                FIELD_DB=`` VARCHAR(255) DEFAULT NULL GARANTE (a. paterno)
 
-                FIELD_NAME_LATEX=GARANTE (a paterno)
+                FIELD_NAME_LATEX=GARANTE (a. paterno)
                 FIELD_CODE_NAME_LATEX=field2\_paterno
                 FIELD_DBCOMMENT_LATEX=apellido paterno
 
@@ -144,7 +144,7 @@ function getFields(){
     $fields['field2_paterno'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'GARANTE (a materno)',
+        'FIELD_NAME' => 'GARANTE (a. materno)',
         'FIELD_CODE_NAME' => 'field2_materno',
         'FIELD_DESCRIPTION' => 'apellido materno',//apellido materno
         'FIELDTYPE_ID' => 1,
@@ -155,9 +155,9 @@ function getFields(){
                 FIELD_INTRO=apellido materno
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(45) DEFAULT NULL GARANTE (a materno)
+                FIELD_DB=`` VARCHAR(45) DEFAULT NULL GARANTE (a. materno)
 
-                FIELD_NAME_LATEX=GARANTE (a materno)
+                FIELD_NAME_LATEX=GARANTE (a. materno)
                 FIELD_CODE_NAME_LATEX=field2\_materno
                 FIELD_DBCOMMENT_LATEX=apellido materno
 
@@ -210,7 +210,7 @@ function getFields(){
     $fields['field2_isMoral'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'FECHA EN QUE SE RECIBE LA PLIZA DE FIANZA',
+        'FIELD_NAME' => 'FECHA EN QUE SE RECIBE LA PÓLIZA DE FIANZA',
         'FIELD_CODE_NAME' => 'field4',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 5,
@@ -221,9 +221,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` DATETIME DEFAULT NULL FECHA EN QUE SE RECIBE LA PLIZA DE FIANZA
+                FIELD_DB=`` DATETIME DEFAULT NULL FECHA EN QUE SE RECIBE LA PÓLIZA DE FIANZA
 
-                FIELD_NAME_LATEX=FECHA EN QUE SE RECIBE LA PLIZA DE FIANZA
+                FIELD_NAME_LATEX=FECHA EN QUE SE RECIBE LA P\'OLIZA DE FIANZA
                 FIELD_CODE_NAME_LATEX=field4
                 FIELD_DBCOMMENT_LATEX=
 
@@ -254,7 +254,7 @@ function getFields(){
     $fields['field5'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'MONTO DE LA PLIZA DE FIANZA',
+        'FIELD_NAME' => 'MONTO DE LA PÓLIZA DE FIANZA',
         'FIELD_CODE_NAME' => 'field6',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 37,
@@ -265,9 +265,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` DECIMAL(11,2) DEFAULT NULL MONTO DE LA PLIZA DE FIANZA
+                FIELD_DB=`` DECIMAL(11,2) DEFAULT NULL MONTO DE LA PÓLIZA DE FIANZA
 
-                FIELD_NAME_LATEX=MONTO DE LA PLIZA DE FIANZA
+                FIELD_NAME_LATEX=MONTO DE LA P\'OLIZA DE FIANZA
                 FIELD_CODE_NAME_LATEX=field6
                 FIELD_DBCOMMENT_LATEX=
 
@@ -276,7 +276,7 @@ function getFields(){
     $fields['field6'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'SI SE HACE EFECTIVA LA GARANTA ANOTAR EL MOTIVO POR EL CUAL SE HIZO EFECTIVA',
+        'FIELD_NAME' => 'SI SE HACE EFECTIVA LA GARANTÍA, ANOTAR EL MOTIVO POR EL CUAL SE HIZO EFECTIVA',
         'FIELD_CODE_NAME' => 'field7',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 37,
@@ -287,9 +287,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` DECIMAL(11,2) DEFAULT NULL SI SE HACE EFECTIVA LA GARANTA ANOTAR EL MOTIVO POR EL CUAL SE HIZO EFECTIVA
+                FIELD_DB=`` DECIMAL(11,2) DEFAULT NULL SI SE HACE EFECTIVA LA GARANTÍA, ANOTAR EL MOTIVO POR EL CUAL SE HIZO EFECTIVA
 
-                FIELD_NAME_LATEX=SI SE HACE EFECTIVA LA GARANTA ANOTAR EL MOTIVO POR EL CUAL SE HIZO EFECTIVA
+                FIELD_NAME_LATEX=SI SE HACE EFECTIVA LA GARANT\'IA, ANOTAR EL MOTIVO POR EL CUAL SE HIZO EFECTIVA
                 FIELD_CODE_NAME_LATEX=field7
                 FIELD_DBCOMMENT_LATEX=
 

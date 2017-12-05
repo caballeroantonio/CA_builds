@@ -84,7 +84,7 @@ class JHTMLLjc20Icon
 	/**
 	 * Display an edit icon for the ljc20.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica is trashed.
+	 * This icon will not display in a popup window, nor if the libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljc20	The ljc20 in question.
@@ -165,7 +165,7 @@ class JHTMLLjc20Icon
 	/**
 	 * Display an delete icon for the ljc20.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica is trashed.
+	 * This icon will not display in a popup window, nor if the libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljc20	The ljc20 in question.

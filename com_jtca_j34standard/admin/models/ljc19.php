@@ -219,7 +219,7 @@ class JtCaModelLjc19 extends JModelAdmin
 		$date = JFactory::getDate();
 		$user = JFactory::getUser();
 		
-		// Increment the libro de envo de expedientes al archivo judicial para su destruccin version number.
+		// Increment the libro de envío de expedientes al archivo judicial para su destrucción version number.
 		$table->version++;
 		
 		if (empty($table->id) OR $table->id == 0)

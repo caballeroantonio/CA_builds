@@ -97,7 +97,7 @@ class JtCaModelLjc20s extends JModelList
 		
 		$item_id = $app->input->getInt('id', 0) . ':' .$app->input->getInt('Itemid', 0);
 
-		// Check to see if a single libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica has been specified either as a parameter or in the url Request
+		// Check to see if a single libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública has been specified either as a parameter or in the url Request
 		$pk = $params->get('ljc20_id', '') == '' ? $app->input->getInt('id', '') : $params->get('ljc20_id');
 		$this->setState('filter.ljc20_id', $pk);
 		

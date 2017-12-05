@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML LIBRO DE RECURSOS DE APELACIN View class for the TSJ CDMX Libros TxCA component
+ * HTML LIBRO DE RECURSOS DE APELACIÓN View class for the TSJ CDMX Libros TxCA component
  *
  */
 class JtCaViewLjc06Form extends JViewLegacy

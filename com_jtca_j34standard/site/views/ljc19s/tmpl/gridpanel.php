@@ -56,7 +56,7 @@ function getFields(){
     $fields['id_expediente'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'rgano',
+        'FIELD_NAME' => 'Órgano',
         'FIELD_CODE_NAME' => 'id_organo',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 18,
@@ -67,9 +67,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) DEFAULT NULL rgano
+                FIELD_DB=`` INT(10) DEFAULT NULL Órgano
 
-                FIELD_NAME_LATEX=rgano
+                FIELD_NAME_LATEX=\'Organo
                 FIELD_CODE_NAME_LATEX=id\_organo
                 FIELD_DBCOMMENT_LATEX=
 
@@ -78,7 +78,7 @@ function getFields(){
     $fields['id_organo'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'Secretara',
+        'FIELD_NAME' => 'Secretaría',
         'FIELD_CODE_NAME' => 'id_secretaria',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 18,
@@ -89,9 +89,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) DEFAULT NULL Secretara
+                FIELD_DB=`` INT(10) DEFAULT NULL Secretaría
 
-                FIELD_NAME_LATEX=Secretara
+                FIELD_NAME_LATEX=Secretar\'i{}a
                 FIELD_CODE_NAME_LATEX=id\_secretaria
                 FIELD_DBCOMMENT_LATEX=
 
@@ -100,7 +100,7 @@ function getFields(){
     $fields['id_secretaria'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'Ao j',
+        'FIELD_NAME' => 'Año j.',
         'FIELD_CODE_NAME' => 'anoj',
         'FIELD_DESCRIPTION' => '<p>Año judicial</p>',//<p>Año judicial</p>
         'FIELDTYPE_ID' => 1,
@@ -111,9 +111,9 @@ function getFields(){
                 FIELD_INTRO=<p>Año judicial</p>
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` YEAR(4) DEFAULT NULL Ao j
+                FIELD_DB=`` YEAR(4) DEFAULT NULL Año j.
 
-                FIELD_NAME_LATEX=Ao j
+                FIELD_NAME_LATEX=A\~no j.
                 FIELD_CODE_NAME_LATEX=anoj
                 FIELD_DBCOMMENT_LATEX=A\~no judicial
 
@@ -122,7 +122,7 @@ function getFields(){
     $fields['anoj'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'NMERO DE FOJAS',
+        'FIELD_NAME' => 'NÚMERO DE FOJAS',
         'FIELD_CODE_NAME' => 'field5',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 22,
@@ -133,9 +133,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) DEFAULT NULL NMERO DE FOJAS
+                FIELD_DB=`` INT(10) DEFAULT NULL NÚMERO DE FOJAS
 
-                FIELD_NAME_LATEX=NMERO DE FOJAS
+                FIELD_NAME_LATEX=N\'UMERO DE FOJAS
                 FIELD_CODE_NAME_LATEX=field5
                 FIELD_DBCOMMENT_LATEX=
 
@@ -144,7 +144,7 @@ function getFields(){
     $fields['field5'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'FECHA DEL AUTO DE REMISIN PARA ANLISIS DE COTECIAD',
+        'FIELD_NAME' => 'FECHA DEL AUTO DE REMISIÓN PARA ANÁLISIS DE COTECIAD',
         'FIELD_CODE_NAME' => 'field6',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 5,
@@ -155,9 +155,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` DATETIME DEFAULT NULL FECHA DEL AUTO DE REMISIN PARA ANLISIS DE COTECIAD
+                FIELD_DB=`` DATETIME DEFAULT NULL FECHA DEL AUTO DE REMISIÓN PARA ANÁLISIS DE COTECIAD
 
-                FIELD_NAME_LATEX=FECHA DEL AUTO DE REMISIN PARA ANLISIS DE COTECIAD
+                FIELD_NAME_LATEX=FECHA DEL AUTO DE REMISI\'ON PARA AN\'ALISIS DE COTECIAD
                 FIELD_CODE_NAME_LATEX=field6
                 FIELD_DBCOMMENT_LATEX=
 
@@ -166,7 +166,7 @@ function getFields(){
     $fields['field6'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'FECHA DE RECEPCIN EN EL ARCHIVO JUDICIAL',
+        'FIELD_NAME' => 'FECHA DE RECEPCIÓN EN EL ARCHIVO JUDICIAL',
         'FIELD_CODE_NAME' => 'field7',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 5,
@@ -177,9 +177,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` DATETIME DEFAULT NULL FECHA DE RECEPCIN EN EL ARCHIVO JUDICIAL
+                FIELD_DB=`` DATETIME DEFAULT NULL FECHA DE RECEPCIÓN EN EL ARCHIVO JUDICIAL
 
-                FIELD_NAME_LATEX=FECHA DE RECEPCIN EN EL ARCHIVO JUDICIAL
+                FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON EN EL ARCHIVO JUDICIAL
                 FIELD_CODE_NAME_LATEX=field7
                 FIELD_DBCOMMENT_LATEX=
 
@@ -188,7 +188,7 @@ function getFields(){
     $fields['field7'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'PERSONA QUE RECIBI DEL ARCHIVO (a paterno)',
+        'FIELD_NAME' => 'PERSONA QUE RECIBIÓ DEL ARCHIVO (a. paterno)',
         'FIELD_CODE_NAME' => 'field8_paterno',
         'FIELD_DESCRIPTION' => 'apellido paterno',//apellido paterno
         'FIELDTYPE_ID' => 1,
@@ -199,9 +199,9 @@ function getFields(){
                 FIELD_INTRO=apellido paterno
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(255) DEFAULT NULL PERSONA QUE RECIBI DEL ARCHIVO (a paterno)
+                FIELD_DB=`` VARCHAR(255) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (a. paterno)
 
-                FIELD_NAME_LATEX=PERSONA QUE RECIBI DEL ARCHIVO (a paterno)
+                FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (a. paterno)
                 FIELD_CODE_NAME_LATEX=field8\_paterno
                 FIELD_DBCOMMENT_LATEX=apellido paterno
 
@@ -210,7 +210,7 @@ function getFields(){
     $fields['field8_paterno'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'PERSONA QUE RECIBI DEL ARCHIVO (a materno)',
+        'FIELD_NAME' => 'PERSONA QUE RECIBIÓ DEL ARCHIVO (a. materno)',
         'FIELD_CODE_NAME' => 'field8_materno',
         'FIELD_DESCRIPTION' => 'apellido materno',//apellido materno
         'FIELDTYPE_ID' => 1,
@@ -221,9 +221,9 @@ function getFields(){
                 FIELD_INTRO=apellido materno
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBI DEL ARCHIVO (a materno)
+                FIELD_DB=`` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (a. materno)
 
-                FIELD_NAME_LATEX=PERSONA QUE RECIBI DEL ARCHIVO (a materno)
+                FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (a. materno)
                 FIELD_CODE_NAME_LATEX=field8\_materno
                 FIELD_DBCOMMENT_LATEX=apellido materno
 
@@ -232,7 +232,7 @@ function getFields(){
     $fields['field8_materno'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'PERSONA QUE RECIBI DEL ARCHIVO (nombre)',
+        'FIELD_NAME' => 'PERSONA QUE RECIBIÓ DEL ARCHIVO (nombre)',
         'FIELD_CODE_NAME' => 'field8_nombre',
         'FIELD_DESCRIPTION' => 'nombre',//nombre
         'FIELDTYPE_ID' => 1,
@@ -243,9 +243,9 @@ function getFields(){
                 FIELD_INTRO=nombre
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBI DEL ARCHIVO (nombre)
+                FIELD_DB=`` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (nombre)
 
-                FIELD_NAME_LATEX=PERSONA QUE RECIBI DEL ARCHIVO (nombre)
+                FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (nombre)
                 FIELD_CODE_NAME_LATEX=field8\_nombre
                 FIELD_DBCOMMENT_LATEX=nombre
 
@@ -254,7 +254,7 @@ function getFields(){
     $fields['field8_nombre'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'PERSONA QUE RECIBI DEL ARCHIVO (es Moral)',
+        'FIELD_NAME' => 'PERSONA QUE RECIBIÓ DEL ARCHIVO (es Moral)',
         'FIELD_CODE_NAME' => 'field8_isMoral',
         'FIELD_DESCRIPTION' => 'es Moral',//es Moral
         'FIELDTYPE_ID' => 16,
@@ -265,9 +265,9 @@ function getFields(){
                 FIELD_INTRO=es Moral
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` TINYINT(1) DEFAULT NULL PERSONA QUE RECIBI DEL ARCHIVO (es Moral)
+                FIELD_DB=`` TINYINT(1) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (es Moral)
 
-                FIELD_NAME_LATEX=PERSONA QUE RECIBI DEL ARCHIVO (es Moral)
+                FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (es Moral)
                 FIELD_CODE_NAME_LATEX=field8\_isMoral
                 FIELD_DBCOMMENT_LATEX=es Moral
 

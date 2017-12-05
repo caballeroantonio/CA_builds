@@ -190,7 +190,7 @@ class JtCaTableLjc10s extends JTable
 
 		
 	/**
-	 * Stores a LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA
+	 * Stores a LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA
 	 *
 	 * @param	boolean	$update_nulls	True to update fields even if they are null.
 	 * 
@@ -205,7 +205,7 @@ class JtCaTableLjc10s extends JTable
 		
 		if (empty($this->id))
 		{
-			// New LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA. A created and created_by field can be set by the user,
+			// New LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA. A created and created_by field can be set by the user,
 			// so we don't touch either of these if they are set.
 			if (!intval($this->created))
 			{

@@ -28,7 +28,7 @@
 
 defined('JPATH_BASE') or die;
 /**
- * Supports a modal libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica picker.
+ * Supports a modal libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública picker.
  *
  */
 class JFormFieldModal_Ljc20s extends JFormField
@@ -112,18 +112,18 @@ class JFormFieldModal_Ljc20s extends JFormField
 			$value = (int)$this->value;
 		}
 
-		// The current libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica display field.
+		// The current libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública display field.
 		$html[] = '<span class="input-append">';
 		$html[] = '<input type="text" class="input-medium" id="'.$this->id.'_name" value="'.$title.'" disabled="disabled" size="35" />';
 		$html[] = '<a class="modal btn hasTooltip" title="'.JHtml::tooltipText('COM_JTCA_LJC20S_SELECT_BUTTON_DESC').'"  href="'.$link.'&amp;'.JSession::getFormToken().'=1" rel="{handler: \'iframe\', size: {x: 800, y: 450}}"><i class="icon-file"></i> '.JText::_('JSELECT').'</a>';
 
-		// Edit libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica button
+		// Edit libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública button
 		if ($allow_edit)
 		{
 			$html[] = '<a class="btn hasTooltip'.($value ? '' : ' hidden').'" href="index.php?option=com_jtca&layout=modal&tmpl=component&task=ljc20.edit&id=' . $value. '" target="_blank" title="'.JHtml::tooltipText('COM_JTCA_LJC20S_EDIT_DESC').'" ><span class="icon-edit"></span> ' . JText::_('JACTION_EDIT') . '</a>';
 		}
 
-		// Clear libro de control de asuntos conforme a los artculos 13 fraccin xiv y 25 de la ley de transparencia y acceso a la informacin pblica button
+		// Clear libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública button
 		if ($allow_clear)
 		{
 			$html[] = '<button id="'.$this->id.'_clear" class="btn'.($value ? '' : ' hidden').'" onclick="return jClearLjc20(\''.$this->id.'\')"><span class="icon-remove"></span> ' . JText::_('JCLEAR') . '</button>';

@@ -31,7 +31,7 @@ defined('JPATH_BASE') or die;
 jimport('joomla.form.formfield');
 
 /**
- * Supports a modal libro de recursos de apelacin picker.
+ * Supports a modal libro de recursos de apelación picker.
  *
  */
 class JFormFieldModal_Ljc06s extends JFormField

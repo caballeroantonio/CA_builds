@@ -31,7 +31,7 @@ defined('JPATH_BASE') or die;
 jimport('joomla.form.formfield');
 
 /**
- * Supports a modal libro de ministerio pblico picker.
+ * Supports a modal libro de ministerio público picker.
  *
  */
 class JFormFieldModal_Ljc21s extends JFormField

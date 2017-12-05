@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * TSJ CDMX Libros TxCA Component LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA Model
+ * TSJ CDMX Libros TxCA Component LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA Model
  *
  */
 class JtCaModelLjc10 extends JModelItem
@@ -177,9 +177,9 @@ class JtCaModelLjc10 extends JModelItem
 		return JTable::getInstance($type, $prefix, $config);
 	}
 	/**
-	 * Method to get LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA data.
+	 * Method to get LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA data.
 	 *
-	 * @param	integer	$pk	The id of the libro de auxiliares de la administracin de justicia.
+	 * @param	integer	$pk	The id of the libro de auxiliares de la administración de justicia.
 	 *
 	 * @return	mixed	Menu item data object on success, false on failure.
 	 */

@@ -187,7 +187,7 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the LIBRO DE RECURSOS DE APELACIN
+	 * @param	integer	The route of the LIBRO DE RECURSOS DE APELACIÓN
 	 */
 	public static function getLjc06Route($id, $layout = 'default', $keep_item_id = false)
 	{
@@ -307,7 +307,7 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the LIBRO DE AUXILIARES DE LA ADMINISTRACIN DE JUSTICIA
+	 * @param	integer	The route of the LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA
 	 */
 	public static function getLjc10Route($id, $layout = 'default', $keep_item_id = false)
 	{
@@ -457,7 +457,7 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the LIBRO DE REMISIN AL ARCHIVO
+	 * @param	integer	The route of the LIBRO DE REMISIÓN AL ARCHIVO
 	 */
 	public static function getLjc17Route($id, $layout = 'default', $keep_item_id = false)
 	{
@@ -487,7 +487,7 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the LIBRO DE REMISIN DE DOCUMENTOS AL ARCHIVO
+	 * @param	integer	The route of the LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO
 	 */
 	public static function getLjc18Route($id, $layout = 'default', $keep_item_id = false)
 	{
@@ -517,7 +517,7 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN
+	 * @param	integer	The route of the LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN
 	 */
 	public static function getLjc19Route($id, $layout = 'default', $keep_item_id = false)
 	{
@@ -547,7 +547,7 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTCULOS 13 FRACCIN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIN PBLICA
+	 * @param	integer	The route of the LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA
 	 */
 	public static function getLjc20Route($id, $layout = 'default', $keep_item_id = false)
 	{
@@ -577,7 +577,7 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the LIBRO DE MINISTERIO PBLICO
+	 * @param	integer	The route of the LIBRO DE MINISTERIO PÚBLICO
 	 */
 	public static function getLjc21Route($id, $layout = 'default', $keep_item_id = false)
 	{

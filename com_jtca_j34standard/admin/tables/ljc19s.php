@@ -190,7 +190,7 @@ class JtCaTableLjc19s extends JTable
 
 		
 	/**
-	 * Stores a LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN
+	 * Stores a LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN
 	 *
 	 * @param	boolean	$update_nulls	True to update fields even if they are null.
 	 * 
@@ -205,7 +205,7 @@ class JtCaTableLjc19s extends JTable
 		
 		if (empty($this->id))
 		{
-			// New LIBRO DE ENVO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIN. A created and created_by field can be set by the user,
+			// New LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN. A created and created_by field can be set by the user,
 			// so we don't touch either of these if they are set.
 			if (!intval($this->created))
 			{

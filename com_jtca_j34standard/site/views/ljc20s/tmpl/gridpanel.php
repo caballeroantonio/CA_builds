@@ -56,7 +56,7 @@ function getFields(){
     $fields['id_expediente'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'rgano',
+        'FIELD_NAME' => 'Órgano',
         'FIELD_CODE_NAME' => 'id_organo',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 18,
@@ -67,9 +67,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) DEFAULT NULL rgano
+                FIELD_DB=`` INT(10) DEFAULT NULL Órgano
 
-                FIELD_NAME_LATEX=rgano
+                FIELD_NAME_LATEX=\'Organo
                 FIELD_CODE_NAME_LATEX=id\_organo
                 FIELD_DBCOMMENT_LATEX=
 
@@ -78,7 +78,7 @@ function getFields(){
     $fields['id_organo'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'Secretara',
+        'FIELD_NAME' => 'Secretaría',
         'FIELD_CODE_NAME' => 'id_secretaria',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 18,
@@ -89,9 +89,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) DEFAULT NULL Secretara
+                FIELD_DB=`` INT(10) DEFAULT NULL Secretaría
 
-                FIELD_NAME_LATEX=Secretara
+                FIELD_NAME_LATEX=Secretar\'i{}a
                 FIELD_CODE_NAME_LATEX=id\_secretaria
                 FIELD_DBCOMMENT_LATEX=
 
@@ -100,7 +100,7 @@ function getFields(){
     $fields['id_secretaria'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'Ao j',
+        'FIELD_NAME' => 'Año j.',
         'FIELD_CODE_NAME' => 'anoj',
         'FIELD_DESCRIPTION' => '<p>Año judicial</p>',//<p>Año judicial</p>
         'FIELDTYPE_ID' => 1,
@@ -111,9 +111,9 @@ function getFields(){
                 FIELD_INTRO=<p>Año judicial</p>
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` YEAR(4) DEFAULT NULL Ao j
+                FIELD_DB=`` YEAR(4) DEFAULT NULL Año j.
 
-                FIELD_NAME_LATEX=Ao j
+                FIELD_NAME_LATEX=A\~no j.
                 FIELD_CODE_NAME_LATEX=anoj
                 FIELD_DBCOMMENT_LATEX=A\~no judicial
 
@@ -166,7 +166,7 @@ function getFields(){
     $fields['field6'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'ESTA DE ACUERDO',
+        'FIELD_NAME' => 'ESTA DE ACUERDO?',
         'FIELD_CODE_NAME' => 'field7',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 16,
@@ -177,9 +177,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` TINYINT(1) DEFAULT NULL ESTA DE ACUERDO
+                FIELD_DB=`` TINYINT(1) DEFAULT NULL ESTA DE ACUERDO?
 
-                FIELD_NAME_LATEX=ESTA DE ACUERDO
+                FIELD_NAME_LATEX=ESTA DE ACUERDO?
                 FIELD_CODE_NAME_LATEX=field7
                 FIELD_DBCOMMENT_LATEX=
 

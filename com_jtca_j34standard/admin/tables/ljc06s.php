@@ -190,7 +190,7 @@ class JtCaTableLjc06s extends JTable
 
 		
 	/**
-	 * Stores a LIBRO DE RECURSOS DE APELACIN
+	 * Stores a LIBRO DE RECURSOS DE APELACIÓN
 	 *
 	 * @param	boolean	$update_nulls	True to update fields even if they are null.
 	 * 
@@ -205,7 +205,7 @@ class JtCaTableLjc06s extends JTable
 		
 		if (empty($this->id))
 		{
-			// New LIBRO DE RECURSOS DE APELACIN. A created and created_by field can be set by the user,
+			// New LIBRO DE RECURSOS DE APELACIÓN. A created and created_by field can be set by the user,
 			// so we don't touch either of these if they are set.
 			if (!intval($this->created))
 			{

@@ -276,7 +276,7 @@ class JtCaControllerLjc06 extends JControllerForm
 	/**
 	 * Method to add a new record.
 	 *
-	 * @return  mixed  True if the LIBRO DE RECURSOS DE APELACIN can be added, a error object if not.
+	 * @return  mixed  True if the LIBRO DE RECURSOS DE APELACIÓN can be added, a error object if not.
 	 *
 	 */
 	public function add()
