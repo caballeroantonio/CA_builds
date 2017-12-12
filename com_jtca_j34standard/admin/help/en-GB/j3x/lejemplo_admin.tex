@@ -1,0 +1,48 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creaci�n \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	anoj & YEAR(4) & A\~no judicial \tabularnewline\hline 
+	my\_boolean & TINYINT(1) &  \tabularnewline\hline 
+	id\_expediente & INT(10) & @ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente \tabularnewline\hline 
+	my\_int & INT(10) &  \tabularnewline\hline 
+	my\_currency & DECIMAL(11,2) & - Numeros flotantes de 2 digitos, con preferencias en mysql settings- @ToDo - cambiar el campo de texto del front end \tabularnewline\hline 
+	my\_date & DATETIME &  \tabularnewline\hline 
+	my\_datetime & DATETIME &  \tabularnewline\hline 
+	my\_var45 & VARCHAR(45) &  \tabularnewline\hline 
+	txt\_expediente & VARCHAR(45) &  \tabularnewline\hline 
+	my\_var255 & VARCHAR(255) & Ejemplo varchar 255 \tabularnewline\hline 
+	my\_multiline & TEXT & @ToDo  cambiar el sql que pone TEXT(255) \tabularnewline\hline 
+	my\_ref2 & INT(10) & @ToDo poner constaints     INDEX `c3\textbackslash \textbackslash \_10\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_ref2` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_10`        FOREIGN KEY (`my\textbackslash \textbackslash \_ref2`)        REFERENCES `jtc\textbackslash \textbackslash \_general` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE         , \tabularnewline\hline 
+	my\_ref & INT(10) & Campo de referencia a un cat\'alogo@ToDo agregar constraints    INDEX `c3\textbackslash \textbackslash \_1924\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_ref` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_1924`        FOREIGN KEY (`my\textbackslash \textbackslash \_ref`)        REFERENCES `jtc\textbackslash \textbackslash \_materia` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE         , \tabularnewline\hline 
+	my\_person & VARCHAR(255) & @ToDo buscar c\'omo implementar el fieldset person \tabularnewline\hline 
+	my\_NFempleado & INT(10) & @ToDo Debiera ser un campo int que hace referencia a un archivo`field14` INT NULL COMMENT \textbackslash 'id Firma interna\textbackslash ',		INDEX `c3\textbackslash \textbackslash \_11\textbackslash \textbackslash \_idx` (`field14` ASC),	CONSTRAINT `c3\textbackslash \textbackslash \_11`		FOREIGN KEY (`field14`)		REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)		ON DELETE RESTRICT		ON UPDATE CASCADE  \tabularnewline\hline 
+	my\_Fexterna2 & INT(10) & @ToDo debieran ser 2 campos int, uno para huella y otro para firma    `my\textbackslash \textbackslash \_fexterna` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_firma Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexterna` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexterna`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE,    `my\textbackslash \textbackslash \_fexternah` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_huella Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14h\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexternah` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14h`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexternah`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE         ,  \tabularnewline\hline 
+	my\_parent & INT(10) & Hay que hacer una implementaci\'on para registrar has\textbackslash \textbackslash \_many \tabularnewline\hline 
+	my\_suggest & VARCHAR(255) &  \tabularnewline\hline 

@@ -25,63 +25,9 @@
 --
 -- Uninstall of `#__jtca` tables
 --
-DROP TABLE IF EXISTS `jt_ljc01s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc01';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC01S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc02s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc02';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC02S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc03s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc03';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC03S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc04s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc04';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC04S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc05s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc05';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC05S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc06s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc06';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC06S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc07s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc07';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC07S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc08s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc08';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC08S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc09s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc09';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC09S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc10s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc10';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC10S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc12s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc12';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC12S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc13s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc13';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC13S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc14s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc14';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC14S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc16s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc16';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC16S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc17s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc17';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC17S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc18s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc18';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC18S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc19s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc19';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC19S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc20s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc20';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC20S' AND `type`='component';
-DROP TABLE IF EXISTS `jt_ljc21s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc21';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC21S' AND `type`='component';
+DROP TABLE IF EXISTS `#__jtca_lejemplos`;
+DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.lejemplo';
+DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LEJEMPLOS' AND `type`='component';
 
 
 DELETE FROM `#__assets` WHERE `name` LIKE '%com_jtca%';
