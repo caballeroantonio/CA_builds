@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
@@ -172,7 +172,7 @@ class JtCaModelLejemplos extends JModelList
 					'a.*'
 			)
 		);
-		$query->from($db->quoteName('#__jtca_lejemplos').' AS a');
+		$query->from($db->quoteName('jt_lejemplos').' AS a');
 
 		
 		
@@ -218,7 +218,7 @@ class JtCaModelLejemplos extends JModelList
 		$query->select($db->quoteName('lde.id').' AS lde_lejemplo_id');
 		$query->select($db->quoteName('lde.ordering').' AS lde_lejemplo_ordering');
 
-		$query->join('LEFT', $db->quoteName('#__jtca_lejemplos').' AS lde ON '.$db->quoteName('lde.id').' = '.$db->quoteName('a.my_parent'));	
+		$query->join('LEFT', $db->quoteName('jt_lejemplos').' AS lde ON '.$db->quoteName('lde.id').' = '.$db->quoteName('a.my_parent'));	
 		
 				
 		// Add the list ordering clause.

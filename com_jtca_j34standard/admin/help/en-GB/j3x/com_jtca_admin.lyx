@@ -74,7 +74,7 @@
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 Estoy pensando en que se puede tropicalizar el consecutivo, dataIndex=consecutiv
@@ -84,7 +84,7 @@ o, columnText=Número de oficio
 \begin_layout Plain Layout
 \begin_inset listings
 inline false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -168,11 +168,11 @@ Query exportar observaciones CA
 \end_layout
 
 \begin_layout Part
-TSJ CDMX Libros TxCA
+TSJ CDMX Libros TxCA Ejemplo
 \end_layout
 
 \begin_layout Title
-TSJ CDMX Libros TxCA
+TSJ CDMX Libros TxCA Ejemplo
 \end_layout
 
 \begin_layout Author
@@ -182,7 +182,7 @@ caballeroantonio (caballeroantonio.com)
 \begin_layout Date
 Revisión 1.0.0 del 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -201,7 +201,7 @@ today
 
  
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -288,7 +288,7 @@ Ingresar al portal de administración en {SITE}/administrator e identifíquese
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -330,7 +330,7 @@ Install y seleccionar la ubicación del
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -369,7 +369,7 @@ Completar el proceso de instalación
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -413,7 +413,7 @@ Ingresar al portal de administración en {SITE}/administrator e identifíquese
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -447,14 +447,14 @@ Portal de administración
 \begin_layout Itemize
 Navegar en el menú System\SpecialChar menuseparator
 Global Configuration\SpecialChar menuseparator
-TSJ CDMX Libros TxCA
+TSJ CDMX Libros TxCA Ejemplo
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -494,7 +494,7 @@ Colocar el puntero sobre cada campo para obtener descripciones mediante
 En la esquina superior derecha se encuentra un botón para obtener ayuda
  que despliega el presente menú en el capítulo correspondiente 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 @ToDo implementar el botón HELP en cada vista y en las configuraciones
@@ -587,7 +587,7 @@ filename "config_lyx.tex"
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -612,7 +612,7 @@ caption{Lista de configuraciones}
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -628,6 +628,50 @@ status open
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/administrator_option=com_config&view=component&component=com_architectcomp_global_permissions.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración de permisos globales
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -661,7 +705,7 @@ Mostrar la bitácora de cambios que se realizan en los registros de los libros
 \begin_layout Itemize
 Se incorporó un control de versiones 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 llamado UCM (Unified Content Model )
@@ -684,7 +728,7 @@ La solución permite configurar el número máximo de versiones que se debe
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -719,7 +763,7 @@ Configuraciones del control de versiones
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -782,7 +826,7 @@ modal.php
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -841,7 +885,7 @@ Delete
 \end_deeper
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 @ToDo Generar las etiquetas adecuadas para el preview del control de versiones
@@ -856,7 +900,7 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -891,7 +935,7 @@ Preview de un registro
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -932,10 +976,6 @@ Diagrama entidad relación
 \begin_layout Standard
 \end_layout
 
-\begin_layout Subsection
-Configuración de Libro De Ejemplo
-\end_layout
-
 \begin_layout Standard
 \end_layout
 
@@ -943,50 +983,6 @@ Configuración de Libro De Ejemplo
 \end_layout
 
 \begin_layout Standard
-\end_layout
-
-\begin_layout Standard
-\end_layout
-
-\begin_layout Standard
-\end_layout
-
-\begin_layout Standard
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/administrator_option=com_config&view=component&component=com_architectcomp_global_permissions.jpg
-	lyxscale 30
-	width 80col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Configuración de permisos globales
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1007,7 +1003,7 @@ name "sec:Modelo-de-datos"
 \end_layout
 
 \begin_layout Subsection
-#__jtca_lejemplos
+jt_lejemplos
 \end_layout
 
 \begin_layout Subparagraph
@@ -1015,7 +1011,7 @@ Descripción
 \end_layout
 
 \begin_layout Standard
-Es la tabla para almacenar Ejemplos
+Es la tabla para almacenar Libro De Ejemplo
 \end_layout
 
 \begin_layout Standard
@@ -1110,7 +1106,7 @@ filename "lejemplo_admin.tex"
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1135,7 +1131,7 @@ caption{Lista de campos}
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1154,7 +1150,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1180,7 +1176,7 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1319,7 +1315,7 @@ filename "lejemplo_user.tex"
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1344,7 +1340,7 @@ caption{Lista de campos en Libro de ejemplo}
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1369,7 +1365,7 @@ status open
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Ejemplos - Grid Panel Layout"
+name "Libro De Ejemplo - Grid Panel Layout"
 target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]&layout=gridpanel"
 
 \end_inset
@@ -1381,7 +1377,7 @@ target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]&layout=gridpanel"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1415,7 +1411,7 @@ Grid Panel Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Ejemplos - Default List Layout"
+name "Libro De Ejemplo - Default List Layout"
 target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]"
 
 \end_inset
@@ -1427,7 +1423,7 @@ target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1461,7 +1457,7 @@ Default List Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Ejemplos - Blog Layout"
+name "Libro De Ejemplo - Blog Layout"
 target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]&layout=blog"
 
 \end_inset
@@ -1473,7 +1469,7 @@ target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]&layout=blog"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1507,7 +1503,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Ejemplos - Single Libro De Ejemplo Layout"
+name "Libro De Ejemplo - Single Libro De Ejemplo Layout"
 target "SERVER?option=com_jtca&view=lejemplo&id=1"
 
 \end_inset
@@ -1519,7 +1515,7 @@ target "SERVER?option=com_jtca&view=lejemplo&id=1"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1553,7 +1549,7 @@ Single Libro De Ejemplo Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Ejemplos - Single Libro De Ejemplo Article Layout"
+name "Libro De Ejemplo - Single Libro De Ejemplo Article Layout"
 target "SERVER?option=com_jtca&view=lejemplo&layout=article&id=1"
 
 \end_inset
@@ -1565,7 +1561,7 @@ target "SERVER?option=com_jtca&view=lejemplo&layout=article&id=1"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1599,7 +1595,7 @@ Single Libro De Ejemplo Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Ejemplos - Create Libro De Ejemplo"
+name "Libro De Ejemplo - Create Libro De Ejemplo"
 target "SERVER?option=com_jtca&view=lejemploform&layout=edit&id=1"
 
 \end_inset
@@ -1611,7 +1607,7 @@ target "SERVER?option=com_jtca&view=lejemploform&layout=edit&id=1"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center

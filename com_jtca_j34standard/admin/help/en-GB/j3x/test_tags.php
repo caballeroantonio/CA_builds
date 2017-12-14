@@ -1,5 +1,5 @@
 #one [%%IF per line
-Titulo=TSJ CDMX Libros TxCA
+Titulo=TSJ CDMX Libros TxCA Ejemplo
 Nombre del paquete com_architectcomp=com_jtca
 Descripción <p>Componente HelloWorld (de prueba)</p> <p>Componente HelloWorld (de prueba)</p>
 Release 1.0.0
@@ -9,7 +9,7 @@ COMPONENTAUTHOR=caballeroantonio
 COMPONENTWEBSITE=caballeroantonio.com
 
 
-architectcomp_name=tsj cdmx libros txca
+architectcomp_name=tsj cdmx libros txca ejemplo
 COM_ARCHITECTCOMP=COM_JTCA
 ARCHITECTCOMP=JTCA
 ArchitectComp=JtCa
@@ -33,8 +33,8 @@ architectcomp=jtca
     COMPOBJECTPLURAL=LEJEMPLOS
     compobjectplural=lejemplos
     CompObjectPlural=Lejemplos
-    compobject_plural_name=ejemplos
-    CompObject_plural_name=Ejemplos
+    compobject_plural_name=libro de ejemplo
+    CompObject_plural_name=Libro De Ejemplo
     compobject_short_plural_name=lejemplos
     CompObject_short_plural_name=Lejemplos
     
@@ -46,6 +46,46 @@ architectcomp=jtca
         FIELDSET_DESCRIPTION=
 
 {1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
 
             {OBJECT_FIELD}
             FIELD_NAME=Año j.
@@ -249,6 +289,26 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
+            FIELD_NAME=txt_my_suggest
+            FIELD_CODE_NAME_UPPER=TXT_MY_SUGGEST
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=40
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`txt_my_suggest` VARCHAR(255) DEFAULT NULL txt_my_suggest
+            
+            FIELD_NAME_LATEX=txt\_my\_suggest
+            FIELD_CODE_NAME_LATEX=txt\_my\_suggest
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
             FIELD_NAME=my multiline
             FIELD_CODE_NAME_UPPER=MY_MULTILINE
             FIELD_INTRO=<p>@ToDo  cambiar el sql que pone TEXT(255)</p>
@@ -313,19 +373,19 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=my person
-            FIELD_CODE_NAME_UPPER=MY_PERSON
-            FIELD_INTRO=<p>@ToDo buscar cómo implementar el fieldset person</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo buscar cómo implementar el fieldset person</p>
-            FIELD_DESCRIPTION=<p>@ToDo buscar cómo implementar el fieldset person</p> 
-            FIELDTYPE_ID=1
+            FIELD_NAME=id_my_suggest
+            FIELD_CODE_NAME_UPPER=ID_MY_SUGGEST
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=40
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`my_person` VARCHAR(255) DEFAULT NULL my person
+            FIELD_DB=`id_my_suggest` INT(10) DEFAULT NULL id_my_suggest
             
-            FIELD_NAME_LATEX=my person
-            FIELD_CODE_NAME_LATEX=my\_person
-            FIELD_DBCOMMENT_LATEX=@ToDo buscar c\'omo implementar el fieldset person
+            FIELD_NAME_LATEX=id\_my\_suggest
+            FIELD_CODE_NAME_LATEX=id\_my\_suggest
+            FIELD_DBCOMMENT_LATEX=
             
 
 
@@ -361,7 +421,7 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=my Fexterna
-            FIELD_CODE_NAME_UPPER=MY_FEXTERNA2
+            FIELD_CODE_NAME_UPPER=MY_FEXTERNA
             FIELD_INTRO=<p>@ToDo debieran ser 2 campos int, uno para huella y otro para firma</p><br/><pre id=&quot;line1&quot;><br /><br />    `my\_fexterna` INT NULL COMMENT 'id\_firma Firma externa',<br />    INDEX `c3\_14\_idx` (`my\_fexterna` ASC),<br />    CONSTRAINT `c3\_14`<br />        FOREIGN KEY (`my\_fexterna`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE,<br />    `my\_fexternah` INT NULL COMMENT 'id\_huella Firma externa',<br />    INDEX `c3\_14h\_idx` (`my\_fexternah` ASC),<br />    CONSTRAINT `c3\_14h`<br />        FOREIGN KEY (`my\_fexternah`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE <br />        , </pre>
             FIELD_DESCRIPTION_INI=<p>@ToDo debieran ser 2 campos int, uno para huella y otro para firma</p><br/><pre id=&quot;line1&quot;><br /><br />    `my\_fexterna` INT NULL COMMENT 'id\_firma Firma externa',<br />    INDEX `c3\_14\_idx` (`my\_fexterna` ASC),<br />    CONSTRAINT `c3\_14`<br />        FOREIGN KEY (`my\_fexterna`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE,<br />    `my\_fexternah` INT NULL COMMENT 'id\_huella Firma externa',<br />    INDEX `c3\_14h\_idx` (`my\_fexternah` ASC),<br />    CONSTRAINT `c3\_14h`<br />        FOREIGN KEY (`my\_fexternah`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE <br />        , </pre>
             FIELD_DESCRIPTION=<p>@ToDo debieran ser 2 campos int, uno para huella y otro para firma</p>
@@ -369,10 +429,31 @@ architectcomp=jtca
             FIELDTYPE_ID=34
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`my_Fexterna2` INT(10) DEFAULT NULL my Fexterna
+            FIELD_DB=`my_fexterna` INT(10) DEFAULT NULL my Fexterna
             
             FIELD_NAME_LATEX=my Fexterna
-            FIELD_CODE_NAME_LATEX=my\_Fexterna2
+            FIELD_CODE_NAME_LATEX=my\_fexterna
+            FIELD_DBCOMMENT_LATEX=@ToDo debieran ser 2 campos int, uno para huella y otro para firma    `my\textbackslash \textbackslash \_fexterna` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_firma Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexterna` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexterna`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE,    `my\textbackslash \textbackslash \_fexternah` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_huella Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14h\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexternah` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14h`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexternah`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE         , 
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=my Hexterna
+            FIELD_CODE_NAME_UPPER=MY_HEXTERNA
+            FIELD_INTRO=<p>@ToDo debieran ser 2 campos int, uno para huella y otro para firma</p><br/><pre id=&quot;line1&quot;><br /><br />    `my\_fexterna` INT NULL COMMENT 'id\_firma Firma externa',<br />    INDEX `c3\_14\_idx` (`my\_fexterna` ASC),<br />    CONSTRAINT `c3\_14`<br />        FOREIGN KEY (`my\_fexterna`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE,<br />    `my\_fexternah` INT NULL COMMENT 'id\_huella Firma externa',<br />    INDEX `c3\_14h\_idx` (`my\_fexternah` ASC),<br />    CONSTRAINT `c3\_14h`<br />        FOREIGN KEY (`my\_fexternah`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE <br />        , </pre>
+            FIELD_DESCRIPTION_INI=<p>@ToDo debieran ser 2 campos int, uno para huella y otro para firma</p><br/><pre id=&quot;line1&quot;><br /><br />    `my\_fexterna` INT NULL COMMENT 'id\_firma Firma externa',<br />    INDEX `c3\_14\_idx` (`my\_fexterna` ASC),<br />    CONSTRAINT `c3\_14`<br />        FOREIGN KEY (`my\_fexterna`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE,<br />    `my\_fexternah` INT NULL COMMENT 'id\_huella Firma externa',<br />    INDEX `c3\_14h\_idx` (`my\_fexternah` ASC),<br />    CONSTRAINT `c3\_14h`<br />        FOREIGN KEY (`my\_fexternah`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE <br />        , </pre>
+            FIELD_DESCRIPTION=<p>@ToDo debieran ser 2 campos int, uno para huella y otro para firma</p>
+<pre id="line1"><br /><br />    `my\_fexterna` INT NULL COMMENT 'id\_firma Firma externa',<br />    INDEX `c3\_14\_idx` (`my\_fexterna` ASC),<br />    CONSTRAINT `c3\_14`<br />        FOREIGN KEY (`my\_fexterna`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE,<br />    `my\_fexternah` INT NULL COMMENT 'id\_huella Firma externa',<br />    INDEX `c3\_14h\_idx` (`my\_fexternah` ASC),<br />    CONSTRAINT `c3\_14h`<br />        FOREIGN KEY (`my\_fexternah`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE <br />        , </pre> 
+            FIELDTYPE_ID=39
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`my_hexterna` INT(10) DEFAULT NULL my Hexterna
+            
+            FIELD_NAME_LATEX=my Hexterna
+            FIELD_CODE_NAME_LATEX=my\_hexterna
             FIELD_DBCOMMENT_LATEX=@ToDo debieran ser 2 campos int, uno para huella y otro para firma    `my\textbackslash \textbackslash \_fexterna` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_firma Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexterna` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexterna`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE,    `my\textbackslash \textbackslash \_fexternah` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_huella Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14h\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexternah` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14h`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexternah`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE         , 
             
 
@@ -404,18 +485,78 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=my suggest
-            FIELD_CODE_NAME_UPPER=MY_SUGGEST
+            FIELD_NAME=my person isMoral
+            FIELD_CODE_NAME_UPPER=MY_PERSON_ISMORAL
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
+            FIELDTYPE_ID=41
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`my_suggest` VARCHAR(255) DEFAULT NULL my suggest
+            FIELD_DB=`my_person_isMoral` TINYINT(1) NOT NULL DEFAULT '0' my person isMoral
             
-            FIELD_NAME_LATEX=my suggest
-            FIELD_CODE_NAME_LATEX=my\_suggest
+            FIELD_NAME_LATEX=my person isMoral
+            FIELD_CODE_NAME_LATEX=my\_person\_isMoral
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=my person paterno
+            FIELD_CODE_NAME_UPPER=MY_PERSON_PATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`my_person_paterno` VARCHAR(255) DEFAULT NULL my person paterno
+            
+            FIELD_NAME_LATEX=my person paterno
+            FIELD_CODE_NAME_LATEX=my\_person\_paterno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=my person materno
+            FIELD_CODE_NAME_UPPER=MY_PERSON_MATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`my_person_materno` VARCHAR(45) DEFAULT NULL my person materno
+            
+            FIELD_NAME_LATEX=my person materno
+            FIELD_CODE_NAME_LATEX=my\_person\_materno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=my person nombre
+            FIELD_CODE_NAME_UPPER=MY_PERSON_NOMBRE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`my_person_nombre` VARCHAR(45) DEFAULT NULL my person nombre
+            
+            FIELD_NAME_LATEX=my person nombre
+            FIELD_CODE_NAME_LATEX=my\_person\_nombre
             FIELD_DBCOMMENT_LATEX=
             
 

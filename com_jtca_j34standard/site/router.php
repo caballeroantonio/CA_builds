@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -28,13 +28,13 @@
 
 defined('_JEXEC') or die;
 /**
- * Routing class for the TSJ CDMX Libros TxCA component
+ * Routing class for the TSJ CDMX Libros TxCA Ejemplo component
  *
  */
 class JtCaRouter extends JComponentRouterBase
 {
 	/**
-	 * Build the route for the TSJ CDMX Libros TxCA component
+	 * Build the route for the TSJ CDMX Libros TxCA Ejemplo component
 	 *
 	 * @param	array	$query		An array of URL arguments
 	 *
@@ -209,7 +209,7 @@ class JtCaRouter extends JComponentRouterBase
 							
 						$query = $db->getQuery(true);
 						$query->select($db->quoteName('id'));
-						$query->from($db->quoteName('#__jtca_lejemplos'));
+						$query->from($db->quoteName('jt_lejemplos'));
 								
 						$db->setQuery($query);
 						$nid = $db->loadResult();

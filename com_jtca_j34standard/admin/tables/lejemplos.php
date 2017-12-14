@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
@@ -50,7 +50,7 @@ class JtCaTableLejemplos extends JTable
 	public function __construct(&$db)
 	{
 		
-		parent::__construct('#__jtca_lejemplos', 'id', $db);
+		parent::__construct('jt_lejemplos', 'id', $db);
 		
 		$date	= JFactory::getDate();		
 		$user = JFactory::getUser();	

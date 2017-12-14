@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
@@ -80,7 +80,7 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 		$buttons = array();
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lejemplos',
 			'object'=>'lejemplos',
-			'text'=>'Ejemplos',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'text'=>'Libro De Ejemplo',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LEJEMPLO_DESCRIPTION')
 			);
 

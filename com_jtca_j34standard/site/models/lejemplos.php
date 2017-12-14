@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * This models supports retrieving lists of ejemplos.
+ * This models supports retrieving lists of libro de ejemplo.
  *
  */
 class JtCaModelLejemplos extends JModelList
@@ -201,7 +201,7 @@ class JtCaModelLejemplos extends JModelList
 				);
 
 
-		$query->from($db->quoteName('#__jtca_lejemplos').' AS a');
+		$query->from($db->quoteName('jt_lejemplos').' AS a');
 
 
 		$query->select($db->quoteName('ua.name').' AS created_by_name');
@@ -249,7 +249,7 @@ class JtCaModelLejemplos extends JModelList
 		$query->select($db->quoteName('lde.id').' AS lde_lejemplo_id');
 		$query->select($db->quoteName('lde.ordering').' AS lde_lejemplo_ordering');
 
-		$query->join('LEFT', $db->quoteName('#__jtca_lejemplos').' AS lde ON '.$db->quoteName('lde.id').' = '.$db->quoteName('a.my_parent'));	
+		$query->join('LEFT', $db->quoteName('jt_lejemplos').' AS lde ON '.$db->quoteName('lde.id').' = '.$db->quoteName('a.my_parent'));	
 					
 
 		// Filter by a single or group of lejemplos.
@@ -410,7 +410,7 @@ class JtCaModelLejemplos extends JModelList
 	}
 
 	/**
-	 * Method to get a list of ejemplos.
+	 * Method to get a list of libro de ejemplo.
 	 *
 	 * Overriden to inject convert the params fields into an object.
 	 *
@@ -440,27 +440,10 @@ class JtCaModelLejemplos extends JModelList
 
 
 				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				if (isset($item->my_suggest) AND $item->my_suggest !='')
+				if (isset($item->id_organo) AND $item->id_organo !='')
 				{
-					$sql = 'SELECT '.$db->quoteName('list.').' AS id, '.$db->quoteName('list.').' AS value FROM () AS list';
-					$sql .= ' WHERE '.$db->quoteName('list.').' IN ('.JString::trim($item->my_suggest, ',').');';
+					$sql = 'SELECT '.$db->quoteName('list.id').' AS id, '.$db->quoteName('list.organo').' AS value FROM (SELECT id, organo FROM jtc_organos) AS list';
+					$sql .= ' WHERE '.$db->quoteName('list.id').' IN ('.JString::trim($item->id_organo, ',').');';
 
 					$db->setQuery($sql);
 					
@@ -470,12 +453,55 @@ class JtCaModelLejemplos extends JModelList
 					{
 						$result_array[] = $row;
 					}					
-					$item->my_suggest = $result_array;
+					$item->id_organo = $result_array;
 				}
 				else
 				{
-					$item->my_suggest = array();
+					$item->id_organo = array();
 				}
+				
+				if (isset($item->id_secretaria) AND $item->id_secretaria !='')
+				{
+					$sql = 'SELECT '.$db->quoteName('list.id').' AS id, '.$db->quoteName('list.secretaria').' AS value FROM (SELECT id, secretaria FROM jtc_secretarias) AS list';
+					$sql .= ' WHERE '.$db->quoteName('list.id').' IN ('.JString::trim($item->id_secretaria, ',').');';
+
+					$db->setQuery($sql);
+					
+					$rows = $db->loadAssocList();
+					$result_array = array();
+					foreach ($rows as $row)
+					{
+						$result_array[] = $row;
+					}					
+					$item->id_secretaria = $result_array;
+				}
+				else
+				{
+					$item->id_secretaria = array();
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				
 		
 							

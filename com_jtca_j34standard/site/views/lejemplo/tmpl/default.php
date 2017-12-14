@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
@@ -122,6 +122,8 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="lejemploForm" id="lejemploForm">
 			<?php $dummy = false;
 					$display_fieldset = (
+								($params->get('show_lejemplo_id_organo')) OR 
+								($params->get('show_lejemplo_id_secretaria')) OR 
 								($params->get('show_lejemplo_anoj')) OR 
 								($params->get('show_lejemplo_my_boolean')) OR 
 								($params->get('show_lejemplo_id_expediente')) OR 
@@ -132,14 +134,19 @@ $empty = $component->params->get('default_empty_field', '');
 								($params->get('show_lejemplo_my_var45')) OR 
 								($params->get('show_lejemplo_txt_expediente')) OR 
 								($params->get('show_lejemplo_my_var255')) OR 
+								($params->get('show_lejemplo_txt_my_suggest')) OR 
 								($params->get('show_lejemplo_my_multiline')) OR 
 								($params->get('show_lejemplo_my_ref2')) OR 
 								($params->get('show_lejemplo_my_ref')) OR 
-								($params->get('show_lejemplo_my_person')) OR 
+								($params->get('show_lejemplo_id_my_suggest')) OR 
 								($params->get('show_lejemplo_my_NFempleado')) OR 
-								($params->get('show_lejemplo_my_Fexterna2')) OR 
+								($params->get('show_lejemplo_my_fexterna')) OR 
+								($params->get('show_lejemplo_my_hexterna')) OR 
 								($params->get('show_lejemplo_my_parent')) OR 
-								($params->get('show_lejemplo_my_suggest')) OR 
+								($params->get('show_lejemplo_my_person_isMoral')) OR 
+								($params->get('show_lejemplo_my_person_paterno')) OR 
+								($params->get('show_lejemplo_my_person_materno')) OR 
+								($params->get('show_lejemplo_my_person_nombre')) OR 
 								$dummy
 								);
 			?>
@@ -148,6 +155,54 @@ $empty = $component->params->get('default_empty_field', '');
 					<legend><?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELDSET_LEJEMPLO_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
+						<?php if ($params->get('show_lejemplo_id_organo')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_ID_ORGANO_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									if (is_array($this->item->id_organo)) :
+									if (count($this->item->id_organo) > 0) : 
+										echo '<div class="sql">';
+										foreach ($this->item->id_organo as $id_organo) :
+											echo '<p>'.$id_organo['value'].'</p>';
+										endforeach;
+										echo '</div>';
+									else :
+										echo $empty;
+									endif;
+								else :;
+									echo $this->item->id_organo != '' ? $this->item->id_organo : $empty;
+								endif;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lejemplo_id_secretaria')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_ID_SECRETARIA_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									if (is_array($this->item->id_secretaria)) :
+									if (count($this->item->id_secretaria) > 0) : 
+										echo '<div class="sql">';
+										foreach ($this->item->id_secretaria as $id_secretaria) :
+											echo '<p>'.$id_secretaria['value'].'</p>';
+										endforeach;
+										echo '</div>';
+									else :
+										echo $empty;
+									endif;
+								else :;
+									echo $this->item->id_secretaria != '' ? $this->item->id_secretaria : $empty;
+								endif;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
 						<?php if ($params->get('show_lejemplo_anoj')) : ?>
 						<div class="formelm">
 							<label>
@@ -278,6 +333,18 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
+						<?php if ($params->get('show_lejemplo_txt_my_suggest')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_TXT_MY_SUGGEST_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->txt_my_suggest != '' ? $this->item->txt_my_suggest : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
 						<?php if ($params->get('show_lejemplo_my_multiline')) : ?>
 						<div class="formelm">
 							<label>
@@ -314,14 +381,14 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_lejemplo_my_person')) : ?>
+						<?php if ($params->get('show_lejemplo_id_my_suggest')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_LABEL'); ?>
+								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_ID_MY_SUGGEST_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->my_person != '' ? $this->item->my_person : $empty;
+									echo $this->item->id_my_suggest != '' ? $this->item->id_my_suggest : $empty;
 								?>
 							</span>
 						</div>	
@@ -338,14 +405,26 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_lejemplo_my_Fexterna2')) : ?>
+						<?php if ($params->get('show_lejemplo_my_fexterna')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_MY_FEXTERNA2_LABEL'); ?>
+								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_MY_FEXTERNA_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->my_Fexterna2 != '' ? $this->item->my_Fexterna2 : $empty;
+									echo $this->item->my_fexterna != '' ? $this->item->my_fexterna : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lejemplo_my_hexterna')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_MY_HEXTERNA_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->my_hexterna != '' ? $this->item->my_hexterna : $empty;
 								?>
 							</span>
 						</div>	
@@ -362,26 +441,50 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_lejemplo_my_suggest')) : ?>
+						<?php if ($params->get('show_lejemplo_my_person_isMoral')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_MY_SUGGEST_LABEL'); ?>
+								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_ISMORAL_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									if (is_array($this->item->my_suggest)) :
-									if (count($this->item->my_suggest) > 0) : 
-										echo '<div class="sql">';
-										foreach ($this->item->my_suggest as $my_suggest) :
-											echo '<p>'.$my_suggest['value'].'</p>';
-										endforeach;
-										echo '</div>';
-									else :
-										echo $empty;
-									endif;
-								else :;
-									echo $this->item->my_suggest != '' ? $this->item->my_suggest : $empty;
-								endif;
+									echo $this->item->my_person_isMoral != '' ? $this->item->my_person_isMoral : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lejemplo_my_person_paterno')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_PATERNO_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->my_person_paterno != '' ? $this->item->my_person_paterno : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lejemplo_my_person_materno')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_MATERNO_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->my_person_materno != '' ? $this->item->my_person_materno : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lejemplo_my_person_nombre')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_NOMBRE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->my_person_nombre != '' ? $this->item->my_person_nombre : $empty;
 								?>
 							</span>
 						</div>	

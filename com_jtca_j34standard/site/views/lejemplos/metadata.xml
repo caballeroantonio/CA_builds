@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- @version 			$Id:$ -->
-<!-- @name			    TSJ CDMX Libros TxCA (Release 1.0.0) -->
+<!-- @name			    TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0) -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
 <!-- @package			com_jtca -->
 <!-- @subpackage		com_jtca.site -->
@@ -26,7 +26,7 @@
 
 <metadata>
 	<view
-		title="Ejemplos">
+		title="Libro De Ejemplo">
 		<message><![CDATA[COM_JTCA_LEJEMPLOS_LAYOUT_DESC]]></message>
 	</view>
 </metadata>

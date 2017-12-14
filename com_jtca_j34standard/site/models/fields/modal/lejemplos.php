@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -74,7 +74,7 @@ class JFormFieldModal_Lejemplos extends JFormField
 		$db = JFactory::getDbo();
 		$db->setQuery(
 			'SELECT name' .
-			' FROM #__jtca_lejemplos' .
+			' FROM jt_lejemplos' .
 			' WHERE id = '.(int) $this->value
 		);
 		

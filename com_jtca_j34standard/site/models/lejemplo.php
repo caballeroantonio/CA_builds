@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * TSJ CDMX Libros TxCA Component Libro De Ejemplo Model
+ * TSJ CDMX Libros TxCA Ejemplo Component Libro De Ejemplo Model
  *
  */
 class JtCaModelLejemplo extends JModelItem
@@ -55,6 +55,8 @@ class JtCaModelLejemplo extends JModelItem
 		{
 			$config['lejemplo_filter_fields'] = array(
 				'id', 'a.id',
+				'id_organo','a.id_organo',
+				'id_secretaria','a.id_secretaria',
 				'anoj','a.anoj',
 				'my_boolean','a.my_boolean',
 				'id_expediente','a.id_expediente',
@@ -65,14 +67,19 @@ class JtCaModelLejemplo extends JModelItem
 				'my_var45','a.my_var45',
 				'txt_expediente','a.txt_expediente',
 				'my_var255','a.my_var255',
+				'txt_my_suggest','a.txt_my_suggest',
 				'my_multiline','a.my_multiline',
 				'my_ref2','a.my_ref2',
 				'my_ref','a.my_ref',
-				'my_person','a.my_person',
+				'id_my_suggest','a.id_my_suggest',
 				'my_NFempleado','a.my_NFempleado',
-				'my_Fexterna2','a.my_Fexterna2',
+				'my_fexterna','a.my_fexterna',
+				'my_hexterna','a.my_hexterna',
 				'my_parent','a.my_parent',
-				'my_suggest','a.my_suggest',
+				'my_person_isMoral','a.my_person_isMoral',
+				'my_person_paterno','a.my_person_paterno',
+				'my_person_materno','a.my_person_materno',
+				'my_person_nombre','a.my_person_nombre',
 				'state', 'a.state',
 				'created', 'a.created',
 				'created_by', 'a.created_by',
@@ -213,7 +220,7 @@ class JtCaModelLejemplo extends JModelItem
 
 					)
 				);
-				$query->from($db->quoteName('#__jtca_lejemplos').' AS a');
+				$query->from($db->quoteName('jt_lejemplos').' AS a');
 				// Join on user table.
 				$query->select($db->quoteName('ua.name').' AS created_by_name');
 				$query->join('LEFT', $db->quoteName('#__users').' AS ua on '.$db->quoteName('ua.id').' = '.$db->quoteName('a.created_by'));
@@ -241,7 +248,7 @@ class JtCaModelLejemplo extends JModelItem
 					
 				// Filter by and return name for my_parent level.
 				$query->select($db->quoteName('lde.id').' AS lde_lejemplo_id');
-				$query->join('LEFT', $db->quoteName('#__jtca_lejemplos').' AS lde ON '.$db->quoteName('lde.id').' = '.$db->quoteName('a.my_parent'));	
+				$query->join('LEFT', $db->quoteName('jt_lejemplos').' AS lde ON '.$db->quoteName('lde.id').' = '.$db->quoteName('a.my_parent'));	
 																				
 				$db->setQuery($query);
 
@@ -255,27 +262,10 @@ class JtCaModelLejemplo extends JModelItem
 				// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
 			
 
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				if (isset($item->my_suggest) AND $item->my_suggest !='')
+				if (isset($item->id_organo) AND $item->id_organo !='')
 				{
-					$sql = 'SELECT '.$db->quoteName('list.').' AS id, '.$db->quoteName('list.').' AS value FROM () AS list';
-					$sql .= ' WHERE '.$db->quoteName('list.').' IN ('.JString::trim($item->my_suggest, ',').');';
+					$sql = 'SELECT '.$db->quoteName('list.id').' AS id, '.$db->quoteName('list.organo').' AS value FROM (SELECT id, organo FROM jtc_organos) AS list';
+					$sql .= ' WHERE '.$db->quoteName('list.id').' IN ('.JString::trim($item->id_organo, ',').');';
 
 					$db->setQuery($sql);
 					
@@ -285,12 +275,55 @@ class JtCaModelLejemplo extends JModelItem
 					{
 						$result_array[] = $row;
 					}					
-					$item->my_suggest = $result_array;
+					$item->id_organo = $result_array;
 				}
 				else
 				{
-					$item->my_suggest = array();
+					$item->id_organo = array();
 				}
+				
+				if (isset($item->id_secretaria) AND $item->id_secretaria !='')
+				{
+					$sql = 'SELECT '.$db->quoteName('list.id').' AS id, '.$db->quoteName('list.secretaria').' AS value FROM (SELECT id, secretaria FROM jtc_secretarias) AS list';
+					$sql .= ' WHERE '.$db->quoteName('list.id').' IN ('.JString::trim($item->id_secretaria, ',').');';
+
+					$db->setQuery($sql);
+					
+					$rows = $db->loadAssocList();
+					$result_array = array();
+					foreach ($rows as $row)
+					{
+						$result_array[] = $row;
+					}					
+					$item->id_secretaria = $result_array;
+				}
+				else
+				{
+					$item->id_secretaria = array();
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				
 		
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * TSJ CDMX Libros TxCA controller class.
+ * TSJ CDMX Libros TxCA Ejemplo controller class.
  *
  */
 class JtCaControllerJtCa extends JControllerForm

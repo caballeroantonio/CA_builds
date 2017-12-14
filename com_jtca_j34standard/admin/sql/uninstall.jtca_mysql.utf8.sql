@@ -1,5 +1,5 @@
 -- @version 		$Id:$
--- @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+-- @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
 -- @author			caballeroantonio (caballeroantonio.com)
 -- @package			com_jtca
 -- @subpackage		com_jtca.admin
@@ -25,7 +25,7 @@
 --
 -- Uninstall of `#__jtca` tables
 --
-DROP TABLE IF EXISTS `#__jtca_lejemplos`;
+DROP TABLE IF EXISTS `jt_lejemplos`;
 DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.lejemplo';
 DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LEJEMPLOS' AND `type`='component';
 

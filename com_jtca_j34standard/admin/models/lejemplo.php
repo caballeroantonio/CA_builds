@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
@@ -126,9 +126,13 @@ class JtCaModelLejemplo extends JModelAdmin
 			// Include any manipulation of the data on the record e.g. expand out Registry fields
 			// NB The params registry field - if used - is done automatically in the JAdminModel parent class
 			
-			if (isset($item->my_suggest) AND $item->my_suggest !='')
+			if (isset($item->id_organo) AND $item->id_organo !='')
 			{
-				$item->my_suggest = explode(',',JString::trim($item->my_suggest, ','));
+				$item->id_organo = explode(',',JString::trim($item->id_organo, ','));
+			}	
+			if (isset($item->id_secretaria) AND $item->id_secretaria !='')
+			{
+				$item->id_secretaria = explode(',',JString::trim($item->id_secretaria, ','));
 			}	
 
 			
@@ -240,7 +244,7 @@ class JtCaModelLejemplo extends JModelAdmin
 	 */
 	public function save($data)
 	{
-		// Include the tsj cdmx libros txca plugins for the onSave events.
+		// Include the tsj cdmx libros txca ejemplo plugins for the onSave events.
 		JPluginHelper::importPlugin('jtca');	
 		
 		$input = JFactory::getApplication()->input;

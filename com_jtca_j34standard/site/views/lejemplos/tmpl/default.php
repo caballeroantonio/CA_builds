@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -192,6 +192,44 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lejemplo_id_organo',0)) : ?>
+						<td class="list-id_organo">
+							<?php 
+								if (is_array($item->id_organo)) :
+									if (count($item->id_organo) > 0) : 
+										echo '<div class="sql">';
+										foreach ($item->id_organo as $id_organo) :
+											echo '<p>'.$id_organo['value'].'</p>';
+										endforeach;
+										echo '</div>';
+									else :
+										echo $empty;
+									endif;
+								else :;
+									echo $item->id_organo != '' ? $item->id_organo : $empty;
+								endif;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lejemplo_id_secretaria',0)) : ?>
+						<td class="list-id_secretaria">
+							<?php 
+								if (is_array($item->id_secretaria)) :
+									if (count($item->id_secretaria) > 0) : 
+										echo '<div class="sql">';
+										foreach ($item->id_secretaria as $id_secretaria) :
+											echo '<p>'.$id_secretaria['value'].'</p>';
+										endforeach;
+										echo '</div>';
+									else :
+										echo $empty;
+									endif;
+								else :;
+									echo $item->id_secretaria != '' ? $item->id_secretaria : $empty;
+								endif;
+							?>
+						</td>
+					<?php endif; ?>
 					<?php if ($this->params->get('list_show_lejemplo_anoj',0)) : ?>
 						<td class="list-anoj">
 							<?php 
@@ -272,6 +310,13 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lejemplo_txt_my_suggest',0)) : ?>
+						<td class="list-txt_my_suggest">
+							<?php 
+								echo $item->txt_my_suggest != '' ? $item->txt_my_suggest : $empty;
+							?>
+						</td>
+					<?php endif; ?>
 					<?php if ($this->params->get('list_show_lejemplo_my_multiline',0)) : ?>
 						<td class="list-my_multiline">
 							<?php 
@@ -293,10 +338,10 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lejemplo_my_person',0)) : ?>
-						<td class="list-my_person">
+					<?php if ($this->params->get('list_show_lejemplo_id_my_suggest',0)) : ?>
+						<td class="list-id_my_suggest">
 							<?php 
-								echo $item->my_person != '' ? $item->my_person : $empty;
+								echo $item->id_my_suggest != '' ? $item->id_my_suggest : $empty;
 							?>
 						</td>
 					<?php endif; ?>
@@ -307,10 +352,17 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lejemplo_my_Fexterna2',0)) : ?>
-						<td class="list-my_Fexterna2">
+					<?php if ($this->params->get('list_show_lejemplo_my_fexterna',0)) : ?>
+						<td class="list-my_fexterna">
 							<?php 
-								echo $item->my_Fexterna2 != '' ? $item->my_Fexterna2 : $empty;
+								echo $item->my_fexterna != '' ? $item->my_fexterna : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lejemplo_my_hexterna',0)) : ?>
+						<td class="list-my_hexterna">
+							<?php 
+								echo $item->my_hexterna != '' ? $item->my_hexterna : $empty;
 							?>
 						</td>
 					<?php endif; ?>
@@ -325,22 +377,31 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lejemplo_my_suggest',0)) : ?>
-						<td class="list-my_suggest">
+					<?php if ($this->params->get('list_show_lejemplo_my_person_isMoral',0)) : ?>
+						<td class="list-my_person_isMoral">
 							<?php 
-								if (is_array($item->my_suggest)) :
-									if (count($item->my_suggest) > 0) : 
-										echo '<div class="sql">';
-										foreach ($item->my_suggest as $my_suggest) :
-											echo '<p>'.$my_suggest['value'].'</p>';
-										endforeach;
-										echo '</div>';
-									else :
-										echo $empty;
-									endif;
-								else :;
-									echo $item->my_suggest != '' ? $item->my_suggest : $empty;
-								endif;
+								echo $item->my_person_isMoral != '' ? $item->my_person_isMoral : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lejemplo_my_person_paterno',0)) : ?>
+						<td class="list-my_person_paterno">
+							<?php 
+								echo $item->my_person_paterno != '' ? $item->my_person_paterno : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lejemplo_my_person_materno',0)) : ?>
+						<td class="list-my_person_materno">
+							<?php 
+								echo $item->my_person_materno != '' ? $item->my_person_materno : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lejemplo_my_person_nombre',0)) : ?>
+						<td class="list-my_person_nombre">
+							<?php 
+								echo $item->my_person_nombre != '' ? $item->my_person_nombre : $empty;
 							?>
 						</td>
 					<?php endif; ?>

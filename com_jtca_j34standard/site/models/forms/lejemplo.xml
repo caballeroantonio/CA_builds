@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- @version 			$Id:$ -->
-<!-- @name			    TSJ CDMX Libros TxCA (Release 1.0.0) -->
+<!-- @name			    TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0) -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
 <!-- @package			com_jtca -->
 <!-- @subpackage		com_jtca.site -->
@@ -117,6 +117,34 @@
     >
 
         <field
+            id="id_organo"
+            name="id_organo"
+            type="sql"
+            label="COM_JTCA_LEJEMPLOS_FIELD_ID_ORGANO_LABEL"
+            description="COM_JTCA_LEJEMPLOS_FIELD_ID_ORGANO_DESC"
+            class="inputbox"
+			size="1"
+			query="SELECT id, organo FROM jtc_organos"
+			key_field="id"
+			value_field="organo"
+        >
+            <option value="">COM_JTCA_LEJEMPLOS_SELECT_ID_ORGANO</option>
+        </field>  
+        <field
+            id="id_secretaria"
+            name="id_secretaria"
+            type="sql"
+            label="COM_JTCA_LEJEMPLOS_FIELD_ID_SECRETARIA_LABEL"
+            description="COM_JTCA_LEJEMPLOS_FIELD_ID_SECRETARIA_DESC"
+            class="inputbox"
+			size="1"
+			query="SELECT id, secretaria FROM jtc_secretarias"
+			key_field="id"
+			value_field="secretaria"
+        >
+            <option value="">COM_JTCA_LEJEMPLOS_SELECT_ID_SECRETARIA</option>
+        </field>  
+        <field
             id="anoj"
             name="anoj"
             type="text"
@@ -232,6 +260,14 @@
         >
         </field>  
         <field
+            id="txt_my_suggest"
+            name="txt_my_suggest"
+            type="combo_suggest"
+            label="COM_JTCA_LEJEMPLOS_FIELD_TXT_MY_SUGGEST_LABEL"
+            description="COM_JTCA_LEJEMPLOS_FIELD_TXT_MY_SUGGEST_DESC"
+        >
+        </field>  
+        <field
             id="my_multiline"
             name="my_multiline"
             type="editor"
@@ -263,14 +299,11 @@
         >
         </field>  
         <field
-            id="my_person"
-            name="my_person"
-            type="text"
-            label="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_LABEL"
-            description="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
+            id="id_my_suggest"
+            name="id_my_suggest"
+            type="combo_suggest"
+            label="COM_JTCA_LEJEMPLOS_FIELD_ID_MY_SUGGEST_LABEL"
+            description="COM_JTCA_LEJEMPLOS_FIELD_ID_MY_SUGGEST_DESC"
         >
         </field>  
         <field
@@ -284,11 +317,21 @@
         >
         </field>  
         <field
-            id="my_Fexterna2"
-            name="my_Fexterna2"
+            id="my_fexterna"
+            name="my_fexterna"
             type="modal_firma"
-            label="COM_JTCA_LEJEMPLOS_FIELD_MY_FEXTERNA2_LABEL"
-            description="COM_JTCA_LEJEMPLOS_FIELD_MY_FEXTERNA2_DESC"
+            label="COM_JTCA_LEJEMPLOS_FIELD_MY_FEXTERNA_LABEL"
+            description="COM_JTCA_LEJEMPLOS_FIELD_MY_FEXTERNA_DESC"
+            class="modal validate-numeric"
+			default="0"
+        >
+        </field>  
+        <field
+            id="my_hexterna"
+            name="my_hexterna"
+            type="modal_huella"
+            label="COM_JTCA_LEJEMPLOS_FIELD_MY_HEXTERNA_LABEL"
+            description="COM_JTCA_LEJEMPLOS_FIELD_MY_HEXTERNA_DESC"
             class="modal validate-numeric"
 			default="0"
         >
@@ -304,15 +347,48 @@
         >
         </field>  
         <field
-            id="my_suggest"
-            name="my_suggest"
-            type="sql"
-            label="COM_JTCA_LEJEMPLOS_FIELD_MY_SUGGEST_LABEL"
-            description="COM_JTCA_LEJEMPLOS_FIELD_MY_SUGGEST_DESC"
+            id="my_person_isMoral"
+            name="my_person_isMoral"
+            type="person"
+            label="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_ISMORAL_LABEL"
+            description="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_ISMORAL_DESC"
             class="inputbox"
 			size="50"
+			maxlength="255"
         >
-            <option value="">COM_JTCA_LEJEMPLOS_SELECT_MY_SUGGEST</option>
+        </field>  
+        <field
+            id="my_person_paterno"
+            name="my_person_paterno"
+            type="person"
+            label="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_PATERNO_LABEL"
+            description="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_PATERNO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="my_person_materno"
+            name="my_person_materno"
+            type="person"
+            label="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_MATERNO_LABEL"
+            description="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_MATERNO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="my_person_nombre"
+            name="my_person_nombre"
+            type="person"
+            label="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_NOMBRE_LABEL"
+            description="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_NOMBRE_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
         </field>  
     </fieldset>
 </form>

@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -156,9 +156,13 @@ class JtCaModelLejemploForm extends JtCaModelLejemplo
 	
 				
 
-		if (isset($item->my_suggest) AND $item->my_suggest !='')
+		if (isset($item->id_organo) AND $item->id_organo !='')
 		{
-			$item->my_suggest = explode(',',JString::trim($item->my_suggest, ','));
+			$item->id_organo = explode(',',JString::trim($item->id_organo, ','));
+		}	
+		if (isset($item->id_secretaria) AND $item->id_secretaria !='')
+		{
+			$item->id_secretaria = explode(',',JString::trim($item->id_secretaria, ','));
 		}	
 
 			
@@ -363,7 +367,7 @@ class JtCaModelLejemploForm extends JtCaModelLejemplo
 			return false;
 		}
 
-		// Reorder the ejemplos so the new libro de ejemplo is first
+		// Reorder the libro de ejemplo so the new libro de ejemplo is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);
@@ -372,7 +376,7 @@ class JtCaModelLejemploForm extends JtCaModelLejemplo
 			$table->reorder($conditions);
 		}
 
-		// Include the tsj cdmx libros txca plugins for the onSave events.
+		// Include the tsj cdmx libros txca ejemplo plugins for the onSave events.
 		JPluginHelper::importPlugin('jtca');
 
 		$result = $dispatcher->trigger('onLejemploBeforeSave', array('com_jtca.lejemplo', &$table, $is_new));

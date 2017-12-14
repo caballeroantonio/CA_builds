@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$ 
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -28,7 +28,7 @@
 
 defined('JPATH_BASE') or die;
 /**
- * Supports an HTML ordering select list for objects in component tsj cdmx libros txca
+ * Supports an HTML ordering select list for objects in component tsj cdmx libros txca ejemplo
  *
  */
 class JFormFieldJtCaOrdering extends JFormField

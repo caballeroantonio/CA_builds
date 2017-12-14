@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -32,6 +32,50 @@ JHtml::_('behavior.keepalive');
 
 function getFields(){
     $fields = array();
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'Órgano',
+        'FIELD_CODE_NAME' => 'id_organo',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 18,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_ORGANO
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) DEFAULT NULL Órgano
+
+                FIELD_NAME_LATEX=\'Organo
+                FIELD_CODE_NAME_LATEX=id\_organo
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['id_organo'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'Secretaría',
+        'FIELD_CODE_NAME' => 'id_secretaria',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 18,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) DEFAULT NULL Secretaría
+
+                FIELD_NAME_LATEX=Secretar\'i{}a
+                FIELD_CODE_NAME_LATEX=id\_secretaria
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['id_secretaria'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'Año j.',
@@ -255,6 +299,28 @@ function getFields(){
     $fields['my_var255'] = $field;
     //{OBJECT_FIELD}
     $field = array(
+        'FIELD_NAME' => 'txt_my_suggest',
+        'FIELD_CODE_NAME' => 'txt_my_suggest',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 40,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=TXT_MY_SUGGEST
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(255) DEFAULT NULL txt_my_suggest
+
+                FIELD_NAME_LATEX=txt\_my\_suggest
+                FIELD_CODE_NAME_LATEX=txt\_my\_suggest
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['txt_my_suggest'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
         'FIELD_NAME' => 'my multiline',
         'FIELD_CODE_NAME' => 'my_multiline',
         'FIELD_DESCRIPTION' => '<p>@ToDo  cambiar el sql que pone TEXT(255)</p>',//<p>@ToDo  cambiar el sql que pone TEXT(255)</p>
@@ -325,26 +391,26 @@ function getFields(){
     $fields['my_ref'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'my person',
-        'FIELD_CODE_NAME' => 'my_person',
-        'FIELD_DESCRIPTION' => '<p>@ToDo buscar cómo implementar el fieldset person</p>',//<p>@ToDo buscar cómo implementar el fieldset person</p>
-        'FIELDTYPE_ID' => 1,
+        'FIELD_NAME' => 'id_my_suggest',
+        'FIELD_CODE_NAME' => 'id_my_suggest',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 40,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=MY_PERSON
-                FIELD_INTRO=<p>@ToDo buscar cómo implementar el fieldset person</p>
+                FIELD_CODE_NAME_UPPER=ID_MY_SUGGEST
+                FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(255) DEFAULT NULL my person
+                FIELD_DB=`` INT(10) DEFAULT NULL id_my_suggest
 
-                FIELD_NAME_LATEX=my person
-                FIELD_CODE_NAME_LATEX=my\_person
-                FIELD_DBCOMMENT_LATEX=@ToDo buscar c\'omo implementar el fieldset person
+                FIELD_NAME_LATEX=id\_my\_suggest
+                FIELD_CODE_NAME_LATEX=id\_my\_suggest
+                FIELD_DBCOMMENT_LATEX=
 
 
     */
-    $fields['my_person'] = $field;
+    $fields['id_my_suggest'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'my NFempleado',
@@ -377,26 +443,49 @@ function getFields(){
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'my Fexterna',
-        'FIELD_CODE_NAME' => 'my_Fexterna2',
+        'FIELD_CODE_NAME' => 'my_fexterna',
         'FIELD_DESCRIPTION' => '<p>@ToDo debieran ser 2 campos int, uno para huella y otro para firma</p>
 <pre id="line1"><br /><br />    `my\_fexterna` INT NULL COMMENT 'id\_firma Firma externa',<br />    INDEX `c3\_14\_idx` (`my\_fexterna` ASC),<br />    CONSTRAINT `c3\_14`<br />        FOREIGN KEY (`my\_fexterna`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE,<br />    `my\_fexternah` INT NULL COMMENT 'id\_huella Firma externa',<br />    INDEX `c3\_14h\_idx` (`my\_fexternah` ASC),<br />    CONSTRAINT `c3\_14h`<br />        FOREIGN KEY (`my\_fexternah`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE <br />        , </pre>',//<p>@ToDo debieran ser 2 campos int, uno para huella y otro para firma</p><br/><pre id=&quot;line1&quot;><br /><br />    `my\_fexterna` INT NULL COMMENT 'id\_firma Firma externa',<br />    INDEX `c3\_14\_idx` (`my\_fexterna` ASC),<br />    CONSTRAINT `c3\_14`<br />        FOREIGN KEY (`my\_fexterna`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE,<br />    `my\_fexternah` INT NULL COMMENT 'id\_huella Firma externa',<br />    INDEX `c3\_14h\_idx` (`my\_fexternah` ASC),<br />    CONSTRAINT `c3\_14h`<br />        FOREIGN KEY (`my\_fexternah`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE <br />        , </pre>
         'FIELDTYPE_ID' => 34,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=MY_FEXTERNA2
+                FIELD_CODE_NAME_UPPER=MY_FEXTERNA
                 FIELD_INTRO=<p>@ToDo debieran ser 2 campos int, uno para huella y otro para firma</p><br/><pre id=&quot;line1&quot;><br /><br />    `my\_fexterna` INT NULL COMMENT 'id\_firma Firma externa',<br />    INDEX `c3\_14\_idx` (`my\_fexterna` ASC),<br />    CONSTRAINT `c3\_14`<br />        FOREIGN KEY (`my\_fexterna`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE,<br />    `my\_fexternah` INT NULL COMMENT 'id\_huella Firma externa',<br />    INDEX `c3\_14h\_idx` (`my\_fexternah` ASC),<br />    CONSTRAINT `c3\_14h`<br />        FOREIGN KEY (`my\_fexternah`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE <br />        , </pre>
                 FIELD_DESCRIPTION_INI=
 
                 FIELD_DB=`` INT(10) DEFAULT NULL my Fexterna
 
                 FIELD_NAME_LATEX=my Fexterna
-                FIELD_CODE_NAME_LATEX=my\_Fexterna2
+                FIELD_CODE_NAME_LATEX=my\_fexterna
                 FIELD_DBCOMMENT_LATEX=@ToDo debieran ser 2 campos int, uno para huella y otro para firma    `my\textbackslash \textbackslash \_fexterna` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_firma Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexterna` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexterna`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE,    `my\textbackslash \textbackslash \_fexternah` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_huella Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14h\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexternah` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14h`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexternah`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE         , 
 
 
     */
-    $fields['my_Fexterna2'] = $field;
+    $fields['my_fexterna'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'my Hexterna',
+        'FIELD_CODE_NAME' => 'my_hexterna',
+        'FIELD_DESCRIPTION' => '<p>@ToDo debieran ser 2 campos int, uno para huella y otro para firma</p>
+<pre id="line1"><br /><br />    `my\_fexterna` INT NULL COMMENT 'id\_firma Firma externa',<br />    INDEX `c3\_14\_idx` (`my\_fexterna` ASC),<br />    CONSTRAINT `c3\_14`<br />        FOREIGN KEY (`my\_fexterna`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE,<br />    `my\_fexternah` INT NULL COMMENT 'id\_huella Firma externa',<br />    INDEX `c3\_14h\_idx` (`my\_fexternah` ASC),<br />    CONSTRAINT `c3\_14h`<br />        FOREIGN KEY (`my\_fexternah`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE <br />        , </pre>',//<p>@ToDo debieran ser 2 campos int, uno para huella y otro para firma</p><br/><pre id=&quot;line1&quot;><br /><br />    `my\_fexterna` INT NULL COMMENT 'id\_firma Firma externa',<br />    INDEX `c3\_14\_idx` (`my\_fexterna` ASC),<br />    CONSTRAINT `c3\_14`<br />        FOREIGN KEY (`my\_fexterna`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE,<br />    `my\_fexternah` INT NULL COMMENT 'id\_huella Firma externa',<br />    INDEX `c3\_14h\_idx` (`my\_fexternah` ASC),<br />    CONSTRAINT `c3\_14h`<br />        FOREIGN KEY (`my\_fexternah`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE <br />        , </pre>
+        'FIELDTYPE_ID' => 39,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=MY_HEXTERNA
+                FIELD_INTRO=<p>@ToDo debieran ser 2 campos int, uno para huella y otro para firma</p><br/><pre id=&quot;line1&quot;><br /><br />    `my\_fexterna` INT NULL COMMENT 'id\_firma Firma externa',<br />    INDEX `c3\_14\_idx` (`my\_fexterna` ASC),<br />    CONSTRAINT `c3\_14`<br />        FOREIGN KEY (`my\_fexterna`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE,<br />    `my\_fexternah` INT NULL COMMENT 'id\_huella Firma externa',<br />    INDEX `c3\_14h\_idx` (`my\_fexternah` ASC),<br />    CONSTRAINT `c3\_14h`<br />        FOREIGN KEY (`my\_fexternah`)<br />        REFERENCES `jt\_uploadedfiles` (`id`)<br />        ON DELETE RESTRICT<br />        ON UPDATE CASCADE <br />        , </pre>
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) DEFAULT NULL my Hexterna
+
+                FIELD_NAME_LATEX=my Hexterna
+                FIELD_CODE_NAME_LATEX=my\_hexterna
+                FIELD_DBCOMMENT_LATEX=@ToDo debieran ser 2 campos int, uno para huella y otro para firma    `my\textbackslash \textbackslash \_fexterna` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_firma Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexterna` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexterna`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE,    `my\textbackslash \textbackslash \_fexternah` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_huella Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14h\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexternah` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14h`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexternah`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE         , 
+
+
+    */
+    $fields['my_hexterna'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'my parent',
@@ -424,26 +513,92 @@ function getFields(){
     $fields['my_parent'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'my suggest',
-        'FIELD_CODE_NAME' => 'my_suggest',
+        'FIELD_NAME' => 'my person isMoral',
+        'FIELD_CODE_NAME' => 'my_person_isMoral',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 18,
+        'FIELDTYPE_ID' => 41,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=MY_SUGGEST
+                FIELD_CODE_NAME_UPPER=MY_PERSON_ISMORAL
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(255) DEFAULT NULL my suggest
+                FIELD_DB=`` TINYINT(1) NOT NULL DEFAULT '0' my person isMoral
 
-                FIELD_NAME_LATEX=my suggest
-                FIELD_CODE_NAME_LATEX=my\_suggest
+                FIELD_NAME_LATEX=my person isMoral
+                FIELD_CODE_NAME_LATEX=my\_person\_isMoral
                 FIELD_DBCOMMENT_LATEX=
 
 
     */
-    $fields['my_suggest'] = $field;
+    $fields['my_person_isMoral'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'my person paterno',
+        'FIELD_CODE_NAME' => 'my_person_paterno',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 41,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=MY_PERSON_PATERNO
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(255) DEFAULT NULL my person paterno
+
+                FIELD_NAME_LATEX=my person paterno
+                FIELD_CODE_NAME_LATEX=my\_person\_paterno
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['my_person_paterno'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'my person materno',
+        'FIELD_CODE_NAME' => 'my_person_materno',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 41,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=MY_PERSON_MATERNO
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(45) DEFAULT NULL my person materno
+
+                FIELD_NAME_LATEX=my person materno
+                FIELD_CODE_NAME_LATEX=my\_person\_materno
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['my_person_materno'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'my person nombre',
+        'FIELD_CODE_NAME' => 'my_person_nombre',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 41,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=MY_PERSON_NOMBRE
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(45) DEFAULT NULL my person nombre
+
+                FIELD_NAME_LATEX=my person nombre
+                FIELD_CODE_NAME_LATEX=my\_person\_nombre
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['my_person_nombre'] = $field;
     return $fields;
 }
 
@@ -538,7 +693,7 @@ document.id = Ext.documentId;
         var pathImg = 'http://localhost/resources/images/fatcow-hosting-icons-2000/16x16/';
 	
 	Ext.create('Ext.grid.Panel', {
-		title: 'Ejemplos',
+		title: 'Libro De Ejemplo',
 		store: Ext.data.StoreManager.lookup('simpsonsStore'),
 		columns: [
                     

@@ -1,5 +1,5 @@
 -- @version 		$Id:$
--- @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+-- @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
 -- @author			caballeroantonio (caballeroantonio.com)
 -- @package			com_jtca
 -- @subpackage		com_jtca.admin
@@ -23,12 +23,14 @@
 -- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 -- --------------------------------------------------------
 --
--- Table structure for table `#__jtca_lejemplos`
+-- Table structure for table `jt_lejemplos`
 --
 
-#DROP TABLE IF EXISTS `#__jtca_lejemplos`;
-CREATE TABLE IF NOT EXISTS `#__jtca_lejemplos` (
+#DROP TABLE IF EXISTS `jt_lejemplos`;
+CREATE TABLE IF NOT EXISTS `jt_lejemplos` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
+  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
   `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
   `my_boolean` TINYINT(1) DEFAULT NULL COMMENT 'my boolean',
   `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
@@ -39,14 +41,19 @@ CREATE TABLE IF NOT EXISTS `#__jtca_lejemplos` (
   `my_var45` VARCHAR(45) DEFAULT NULL COMMENT 'my var45',
   `txt_expediente` VARCHAR(45) DEFAULT NULL COMMENT 'Expediente',
   `my_var255` VARCHAR(255) DEFAULT NULL COMMENT 'my var255',
+  `txt_my_suggest` VARCHAR(255) DEFAULT NULL COMMENT 'txt_my_suggest',
   `my_multiline` TEXT DEFAULT NULL COMMENT 'my multiline',
   `my_ref2` INT(10) DEFAULT NULL COMMENT 'my ref2',
   `my_ref` INT(10) DEFAULT NULL COMMENT 'my ref',
-  `my_person` VARCHAR(255) DEFAULT NULL COMMENT 'my person',
+  `id_my_suggest` INT(10) DEFAULT NULL COMMENT 'id_my_suggest',
   `my_NFempleado` INT(10) DEFAULT NULL COMMENT 'my NFempleado',
-  `my_Fexterna2` INT(10) DEFAULT NULL COMMENT 'my Fexterna',
+  `my_fexterna` INT(10) DEFAULT NULL COMMENT 'my Fexterna',
+  `my_hexterna` INT(10) DEFAULT NULL COMMENT 'my Hexterna',
   `my_parent` INT(10) NOT NULL DEFAULT '0' COMMENT 'my parent',
-  `my_suggest` VARCHAR(255) DEFAULT NULL COMMENT 'my suggest',
+  `my_person_isMoral` TINYINT(1) NOT NULL DEFAULT '0' COMMENT 'my person isMoral',
+  `my_person_paterno` VARCHAR(255) DEFAULT NULL COMMENT 'my person paterno',
+  `my_person_materno` VARCHAR(45) DEFAULT NULL COMMENT 'my person materno',
+  `my_person_nombre` VARCHAR(45) DEFAULT NULL COMMENT 'my person nombre',
   `state` TINYINT(1) NOT NULL DEFAULT '0',
   `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
@@ -64,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `#__jtca_lejemplos` (
 
 
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__jtca_lejemplos`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_lejemplos`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Libro de ejemplo',
 'com_jtca.lejemplo',
@@ -72,5 +79,5 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'jtcaHelperRoute::getlejemploRoute',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lejemplo.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"#__jtca_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"my_ref2","targetTable":null,"targetColumn":"","displayColumn":""},{"sourceColumn":"my_ref","targetTable":"gpcb.jtc_country","targetColumn":"id","displayColumn":"country"},{"sourceColumn":"my_suggest","targetTable":null,"targetColumn":"","displayColumn":""}]}'
+'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lejemplo.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"my_ref2","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"my_ref","targetTable":"gpcb.jtc_country","targetColumn":"id","displayColumn":"country"}]}'
 );

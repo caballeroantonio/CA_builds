@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -59,7 +59,7 @@ class JFormFieldLejemplo extends JFormFieldList
 		$query	= $db->getQuery(true);
 
 		$query->select($db->quoteName('id').' AS value, '.$db->quoteName('name').' AS text');
-		$query->from($db->quoteName('#__jtca_lejemplos').' AS a');
+		$query->from($db->quoteName('jt_lejemplos').' AS a');
 		$query->order('a.ordering');
 		
 		// Get the options.

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- @version 			$Id:$ -->
-<!-- @name			    TSJ CDMX Libros TxCA (Release 1.0.0) -->
+<!-- @name			    TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0) -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
 <!-- @package			com_jtca -->
 <!-- @subpackage		com_jtca.admin -->
@@ -67,10 +67,10 @@
 				XML and be parsed by the installer
 			-->
         <menu img="../media/com_jtca/images/jtca.png"
-              alt="TSJ CDMX Libros TxCA">COM_JTCA</menu>
+              alt="TSJ CDMX Libros TxCA Ejemplo">COM_JTCA</menu>
         <submenu>
             <menu link="option=com_jtca&amp;view=lejemplos" alias="lejemplos" img="../media/com_jtca/images/jtca-lejemplos.png"
-                    alt="TSJ CDMX Libros TxCA/Ejemplos">COM_JTCA_LEJEMPLOS</menu>
+                    alt="TSJ CDMX Libros TxCA Ejemplo/Libro De Ejemplo">COM_JTCA_LEJEMPLOS</menu>
         </submenu>
 
         <files folder="admin">

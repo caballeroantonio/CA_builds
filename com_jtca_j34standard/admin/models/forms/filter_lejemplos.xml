@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- @version 			$Id:$ -->
-<!-- @name			    TSJ CDMX Libros TxCA (Release 1.0.0) -->
+<!-- @name			    TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0) -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
 <!-- @package			com_jtca -->
 <!-- @subpackage		com_jtca.admin -->
@@ -49,7 +49,7 @@
 			onchange="this.form.submit();"
 			query="SELECT `u`.`id` AS `value`, `u`.`name` AS `text`
 			        FROM `#__users` AS `u`
-			        INNER JOIN `#__jtca_lejemplos` AS `a` ON `a`.`created_by` = `u`.`id`
+			        INNER JOIN `jt_lejemplos` AS `a` ON `a`.`created_by` = `u`.`id`
 			        GROUP BY `u`.`id`, `u`.`name`
 			        ORDER BY `u`.`name`"
 			key_field="value"

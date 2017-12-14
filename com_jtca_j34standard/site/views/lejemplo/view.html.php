@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA Ejemplo (Release 1.0.0)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Libro De Ejemplo View class for the TSJ CDMX Libros TxCA component
+ * HTML Libro De Ejemplo View class for the TSJ CDMX Libros TxCA Ejemplo component
  *
  */
 class JtCaViewLejemplo extends JViewLegacy
