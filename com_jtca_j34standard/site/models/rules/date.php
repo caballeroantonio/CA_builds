@@ -28,7 +28,9 @@
 defined('_JEXEC') or die;
  
 // import Joomla! formrule library
-jimport('joomla.form.formrule');
+use Joomla\CMS\Form\Form;
+use Joomla\CMS\Form\FormRule;
+use Joomla\Registry\Registry;
  
 /**
  * Form Rule class for date
@@ -53,7 +55,7 @@ class JFormRuleDate extends JFormRule
 	 *
 	 * @return  boolean  True if the value is valid, false otherwise.
 	 */
-	public function test(&$element, $value, $group = null, &$input = null, &$form = null)
+	public function test(\SimpleXMLElement $element, $value, $group = null, Registry $input = null, Form $form = null)
 	{
 		if(!parent::test($element, $value, $group, $input, $form))
 		{

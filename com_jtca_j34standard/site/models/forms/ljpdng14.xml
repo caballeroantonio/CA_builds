@@ -187,7 +187,7 @@
 			size="22"
 			maxlength="25"
 			format="%Y-%m-%d %H:%M"
-			filter="user_utc"
+			filter="fixed"
 			validate="date"
         >
         </field>  

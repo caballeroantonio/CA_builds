@@ -22,6 +22,20 @@
 -- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY, without even the implied warranty of
 -- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 -- --------------------------------------------------------
+
+#[%%START_CUSTOM_CODE%%]
+INSERT INTO jos_content_types (`type_title`, `type_alias`, `table`, `rules`, `field_mappings`, `router`, `content_history_options`)
+SELECT
+'' AS 'type_title', CONCAT('com_jtca.', l.clave) AS 'type_alias', '' AS 'table', '' AS 'rules', '' AS 'field_mappings', '' AS 'router', '' AS 'content_history_options'
+FROM jtc_libros l
+LEFT JOIN jos_content_types c ON c.type_alias = CONCAT('com_jtca.', l.clave)
+WHERE 1
+AND l.published
+AND l.id_materia
+AND c.type_id IS NULL
+;
+#[%%END_CUSTOM_CODE%%]
+
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Updates to table `jt_ljomf22s`
 --
@@ -2589,7 +2603,7 @@ WHERE `type_alias`='com_jtca.ljpdng18';
 -- Unified Content Model (UCM) Content History Options (CHO) Updates to table `jt_ljomf22s`
 --
 UPDATE `#__content_types` SET 
-`type_title`='LIBRO DE AMPAROS 'LOCOS'',
+`type_title`='LIBRO DE AMPAROS *LOCOS*',
 `table`='{"special":{"dbtable":"jtca_ljjadg18s","key":"id","type":"ljjadg18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
