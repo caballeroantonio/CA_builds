@@ -102,6 +102,14 @@ class JtCaHelper extends JHelperContent
 			$active
 		);
 	
+		$active = $view_name == 'ljoc01s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJOC01S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljoc01s',
+			$view_name == 'ljoc01s',
+			$active
+		);
+	
 		$active = $view_name == 'ljc02s'? true : false;
 		JHtmlSidebar::addEntry(
 			JText::_('COM_JTCA_LJC02S_SUBMENU'),
@@ -126,11 +134,27 @@ class JtCaHelper extends JHelperContent
 			$active
 		);
 	
+		$active = $view_name == 'ljoc03s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJOC03S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljoc03s',
+			$view_name == 'ljoc03s',
+			$active
+		);
+	
 		$active = $view_name == 'ljc04s'? true : false;
 		JHtmlSidebar::addEntry(
 			JText::_('COM_JTCA_LJC04S_SUBMENU'),
 			'index.php?option=com_jtca&view=ljc04s',
 			$view_name == 'ljc04s',
+			$active
+		);
+	
+		$active = $view_name == 'ljoc04s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJOC04S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljoc04s',
+			$view_name == 'ljoc04s',
 			$active
 		);
 	
@@ -142,11 +166,27 @@ class JtCaHelper extends JHelperContent
 			$active
 		);
 	
+		$active = $view_name == 'ljoc05s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJOC05S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljoc05s',
+			$view_name == 'ljoc05s',
+			$active
+		);
+	
 		$active = $view_name == 'ljc06s'? true : false;
 		JHtmlSidebar::addEntry(
 			JText::_('COM_JTCA_LJC06S_SUBMENU'),
 			'index.php?option=com_jtca&view=ljc06s',
 			$view_name == 'ljc06s',
+			$active
+		);
+	
+		$active = $view_name == 'ljoc06s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJOC06S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljoc06s',
+			$view_name == 'ljoc06s',
 			$active
 		);
 	
@@ -158,11 +198,27 @@ class JtCaHelper extends JHelperContent
 			$active
 		);
 	
+		$active = $view_name == 'ljoc07s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJOC07S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljoc07s',
+			$view_name == 'ljoc07s',
+			$active
+		);
+	
 		$active = $view_name == 'ljc08s'? true : false;
 		JHtmlSidebar::addEntry(
 			JText::_('COM_JTCA_LJC08S_SUBMENU'),
 			'index.php?option=com_jtca&view=ljc08s',
 			$view_name == 'ljc08s',
+			$active
+		);
+	
+		$active = $view_name == 'ljoc08s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJOC08S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljoc08s',
+			$view_name == 'ljoc08s',
 			$active
 		);
 	
@@ -174,11 +230,27 @@ class JtCaHelper extends JHelperContent
 			$active
 		);
 	
+		$active = $view_name == 'ljoc09s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJOC09S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljoc09s',
+			$view_name == 'ljoc09s',
+			$active
+		);
+	
 		$active = $view_name == 'ljc10s'? true : false;
 		JHtmlSidebar::addEntry(
 			JText::_('COM_JTCA_LJC10S_SUBMENU'),
 			'index.php?option=com_jtca&view=ljc10s',
 			$view_name == 'ljc10s',
+			$active
+		);
+	
+		$active = $view_name == 'ljoc10s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJOC10S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljoc10s',
+			$view_name == 'ljoc10s',
 			$active
 		);
 	
@@ -190,11 +262,27 @@ class JtCaHelper extends JHelperContent
 			$active
 		);
 	
+		$active = $view_name == 'ljoc11s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJOC11S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljoc11s',
+			$view_name == 'ljoc11s',
+			$active
+		);
+	
 		$active = $view_name == 'ljc12s'? true : false;
 		JHtmlSidebar::addEntry(
 			JText::_('COM_JTCA_LJC12S_SUBMENU'),
 			'index.php?option=com_jtca&view=ljc12s',
 			$view_name == 'ljc12s',
+			$active
+		);
+	
+		$active = $view_name == 'ljoc12s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJOC12S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljoc12s',
+			$view_name == 'ljoc12s',
 			$active
 		);
 	
@@ -206,11 +294,27 @@ class JtCaHelper extends JHelperContent
 			$active
 		);
 	
+		$active = $view_name == 'ljoc13s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJOC13S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljoc13s',
+			$view_name == 'ljoc13s',
+			$active
+		);
+	
 		$active = $view_name == 'ljc14s'? true : false;
 		JHtmlSidebar::addEntry(
 			JText::_('COM_JTCA_LJC14S_SUBMENU'),
 			'index.php?option=com_jtca&view=ljc14s',
 			$view_name == 'ljc14s',
+			$active
+		);
+	
+		$active = $view_name == 'ljoc14s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJOC14S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljoc14s',
+			$view_name == 'ljoc14s',
 			$active
 		);
 	

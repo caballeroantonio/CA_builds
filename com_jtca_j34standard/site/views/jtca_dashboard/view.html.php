@@ -85,6 +85,12 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
                     'desc'=>JText::_('COM_JTCA_LJC01_DESCRIPTION')
                 );
 		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljoc01s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljoc01s',
+                    'text'=>'LIBRO DE GOBIERNO',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJOC01_DESCRIPTION')
+                );
+		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc02s&layout=gridpanel&tmpl=component',
                     'object'=>'ljc02s',
                     'text'=>'LIBRO DE INGRESOS DE VALORES',//JText::_('JTCA_COMPONENT_WIZARD'),
@@ -103,10 +109,22 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
                     'desc'=>JText::_('COM_JTCA_LJC03_DESCRIPTION')
                 );
 		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljoc03s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljoc03s',
+                    'text'=>'LIBRO DE CERTIFICADO DE DEPÓSITOS DE INGRESOS Y EG',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJOC03_DESCRIPTION')
+                );
+		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc04s&layout=gridpanel&tmpl=component',
                     'object'=>'ljc04s',
                     'text'=>'LIBRO DE REGISTRO DE PROMOCIONES',//JText::_('JTCA_COMPONENT_WIZARD'),
                     'desc'=>JText::_('COM_JTCA_LJC04_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljoc04s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljoc04s',
+                    'text'=>'LIBRO DE PROMOCIONES',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJOC04_DESCRIPTION')
                 );
 		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc05s&layout=gridpanel&tmpl=component',
@@ -115,10 +133,22 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
                     'desc'=>JText::_('COM_JTCA_LJC05_DESCRIPTION')
                 );
 		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljoc05s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljoc05s',
+                    'text'=>'LIBRO DE SENTENCIAS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJOC05_DESCRIPTION')
+                );
+		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc06s&layout=gridpanel&tmpl=component',
                     'object'=>'ljc06s',
                     'text'=>'LIBRO DE RECURSOS DE APELACIÓN',//JText::_('JTCA_COMPONENT_WIZARD'),
                     'desc'=>JText::_('COM_JTCA_LJC06_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljoc06s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljoc06s',
+                    'text'=>'LIBRO DE EXHORTOS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJOC06_DESCRIPTION')
                 );
 		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc07s&layout=gridpanel&tmpl=component',
@@ -127,10 +157,22 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
                     'desc'=>JText::_('COM_JTCA_LJC07_DESCRIPTION')
                 );
 		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljoc07s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljoc07s',
+                    'text'=>'LIBRO DE OFICIOS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJOC07_DESCRIPTION')
+                );
+		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc08s&layout=gridpanel&tmpl=component',
                     'object'=>'ljc08s',
                     'text'=>'LIBRO DE OFICIOS',//JText::_('JTCA_COMPONENT_WIZARD'),
                     'desc'=>JText::_('COM_JTCA_LJC08_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljoc08s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljoc08s',
+                    'text'=>'LIBRO DE ACTUARIOS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJOC08_DESCRIPTION')
                 );
 		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc09s&layout=gridpanel&tmpl=component',
@@ -139,10 +181,22 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
                     'desc'=>JText::_('COM_JTCA_LJC09_DESCRIPTION')
                 );
 		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljoc09s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljoc09s',
+                    'text'=>'LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTIC',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJOC09_DESCRIPTION')
+                );
+		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc10s&layout=gridpanel&tmpl=component',
                     'object'=>'ljc10s',
                     'text'=>'LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTIC',//JText::_('JTCA_COMPONENT_WIZARD'),
                     'desc'=>JText::_('COM_JTCA_LJC10_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljoc10s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljoc10s',
+                    'text'=>'LIBRO DE AMPAROS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJOC10_DESCRIPTION')
                 );
 		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc11s&layout=gridpanel&tmpl=component',
@@ -151,10 +205,22 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
                     'desc'=>JText::_('COM_JTCA_LJC11_DESCRIPTION')
                 );
 		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljoc11s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljoc11s',
+                    'text'=>'LIBRO DE CONTROL DE MULTAS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJOC11_DESCRIPTION')
+                );
+		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc12s&layout=gridpanel&tmpl=component',
                     'object'=>'ljc12s',
                     'text'=>'LIBRO DE REGISTRO DE AMPAROS',//JText::_('JTCA_COMPONENT_WIZARD'),
                     'desc'=>JText::_('COM_JTCA_LJC12_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljoc12s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljoc12s',
+                    'text'=>'AGENDA DE AUDIENCIAS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJOC12_DESCRIPTION')
                 );
 		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc13s&layout=gridpanel&tmpl=component',
@@ -163,10 +229,22 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
                     'desc'=>JText::_('COM_JTCA_LJC13_DESCRIPTION')
                 );
 		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljoc13s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljoc13s',
+                    'text'=>'LIBRO DE NOTARIOS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJOC13_DESCRIPTION')
+                );
+		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc14s&layout=gridpanel&tmpl=component',
                     'object'=>'ljc14s',
                     'text'=>'LIBRO DE CONTROL DE MULTAS',//JText::_('JTCA_COMPONENT_WIZARD'),
                     'desc'=>JText::_('COM_JTCA_LJC14_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljoc14s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljoc14s',
+                    'text'=>'LIBRO DE FIANZAS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJOC14_DESCRIPTION')
                 );
 		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc16s&layout=gridpanel&tmpl=component',

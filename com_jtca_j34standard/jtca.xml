@@ -101,34 +101,60 @@
         <submenu>
             <menu link="option=com_jtca&amp;view=ljc01s" alias="ljc01s" img="../media/com_jtca/images/jtca-ljc01s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJC01S</menu>
+            <menu link="option=com_jtca&amp;view=ljoc01s" alias="ljoc01s" img="../media/com_jtca/images/jtca-ljoc01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJOC01S</menu>
             <menu link="option=com_jtca&amp;view=ljc02s" alias="ljc02s" img="../media/com_jtca/images/jtca-ljc02s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE INGRESOS DE VALORES">COM_JTCA_LJC02S</menu>
             <menu link="option=com_jtca&amp;view=lejemplos" alias="lejemplos" img="../media/com_jtca/images/jtca-lejemplos.png"
                     alt="TSJ CDMX Libros TxCA/Libro De Ejemplo">COM_JTCA_LEJEMPLOS</menu>
             <menu link="option=com_jtca&amp;view=ljc03s" alias="ljc03s" img="../media/com_jtca/images/jtca-ljc03s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE EGRESOS DE VALORES">COM_JTCA_LJC03S</menu>
+            <menu link="option=com_jtca&amp;view=ljoc03s" alias="ljoc03s" img="../media/com_jtca/images/jtca-ljoc03s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CERTIFICADO DE DEPÓSITOS DE INGRESOS Y EG">COM_JTCA_LJOC03S</menu>
             <menu link="option=com_jtca&amp;view=ljc04s" alias="ljc04s" img="../media/com_jtca/images/jtca-ljc04s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE PROMOCIONES">COM_JTCA_LJC04S</menu>
+            <menu link="option=com_jtca&amp;view=ljoc04s" alias="ljoc04s" img="../media/com_jtca/images/jtca-ljoc04s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE PROMOCIONES">COM_JTCA_LJOC04S</menu>
             <menu link="option=com_jtca&amp;view=ljc05s" alias="ljc05s" img="../media/com_jtca/images/jtca-ljc05s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA SENTENCIA">COM_JTCA_LJC05S</menu>
+            <menu link="option=com_jtca&amp;view=ljoc05s" alias="ljoc05s" img="../media/com_jtca/images/jtca-ljoc05s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE SENTENCIAS">COM_JTCA_LJOC05S</menu>
             <menu link="option=com_jtca&amp;view=ljc06s" alias="ljc06s" img="../media/com_jtca/images/jtca-ljc06s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE RECURSOS DE APELACIÓN">COM_JTCA_LJC06S</menu>
+            <menu link="option=com_jtca&amp;view=ljoc06s" alias="ljoc06s" img="../media/com_jtca/images/jtca-ljoc06s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EXHORTOS">COM_JTCA_LJOC06S</menu>
             <menu link="option=com_jtca&amp;view=ljc07s" alias="ljc07s" img="../media/com_jtca/images/jtca-ljc07s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE EXHORTOS">COM_JTCA_LJC07S</menu>
+            <menu link="option=com_jtca&amp;view=ljoc07s" alias="ljoc07s" img="../media/com_jtca/images/jtca-ljoc07s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LJOC07S</menu>
             <menu link="option=com_jtca&amp;view=ljc08s" alias="ljc08s" img="../media/com_jtca/images/jtca-ljc08s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LJC08S</menu>
+            <menu link="option=com_jtca&amp;view=ljoc08s" alias="ljoc08s" img="../media/com_jtca/images/jtca-ljoc08s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIOS">COM_JTCA_LJOC08S</menu>
             <menu link="option=com_jtca&amp;view=ljc09s" alias="ljc09s" img="../media/com_jtca/images/jtca-ljc09s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIOS">COM_JTCA_LJC09S</menu>
+            <menu link="option=com_jtca&amp;view=ljoc09s" alias="ljoc09s" img="../media/com_jtca/images/jtca-ljoc09s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTIC">COM_JTCA_LJOC09S</menu>
             <menu link="option=com_jtca&amp;view=ljc10s" alias="ljc10s" img="../media/com_jtca/images/jtca-ljc10s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTIC">COM_JTCA_LJC10S</menu>
+            <menu link="option=com_jtca&amp;view=ljoc10s" alias="ljoc10s" img="../media/com_jtca/images/jtca-ljoc10s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE AMPAROS">COM_JTCA_LJOC10S</menu>
             <menu link="option=com_jtca&amp;view=ljc11s" alias="ljc11s" img="../media/com_jtca/images/jtca-ljc11s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO PARA NOTARIOS">COM_JTCA_LJC11S</menu>
+            <menu link="option=com_jtca&amp;view=ljoc11s" alias="ljoc11s" img="../media/com_jtca/images/jtca-ljoc11s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE MULTAS">COM_JTCA_LJOC11S</menu>
             <menu link="option=com_jtca&amp;view=ljc12s" alias="ljc12s" img="../media/com_jtca/images/jtca-ljc12s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE AMPAROS">COM_JTCA_LJC12S</menu>
+            <menu link="option=com_jtca&amp;view=ljoc12s" alias="ljoc12s" img="../media/com_jtca/images/jtca-ljoc12s.png"
+                    alt="TSJ CDMX Libros TxCA/AGENDA DE AUDIENCIAS">COM_JTCA_LJOC12S</menu>
             <menu link="option=com_jtca&amp;view=ljc13s" alias="ljc13s" img="../media/com_jtca/images/jtca-ljc13s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE FIANZAS">COM_JTCA_LJC13S</menu>
+            <menu link="option=com_jtca&amp;view=ljoc13s" alias="ljoc13s" img="../media/com_jtca/images/jtca-ljoc13s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE NOTARIOS">COM_JTCA_LJOC13S</menu>
             <menu link="option=com_jtca&amp;view=ljc14s" alias="ljc14s" img="../media/com_jtca/images/jtca-ljc14s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE MULTAS">COM_JTCA_LJC14S</menu>
+            <menu link="option=com_jtca&amp;view=ljoc14s" alias="ljoc14s" img="../media/com_jtca/images/jtca-ljoc14s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE FIANZAS">COM_JTCA_LJOC14S</menu>
             <menu link="option=com_jtca&amp;view=ljc16s" alias="ljc16s" img="../media/com_jtca/images/jtca-ljc16s.png"
                     alt="TSJ CDMX Libros TxCA/AGENDA DE AUDIENCIAS">COM_JTCA_LJC16S</menu>
             <menu link="option=com_jtca&amp;view=ljc17s" alias="ljc17s" img="../media/com_jtca/images/jtca-ljc17s.png"
@@ -222,6 +248,17 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljoc01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOC01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOC01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc02_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
@@ -255,12 +292,34 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljoc03_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOC03S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOC03S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc04_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC04S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC04S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljoc04_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOC04S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOC04S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -277,12 +336,34 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljoc05_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOC05S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOC05S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc06_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC06S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC06S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljoc06_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOC06S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOC06S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -299,12 +380,34 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljoc07_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOC07S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOC07S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc08_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC08S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC08S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljoc08_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOC08S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOC08S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -321,12 +424,34 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljoc09_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOC09S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOC09S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc10_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC10S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC10S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljoc10_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOC10S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOC10S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -343,12 +468,34 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljoc11_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOC11S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOC11S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc12_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC12S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC12S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljoc12_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOC12S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOC12S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -365,12 +512,34 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljoc13_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOC13S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOC13S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc14_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC14S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC14S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljoc14_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOC14S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOC14S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>

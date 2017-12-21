@@ -67,6 +67,36 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
+	 * @param	integer	The route of the LIBRO DE GOBIERNO
+	 */
+	public static function getLjoc01Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'ljoc01'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=ljoc01&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=ljoc01&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
 	 * @param	integer	The route of the LIBRO DE INGRESOS DE VALORES
 	 */
 	public static function getLjc02Route($id, $layout = 'default', $keep_item_id = false)
@@ -157,6 +187,36 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
+	 * @param	integer	The route of the LIBRO DE CERTIFICADO DE DEPÓSITOS DE INGRESOS Y EGRESOS
+	 */
+	public static function getLjoc03Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'ljoc03'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=ljoc03&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=ljoc03&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
 	 * @param	integer	The route of the LIBRO DE REGISTRO DE PROMOCIONES
 	 */
 	public static function getLjc04Route($id, $layout = 'default', $keep_item_id = false)
@@ -187,6 +247,36 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
+	 * @param	integer	The route of the LIBRO DE PROMOCIONES
+	 */
+	public static function getLjoc04Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'ljoc04'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=ljoc04&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=ljoc04&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
 	 * @param	integer	The route of the LIBRO DE TURNO PARA SENTENCIA
 	 */
 	public static function getLjc05Route($id, $layout = 'default', $keep_item_id = false)
@@ -206,6 +296,36 @@ abstract class JtCaHelperRoute
 		{
 			//Create the link with a layout
 			$link = 'index.php?option=com_jtca&view=ljc05&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the LIBRO DE SENTENCIAS
+	 */
+	public static function getLjoc05Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'ljoc05'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=ljoc05&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=ljoc05&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -249,6 +369,36 @@ abstract class JtCaHelperRoute
 	/**
 	 * @param	integer	The route of the LIBRO DE EXHORTOS
 	 */
+	public static function getLjoc06Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'ljoc06'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=ljoc06&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=ljoc06&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the LIBRO DE EXHORTOS
+	 */
 	public static function getLjc07Route($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
@@ -266,6 +416,36 @@ abstract class JtCaHelperRoute
 		{
 			//Create the link with a layout
 			$link = 'index.php?option=com_jtca&view=ljc07&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the LIBRO DE OFICIOS
+	 */
+	public static function getLjoc07Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'ljoc07'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=ljoc07&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=ljoc07&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -309,6 +489,36 @@ abstract class JtCaHelperRoute
 	/**
 	 * @param	integer	The route of the LIBRO DE ACTUARIOS
 	 */
+	public static function getLjoc08Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'ljoc08'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=ljoc08&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=ljoc08&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the LIBRO DE ACTUARIOS
+	 */
 	public static function getLjc09Route($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
@@ -326,6 +536,36 @@ abstract class JtCaHelperRoute
 		{
 			//Create the link with a layout
 			$link = 'index.php?option=com_jtca&view=ljc09&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA
+	 */
+	public static function getLjoc09Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'ljoc09'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=ljoc09&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=ljoc09&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -367,6 +607,36 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
+	 * @param	integer	The route of the LIBRO DE AMPAROS
+	 */
+	public static function getLjoc10Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'ljoc10'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=ljoc10&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=ljoc10&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
 	 * @param	integer	The route of the LIBRO DE REGISTRO PARA NOTARIOS
 	 */
 	public static function getLjc11Route($id, $layout = 'default', $keep_item_id = false)
@@ -386,6 +656,36 @@ abstract class JtCaHelperRoute
 		{
 			//Create the link with a layout
 			$link = 'index.php?option=com_jtca&view=ljc11&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the LIBRO DE CONTROL DE MULTAS
+	 */
+	public static function getLjoc11Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'ljoc11'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=ljoc11&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=ljoc11&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -427,6 +727,36 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
+	 * @param	integer	The route of the AGENDA DE AUDIENCIAS
+	 */
+	public static function getLjoc12Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'ljoc12'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=ljoc12&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=ljoc12&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
 	 * @param	integer	The route of the LIBRO DE CONTROL DE FIANZAS
 	 */
 	public static function getLjc13Route($id, $layout = 'default', $keep_item_id = false)
@@ -457,6 +787,36 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
+	 * @param	integer	The route of the LIBRO DE NOTARIOS
+	 */
+	public static function getLjoc13Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'ljoc13'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=ljoc13&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=ljoc13&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
 	 * @param	integer	The route of the LIBRO DE CONTROL DE MULTAS
 	 */
 	public static function getLjc14Route($id, $layout = 'default', $keep_item_id = false)
@@ -476,6 +836,36 @@ abstract class JtCaHelperRoute
 		{
 			//Create the link with a layout
 			$link = 'index.php?option=com_jtca&view=ljc14&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the LIBRO DE FIANZAS
+	 */
+	public static function getLjoc14Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'ljoc14'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=ljoc14&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=ljoc14&layout='.$layout.'&id='. $id;
 		}
 
 		
