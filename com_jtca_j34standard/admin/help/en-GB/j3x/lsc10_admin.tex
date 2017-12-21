@@ -1,0 +1,40 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	id\_secretaria & INT(10) & Ponencia: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	id\_expediente & INT(10) & N\'UMERO TOCA: \tabularnewline\hline 
+	field199 & DATETIME & FECHA DE ENTREGA: \tabularnewline\hline 
+	field200 & DATETIME & FECHA DEL AUTO A DILIGENCIAR: \tabularnewline\hline 
+	field201 & VARCHAR(255) & LUGAR DONDE DEBE ACTUARSE: \tabularnewline\hline 
+	field202 & DATETIME & FECHA DE LA DILIGENCIA: \tabularnewline\hline 
+	field203 & DATETIME & FECHA DE LA DEVOLUCI\'ON: \tabularnewline\hline 
+	field204 & TEXT & OBSERVACIONES: \tabularnewline\hline 

@@ -1,0 +1,43 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	id\_secretaria & INT(10) & Secretar\'i{}a: \tabularnewline\hline 
+	field1 & VARCHAR(45) & AV PREVIA: \tabularnewline\hline 
+	fh\_recepcion & DATETIME & FECHA Y HORA DE RECEPCI\'ON: \tabularnewline\hline 
+	field6 & VARCHAR(45) & DELITOS: \tabularnewline\hline 
+	field7 & VARCHAR(45) & TIPO DE LIBERTAD: \tabularnewline\hline 
+	field9\_isMoral & TINYINT(1) & PERSONA QUE EMITE LIBERTAD (isMoral): \tabularnewline\hline 
+	field9\_paterno & VARCHAR(255) & PERSONA QUE EMITE LIBERTAD (paterno): \tabularnewline\hline 
+	field9\_materno & VARCHAR(45) & PERSONA QUE EMITE LIBERTAD (materno): \tabularnewline\hline 
+	field9\_nombre & VARCHAR(45) & PERSONA QUE EMITE LIBERTAD (nombre): \tabularnewline\hline 
+	field10 & VARCHAR(45) & CARGO: \tabularnewline\hline 
+	field11 & VARCHAR(45) & CARPETA: \tabularnewline\hline 

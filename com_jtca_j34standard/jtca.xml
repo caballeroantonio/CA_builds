@@ -99,74 +99,506 @@
         <menu img="../media/com_jtca/images/jtca.png"
               alt="TSJ CDMX Libros TxCA">COM_JTCA</menu>
         <submenu>
+            <menu link="option=com_jtca&amp;view=lsc01s" alias="lsc01s" img="../media/com_jtca/images/jtca-lsc01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE REGISTRO DE SENTENCIAS -TURNO- (OFICIAL">COM_JTCA_LSC01S</menu>
             <menu link="option=com_jtca&amp;view=ljc01s" alias="ljc01s" img="../media/com_jtca/images/jtca-ljc01s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJC01S</menu>
+            <menu link="option=com_jtca&amp;view=ljf01s" alias="ljf01s" img="../media/com_jtca/images/jtca-ljf01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJF01S</menu>
+            <menu link="option=com_jtca&amp;view=ljp01s" alias="ljp01s" img="../media/com_jtca/images/jtca-ljp01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJP01S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm01s" alias="ljccm01s" img="../media/com_jtca/images/jtca-ljccm01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJCCM01S</menu>
             <menu link="option=com_jtca&amp;view=ljoc01s" alias="ljoc01s" img="../media/com_jtca/images/jtca-ljoc01s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJOC01S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng01s" alias="ljpdng01s" img="../media/com_jtca/images/jtca-ljpdng01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJPDNG01S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes01s" alias="ljpes01s" img="../media/com_jtca/images/jtca-ljpes01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJPES01S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadng01s" alias="ljjadng01s" img="../media/com_jtca/images/jtca-ljjadng01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJJADNG01S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg01s" alias="ljjadg01s" img="../media/com_jtca/images/jtca-ljjadg01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJJADG01S</menu>
+            <menu link="option=com_jtca&amp;view=lcp01s" alias="lcp01s" img="../media/com_jtca/images/jtca-lcp01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES CON D">COM_JTCA_LCP01S</menu>
+            <menu link="option=com_jtca&amp;view=lcp02s" alias="lcp02s" img="../media/com_jtca/images/jtca-lcp02s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES SIN D">COM_JTCA_LCP02S</menu>
+            <menu link="option=com_jtca&amp;view=lcp03s" alias="lcp03s" img="../media/com_jtca/images/jtca-lcp03s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO DE REMISIONES CON DETENIDO DE JUZGA">COM_JTCA_LCP03S</menu>
+            <menu link="option=com_jtca&amp;view=lcp04s" alias="lcp04s" img="../media/com_jtca/images/jtca-lcp04s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES CON D">COM_JTCA_LCP04S</menu>
+            <menu link="option=com_jtca&amp;view=lcp05s" alias="lcp05s" img="../media/com_jtca/images/jtca-lcp05s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES SIN D">COM_JTCA_LCP05S</menu>
+            <menu link="option=com_jtca&amp;view=lcp06s" alias="lcp06s" img="../media/com_jtca/images/jtca-lcp06s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA INCOMPETENCIAS ADOLESCENTES">COM_JTCA_LCP06S</menu>
+            <menu link="option=com_jtca&amp;view=lcp07s" alias="lcp07s" img="../media/com_jtca/images/jtca-lcp07s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA EXCUSAS DE ADOLESCENTES">COM_JTCA_LCP07S</menu>
+            <menu link="option=com_jtca&amp;view=lcp09s" alias="lcp09s" img="../media/com_jtca/images/jtca-lcp09s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ETAPA DE EJECUCIÓN PARA ADOLESCENTES">COM_JTCA_LCP09S</menu>
+            <menu link="option=com_jtca&amp;view=lcp10s" alias="lcp10s" img="../media/com_jtca/images/jtca-lcp10s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO DE BENEFICIOS PENITENCIARIOS.">COM_JTCA_LCP10S</menu>
+            <menu link="option=com_jtca&amp;view=lcp18s" alias="lcp18s" img="../media/com_jtca/images/jtca-lcp18s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA CONSIGNACIONES CON DETENIDO PR">COM_JTCA_LCP18S</menu>
+            <menu link="option=com_jtca&amp;view=lcp19s" alias="lcp19s" img="../media/com_jtca/images/jtca-lcp19s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA CONSIGNACIONES SIN DETENIDO PR">COM_JTCA_LCP19S</menu>
+            <menu link="option=com_jtca&amp;view=lcp20s" alias="lcp20s" img="../media/com_jtca/images/jtca-lcp20s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA INCOMPETENCIAS PRIMERA INSTANC">COM_JTCA_LCP20S</menu>
+            <menu link="option=com_jtca&amp;view=lcp21s" alias="lcp21s" img="../media/com_jtca/images/jtca-lcp21s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO DE EXCUSAS PARA JUZGADOS DE PRIMERA">COM_JTCA_LCP21S</menu>
+            <menu link="option=com_jtca&amp;view=lcp22s" alias="lcp22s" img="../media/com_jtca/images/jtca-lcp22s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ORDENES DE ARRAIGOS Y DE CATEOS PRIMERA I">COM_JTCA_LCP22S</menu>
+            <menu link="option=com_jtca&amp;view=lcp23s" alias="lcp23s" img="../media/com_jtca/images/jtca-lcp23s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ORDENES DE APREHENSIÓN, REAPREHENSION Y T">COM_JTCA_LCP23S</menu>
+            <menu link="option=com_jtca&amp;view=lcp24s" alias="lcp24s" img="../media/com_jtca/images/jtca-lcp24s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE LA LEY DE ACCESO A LAS MUJERE">COM_JTCA_LCP24S</menu>
+            <menu link="option=com_jtca&amp;view=lcp25s" alias="lcp25s" img="../media/com_jtca/images/jtca-lcp25s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA CONSIGNACIONES CON DETENIDO DE">COM_JTCA_LCP25S</menu>
+            <menu link="option=com_jtca&amp;view=lcp26s" alias="lcp26s" img="../media/com_jtca/images/jtca-lcp26s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA CONSIGNACIONES SIN DETENIDO DE">COM_JTCA_LCP26S</menu>
+            <menu link="option=com_jtca&amp;view=lcp27s" alias="lcp27s" img="../media/com_jtca/images/jtca-lcp27s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA INCOMPETENCIAS DELITOS NO GRAV">COM_JTCA_LCP27S</menu>
+            <menu link="option=com_jtca&amp;view=lcp28s" alias="lcp28s" img="../media/com_jtca/images/jtca-lcp28s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO DE EXCUSAS PARA JUZGADOS  DE DELITO">COM_JTCA_LCP28S</menu>
+            <menu link="option=com_jtca&amp;view=lcp29s" alias="lcp29s" img="../media/com_jtca/images/jtca-lcp29s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ORDENES PARA ARRAIGOS Y CATEOS DELITOS NO">COM_JTCA_LCP29S</menu>
+            <menu link="option=com_jtca&amp;view=lcp11s" alias="lcp11s" img="../media/com_jtca/images/jtca-lcp11s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE OFICIOS.">COM_JTCA_LCP11S</menu>
+            <menu link="option=com_jtca&amp;view=lcp12s" alias="lcp12s" img="../media/com_jtca/images/jtca-lcp12s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE TURNO DE SALAS PARA JUZGADOS ORALES.">COM_JTCA_LCP12S</menu>
+            <menu link="option=com_jtca&amp;view=lcp13s" alias="lcp13s" img="../media/com_jtca/images/jtca-lcp13s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE EXPEDIENTILLOS DE JUZGADOS DE EJECUCIÓN">COM_JTCA_LCP13S</menu>
+            <menu link="option=com_jtca&amp;view=lcp14s" alias="lcp14s" img="../media/com_jtca/images/jtca-lcp14s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE CUMPLIMIENTO DE EJECUTORIAS PARA JUZGAD">COM_JTCA_LCP14S</menu>
+            <menu link="option=com_jtca&amp;view=lcp15s" alias="lcp15s" img="../media/com_jtca/images/jtca-lcp15s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE OFICIOS DE AMPAROS DE TRAMITE.">COM_JTCA_LCP15S</menu>
+            <menu link="option=com_jtca&amp;view=lcp16s" alias="lcp16s" img="../media/com_jtca/images/jtca-lcp16s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE  OFICIOS DE AMPAROS DE CONOCIMIENTO.">COM_JTCA_LCP16S</menu>
+            <menu link="option=com_jtca&amp;view=lcp30s" alias="lcp30s" img="../media/com_jtca/images/jtca-lcp30s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE LIBERTADES JUZGADOS DE PRIMERA INSTANCI">COM_JTCA_LCP30S</menu>
+            <menu link="option=com_jtca&amp;view=lcp31s" alias="lcp31s" img="../media/com_jtca/images/jtca-lcp31s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE LIBERTADES JUZGADOS DE DELITOS NO GRAVE">COM_JTCA_LCP31S</menu>
+            <menu link="option=com_jtca&amp;view=lcp32s" alias="lcp32s" img="../media/com_jtca/images/jtca-lcp32s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE LIBERTADES JUZGADOS DE EJECUCIÓN DE SEN">COM_JTCA_LCP32S</menu>
+            <menu link="option=com_jtca&amp;view=lcp33s" alias="lcp33s" img="../media/com_jtca/images/jtca-lcp33s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE LIBERTADES DE SALAS PENALES">COM_JTCA_LCP33S</menu>
+            <menu link="option=com_jtca&amp;view=lcp34s" alias="lcp34s" img="../media/com_jtca/images/jtca-lcp34s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE LIBERTADES JUZGADOS DE ADOLESCENTES">COM_JTCA_LCP34S</menu>
+            <menu link="option=com_jtca&amp;view=lcp35s" alias="lcp35s" img="../media/com_jtca/images/jtca-lcp35s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE LIBERTADES DE SALAS DE ADOLESCENTES">COM_JTCA_LCP35S</menu>
+            <menu link="option=com_jtca&amp;view=lcp36s" alias="lcp36s" img="../media/com_jtca/images/jtca-lcp36s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE RETURNO DE ADOLESCENTES">COM_JTCA_LCP36S</menu>
+            <menu link="option=com_jtca&amp;view=lcp39s" alias="lcp39s" img="../media/com_jtca/images/jtca-lcp39s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO DE EXCUSAS PARA JUZGADOS DE JUSTICI">COM_JTCA_LCP39S</menu>
+            <menu link="option=com_jtca&amp;view=lcp40s" alias="lcp40s" img="../media/com_jtca/images/jtca-lcp40s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ORDENES DE DETENCIÓN PARA JUZGADOS DE JUS">COM_JTCA_LCP40S</menu>
+            <menu link="option=com_jtca&amp;view=lcp41s" alias="lcp41s" img="../media/com_jtca/images/jtca-lcp41s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO DE REMISIONES SIN DETENIDO DE JUZGA">COM_JTCA_LCP41S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf01s" alias="ljomf01s" img="../media/com_jtca/images/jtca-ljomf01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJOMF01S</menu>
+            <menu link="option=com_jtca&amp;view=ljemst01s" alias="ljemst01s" img="../media/com_jtca/images/jtca-ljemst01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJEMST01S</menu>
+            <menu link="option=com_jtca&amp;view=lspe01s" alias="lspe01s" img="../media/com_jtca/images/jtca-lspe01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LSPE01S</menu>
+            <menu link="option=com_jtca&amp;view=lspe02s" alias="lspe02s" img="../media/com_jtca/images/jtca-lspe02s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE RESOLUCIONES DE PLANO">COM_JTCA_LSPE02S</menu>
+            <menu link="option=com_jtca&amp;view=lspe03s" alias="lspe03s" img="../media/com_jtca/images/jtca-lspe03s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE RESOLUCIONES">COM_JTCA_LSPE03S</menu>
+            <menu link="option=com_jtca&amp;view=lspe04s" alias="lspe04s" img="../media/com_jtca/images/jtca-lspe04s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE BENEFICIOS REVOCADO Y O/A">COM_JTCA_LSPE04S</menu>
+            <menu link="option=com_jtca&amp;view=lspe05s" alias="lspe05s" img="../media/com_jtca/images/jtca-lspe05s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE DESISTIMIENTO">COM_JTCA_LSPE05S</menu>
+            <menu link="option=com_jtca&amp;view=lspe06s" alias="lspe06s" img="../media/com_jtca/images/jtca-lspe06s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ARCHIVO">COM_JTCA_LSPE06S</menu>
+            <menu link="option=com_jtca&amp;view=lspe07s" alias="lspe07s" img="../media/com_jtca/images/jtca-lspe07s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE FINANZAS">COM_JTCA_LSPE07S</menu>
+            <menu link="option=com_jtca&amp;view=lspe08s" alias="lspe08s" img="../media/com_jtca/images/jtca-lspe08s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE INGRESO Y EGRESO DE BILLETES">COM_JTCA_LSPE08S</menu>
+            <menu link="option=com_jtca&amp;view=lsc02s" alias="lsc02s" img="../media/com_jtca/images/jtca-lsc02s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE REGISTRO DE ASISTENCIA (OFICIAL)">COM_JTCA_LSC02S</menu>
             <menu link="option=com_jtca&amp;view=ljc02s" alias="ljc02s" img="../media/com_jtca/images/jtca-ljc02s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE INGRESOS DE VALORES">COM_JTCA_LJC02S</menu>
+            <menu link="option=com_jtca&amp;view=ljf02s" alias="ljf02s" img="../media/com_jtca/images/jtca-ljf02s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE INGRESOS DE VALORES">COM_JTCA_LJF02S</menu>
+            <menu link="option=com_jtca&amp;view=ljp02s" alias="ljp02s" img="../media/com_jtca/images/jtca-ljp02s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE BILLETES DE DEPÓSITO (INGRESO">COM_JTCA_LJP02S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm02s" alias="ljccm02s" img="../media/com_jtca/images/jtca-ljccm02s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE INGRESO DE VALORES">COM_JTCA_LJCCM02S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng02s" alias="ljpdng02s" img="../media/com_jtca/images/jtca-ljpdng02s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CERTIFICADO DE DEPÓSITOS DE INGRESO">COM_JTCA_LJPDNG02S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes02s" alias="ljpes02s" img="../media/com_jtca/images/jtca-ljpes02s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE PROMOCIONES">COM_JTCA_LJPES02S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadng02s" alias="ljjadng02s" img="../media/com_jtca/images/jtca-ljjadng02s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE PROMOCIONES">COM_JTCA_LJJADNG02S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg02s" alias="ljjadg02s" img="../media/com_jtca/images/jtca-ljjadg02s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE PROMOCIONES">COM_JTCA_LJJADG02S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf02s" alias="ljomf02s" img="../media/com_jtca/images/jtca-ljomf02s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE INGRESOS DE VALORES">COM_JTCA_LJOMF02S</menu>
+            <menu link="option=com_jtca&amp;view=ljemst02s" alias="ljemst02s" img="../media/com_jtca/images/jtca-ljemst02s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE PROMOCIONES">COM_JTCA_LJEMST02S</menu>
             <menu link="option=com_jtca&amp;view=lejemplos" alias="lejemplos" img="../media/com_jtca/images/jtca-lejemplos.png"
                     alt="TSJ CDMX Libros TxCA/Libro De Ejemplo">COM_JTCA_LEJEMPLOS</menu>
+            <menu link="option=com_jtca&amp;view=lsc03s" alias="lsc03s" img="../media/com_jtca/images/jtca-lsc03s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE VISTAS AL M.P (OFICIAL)">COM_JTCA_LSC03S</menu>
             <menu link="option=com_jtca&amp;view=ljc03s" alias="ljc03s" img="../media/com_jtca/images/jtca-ljc03s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE EGRESOS DE VALORES">COM_JTCA_LJC03S</menu>
+            <menu link="option=com_jtca&amp;view=ljf03s" alias="ljf03s" img="../media/com_jtca/images/jtca-ljf03s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EGRESOS DE VALORES">COM_JTCA_LJF03S</menu>
+            <menu link="option=com_jtca&amp;view=ljp03s" alias="ljp03s" img="../media/com_jtca/images/jtca-ljp03s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EGRESOS DE VALORES">COM_JTCA_LJP03S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm03s" alias="ljccm03s" img="../media/com_jtca/images/jtca-ljccm03s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EGRESOS DE VALORES">COM_JTCA_LJCCM03S</menu>
             <menu link="option=com_jtca&amp;view=ljoc03s" alias="ljoc03s" img="../media/com_jtca/images/jtca-ljoc03s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE CERTIFICADO DE DEPÓSITOS DE INGRESOS Y EG">COM_JTCA_LJOC03S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng03s" alias="ljpdng03s" img="../media/com_jtca/images/jtca-ljpdng03s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CERTIFICADO DE DEPÓSITOS DE EGRESO">COM_JTCA_LJPDNG03S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes03s" alias="ljpes03s" img="../media/com_jtca/images/jtca-ljpes03s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE RECURSOS DE APELACIÓN">COM_JTCA_LJPES03S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadng03s" alias="ljjadng03s" img="../media/com_jtca/images/jtca-ljjadng03s.png"
+                    alt="TSJ CDMX Libros TxCA/AGENDA DE AUDIENCIAS">COM_JTCA_LJJADNG03S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg03s" alias="ljjadg03s" img="../media/com_jtca/images/jtca-ljjadg03s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE INGRESOS">COM_JTCA_LJJADG03S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf03s" alias="ljomf03s" img="../media/com_jtca/images/jtca-ljomf03s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EGRESOS DE VALORES">COM_JTCA_LJOMF03S</menu>
+            <menu link="option=com_jtca&amp;view=ljemst03s" alias="ljemst03s" img="../media/com_jtca/images/jtca-ljemst03s.png"
+                    alt="TSJ CDMX Libros TxCA/AGENDA DE AUDIENCIAS">COM_JTCA_LJEMST03S</menu>
+            <menu link="option=com_jtca&amp;view=lsc04s" alias="lsc04s" img="../media/com_jtca/images/jtca-lsc04s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE MULTAS (OFICIAL)">COM_JTCA_LSC04S</menu>
             <menu link="option=com_jtca&amp;view=ljc04s" alias="ljc04s" img="../media/com_jtca/images/jtca-ljc04s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE PROMOCIONES">COM_JTCA_LJC04S</menu>
+            <menu link="option=com_jtca&amp;view=ljf04s" alias="ljf04s" img="../media/com_jtca/images/jtca-ljf04s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE PROMOCIONES">COM_JTCA_LJF04S</menu>
+            <menu link="option=com_jtca&amp;view=ljp04s" alias="ljp04s" img="../media/com_jtca/images/jtca-ljp04s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE PROMOCIONES">COM_JTCA_LJP04S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm04s" alias="ljccm04s" img="../media/com_jtca/images/jtca-ljccm04s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE PROMOCIONES">COM_JTCA_LJCCM04S</menu>
             <menu link="option=com_jtca&amp;view=ljoc04s" alias="ljoc04s" img="../media/com_jtca/images/jtca-ljoc04s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE PROMOCIONES">COM_JTCA_LJOC04S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng04s" alias="ljpdng04s" img="../media/com_jtca/images/jtca-ljpdng04s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE PROMOCIONES">COM_JTCA_LJPDNG04S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes04s" alias="ljpes04s" img="../media/com_jtca/images/jtca-ljpes04s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LJPES04S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadng04s" alias="ljjadng04s" img="../media/com_jtca/images/jtca-ljjadng04s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE SENTENCIAS">COM_JTCA_LJJADNG04S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg04s" alias="ljjadg04s" img="../media/com_jtca/images/jtca-ljjadg04s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EGRESOS">COM_JTCA_LJJADG04S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf04s" alias="ljomf04s" img="../media/com_jtca/images/jtca-ljomf04s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE PROMOCIONES">COM_JTCA_LJOMF04S</menu>
+            <menu link="option=com_jtca&amp;view=ljemst04s" alias="ljemst04s" img="../media/com_jtca/images/jtca-ljemst04s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE SENTENCIAS">COM_JTCA_LJEMST04S</menu>
+            <menu link="option=com_jtca&amp;view=lsc05s" alias="lsc05s" img="../media/com_jtca/images/jtca-lsc05s.png"
+                    alt="TSJ CDMX Libros TxCA/AGENDA (OFICIAL)">COM_JTCA_LSC05S</menu>
             <menu link="option=com_jtca&amp;view=ljc05s" alias="ljc05s" img="../media/com_jtca/images/jtca-ljc05s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA SENTENCIA">COM_JTCA_LJC05S</menu>
+            <menu link="option=com_jtca&amp;view=ljf05s" alias="ljf05s" img="../media/com_jtca/images/jtca-ljf05s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE SENTENCIAS">COM_JTCA_LJF05S</menu>
+            <menu link="option=com_jtca&amp;view=ljp05s" alias="ljp05s" img="../media/com_jtca/images/jtca-ljp05s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA SENTENCIA">COM_JTCA_LJP05S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm05s" alias="ljccm05s" img="../media/com_jtca/images/jtca-ljccm05s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA SENTENCIA">COM_JTCA_LJCCM05S</menu>
             <menu link="option=com_jtca&amp;view=ljoc05s" alias="ljoc05s" img="../media/com_jtca/images/jtca-ljoc05s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE SENTENCIAS">COM_JTCA_LJOC05S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng05s" alias="ljpdng05s" img="../media/com_jtca/images/jtca-ljpdng05s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA SENTENCIAS">COM_JTCA_LJPDNG05S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes05s" alias="ljpes05s" img="../media/com_jtca/images/jtca-ljpes05s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIOS">COM_JTCA_LJPES05S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadng05s" alias="ljjadng05s" img="../media/com_jtca/images/jtca-ljjadng05s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE RECURSOS DE APELACIÓN">COM_JTCA_LJJADNG05S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg05s" alias="ljjadg05s" img="../media/com_jtca/images/jtca-ljjadg05s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE SENTENCIAS">COM_JTCA_LJJADG05S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf05s" alias="ljomf05s" img="../media/com_jtca/images/jtca-ljomf05s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE SENTENCIAS">COM_JTCA_LJOMF05S</menu>
+            <menu link="option=com_jtca&amp;view=ljemst05s" alias="ljemst05s" img="../media/com_jtca/images/jtca-ljemst05s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE RECURSOS DE APELACIÓN">COM_JTCA_LJEMST05S</menu>
+            <menu link="option=com_jtca&amp;view=lsc06s" alias="lsc06s" img="../media/com_jtca/images/jtca-lsc06s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE BILLETES Y PÓLIZAS (OFICIAL)">COM_JTCA_LSC06S</menu>
             <menu link="option=com_jtca&amp;view=ljc06s" alias="ljc06s" img="../media/com_jtca/images/jtca-ljc06s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE RECURSOS DE APELACIÓN">COM_JTCA_LJC06S</menu>
+            <menu link="option=com_jtca&amp;view=ljf06s" alias="ljf06s" img="../media/com_jtca/images/jtca-ljf06s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE RECURSOS DE APELACIÓN">COM_JTCA_LJF06S</menu>
+            <menu link="option=com_jtca&amp;view=ljp06s" alias="ljp06s" img="../media/com_jtca/images/jtca-ljp06s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE RECURSOS DE APELACIÓN">COM_JTCA_LJP06S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm06s" alias="ljccm06s" img="../media/com_jtca/images/jtca-ljccm06s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE RECURSOS DE APELACIÓN">COM_JTCA_LJCCM06S</menu>
             <menu link="option=com_jtca&amp;view=ljoc06s" alias="ljoc06s" img="../media/com_jtca/images/jtca-ljoc06s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE EXHORTOS">COM_JTCA_LJOC06S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng06s" alias="ljpdng06s" img="../media/com_jtca/images/jtca-ljpdng06s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE RECURSOS DE APELACIÓN">COM_JTCA_LJPDNG06S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes06s" alias="ljpes06s" img="../media/com_jtca/images/jtca-ljpes06s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE AMPAROS">COM_JTCA_LJPES06S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadng06s" alias="ljjadng06s" img="../media/com_jtca/images/jtca-ljjadng06s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EXHORTOS">COM_JTCA_LJJADNG06S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg06s" alias="ljjadg06s" img="../media/com_jtca/images/jtca-ljjadg06s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE RECURSOS DE APELACIÓN">COM_JTCA_LJJADG06S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf06s" alias="ljomf06s" img="../media/com_jtca/images/jtca-ljomf06s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE RECURSOS DE APELACIÓN">COM_JTCA_LJOMF06S</menu>
+            <menu link="option=com_jtca&amp;view=ljemst06s" alias="ljemst06s" img="../media/com_jtca/images/jtca-ljemst06s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EXHORTOS">COM_JTCA_LJEMST06S</menu>
+            <menu link="option=com_jtca&amp;view=lsc07s" alias="lsc07s" img="../media/com_jtca/images/jtca-lsc07s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EGRESOS (OFICIAL)">COM_JTCA_LSC07S</menu>
             <menu link="option=com_jtca&amp;view=ljc07s" alias="ljc07s" img="../media/com_jtca/images/jtca-ljc07s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE EXHORTOS">COM_JTCA_LJC07S</menu>
+            <menu link="option=com_jtca&amp;view=ljf07s" alias="ljf07s" img="../media/com_jtca/images/jtca-ljf07s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EXHORTOS">COM_JTCA_LJF07S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm07s" alias="ljccm07s" img="../media/com_jtca/images/jtca-ljccm07s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EXHORTOS">COM_JTCA_LJCCM07S</menu>
             <menu link="option=com_jtca&amp;view=ljoc07s" alias="ljoc07s" img="../media/com_jtca/images/jtca-ljoc07s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LJOC07S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng07s" alias="ljpdng07s" img="../media/com_jtca/images/jtca-ljpdng07s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EXHORTOS">COM_JTCA_LJPDNG07S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes07s" alias="ljpes07s" img="../media/com_jtca/images/jtca-ljpes07s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE AMPAROS CIRCULANTES">COM_JTCA_LJPES07S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadng07s" alias="ljjadng07s" img="../media/com_jtca/images/jtca-ljjadng07s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LJJADNG07S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg07s" alias="ljjadg07s" img="../media/com_jtca/images/jtca-ljjadg07s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EXHORTOS">COM_JTCA_LJJADG07S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf07s" alias="ljomf07s" img="../media/com_jtca/images/jtca-ljomf07s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EXHORTOS">COM_JTCA_LJOMF07S</menu>
+            <menu link="option=com_jtca&amp;view=ljemst07s" alias="ljemst07s" img="../media/com_jtca/images/jtca-ljemst07s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LJEMST07S</menu>
+            <menu link="option=com_jtca&amp;view=lsc08s" alias="lsc08s" img="../media/com_jtca/images/jtca-lsc08s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE PÓLIZAS Y FIANZAS (OFICIAL) - Ingresos">COM_JTCA_LSC08S</menu>
             <menu link="option=com_jtca&amp;view=ljc08s" alias="ljc08s" img="../media/com_jtca/images/jtca-ljc08s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LJC08S</menu>
+            <menu link="option=com_jtca&amp;view=ljf08s" alias="ljf08s" img="../media/com_jtca/images/jtca-ljf08s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LJF08S</menu>
+            <menu link="option=com_jtca&amp;view=ljp08s" alias="ljp08s" img="../media/com_jtca/images/jtca-ljp08s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EXHORTOS">COM_JTCA_LJP08S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm08s" alias="ljccm08s" img="../media/com_jtca/images/jtca-ljccm08s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LJCCM08S</menu>
             <menu link="option=com_jtca&amp;view=ljoc08s" alias="ljoc08s" img="../media/com_jtca/images/jtca-ljoc08s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIOS">COM_JTCA_LJOC08S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng08s" alias="ljpdng08s" img="../media/com_jtca/images/jtca-ljpdng08s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LJPDNG08S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes08s" alias="ljpes08s" img="../media/com_jtca/images/jtca-ljpes08s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE PEDIMENTOS">COM_JTCA_LJPES08S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadng08s" alias="ljjadng08s" img="../media/com_jtca/images/jtca-ljjadng08s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE AMPAROS">COM_JTCA_LJJADNG08S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg08s" alias="ljjadg08s" img="../media/com_jtca/images/jtca-ljjadg08s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LJJADG08S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf08s" alias="ljomf08s" img="../media/com_jtca/images/jtca-ljomf08s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LJOMF08S</menu>
+            <menu link="option=com_jtca&amp;view=ljemst08s" alias="ljemst08s" img="../media/com_jtca/images/jtca-ljemst08s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE AMPAROS">COM_JTCA_LJEMST08S</menu>
+            <menu link="option=com_jtca&amp;view=lsc14s" alias="lsc14s" img="../media/com_jtca/images/jtca-lsc14s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE PÓLIZAS Y FIANZAS (OFICIAL) - Egresos">COM_JTCA_LSC14S</menu>
+            <menu link="option=com_jtca&amp;view=lsc09s" alias="lsc09s" img="../media/com_jtca/images/jtca-lsc09s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO (OFICIAL)">COM_JTCA_LSC09S</menu>
             <menu link="option=com_jtca&amp;view=ljc09s" alias="ljc09s" img="../media/com_jtca/images/jtca-ljc09s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIOS">COM_JTCA_LJC09S</menu>
+            <menu link="option=com_jtca&amp;view=ljf09s" alias="ljf09s" img="../media/com_jtca/images/jtca-ljf09s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIOS">COM_JTCA_LJF09S</menu>
+            <menu link="option=com_jtca&amp;view=ljp09s" alias="ljp09s" img="../media/com_jtca/images/jtca-ljp09s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LJP09S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm09s" alias="ljccm09s" img="../media/com_jtca/images/jtca-ljccm09s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIOS">COM_JTCA_LJCCM09S</menu>
             <menu link="option=com_jtca&amp;view=ljoc09s" alias="ljoc09s" img="../media/com_jtca/images/jtca-ljoc09s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTIC">COM_JTCA_LJOC09S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng09s" alias="ljpdng09s" img="../media/com_jtca/images/jtca-ljpdng09s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIOS">COM_JTCA_LJPDNG09S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes09s" alias="ljpes09s" img="../media/com_jtca/images/jtca-ljpes09s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE MULTAS JUDICIALES">COM_JTCA_LJPES09S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadng09s" alias="ljjadng09s" img="../media/com_jtca/images/jtca-ljjadng09s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIO">COM_JTCA_LJJADNG09S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg09s" alias="ljjadg09s" img="../media/com_jtca/images/jtca-ljjadg09s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIOS">COM_JTCA_LJJADG09S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf09s" alias="ljomf09s" img="../media/com_jtca/images/jtca-ljomf09s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIOS">COM_JTCA_LJOMF09S</menu>
+            <menu link="option=com_jtca&amp;view=ljemst09s" alias="ljemst09s" img="../media/com_jtca/images/jtca-ljemst09s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIO">COM_JTCA_LJEMST09S</menu>
+            <menu link="option=com_jtca&amp;view=lsc10s" alias="lsc10s" img="../media/com_jtca/images/jtca-lsc10s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIO (OFICIAL)">COM_JTCA_LSC10S</menu>
             <menu link="option=com_jtca&amp;view=ljc10s" alias="ljc10s" img="../media/com_jtca/images/jtca-ljc10s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTIC">COM_JTCA_LJC10S</menu>
+            <menu link="option=com_jtca&amp;view=ljf10s" alias="ljf10s" img="../media/com_jtca/images/jtca-ljf10s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTIC">COM_JTCA_LJF10S</menu>
+            <menu link="option=com_jtca&amp;view=ljp10s" alias="ljp10s" img="../media/com_jtca/images/jtca-ljp10s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ACTUARIO">COM_JTCA_LJP10S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm10s" alias="ljccm10s" img="../media/com_jtca/images/jtca-ljccm10s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO PARA NOTARIOS">COM_JTCA_LJCCM10S</menu>
             <menu link="option=com_jtca&amp;view=ljoc10s" alias="ljoc10s" img="../media/com_jtca/images/jtca-ljoc10s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE AMPAROS">COM_JTCA_LJOC10S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng10s" alias="ljpdng10s" img="../media/com_jtca/images/jtca-ljpdng10s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE AMPAROS">COM_JTCA_LJPDNG10S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes10s" alias="ljpes10s" img="../media/com_jtca/images/jtca-ljpes10s.png"
+                    alt="TSJ CDMX Libros TxCA/AGENDA DE AUDIENCIAS PARA JUICIOS ORALES">COM_JTCA_LJPES10S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadng10s" alias="ljjadng10s" img="../media/com_jtca/images/jtca-ljjadng10s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE PEDIMENTOS">COM_JTCA_LJJADNG10S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg10s" alias="ljjadg10s" img="../media/com_jtca/images/jtca-ljjadg10s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE AMPAROS">COM_JTCA_LJJADG10S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf10s" alias="ljomf10s" img="../media/com_jtca/images/jtca-ljomf10s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTIC">COM_JTCA_LJOMF10S</menu>
+            <menu link="option=com_jtca&amp;view=ljemst10s" alias="ljemst10s" img="../media/com_jtca/images/jtca-ljemst10s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE PEDIMENTOS">COM_JTCA_LJEMST10S</menu>
+            <menu link="option=com_jtca&amp;view=lsc11s" alias="lsc11s" img="../media/com_jtca/images/jtca-lsc11s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE OFICIOS (OFICIAL)">COM_JTCA_LSC11S</menu>
             <menu link="option=com_jtca&amp;view=ljc11s" alias="ljc11s" img="../media/com_jtca/images/jtca-ljc11s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO PARA NOTARIOS">COM_JTCA_LJC11S</menu>
+            <menu link="option=com_jtca&amp;view=ljf11s" alias="ljf11s" img="../media/com_jtca/images/jtca-ljf11s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO PARA NOTARIOS">COM_JTCA_LJF11S</menu>
+            <menu link="option=com_jtca&amp;view=ljp11s" alias="ljp11s" img="../media/com_jtca/images/jtca-ljp11s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE AMPAROS">COM_JTCA_LJP11S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm11s" alias="ljccm11s" img="../media/com_jtca/images/jtca-ljccm11s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE AMPAROS">COM_JTCA_LJCCM11S</menu>
             <menu link="option=com_jtca&amp;view=ljoc11s" alias="ljoc11s" img="../media/com_jtca/images/jtca-ljoc11s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE MULTAS">COM_JTCA_LJOC11S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng11s" alias="ljpdng11s" img="../media/com_jtca/images/jtca-ljpdng11s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE AMPAROS CIRCULANTES O NEGADOS">COM_JTCA_LJPDNG11S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes11s" alias="ljpes11s" img="../media/com_jtca/images/jtca-ljpes11s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE INGRESOS Y EGRESOS DE BILLETES DE DEPÓSIT">COM_JTCA_LJPES11S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadng11s" alias="ljjadng11s" img="../media/com_jtca/images/jtca-ljjadng11s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REMISIÓN AL ARCHIVO">COM_JTCA_LJJADNG11S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg11s" alias="ljjadg11s" img="../media/com_jtca/images/jtca-ljjadg11s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE FIANZAS">COM_JTCA_LJJADG11S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf11s" alias="ljomf11s" img="../media/com_jtca/images/jtca-ljomf11s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO PARA NOTARIOS">COM_JTCA_LJOMF11S</menu>
+            <menu link="option=com_jtca&amp;view=ljemst11s" alias="ljemst11s" img="../media/com_jtca/images/jtca-ljemst11s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REMISIÓN AL ARCHIVO">COM_JTCA_LJEMST11S</menu>
+            <menu link="option=com_jtca&amp;view=lsc12s" alias="lsc12s" img="../media/com_jtca/images/jtca-lsc12s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE AMPAROS (OFICIAL)">COM_JTCA_LSC12S</menu>
             <menu link="option=com_jtca&amp;view=ljc12s" alias="ljc12s" img="../media/com_jtca/images/jtca-ljc12s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE AMPAROS">COM_JTCA_LJC12S</menu>
+            <menu link="option=com_jtca&amp;view=ljf12s" alias="ljf12s" img="../media/com_jtca/images/jtca-ljf12s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE AMPAROS">COM_JTCA_LJF12S</menu>
+            <menu link="option=com_jtca&amp;view=ljp12s" alias="ljp12s" img="../media/com_jtca/images/jtca-ljp12s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE AMPAROS CIRCULANTES O NEGADOS">COM_JTCA_LJP12S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm12s" alias="ljccm12s" img="../media/com_jtca/images/jtca-ljccm12s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE FIANZAS">COM_JTCA_LJCCM12S</menu>
             <menu link="option=com_jtca&amp;view=ljoc12s" alias="ljoc12s" img="../media/com_jtca/images/jtca-ljoc12s.png"
                     alt="TSJ CDMX Libros TxCA/AGENDA DE AUDIENCIAS">COM_JTCA_LJOC12S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng12s" alias="ljpdng12s" img="../media/com_jtca/images/jtca-ljpdng12s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE FIANZAS">COM_JTCA_LJPDNG12S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes12s" alias="ljpes12s" img="../media/com_jtca/images/jtca-ljpes12s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE FIANZAS">COM_JTCA_LJPES12S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg12s" alias="ljjadg12s" img="../media/com_jtca/images/jtca-ljjadg12s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE MULTAS">COM_JTCA_LJJADG12S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadng12s" alias="ljjadng12s" img="../media/com_jtca/images/jtca-ljjadng12s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBROS DE VALORES">COM_JTCA_LJJADNG12S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf12s" alias="ljomf12s" img="../media/com_jtca/images/jtca-ljomf12s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO DE AMPAROS">COM_JTCA_LJOMF12S</menu>
+            <menu link="option=com_jtca&amp;view=ljemst12s" alias="ljemst12s" img="../media/com_jtca/images/jtca-ljemst12s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBROS DE VALORES">COM_JTCA_LJEMST12S</menu>
+            <menu link="option=com_jtca&amp;view=lsc13s" alias="lsc13s" img="../media/com_jtca/images/jtca-lsc13s.png"
+                    alt="TSJ CDMX Libros TxCA/PAPELETAS PARA EL PRÉSTAMO DE EXPEDIENTES">COM_JTCA_LSC13S</menu>
             <menu link="option=com_jtca&amp;view=ljc13s" alias="ljc13s" img="../media/com_jtca/images/jtca-ljc13s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE FIANZAS">COM_JTCA_LJC13S</menu>
+            <menu link="option=com_jtca&amp;view=ljf13s" alias="ljf13s" img="../media/com_jtca/images/jtca-ljf13s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE FIANZAS">COM_JTCA_LJF13S</menu>
+            <menu link="option=com_jtca&amp;view=ljp13s" alias="ljp13s" img="../media/com_jtca/images/jtca-ljp13s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE FIANZAS">COM_JTCA_LJP13S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm13s" alias="ljccm13s" img="../media/com_jtca/images/jtca-ljccm13s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE MULTAS">COM_JTCA_LJCCM13S</menu>
             <menu link="option=com_jtca&amp;view=ljoc13s" alias="ljoc13s" img="../media/com_jtca/images/jtca-ljoc13s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE NOTARIOS">COM_JTCA_LJOC13S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng13s" alias="ljpdng13s" img="../media/com_jtca/images/jtca-ljpdng13s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE MULTAS">COM_JTCA_LJPDNG13S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes13s" alias="ljpes13s" img="../media/com_jtca/images/jtca-ljpes13s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE RESOLUCIONES EN AUDIENCIA">COM_JTCA_LJPES13S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg13s" alias="ljjadg13s" img="../media/com_jtca/images/jtca-ljjadg13s.png"
+                    alt="TSJ CDMX Libros TxCA/AGENDA DE AUDIENCIAS">COM_JTCA_LJJADG13S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf13s" alias="ljomf13s" img="../media/com_jtca/images/jtca-ljomf13s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE FIANZAS">COM_JTCA_LJOMF13S</menu>
             <menu link="option=com_jtca&amp;view=ljc14s" alias="ljc14s" img="../media/com_jtca/images/jtca-ljc14s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE MULTAS">COM_JTCA_LJC14S</menu>
+            <menu link="option=com_jtca&amp;view=ljf14s" alias="ljf14s" img="../media/com_jtca/images/jtca-ljf14s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE MULTAS">COM_JTCA_LJF14S</menu>
+            <menu link="option=com_jtca&amp;view=ljp14s" alias="ljp14s" img="../media/com_jtca/images/jtca-ljp14s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE MULTAS">COM_JTCA_LJP14S</menu>
             <menu link="option=com_jtca&amp;view=ljoc14s" alias="ljoc14s" img="../media/com_jtca/images/jtca-ljoc14s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE FIANZAS">COM_JTCA_LJOC14S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng14s" alias="ljpdng14s" img="../media/com_jtca/images/jtca-ljpdng14s.png"
+                    alt="TSJ CDMX Libros TxCA/AGENDA DE AUDIENCIAS">COM_JTCA_LJPDNG14S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes14s" alias="ljpes14s" img="../media/com_jtca/images/jtca-ljpes14s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE RESOLUCIONES DE PLANO">COM_JTCA_LJPES14S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg14s" alias="ljjadg14s" img="../media/com_jtca/images/jtca-ljjadg14s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE PEDIMENTOS">COM_JTCA_LJJADG14S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf14s" alias="ljomf14s" img="../media/com_jtca/images/jtca-ljomf14s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE MULTAS">COM_JTCA_LJOMF14S</menu>
+            <menu link="option=com_jtca&amp;view=ljf15s" alias="ljf15s" img="../media/com_jtca/images/jtca-ljf15s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO A CARGO DE LOS SECRETARIOS DE ACUER">COM_JTCA_LJF15S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm15s" alias="ljccm15s" img="../media/com_jtca/images/jtca-ljccm15s.png"
+                    alt="TSJ CDMX Libros TxCA/AGENDA DE AUDIENCIAS">COM_JTCA_LJCCM15S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng15s" alias="ljpdng15s" img="../media/com_jtca/images/jtca-ljpdng15s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE PEDIMENTOS">COM_JTCA_LJPDNG15S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes15s" alias="ljpes15s" img="../media/com_jtca/images/jtca-ljpes15s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE BENEFICIOS REVOCADOS Y ORDENES DE RE-APRE">COM_JTCA_LJPES15S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg15s" alias="ljjadg15s" img="../media/com_jtca/images/jtca-ljjadg15s.png"
+                    alt="TSJ CDMX Libros TxCA/ARTICULO 36 O ARTICULO 28 LJADF">COM_JTCA_LJJADG15S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf15s" alias="ljomf15s" img="../media/com_jtca/images/jtca-ljomf15s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO A CARGO DE LOS SECRETARIOS DE ACUER">COM_JTCA_LJOMF15S</menu>
             <menu link="option=com_jtca&amp;view=ljc16s" alias="ljc16s" img="../media/com_jtca/images/jtca-ljc16s.png"
                     alt="TSJ CDMX Libros TxCA/AGENDA DE AUDIENCIAS">COM_JTCA_LJC16S</menu>
+            <menu link="option=com_jtca&amp;view=ljf16s" alias="ljf16s" img="../media/com_jtca/images/jtca-ljf16s.png"
+                    alt="TSJ CDMX Libros TxCA/AGENDA DE AUDIENCIAS">COM_JTCA_LJF16S</menu>
+            <menu link="option=com_jtca&amp;view=ljp16s" alias="ljp16s" img="../media/com_jtca/images/jtca-ljp16s.png"
+                    alt="TSJ CDMX Libros TxCA/AGENDA DE AUDIENCIAS">COM_JTCA_LJP16S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm16s" alias="ljccm16s" img="../media/com_jtca/images/jtca-ljccm16s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REMISIÓN DE EXPEDIENTES AL ARCHIVO">COM_JTCA_LJCCM16S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng16s" alias="ljpdng16s" img="../media/com_jtca/images/jtca-ljpdng16s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO EN QUE SE HAYA OBSEQUIADO O NEGA">COM_JTCA_LJPDNG16S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes16s" alias="ljpes16s" img="../media/com_jtca/images/jtca-ljpes16s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE DESISTIMIENTOS">COM_JTCA_LJPES16S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg16s" alias="ljjadg16s" img="../media/com_jtca/images/jtca-ljjadg16s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE PRESENTACIÓN DE ADOLESCENTES E">COM_JTCA_LJJADG16S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf16s" alias="ljomf16s" img="../media/com_jtca/images/jtca-ljomf16s.png"
+                    alt="TSJ CDMX Libros TxCA/AGENDA DE AUDIENCIAS">COM_JTCA_LJOMF16S</menu>
             <menu link="option=com_jtca&amp;view=ljc17s" alias="ljc17s" img="../media/com_jtca/images/jtca-ljc17s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE REMISIÓN AL ARCHIVO">COM_JTCA_LJC17S</menu>
+            <menu link="option=com_jtca&amp;view=ljf17s" alias="ljf17s" img="../media/com_jtca/images/jtca-ljf17s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REMISIÓN AL ARCHIVO">COM_JTCA_LJF17S</menu>
+            <menu link="option=com_jtca&amp;view=ljp17s" alias="ljp17s" img="../media/com_jtca/images/jtca-ljp17s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE PEDIMENTOS">COM_JTCA_LJP17S</menu>
+            <menu link="option=com_jtca&amp;view=ljccm17s" alias="ljccm17s" img="../media/com_jtca/images/jtca-ljccm17s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO">COM_JTCA_LJCCM17S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng17s" alias="ljpdng17s" img="../media/com_jtca/images/jtca-ljpdng17s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE FIRMAS PROCESADOS">COM_JTCA_LJPDNG17S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes17s" alias="ljpes17s" img="../media/com_jtca/images/jtca-ljpes17s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ARCHIVO">COM_JTCA_LJPES17S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg17s" alias="ljjadg17s" img="../media/com_jtca/images/jtca-ljjadg17s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REMISIÓN AL ARCHIVO">COM_JTCA_LJJADG17S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf17s" alias="ljomf17s" img="../media/com_jtca/images/jtca-ljomf17s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REMISIÓN AL ARCHIVO">COM_JTCA_LJOMF17S</menu>
             <menu link="option=com_jtca&amp;view=ljc18s" alias="ljc18s" img="../media/com_jtca/images/jtca-ljc18s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO">COM_JTCA_LJC18S</menu>
+            <menu link="option=com_jtca&amp;view=ljf18s" alias="ljf18s" img="../media/com_jtca/images/jtca-ljf18s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO">COM_JTCA_LJF18S</menu>
+            <menu link="option=com_jtca&amp;view=ljp18s" alias="ljp18s" img="../media/com_jtca/images/jtca-ljp18s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REGISTRO EN QUE SE HAYA OBSEQUIADO O NEGA">COM_JTCA_LJP18S</menu>
+            <menu link="option=com_jtca&amp;view=ljpdng18s" alias="ljpdng18s" img="../media/com_jtca/images/jtca-ljpdng18s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REMISIÓN AL ARCHIVO">COM_JTCA_LJPDNG18S</menu>
+            <menu link="option=com_jtca&amp;view=ljjadg18s" alias="ljjadg18s" img="../media/com_jtca/images/jtca-ljjadg18s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE AMPAROS 'LOCOS'">COM_JTCA_LJJADG18S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf18s" alias="ljomf18s" img="../media/com_jtca/images/jtca-ljomf18s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO">COM_JTCA_LJOMF18S</menu>
+            <menu link="option=com_jtca&amp;view=ljpes18s" alias="ljpes18s" img="../media/com_jtca/images/jtca-ljpes18s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE EXHORTOS">COM_JTCA_LJPES18S</menu>
             <menu link="option=com_jtca&amp;view=ljc19s" alias="ljc19s" img="../media/com_jtca/images/jtca-ljc19s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL ">COM_JTCA_LJC19S</menu>
+            <menu link="option=com_jtca&amp;view=ljf19s" alias="ljf19s" img="../media/com_jtca/images/jtca-ljf19s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL ">COM_JTCA_LJF19S</menu>
+            <menu link="option=com_jtca&amp;view=ljp19s" alias="ljp19s" img="../media/com_jtca/images/jtca-ljp19s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE FIRMAS DE PROCESADOS">COM_JTCA_LJP19S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf19s" alias="ljomf19s" img="../media/com_jtca/images/jtca-ljomf19s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL ">COM_JTCA_LJOMF19S</menu>
             <menu link="option=com_jtca&amp;view=ljc20s" alias="ljc20s" img="../media/com_jtca/images/jtca-ljc20s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCUL">COM_JTCA_LJC20S</menu>
+            <menu link="option=com_jtca&amp;view=ljf20s" alias="ljf20s" img="../media/com_jtca/images/jtca-ljf20s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCUL">COM_JTCA_LJF20S</menu>
+            <menu link="option=com_jtca&amp;view=ljp20s" alias="ljp20s" img="../media/com_jtca/images/jtca-ljp20s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO PARA CONCLUSIONES">COM_JTCA_LJP20S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf20s" alias="ljomf20s" img="../media/com_jtca/images/jtca-ljomf20s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCUL">COM_JTCA_LJOMF20S</menu>
             <menu link="option=com_jtca&amp;view=ljc21s" alias="ljc21s" img="../media/com_jtca/images/jtca-ljc21s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE MINISTERIO PÚBLICO">COM_JTCA_LJC21S</menu>
+            <menu link="option=com_jtca&amp;view=ljf21s" alias="ljf21s" img="../media/com_jtca/images/jtca-ljf21s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE ADOPCIONES INTERNACIONALES">COM_JTCA_LJF21S</menu>
+            <menu link="option=com_jtca&amp;view=ljp21s" alias="ljp21s" img="../media/com_jtca/images/jtca-ljp21s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE REMISIÓN AL ARCHIVO">COM_JTCA_LJP21S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf21s" alias="ljomf21s" img="../media/com_jtca/images/jtca-ljomf21s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE ADOPCIONES INTERNACIONALES">COM_JTCA_LJOMF21S</menu>
+            <menu link="option=com_jtca&amp;view=ljf22s" alias="ljf22s" img="../media/com_jtca/images/jtca-ljf22s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE RESTITUCIONES INTERNACIONALES">COM_JTCA_LJF22S</menu>
+            <menu link="option=com_jtca&amp;view=ljomf22s" alias="ljomf22s" img="../media/com_jtca/images/jtca-ljomf22s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE RESTITUCIONES INTERNACIONALES">COM_JTCA_LJOMF22S</menu>
         </submenu>
 
         <files folder="admin">
@@ -237,12 +669,56 @@
                     <option	value="0">JNO</option>
                 </field>		        
                 <field
+			        name="lsc01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc01_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC01S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM01S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -259,12 +735,683 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljpdng01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadng01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADNG01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADNG01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp02_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP02S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP02S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp03_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP03S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP03S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp04_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP04S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP04S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp05_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP05S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP05S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp06_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP06S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP06S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp07_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP07S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP07S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp09_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP09S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP09S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp10_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP10S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP10S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp18_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP18S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP18S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp19_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP19S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP19S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp20_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP20S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP20S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp21_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP21S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP21S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp22_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP22S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP22S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp23_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP23S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP23S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp24_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP24S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP24S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp25_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP25S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP25S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp26_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP26S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP26S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp27_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP27S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP27S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp28_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP28S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP28S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp29_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP29S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP29S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp11_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP11S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP11S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp12_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP12S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP12S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp13_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP13S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP13S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp14_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP14S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP14S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp15_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP15S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP15S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp16_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP16S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP16S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp30_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP30S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP30S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp31_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP31S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP31S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp32_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP32S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP32S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp33_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP33S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP33S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp34_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP34S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP34S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp35_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP35S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP35S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp36_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP36S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP36S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp39_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP39S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP39S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp40_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP40S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP40S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lcp41_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LCP41S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LCP41S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljemst01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJEMST01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJEMST01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lspe01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSPE01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSPE01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lspe02_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSPE02S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSPE02S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lspe03_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSPE03S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSPE03S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lspe04_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSPE04S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSPE04S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lspe05_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSPE05S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSPE05S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lspe06_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSPE06S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSPE06S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lspe07_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSPE07S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSPE07S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lspe08_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSPE08S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSPE08S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsc02_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC02S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC02S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc02_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC02S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC02S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf02_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF02S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF02S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp02_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP02S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP02S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm02_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM02S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM02S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpdng02_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG02S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG02S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes02_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES02S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES02S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadng02_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADNG02S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADNG02S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg02_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG02S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG02S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf02_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF02S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF02S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljemst02_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJEMST02S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJEMST02S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -281,12 +1428,56 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="lsc03_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC03S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC03S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc03_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC03S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC03S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf03_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF03S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF03S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp03_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP03S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP03S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm03_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM03S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM03S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -303,12 +1494,122 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljpdng03_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG03S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG03S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes03_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES03S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES03S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadng03_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADNG03S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADNG03S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg03_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG03S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG03S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf03_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF03S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF03S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljemst03_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJEMST03S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJEMST03S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsc04_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC04S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC04S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc04_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC04S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC04S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf04_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF04S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF04S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp04_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP04S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP04S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm04_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM04S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM04S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -325,12 +1626,122 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljpdng04_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG04S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG04S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes04_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES04S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES04S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadng04_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADNG04S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADNG04S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg04_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG04S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG04S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf04_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF04S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF04S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljemst04_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJEMST04S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJEMST04S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsc05_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC05S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC05S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc05_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC05S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC05S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf05_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF05S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF05S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp05_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP05S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP05S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm05_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM05S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM05S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -347,12 +1758,122 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljpdng05_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG05S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG05S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes05_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES05S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES05S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadng05_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADNG05S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADNG05S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg05_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG05S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG05S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf05_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF05S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF05S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljemst05_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJEMST05S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJEMST05S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsc06_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC06S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC06S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc06_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC06S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC06S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf06_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF06S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF06S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp06_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP06S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP06S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm06_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM06S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM06S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -369,12 +1890,111 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljpdng06_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG06S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG06S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes06_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES06S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES06S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadng06_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADNG06S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADNG06S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg06_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG06S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG06S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf06_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF06S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF06S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljemst06_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJEMST06S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJEMST06S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsc07_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC07S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC07S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc07_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC07S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC07S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf07_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF07S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF07S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm07_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM07S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM07S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -391,12 +2011,122 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljpdng07_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG07S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG07S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes07_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES07S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES07S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadng07_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADNG07S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADNG07S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg07_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG07S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG07S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf07_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF07S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF07S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljemst07_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJEMST07S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJEMST07S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsc08_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC08S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC08S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc08_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC08S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC08S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf08_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF08S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF08S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp08_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP08S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP08S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm08_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM08S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM08S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -413,12 +2143,133 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljpdng08_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG08S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG08S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes08_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES08S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES08S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadng08_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADNG08S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADNG08S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg08_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG08S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG08S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf08_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF08S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF08S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljemst08_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJEMST08S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJEMST08S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsc14_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC14S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC14S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsc09_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC09S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC09S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc09_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC09S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC09S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf09_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF09S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF09S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp09_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP09S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP09S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm09_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM09S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM09S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -435,12 +2286,122 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljpdng09_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG09S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG09S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes09_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES09S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES09S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadng09_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADNG09S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADNG09S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg09_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG09S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG09S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf09_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF09S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF09S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljemst09_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJEMST09S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJEMST09S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsc10_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC10S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC10S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc10_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC10S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC10S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf10_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF10S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF10S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp10_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP10S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP10S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm10_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM10S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM10S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -457,12 +2418,122 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljpdng10_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG10S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG10S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes10_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES10S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES10S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadng10_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADNG10S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADNG10S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg10_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG10S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG10S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf10_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF10S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF10S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljemst10_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJEMST10S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJEMST10S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsc11_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC11S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC11S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc11_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC11S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC11S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf11_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF11S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF11S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp11_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP11S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP11S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm11_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM11S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM11S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -479,12 +2550,122 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljpdng11_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG11S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG11S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes11_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES11S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES11S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadng11_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADNG11S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADNG11S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg11_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG11S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG11S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf11_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF11S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF11S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljemst11_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJEMST11S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJEMST11S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsc12_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC12S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC12S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc12_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC12S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC12S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf12_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF12S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF12S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp12_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP12S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP12S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm12_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM12S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM12S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -501,12 +2682,122 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljpdng12_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG12S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG12S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes12_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES12S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES12S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg12_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG12S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG12S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadng12_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADNG12S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADNG12S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf12_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF12S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF12S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljemst12_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJEMST12S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJEMST12S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsc13_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC13S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC13S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc13_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC13S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC13S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf13_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF13S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF13S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp13_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP13S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP13S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm13_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM13S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM13S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -523,12 +2814,78 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljpdng13_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG13S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG13S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes13_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES13S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES13S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg13_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG13S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG13S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf13_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF13S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF13S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc14_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC14S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC14S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf14_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF14S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF14S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp14_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP14S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP14S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -545,12 +2902,199 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljpdng14_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG14S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG14S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes14_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES14S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES14S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg14_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG14S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG14S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf14_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF14S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF14S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf15_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF15S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF15S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm15_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM15S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM15S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpdng15_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG15S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG15S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes15_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES15S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES15S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg15_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG15S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG15S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf15_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF15S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF15S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc16_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC16S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC16S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf16_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF16S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF16S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp16_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP16S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP16S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm16_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM16S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM16S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpdng16_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG16S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG16S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes16_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES16S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES16S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg16_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG16S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG16S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf16_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF16S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF16S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -567,12 +3111,155 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljf17_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF17S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF17S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp17_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP17S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP17S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljccm17_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJCCM17S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJCCM17S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpdng17_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG17S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG17S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes17_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES17S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES17S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg17_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG17S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG17S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf17_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF17S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF17S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc18_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC18S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC18S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf18_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF18S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF18S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp18_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP18S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP18S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpdng18_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPDNG18S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPDNG18S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljjadg18_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJJADG18S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJJADG18S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf18_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF18S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF18S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljpes18_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJPES18S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJPES18S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -589,6 +3276,39 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljf19_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF19S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF19S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp19_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP19S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP19S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf19_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF19S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF19S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc20_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
@@ -600,12 +3320,100 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
+			        name="ljf20_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF20S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF20S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp20_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP20S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP20S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf20_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF20S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF20S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
 			        name="ljc21_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC21S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC21S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf21_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF21S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF21S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljp21_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJP21S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJP21S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf21_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF21S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF21S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljf22_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJF22S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJF22S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ljomf22_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LJOMF22S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LJOMF22S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>

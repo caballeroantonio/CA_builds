@@ -1,0 +1,52 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	id\_expediente & INT(10) & Toca:@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente \tabularnewline\hline 
+	id\_secretaria & INT(10) & Ponencia: \tabularnewline\hline 
+	field2286 & DATETIME & FECHA DE INGRESO: \tabularnewline\hline 
+	field2287 & VARCHAR(255) & JUZGADO PENAL: \tabularnewline\hline 
+	field2288 & VARCHAR(255) & JUZGADO DE EJECUCI\'ON DE ORIGEN: \tabularnewline\hline 
+	field2289 & DATETIME & FECHA DE LA RESOLUCI\'ON APELADA: \tabularnewline\hline 
+	field2290 & VARCHAR(255) & RESOLUCI\'ON APELADA: \tabularnewline\hline 
+	field2291 & VARCHAR(255) & PETICI\'ON CONCEDIDA: \tabularnewline\hline 
+	field2292 & DATETIME & FECHA DE RESOLUCI\'ON APELADA: \tabularnewline\hline 
+	field2293\_isMoral & TINYINT(1) & QUIEN APELA (isMoral): \tabularnewline\hline 
+	field2293\_paterno & VARCHAR(255) & QUIEN APELA (paterno): \tabularnewline\hline 
+	field2293\_materno & VARCHAR(45) & QUIEN APELA (materno): \tabularnewline\hline 
+	field2293\_nombre & VARCHAR(45) & QUIEN APELA (nombre): \tabularnewline\hline 
+	field2294 & VARCHAR(255) & LUGAR DE RECLUSI\'ON: \tabularnewline\hline 
+	field2295 & DATETIME & FECHA DE AUDIENCIA DE VISTA: \tabularnewline\hline 
+	field2296 & DATETIME & FECHA DE RESOLUCI\'ON: \tabularnewline\hline 
+	field2297 & VARCHAR(255) & SENTIDO DE LA RESOLUCI\'ON: \tabularnewline\hline 
+	field2343 & VARCHAR(255) & NO. DE AMPARO: \tabularnewline\hline 
+	field2344 & DATETIME & FECHA DE RESOLUCI\'ON RECURRIDA V\'IA AMPARO: \tabularnewline\hline 
+	field2298 & TEXT & OBSERVACIONES: \tabularnewline\hline 

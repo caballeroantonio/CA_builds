@@ -1,0 +1,50 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	id\_expediente & INT(10) & CAUSA:@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente \tabularnewline\hline 
+	id\_secretaria & INT(10) & Secretar\'i{}a: \tabularnewline\hline 
+	field2 & VARCHAR(45) & No DE BILLETE: \tabularnewline\hline 
+	field3 & DATETIME & FECHA EN QUE SE EXPIDE EL BILLETE: \tabularnewline\hline 
+	field4 & DATETIME & FECHA DE ENTREGA: \tabularnewline\hline 
+	field5 & DECIMAL(11,2) & MONTO DEL BILLETE: \tabularnewline\hline 
+	field6\_isMoral & TINYINT(1) & NOMBRE A QUIEN SE ENTREGA (isMoral): \tabularnewline\hline 
+	field6\_paterno & VARCHAR(255) & NOMBRE A QUIEN SE ENTREGA (paterno): \tabularnewline\hline 
+	field6\_materno & VARCHAR(45) & NOMBRE A QUIEN SE ENTREGA (materno): \tabularnewline\hline 
+	field6\_nombre & VARCHAR(45) & NOMBRE A QUIEN SE ENTREGA (nombre): \tabularnewline\hline 
+	field7 & INT(10) & FIRMA DE QUIEN RECIBE: \tabularnewline\hline 
+	field7h & INT(10) & HUELLA DE QUIEN RECIBE: \tabularnewline\hline 
+	field8 & INT(10) & DEL JUEZ: \tabularnewline\hline 
+	field9 & INT(10) & DEL SECRETARIO: \tabularnewline\hline 
+	field10 & DATETIME & FECHA DE ACUERDO: \tabularnewline\hline 
+	field11 & TEXT & OBSERVACIONES: \tabularnewline\hline 
+	exp\_extinto & VARCHAR(45) & Expediente extinto: \tabularnewline\hline 
+	jorigen & INT(10) & Juzgado de origen: \tabularnewline\hline 

@@ -1,0 +1,42 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	id\_expediente & INT(10) & Toca:@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente \tabularnewline\hline 
+	id\_secretaria & INT(10) & Ponencia: \tabularnewline\hline 
+	field2308 & VARCHAR(255) & PENA POR CUMPLIR: \tabularnewline\hline 
+	field2309 & VARCHAR(255) & BENEFICIO PENITENCIARIO: \tabularnewline\hline 
+	field2310 & DATETIME & FECHA DE RESOLUCI\'ON: \tabularnewline\hline 
+	field2311 & VARCHAR(255) & SENTIDO DE RESOLUCI\'ON: \tabularnewline\hline 
+	field2312 & VARCHAR(255) & PRESCRIPCI\'ON DE LA PENA: \tabularnewline\hline 
+	field2313 & DATETIME & FECHA DE REVOCACI\'ON: \tabularnewline\hline 
+	field2314 & DATETIME & FECHA DE CUMPLIMIENTO DE O/R: \tabularnewline\hline 
+	field2315 & TEXT & OBSERVACIONES: \tabularnewline\hline 

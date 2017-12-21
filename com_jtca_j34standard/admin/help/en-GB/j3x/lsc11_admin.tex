@@ -1,0 +1,38 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	id\_secretaria & INT(10) & Ponencia: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	id\_expediente & INT(10) & TOCA: El expediente es opcional en los libros de oficios \tabularnewline\hline 
+	field205 & VARCHAR(45) & N\'UMERO DE OFICIO (CONSECUTIVO): \tabularnewline\hline 
+	field207 & VARCHAR(255) & DESTINATARIO: \tabularnewline\hline 
+	field209 & DATETIME & FECHA: \tabularnewline\hline 
+	field210 & VARCHAR(255) & NOMBRE DEL QUE REGISTRA: \tabularnewline\hline 

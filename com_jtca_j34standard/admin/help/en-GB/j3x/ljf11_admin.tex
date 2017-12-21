@@ -1,0 +1,55 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	id\_expediente & INT(10) & Expediente:@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente \tabularnewline\hline 
+	id\_secretaria & INT(10) & Secretar\'i{}a: \tabularnewline\hline 
+	field2 & VARCHAR(45) & No. DEL NOTARIO: \tabularnewline\hline 
+	field3\_isMoral & TINYINT(1) & NOMBRE DEL NOTARIO (isMoral): \tabularnewline\hline 
+	field3\_paterno & VARCHAR(255) & NOMBRE DEL NOTARIO (paterno): \tabularnewline\hline 
+	field3\_materno & VARCHAR(45) & NOMBRE DEL NOTARIO (materno): \tabularnewline\hline 
+	field3\_nombre & VARCHAR(45) & NOMBRE DEL NOTARIO (nombre): \tabularnewline\hline 
+	field4 & TEXT & DIRECCION Y TEL\'EFONO: \tabularnewline\hline 
+	field8 & VARCHAR(45) & CUADERNO: \tabularnewline\hline 
+	field9 & INT(10) & FOJAS: \tabularnewline\hline 
+	field10 & TEXT & DOCUMENTOS: \tabularnewline\hline 
+	field11 & DATETIME & FECHA DE ENTREGA: \tabularnewline\hline 
+	field12 & TEXT & DATOS DE IDENTIFICACI\'ON: \tabularnewline\hline 
+	field13 & VARCHAR(45) & TRAMITE A REALIZAR: \tabularnewline\hline 
+	field14\_isMoral & TINYINT(1) & NOMBRE DE LA PERSONA AUTORIZADA (isMoral): \tabularnewline\hline 
+	field14\_paterno & VARCHAR(255) & NOMBRE DE LA PERSONA AUTORIZADA (paterno): \tabularnewline\hline 
+	field14\_materno & VARCHAR(45) & NOMBRE DE LA PERSONA AUTORIZADA (materno): \tabularnewline\hline 
+	field14\_nombre & VARCHAR(45) & NOMBRE DE LA PERSONA AUTORIZADA (nombre): \tabularnewline\hline 
+	field15 & INT(10) & FIRMA DE LA PERSONA AUTORIZADA: \tabularnewline\hline 
+	field15h & INT(10) & HUELLA DE LA PERSONA AUTORIZADA: \tabularnewline\hline 
+	field16 & INT(10) & DEL SECRETARIO DE ACUERDOS: \tabularnewline\hline 
+	field17 & DATETIME & FECHA DE DEVOLUCI\'ON DEL EXPEDIENTE AL JUZGADO: \tabularnewline\hline 
+	field18 & INT(10) & DE DEVOLUCI\'ON DEL EXPEDIENTE AL JUZGADO: \tabularnewline\hline 

@@ -1,0 +1,73 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	id\_expediente & INT(10) & CAUSA:@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente \tabularnewline\hline 
+	id\_secretaria & INT(10) & Secretar\'i{}a: \tabularnewline\hline 
+	field2 & DATETIME & FECHA Y HORA EN QUE SE RECIBE EL ASUNTO: \tabularnewline\hline 
+	txt\_field2032 & VARCHAR(255) & AUTORIDAD REMITENTE: \tabularnewline\hline 
+	id\_field2032 & INT(10) & AUTORIDAD REMITENTE: \tabularnewline\hline 
+	field6 & VARCHAR(255) & CONDUCTA TIPIFICADA COMO DELITO: \tabularnewline\hline 
+	field7 & INT(10) & FUNCI\'ON: \tabularnewline\hline 
+	field8 & INT(10) & REMISI\'ON: \tabularnewline\hline 
+	field9 & DATETIME & FECHA DE VINCULACI\'ON DEL PROCESO: \tabularnewline\hline 
+	field10 & VARCHAR(45) & CONDUCTA TIPIFICADA COMO DELITO MOTIVO DE LA VINCULACI\'ON: \tabularnewline\hline 
+	field11 & INT(10) & ACUERDO REPARATORIO: \tabularnewline\hline 
+	field12 & VARCHAR(45) & SUSPENSI\'ON DE PROCESO A PRUEBA: \tabularnewline\hline 
+	field13 & DATETIME & FECHA DE AUDIENCIA INTERMEDIA: \tabularnewline\hline 
+	field14 & VARCHAR(255) & JUICIO ABREVIADO: \tabularnewline\hline 
+	field15 & VARCHAR(255) & OTRAS FORMAS DE CONCLUSI\'ON: \tabularnewline\hline 
+	field16 & DATETIME & AUTO DE APERTURA: \tabularnewline\hline 
+	field17 & DATETIME & FECHA DE AUDIENCIA: \tabularnewline\hline 
+	field18 & DATETIME & FECHA DE SENTENCIA: \tabularnewline\hline 
+	field19 & TINYINT(1) & CONDENATORIA: \tabularnewline\hline 
+	field20 & VARCHAR(45) & COMENTARIO: \tabularnewline\hline 
+	field21 & TINYINT(1) & ABSOLUTORIA: \tabularnewline\hline 
+	field22 & VARCHAR(45) & COMENTARIO: \tabularnewline\hline 
+	field23 & TINYINT(1) & MIXTA: \tabularnewline\hline 
+	field24 & VARCHAR(45) & COMENTARIO: \tabularnewline\hline 
+	field25 & DATETIME & FECHA DEL ENGROSE DE LA SENTENCIA: \tabularnewline\hline 
+	field26 & VARCHAR(45) & MEDIDAS IMPUESTAS Y DURACI\'ON: \tabularnewline\hline 
+	field27 & INT(10) & REPARACI\'ON DEL DA\~NO MATERIAL: \tabularnewline\hline 
+	field28 & INT(10) & REPARACI\'ON DEL DA\~NO MORAL: \tabularnewline\hline 
+	field29 & INT(10) & REPARACI\'ON DE PERJUICIOS: \tabularnewline\hline 
+	field30 & TINYINT(1) & DECOMISO: \tabularnewline\hline 
+	field31 & DATETIME & FECHA DE CUMPLIMIENTO DE LA MEDIDA: \tabularnewline\hline 
+	field32 & VARCHAR(45) & OTRAS FORMAS DE TERMINACI\'ON: \tabularnewline\hline 
+	field33 & DATETIME & FECHA DE CONCLUSI\'ON DE LA CAUSA: \tabularnewline\hline 
+	field34 & VARCHAR(255) & MEDIDAS IMPUESTAS Y DURACI\'ON: \tabularnewline\hline 
+	field35 & INT(10) & REPARACI\'ON DEL DA\~NO MATERIAL: \tabularnewline\hline 
+	field36 & INT(10) & REPARACI\'ON DEL DA\~NO MORAL: \tabularnewline\hline 
+	field37 & INT(10) & REPARACI\'ON DE PERJUICIOS: \tabularnewline\hline 
+	field38 & TINYINT(1) & DESTRUCCI\'ON DE OBJETOS: \tabularnewline\hline 
+	field39 & DATETIME & FECHA DE CUMPLIMIENTO DE LA MEDIDA: \tabularnewline\hline 
+	field40 & DATETIME & FECHA DE CONCLUSI\'ON DE LA CAUSA: \tabularnewline\hline 
+	field42 & TEXT & OBSERVACIONES: \tabularnewline\hline 

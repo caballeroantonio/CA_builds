@@ -1,0 +1,39 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	id\_secretaria & INT(10) & Ponencia: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	id\_expediente & INT(10) & N\'UMERO DE TOCA: \tabularnewline\hline 
+	field187 & VARCHAR(45) & N\'UMERO DE REGISTRO (CONSECUTIVO): \tabularnewline\hline 
+	field191 & VARCHAR(45) & RESOLUCI\'ON RECURRIDA: \tabularnewline\hline 
+	field192 & DATETIME & FECHA DE ENTRADA: \tabularnewline\hline 
+	field193 & DATETIME & FECHA DE SALIDA (NO SE LLENA): \tabularnewline\hline 
+	field194 & TEXT & OBSERVACIONES: \tabularnewline\hline 

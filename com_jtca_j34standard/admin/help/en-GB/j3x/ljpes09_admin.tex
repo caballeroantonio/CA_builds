@@ -1,0 +1,42 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	id\_expediente & INT(10) & CAUSA:@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente \tabularnewline\hline 
+	id\_secretaria & INT(10) & Secretar\'i{}a: \tabularnewline\hline 
+	field2 & INT(10) & D\'IAS MULTA: \tabularnewline\hline 
+	field3 & DECIMAL(11,2) & MONTO: \tabularnewline\hline 
+	field4 & DATETIME & FECHA DE AUTO: \tabularnewline\hline 
+	txt\_field1248 & VARCHAR(255) & PERSONA A  LA QUE SE LE IMPONE: \tabularnewline\hline 
+	id\_field1248 & INT(10) & PERSONA A  LA QUE SE LE IMPONE: \tabularnewline\hline 
+	field7 & VARCHAR(45) & NO. DE OFICIO CON EL QUE SE COMUNICA LA SANCI\'ON: \tabularnewline\hline 
+	field8 & DATETIME & FECHA DEL OFICIO: \tabularnewline\hline 
+	field6 & DATETIME & FECHA DE ENTREGA DEL OFICIO: \tabularnewline\hline 

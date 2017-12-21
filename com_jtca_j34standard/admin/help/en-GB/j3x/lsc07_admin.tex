@@ -1,0 +1,54 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	id\_expediente & INT(10) & Toca:@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente \tabularnewline\hline 
+	id\_secretaria & INT(10) & Ponencia: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	field162 & VARCHAR(45) & N\'UMERO DE FOLIO: \tabularnewline\hline 
+	field163 & VARCHAR(45) & SECRETAR\'IA: \tabularnewline\hline 
+	field164\_isMoral & TINYINT(1) & NOMBRE (isMoral): \tabularnewline\hline 
+	field164\_paterno & VARCHAR(255) & NOMBRE (paterno): \tabularnewline\hline 
+	field164\_materno & VARCHAR(45) & NOMBRE (materno): \tabularnewline\hline 
+	field164\_nombre & VARCHAR(45) & NOMBRE (nombre): \tabularnewline\hline 
+	field165 & VARCHAR(45) & CAR\'ACTER (ACTOR, DEMANDADO ETC): \tabularnewline\hline 
+	field166 & VARCHAR(45) & JUEZ O MAGISTRADO: \tabularnewline\hline 
+	field167\_isMoral & TINYINT(1) & NOMBRE DEL JUEZ O MAGISTRADO (isMoral): \tabularnewline\hline 
+	field167\_paterno & VARCHAR(255) & NOMBRE DEL JUEZ O MAGISTRADO (paterno): \tabularnewline\hline 
+	field167\_materno & VARCHAR(45) & NOMBRE DEL JUEZ O MAGISTRADO (materno): \tabularnewline\hline 
+	field167\_nombre & VARCHAR(45) & NOMBRE DEL JUEZ O MAGISTRADO (nombre): \tabularnewline\hline 
+	field168 & VARCHAR(45) & N\'UMERO DE BILLETE DE DEP\'OSITO: \tabularnewline\hline 
+	field169 & DECIMAL(11,2) & CANTIDAD EN N\'UMERO: \tabularnewline\hline 
+	field169b & VARCHAR(255) & CANTIDAD EN LETRA: \tabularnewline\hline 
+	field170 & VARCHAR(45) & ASIENTO DE CAJA FOLIO: \tabularnewline\hline 
+	field171 & DATETIME & FECHA: \tabularnewline\hline 
+	field172 & INT(10) & FIRMA: \tabularnewline\hline 
+	field173 & INT(10) & DE PRESIDENTE DE SALA: \tabularnewline\hline 
+	field174 & INT(10) & DE SECRETARIA DE ACUERDOS: \tabularnewline\hline 

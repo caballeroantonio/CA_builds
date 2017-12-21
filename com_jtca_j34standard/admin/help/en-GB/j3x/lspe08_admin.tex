@@ -1,0 +1,46 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	id\_expediente & INT(10) & Toca:@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente \tabularnewline\hline 
+	id\_secretaria & INT(10) & Ponencia: \tabularnewline\hline 
+	field2334 & VARCHAR(255) & MOTIVO DE INGRESO DE BILLETE: \tabularnewline\hline 
+	field2335 & DATETIME & FECHA DE INGRESO DE BILLETE: \tabularnewline\hline 
+	field2336 & DATETIME & FECHA DE EXPEDICI\'ON DE BILLETE: \tabularnewline\hline 
+	field2337 & DECIMAL(11,2) & IMPORTE: \tabularnewline\hline 
+	field2338 & DATETIME & FECHA DE EGRESO DE BILLETE: \tabularnewline\hline 
+	field2339 & VARCHAR(255) & MOTIVO DE EGRESO DE BILLETE: \tabularnewline\hline 
+	field2340\_isMoral & TINYINT(1) & PERSONA QUE RECIBE (isMoral): \tabularnewline\hline 
+	field2340\_paterno & VARCHAR(255) & PERSONA QUE RECIBE (paterno): \tabularnewline\hline 
+	field2340\_materno & VARCHAR(45) & PERSONA QUE RECIBE (materno): \tabularnewline\hline 
+	field2340\_nombre & VARCHAR(45) & PERSONA QUE RECIBE (nombre): \tabularnewline\hline 
+	field2341 & INT(10) & FIRMA DE QUIEN RECIBE: \tabularnewline\hline 
+	field2342 & TEXT & OBSERVACIONES: \tabularnewline\hline 

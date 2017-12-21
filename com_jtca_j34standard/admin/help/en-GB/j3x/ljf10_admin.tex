@@ -1,0 +1,46 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	id\_expediente & INT(10) & Expediente:@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente \tabularnewline\hline 
+	id\_secretaria & INT(10) & Secretar\'i{}a: \tabularnewline\hline 
+	field13 & VARCHAR(45) & DESIGNACI\'ON DE :: \tabularnewline\hline 
+	field5\_isMoral & TINYINT(1) & NOMBRE (isMoral): \tabularnewline\hline 
+	field5\_paterno & VARCHAR(255) & NOMBRE (paterno): \tabularnewline\hline 
+	field5\_materno & VARCHAR(45) & NOMBRE (materno): \tabularnewline\hline 
+	field5\_nombre & VARCHAR(45) & NOMBRE (nombre): \tabularnewline\hline 
+	field6 & VARCHAR(45) & ART. 910 C.P.C.: \tabularnewline\hline 
+	field7 & INT(10) & ESPECIALIDAD: \tabularnewline\hline 
+	field8 & DATETIME & FECHA DEL AUTO DE DESIGNACI\'ON: \tabularnewline\hline 
+	field9 & DATETIME & FECHA DE NOTIFICACI\'ON DEL AUTO DE DESIGNACI\'ON: \tabularnewline\hline 
+	field10 & DATETIME & FECHA DE ACEPTACI\'ON: \tabularnewline\hline 
+	field11 & DATETIME & FECHA EN QUE RINDE EL DICTAMEN: \tabularnewline\hline 
+	field12 & TEXT & OBSERVACIONES: \tabularnewline\hline 
