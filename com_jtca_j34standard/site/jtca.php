@@ -37,7 +37,207 @@ $app = JFactory::getApplication();
 $user  = JFactory::getUser();
 
 
+if ($app->input->get('view') === 'ljc01s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc02s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
 if ($app->input->get('view') === 'lejemplos' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc03s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc04s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc05s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc06s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc07s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc08s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc09s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc10s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc11s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc12s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc13s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc14s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc16s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc17s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc18s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc19s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc20s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'ljc21s' AND $app->input->get('layout') === 'modal')
 {
 	if (!$user->authorise('core.edit', 'com_jtca'))
 	{

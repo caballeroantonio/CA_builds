@@ -1,0 +1,48 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_expediente & INT(10) & Expediente:@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente \tabularnewline\hline 
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	id\_secretaria & INT(10) & Secretar\'i{}a: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	field4 & DATETIME & FECHA DE LA RESOLUCI\'ON QUE LA DECRETA: \tabularnewline\hline 
+	field5\_paterno & VARCHAR(255) & NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a. paterno):apellido paterno \tabularnewline\hline 
+	field5\_materno & VARCHAR(45) & NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a. materno):apellido materno \tabularnewline\hline 
+	field5\_nombre & VARCHAR(45) & NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (nombre):nombre \tabularnewline\hline 
+	field5\_isMoral & TINYINT(1) & NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (es Moral):es Moral \tabularnewline\hline 
+	field5\_isMoral & TINYINT(1) & NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (isMoral): \tabularnewline\hline 
+	field5\_paterno & VARCHAR(255) & NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (paterno): \tabularnewline\hline 
+	field5\_materno & VARCHAR(45) & NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (materno): \tabularnewline\hline 
+	field5\_nombre & VARCHAR(45) & NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (nombre): \tabularnewline\hline 
+	field6 & VARCHAR(45) & No. DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCI\'ON: \tabularnewline\hline 
+	field7 & DATETIME & FECHA DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCI\'ON: \tabularnewline\hline 
+	field8 & DECIMAL(11,2) & MONTO DE LA MULTA: \tabularnewline\hline 
+	field9 & DATETIME & FECHA DE ENTREGA DEL DOCUMENTO A LA AUTORIDAD: \tabularnewline\hline 
+	field12 & TEXT & OBSERVACIONES: \tabularnewline\hline 

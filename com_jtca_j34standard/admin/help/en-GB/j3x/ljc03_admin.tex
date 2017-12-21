@@ -1,0 +1,63 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_expediente & INT(10) & Expediente:@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente \tabularnewline\hline 
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	id\_secretaria & INT(10) & Secretar\'i{}a: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	field1\_paterno & VARCHAR(255) & BENEFICIARIO (a. paterno):apellido paterno \tabularnewline\hline 
+	field1\_materno & VARCHAR(45) & BENEFICIARIO (a. materno):apellido materno \tabularnewline\hline 
+	field1\_nombre & VARCHAR(45) & BENEFICIARIO (nombre):nombre \tabularnewline\hline 
+	field1\_isMoral & TINYINT(1) & BENEFICIARIO (es Moral):es Moral \tabularnewline\hline 
+	field1\_isMoral & TINYINT(1) & BENEFICIARIO (isMoral): \tabularnewline\hline 
+	field1\_paterno & VARCHAR(255) & BENEFICIARIO (paterno): \tabularnewline\hline 
+	field1\_materno & VARCHAR(45) & BENEFICIARIO (materno): \tabularnewline\hline 
+	field1\_nombre & VARCHAR(45) & BENEFICIARIO (nombre): \tabularnewline\hline 
+	field2 & VARCHAR(45) & PERSONALIDAD: \tabularnewline\hline 
+	field3 & DATETIME & FECHA EN QUE RECIBE: \tabularnewline\hline 
+	field4 & VARCHAR(45) & No DEL BILLETE: \tabularnewline\hline 
+	field5 & DECIMAL(11,2) & MONTO: \tabularnewline\hline 
+	field6\_paterno & VARCHAR(255) & NOMBRE DE QUIEN RECIBE (a. paterno):apellido paterno \tabularnewline\hline 
+	field6\_materno & VARCHAR(45) & NOMBRE DE QUIEN RECIBE (a. materno):apellido materno \tabularnewline\hline 
+	field6\_nombre & VARCHAR(45) & NOMBRE DE QUIEN RECIBE (nombre):nombre \tabularnewline\hline 
+	field6\_isMoral & TINYINT(1) & NOMBRE DE QUIEN RECIBE (es Moral):es Moral \tabularnewline\hline 
+	field6\_isMoral & TINYINT(1) & NOMBRE DE QUIEN RECIBE (isMoral): \tabularnewline\hline 
+	field6\_paterno & VARCHAR(255) & NOMBRE DE QUIEN RECIBE (paterno): \tabularnewline\hline 
+	field6\_materno & VARCHAR(45) & NOMBRE DE QUIEN RECIBE (materno): \tabularnewline\hline 
+	field6\_nombre & VARCHAR(45) & NOMBRE DE QUIEN RECIBE (nombre): \tabularnewline\hline 
+	field7 & INT(10) & DE QUIEN RECIBE: \tabularnewline\hline 
+	field7h & INT(10) & DE QUIEN RECIBE: \tabularnewline\hline 
+	field8 & VARCHAR(45) & DATOS DE IDENTIFICACI\'ON: \tabularnewline\hline 
+	field10 & VARCHAR(45) & FOJAS: \tabularnewline\hline 
+	field11 & INT(10) & DEL JUEZ: \tabularnewline\hline 
+	field12 & INT(10) & DEL SECRETARIO: \tabularnewline\hline 
+	field13 & VARCHAR(45) & CONCEPTO: \tabularnewline\hline 
+	field14 & DATETIME & FECHA  DEL AUTO QUE ORDENA LA DEVOLUCI\'ON: \tabularnewline\hline 
+	field15 & TEXT & OBSERVACIONES: \tabularnewline\hline 

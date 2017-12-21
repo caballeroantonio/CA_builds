@@ -94,11 +94,171 @@ class JtCaHelper extends JHelperContent
 	public static function addSubmenu($view_name)
 	{
 
+		$active = $view_name == 'ljc01s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC01S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc01s',
+			$view_name == 'ljc01s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc02s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC02S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc02s',
+			$view_name == 'ljc02s',
+			$active
+		);
+	
 		$active = $view_name == 'lejemplos'? true : false;
 		JHtmlSidebar::addEntry(
 			JText::_('COM_JTCA_LEJEMPLOS_SUBMENU'),
 			'index.php?option=com_jtca&view=lejemplos',
 			$view_name == 'lejemplos',
+			$active
+		);
+	
+		$active = $view_name == 'ljc03s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC03S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc03s',
+			$view_name == 'ljc03s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc04s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC04S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc04s',
+			$view_name == 'ljc04s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc05s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC05S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc05s',
+			$view_name == 'ljc05s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc06s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC06S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc06s',
+			$view_name == 'ljc06s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc07s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC07S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc07s',
+			$view_name == 'ljc07s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc08s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC08S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc08s',
+			$view_name == 'ljc08s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc09s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC09S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc09s',
+			$view_name == 'ljc09s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc10s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC10S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc10s',
+			$view_name == 'ljc10s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc11s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC11S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc11s',
+			$view_name == 'ljc11s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc12s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC12S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc12s',
+			$view_name == 'ljc12s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc13s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC13S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc13s',
+			$view_name == 'ljc13s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc14s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC14S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc14s',
+			$view_name == 'ljc14s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc16s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC16S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc16s',
+			$view_name == 'ljc16s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc17s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC17S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc17s',
+			$view_name == 'ljc17s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc18s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC18S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc18s',
+			$view_name == 'ljc18s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc19s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC19S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc19s',
+			$view_name == 'ljc19s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc20s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC20S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc20s',
+			$view_name == 'ljc20s',
+			$active
+		);
+	
+		$active = $view_name == 'ljc21s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LJC21S_SUBMENU'),
+			'index.php?option=com_jtca&view=ljc21s',
+			$view_name == 'ljc21s',
 			$active
 		);
 	

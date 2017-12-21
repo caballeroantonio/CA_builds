@@ -1,0 +1,43 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_expediente & INT(10) & Expediente:@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente \tabularnewline\hline 
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	id\_secretaria & INT(10) & Secretar\'i{}a: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.:A\~no judicial \tabularnewline\hline 
+	field5 & INT(10) & N\'UMERO DE CUADERNOS O C\'EDULAS: \tabularnewline\hline 
+	field6 & DATETIME & FECHA DE ENTREGA AL ACTUARIO: \tabularnewline\hline 
+	field8 & DATETIME & FECHA DEL AUTO POR DILIGENCIAR: \tabularnewline\hline 
+	field9 & TEXT & LUGAR DONDE DEBE ACTUARSE: \tabularnewline\hline 
+	field10 & DATETIME & FECHA DE LA DILIGENCIA: \tabularnewline\hline 
+	field11 & DATETIME & FECHA DE LA DEVOLUCI\'ON: \tabularnewline\hline 
+	field14 & TINYINT(1) & USO DE LA FUERZA P\'UBLICA: \tabularnewline\hline 
+	field15 & TEXT & DETALLE DEL USO DE LA FUERZA P\'UBLICA:Breve descripci\'on para presentar reporte por convenios con la SSP \tabularnewline\hline 
+	field13 & TEXT & OBSERVACIONES: \tabularnewline\hline 

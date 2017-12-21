@@ -79,10 +79,130 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 	{
 		$buttons = array();
 		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc01s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc01s',
+                    'text'=>'LIBRO DE GOBIERNO',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC01_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc02s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc02s',
+                    'text'=>'LIBRO DE INGRESOS DE VALORES',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC02_DESCRIPTION')
+                );
+		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=lejemplos&layout=gridpanel&tmpl=component',
                     'object'=>'lejemplos',
                     'text'=>'Libro De Ejemplo',//JText::_('JTCA_COMPONENT_WIZARD'),
                     'desc'=>JText::_('COM_JTCA_LEJEMPLO_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc03s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc03s',
+                    'text'=>'LIBRO DE EGRESOS DE VALORES',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC03_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc04s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc04s',
+                    'text'=>'LIBRO DE REGISTRO DE PROMOCIONES',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC04_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc05s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc05s',
+                    'text'=>'LIBRO DE TURNO PARA SENTENCIA',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC05_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc06s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc06s',
+                    'text'=>'LIBRO DE RECURSOS DE APELACIÓN',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC06_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc07s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc07s',
+                    'text'=>'LIBRO DE EXHORTOS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC07_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc08s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc08s',
+                    'text'=>'LIBRO DE OFICIOS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC08_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc09s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc09s',
+                    'text'=>'LIBRO DE ACTUARIOS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC09_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc10s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc10s',
+                    'text'=>'LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTIC',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC10_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc11s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc11s',
+                    'text'=>'LIBRO DE REGISTRO PARA NOTARIOS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC11_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc12s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc12s',
+                    'text'=>'LIBRO DE REGISTRO DE AMPAROS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC12_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc13s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc13s',
+                    'text'=>'LIBRO DE CONTROL DE FIANZAS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC13_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc14s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc14s',
+                    'text'=>'LIBRO DE CONTROL DE MULTAS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC14_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc16s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc16s',
+                    'text'=>'AGENDA DE AUDIENCIAS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC16_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc17s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc17s',
+                    'text'=>'LIBRO DE REMISIÓN AL ARCHIVO',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC17_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc18s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc18s',
+                    'text'=>'LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC18_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc19s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc19s',
+                    'text'=>'LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL ',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC19_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc20s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc20s',
+                    'text'=>'LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCUL',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC20_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=ljc21s&layout=gridpanel&tmpl=component',
+                    'object'=>'ljc21s',
+                    'text'=>'LIBRO DE MINISTERIO PÚBLICO',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LJC21_DESCRIPTION')
                 );
 
 		return $buttons;

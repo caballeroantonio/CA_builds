@@ -922,6 +922,46 @@ UPDATE #__extensions SET params = '{$params_string}' WHERE type = 'component' AN
     
 //			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
 //			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
+//			$db->setQuery('INSERT INTO #__content_types($data['content_types'][code_name]) VALUES();');
+//			$db->execute(); 
 		
 	}  
 }
