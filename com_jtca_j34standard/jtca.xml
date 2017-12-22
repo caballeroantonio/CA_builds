@@ -39,7 +39,7 @@
     <authorUrl>caballeroantonio.com</authorUrl>
     <version>1.0.0</version>
     <description>
-        <p>Componente HelloWorld (de prueba)</p>
+        <p>Componente HelloWorld (de prueba)</p><br/><p>linea</p><br/><p>linea</p>
     </description>
     <files folder="site">
         <filename>jtca.php</filename>

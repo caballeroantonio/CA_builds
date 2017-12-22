@@ -1,7 +1,7 @@
 #one [%%IF per line
 Titulo=TSJ CDMX Libros TxCA Ejemplo
 Nombre del paquete com_architectcomp=com_jtca
-Descripción <p>Componente HelloWorld (de prueba)</p> <p>Componente HelloWorld (de prueba)</p>
+Descripción <p>Componente HelloWorld (de prueba)</p><br/><p>linea</p><br/><p>linea</p> <p>Componente HelloWorld (de prueba)</p><br/><p>linea</p><br/><p>linea</p>
 Release 1.0.0
 Copyright Copyright (c) 2017 - 2020. All Rights Reserved
 COMPONENTSTARTVERSION=1.0.0
