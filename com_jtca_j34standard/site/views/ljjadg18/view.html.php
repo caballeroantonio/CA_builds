@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML LIBRO DE AMPAROS 'LOCOS' View class for the TSJ CDMX Libros TxCA component
+ * HTML LIBRO DE AMPAROS *LOCOS* View class for the TSJ CDMX Libros TxCA component
  *
  */
 class JtCaViewLjjadg18 extends JViewLegacy

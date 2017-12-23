@@ -285,7 +285,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_lejemplo_my_datetime',0)) : ?>
 						<td class="list-my_datetime">
 							<?php 
-								echo $item->my_datetime != '' ? $item->my_datetime : $empty;
+								echo ($item->my_datetime != '' AND $item->my_datetime != '0000-00-00 00:00:00') ? JHtml::date($item->my_datetime, '%Y-%m-%d %H:%M', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>

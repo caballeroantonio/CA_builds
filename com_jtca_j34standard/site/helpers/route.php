@@ -7027,7 +7027,7 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the LIBRO DE AMPAROS 'LOCOS'
+	 * @param	integer	The route of the LIBRO DE AMPAROS *LOCOS*
 	 */
 	public static function getLjjadg18Route($id, $layout = 'default', $keep_item_id = false)
 	{

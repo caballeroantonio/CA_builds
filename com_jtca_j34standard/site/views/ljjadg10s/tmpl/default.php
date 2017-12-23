@@ -345,7 +345,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_ljjadg10_field13',0)) : ?>
 						<td class="list-field13">
 							<?php 
-								echo $item->field13 != '' ? $item->field13 : $empty;
+								echo ($item->field13 != '' AND $item->field13 != '0000-00-00 00:00:00') ? JHtml::date($item->field13, '%Y-%m-%d %H:%M', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>

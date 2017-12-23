@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * TSJ CDMX Libros TxCA Component LIBRO DE AMPAROS 'LOCOS' Model
+ * TSJ CDMX Libros TxCA Component LIBRO DE AMPAROS *LOCOS* Model
  *
  */
 class JtCaModelLjjadg18 extends JModelItem
@@ -181,9 +181,9 @@ class JtCaModelLjjadg18 extends JModelItem
 		return JTable::getInstance($type, $prefix, $config);
 	}
 	/**
-	 * Method to get LIBRO DE AMPAROS 'LOCOS' data.
+	 * Method to get LIBRO DE AMPAROS *LOCOS* data.
 	 *
-	 * @param	integer	$pk	The id of the libro de amparos 'locos'.
+	 * @param	integer	$pk	The id of the libro de amparos *locos*.
 	 *
 	 * @return	mixed	Menu item data object on success, false on failure.
 	 */

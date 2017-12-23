@@ -219,7 +219,7 @@ class JtCaModelLjjadg18 extends JModelAdmin
 		$date = JFactory::getDate();
 		$user = JFactory::getUser();
 		
-		// Increment the libro de amparos 'locos' version number.
+		// Increment the libro de amparos *locos* version number.
 		$table->version++;
 		
 		if (empty($table->id) OR $table->id == 0)

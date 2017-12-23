@@ -149876,7 +149876,7 @@ Create LIBRO DE REMISIÓN AL ARCHIVO
 \end_layout
 
 \begin_layout Subsubsection
-Libro de amparos 'locos'
+Libro de amparos *locos*
 \end_layout
 
 \begin_layout Subparagraph
@@ -149955,7 +149955,7 @@ status collapsed
 
 
 \backslash
-caption{Lista de campos en Libro de amparos 'locos'}
+caption{Lista de campos en Libro de amparos *locos*}
 \backslash
 
 \backslash
@@ -150137,7 +150137,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "LIBRO DE AMPAROS 'LOCOS' - Single LIBRO DE AMPAROS 'LOCOS' Layout"
+name "LIBRO DE AMPAROS 'LOCOS' - Single LIBRO DE AMPAROS *LOCOS* Layout"
 target "SERVER?option=com_jtca&view=ljjadg18&id=1"
 
 \end_inset
@@ -150167,7 +150167,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE AMPAROS 'LOCOS' Layout
+Single LIBRO DE AMPAROS *LOCOS* Layout
 \end_layout
 
 \end_inset
@@ -150183,7 +150183,7 @@ Single LIBRO DE AMPAROS 'LOCOS' Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "LIBRO DE AMPAROS 'LOCOS' - Single LIBRO DE AMPAROS 'LOCOS' Article Layout"
+name "LIBRO DE AMPAROS 'LOCOS' - Single LIBRO DE AMPAROS *LOCOS* Article Layout"
 target "SERVER?option=com_jtca&view=ljjadg18&layout=article&id=1"
 
 \end_inset
@@ -150213,7 +150213,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single LIBRO DE AMPAROS 'LOCOS' Article Layout
+Single LIBRO DE AMPAROS *LOCOS* Article Layout
 \end_layout
 
 \end_inset
@@ -150229,7 +150229,7 @@ Single LIBRO DE AMPAROS 'LOCOS' Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "LIBRO DE AMPAROS 'LOCOS' - Create LIBRO DE AMPAROS 'LOCOS'"
+name "LIBRO DE AMPAROS 'LOCOS' - Create LIBRO DE AMPAROS *LOCOS*"
 target "SERVER?option=com_jtca&view=ljjadg18form&layout=edit&id=1"
 
 \end_inset
@@ -150259,7 +150259,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Create LIBRO DE AMPAROS 'LOCOS'
+Create LIBRO DE AMPAROS *LOCOS*
 \end_layout
 
 \end_inset

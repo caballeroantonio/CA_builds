@@ -252,7 +252,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo $this->item->field2 != '' ? $this->item->field2 : $empty;
+									echo ($this->item->field2 != '' AND $this->item->field2 != '0000-00-00 00:00:00') ? JHtml::date($this->item->field2, '%Y-%m-%d %H:%M', null) : $empty;
 								?>
 							</span>
 						</div>	

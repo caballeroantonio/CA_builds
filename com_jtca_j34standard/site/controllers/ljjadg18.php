@@ -276,7 +276,7 @@ class JtCaControllerLjjadg18 extends JControllerForm
 	/**
 	 * Method to add a new record.
 	 *
-	 * @return  mixed  True if the LIBRO DE AMPAROS 'LOCOS' can be added, a error object if not.
+	 * @return  mixed  True if the LIBRO DE AMPAROS *LOCOS* can be added, a error object if not.
 	 *
 	 */
 	public function add()

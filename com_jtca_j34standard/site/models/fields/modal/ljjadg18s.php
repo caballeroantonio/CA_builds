@@ -31,7 +31,7 @@ defined('JPATH_BASE') or die;
 jimport('joomla.form.formfield');
 
 /**
- * Supports a modal libro de amparos 'locos' picker.
+ * Supports a modal libro de amparos *locos* picker.
  *
  */
 class JFormFieldModal_Ljjadg18s extends JFormField

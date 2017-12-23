@@ -96,7 +96,7 @@ class JtCaModelLjjadg18s extends JModelList
 		
 		$item_id = $app->input->getInt('id', 0) . ':' .$app->input->getInt('Itemid', 0);
 
-		// Check to see if a single libro de amparos 'locos' has been specified either as a parameter or in the url Request
+		// Check to see if a single libro de amparos *locos* has been specified either as a parameter or in the url Request
 		$pk = $params->get('ljjadg18_id', '') == '' ? $app->input->getInt('id', '') : $params->get('ljjadg18_id');
 		$this->setState('filter.ljjadg18_id', $pk);
 		

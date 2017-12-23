@@ -303,14 +303,14 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_lsc13_field229',0)) : ?>
 						<td class="list-field229">
 							<?php 
-								echo $item->field229 != '' ? $item->field229 : $empty;
+								echo ($item->field229 != '' AND $item->field229 != '0000-00-00 00:00:00') ? JHtml::date($item->field229, '%Y-%m-%d %H:%M', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
 					<?php if ($this->params->get('list_show_lsc13_field230',0)) : ?>
 						<td class="list-field230">
 							<?php 
-								echo $item->field230 != '' ? $item->field230 : $empty;
+								echo ($item->field230 != '' AND $item->field230 != '0000-00-00 00:00:00') ? JHtml::date($item->field230, '%Y-%m-%d %H:%M', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>

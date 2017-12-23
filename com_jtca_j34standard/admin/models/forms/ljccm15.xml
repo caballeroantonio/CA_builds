@@ -144,14 +144,14 @@
         </field>  
         <field
             name="faudiencia"
-            type="calendar_clock"
+            type="calendar"
             label="COM_JTCA_LJCCM15S_FIELD_FAUDIENCIA_LABEL"
             description="COM_JTCA_LJCCM15S_FIELD_FAUDIENCIA_DESC"
             class="inputbox validate-date"
 			size="22"
 			maxlength="25"
 			format="%Y-%m-%d %H:%M"
-			filter="fixed"
+ singleheader="true" showtime="true" timeformat="24" todaybutton="true" weeknumbers="true" filltable="true" minyear="-5" maxyear="1" 			filter="fixed"
 			validate="date"
         >
         </field>  

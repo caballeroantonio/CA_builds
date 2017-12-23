@@ -240,7 +240,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_lcp23_fh_recepcion',0)) : ?>
 						<td class="list-fh_recepcion">
 							<?php 
-								echo $item->fh_recepcion != '' ? $item->fh_recepcion : $empty;
+								echo ($item->fh_recepcion != '' AND $item->fh_recepcion != '0000-00-00 00:00:00') ? JHtml::date($item->fh_recepcion, '%Y-%m-%d %H:%M', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
@@ -268,7 +268,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_lcp23_field7',0)) : ?>
 						<td class="list-field7">
 							<?php 
-								echo $item->field7 != '' ? $item->field7 : $empty;
+								echo ($item->field7 != '' AND $item->field7 != '0000-00-00 00:00:00') ? JHtml::date($item->field7, '%Y-%m-%d %H:%M', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>

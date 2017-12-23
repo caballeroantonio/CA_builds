@@ -173,14 +173,14 @@
         </field>  
         <field
             name="my_datetime"
-            type="calendar_clock"
+            type="calendar"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_DATETIME_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_DATETIME_DESC"
             class="inputbox validate-date"
 			size="22"
 			maxlength="25"
 			format="%Y-%m-%d %H:%M"
-			filter="fixed"
+ singleheader="true" showtime="true" timeformat="24" todaybutton="true" weeknumbers="true" filltable="true" minyear="-5" maxyear="1" 			filter="fixed"
 			validate="date"
         >
         </field>  

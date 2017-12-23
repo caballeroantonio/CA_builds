@@ -320,7 +320,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo $this->item->field229 != '' ? $this->item->field229 : $empty;
+									echo ($this->item->field229 != '' AND $this->item->field229 != '0000-00-00 00:00:00') ? JHtml::date($this->item->field229, '%Y-%m-%d %H:%M', null) : $empty;
 								?>
 							</span>
 						</div>	
@@ -332,7 +332,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo $this->item->field230 != '' ? $this->item->field230 : $empty;
+									echo ($this->item->field230 != '' AND $this->item->field230 != '0000-00-00 00:00:00') ? JHtml::date($this->item->field230, '%Y-%m-%d %H:%M', null) : $empty;
 								?>
 							</span>
 						</div>	

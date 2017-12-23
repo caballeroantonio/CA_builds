@@ -22,6 +22,11 @@
 -- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY, without even the implied warranty of
 -- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 -- --------------------------------------------------------
+
+/*
+-- START CUSTOM CODE
+-- Tables already defined in other component, les use only de definitions
+
 --
 -- Table structure for table `jt_lsc01s`
 --
@@ -8120,6 +8125,8 @@ CREATE TABLE IF NOT EXISTS `jt_ljomf22s` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- END CUSTOM CODE
+*/
 
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
@@ -10687,7 +10694,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
 --
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AMPAROS 'LOCOS'',
+INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AMPAROS *LOCOS*',
 'com_jtca.ljjadg18',
 '{"special":{"dbtable":"jtca_ljjadg18s","key":"id","type":"ljjadg18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 '',

@@ -39,37 +39,7 @@
     <authorUrl>caballeroantonio.com</authorUrl>
     <version>1.0.0</version>
     <description>
-        <ul>
-<li class="standard">El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</li>
-<li class="standard">Debido a la gran cantidad de código que se producirá en CA había decidido generar un componente por materia y un componente adicional para administrar los objetos de apoyo, como son los objetos anidados. No funcionó adapatar sistemas de nombres, se generará mucho más ruido. Todo en un solo componente.</li>
-<li class="standard">Quieren formularios continuos, son reticentes con las ventanas modales que se utilizan con los objetos anidados.</li>
-<li class="standard">Actualmente "persons" es un elemento no anidado, pero me gustaría convertirlo en anidado para hacer más limpio el código.</li>
-<li class="standard">Para cumplir con la burocrácia CA la clave del libro la utilizaré como singular y +s para el plural. He renombrado las tablas, pero he conservado el prefijo jtl_{clave}s para conservar compatibilidad con otras reglas que pueda haber.</li>
-<li class="standard">Otros libros que les faltaría el campo a plural son:</li>
-</ul>
-<p style="padding-left: 60px;">dil_jccm07<br />dil_jccm09<br />dep_joc03<br />incul_jpdng01<br />ofen_jpdng01 <br />decl_jpdng01<br />dili_jpdng09<br />firm_jpdng17<br />adol_jjadg05<br />firm_jjadg16<br />adol_jjadg01 <br />averiguacion<br />personaliasedad<br />personedadsexo<br />persondelito<br />personalias<br />jempleado_bb <br />address</p>
-<p style="padding-left: 60px;"> </p>
-<div class="standard">El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</div>
-<div class="standard">En el futuro se requerirá modificar los objetos y quitar el "_s" del code_name y agregar "s" al plural_code_name; y re-nombrar las tablas y vistas.</div>
-<div class="standard"> </div>
-<h1 class="standard">Salas Civiles</h1>
-<div class="standard">El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales de Segunda Instancia Cívil del TSJ CDMX por libros virtuales.</div>
-<div class="standard"> </div>
-<div class="standard">CHANGELOG</div>
-<div class="standard">20170919 Todos los field.filter = false para evitar SELECT DISCTINCT</div>
-<div class="standard">20170919 se agregó FIELD_TYPE = expediente, name reemplaza expedienteFriendlyName</div>
-<div class="standard">20170921 quitar 'PARTES DEL JUICIO' (actor, demandado, otros) del nivel 1, add expediente de origen nivel 2, remove Expediente del nivel 1</div>
-<div class="standard">20170921 se agregó validaciones a todos los campos fecha</div>
-<div class="standard">20170922 se agregó FIELD_TYPE = firma, se cambiaron los campos al FIELD_TYPE {expediente|firma}</div>
-<div class="standard"> </div>
-<div class="standard">@ToDo</div>
-<div class="standard">- Remover todas las 'PARTES DEL JUICIO' libros y agregarlo en objeto expediente</div>
-<div class="standard">- Generar modificar el objeto modal para que permita capturar id_expediente, id_expediente_origen, elegir un expediente en de éste órgano y un expediente de origen de otro organo.</div>
-<div class="standard">- Permitir registrar: AUTORIZADO POR QUÉ PARTE, PARTE ACTORA, PARTE DEMANDADA</div>
-<div class="standard">Add key to id_expediente, field.filter = false quita TABLE.KEY</div>
-<div class="standard">
-<p>Make expediente de origen, read only on 1ra instancia</p>
-</div>
+        <ul><br/><li class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</li><br/><li class=&quot;standard&quot;>Debido a la gran cantidad de código que se producirá en CA había decidido generar un componente por materia y un componente adicional para administrar los objetos de apoyo, como son los objetos anidados. No funcionó adapatar sistemas de nombres, se generará mucho más ruido. Todo en un solo componente.</li><br/><li class=&quot;standard&quot;>Quieren formularios continuos, son reticentes con las ventanas modales que se utilizan con los objetos anidados.</li><br/><li class=&quot;standard&quot;>Actualmente &quot;persons&quot; es un elemento no anidado, pero me gustaría convertirlo en anidado para hacer más limpio el código.</li><br/><li class=&quot;standard&quot;>Para cumplir con la burocrácia CA la clave del libro la utilizaré como singular y +s para el plural. He renombrado las tablas, pero he conservado el prefijo jtl_{clave}s para conservar compatibilidad con otras reglas que pueda haber.</li><br/><li class=&quot;standard&quot;>Otros libros que les faltaría el campo a plural son:</li><br/></ul><br/><p style=&quot;padding-left: 60px;&quot;>dil_jccm07<br />dil_jccm09<br />dep_joc03<br />incul_jpdng01<br />ofen_jpdng01 <br />decl_jpdng01<br />dili_jpdng09<br />firm_jpdng17<br />adol_jjadg05<br />firm_jjadg16<br />adol_jjadg01 <br />averiguacion<br />personaliasedad<br />personedadsexo<br />persondelito<br />personalias<br />jempleado_bb <br />address</p><br/><p style=&quot;padding-left: 60px;&quot;> </p><br/><div class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</div><br/><div class=&quot;standard&quot;>En el futuro se requerirá modificar los objetos y quitar el &quot;_s&quot; del code_name y agregar &quot;s&quot; al plural_code_name; y re-nombrar las tablas y vistas.</div><br/><div class=&quot;standard&quot;> </div><br/><h1 class=&quot;standard&quot;>Salas Civiles</h1><br/><div class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales de Segunda Instancia Cívil del TSJ CDMX por libros virtuales.</div><br/><div class=&quot;standard&quot;> </div><br/><div class=&quot;standard&quot;>CHANGELOG</div><br/><div class=&quot;standard&quot;>20170919 Todos los field.filter = false para evitar SELECT DISCTINCT</div><br/><div class=&quot;standard&quot;>20170919 se agregó FIELD_TYPE = expediente, name reemplaza expedienteFriendlyName</div><br/><div class=&quot;standard&quot;>20170921 quitar 'PARTES DEL JUICIO' (actor, demandado, otros) del nivel 1, add expediente de origen nivel 2, remove Expediente del nivel 1</div><br/><div class=&quot;standard&quot;>20170921 se agregó validaciones a todos los campos fecha</div><br/><div class=&quot;standard&quot;>20170922 se agregó FIELD_TYPE = firma, se cambiaron los campos al FIELD_TYPE {expediente|firma}</div><br/><div class=&quot;standard&quot;> </div><br/><div class=&quot;standard&quot;>@ToDo</div><br/><div class=&quot;standard&quot;>- Remover todas las 'PARTES DEL JUICIO' libros y agregarlo en objeto expediente</div><br/><div class=&quot;standard&quot;>- Generar modificar el objeto modal para que permita capturar id_expediente, id_expediente_origen, elegir un expediente en de éste órgano y un expediente de origen de otro organo.</div><br/><div class=&quot;standard&quot;>- Permitir registrar: AUTORIZADO POR QUÉ PARTE, PARTE ACTORA, PARTE DEMANDADA</div><br/><div class=&quot;standard&quot;>Add key to id_expediente, field.filter = false quita TABLE.KEY</div><br/><div class=&quot;standard&quot;><br/><p>Make expediente de origen, read only on 1ra instancia</p><br/></div>
     </description>
     <files folder="site">
         <filename>jtca.php</filename>

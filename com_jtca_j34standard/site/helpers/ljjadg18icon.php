@@ -84,7 +84,7 @@ class JHTMLLjjadg18Icon
 	/**
 	 * Display an edit icon for the ljjadg18.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de amparos 'locos' is trashed.
+	 * This icon will not display in a popup window, nor if the libro de amparos *locos* is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljjadg18	The ljjadg18 in question.
@@ -165,7 +165,7 @@ class JHTMLLjjadg18Icon
 	/**
 	 * Display an delete icon for the ljjadg18.
 	 *
-	 * This icon will not display in a popup window, nor if the libro de amparos 'locos' is trashed.
+	 * This icon will not display in a popup window, nor if the libro de amparos *locos* is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$ljjadg18	The ljjadg18 in question.

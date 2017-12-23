@@ -206,7 +206,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo $this->item->fh_recepcion != '' ? $this->item->fh_recepcion : $empty;
+									echo ($this->item->fh_recepcion != '' AND $this->item->fh_recepcion != '0000-00-00 00:00:00') ? JHtml::date($this->item->fh_recepcion, '%Y-%m-%d %H:%M', null) : $empty;
 								?>
 							</span>
 						</div>	
@@ -254,7 +254,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo $this->item->field7 != '' ? $this->item->field7 : $empty;
+									echo ($this->item->field7 != '' AND $this->item->field7 != '0000-00-00 00:00:00') ? JHtml::date($this->item->field7, '%Y-%m-%d %H:%M', null) : $empty;
 								?>
 							</span>
 						</div>	

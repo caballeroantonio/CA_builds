@@ -119,11 +119,11 @@ class JtCaModelLjjadg18Form extends JtCaModelLjjadg18
 	}
 
 	/**
-	 * Method to get libro de amparos 'locos' data.
+	 * Method to get libro de amparos *locos* data.
 	 *
-	 * @param	integer	$item_id	The id of the libro de amparos 'locos'.
+	 * @param	integer	$item_id	The id of the libro de amparos *locos*.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	LIBRO DE AMPAROS 'LOCOS' item data object on success, false on failure.
+	 * @return	mixed	LIBRO DE AMPAROS *LOCOS* item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{
@@ -367,7 +367,7 @@ class JtCaModelLjjadg18Form extends JtCaModelLjjadg18
 			return false;
 		}
 
-		// Reorder the libro de amparos 'locos' so the new libro de amparos 'locos' is first
+		// Reorder the libro de amparos 'locos' so the new libro de amparos *locos* is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);

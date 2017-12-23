@@ -254,7 +254,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_ljjadg13_faudiencia',0)) : ?>
 						<td class="list-faudiencia">
 							<?php 
-								echo $item->faudiencia != '' ? $item->faudiencia : $empty;
+								echo ($item->faudiencia != '' AND $item->faudiencia != '0000-00-00 00:00:00') ? JHtml::date($item->faudiencia, '%Y-%m-%d %H:%M', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>

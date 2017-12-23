@@ -247,7 +247,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_ljc04_field1',0)) : ?>
 						<td class="list-field1">
 							<?php 
-								echo $item->field1 != '' ? $item->field1 : $empty;
+								echo ($item->field1 != '' AND $item->field1 != '0000-00-00 00:00:00') ? JHtml::date($item->field1, '%Y-%m-%d %H:%M', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>

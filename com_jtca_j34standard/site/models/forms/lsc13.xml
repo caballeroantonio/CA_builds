@@ -251,28 +251,28 @@
         <field
             id="field229"
             name="field229"
-            type="calendar_clock"
+            type="calendar"
             label="COM_JTCA_LSC13S_FIELD_FIELD229_LABEL"
             description="COM_JTCA_LSC13S_FIELD_FIELD229_DESC"
             class="inputbox validate-date"
 			size="22"
 			maxlength="25"
 			format="%Y-%m-%d %H:%M"
-			filter="fixed"
+ singleheader="true" showtime="true" timeformat="24" todaybutton="true" weeknumbers="true" filltable="true" minyear="-5" maxyear="1" 			filter="fixed"
 			validate="date"
         >
         </field>  
         <field
             id="field230"
             name="field230"
-            type="calendar_clock"
+            type="calendar"
             label="COM_JTCA_LSC13S_FIELD_FIELD230_LABEL"
             description="COM_JTCA_LSC13S_FIELD_FIELD230_DESC"
             class="inputbox validate-date"
 			size="22"
 			maxlength="25"
 			format="%Y-%m-%d %H:%M"
-			filter="fixed"
+ singleheader="true" showtime="true" timeformat="24" todaybutton="true" weeknumbers="true" filltable="true" minyear="-5" maxyear="1" 			filter="fixed"
 			validate="date"
         >
         </field>  
