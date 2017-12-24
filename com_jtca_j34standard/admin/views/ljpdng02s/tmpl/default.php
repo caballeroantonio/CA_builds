@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
@@ -121,6 +121,9 @@ if ($save_order)
 						<?php echo JHtml::_('searchtools.sort', 'JSTATUS', 'a.state', $list_dirn, $list_order); ?>
 					</th>
 					<th width="10%" class="nowrap center hidden-phone">
+						<?php echo JTEXT::_('COM_JTCA_LJPDNG02S_HEADING_BILLETE'); ?>						
+					</th>	
+					<th width="10%" class="nowrap center hidden-phone">
 						<?php echo JHtml::_('searchtools.sort',  'COM_JTCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
 					</th>
 					<th width="10%" class="nowrap center hidden-phone">
@@ -188,6 +191,11 @@ if ($save_order)
 								echo JHtml::_('actionsdropdown.render');
 							?>
 						</div>
+					</td>	
+					<td class="nowrap small center hidden-phone">
+						<?php 
+							echo $item->billete != '' ? $item->billete : $empty; 
+						?>				
 					</td>	
 					<td class="small hidden-phone">
 							<a class="hasTooltip" href="<?php echo JRoute::_('index.php?option=com_users&task=user.edit&id='.(int) $item->created_by); ?>" title="<?php echo JText::_('JAUTHOR'); ?>">

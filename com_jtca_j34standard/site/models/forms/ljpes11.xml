@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- @version 			$Id:$ -->
-<!-- @name			    TSJ CDMX Libros TxCA (Release 1.0.0) -->
+<!-- @name			    TSJ CDMX Libros TxCA (Release 1.0.1) -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
 <!-- @package			com_jtca -->
 <!-- @subpackage		com_jtca.site -->
@@ -192,11 +192,11 @@
         >
         </field>  
         <field
-            id="field3"
-            name="field3"
+            id="billete"
+            name="billete"
             type="text"
-            label="COM_JTCA_LJPES11S_FIELD_FIELD3_LABEL"
-            description="COM_JTCA_LJPES11S_FIELD_FIELD3_DESC"
+            label="COM_JTCA_LJPES11S_FIELD_BILLETE_LABEL"
+            description="COM_JTCA_LJPES11S_FIELD_BILLETE_DESC"
             class="inputbox"
 			size="50"
 			maxlength="255"

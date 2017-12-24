@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -70,6 +70,10 @@ $empty = $component->params->get('default_empty_field', '');
 	<form action="<?php echo JRoute::_('index.php?option=com_jtca&view=ljpdng02s&layout=modal&tmpl=component');?>" method="post" name="adminForm" id="adminForm">
 		<div class="filter_search">
 			<input type="text" name="filter_search" id="filter_search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>"  onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_JTCA_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('JSEARCH_FILTER_LABEL'); ?>" />
+			<select name="filter_billete" onchange="this.form.submit()">
+				<option value=""><?php echo JText::_('COM_JTCA_LJPDNG02S_SELECT_BILLETE');?></option>
+				<?php echo JHtml::_('select.options', $this->billete_values, 'value', 'text', $this->state->get('filter.billete'));?>
+			</select>	
 			<div class="display-limit">
 				<?php echo $this->pagination->getLimitBox(); ?>
 			</div>
@@ -78,6 +82,9 @@ $empty = $component->params->get('default_empty_field', '');
 		<table class="ljpdng02s">
 			<thead>
 				<tr>
+					<th width="10%">
+						<?php echo JTEXT::_('COM_JTCA_LJPDNG02S_HEADING_BILLETE'); ?>
+					</th>	
 						
 					<th width="1%" class="nowrap" style="display: none;">
 						<?php echo JHtml::_('grid.sort', 'JGRID_HEADING_ID', 'a.id', $list_dirn, $list_order); ?>
@@ -87,6 +94,13 @@ $empty = $component->params->get('default_empty_field', '');
 			<tbody>
 			<?php foreach ($this->items as $i => $item) : ?>
 				<tr class="row<?php echo $i % 2; ?>">
+					<td class="center">
+						<a class="pointer" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
+							<?php 
+								echo $item->billete != '' ? $item->billete : $empty; 
+							?>
+						</a>	
+					</td>	
 
 					<td class="center" style="display: none;">
 							<?php echo $item->id; ?>

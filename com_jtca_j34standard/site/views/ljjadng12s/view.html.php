@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -69,6 +69,7 @@ class JtCaViewLjjadng12s extends JViewLegacy
 		}
 
 		// PREPARE THE DATA
+		$this->billete_values	= $this->get('Billetevalues');
 		// Compute the ljjadng12 slugs and set the trigger events.
 		foreach ($items as $i => &$item)
 		{

@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
@@ -39,6 +39,7 @@ class JtCaViewLjpdng02s extends JViewLegacy
 	protected $state;
 	protected $creators;
 	protected $can_do;
+	protected $billete_values;
 
 	/**
 	 * Execute and display a template script.

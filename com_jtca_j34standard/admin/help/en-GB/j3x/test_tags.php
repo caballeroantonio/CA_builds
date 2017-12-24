@@ -1,10 +1,10 @@
 #one [%%IF per line
 Titulo=TSJ CDMX Libros TxCA
 Nombre del paquete com_architectcomp=com_jtca
-Descripción <ul><br/><li class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</li><br/><li class=&quot;standard&quot;>Debido a la gran cantidad de código que se producirá en CA había decidido generar un componente por materia y un componente adicional para administrar los objetos de apoyo, como son los objetos anidados. No funcionó adapatar sistemas de nombres, se generará mucho más ruido. Todo en un solo componente.</li><br/><li class=&quot;standard&quot;>Quieren formularios continuos, son reticentes con las ventanas modales que se utilizan con los objetos anidados.</li><br/><li class=&quot;standard&quot;>Actualmente &quot;persons&quot; es un elemento no anidado, pero me gustaría convertirlo en anidado para hacer más limpio el código.</li><br/><li class=&quot;standard&quot;>Para cumplir con la burocrácia CA la clave del libro la utilizaré como singular y +s para el plural. He renombrado las tablas, pero he conservado el prefijo jtl_{clave}s para conservar compatibilidad con otras reglas que pueda haber.</li><br/><li class=&quot;standard&quot;>Otros libros que les faltaría el campo a plural son:</li><br/></ul><br/><p style=&quot;padding-left: 60px;&quot;>dil_jccm07<br />dil_jccm09<br />dep_joc03<br />incul_jpdng01<br />ofen_jpdng01 <br />decl_jpdng01<br />dili_jpdng09<br />firm_jpdng17<br />adol_jjadg05<br />firm_jjadg16<br />adol_jjadg01 <br />averiguacion<br />personaliasedad<br />personedadsexo<br />persondelito<br />personalias<br />jempleado_bb <br />address</p><br/><p style=&quot;padding-left: 60px;&quot;> </p><br/><div class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</div><br/><div class=&quot;standard&quot;>En el futuro se requerirá modificar los objetos y quitar el &quot;_s&quot; del code_name y agregar &quot;s&quot; al plural_code_name; y re-nombrar las tablas y vistas.</div><br/><div class=&quot;standard&quot;> </div><br/><h1 class=&quot;standard&quot;>Salas Civiles</h1><br/><div class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales de Segunda Instancia Cívil del TSJ CDMX por libros virtuales.</div><br/><div class=&quot;standard&quot;> </div><br/><div class=&quot;standard&quot;>CHANGELOG</div><br/><div class=&quot;standard&quot;>20170919 Todos los field.filter = false para evitar SELECT DISCTINCT</div><br/><div class=&quot;standard&quot;>20170919 se agregó FIELD_TYPE = expediente, name reemplaza expedienteFriendlyName</div><br/><div class=&quot;standard&quot;>20170921 quitar 'PARTES DEL JUICIO' (actor, demandado, otros) del nivel 1, add expediente de origen nivel 2, remove Expediente del nivel 1</div><br/><div class=&quot;standard&quot;>20170921 se agregó validaciones a todos los campos fecha</div><br/><div class=&quot;standard&quot;>20170922 se agregó FIELD_TYPE = firma, se cambiaron los campos al FIELD_TYPE {expediente|firma}</div><br/><div class=&quot;standard&quot;> </div><br/><div class=&quot;standard&quot;>@ToDo</div><br/><div class=&quot;standard&quot;>- Remover todas las 'PARTES DEL JUICIO' libros y agregarlo en objeto expediente</div><br/><div class=&quot;standard&quot;>- Generar modificar el objeto modal para que permita capturar id_expediente, id_expediente_origen, elegir un expediente en de éste órgano y un expediente de origen de otro organo.</div><br/><div class=&quot;standard&quot;>- Permitir registrar: AUTORIZADO POR QUÉ PARTE, PARTE ACTORA, PARTE DEMANDADA</div><br/><div class=&quot;standard&quot;>Add key to id_expediente, field.filter = false quita TABLE.KEY</div><br/><div class=&quot;standard&quot;><br/><p>Make expediente de origen, read only on 1ra instancia</p><br/></div> <ul><br/><li class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</li><br/><li class=&quot;standard&quot;>Debido a la gran cantidad de código que se producirá en CA había decidido generar un componente por materia y un componente adicional para administrar los objetos de apoyo, como son los objetos anidados. No funcionó adapatar sistemas de nombres, se generará mucho más ruido. Todo en un solo componente.</li><br/><li class=&quot;standard&quot;>Quieren formularios continuos, son reticentes con las ventanas modales que se utilizan con los objetos anidados.</li><br/><li class=&quot;standard&quot;>Actualmente &quot;persons&quot; es un elemento no anidado, pero me gustaría convertirlo en anidado para hacer más limpio el código.</li><br/><li class=&quot;standard&quot;>Para cumplir con la burocrácia CA la clave del libro la utilizaré como singular y +s para el plural. He renombrado las tablas, pero he conservado el prefijo jtl_{clave}s para conservar compatibilidad con otras reglas que pueda haber.</li><br/><li class=&quot;standard&quot;>Otros libros que les faltaría el campo a plural son:</li><br/></ul><br/><p style=&quot;padding-left: 60px;&quot;>dil_jccm07<br />dil_jccm09<br />dep_joc03<br />incul_jpdng01<br />ofen_jpdng01 <br />decl_jpdng01<br />dili_jpdng09<br />firm_jpdng17<br />adol_jjadg05<br />firm_jjadg16<br />adol_jjadg01 <br />averiguacion<br />personaliasedad<br />personedadsexo<br />persondelito<br />personalias<br />jempleado_bb <br />address</p><br/><p style=&quot;padding-left: 60px;&quot;> </p><br/><div class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</div><br/><div class=&quot;standard&quot;>En el futuro se requerirá modificar los objetos y quitar el &quot;_s&quot; del code_name y agregar &quot;s&quot; al plural_code_name; y re-nombrar las tablas y vistas.</div><br/><div class=&quot;standard&quot;> </div><br/><h1 class=&quot;standard&quot;>Salas Civiles</h1><br/><div class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales de Segunda Instancia Cívil del TSJ CDMX por libros virtuales.</div><br/><div class=&quot;standard&quot;> </div><br/><div class=&quot;standard&quot;>CHANGELOG</div><br/><div class=&quot;standard&quot;>20170919 Todos los field.filter = false para evitar SELECT DISCTINCT</div><br/><div class=&quot;standard&quot;>20170919 se agregó FIELD_TYPE = expediente, name reemplaza expedienteFriendlyName</div><br/><div class=&quot;standard&quot;>20170921 quitar 'PARTES DEL JUICIO' (actor, demandado, otros) del nivel 1, add expediente de origen nivel 2, remove Expediente del nivel 1</div><br/><div class=&quot;standard&quot;>20170921 se agregó validaciones a todos los campos fecha</div><br/><div class=&quot;standard&quot;>20170922 se agregó FIELD_TYPE = firma, se cambiaron los campos al FIELD_TYPE {expediente|firma}</div><br/><div class=&quot;standard&quot;> </div><br/><div class=&quot;standard&quot;>@ToDo</div><br/><div class=&quot;standard&quot;>- Remover todas las 'PARTES DEL JUICIO' libros y agregarlo en objeto expediente</div><br/><div class=&quot;standard&quot;>- Generar modificar el objeto modal para que permita capturar id_expediente, id_expediente_origen, elegir un expediente en de éste órgano y un expediente de origen de otro organo.</div><br/><div class=&quot;standard&quot;>- Permitir registrar: AUTORIZADO POR QUÉ PARTE, PARTE ACTORA, PARTE DEMANDADA</div><br/><div class=&quot;standard&quot;>Add key to id_expediente, field.filter = false quita TABLE.KEY</div><br/><div class=&quot;standard&quot;><br/><p>Make expediente de origen, read only on 1ra instancia</p><br/></div>
-Release 1.0.0
+Descripción <ul><br/><li class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</li><br/><li class=&quot;standard&quot;>Debido a la gran cantidad de código que se producirá en CA había decidido generar un componente por materia y un componente adicional para administrar los objetos de apoyo, como son los objetos anidados. No funcionó adapatar sistemas de nombres, se generará mucho más ruido. Todo en un solo componente.</li><br/><li class=&quot;standard&quot;>Quieren formularios continuos, son reticentes con las ventanas modales que se utilizan con los objetos anidados.</li><br/><li class=&quot;standard&quot;>Actualmente &quot;persons&quot; es un elemento no anidado, pero me gustaría convertirlo en anidado para hacer más limpio el código.</li><br/><li class=&quot;standard&quot;>Para cumplir con la burocrácia CA la clave del libro la utilizaré como singular y +s para el plural. He renombrado las tablas, pero he conservado el prefijo jtl_{clave}s para conservar compatibilidad con otras reglas que pueda haber.</li><br/><li class=&quot;standard&quot;>Otros libros que les faltaría el campo a plural son:</li><br/></ul><br/><p style=&quot;padding-left: 60px;&quot;>dil_jccm07<br />dil_jccm09<br />dep_joc03<br />incul_jpdng01<br />ofen_jpdng01 <br />decl_jpdng01<br />dili_jpdng09<br />firm_jpdng17<br />adol_jjadg05<br />firm_jjadg16<br />adol_jjadg01 <br />averiguacion<br />personaliasedad<br />personedadsexo<br />persondelito<br />personalias<br />jempleado_bb <br />address</p><br/><p style=&quot;padding-left: 60px;&quot;> </p><br/><div class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</div><br/><div class=&quot;standard&quot;>En el futuro se requerirá modificar los objetos y quitar el &quot;_s&quot; del code_name y agregar &quot;s&quot; al plural_code_name; y re-nombrar las tablas y vistas.</div><br/><div class=&quot;standard&quot;> </div><br/><div class=&quot;standard&quot;><strong>CHANGELOG</strong></div><br/><div class=&quot;standard&quot;>20171222 Solicitaron que en los libros de ingresos y egresos se valide la captura única de los números de billete</div><br/><div class=&quot;standard&quot;> </div> <ul><br/><li class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</li><br/><li class=&quot;standard&quot;>Debido a la gran cantidad de código que se producirá en CA había decidido generar un componente por materia y un componente adicional para administrar los objetos de apoyo, como son los objetos anidados. No funcionó adapatar sistemas de nombres, se generará mucho más ruido. Todo en un solo componente.</li><br/><li class=&quot;standard&quot;>Quieren formularios continuos, son reticentes con las ventanas modales que se utilizan con los objetos anidados.</li><br/><li class=&quot;standard&quot;>Actualmente &quot;persons&quot; es un elemento no anidado, pero me gustaría convertirlo en anidado para hacer más limpio el código.</li><br/><li class=&quot;standard&quot;>Para cumplir con la burocrácia CA la clave del libro la utilizaré como singular y +s para el plural. He renombrado las tablas, pero he conservado el prefijo jtl_{clave}s para conservar compatibilidad con otras reglas que pueda haber.</li><br/><li class=&quot;standard&quot;>Otros libros que les faltaría el campo a plural son:</li><br/></ul><br/><p style=&quot;padding-left: 60px;&quot;>dil_jccm07<br />dil_jccm09<br />dep_joc03<br />incul_jpdng01<br />ofen_jpdng01 <br />decl_jpdng01<br />dili_jpdng09<br />firm_jpdng17<br />adol_jjadg05<br />firm_jjadg16<br />adol_jjadg01 <br />averiguacion<br />personaliasedad<br />personedadsexo<br />persondelito<br />personalias<br />jempleado_bb <br />address</p><br/><p style=&quot;padding-left: 60px;&quot;> </p><br/><div class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</div><br/><div class=&quot;standard&quot;>En el futuro se requerirá modificar los objetos y quitar el &quot;_s&quot; del code_name y agregar &quot;s&quot; al plural_code_name; y re-nombrar las tablas y vistas.</div><br/><div class=&quot;standard&quot;> </div><br/><div class=&quot;standard&quot;><strong>CHANGELOG</strong></div><br/><div class=&quot;standard&quot;>20171222 Solicitaron que en los libros de ingresos y egresos se valide la captura única de los números de billete</div><br/><div class=&quot;standard&quot;> </div>
+Release 1.0.1
 Copyright Copyright (c) 2017 - 2020. All Rights Reserved
-COMPONENTSTARTVERSION=1.0.0
+COMPONENTSTARTVERSION=1.0.1
 COMPONENTAUTHOR=caballeroantonio
 COMPONENTWEBSITE=caballeroantonio.com
 
@@ -13295,268 +13295,6 @@ architectcomp=jtca
 {1.0}
 	{COMPONENT_OBJECT}
     Compobject_name=Libro de gobierno
-    Compobject_description_ini=Utiliza el objeto ljf01
-	
-    COMPOBJECT=LJOMF01
-    compobject=ljomf01
-    CompObject=Ljomf01
-    
-    compobject_name=libro de gobierno
-    CompObject_name=LIBRO DE GOBIERNO
-    CompObject_short_name=Ljomf01
-    Compobject_short_name=Ljomf01
-    compobject_short_name=ljomf01
-    
-    COMPOBJECTPLURAL=LJOMF01S
-    compobjectplural=ljomf01s
-    CompObjectPlural=Ljomf01s
-    compobject_plural_name=libro de gobierno
-    CompObject_plural_name=LIBRO DE GOBIERNO
-    compobject_short_plural_name=ljomf01s
-    CompObject_short_plural_name=Ljomf01s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF01_FS
-        FIELDSET_NAME=ljomf01_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF01_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de gobierno
-    Compobject_description_ini=Utiliza el objeto ljjadng01
-	
-    COMPOBJECT=LJEMST01
-    compobject=ljemst01
-    CompObject=Ljemst01
-    
-    compobject_name=libro de gobierno
-    CompObject_name=LIBRO DE GOBIERNO
-    CompObject_short_name=Ljemst01
-    Compobject_short_name=Ljemst01
-    compobject_short_name=ljemst01
-    
-    COMPOBJECTPLURAL=LJEMST01S
-    compobjectplural=ljemst01s
-    CompObjectPlural=Ljemst01s
-    compobject_plural_name=libro de gobierno
-    CompObject_plural_name=LIBRO DE GOBIERNO
-    compobject_short_plural_name=ljemst01s
-    CompObject_short_plural_name=Ljemst01s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJEMST01_FS
-        FIELDSET_NAME=ljemst01_fs
-        FIELDSET_CODE_NAME_UPPER=LJEMST01_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de gobierno
     Compobject_description_ini=
 	
     COMPOBJECT=LSPE01
@@ -13565,9 +13303,9 @@ architectcomp=jtca
     
     compobject_name=libro de gobierno
     CompObject_name=LIBRO DE GOBIERNO
-    CompObject_short_name=Libro_de_gobierno
-    Compobject_short_name=Libro_de_gobierno
-    compobject_short_name=libro_de_gobierno
+    CompObject_short_name=Lspe01
+    Compobject_short_name=Lspe01
+    compobject_short_name=lspe01
     
     COMPOBJECTPLURAL=LSPE01S
     compobjectplural=lspe01s
@@ -14056,9 +13794,9 @@ architectcomp=jtca
     
     compobject_name=libro de resoluciones de plano
     CompObject_name=LIBRO DE RESOLUCIONES DE PLANO
-    CompObject_short_name=Libro_de_resoluciones_de_plano
-    Compobject_short_name=Libro_de_resoluciones_de_plano
-    compobject_short_name=libro_de_resoluciones_de_plano
+    CompObject_short_name=Lspe02
+    Compobject_short_name=Lspe02
+    compobject_short_name=lspe02
     
     COMPOBJECTPLURAL=LSPE02S
     compobjectplural=lspe02s
@@ -14267,9 +14005,9 @@ architectcomp=jtca
     
     compobject_name=libro de resoluciones
     CompObject_name=LIBRO DE RESOLUCIONES
-    CompObject_short_name=Libro_de_resoluciones
-    Compobject_short_name=Libro_de_resoluciones
-    compobject_short_name=libro_de_resoluciones
+    CompObject_short_name=Lspe03
+    Compobject_short_name=Lspe03
+    compobject_short_name=lspe03
     
     COMPOBJECTPLURAL=LSPE03S
     compobjectplural=lspe03s
@@ -14498,9 +14236,9 @@ architectcomp=jtca
     
     compobject_name=libro de beneficios revocado y o/a
     CompObject_name=LIBRO DE BENEFICIOS REVOCADO Y O/A
-    CompObject_short_name=Libro_de_beneficios_revocado_y_o/a
-    Compobject_short_name=Libro_de_beneficios_revocado_y_o/a
-    compobject_short_name=libro_de_beneficios_revocado_y_o/a
+    CompObject_short_name=Lspe04
+    Compobject_short_name=Lspe04
+    compobject_short_name=lspe04
     
     COMPOBJECTPLURAL=LSPE04S
     compobjectplural=lspe04s
@@ -14789,9 +14527,9 @@ architectcomp=jtca
     
     compobject_name=libro de desistimiento
     CompObject_name=LIBRO DE DESISTIMIENTO
-    CompObject_short_name=Libro_de_desistimiento
-    Compobject_short_name=Libro_de_desistimiento
-    compobject_short_name=libro_de_desistimiento
+    CompObject_short_name=Lspe05
+    Compobject_short_name=Lspe05
+    compobject_short_name=lspe05
     
     COMPOBJECTPLURAL=LSPE05S
     compobjectplural=lspe05s
@@ -15000,9 +14738,9 @@ architectcomp=jtca
     
     compobject_name=libro de archivo
     CompObject_name=LIBRO DE ARCHIVO
-    CompObject_short_name=Libro_de_archivo
-    Compobject_short_name=Libro_de_archivo
-    compobject_short_name=libro_de_archivo
+    CompObject_short_name=Lspe06
+    Compobject_short_name=Lspe06
+    compobject_short_name=lspe06
     
     COMPOBJECTPLURAL=LSPE06S
     compobjectplural=lspe06s
@@ -15231,9 +14969,9 @@ architectcomp=jtca
     
     compobject_name=libro de finanzas
     CompObject_name=LIBRO DE FINANZAS
-    CompObject_short_name=Libro_de_finanzas
-    Compobject_short_name=Libro_de_finanzas
-    compobject_short_name=libro_de_finanzas
+    CompObject_short_name=Lspe07
+    Compobject_short_name=Lspe07
+    compobject_short_name=lspe07
     
     COMPOBJECTPLURAL=LSPE07S
     compobjectplural=lspe07s
@@ -15534,7 +15272,7 @@ architectcomp=jtca
 {1.0}
 	{COMPONENT_OBJECT}
     Compobject_name=Libro de ingreso y egreso de billetes
-    Compobject_description_ini=
+    Compobject_description_ini=<div class=&quot;Mu SP&quot; style=&quot;font-family: Roboto, Arial, sans-serif; font-size: 13px; line-height: 16px; margin-bottom: 6px; margin-left: 9px; margin-right: 9px; transition: opacity 0.218s ease; opacity: 1; word-wrap: break-word; word-break: break-word; color: #263238; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;&quot; title=&quot;23 de diciembre de 2017, 10:53:43 UTC-6&quot; data-tooltip=&quot;23 de diciembre de 2017, 10:53:43 UTC-6&quot;><strong><span class=&quot;tL8wMe EMoHub&quot; dir=&quot;ltr&quot; style=&quot;text-align: left;&quot;>changelog</span></strong></div><br/><div id=&quot;:mr.ma&quot; class=&quot;Mu SP&quot; style=&quot;font-family: Roboto, Arial, sans-serif; font-size: 13px; line-height: 16px; margin-bottom: 6px; margin-left: 9px; margin-right: 9px; transition: opacity 0.218s ease; opacity: 1; word-wrap: break-word; word-break: break-word; color: #263238; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;&quot; title=&quot;23 de diciembre de 2017, 10:53:43 UTC-6&quot; data-tooltip=&quot;23 de diciembre de 2017, 10:53:43 UTC-6&quot;><span class=&quot;tL8wMe EMoHub&quot; dir=&quot;ltr&quot; style=&quot;text-align: left;&quot;>No fue solicitado un campo para capturar el </span><span id=&quot;:mq.co&quot; class=&quot;tL8wMe EMoHub&quot; dir=&quot;ltr&quot; style=&quot;text-align: left;&quot;>número de billete, </span><span id=&quot;:mr.co&quot; class=&quot;tL8wMe EMoHub&quot; dir=&quot;ltr&quot; style=&quot;text-align: left;&quot;>se agregó.<br /></span></div>
 	
     COMPOBJECT=LSPE08
     compobject=lspe08
@@ -15542,9 +15280,9 @@ architectcomp=jtca
     
     compobject_name=libro de ingreso y egreso de billetes
     CompObject_name=LIBRO DE INGRESO Y EGRESO DE BILLETES
-    CompObject_short_name=Libro_de_ingreso_y_egreso_de_billetes
-    Compobject_short_name=Libro_de_ingreso_y_egreso_de_billetes
-    compobject_short_name=libro_de_ingreso_y_egreso_de_billetes
+    CompObject_short_name=Lspe08s
+    Compobject_short_name=Lspe08s
+    compobject_short_name=lspe08s
     
     COMPOBJECTPLURAL=LSPE08S
     compobjectplural=lspe08s
@@ -15636,6 +15374,26 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=No DE BILLETE
+            FIELD_CODE_NAME_UPPER=BILLETE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL No DE BILLETE
+            
+            FIELD_NAME_LATEX=No DE BILLETE
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -15900,6 +15658,8 @@ architectcomp=jtca
     
 
     
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -16247,17 +16007,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=No. DEL DOCUMENTO
-            FIELD_CODE_NAME_UPPER=FIELD4
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field4` VARCHAR(45) DEFAULT NULL No. DEL DOCUMENTO
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL No. DEL DOCUMENTO
             
             FIELD_NAME_LATEX=No. DEL DOCUMENTO
-            FIELD_CODE_NAME_LATEX=field4
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -16342,137 +16102,8 @@ architectcomp=jtca
     
 
     
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de ingresos de valores
-    Compobject_description_ini=Utiliza el objeto ljc02
-	
-    COMPOBJECT=LJF02
-    compobject=ljf02
-    CompObject=Ljf02
-    
-    compobject_name=libro de ingresos de valores
-    CompObject_name=LIBRO DE INGRESOS DE VALORES
-    CompObject_short_name=Ljf02
-    Compobject_short_name=Ljf02
-    compobject_short_name=ljf02
-    
-    COMPOBJECTPLURAL=LJF02S
-    compobjectplural=ljf02s
-    CompObjectPlural=Ljf02s
-    compobject_plural_name=libro de ingresos de valores
-    CompObject_plural_name=LIBRO DE INGRESOS DE VALORES
-    compobject_short_plural_name=ljf02s
-    CompObject_short_plural_name=Ljf02s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJF02_FS
-        FIELDSET_NAME=ljf02_fs
-        FIELDSET_CODE_NAME_UPPER=LJF02_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -16589,17 +16220,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=No DE BILLETE
-            FIELD_CODE_NAME_UPPER=FIELD2
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field2` VARCHAR(45) DEFAULT NULL No DE BILLETE
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL No DE BILLETE
             
             FIELD_NAME_LATEX=No DE BILLETE
-            FIELD_CODE_NAME_LATEX=field2
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -16744,6 +16375,8 @@ architectcomp=jtca
     
 
     
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -16920,17 +16553,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=No. DEL DOCUMENTO
-            FIELD_CODE_NAME_UPPER=FIELD7
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field7` VARCHAR(45) DEFAULT NULL No. DEL DOCUMENTO
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL No. DEL DOCUMENTO
             
             FIELD_NAME_LATEX=No. DEL DOCUMENTO
-            FIELD_CODE_NAME_LATEX=field7
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -17035,6 +16668,8 @@ architectcomp=jtca
     
 
     
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -17151,17 +16786,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=No. DE BILLETE
-            FIELD_CODE_NAME_UPPER=FIELD2
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field2` VARCHAR(45) DEFAULT NULL No. DE BILLETE
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL No. DE BILLETE
             
             FIELD_NAME_LATEX=No. DE BILLETE
-            FIELD_CODE_NAME_LATEX=field2
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -17326,6 +16961,8 @@ architectcomp=jtca
     
 
     
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -17975,268 +17612,6 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field6
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de ingresos de valores
-    Compobject_description_ini=Utiliza el objeto ljc02
-	
-    COMPOBJECT=LJOMF02
-    compobject=ljomf02
-    CompObject=Ljomf02
-    
-    compobject_name=libro de ingresos de valores
-    CompObject_name=LIBRO DE INGRESOS DE VALORES
-    CompObject_short_name=Ljomf02
-    Compobject_short_name=Ljomf02
-    compobject_short_name=ljomf02
-    
-    COMPOBJECTPLURAL=LJOMF02S
-    compobjectplural=ljomf02s
-    CompObjectPlural=Ljomf02s
-    compobject_plural_name=libro de ingresos de valores
-    CompObject_plural_name=LIBRO DE INGRESOS DE VALORES
-    compobject_short_plural_name=ljomf02s
-    CompObject_short_plural_name=Ljomf02s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF02_FS
-        FIELDSET_NAME=ljomf02_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF02_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de promociones
-    Compobject_description_ini=Utiliza el objeto ljjadng02
-	
-    COMPOBJECT=LJEMST02
-    compobject=ljemst02
-    CompObject=Ljemst02
-    
-    compobject_name=libro de promociones
-    CompObject_name=LIBRO DE PROMOCIONES
-    CompObject_short_name=Ljemst02
-    Compobject_short_name=Ljemst02
-    compobject_short_name=ljemst02
-    
-    COMPOBJECTPLURAL=LJEMST02S
-    compobjectplural=ljemst02s
-    CompObjectPlural=Ljemst02s
-    compobject_plural_name=libro de promociones
-    CompObject_plural_name=LIBRO DE PROMOCIONES
-    compobject_short_plural_name=ljemst02s
-    CompObject_short_plural_name=Ljemst02s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJEMST02_FS
-        FIELDSET_NAME=ljemst02_fs
-        FIELDSET_CODE_NAME_UPPER=LJEMST02_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -19416,17 +18791,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=No DEL BILLETE
-            FIELD_CODE_NAME_UPPER=FIELD4
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field4` VARCHAR(45) DEFAULT NULL No DEL BILLETE
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL No DEL BILLETE
             
             FIELD_NAME_LATEX=No DEL BILLETE
-            FIELD_CODE_NAME_LATEX=field4
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -19811,268 +19186,8 @@ architectcomp=jtca
     
 
     
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de egresos de valores
-    Compobject_description_ini=Utiliza el objeto ljc03<br/>Este libro se distribuye por secretaría
-	
-    COMPOBJECT=LJF03
-    compobject=ljf03
-    CompObject=Ljf03
-    
-    compobject_name=libro de egresos de valores
-    CompObject_name=LIBRO DE EGRESOS DE VALORES
-    CompObject_short_name=Ljf03
-    Compobject_short_name=Ljf03
-    compobject_short_name=ljf03
-    
-    COMPOBJECTPLURAL=LJF03S
-    compobjectplural=ljf03s
-    CompObjectPlural=Ljf03s
-    compobject_plural_name=libro de egresos de valores
-    CompObject_plural_name=LIBRO DE EGRESOS DE VALORES
-    compobject_short_plural_name=ljf03s
-    CompObject_short_plural_name=Ljf03s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJF03_FS
-        FIELDSET_NAME=ljf03_fs
-        FIELDSET_CODE_NAME_UPPER=LJF03_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de egresos de valores
-    Compobject_description_ini=Utiliza el objeto ljc03<br/>Este libro se distribuye por secretaría
-	
-    COMPOBJECT=LJP03
-    compobject=ljp03
-    CompObject=Ljp03
-    
-    compobject_name=libro de egresos de valores
-    CompObject_name=LIBRO DE EGRESOS DE VALORES
-    CompObject_short_name=Ljp03
-    Compobject_short_name=Ljp03
-    compobject_short_name=ljp03
-    
-    COMPOBJECTPLURAL=LJP03S
-    compobjectplural=ljp03s
-    CompObjectPlural=Ljp03s
-    compobject_plural_name=libro de egresos de valores
-    CompObject_plural_name=LIBRO DE EGRESOS DE VALORES
-    compobject_short_plural_name=ljp03s
-    CompObject_short_plural_name=Ljp03s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJP03_FS
-        FIELDSET_NAME=ljp03_fs
-        FIELDSET_CODE_NAME_UPPER=LJP03_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=CAUSA
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL CAUSA
-            
-            FIELD_NAME_LATEX=CAUSA
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -20189,17 +19304,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=No DEL DOCUMENTO
-            FIELD_CODE_NAME_UPPER=FIELD5
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field5` VARCHAR(45) DEFAULT NULL No DEL DOCUMENTO
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL No DEL DOCUMENTO
             
             FIELD_NAME_LATEX=No DEL DOCUMENTO
-            FIELD_CODE_NAME_LATEX=field5
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -20484,6 +19599,8 @@ architectcomp=jtca
     
 
     
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -20731,17 +19848,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=No DE BILLETE
-            FIELD_CODE_NAME_UPPER=FIELD2
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field2` VARCHAR(45) DEFAULT NULL No DE BILLETE
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL No DE BILLETE
             
             FIELD_NAME_LATEX=No DE BILLETE
-            FIELD_CODE_NAME_LATEX=field2
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -21066,6 +20183,8 @@ architectcomp=jtca
     
 
     
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -21764,17 +20883,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=NO. DE BILLETE
-            FIELD_CODE_NAME_UPPER=FIELD2
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field2` VARCHAR(45) DEFAULT NULL NO. DE BILLETE
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL NO. DE BILLETE
             
             FIELD_NAME_LATEX=NO. DE BILLETE
-            FIELD_CODE_NAME_LATEX=field2
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -21999,268 +21118,8 @@ architectcomp=jtca
     
 
     
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de egresos de valores
-    Compobject_description_ini=Utiliza el objeto ljc03<br/>Este libro se distribuye por secretaría
-	
-    COMPOBJECT=LJOMF03
-    compobject=ljomf03
-    CompObject=Ljomf03
-    
-    compobject_name=libro de egresos de valores
-    CompObject_name=LIBRO DE EGRESOS DE VALORES
-    CompObject_short_name=Ljomf03
-    Compobject_short_name=Ljomf03
-    compobject_short_name=ljomf03
-    
-    COMPOBJECTPLURAL=LJOMF03S
-    compobjectplural=ljomf03s
-    CompObjectPlural=Ljomf03s
-    compobject_plural_name=libro de egresos de valores
-    CompObject_plural_name=LIBRO DE EGRESOS DE VALORES
-    compobject_short_plural_name=ljomf03s
-    CompObject_short_plural_name=Ljomf03s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF03_FS
-        FIELDSET_NAME=ljomf03_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF03_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Agenda de audiencias
-    Compobject_description_ini=Utiliza el objeto ljjadng03
-	
-    COMPOBJECT=LJEMST03
-    compobject=ljemst03
-    CompObject=Ljemst03
-    
-    compobject_name=agenda de audiencias
-    CompObject_name=AGENDA DE AUDIENCIAS
-    CompObject_short_name=Ljemst03
-    Compobject_short_name=Ljemst03
-    compobject_short_name=ljemst03
-    
-    COMPOBJECTPLURAL=LJEMST03S
-    compobjectplural=ljemst03s
-    CompObjectPlural=Ljemst03s
-    compobject_plural_name=agenda de audiencias
-    CompObject_plural_name=AGENDA DE AUDIENCIAS
-    compobject_short_plural_name=ljemst03s
-    CompObject_short_plural_name=Ljemst03s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJEMST03_FS
-        FIELDSET_NAME=ljemst03_fs
-        FIELDSET_CODE_NAME_UPPER=LJEMST03_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -23241,137 +22100,6 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field5
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de registro de promociones
-    Compobject_description_ini=Utiliza el objeto ljc04
-	
-    COMPOBJECT=LJCCM04
-    compobject=ljccm04
-    CompObject=Ljccm04
-    
-    compobject_name=libro de registro de promociones
-    CompObject_name=LIBRO DE REGISTRO DE PROMOCIONES
-    CompObject_short_name=Ljccm04
-    Compobject_short_name=Ljccm04
-    compobject_short_name=ljccm04
-    
-    COMPOBJECTPLURAL=LJCCM04S
-    compobjectplural=ljccm04s
-    CompObjectPlural=Ljccm04s
-    compobject_plural_name=libro de registro de promociones
-    CompObject_plural_name=LIBRO DE REGISTRO DE PROMOCIONES
-    compobject_short_plural_name=ljccm04s
-    CompObject_short_plural_name=Ljccm04s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJCCM04_FS
-        FIELDSET_NAME=ljccm04_fs
-        FIELDSET_CODE_NAME_UPPER=LJCCM04_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -24516,17 +23244,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=No. DE BILLETE
-            FIELD_CODE_NAME_UPPER=FIELD3
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field3` VARCHAR(45) DEFAULT NULL No. DE BILLETE
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL No. DE BILLETE
             
             FIELD_NAME_LATEX=No. DE BILLETE
-            FIELD_CODE_NAME_LATEX=field3
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -24711,268 +23439,8 @@ architectcomp=jtca
     
 
     
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de promociones
-    Compobject_description_ini=Utiliza el objeto ljf04<br/>Este libro se distribuye por usuario
-	
-    COMPOBJECT=LJOMF04
-    compobject=ljomf04
-    CompObject=Ljomf04
-    
-    compobject_name=libro de promociones
-    CompObject_name=LIBRO DE PROMOCIONES
-    CompObject_short_name=Ljomf04
-    Compobject_short_name=Ljomf04
-    compobject_short_name=ljomf04
-    
-    COMPOBJECTPLURAL=LJOMF04S
-    compobjectplural=ljomf04s
-    CompObjectPlural=Ljomf04s
-    compobject_plural_name=libro de promociones
-    CompObject_plural_name=LIBRO DE PROMOCIONES
-    compobject_short_plural_name=ljomf04s
-    CompObject_short_plural_name=Ljomf04s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF04_FS
-        FIELDSET_NAME=ljomf04_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF04_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de sentencias
-    Compobject_description_ini=Utiliza el objeto ljjadng04
-	
-    COMPOBJECT=LJEMST04
-    compobject=ljemst04
-    CompObject=Ljemst04
-    
-    compobject_name=libro de sentencias
-    CompObject_name=LIBRO DE SENTENCIAS
-    CompObject_short_name=Ljemst04
-    Compobject_short_name=Ljemst04
-    compobject_short_name=ljemst04
-    
-    COMPOBJECTPLURAL=LJEMST04S
-    compobjectplural=ljemst04s
-    CompObjectPlural=Ljemst04s
-    compobject_plural_name=libro de sentencias
-    CompObject_plural_name=LIBRO DE SENTENCIAS
-    compobject_short_plural_name=ljemst04s
-    CompObject_short_plural_name=Ljemst04s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJEMST04_FS
-        FIELDSET_NAME=ljemst04_fs
-        FIELDSET_CODE_NAME_UPPER=LJEMST04_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -27819,268 +26287,6 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=DEL PROYECTISTA
             FIELD_CODE_NAME_LATEX=field10
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de sentencias
-    Compobject_description_ini=Utiliza el objeto ljf05<br/>Este libro tiene reglas partículares en el layout
-	
-    COMPOBJECT=LJOMF05
-    compobject=ljomf05
-    CompObject=Ljomf05
-    
-    compobject_name=libro de sentencias
-    CompObject_name=LIBRO DE SENTENCIAS
-    CompObject_short_name=Ljomf05
-    Compobject_short_name=Ljomf05
-    compobject_short_name=ljomf05
-    
-    COMPOBJECTPLURAL=LJOMF05S
-    compobjectplural=ljomf05s
-    CompObjectPlural=Ljomf05s
-    compobject_plural_name=libro de sentencias
-    CompObject_plural_name=LIBRO DE SENTENCIAS
-    compobject_short_plural_name=ljomf05s
-    CompObject_short_plural_name=Ljomf05s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF05_FS
-        FIELDSET_NAME=ljomf05_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF05_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de recursos de apelación
-    Compobject_description_ini=Utiliza el objeto ljjadng05
-	
-    COMPOBJECT=LJEMST05
-    compobject=ljemst05
-    CompObject=Ljemst05
-    
-    compobject_name=libro de recursos de apelación
-    CompObject_name=LIBRO DE RECURSOS DE APELACIÓN
-    CompObject_short_name=Ljemst05
-    Compobject_short_name=Ljemst05
-    compobject_short_name=ljemst05
-    
-    COMPOBJECTPLURAL=LJEMST05S
-    compobjectplural=ljemst05s
-    CompObjectPlural=Ljemst05s
-    compobject_plural_name=libro de recursos de apelación
-    CompObject_plural_name=LIBRO DE RECURSOS DE APELACIÓN
-    compobject_short_plural_name=ljemst05s
-    CompObject_short_plural_name=Ljemst05s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJEMST05_FS
-        FIELDSET_NAME=ljemst05_fs
-        FIELDSET_CODE_NAME_UPPER=LJEMST05_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -31839,268 +30045,6 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de recursos de apelación
-    Compobject_description_ini=Utiliza el objeto ljf06<br/>Este libro se distribuye por usuario<br/>Este libro tiene reglas partículares en el layout
-	
-    COMPOBJECT=LJOMF06
-    compobject=ljomf06
-    CompObject=Ljomf06
-    
-    compobject_name=libro de recursos de apelación
-    CompObject_name=LIBRO DE RECURSOS DE APELACIÓN
-    CompObject_short_name=Ljomf06
-    Compobject_short_name=Ljomf06
-    compobject_short_name=ljomf06
-    
-    COMPOBJECTPLURAL=LJOMF06S
-    compobjectplural=ljomf06s
-    CompObjectPlural=Ljomf06s
-    compobject_plural_name=libro de recursos de apelación
-    CompObject_plural_name=LIBRO DE RECURSOS DE APELACIÓN
-    compobject_short_plural_name=ljomf06s
-    CompObject_short_plural_name=Ljomf06s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF06_FS
-        FIELDSET_NAME=ljomf06_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF06_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de exhortos
-    Compobject_description_ini=Utiliza el objeto ljjadng06
-	
-    COMPOBJECT=LJEMST06
-    compobject=ljemst06
-    CompObject=Ljemst06
-    
-    compobject_name=libro de exhortos
-    CompObject_name=LIBRO DE EXHORTOS
-    CompObject_short_name=Ljemst06
-    Compobject_short_name=Ljemst06
-    compobject_short_name=ljemst06
-    
-    COMPOBJECTPLURAL=LJEMST06S
-    compobjectplural=ljemst06s
-    CompObjectPlural=Ljemst06s
-    compobject_plural_name=libro de exhortos
-    CompObject_plural_name=LIBRO DE EXHORTOS
-    compobject_short_plural_name=ljemst06s
-    CompObject_short_plural_name=Ljemst06s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJEMST06_FS
-        FIELDSET_NAME=ljemst06_fs
-        FIELDSET_CODE_NAME_UPPER=LJEMST06_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
     Compobject_name=Libro de egresos (oficial)
     Compobject_description_ini=<p>Libro a nivel de la secretaria general de la sala.</p><br/><p>Tienen un campo secretaría (con acento), y claramente indicaron que el libro se lleva a nivel de la secretaría general. Si sólo existe una secretaría por sala, ¿qué anotan?, pues sólo podría ser la única secretaría existente.</p><br/><p>Con una vinculación de las partes contenciosas, se podria mostrar una lista con las personas vinculadas en el proceso para que al adjuntar una firma se escoja uno de los nombres de la lista, eso simplificaria la captura y se podría quitar el campo de captura &quot;carácter&quot; dejandolo sólo como una columna informativa.</p><br/><p>¿Existen relaciones entre el LIBRO DE EGRESOS (OFICIAL) y LIBRO DE CONTROL DE BILLETES Y PÓLIZAS (OFICIAL) y LIBRO DE MULTAS (OFICIAL) ? Una duda recurrente es sobre si se pueden relacionar las entradas y salidas de dinero y los billetes.<br />Sugiero cambiar el campo &quot;NOMBRE&quot; por &quot;NOMBRE DE QUIEN RECIBE&quot; y el campo &quot;FIRMA&quot; por &quot;FIRMA DE QUIEN RECIBE&quot;</p><br/><p>20170929 DEGT solicitó agregar el campo toral TOCA</p>
 	
@@ -32453,17 +30397,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=NÚMERO DE BILLETE DE DEPÓSITO
-            FIELD_CODE_NAME_UPPER=FIELD168
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field168` VARCHAR(45) DEFAULT NULL NÚMERO DE BILLETE DE DEPÓSITO
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL NÚMERO DE BILLETE DE DEPÓSITO
             
             FIELD_NAME_LATEX=N\'UMERO DE BILLETE DE DEP\'OSITO
-            FIELD_CODE_NAME_LATEX=field168
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -32628,6 +30572,8 @@ architectcomp=jtca
     
 
     
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -34589,399 +32535,6 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de exhortos
-    Compobject_description_ini=Utiliza el objeto ljp08
-	
-    COMPOBJECT=LJJADG07
-    compobject=ljjadg07
-    CompObject=Ljjadg07
-    
-    compobject_name=libro de exhortos
-    CompObject_name=LIBRO DE EXHORTOS
-    CompObject_short_name=Ljjadg07
-    Compobject_short_name=Ljjadg07
-    compobject_short_name=ljjadg07
-    
-    COMPOBJECTPLURAL=LJJADG07S
-    compobjectplural=ljjadg07s
-    CompObjectPlural=Ljjadg07s
-    compobject_plural_name=libro de exhortos
-    CompObject_plural_name=LIBRO DE EXHORTOS
-    compobject_short_plural_name=ljjadg07s
-    CompObject_short_plural_name=Ljjadg07s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJJADG07_FS
-        FIELDSET_NAME=ljjadg07_fs
-        FIELDSET_CODE_NAME_UPPER=LJJADG07_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de exhortos
-    Compobject_description_ini=Utiliza el objeto ljf07
-	
-    COMPOBJECT=LJOMF07
-    compobject=ljomf07
-    CompObject=Ljomf07
-    
-    compobject_name=libro de exhortos
-    CompObject_name=LIBRO DE EXHORTOS
-    CompObject_short_name=Ljomf07
-    Compobject_short_name=Ljomf07
-    compobject_short_name=ljomf07
-    
-    COMPOBJECTPLURAL=LJOMF07S
-    compobjectplural=ljomf07s
-    CompObjectPlural=Ljomf07s
-    compobject_plural_name=libro de exhortos
-    CompObject_plural_name=LIBRO DE EXHORTOS
-    compobject_short_plural_name=ljomf07s
-    CompObject_short_plural_name=Ljomf07s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF07_FS
-        FIELDSET_NAME=ljomf07_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF07_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de oficios
-    Compobject_description_ini=Utiliza el objeto ljjadng07.<br/>El expediente es opcional
-	
-    COMPOBJECT=LJEMST07
-    compobject=ljemst07
-    CompObject=Ljemst07
-    
-    compobject_name=libro de oficios
-    CompObject_name=LIBRO DE OFICIOS
-    CompObject_short_name=Ljemst07
-    Compobject_short_name=Ljemst07
-    compobject_short_name=ljemst07
-    
-    COMPOBJECTPLURAL=LJEMST07S
-    compobjectplural=ljemst07s
-    CompObjectPlural=Ljemst07s
-    compobject_plural_name=libro de oficios
-    CompObject_plural_name=LIBRO DE OFICIOS
-    compobject_short_plural_name=ljemst07s
-    CompObject_short_plural_name=Ljemst07s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJEMST07_FS
-        FIELDSET_NAME=ljemst07_fs
-        FIELDSET_CODE_NAME_UPPER=LJEMST07_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
     Compobject_name=Libro de pólizas y fianzas (oficial) - ingresos
     Compobject_description_ini=<p>Libro a nivel de la secretaria general de la sala.</p><br/><p>OJO éste libro se subdivide en dos, la primera de ellas a ingresos, la segunda subdivisión corresponde a egresos</p><br/><p>No es práctico hacer un sólo libro que muestre 2 formularios dependiendo de si es un ingreso o un egreso debido a que se creará confusión sobre cuando hacer un INSERT(ingreso) o un UPDATE (egreso)</p><br/><p> </p><br/><p>¿Existen relaciones entre el LIBRO DE PÓLIZAS Y FIANZAS (OFICIAL) y LIBRO DE EGRESOS (OFICIAL) y LIBRO DE CONTROL DE BILLETES Y PÓLIZAS (OFICIAL) y LIBRO DE MULTAS (OFICIAL) ? Una duda recurrente es sobre si se pueden relacionar las entradas y salidas de dinero y los billetes.</p><br/><p>¿Indican que lo llevan en dos tomos, es factible describirlo como dos libros con datos independientes que comparten la misma cuerda? De ser así se puede implementar como libros digitales independientes .</p><br/><p>Necesito ejemplos reales de números de certificado y números de poliza, ¿para cada número de certificado corresponde uno y sólo un número de poliza?</p><br/><p>Y si lo hacemos en un sólo libro sin subdivisiones unificando campos?</p><br/><p>Habilitaré el segundo campo toca, de ser necesario, cuando se aclare la logística</p><br/><p>Respuesta. Se hará en un sólo libro y enla edición se mostrará 2 formularios dependiendo de si es un ingreso o un egreso.</p><br/><p>CHANGELOG</p><br/><p>20170922 Deshabilité el segundo campo TOCA y modifiqué el code_name porque daba problemas al compilar .</p><br/><p>20171109 No se dio seguimiento a las dudas planteadas, se generaron 2 libros, uno para ingresos y otro para egresos</p>
 	
@@ -35114,17 +32667,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=NÚMERO DE CERTIFICADO
-            FIELD_CODE_NAME_UPPER=FIELD178
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field178` VARCHAR(45) DEFAULT NULL NÚMERO DE CERTIFICADO
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL NÚMERO DE CERTIFICADO
             
             FIELD_NAME_LATEX=N\'UMERO DE CERTIFICADO
-            FIELD_CODE_NAME_LATEX=field178
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -35149,6 +32702,8 @@ architectcomp=jtca
     
 
     
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -37401,399 +34956,6 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de oficios
-    Compobject_description_ini=Utiliza el objeto ljp09.<br/>El expediente es opcional
-	
-    COMPOBJECT=LJJADG08
-    compobject=ljjadg08
-    CompObject=Ljjadg08
-    
-    compobject_name=libro de oficios
-    CompObject_name=LIBRO DE OFICIOS
-    CompObject_short_name=Ljjadg08
-    Compobject_short_name=Ljjadg08
-    compobject_short_name=ljjadg08
-    
-    COMPOBJECTPLURAL=LJJADG08S
-    compobjectplural=ljjadg08s
-    CompObjectPlural=Ljjadg08s
-    compobject_plural_name=libro de oficios
-    CompObject_plural_name=LIBRO DE OFICIOS
-    compobject_short_plural_name=ljjadg08s
-    CompObject_short_plural_name=Ljjadg08s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJJADG08_FS
-        FIELDSET_NAME=ljjadg08_fs
-        FIELDSET_CODE_NAME_UPPER=LJJADG08_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de oficios
-    Compobject_description_ini=Utiliza el objeto ljf08.<br/>El expediente es opcional
-	
-    COMPOBJECT=LJOMF08
-    compobject=ljomf08
-    CompObject=Ljomf08
-    
-    compobject_name=libro de oficios
-    CompObject_name=LIBRO DE OFICIOS
-    CompObject_short_name=Ljomf08
-    Compobject_short_name=Ljomf08
-    compobject_short_name=ljomf08
-    
-    COMPOBJECTPLURAL=LJOMF08S
-    compobjectplural=ljomf08s
-    CompObjectPlural=Ljomf08s
-    compobject_plural_name=libro de oficios
-    CompObject_plural_name=LIBRO DE OFICIOS
-    compobject_short_plural_name=ljomf08s
-    CompObject_short_plural_name=Ljomf08s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF08_FS
-        FIELDSET_NAME=ljomf08_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF08_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de amparos
-    Compobject_description_ini=Utiliza el objeto ljjadng08
-	
-    COMPOBJECT=LJEMST08
-    compobject=ljemst08
-    CompObject=Ljemst08
-    
-    compobject_name=libro de amparos
-    CompObject_name=LIBRO DE AMPAROS
-    CompObject_short_name=Ljemst08
-    Compobject_short_name=Ljemst08
-    compobject_short_name=ljemst08
-    
-    COMPOBJECTPLURAL=LJEMST08S
-    compobjectplural=ljemst08s
-    CompObjectPlural=Ljemst08s
-    compobject_plural_name=libro de amparos
-    CompObject_plural_name=LIBRO DE AMPAROS
-    compobject_short_plural_name=ljemst08s
-    CompObject_short_plural_name=Ljemst08s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJEMST08_FS
-        FIELDSET_NAME=ljemst08_fs
-        FIELDSET_CODE_NAME_UPPER=LJEMST08_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
     Compobject_name=Libro de pólizas y fianzas (oficial) - egresos
     Compobject_description_ini=<p>Libro a nivel de la secretaria general de la sala.</p><br/><p>OJO éste libro se subdivide en dos, la primera de ellas a ingresos, la segunda subdivisión corresponde a egresos</p><br/><p>No es práctico hacer un sólo libro que muestre 2 formularios dependiendo de si es un ingreso o un egreso debido a que se creará confusión sobre cuando hacer un INSERT(ingreso) o un UPDATE (egreso)</p><br/><p> </p><br/><p>¿Existen relaciones entre el LIBRO DE PÓLIZAS Y FIANZAS (OFICIAL) y LIBRO DE EGRESOS (OFICIAL) y LIBRO DE CONTROL DE BILLETES Y PÓLIZAS (OFICIAL) y LIBRO DE MULTAS (OFICIAL) ? Una duda recurrente es sobre si se pueden relacionar las entradas y salidas de dinero y los billetes.</p><br/><p>¿Indican que lo llevan en dos tomos, es factible describirlo como dos libros con datos independientes que comparten la misma cuerda? De ser así se puede implementar como libros digitales independientes .</p><br/><p>Necesito ejemplos reales de números de certificado y números de poliza, ¿para cada número de certificado corresponde uno y sólo un número de poliza?</p><br/><p>Y si lo hacemos en un sólo libro sin subdivisiones unificando campos?</p><br/><p>Habilitaré el segundo campo toca, de ser necesario, cuando se aclare la logística</p><br/><p>Respuesta. Se hará en un sólo libro y enla edición se mostrará 2 formularios dependiendo de si es un ingreso o un egreso.</p><br/><p>CHANGELOG</p><br/><p>20170922 Deshabilité el segundo campo TOCA y modifiqué el code_name porque daba problemas al compilar .</p><br/><p>20171109 No se dio seguimiento a las dudas planteadas, se generaron 2 libros, uno para ingresos y otro para egresos</p>
 	
@@ -37906,17 +35068,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=NÚMERO DE PÓLIZA
-            FIELD_CODE_NAME_UPPER=FIELD182
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field182` VARCHAR(45) DEFAULT NULL NÚMERO DE PÓLIZA
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL NÚMERO DE PÓLIZA
             
             FIELD_NAME_LATEX=N\'UMERO DE P\'OLIZA
-            FIELD_CODE_NAME_LATEX=field182
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -37981,6 +35143,8 @@ architectcomp=jtca
     
 
     
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -40867,268 +38031,6 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=HUELLA DE QUIEN RECIBE LA DEVOLUCION DE LA CEDULA
             FIELD_CODE_NAME_LATEX=field10h
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de actuarios
-    Compobject_description_ini=Utiliza el objeto ljf09<br/>Este libro se distribuye por usuario
-	
-    COMPOBJECT=LJOMF09
-    compobject=ljomf09
-    CompObject=Ljomf09
-    
-    compobject_name=libro de actuarios
-    CompObject_name=LIBRO DE ACTUARIOS
-    CompObject_short_name=Ljomf09
-    Compobject_short_name=Ljomf09
-    compobject_short_name=ljomf09
-    
-    COMPOBJECTPLURAL=LJOMF09S
-    compobjectplural=ljomf09s
-    CompObjectPlural=Ljomf09s
-    compobject_plural_name=libro de actuarios
-    CompObject_plural_name=LIBRO DE ACTUARIOS
-    compobject_short_plural_name=ljomf09s
-    CompObject_short_plural_name=Ljomf09s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF09_FS
-        FIELDSET_NAME=ljomf09_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF09_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de actuario
-    Compobject_description_ini=Utiliza el objeto ljjadng09
-	
-    COMPOBJECT=LJEMST09
-    compobject=ljemst09
-    CompObject=Ljemst09
-    
-    compobject_name=libro de actuario
-    CompObject_name=LIBRO DE ACTUARIO
-    CompObject_short_name=Ljemst09
-    Compobject_short_name=Ljemst09
-    compobject_short_name=ljemst09
-    
-    COMPOBJECTPLURAL=LJEMST09S
-    compobjectplural=ljemst09s
-    CompObjectPlural=Ljemst09s
-    compobject_plural_name=libro de actuario
-    CompObject_plural_name=LIBRO DE ACTUARIO
-    compobject_short_plural_name=ljemst09s
-    CompObject_short_plural_name=Ljemst09s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJEMST09_FS
-        FIELDSET_NAME=ljemst09_fs
-        FIELDSET_CODE_NAME_UPPER=LJEMST09_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -44767,268 +41669,6 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de auxiliares de la administración de justicia, tutores y curadores
-    Compobject_description_ini=Utiliza el objeto ljf10<br/>Este libro se distribuye por usuario
-	
-    COMPOBJECT=LJOMF10
-    compobject=ljomf10
-    CompObject=Ljomf10
-    
-    compobject_name=libro de auxiliares de la administración de justicia, tutores y curadores
-    CompObject_name=LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA, TUTORES Y CURADORES
-    CompObject_short_name=Ljomf10
-    Compobject_short_name=Ljomf10
-    compobject_short_name=ljomf10
-    
-    COMPOBJECTPLURAL=LJOMF10S
-    compobjectplural=ljomf10s
-    CompObjectPlural=Ljomf10s
-    compobject_plural_name=libro de auxiliares de la administración de justic
-    CompObject_plural_name=LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTIC
-    compobject_short_plural_name=ljomf10s
-    CompObject_short_plural_name=Ljomf10s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF10_FS
-        FIELDSET_NAME=ljomf10_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF10_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de control de pedimentos
-    Compobject_description_ini=Utiliza el objeto ljjadng10
-	
-    COMPOBJECT=LJEMST10
-    compobject=ljemst10
-    CompObject=Ljemst10
-    
-    compobject_name=libro de control de pedimentos
-    CompObject_name=LIBRO DE CONTROL DE PEDIMENTOS
-    CompObject_short_name=Ljemst10
-    Compobject_short_name=Ljemst10
-    compobject_short_name=ljemst10
-    
-    COMPOBJECTPLURAL=LJEMST10S
-    compobjectplural=ljemst10s
-    CompObjectPlural=Ljemst10s
-    compobject_plural_name=libro de control de pedimentos
-    CompObject_plural_name=LIBRO DE CONTROL DE PEDIMENTOS
-    compobject_short_plural_name=ljemst10s
-    CompObject_short_plural_name=Ljemst10s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJEMST10_FS
-        FIELDSET_NAME=ljemst10_fs
-        FIELDSET_CODE_NAME_UPPER=LJEMST10_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
     Compobject_name=Libreta de oficios (oficial)
     Compobject_description_ini=<p>Libro a nivel de la secretaria general de la sala.</p><br/><p>En libros de primera instancia se han generado tickets debido al consecutivo de libros, pues éste no siempre les coincide con el número de oficio.</p><br/><p>Al momento de hacer la implementación de éste libro sería conveniente establecer si el sistema les debe proporcionar el consecutivo siguiente para que éste sea usado como número de oficio o bien, si es al contrario y primero escriben el oficio y luego lo registran en el Sistema. La segunda opción puede generar problemas por duplicados debido a que mientras un usuario escribe un oficio, otro puede intentar registrar uno con el mismo número progresivo.</p><br/><p>20170929 DEGT indicó que el NÚMERO DE OFICIO no es consecutivos del sistema, es campo abierto de texto.</p>.<br/>El expediente es opcional
 	
@@ -45212,137 +41852,6 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=NOMBRE DEL QUE REGISTRA
             FIELD_CODE_NAME_LATEX=field210
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de registro para notarios
-    Compobject_description_ini=Utiliza el objeto ljf11
-	
-    COMPOBJECT=LJC11
-    compobject=ljc11
-    CompObject=Ljc11
-    
-    compobject_name=libro de registro para notarios
-    CompObject_name=LIBRO DE REGISTRO PARA NOTARIOS
-    CompObject_short_name=Ljc11
-    Compobject_short_name=Ljc11
-    compobject_short_name=ljc11
-    
-    COMPOBJECTPLURAL=LJC11S
-    compobjectplural=ljc11s
-    CompObjectPlural=Ljc11s
-    compobject_plural_name=libro de registro para notarios
-    CompObject_plural_name=LIBRO DE REGISTRO PARA NOTARIOS
-    compobject_short_plural_name=ljc11s
-    CompObject_short_plural_name=Ljc11s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJC11_FS
-        FIELDSET_NAME=ljc11_fs
-        FIELDSET_CODE_NAME_UPPER=LJC11_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -47438,17 +43947,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=No. DEL BILLETE
-            FIELD_CODE_NAME_UPPER=FIELD3
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field3` VARCHAR(45) DEFAULT NULL No. DEL BILLETE
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL No. DEL BILLETE
             
             FIELD_NAME_LATEX=No. DEL BILLETE
-            FIELD_CODE_NAME_LATEX=field3
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -47773,6 +44282,8 @@ architectcomp=jtca
     
 
     
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -48291,268 +44802,6 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de registro para notarios
-    Compobject_description_ini=Utiliza el objeto ljf11
-	
-    COMPOBJECT=LJOMF11
-    compobject=ljomf11
-    CompObject=Ljomf11
-    
-    compobject_name=libro de registro para notarios
-    CompObject_name=LIBRO DE REGISTRO PARA NOTARIOS
-    CompObject_short_name=Ljomf11
-    Compobject_short_name=Ljomf11
-    compobject_short_name=ljomf11
-    
-    COMPOBJECTPLURAL=LJOMF11S
-    compobjectplural=ljomf11s
-    CompObjectPlural=Ljomf11s
-    compobject_plural_name=libro de registro para notarios
-    CompObject_plural_name=LIBRO DE REGISTRO PARA NOTARIOS
-    compobject_short_plural_name=ljomf11s
-    CompObject_short_plural_name=Ljomf11s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF11_FS
-        FIELDSET_NAME=ljomf11_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF11_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de remisión al archivo
-    Compobject_description_ini=Utiliza el objeto ljjadng11
-	
-    COMPOBJECT=LJEMST11
-    compobject=ljemst11
-    CompObject=Ljemst11
-    
-    compobject_name=libro de remisión al archivo
-    CompObject_name=LIBRO DE REMISIÓN AL ARCHIVO
-    CompObject_short_name=Ljemst11
-    Compobject_short_name=Ljemst11
-    compobject_short_name=ljemst11
-    
-    COMPOBJECTPLURAL=LJEMST11S
-    compobjectplural=ljemst11s
-    CompObjectPlural=Ljemst11s
-    compobject_plural_name=libro de remisión al archivo
-    CompObject_plural_name=LIBRO DE REMISIÓN AL ARCHIVO
-    compobject_short_plural_name=ljemst11s
-    CompObject_short_plural_name=Ljemst11s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJEMST11_FS
-        FIELDSET_NAME=ljemst11_fs
-        FIELDSET_CODE_NAME_UPPER=LJEMST11_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -51349,137 +47598,6 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de control de multas
-    Compobject_description_ini=Utiliza el objeto ljp14
-	
-    COMPOBJECT=LJJADG12
-    compobject=ljjadg12
-    CompObject=Ljjadg12
-    
-    compobject_name=libro de control de multas
-    CompObject_name=LIBRO DE CONTROL DE MULTAS
-    CompObject_short_name=Ljjadg12
-    Compobject_short_name=Ljjadg12
-    compobject_short_name=ljjadg12
-    
-    COMPOBJECTPLURAL=LJJADG12S
-    compobjectplural=ljjadg12s
-    CompObjectPlural=Ljjadg12s
-    compobject_plural_name=libro de control de multas
-    CompObject_plural_name=LIBRO DE CONTROL DE MULTAS
-    compobject_short_plural_name=ljjadg12s
-    CompObject_short_plural_name=Ljjadg12s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJJADG12_FS
-        FIELDSET_NAME=ljjadg12_fs
-        FIELDSET_CODE_NAME_UPPER=LJJADG12_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
     Compobject_name=Libros de valores
     Compobject_description_ini=
 	
@@ -51612,17 +47730,17 @@ architectcomp=jtca
 
             {OBJECT_FIELD}
             FIELD_NAME=NÚMERO DE BILLETE DE DEPÓSITO
-            FIELD_CODE_NAME_UPPER=FIELD3
+            FIELD_CODE_NAME_UPPER=BILLETE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`field3` VARCHAR(45) DEFAULT NULL NÚMERO DE BILLETE DE DEPÓSITO
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL NÚMERO DE BILLETE DE DEPÓSITO
             
             FIELD_NAME_LATEX=N\'UMERO DE BILLETE DE DEP\'OSITO
-            FIELD_CODE_NAME_LATEX=field3
+            FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -51927,268 +48045,8 @@ architectcomp=jtca
     
 
     
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de registro de amparos
-    Compobject_description_ini=Utiliza el objeto ljf12
-	
-    COMPOBJECT=LJOMF12
-    compobject=ljomf12
-    CompObject=Ljomf12
-    
-    compobject_name=libro de registro de amparos
-    CompObject_name=LIBRO DE REGISTRO DE AMPAROS
-    CompObject_short_name=Ljomf12
-    Compobject_short_name=Ljomf12
-    compobject_short_name=ljomf12
-    
-    COMPOBJECTPLURAL=LJOMF12S
-    compobjectplural=ljomf12s
-    CompObjectPlural=Ljomf12s
-    compobject_plural_name=libro de registro de amparos
-    CompObject_plural_name=LIBRO DE REGISTRO DE AMPAROS
-    compobject_short_plural_name=ljomf12s
-    CompObject_short_plural_name=Ljomf12s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF12_FS
-        FIELDSET_NAME=ljomf12_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF12_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libros de valores
-    Compobject_description_ini=Utiliza el objeto ljjadng12
-	
-    COMPOBJECT=LJEMST12
-    compobject=ljemst12
-    CompObject=Ljemst12
-    
-    compobject_name=libros de valores
-    CompObject_name=LIBROS DE VALORES
-    CompObject_short_name=Ljemst12
-    Compobject_short_name=Ljemst12
-    compobject_short_name=ljemst12
-    
-    COMPOBJECTPLURAL=LJEMST12S
-    compobjectplural=ljemst12s
-    CompObjectPlural=Ljemst12s
-    compobject_plural_name=libros de valores
-    CompObject_plural_name=LIBROS DE VALORES
-    compobject_short_plural_name=ljemst12s
-    CompObject_short_plural_name=Ljemst12s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJEMST12_FS
-        FIELDSET_NAME=ljemst12_fs
-        FIELDSET_CODE_NAME_UPPER=LJEMST12_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}
@@ -55312,137 +51170,6 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de control de fianzas
-    Compobject_description_ini=Utiliza el objeto ljf13
-	
-    COMPOBJECT=LJOMF13
-    compobject=ljomf13
-    CompObject=Ljomf13
-    
-    compobject_name=libro de control de fianzas
-    CompObject_name=LIBRO DE CONTROL DE FIANZAS
-    CompObject_short_name=Ljomf13
-    Compobject_short_name=Ljomf13
-    compobject_short_name=ljomf13
-    
-    COMPOBJECTPLURAL=LJOMF13S
-    compobjectplural=ljomf13s
-    CompObjectPlural=Ljomf13s
-    compobject_plural_name=libro de control de fianzas
-    CompObject_plural_name=LIBRO DE CONTROL DE FIANZAS
-    compobject_short_plural_name=ljomf13s
-    CompObject_short_plural_name=Ljomf13s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF13_FS
-        FIELDSET_NAME=ljomf13_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF13_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
     Compobject_name=Libro de control de multas
     Compobject_description_ini=
 	
@@ -57800,137 +53527,6 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de control de multas
-    Compobject_description_ini=Utiliza el objeto ljf14<br/>Este libro tiene reglas partículares en el layout
-	
-    COMPOBJECT=LJOMF14
-    compobject=ljomf14
-    CompObject=Ljomf14
-    
-    compobject_name=libro de control de multas
-    CompObject_name=LIBRO DE CONTROL DE MULTAS
-    CompObject_short_name=Ljomf14
-    Compobject_short_name=Ljomf14
-    compobject_short_name=ljomf14
-    
-    COMPOBJECTPLURAL=LJOMF14S
-    compobjectplural=ljomf14s
-    CompObjectPlural=Ljomf14s
-    compobject_plural_name=libro de control de multas
-    CompObject_plural_name=LIBRO DE CONTROL DE MULTAS
-    compobject_short_plural_name=ljomf14s
-    CompObject_short_plural_name=Ljomf14s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF14_FS
-        FIELDSET_NAME=ljomf14_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF14_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
     Compobject_name=Libro de turno a cargo de los secretarios de acuerdos
     Compobject_description_ini=<br/>Este libro se distribuye por secretaría
 	
@@ -59258,137 +54854,6 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de turno a cargo de los secretarios de acuerdos
-    Compobject_description_ini=Utiliza el objeto ljf15<br/>Este libro se distribuye por secretaría
-	
-    COMPOBJECT=LJOMF15
-    compobject=ljomf15
-    CompObject=Ljomf15
-    
-    compobject_name=libro de turno a cargo de los secretarios de acuerdos
-    CompObject_name=LIBRO DE TURNO A CARGO DE LOS SECRETARIOS DE ACUERDOS
-    CompObject_short_name=Ljomf15
-    Compobject_short_name=Ljomf15
-    compobject_short_name=ljomf15
-    
-    COMPOBJECTPLURAL=LJOMF15S
-    compobjectplural=ljomf15s
-    CompObjectPlural=Ljomf15s
-    compobject_plural_name=libro de turno a cargo de los secretarios de acuer
-    CompObject_plural_name=LIBRO DE TURNO A CARGO DE LOS SECRETARIOS DE ACUER
-    compobject_short_plural_name=ljomf15s
-    CompObject_short_plural_name=Ljomf15s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF15_FS
-        FIELDSET_NAME=ljomf15_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF15_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -61186,137 +56651,6 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=CONDUCTA TIPIFICADA COMO DELITO
             FIELD_CODE_NAME_LATEX=field3
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Agenda de audiencias
-    Compobject_description_ini=Utiliza el objeto ljf16<br/>Este libro se distribuye por secretaría
-	
-    COMPOBJECT=LJOMF16
-    compobject=ljomf16
-    CompObject=Ljomf16
-    
-    compobject_name=agenda de audiencias
-    CompObject_name=AGENDA DE AUDIENCIAS
-    CompObject_short_name=Ljomf16
-    Compobject_short_name=Ljomf16
-    compobject_short_name=ljomf16
-    
-    COMPOBJECTPLURAL=LJOMF16S
-    compobjectplural=ljomf16s
-    CompObjectPlural=Ljomf16s
-    compobject_plural_name=agenda de audiencias
-    CompObject_plural_name=AGENDA DE AUDIENCIAS
-    compobject_short_plural_name=ljomf16s
-    CompObject_short_plural_name=Ljomf16s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF16_FS
-        FIELDSET_NAME=ljomf16_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF16_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -63534,137 +58868,6 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de remisión al archivo
-    Compobject_description_ini=Utiliza el objeto ljf17
-	
-    COMPOBJECT=LJOMF17
-    compobject=ljomf17
-    CompObject=Ljomf17
-    
-    compobject_name=libro de remisión al archivo
-    CompObject_name=LIBRO DE REMISIÓN AL ARCHIVO
-    CompObject_short_name=Ljomf17
-    Compobject_short_name=Ljomf17
-    compobject_short_name=ljomf17
-    
-    COMPOBJECTPLURAL=LJOMF17S
-    compobjectplural=ljomf17s
-    CompObjectPlural=Ljomf17s
-    compobject_plural_name=libro de remisión al archivo
-    CompObject_plural_name=LIBRO DE REMISIÓN AL ARCHIVO
-    compobject_short_plural_name=ljomf17s
-    CompObject_short_plural_name=Ljomf17s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF17_FS
-        FIELDSET_NAME=ljomf17_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF17_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -65928,137 +61131,6 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de remisión de documentos al archivo
-    Compobject_description_ini=Utiliza el objeto ljf18
-	
-    COMPOBJECT=LJOMF18
-    compobject=ljomf18
-    CompObject=Ljomf18
-    
-    compobject_name=libro de remisión de documentos al archivo
-    CompObject_name=LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO
-    CompObject_short_name=Ljomf18
-    Compobject_short_name=Ljomf18
-    compobject_short_name=ljomf18
-    
-    COMPOBJECTPLURAL=LJOMF18S
-    compobjectplural=ljomf18s
-    CompObjectPlural=Ljomf18s
-    compobject_plural_name=libro de remisión de documentos al archivo
-    CompObject_plural_name=LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO
-    compobject_short_plural_name=ljomf18s
-    CompObject_short_plural_name=Ljomf18s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF18_FS
-        FIELDSET_NAME=ljomf18_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF18_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
     Compobject_name=Libro de exhortos
     Compobject_description_ini=<br/>Este libro tiene reglas partículares en el layout
 	
@@ -67023,137 +62095,6 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de envío de expedientes al archivo judicial para su destrucción
-    Compobject_description_ini=Utiliza el objeto ljf19
-	
-    COMPOBJECT=LJOMF19
-    compobject=ljomf19
-    CompObject=Ljomf19
-    
-    compobject_name=libro de envío de expedientes al archivo judicial para su destrucción
-    CompObject_name=LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN
-    CompObject_short_name=Ljomf19
-    Compobject_short_name=Ljomf19
-    compobject_short_name=ljomf19
-    
-    COMPOBJECTPLURAL=LJOMF19S
-    compobjectplural=ljomf19s
-    CompObjectPlural=Ljomf19s
-    compobject_plural_name=libro de envío de expedientes al archivo judicial 
-    CompObject_plural_name=LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL 
-    compobject_short_plural_name=ljomf19s
-    CompObject_short_plural_name=Ljomf19s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF19_FS
-        FIELDSET_NAME=ljomf19_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF19_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
     Compobject_name=Libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública
     Compobject_description_ini=
 	
@@ -67919,137 +62860,6 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field10
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública
-    Compobject_description_ini=Utiliza el objeto ljf20
-	
-    COMPOBJECT=LJOMF20
-    compobject=ljomf20
-    CompObject=Ljomf20
-    
-    compobject_name=libro de control de asuntos conforme a los artículos 13 fracción xiv y 25 de la ley de transparencia y acceso a la información pública
-    CompObject_name=LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA
-    CompObject_short_name=Ljomf20
-    Compobject_short_name=Ljomf20
-    compobject_short_name=ljomf20
-    
-    COMPOBJECTPLURAL=LJOMF20S
-    compobjectplural=ljomf20s
-    CompObjectPlural=Ljomf20s
-    compobject_plural_name=libro de control de asuntos conforme a los artícul
-    CompObject_plural_name=LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCUL
-    compobject_short_plural_name=ljomf20s
-    CompObject_short_plural_name=Ljomf20s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF20_FS
-        FIELDSET_NAME=ljomf20_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF20_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -69171,137 +63981,6 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Libro de control de adopciones internacionales
-    Compobject_description_ini=Utiliza el objeto ljf21
-	
-    COMPOBJECT=LJOMF21
-    compobject=ljomf21
-    CompObject=Ljomf21
-    
-    compobject_name=libro de control de adopciones internacionales
-    CompObject_name=LIBRO DE CONTROL DE ADOPCIONES INTERNACIONALES
-    CompObject_short_name=Ljomf21
-    Compobject_short_name=Ljomf21
-    compobject_short_name=ljomf21
-    
-    COMPOBJECTPLURAL=LJOMF21S
-    compobjectplural=ljomf21s
-    CompObjectPlural=Ljomf21s
-    compobject_plural_name=libro de control de adopciones internacionales
-    CompObject_plural_name=LIBRO DE CONTROL DE ADOPCIONES INTERNACIONALES
-    compobject_short_plural_name=ljomf21s
-    CompObject_short_plural_name=Ljomf21s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF21_FS
-        FIELDSET_NAME=ljomf21_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF21_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
     Compobject_name=Libro de control de restituciones internacionales
     Compobject_description_ini=
 	
@@ -69565,137 +64244,6 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field13
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
-
-=======IF'S==========
-	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
-
-
-=======/IF'S==========
-
-
-
-======/REGISTRY_ENTRY=====
-
-        
-
-    
-
-    
-{-1.3}
-    
-{1.0}
-	{COMPONENT_OBJECT}
-    Compobject_name=Libro de control de restituciones internacionales
-    Compobject_description_ini=Utiliza el objeto ljf22
-	
-    COMPOBJECT=LJOMF22
-    compobject=ljomf22
-    CompObject=Ljomf22
-    
-    compobject_name=libro de control de restituciones internacionales
-    CompObject_name=LIBRO DE CONTROL DE RESTITUCIONES INTERNACIONALES
-    CompObject_short_name=Ljomf22
-    Compobject_short_name=Ljomf22
-    compobject_short_name=ljomf22
-    
-    COMPOBJECTPLURAL=LJOMF22S
-    compobjectplural=ljomf22s
-    CompObjectPlural=Ljomf22s
-    compobject_plural_name=libro de control de restituciones internacionales
-    CompObject_plural_name=LIBRO DE CONTROL DE RESTITUCIONES INTERNACIONALES
-    compobject_short_plural_name=ljomf22s
-    CompObject_short_plural_name=Ljomf22s
-    
-    
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=LJOMF22_FS
-        FIELDSET_NAME=ljomf22_fs
-        FIELDSET_CODE_NAME_UPPER=LJOMF22_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Órgano
-            FIELD_CODE_NAME_UPPER=ID_ORGANO
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
-            
-            FIELD_NAME_LATEX=\'Organo
-            FIELD_CODE_NAME_LATEX=id\_organo
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Año j.
-            FIELD_CODE_NAME_UPPER=ANOJ
-            FIELD_INTRO=<p>Año judicial</p>
-            FIELD_DESCRIPTION_INI=<p>Año judicial</p>
-            FIELD_DESCRIPTION=<p>Año judicial</p> 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
-            
-            FIELD_NAME_LATEX=A\~no j.
-            FIELD_CODE_NAME_LATEX=anoj
-            FIELD_DBCOMMENT_LATEX=A\~no judicial
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Secretaría
-            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=18
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
-            
-            FIELD_NAME_LATEX=Secretar\'i{}a
-            FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
 

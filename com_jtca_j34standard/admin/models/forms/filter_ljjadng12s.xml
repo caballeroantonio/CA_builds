@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- @version 			$Id:$ -->
-<!-- @name			    TSJ CDMX Libros TxCA (Release 1.0.0) -->
+<!-- @name			    TSJ CDMX Libros TxCA (Release 1.0.1) -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
 <!-- @package			com_jtca -->
 <!-- @subpackage		com_jtca.admin -->
@@ -32,6 +32,20 @@
 			label="COM_JTCA_LJJADNG12S_FILTER_SEARCH_DESC"
 			hint="JSEARCH_FILTER"
 		/>
+        <field
+			name="billete"
+			type="sql"
+			label="COM_JTCA_FILTER_BILLETE_LABEL"
+			description="COM_JTCA_FILTER_BILLETE_DESC"
+			onchange="this.form.submit();"
+			query="SELECT DISTINCT `a`.`BILLETE` AS `value`, `a`.`BILLETE` AS `text`
+		            FROM `jt_ljjadng12s` AS `a` 
+		            ORDER BY `a`.`BILLETE`"
+			key_field="value"
+			value_field="text"
+		>
+            <option value="">COM_JTCA_LJJADNG12S_SELECT_BILLETE</option>
+        </field>
         <field
 			name="state"
 			type="status"
@@ -69,6 +83,8 @@
 			<option value="">JGLOBAL_SORT_BY</option>
 			<option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
 			<option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+            <option value="a.billete ASC">COM_JTCA_LJJADNG12S_FIELD_BILLETE_SORT_ASC_LABEL</option>
+            <option value="a.billete DESC">COM_JTCA_LJJADNG12S_FIELD_BILLETE_SORT_DESC_LABEL</option>
 			<option value="a.state ASC">JSTATUS_ASC</option>
 			<option value="a.state DESC">JSTATUS_DESC</option>
             <option value="created_by_name ASC">COM_JTCA_FIELD_CREATED_BY_SORT_ASC_LABEL</option>

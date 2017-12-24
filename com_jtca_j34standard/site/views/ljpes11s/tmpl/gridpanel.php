@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -167,25 +167,25 @@ function getFields(){
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'No. DEL BILLETE',
-        'FIELD_CODE_NAME' => 'field3',
+        'FIELD_CODE_NAME' => 'billete',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 1,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD3
+                FIELD_CODE_NAME_UPPER=BILLETE
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
                 FIELD_DB=`` VARCHAR(45) DEFAULT NULL No. DEL BILLETE
 
                 FIELD_NAME_LATEX=No. DEL BILLETE
-                FIELD_CODE_NAME_LATEX=field3
+                FIELD_CODE_NAME_LATEX=billete
                 FIELD_DBCOMMENT_LATEX=
 
 
     */
-    $fields['field3'] = $field;
+    $fields['billete'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'FECHA DE EXPEDICIÓN',

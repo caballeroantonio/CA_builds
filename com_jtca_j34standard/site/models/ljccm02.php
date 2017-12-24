@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -55,6 +55,7 @@ class JtCaModelLjccm02 extends JModelItem
 		{
 			$config['ljccm02_filter_fields'] = array(
 				'id', 'a.id',
+				'billete', 'a.billete',
 				'id_organo','a.id_organo',
 				'anoj','a.anoj',
 				'id_expediente','a.id_expediente',
@@ -62,7 +63,7 @@ class JtCaModelLjccm02 extends JModelItem
 				'field1','a.field1',
 				'field5','a.field5',
 				'field6','a.field6',
-				'field7','a.field7',
+				'billete','a.billete',
 				'field13','a.field13',
 				'field8','a.field8',
 				'field9','a.field9',

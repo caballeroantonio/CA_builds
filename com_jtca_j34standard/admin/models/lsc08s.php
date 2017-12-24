@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
@@ -55,6 +55,7 @@ class JtCaModelLsc08s extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
+				'billete', 'a.billete',
 				'state', 'a.state',
 				'created', 'a.created',
 				'created_by', 'a.created_by', 'created_by_name',
@@ -108,6 +109,8 @@ class JtCaModelLsc08s extends JModelList
 		// Load the filter state.
 		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
 		$this->setState('filter.search', $search);
+		$billete = $app->getUserStateFromRequest($this->context.'.filter.billete', 'filter_billete', '', 'string');
+		$this->setState('filter.billete', $billete);
 		
 		$state = $app->getUserStateFromRequest($this->context.'.filter.state', 'filter_state', '', 'string');
 		$this->setState('filter.state', $state);
@@ -151,6 +154,7 @@ class JtCaModelLsc08s extends JModelList
 		$id	.= ':'.$this->getState('filter.search');
 		$id	.= ':'.$this->getState('filter.state');
 		$id	.= ':'.$this->getState('filter.created_by');	
+		$id	.= ':'.$this->getState('filter.billete');	
 		return parent::getStoreId($id);
 	}	
 	/**
@@ -215,6 +219,11 @@ class JtCaModelLsc08s extends JModelList
 		}	
 
 		
+		if ($billete = $this->getState('filter.billete'))
+		{
+			$billete = $db->escape(JString::strtolower($billete), true);			
+			$query->where('LOWER('.$db->quoteName('a.billete').') = ' . $db->quote($billete));
+		}
 				
 		// Add the list ordering clause.
 		$order_col	= '';

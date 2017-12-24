@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -96,6 +96,12 @@ $empty = $component->params->get('default_empty_field', '');
 				<?php if ($this->params->get('show_lsc07_filter_field') != '' AND $this->params->get('show_lsc07_filter_field') != 'hide') :?>
 					<input type="text" name="filter_search" id="filter_search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_JTCA_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_JTCA_'.$this->params->get('show_lsc07_filter_field').'_FILTER_LABEL'); ?>" />
 				<?php endif; ?>	
+				<?php if ($this->params->get('list_show_lsc07_billete',0)) : ?>
+					<select name="filter_billete" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_JTCA_LSC07S_SELECT_BILLETE');?></option>
+					<?php echo JHtml::_('select.options', $this->billete_values, 'value', 'text', $this->state->get('filter.billete'));?>
+					</select>
+				<?php endif; ?>	
 			</div>
 		<?php endif; ?>
 
@@ -130,6 +136,11 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JHtml::_('grid.sort', 'COM_JTCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsc07_billete',0)) : ?>
+						<th class="list-billete" id="tableOrderingbillete">
+							<?php echo JTEXT::_('COM_JTCA_LSC07S_HEADING_BILLETE'); ?>
+						</th>
+					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_lsc07_ordering',0)) : ?>
 						<th width="10%">
 							<?php echo JHtml::_('grid.sort',  'COM_JTCA_HEADING_ORDERING', 'a.ordering', $list_dirn, $list_order); ?>
@@ -328,10 +339,10 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc07_field168',0)) : ?>
-						<td class="list-field168">
+					<?php if ($this->params->get('list_show_lsc07_billete',0)) : ?>
+						<td class="list-billete">
 							<?php 
-								echo $item->field168 != '' ? $item->field168 : $empty;
+								echo $item->billete != '' ? $item->billete : $empty;
 							?>
 						</td>
 					<?php endif; ?>

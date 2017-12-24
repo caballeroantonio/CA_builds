@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -418,6 +418,7 @@ class JtCaModelLjjadg04Form extends JtCaModelLjjadg04
 		$db = JFactory::getDbo();
 		
 		$condition = array();
+		$condition[] = $db->quoteName('billete').' = '. $db->quote($table->billete);	
 		$condition[] = $db->quoteName('state').' >= 0';
 		return $condition;
 	}	

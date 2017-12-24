@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
@@ -88,6 +88,7 @@ class JtCaTableLsc14s extends JTable
 				// Set ordering to last if ordering was 0
 				
 				$additional_order = '';	
+				$additional_order .= $this->_db->quoteName('billete').'=' . $this->_db->Quote($this->billete).' AND ';
 				$this->ordering = self::getNextOrder($additional_order.' state>=0');
 			}
 		}

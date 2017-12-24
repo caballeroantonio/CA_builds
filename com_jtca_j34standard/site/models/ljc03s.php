@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.site
@@ -53,6 +53,7 @@ class JtCaModelLjc03s extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
+				'billete','a.billete',
 				'created', 'a.created',
 				'created_by', 'a.created_by',
 				'created_by_name', 'ua.name',
@@ -126,6 +127,8 @@ class JtCaModelLjc03s extends JModelList
 		}
 		$this->setState('list.direction', $list_order);
 		
+		$billete = $app->getUserStateFromRequest($this->context.'.filter.billete', 'filter_billete', '', 'string');
+		$this->setState('filter.billete', $billete);
 				
 		if ((!$user->authorise('core.edit.state', 'com_jtca')) AND  (!$user->authorise('core.edit', 'com_jtca')))
 		{
@@ -168,6 +171,7 @@ class JtCaModelLjc03s extends JModelList
 		$id .= ':'.$this->getState('filter.created_by_id.include');
 		$id .= ':'.$this->getState('filter.created_by_name');
 		$id .= ':'.$this->getState('filter.created_by_name.include');	
+		$id	.= ':'.$this->getState('filter.billete');	
 		$id .= ':'.serialize($this->getState('filter.ljc03_id'));
 		$id .= ':'.$this->getState('filter.ljc03_id.include');				
 		
@@ -246,6 +250,11 @@ class JtCaModelLjc03s extends JModelList
 
 		
 					
+		if ($billete = $this->getState('filter.billete'))
+		{
+			$billete = $db->escape(JString::strtolower($billete), true);			
+			$query->where('LOWER('.$db->quoteName('a.billete').') = ' . $db->quote($billete));
+		}	
 
 		// Filter by a single or group of ljc03s.
 		$ljc03_id = $this->getState('filter.ljc03_id');
@@ -620,6 +629,31 @@ class JtCaModelLjc03s extends JModelList
 		}
 		return $items;
 	}
+	/**
+	 * Build a list of distinct values in the No DEL BILLETE field
+	 *
+	 * @return	JDatabaseQuery
+	 */
+	public function getBilletevalues()
+	{
+				// Create a new query object.
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+
+		// Construct the query
+		$query->select('DISTINCT '.$db->quoteName('billete').' AS value, '.$db->quoteName('billete').' AS text');
+		$query->from($db->quoteName('jt_ljc03s'));
+		$query->where($db->quoteName('billete').' != \'\'');
+
+		$query->order($db->quoteName('billete'));
+
+		// Setup the query
+		$db->setQuery($query);
+
+		// Return the result
+		return $db->loadObjectList();
+
+	}				
 	
         /*
          * Function that allows download database information

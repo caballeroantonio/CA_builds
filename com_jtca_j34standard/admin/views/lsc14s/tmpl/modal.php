@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
@@ -64,6 +64,10 @@ $empty = $component->params->get('default_empty_field', '');
 		</div>
 		<hr class="hr-condensed">
 		<div class="filters pull-left">
+			<select name="filter_billete" class="input-medium js-stools-field-order" onchange="this.form.submit()">
+				<option value=""><?php echo JText::_('COM_JTCA_LSC14S_SELECT_BILLETE');?></option>
+				<?php echo JHtml::_('select.options', $this->billete_values, 'value', 'text', $this->state->get('filter.billete'));?>
+			</select>	
 
 			<select name="filter_state" class="input-medium" onchange="this.form.submit()">
 				<option value=""><?php echo JText::_('COM_JTCA_SELECT_STATUS');?></option>
@@ -80,6 +84,9 @@ $empty = $component->params->get('default_empty_field', '');
 	<table class="table table-striped table-condensed">
 		<thead>
 			<tr>
+				<th width="10%" class="center nowrap">
+					<?php echo JTEXT::_('COM_JTCA_LSC14S_HEADING_BILLETE'); ?>						
+				</th>	
 				<th width="5%" class="center nowrap">
 					<?php echo JHtml::_('grid.sort', 'JPUBLISHED', 'a.state', $list_dirn, $list_order); ?>
 				</th>
@@ -92,6 +99,13 @@ $empty = $component->params->get('default_empty_field', '');
 		<tbody>
 		<?php foreach ($this->items as $i => $item) : ?>
 			<tr class="row<?php echo $i % 2; ?>">
+				<td class="center">
+					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
+						<?php 
+							echo $item->billete != '' ? $item->billete : $empty; 
+						?>					
+					</a>		
+				</td>	
 				<td class="center">
 					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
 						<?php echo JHtml::_('jgrid.published', $item->state, $i, 'lsc14s.', false, 'cb'); ?>

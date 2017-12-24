@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+ * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
@@ -138,7 +138,7 @@ $empty = $component->params->get('default_empty_field', '');
 								($params->get('show_lsc07_field167_paterno')) OR 
 								($params->get('show_lsc07_field167_materno')) OR 
 								($params->get('show_lsc07_field167_nombre')) OR 
-								($params->get('show_lsc07_field168')) OR 
+								($params->get('show_lsc07_billete')) OR 
 								($params->get('show_lsc07_field169')) OR 
 								($params->get('show_lsc07_field169b')) OR 
 								($params->get('show_lsc07_field170')) OR 
@@ -370,14 +370,14 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_lsc07_field168')) : ?>
+						<?php if ($params->get('show_lsc07_billete')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_JTCA_LSC07S_FIELD_FIELD168_LABEL'); ?>
+								<?php echo JText::_('COM_JTCA_LSC07S_FIELD_BILLETE_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->field168 != '' ? $this->item->field168 : $empty;
+									echo $this->item->billete != '' ? $this->item->billete : $empty;
 								?>
 							</span>
 						</div>	

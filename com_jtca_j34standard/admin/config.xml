@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- @version 			$Id:$ -->
-<!-- @name			    TSJ CDMX Libros TxCA (Release 1.0.0) -->
+<!-- @name			    TSJ CDMX Libros TxCA (Release 1.0.1) -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
 <!-- @package			com_jtca -->
 <!-- @subpackage		com_jtca.admin -->
@@ -568,28 +568,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf01_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF01S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF01S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljemst01_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJEMST01S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJEMST01S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="lspe01_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -700,17 +678,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljf02_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJF02S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJF02S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="ljp02_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -777,28 +744,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf02_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF02S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF02S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljemst02_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJEMST02S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJEMST02S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="lejemplo_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -827,28 +772,6 @@
 			default="1"
 			label="COM_JTCA_LJC03S_FIELD_SAVE_HISTORY_LABEL"
 			description="COM_JTCA_LJC03S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljf03_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJF03S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJF03S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljp03_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJP03S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJP03S_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -920,28 +843,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf03_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF03S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF03S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljemst03_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJEMST03S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJEMST03S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="lsc04_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -981,17 +882,6 @@
 			default="1"
 			label="COM_JTCA_LJP04S_FIELD_SAVE_HISTORY_LABEL"
 			description="COM_JTCA_LJP04S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljccm04_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJCCM04S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJCCM04S_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -1047,28 +937,6 @@
 			default="1"
 			label="COM_JTCA_LJJADG04S_FIELD_SAVE_HISTORY_LABEL"
 			description="COM_JTCA_LJJADG04S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljomf04_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF04S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF04S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljemst04_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJEMST04S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJEMST04S_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -1184,28 +1052,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf05_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF05S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF05S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljemst05_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJEMST05S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJEMST05S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="lsc06_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -1316,28 +1162,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf06_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF06S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF06S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljemst06_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJEMST06S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJEMST06S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="lsc07_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -1421,39 +1245,6 @@
 			default="1"
 			label="COM_JTCA_LJJADNG07S_FIELD_SAVE_HISTORY_LABEL"
 			description="COM_JTCA_LJJADNG07S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljjadg07_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJJADG07S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJJADG07S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljomf07_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF07S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF07S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljemst07_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJEMST07S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJEMST07S_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -1553,39 +1344,6 @@
 			default="1"
 			label="COM_JTCA_LJJADNG08S_FIELD_SAVE_HISTORY_LABEL"
 			description="COM_JTCA_LJJADNG08S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljjadg08_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJJADG08S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJJADG08S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljomf08_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF08S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF08S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljemst08_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJEMST08S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJEMST08S_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -1712,28 +1470,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf09_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF09S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF09S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljemst09_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJEMST09S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJEMST09S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="lsc10_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -1844,45 +1580,12 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf10_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF10S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF10S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljemst10_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJEMST10S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJEMST10S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="lsc11_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
 			label="COM_JTCA_LSC11S_FIELD_SAVE_HISTORY_LABEL"
 			description="COM_JTCA_LSC11S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljc11_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJC11S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJC11S_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -1976,28 +1679,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf11_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF11S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF11S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljemst11_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJEMST11S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJEMST11S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="lsc12_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -2086,45 +1767,12 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljjadg12_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJJADG12S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJJADG12S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="ljjadng12_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
 			label="COM_JTCA_LJJADNG12S_FIELD_SAVE_HISTORY_LABEL"
 			description="COM_JTCA_LJJADNG12S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljomf12_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF12S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF12S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljemst12_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJEMST12S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJEMST12S_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -2229,17 +1877,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf13_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF13S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF13S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="ljc14_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -2317,17 +1954,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf14_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF14S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF14S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="ljf15_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -2378,17 +2004,6 @@
 			default="1"
 			label="COM_JTCA_LJJADG15S_FIELD_SAVE_HISTORY_LABEL"
 			description="COM_JTCA_LJJADG15S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljomf15_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF15S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF15S_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -2471,17 +2086,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf16_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF16S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF16S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="ljc17_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -2559,17 +2163,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf17_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF17S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF17S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="ljc18_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -2625,17 +2218,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf18_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF18S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF18S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="ljpes18_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -2680,17 +2262,6 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf19_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF19S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF19S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="ljc20_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -2719,17 +2290,6 @@
 			default="1"
 			label="COM_JTCA_LJP20S_FIELD_SAVE_HISTORY_LABEL"
 			description="COM_JTCA_LJP20S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljomf20_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF20S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF20S_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -2768,34 +2328,12 @@
             <option	value="0">JNO</option>
         </field>
         <field
-			name="ljomf21_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF21S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF21S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
 			name="ljf22_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
 			label="COM_JTCA_LJF22S_FIELD_SAVE_HISTORY_LABEL"
 			description="COM_JTCA_LJF22S_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
-        <field
-			name="ljomf22_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LJOMF22S_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LJOMF22S_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
