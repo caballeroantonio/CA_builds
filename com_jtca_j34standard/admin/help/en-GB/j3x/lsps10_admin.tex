@@ -1,0 +1,45 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_expediente & INT(10) & Expediente: \tabularnewline\hline 
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	id\_secretaria & INT(10) & Secretar\'i{}a: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.: \tabularnewline\hline 
+	field2426 & DECIMAL(11,2) & MONTO DE LA MULTA: \tabularnewline\hline 
+	field2427 & VARCHAR(45) & CONCEPTO DE LA MULTA: \tabularnewline\hline 
+	field2428 & DATETIME & FECHA DE RESOLUCI\'ON QUE LA DECRETA: \tabularnewline\hline 
+	field2429\_isMoral & TINYINT(1) & NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (isMoral): \tabularnewline\hline 
+	field2429\_paterno & VARCHAR(255) & NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (paterno): \tabularnewline\hline 
+	field2429\_materno & VARCHAR(45) & NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (materno): \tabularnewline\hline 
+	field2429\_nombre & VARCHAR(45) & NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (nombre): \tabularnewline\hline 
+	field2430 & VARCHAR(45) & NO.  DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCI\'ON: \tabularnewline\hline 
+	field2446 & DATETIME & FECHA DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCI\'ON: \tabularnewline\hline 
+	field2431 & DATETIME & FECHA EN LA QUE ES ENTREGADO: \tabularnewline\hline 
+	field2432 & TEXT & OBSERVACIONES: \tabularnewline\hline 

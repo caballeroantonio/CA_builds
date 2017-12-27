@@ -440,6 +440,7 @@ class JtCaModelLejemplos extends JModelList
 
 
 				
+				
 				if (isset($item->id_organo) AND $item->id_organo !='')
 				{
 					$sql = 'SELECT '.$db->quoteName('list.id').' AS id, '.$db->quoteName('list.organo').' AS value FROM (SELECT id, organo FROM jtc_organos) AS list';
@@ -479,7 +480,6 @@ class JtCaModelLejemplos extends JModelList
 				{
 					$item->id_secretaria = array();
 				}
-				
 				
 				
 				

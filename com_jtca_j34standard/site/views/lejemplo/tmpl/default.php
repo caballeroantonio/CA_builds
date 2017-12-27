@@ -122,11 +122,11 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="lejemploForm" id="lejemploForm">
 			<?php $dummy = false;
 					$display_fieldset = (
+								($params->get('show_lejemplo_id_expediente')) OR 
 								($params->get('show_lejemplo_id_organo')) OR 
 								($params->get('show_lejemplo_id_secretaria')) OR 
 								($params->get('show_lejemplo_anoj')) OR 
 								($params->get('show_lejemplo_my_boolean')) OR 
-								($params->get('show_lejemplo_id_expediente')) OR 
 								($params->get('show_lejemplo_my_int')) OR 
 								($params->get('show_lejemplo_my_currency')) OR 
 								($params->get('show_lejemplo_my_date')) OR 
@@ -155,6 +155,18 @@ $empty = $component->params->get('default_empty_field', '');
 					<legend><?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELDSET_LEJEMPLO_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
+						<?php if ($params->get('show_lejemplo_id_expediente')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_ID_EXPEDIENTE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->id_expediente != '' ? $this->item->id_expediente : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
 						<?php if ($params->get('show_lejemplo_id_organo')) : ?>
 						<div class="formelm">
 							<label>
@@ -233,18 +245,6 @@ $empty = $component->params->get('default_empty_field', '');
 										echo JText::_('JNONE');
 										break;
 								endswitch;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_lejemplo_id_expediente')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LEJEMPLOS_FIELD_ID_EXPEDIENTE_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->id_expediente != '' ? $this->item->id_expediente : $empty;
 								?>
 							</span>
 						</div>	

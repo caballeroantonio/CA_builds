@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- @version 			$Id:$ -->
+<!-- @name			    TSJ CDMX Libros TxCA -->
+<!-- @author			caballeroantonio (caballeroantonio.com) -->
+<!-- @package			com_jtca -->
+<!-- @subpackage		com_jtca.admin -->
+<!-- @copyright		    Copyright (c) 2017 - 2020. All Rights Reserved -->
+<!-- @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- The following Component Architect header section must remain in any distribution of this file -->
+
+<!-- @CAversion			Id: filter_compobjectplural.xml 571 2016-01-04 15:03:02Z BrianWade $ -->
+<!-- @CAauthor		    Component Architect (www.componentarchitect.com) -->
+<!-- @CApackage		    architectcomp -->
+<!-- @CAsubpackage	    architectcomp.admin -->
+<!-- @CAtemplate		joomla_3_4_standard (Release 1.0.1) -->
+<!-- @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved -->
+<!-- @Joomlacopyright   Copyright (c)2005 - 2016 Open Source Matters, Inc. All rights reserved. -->
+<!-- @CAlicense		    GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or (at your option) any later version. -->
+
+<!-- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of -->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. -->
+
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_JTCA_LSPS13S_FILTER_SEARCH_DESC"
+			hint="JSEARCH_FILTER"
+		/>
+        <field
+			name="state"
+			type="status"
+			label="COM_JTCA_FILTER_STATUS_LABEL"
+			description="COM_JTCA_FILTER_STATUS_DESC"
+			onchange="this.form.submit();"
+		>
+            <option value="">COM_JTCA_SELECT_STATUS</option>
+        </field>
+        <field
+			name="created_by"
+			type="sql"
+			label="COM_JTCA_FILTER_CREATED_BY_LABEL"
+			description="COM_JTCA_FILTER_CREATED_BY_DESC"
+			onchange="this.form.submit();"
+			query="SELECT `u`.`id` AS `value`, `u`.`name` AS `text`
+			        FROM `#__users` AS `u`
+			        INNER JOIN `jt_lsps13s` AS `a` ON `a`.`created_by` = `u`.`id`
+			        GROUP BY `u`.`id`, `u`.`name`
+			        ORDER BY `u`.`name`"
+			key_field="value"
+			value_field="text"			        			
+		>
+            <option value="">COM_JTCA_SELECT_CREATED_BY</option>
+        </field>
+    </fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default=""
+		>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
+			<option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+			<option value="a.state ASC">JSTATUS_ASC</option>
+			<option value="a.state DESC">JSTATUS_DESC</option>
+            <option value="created_by_name ASC">COM_JTCA_FIELD_CREATED_BY_SORT_ASC_LABEL</option>
+            <option value="created_by_name DESC">COM_JTCA_FIELD_CREATED_BY_SORT_DESC_LABEL</option>
+			<option value="a.created ASC">JDATE_ASC</option>
+			<option value="a.created DESC">JDATE_DESC</option>
+			<option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
+        </field>
+        <field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_JTCA_LIST_LIMIT_LABEL"
+			description="COM_JTCA_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

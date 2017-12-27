@@ -353,6 +353,11 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 			'text'=>'LIBRO DE INGRESO Y EGRESO DE BILLETES',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LSPE08_DESCRIPTION')
 			);
+		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsps01s',
+			'object'=>'lsps01s',
+			'text'=>'LIBRO DE GOBIERNO (SISTEMA TRADICIONAL)',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_JTCA_LSPS01_DESCRIPTION')
+			);
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsc02s',
 			'object'=>'lsc02s',
 			'text'=>'LIBRETA DE REGISTRO DE ASISTENCIA (OFICIAL)',//JText::_('JTCA_COMPONENT_WIZARD'),
@@ -392,6 +397,11 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 			'object'=>'ljjadg02s',
 			'text'=>'LIBRO DE PROMOCIONES',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LJJADG02_DESCRIPTION')
+			);
+		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsps02s',
+			'object'=>'lsps02s',
+			'text'=>'LIBRO DE GOBIERNO (NUEVO SISTEMA) (UNITARIO)',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_JTCA_LSPS02_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lejemplos',
 			'object'=>'lejemplos',
@@ -438,6 +448,11 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 			'text'=>'LIBRO DE INGRESOS',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LJJADG03_DESCRIPTION')
 			);
+		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsps03s',
+			'object'=>'lsps03s',
+			'text'=>'LIBRO DE GOBIERNO (NUEVO SISTEMA) (COLEGIADO)',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_JTCA_LSPS03_DESCRIPTION')
+			);
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsc04s',
 			'object'=>'lsc04s',
 			'text'=>'LIBRO DE MULTAS (OFICIAL)',//JText::_('JTCA_COMPONENT_WIZARD'),
@@ -482,6 +497,11 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 			'object'=>'ljjadg04s',
 			'text'=>'LIBRO DE EGRESOS',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LJJADG04_DESCRIPTION')
+			);
+		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsps04s',
+			'object'=>'lsps04s',
+			'text'=>'LIBRO DE ACTUARIO',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_JTCA_LSPS04_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsc05s',
 			'object'=>'lsc05s',
@@ -533,6 +553,11 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 			'text'=>'LIBRO DE SENTENCIAS',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LJJADG05_DESCRIPTION')
 			);
+		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsps05s',
+			'object'=>'lsps05s',
+			'text'=>'LIBRO DE REGISTRO DE AMPAROS',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_JTCA_LSPS05_DESCRIPTION')
+			);
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsc06s',
 			'object'=>'lsc06s',
 			'text'=>'LIBRO DE CONTROL DE BILLETES Y PÓLIZAS (OFICIAL)',//JText::_('JTCA_COMPONENT_WIZARD'),
@@ -583,6 +608,11 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 			'text'=>'LIBRO DE RECURSOS DE APELACIÓN',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LJJADG06_DESCRIPTION')
 			);
+		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsps06s',
+			'object'=>'lsps06s',
+			'text'=>'LIBRO DE CONTROL DE PEDIMENTOS',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_JTCA_LSPS06_DESCRIPTION')
+			);
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsc07s',
 			'object'=>'lsc07s',
 			'text'=>'LIBRO DE EGRESOS (OFICIAL)',//JText::_('JTCA_COMPONENT_WIZARD'),
@@ -622,6 +652,11 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 			'object'=>'ljjadng07s',
 			'text'=>'LIBRO DE OFICIOS',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LJJADNG07_DESCRIPTION')
+			);
+		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsps07s',
+			'object'=>'lsps07s',
+			'text'=>'REGISTRO DE BILLETES DE DEPOSITO',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_JTCA_LSPS07_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsc08s',
 			'object'=>'lsc08s',
@@ -673,6 +708,11 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 			'text'=>'LIBRO DE PÓLIZAS Y FIANZAS (OFICIAL) - Egresos',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LSC14_DESCRIPTION')
 			);
+		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsps08s',
+			'object'=>'lsps08s',
+			'text'=>'LIBRO DE TURNO DE ENTREGAS DE TOCAS',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_JTCA_LSPS08_DESCRIPTION')
+			);
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsc09s',
 			'object'=>'lsc09s',
 			'text'=>'LIBRO DE GOBIERNO (OFICIAL)',//JText::_('JTCA_COMPONENT_WIZARD'),
@@ -722,6 +762,11 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 			'object'=>'ljjadg09s',
 			'text'=>'LIBRO DE ACTUARIOS',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LJJADG09_DESCRIPTION')
+			);
+		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsps09s',
+			'object'=>'lsps09s',
+			'text'=>'LIBRO DE REMISIÓN AL ARCHIVO',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_JTCA_LSPS09_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsc10s',
 			'object'=>'lsc10s',
@@ -773,6 +818,11 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 			'text'=>'LIBRO DE AMPAROS',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LJJADG10_DESCRIPTION')
 			);
+		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsps10s',
+			'object'=>'lsps10s',
+			'text'=>'LIBRO DE CONTROL DE MULTAS',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_JTCA_LSPS10_DESCRIPTION')
+			);
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsc11s',
 			'object'=>'lsc11s',
 			'text'=>'LIBRETA DE OFICIOS (OFICIAL)',//JText::_('JTCA_COMPONENT_WIZARD'),
@@ -817,6 +867,11 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 			'object'=>'ljjadg11s',
 			'text'=>'LIBRO DE CONTROL DE FIANZAS',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LJJADG11_DESCRIPTION')
+			);
+		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsps11s',
+			'object'=>'lsps11s',
+			'text'=>'LIBRO DE CONTROL DE FIANZA',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_JTCA_LSPS11_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsc12s',
 			'object'=>'lsc12s',
@@ -863,6 +918,11 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 			'text'=>'LIBROS DE VALORES',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LJJADNG12_DESCRIPTION')
 			);
+		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsps12s',
+			'object'=>'lsps12s',
+			'text'=>'REGISTRO DE PROMOCIONES',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_JTCA_LSPS12_DESCRIPTION')
+			);
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsc13s',
 			'object'=>'lsc13s',
 			'text'=>'PAPELETAS PARA EL PRÉSTAMO DE EXPEDIENTES',//JText::_('JTCA_COMPONENT_WIZARD'),
@@ -907,6 +967,11 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 			'object'=>'ljjadg13s',
 			'text'=>'AGENDA DE AUDIENCIAS',//JText::_('JTCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_JTCA_LJJADG13_DESCRIPTION')
+			);
+		$buttons[] = array('link'=>'index.php?option=com_jtca&view=lsps13s',
+			'object'=>'lsps13s',
+			'text'=>'CONTROL DE FIRMAS DEL PROCESADO',//JText::_('JTCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_JTCA_LSPS13_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_jtca&view=ljc14s',
 			'object'=>'ljc14s',

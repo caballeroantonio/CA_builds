@@ -15664,6 +15664,317 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
+    Compobject_name=Libro de gobierno (sistema tradicional)
+    Compobject_description_ini=<p>El campo pena debe decir PENA O MEDIDA PRIVATIVA.</p><br/><p>Dependiendo del sistema jurídico, tradicional o nuevo, los términos jurídicos cambian de acusado a imputado, pero la implementación le permite al usuario elegir el témino adecuado.</p><br/><p>FECHA DE REMISIÓN DEL TESTIMONIO Y DEVOLUCIÓN DE LA CAUSA es uno  o dos eventos?</p>
+	
+    COMPOBJECT=LSPS01
+    compobject=lsps01
+    CompObject=Lsps01
+    
+    compobject_name=libro de gobierno (sistema tradicional)
+    CompObject_name=LIBRO DE GOBIERNO (SISTEMA TRADICIONAL)
+    CompObject_short_name=Lsps01
+    Compobject_short_name=Lsps01
+    compobject_short_name=lsps01
+    
+    COMPOBJECTPLURAL=LSPS01S
+    compobjectplural=lsps01s
+    CompObjectPlural=Lsps01s
+    compobject_plural_name=libro de gobierno (sistema tradicional)
+    CompObject_plural_name=LIBRO DE GOBIERNO (SISTEMA TRADICIONAL)
+    compobject_short_plural_name=lsps01s
+    CompObject_short_plural_name=Lsps01s
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=LSPS01_FS
+        FIELDSET_NAME=lsps01_fs
+        FIELDSET_CODE_NAME_UPPER=LSPS01_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Año j.
+            FIELD_CODE_NAME_UPPER=ANOJ
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
+            
+            FIELD_NAME_LATEX=A\~no j.
+            FIELD_CODE_NAME_LATEX=anoj
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=CLASIFICACIÓN
+            FIELD_CODE_NAME_UPPER=FIELD2350
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=38
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2350` INT(10) DEFAULT NULL CLASIFICACIÓN
+            
+            FIELD_NAME_LATEX=CLASIFICACI\'ON
+            FIELD_CODE_NAME_LATEX=field2350
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=JUZGADO DE PROCEDENCIA
+            FIELD_CODE_NAME_UPPER=FIELD2351
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2351` VARCHAR(255) DEFAULT NULL JUZGADO DE PROCEDENCIA
+            
+            FIELD_NAME_LATEX=JUZGADO DE PROCEDENCIA
+            FIELD_CODE_NAME_LATEX=field2351
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=MAGISTRADO PONENTE
+            FIELD_CODE_NAME_UPPER=FIELD2352
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2352` VARCHAR(255) DEFAULT NULL MAGISTRADO PONENTE
+            
+            FIELD_NAME_LATEX=MAGISTRADO PONENTE
+            FIELD_CODE_NAME_LATEX=field2352
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=SENTENCIA (SENTIDO)
+            FIELD_CODE_NAME_UPPER=FIELD2353
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2353` VARCHAR(255) DEFAULT NULL SENTENCIA (SENTIDO)
+            
+            FIELD_NAME_LATEX=SENTENCIA (SENTIDO)
+            FIELD_CODE_NAME_LATEX=field2353
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA
+            FIELD_CODE_NAME_UPPER=FIELD2354
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2354` DATETIME DEFAULT NULL FECHA
+            
+            FIELD_NAME_LATEX=FECHA
+            FIELD_CODE_NAME_LATEX=field2354
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=RESOLUTIVOS
+            FIELD_CODE_NAME_UPPER=FIELD2355
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2355` VARCHAR(255) DEFAULT NULL RESOLUTIVOS
+            
+            FIELD_NAME_LATEX=RESOLUTIVOS
+            FIELD_CODE_NAME_LATEX=field2355
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE RESOLUCIÓN
+            FIELD_CODE_NAME_UPPER=FIELD2356
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2356` DATETIME DEFAULT NULL FECHA DE RESOLUCIÓN
+            
+            FIELD_NAME_LATEX=FECHA DE RESOLUCI\'ON
+            FIELD_CODE_NAME_LATEX=field2356
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE REMISIÓN DEL TESTIMONIO Y DEVOLUCIÓN DE LA CAUSA
+            FIELD_CODE_NAME_UPPER=FIELD2357
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2357` DATETIME DEFAULT NULL FECHA DE REMISIÓN DEL TESTIMONIO Y DEVOLUCIÓN DE LA CAUSA
+            
+            FIELD_NAME_LATEX=FECHA DE REMISI\'ON DEL TESTIMONIO Y DEVOLUCI\'ON DE LA CAUSA
+            FIELD_CODE_NAME_LATEX=field2357
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE ARCHIVO
+            FIELD_CODE_NAME_UPPER=FIELD2358
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2358` DATETIME DEFAULT NULL FECHA DE ARCHIVO
+            
+            FIELD_NAME_LATEX=FECHA DE ARCHIVO
+            FIELD_CODE_NAME_LATEX=field2358
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
     Compobject_name=Libreta de registro de asistencia (oficial)
     Compobject_description_ini=<p>En el requerimiento indicaron que &quot;SE REQUIERE FIRMA DE ENTRADA Y FIRMA DE SALIDA&quot;.</p><br/><p>Existen dos opciones para establecer la mécanica de las firmas.</p><br/><p>Una opción es que los usuarios estén obligados a iniciar sesión en el Sistema e ingresar a este libro para introducir una firma de entrada y otra de salida pero puede representar un molestias por el tiempo dedicado a ésta actividad. También puede representar un problema logístico y económico dotar a todos los ordenadores personales de todos los usuarios con lectores electrónicos de firma.</p><br/><p>Otra opción es que se utilice un ordenador común, como el del secretario de acuedos como fedatario , y en el formulario aparezca un catálogo con los nombres de los empleados adscritos al recinto para que así ingresen las firmas. Ésto evitaría la molestia de escribir todos los días el nombre.</p><br/><p>Puede no ser necesario tener los campos de captura de fecha y hora pues se puede mostrar los que registra el Sistema al momento de adjuntar el archivo digital de la firma.</p><br/><p>En reunión con la DEGT aceptan la propuesta de desplegar los nombres adscritos al recinto en un selector y tomar las fechas de sistema y mostrarlas sin que sea necesario capturarlas.</p><br/><p>CHANGELOG</p><br/><p>20170907 Quité el campo 127 &quot;FECHA&quot; y cambié la etiqueta de los campos &quot;HORA DE ENTRADA y HORA DE SALIDA&quot; por &quot;FECHA Y HORA DE ENTRADA&quot; y &quot;FECHA Y HORA DE SALIDA&quot;</p><br/><p>20170922 Cambié el campo &quot;NOMBRE Y FIRMA DE ENTRADA Y DE SALIDA&quot; por &quot;FIRMA DE ENTRADA&quot; y Cambié el campo 127 &quot;FECHA&quot; por &quot;FIRMA DE SALIDA&quot;</p><br/>Este libro se distribuye por secretaría<br/>Este libro tiene reglas partículares en el layout.<br/>20171115 Cervantes solicitó quitar la distribución (campo ponencia o dpto)
 	
@@ -17640,6 +17951,357 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
+    Compobject_name=Libro de gobierno (nuevo sistema) (unitario)
+    Compobject_description_ini=<p><strong>CHANGELOG</strong></p><br/><p>20171226 Cambié C/S AUDIENCIA DE ALEGATOS ACLARATORIOS por AUDIENCIA DE ALEGATOS ACLARATORIOS con un catálogo si/no</p><br/><p>20171226 Cambié C/S DETENIDO por CON DETENIDO para simplificar el uso de catálogos </p>
+	
+    COMPOBJECT=LSPS02
+    compobject=lsps02
+    CompObject=Lsps02
+    
+    compobject_name=libro de gobierno (nuevo sistema) (unitario)
+    CompObject_name=LIBRO DE GOBIERNO (NUEVO SISTEMA) (UNITARIO)
+    CompObject_short_name=Lsps02
+    Compobject_short_name=Lsps02
+    compobject_short_name=lsps02
+    
+    COMPOBJECTPLURAL=LSPS02S
+    compobjectplural=lsps02s
+    CompObjectPlural=Lsps02s
+    compobject_plural_name=libro de gobierno (nuevo sistema) (unitario)
+    CompObject_plural_name=LIBRO DE GOBIERNO (NUEVO SISTEMA) (UNITARIO)
+    compobject_short_plural_name=lsps02s
+    CompObject_short_plural_name=Lsps02s
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=LSPS02_FS
+        FIELDSET_NAME=lsps02_fs
+        FIELDSET_CODE_NAME_UPPER=LSPS02_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Año j.
+            FIELD_CODE_NAME_UPPER=ANOJ
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
+            
+            FIELD_NAME_LATEX=A\~no j.
+            FIELD_CODE_NAME_LATEX=anoj
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=UNIDAD DE GESTIÓN
+            FIELD_CODE_NAME_UPPER=FIELD2359
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2359` VARCHAR(255) DEFAULT NULL UNIDAD DE GESTIÓN
+            
+            FIELD_NAME_LATEX=UNIDAD DE GESTI\'ON
+            FIELD_CODE_NAME_LATEX=field2359
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=CARPETA ADMINISTRATIVA
+            FIELD_CODE_NAME_UPPER=FIELD2360
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2360` VARCHAR(45) DEFAULT NULL CARPETA ADMINISTRATIVA
+            
+            FIELD_NAME_LATEX=CARPETA ADMINISTRATIVA
+            FIELD_CODE_NAME_LATEX=field2360
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=JUZGADOR
+            FIELD_CODE_NAME_UPPER=FIELD2361
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2361` VARCHAR(255) DEFAULT NULL JUZGADOR
+            
+            FIELD_NAME_LATEX=JUZGADOR
+            FIELD_CODE_NAME_LATEX=field2361
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=RESOLUCIÓN APELADA
+            FIELD_CODE_NAME_UPPER=FIELD2362
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2362` VARCHAR(255) DEFAULT NULL RESOLUCIÓN APELADA
+            
+            FIELD_NAME_LATEX=RESOLUCI\'ON APELADA
+            FIELD_CODE_NAME_LATEX=field2362
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=CON AUDIENCIA DE ALEGATOS ACLARATORIOS
+            FIELD_CODE_NAME_UPPER=FIELD2363
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=16
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2363` TINYINT(1) DEFAULT NULL CON AUDIENCIA DE ALEGATOS ACLARATORIOS
+            
+            FIELD_NAME_LATEX=CON AUDIENCIA DE ALEGATOS ACLARATORIOS
+            FIELD_CODE_NAME_LATEX=field2363
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=DOCUMENTACIÓN RECIBIDA
+            FIELD_CODE_NAME_UPPER=FIELD2364
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2364` VARCHAR(255) DEFAULT NULL DOCUMENTACIÓN RECIBIDA
+            
+            FIELD_NAME_LATEX=DOCUMENTACI\'ON RECIBIDA
+            FIELD_CODE_NAME_LATEX=field2364
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=CON DETENIDO
+            FIELD_CODE_NAME_UPPER=FIELD2365
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=16
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2365` TINYINT(1) DEFAULT NULL CON DETENIDO
+            
+            FIELD_NAME_LATEX=CON DETENIDO
+            FIELD_CODE_NAME_LATEX=field2365
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=MAGISTRADO UNITARIO
+            FIELD_CODE_NAME_UPPER=FIELD2366
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2366` VARCHAR(255) DEFAULT NULL MAGISTRADO UNITARIO
+            
+            FIELD_NAME_LATEX=MAGISTRADO UNITARIO
+            FIELD_CODE_NAME_LATEX=field2366
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA SENT. SEG. INST.
+            FIELD_CODE_NAME_UPPER=FIELD2367
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2367` DATETIME DEFAULT NULL FECHA SENT. SEG. INST.
+            
+            FIELD_NAME_LATEX=FECHA SENT. SEG. INST.
+            FIELD_CODE_NAME_LATEX=field2367
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=RESOLUTIVOS
+            FIELD_CODE_NAME_UPPER=FIELD2368
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2368` VARCHAR(255) DEFAULT NULL RESOLUTIVOS
+            
+            FIELD_NAME_LATEX=RESOLUTIVOS
+            FIELD_CODE_NAME_LATEX=field2368
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=OBSERVACIONES
+            FIELD_CODE_NAME_UPPER=FIELD2369
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=4
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2369` TEXT DEFAULT NULL OBSERVACIONES
+            
+            FIELD_NAME_LATEX=OBSERVACIONES
+            FIELD_CODE_NAME_LATEX=field2369
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
     Compobject_name=Libro de ejemplo
     Compobject_description_ini=<p>13:46:50el libro de ejeplo sliver para ......</p><br/><p><br />Este libro se distribuye por secretaría</p>
 	
@@ -17669,6 +18331,26 @@ architectcomp=jtca
         FIELDSET_DESCRIPTION=
 
 {1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
+            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
+            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
+            
+
+
+        
+{-1.2}
 
             {OBJECT_FIELD}
             FIELD_NAME=Órgano
@@ -17744,26 +18426,6 @@ architectcomp=jtca
             FIELD_NAME_LATEX=my boolean
             FIELD_CODE_NAME_LATEX=my\_boolean
             FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=Expediente
-            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-            FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION_INI=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-            FIELD_DESCRIPTION=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p> 
-            FIELDTYPE_ID=33
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
-            
-            FIELD_NAME_LATEX=Expediente
-            FIELD_CODE_NAME_LATEX=id\_expediente
-            FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
 
 
@@ -21124,6 +21786,357 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
+    Compobject_name=Libro de gobierno (nuevo sistema) (colegiado)
+    Compobject_description_ini=
+	
+    COMPOBJECT=LSPS03
+    compobject=lsps03
+    CompObject=Lsps03
+    
+    compobject_name=libro de gobierno (nuevo sistema) (colegiado)
+    CompObject_name=LIBRO DE GOBIERNO (NUEVO SISTEMA) (COLEGIADO)
+    CompObject_short_name=Lsps03
+    Compobject_short_name=Lsps03
+    compobject_short_name=lsps03
+    
+    COMPOBJECTPLURAL=LSPS03S
+    compobjectplural=lsps03s
+    CompObjectPlural=Lsps03s
+    compobject_plural_name=libro de gobierno (nuevo sistema) (colegiado)
+    CompObject_plural_name=LIBRO DE GOBIERNO (NUEVO SISTEMA) (COLEGIADO)
+    compobject_short_plural_name=lsps03s
+    CompObject_short_plural_name=Lsps03s
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=LSPS03_FS
+        FIELDSET_NAME=lsps03_fs
+        FIELDSET_CODE_NAME_UPPER=LSPS03_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Año j.
+            FIELD_CODE_NAME_UPPER=ANOJ
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
+            
+            FIELD_NAME_LATEX=A\~no j.
+            FIELD_CODE_NAME_LATEX=anoj
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=UNIDAD DE GESTIÓN
+            FIELD_CODE_NAME_UPPER=FIELD2370
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2370` VARCHAR(255) DEFAULT NULL UNIDAD DE GESTIÓN
+            
+            FIELD_NAME_LATEX=UNIDAD DE GESTI\'ON
+            FIELD_CODE_NAME_LATEX=field2370
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=CARPETA ADMINISTRATIVA
+            FIELD_CODE_NAME_UPPER=FIELD2371
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2371` VARCHAR(45) DEFAULT NULL CARPETA ADMINISTRATIVA
+            
+            FIELD_NAME_LATEX=CARPETA ADMINISTRATIVA
+            FIELD_CODE_NAME_LATEX=field2371
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=JUZGADOR
+            FIELD_CODE_NAME_UPPER=FIELD2372
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2372` VARCHAR(255) DEFAULT NULL JUZGADOR
+            
+            FIELD_NAME_LATEX=JUZGADOR
+            FIELD_CODE_NAME_LATEX=field2372
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=RESOLUCIÓN APELADA
+            FIELD_CODE_NAME_UPPER=FIELD2373
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2373` VARCHAR(255) DEFAULT NULL RESOLUCIÓN APELADA
+            
+            FIELD_NAME_LATEX=RESOLUCI\'ON APELADA
+            FIELD_CODE_NAME_LATEX=field2373
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=CON AUDIENCIA DE ALEGATOS ACLARATORIOS
+            FIELD_CODE_NAME_UPPER=FIELD2374
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=16
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2374` TINYINT(1) DEFAULT NULL CON AUDIENCIA DE ALEGATOS ACLARATORIOS
+            
+            FIELD_NAME_LATEX=CON AUDIENCIA DE ALEGATOS ACLARATORIOS
+            FIELD_CODE_NAME_LATEX=field2374
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=DOCUMENTACIÓN RECIBIDA
+            FIELD_CODE_NAME_UPPER=FIELD2375
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=4
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2375` TEXT DEFAULT NULL DOCUMENTACIÓN RECIBIDA
+            
+            FIELD_NAME_LATEX=DOCUMENTACI\'ON RECIBIDA
+            FIELD_CODE_NAME_LATEX=field2375
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=CON DETENIDO
+            FIELD_CODE_NAME_UPPER=FIELD2376
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=16
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2376` TINYINT(1) DEFAULT NULL CON DETENIDO
+            
+            FIELD_NAME_LATEX=CON DETENIDO
+            FIELD_CODE_NAME_LATEX=field2376
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=MAGISTRADO RELATOR
+            FIELD_CODE_NAME_UPPER=FIELD2377
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2377` VARCHAR(255) DEFAULT NULL MAGISTRADO RELATOR
+            
+            FIELD_NAME_LATEX=MAGISTRADO RELATOR
+            FIELD_CODE_NAME_LATEX=field2377
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA SENT. SEG. INST.
+            FIELD_CODE_NAME_UPPER=FIELD2378
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2378` DATETIME DEFAULT NULL FECHA SENT. SEG. INST.
+            
+            FIELD_NAME_LATEX=FECHA SENT. SEG. INST.
+            FIELD_CODE_NAME_LATEX=field2378
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=RESOLUTIVOS
+            FIELD_CODE_NAME_UPPER=FIELD2379
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2379` VARCHAR(255) DEFAULT NULL RESOLUTIVOS
+            
+            FIELD_NAME_LATEX=RESOLUTIVOS
+            FIELD_CODE_NAME_LATEX=field2379
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=OBSERVACIONES
+            FIELD_CODE_NAME_UPPER=FIELD2380
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=4
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2380` TEXT DEFAULT NULL OBSERVACIONES
+            
+            FIELD_NAME_LATEX=OBSERVACIONES
+            FIELD_CODE_NAME_LATEX=field2380
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
     Compobject_name=Libro de multas (oficial)
     Compobject_description_ini=<p>Libro a nivel de la secretaria general de la sala.</p><br/><p>Si las multas las cobra el órgano jurisdiccional y entran como ingresos al órgano se podría asociar/ingresar automáticamente en el libro correspondiente</p><br/><p>No entiendo en qué se diferencía del campo &quot;JUICIO&quot;  del campo &quot;EXPEDIENTE PRINCIPAL&quot;</p><br/><p>CHANGELOG</p><br/><p>20170921 modifiqué la etiqueta del campo 142 &quot;OFICIO (NÚMERO Y FECHA)&quot; por &quot;NÚMERO DE OFICIO (CONSECUTIVO)&quot; y agregué el campo &quot;FECHA DE EMISIÓN DEL OFICIO&quot;</p><br/><p>20171001 por solicitud de la DEGT se cambia el campo 52 &quot;FECHA DE EMISIÓN DEL OFICIO&quot; por &quot;FECHA DEL OFICIO&quot; y &quot;NÚMERO DE OFICIO (CONSECUTIVO)&quot; por &quot;NÚMERO DEL OFICIO&quot;.</p><br/><p>20170929 DEGT indicó que el campo &quot;EXPEDIENTE PRINCIPAL&quot; son campos de texto abierto.</p>
 	
@@ -23441,6 +24454,357 @@ architectcomp=jtca
     
 {1.3}
         	{FILTER_FIELD}
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
+    Compobject_name=Libro de actuario
+    Compobject_description_ini=<p><strong>Changelog</strong></p><br/><p>20171226 Cambié NO. DE CAUSA por TOCA, debido a que en segunda instancia los asuntos se llaman TOCA.</p>
+	
+    COMPOBJECT=LSPS04
+    compobject=lsps04
+    CompObject=Lsps04
+    
+    compobject_name=libro de actuario
+    CompObject_name=LIBRO DE ACTUARIO
+    CompObject_short_name=Lsps04
+    Compobject_short_name=Lsps04
+    compobject_short_name=lsps04
+    
+    COMPOBJECTPLURAL=LSPS04S
+    compobjectplural=lsps04s
+    CompObjectPlural=Lsps04s
+    compobject_plural_name=libro de actuario
+    CompObject_plural_name=LIBRO DE ACTUARIO
+    compobject_short_plural_name=lsps04s
+    CompObject_short_plural_name=Lsps04s
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=LSPS04_FS
+        FIELDSET_NAME=lsps04_fs
+        FIELDSET_CODE_NAME_UPPER=LSPS04_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Año j.
+            FIELD_CODE_NAME_UPPER=ANOJ
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
+            
+            FIELD_NAME_LATEX=A\~no j.
+            FIELD_CODE_NAME_LATEX=anoj
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=DESTINATARIO
+            FIELD_CODE_NAME_UPPER=FIELD2381
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2381` VARCHAR(255) DEFAULT NULL DESTINATARIO
+            
+            FIELD_NAME_LATEX=DESTINATARIO
+            FIELD_CODE_NAME_LATEX=field2381
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE ENTREGA
+            FIELD_CODE_NAME_UPPER=FIELD2382
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2382` DATETIME DEFAULT NULL FECHA DE ENTREGA
+            
+            FIELD_NAME_LATEX=FECHA DE ENTREGA
+            FIELD_CODE_NAME_LATEX=field2382
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DEL ACTUARIO
+            FIELD_CODE_NAME_UPPER=FIELD2383
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2383` VARCHAR(255) DEFAULT NULL NOMBRE DEL ACTUARIO
+            
+            FIELD_NAME_LATEX=NOMBRE DEL ACTUARIO
+            FIELD_CODE_NAME_LATEX=field2383
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DEL AUTO POR DELIGENCIAR
+            FIELD_CODE_NAME_UPPER=FIELD2384
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2384` DATETIME DEFAULT NULL FECHA DEL AUTO POR DELIGENCIAR
+            
+            FIELD_NAME_LATEX=FECHA DEL AUTO POR DELIGENCIAR
+            FIELD_CODE_NAME_LATEX=field2384
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE DILIGENCIA
+            FIELD_CODE_NAME_UPPER=FIELD2385
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2385` DATETIME DEFAULT NULL FECHA DE DILIGENCIA
+            
+            FIELD_NAME_LATEX=FECHA DE DILIGENCIA
+            FIELD_CODE_NAME_LATEX=field2385
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE DEVOLUCIÓN
+            FIELD_CODE_NAME_UPPER=FIELD2386
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2386` DATETIME DEFAULT NULL FECHA DE DEVOLUCIÓN
+            
+            FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
+            FIELD_CODE_NAME_LATEX=field2386
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE  DE QUIEN RECIBE LA DEVOLUCIÓN (isMoral)
+            FIELD_CODE_NAME_UPPER=FIELD2387_ISMORAL
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2387_isMoral` TINYINT(1) NOT NULL DEFAULT '0' NOMBRE  DE QUIEN RECIBE LA DEVOLUCIÓN (isMoral)
+            
+            FIELD_NAME_LATEX=NOMBRE  DE QUIEN RECIBE LA DEVOLUCI\'ON (isMoral)
+            FIELD_CODE_NAME_LATEX=field2387\_isMoral
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE  DE QUIEN RECIBE LA DEVOLUCIÓN (paterno)
+            FIELD_CODE_NAME_UPPER=FIELD2387_PATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2387_paterno` VARCHAR(255) DEFAULT NULL NOMBRE  DE QUIEN RECIBE LA DEVOLUCIÓN (paterno)
+            
+            FIELD_NAME_LATEX=NOMBRE  DE QUIEN RECIBE LA DEVOLUCI\'ON (paterno)
+            FIELD_CODE_NAME_LATEX=field2387\_paterno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE  DE QUIEN RECIBE LA DEVOLUCIÓN (materno)
+            FIELD_CODE_NAME_UPPER=FIELD2387_MATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2387_materno` VARCHAR(45) DEFAULT NULL NOMBRE  DE QUIEN RECIBE LA DEVOLUCIÓN (materno)
+            
+            FIELD_NAME_LATEX=NOMBRE  DE QUIEN RECIBE LA DEVOLUCI\'ON (materno)
+            FIELD_CODE_NAME_LATEX=field2387\_materno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE  DE QUIEN RECIBE LA DEVOLUCIÓN (nombre)
+            FIELD_CODE_NAME_UPPER=FIELD2387_NOMBRE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2387_nombre` VARCHAR(45) DEFAULT NULL NOMBRE  DE QUIEN RECIBE LA DEVOLUCIÓN (nombre)
+            
+            FIELD_NAME_LATEX=NOMBRE  DE QUIEN RECIBE LA DEVOLUCI\'ON (nombre)
+            FIELD_CODE_NAME_LATEX=field2387\_nombre
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=OBSERVACIONES
+            FIELD_CODE_NAME_UPPER=FIELD2388
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=4
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2388` TEXT DEFAULT NULL OBSERVACIONES
+            
+            FIELD_NAME_LATEX=OBSERVACIONES
+            FIELD_CODE_NAME_LATEX=field2388
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
 {-1.3}
     
 {1.0}
@@ -26287,6 +27651,397 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=DEL PROYECTISTA
             FIELD_CODE_NAME_LATEX=field10
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
+    Compobject_name=Libro de registro de amparos
+    Compobject_description_ini=<p><strong>Changelog</strong></p><br/><p>20171226 Cambié NO. DE CAUSA por TOCA, debido a que en segunda instancia los asuntos se llaman TOCA Y el amparo sería tramitado en contra de dicha TOCA y no en contra del asunto (causa) de primera instancia.</p>
+	
+    COMPOBJECT=LSPS05
+    compobject=lsps05
+    CompObject=Lsps05
+    
+    compobject_name=libro de registro de amparos
+    CompObject_name=LIBRO DE REGISTRO DE AMPAROS
+    CompObject_short_name=Lsps05
+    Compobject_short_name=Lsps05
+    compobject_short_name=lsps05
+    
+    COMPOBJECTPLURAL=LSPS05S
+    compobjectplural=lsps05s
+    CompObjectPlural=Lsps05s
+    compobject_plural_name=libro de registro de amparos
+    CompObject_plural_name=LIBRO DE REGISTRO DE AMPAROS
+    compobject_short_plural_name=lsps05s
+    CompObject_short_plural_name=Lsps05s
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=LSPS05_FS
+        FIELDSET_NAME=lsps05_fs
+        FIELDSET_CODE_NAME_UPPER=LSPS05_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Año j.
+            FIELD_CODE_NAME_UPPER=ANOJ
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
+            
+            FIELD_NAME_LATEX=A\~no j.
+            FIELD_CODE_NAME_LATEX=anoj
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NO. DE AMPARO
+            FIELD_CODE_NAME_UPPER=FIELD2389
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2389` VARCHAR(45) DEFAULT NULL NO. DE AMPARO
+            
+            FIELD_NAME_LATEX=NO. DE AMPARO
+            FIELD_CODE_NAME_LATEX=field2389
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=TIPO DE AMPARO
+            FIELD_CODE_NAME_UPPER=FIELD2390
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2390` VARCHAR(45) DEFAULT NULL TIPO DE AMPARO
+            
+            FIELD_NAME_LATEX=TIPO DE AMPARO
+            FIELD_CODE_NAME_LATEX=field2390
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=QUEJOSO (isMoral)
+            FIELD_CODE_NAME_UPPER=FIELD2391_ISMORAL
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2391_isMoral` TINYINT(1) NOT NULL DEFAULT '0' QUEJOSO (isMoral)
+            
+            FIELD_NAME_LATEX=QUEJOSO (isMoral)
+            FIELD_CODE_NAME_LATEX=field2391\_isMoral
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=QUEJOSO (paterno)
+            FIELD_CODE_NAME_UPPER=FIELD2391_PATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2391_paterno` VARCHAR(255) DEFAULT NULL QUEJOSO (paterno)
+            
+            FIELD_NAME_LATEX=QUEJOSO (paterno)
+            FIELD_CODE_NAME_LATEX=field2391\_paterno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=QUEJOSO (materno)
+            FIELD_CODE_NAME_UPPER=FIELD2391_MATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2391_materno` VARCHAR(45) DEFAULT NULL QUEJOSO (materno)
+            
+            FIELD_NAME_LATEX=QUEJOSO (materno)
+            FIELD_CODE_NAME_LATEX=field2391\_materno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=QUEJOSO (nombre)
+            FIELD_CODE_NAME_UPPER=FIELD2391_NOMBRE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2391_nombre` VARCHAR(45) DEFAULT NULL QUEJOSO (nombre)
+            
+            FIELD_NAME_LATEX=QUEJOSO (nombre)
+            FIELD_CODE_NAME_LATEX=field2391\_nombre
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=ORGANO DE PROCEDENCIA
+            FIELD_CODE_NAME_UPPER=FIELD2392
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2392` VARCHAR(255) DEFAULT NULL ORGANO DE PROCEDENCIA
+            
+            FIELD_NAME_LATEX=ORGANO DE PROCEDENCIA
+            FIELD_CODE_NAME_LATEX=field2392
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE INGRESO
+            FIELD_CODE_NAME_UPPER=FIELD2393
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2393` DATETIME DEFAULT NULL FECHA DE INGRESO
+            
+            FIELD_NAME_LATEX=FECHA DE INGRESO
+            FIELD_CODE_NAME_LATEX=field2393
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=INFORME SOLICITADO
+            FIELD_CODE_NAME_UPPER=FIELD2394
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2394` VARCHAR(255) DEFAULT NULL INFORME SOLICITADO
+            
+            FIELD_NAME_LATEX=INFORME SOLICITADO
+            FIELD_CODE_NAME_LATEX=field2394
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE ENVIO DEL INFORME
+            FIELD_CODE_NAME_UPPER=FIELD2395
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2395` DATETIME DEFAULT NULL FECHA DE ENVIO DEL INFORME
+            
+            FIELD_NAME_LATEX=FECHA DE ENVIO DEL INFORME
+            FIELD_CODE_NAME_LATEX=field2395
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=SENTIDO DE RESOLUCIÓN DE AMPARO
+            FIELD_CODE_NAME_UPPER=FIELD2396
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2396` VARCHAR(255) DEFAULT NULL SENTIDO DE RESOLUCIÓN DE AMPARO
+            
+            FIELD_NAME_LATEX=SENTIDO DE RESOLUCI\'ON DE AMPARO
+            FIELD_CODE_NAME_LATEX=field2396
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=RESOLUCIÓN DE AMPARO
+            FIELD_CODE_NAME_UPPER=FIELD2397
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2397` VARCHAR(255) DEFAULT NULL RESOLUCIÓN DE AMPARO
+            
+            FIELD_NAME_LATEX=RESOLUCI\'ON DE AMPARO
+            FIELD_CODE_NAME_LATEX=field2397
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=OBSERVACIONES
+            FIELD_CODE_NAME_UPPER=FIELD2398
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=4
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2398` TEXT DEFAULT NULL OBSERVACIONES
+            
+            FIELD_NAME_LATEX=OBSERVACIONES
+            FIELD_CODE_NAME_LATEX=field2398
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -30045,6 +31800,237 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
+    Compobject_name=Libro de control de pedimentos
+    Compobject_description_ini=
+	
+    COMPOBJECT=LSPS06
+    compobject=lsps06
+    CompObject=Lsps06
+    
+    compobject_name=libro de control de pedimentos
+    CompObject_name=LIBRO DE CONTROL DE PEDIMENTOS
+    CompObject_short_name=Lsps06
+    Compobject_short_name=Lsps06
+    compobject_short_name=lsps06
+    
+    COMPOBJECTPLURAL=LSPS06S
+    compobjectplural=lsps06s
+    CompObjectPlural=Lsps06s
+    compobject_plural_name=libro de control de pedimentos
+    CompObject_plural_name=LIBRO DE CONTROL DE PEDIMENTOS
+    compobject_short_plural_name=lsps06s
+    CompObject_short_plural_name=Lsps06s
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=LSPS06_FS
+        FIELDSET_NAME=lsps06_fs
+        FIELDSET_CODE_NAME_UPPER=LSPS06_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Año j.
+            FIELD_CODE_NAME_UPPER=ANOJ
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
+            
+            FIELD_NAME_LATEX=A\~no j.
+            FIELD_CODE_NAME_LATEX=anoj
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=CAUSA
+            FIELD_CODE_NAME_UPPER=FIELD2399
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2399` VARCHAR(45) DEFAULT NULL CAUSA
+            
+            FIELD_NAME_LATEX=CAUSA
+            FIELD_CODE_NAME_LATEX=field2399
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=LUGAR DE RECLUSIÓN
+            FIELD_CODE_NAME_UPPER=FIELD2400
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2400` VARCHAR(255) DEFAULT NULL LUGAR DE RECLUSIÓN
+            
+            FIELD_NAME_LATEX=LUGAR DE RECLUSI\'ON
+            FIELD_CODE_NAME_LATEX=field2400
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA Y HORA DE LA DILIGENCIA
+            FIELD_CODE_NAME_UPPER=FIELD2401
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=36
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2401` DATETIME DEFAULT NULL FECHA Y HORA DE LA DILIGENCIA
+            
+            FIELD_NAME_LATEX=FECHA Y HORA DE LA DILIGENCIA
+            FIELD_CODE_NAME_LATEX=field2401
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NO. DE OFICIO
+            FIELD_CODE_NAME_UPPER=FIELD2402
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2402` VARCHAR(45) DEFAULT NULL NO. DE OFICIO
+            
+            FIELD_NAME_LATEX=NO. DE OFICIO
+            FIELD_CODE_NAME_LATEX=field2402
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=MOTIVO DE LA SOLICITUD
+            FIELD_CODE_NAME_UPPER=FIELD2403
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2403` VARCHAR(45) DEFAULT NULL MOTIVO DE LA SOLICITUD
+            
+            FIELD_NAME_LATEX=MOTIVO DE LA SOLICITUD
+            FIELD_CODE_NAME_LATEX=field2403
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
     Compobject_name=Libro de egresos (oficial)
     Compobject_description_ini=<p>Libro a nivel de la secretaria general de la sala.</p><br/><p>Tienen un campo secretaría (con acento), y claramente indicaron que el libro se lleva a nivel de la secretaría general. Si sólo existe una secretaría por sala, ¿qué anotan?, pues sólo podría ser la única secretaría existente.</p><br/><p>Con una vinculación de las partes contenciosas, se podria mostrar una lista con las personas vinculadas en el proceso para que al adjuntar una firma se escoja uno de los nombres de la lista, eso simplificaria la captura y se podría quitar el campo de captura &quot;carácter&quot; dejandolo sólo como una columna informativa.</p><br/><p>¿Existen relaciones entre el LIBRO DE EGRESOS (OFICIAL) y LIBRO DE CONTROL DE BILLETES Y PÓLIZAS (OFICIAL) y LIBRO DE MULTAS (OFICIAL) ? Una duda recurrente es sobre si se pueden relacionar las entradas y salidas de dinero y los billetes.<br />Sugiero cambiar el campo &quot;NOMBRE&quot; por &quot;NOMBRE DE QUIEN RECIBE&quot; y el campo &quot;FIRMA&quot; por &quot;FIRMA DE QUIEN RECIBE&quot;</p><br/><p>20170929 DEGT solicitó agregar el campo toral TOCA</p>
 	
@@ -32507,6 +34493,317 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field4
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
+    Compobject_name=Registro de billetes de deposito
+    Compobject_description_ini=
+	
+    COMPOBJECT=LSPS07
+    compobject=lsps07
+    CompObject=Lsps07
+    
+    compobject_name=registro de billetes de deposito
+    CompObject_name=REGISTRO DE BILLETES DE DEPOSITO
+    CompObject_short_name=Lsps07
+    Compobject_short_name=Lsps07
+    compobject_short_name=lsps07
+    
+    COMPOBJECTPLURAL=LSPS07S
+    compobjectplural=lsps07s
+    CompObjectPlural=Lsps07s
+    compobject_plural_name=registro de billetes de deposito
+    CompObject_plural_name=REGISTRO DE BILLETES DE DEPOSITO
+    compobject_short_plural_name=lsps07s
+    CompObject_short_plural_name=Lsps07s
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=LSPS07_FS
+        FIELDSET_NAME=lsps07_fs
+        FIELDSET_CODE_NAME_UPPER=LSPS07_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Año j.
+            FIELD_CODE_NAME_UPPER=ANOJ
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
+            
+            FIELD_NAME_LATEX=A\~no j.
+            FIELD_CODE_NAME_LATEX=anoj
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NO. DE BILLETE
+            FIELD_CODE_NAME_UPPER=BILLETE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`billete` VARCHAR(45) DEFAULT NULL NO. DE BILLETE
+            
+            FIELD_NAME_LATEX=NO. DE BILLETE
+            FIELD_CODE_NAME_LATEX=billete
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA EN QUE SE EXPIDE
+            FIELD_CODE_NAME_UPPER=FIELD2405
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2405` DATETIME DEFAULT NULL FECHA EN QUE SE EXPIDE
+            
+            FIELD_NAME_LATEX=FECHA EN QUE SE EXPIDE
+            FIELD_CODE_NAME_LATEX=field2405
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA EN QUE SE RECIBE
+            FIELD_CODE_NAME_UPPER=FIELD2406
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2406` DATETIME DEFAULT NULL FECHA EN QUE SE RECIBE
+            
+            FIELD_NAME_LATEX=FECHA EN QUE SE RECIBE
+            FIELD_CODE_NAME_LATEX=field2406
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=MONTO
+            FIELD_CODE_NAME_UPPER=FIELD2407
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=37
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2407` DECIMAL(11,2) DEFAULT NULL MONTO
+            
+            FIELD_NAME_LATEX=MONTO
+            FIELD_CODE_NAME_LATEX=field2407
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DE QUIEN DEPOSITA (isMoral)
+            FIELD_CODE_NAME_UPPER=FIELD2408_ISMORAL
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2408_isMoral` TINYINT(1) NOT NULL DEFAULT '0' NOMBRE DE QUIEN DEPOSITA (isMoral)
+            
+            FIELD_NAME_LATEX=NOMBRE DE QUIEN DEPOSITA (isMoral)
+            FIELD_CODE_NAME_LATEX=field2408\_isMoral
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DE QUIEN DEPOSITA (paterno)
+            FIELD_CODE_NAME_UPPER=FIELD2408_PATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2408_paterno` VARCHAR(255) DEFAULT NULL NOMBRE DE QUIEN DEPOSITA (paterno)
+            
+            FIELD_NAME_LATEX=NOMBRE DE QUIEN DEPOSITA (paterno)
+            FIELD_CODE_NAME_LATEX=field2408\_paterno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DE QUIEN DEPOSITA (materno)
+            FIELD_CODE_NAME_UPPER=FIELD2408_MATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2408_materno` VARCHAR(45) DEFAULT NULL NOMBRE DE QUIEN DEPOSITA (materno)
+            
+            FIELD_NAME_LATEX=NOMBRE DE QUIEN DEPOSITA (materno)
+            FIELD_CODE_NAME_LATEX=field2408\_materno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DE QUIEN DEPOSITA (nombre)
+            FIELD_CODE_NAME_UPPER=FIELD2408_NOMBRE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2408_nombre` VARCHAR(45) DEFAULT NULL NOMBRE DE QUIEN DEPOSITA (nombre)
+            
+            FIELD_NAME_LATEX=NOMBRE DE QUIEN DEPOSITA (nombre)
+            FIELD_CODE_NAME_LATEX=field2408\_nombre
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=MOTIVO
+            FIELD_CODE_NAME_UPPER=FIELD2409
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2409` VARCHAR(45) DEFAULT NULL MOTIVO
+            
+            FIELD_NAME_LATEX=MOTIVO
+            FIELD_CODE_NAME_LATEX=field2409
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -35145,6 +37442,297 @@ architectcomp=jtca
     
 {1.3}
         	{FILTER_FIELD}
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
+    Compobject_name=Libro de turno de entregas de tocas
+    Compobject_description_ini=
+	
+    COMPOBJECT=LSPS08
+    compobject=lsps08
+    CompObject=Lsps08
+    
+    compobject_name=libro de turno de entregas de tocas
+    CompObject_name=LIBRO DE TURNO DE ENTREGAS DE TOCAS
+    CompObject_short_name=Lsps08
+    Compobject_short_name=Lsps08
+    compobject_short_name=lsps08
+    
+    COMPOBJECTPLURAL=LSPS08S
+    compobjectplural=lsps08s
+    CompObjectPlural=Lsps08s
+    compobject_plural_name=libro de turno de entregas de tocas
+    CompObject_plural_name=LIBRO DE TURNO DE ENTREGAS DE TOCAS
+    compobject_short_plural_name=lsps08s
+    CompObject_short_plural_name=Lsps08s
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=LSPS08_FS
+        FIELDSET_NAME=lsps08_fs
+        FIELDSET_CODE_NAME_UPPER=LSPS08_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Año j.
+            FIELD_CODE_NAME_UPPER=ANOJ
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
+            
+            FIELD_NAME_LATEX=A\~no j.
+            FIELD_CODE_NAME_LATEX=anoj
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE AUDIENCIA DE VISTA
+            FIELD_CODE_NAME_UPPER=FIELD2411
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2411` DATETIME DEFAULT NULL FECHA DE AUDIENCIA DE VISTA
+            
+            FIELD_NAME_LATEX=FECHA DE AUDIENCIA DE VISTA
+            FIELD_CODE_NAME_LATEX=field2411
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NO. DE FOJAS
+            FIELD_CODE_NAME_UPPER=FIELD2412
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2412` VARCHAR(45) DEFAULT NULL NO. DE FOJAS
+            
+            FIELD_NAME_LATEX=NO. DE FOJAS
+            FIELD_CODE_NAME_LATEX=field2412
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE TURNO AL PROYECTISTA
+            FIELD_CODE_NAME_UPPER=FIELD2413
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2413` DATETIME DEFAULT NULL FECHA DE TURNO AL PROYECTISTA
+            
+            FIELD_NAME_LATEX=FECHA DE TURNO AL PROYECTISTA
+            FIELD_CODE_NAME_LATEX=field2413
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DEL PROYECTISTA
+            FIELD_CODE_NAME_UPPER=FIELD2414
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2414` VARCHAR(255) DEFAULT NULL NOMBRE DEL PROYECTISTA
+            
+            FIELD_NAME_LATEX=NOMBRE DEL PROYECTISTA
+            FIELD_CODE_NAME_LATEX=field2414
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE VENCIMIENTO DE SENTENCIA
+            FIELD_CODE_NAME_UPPER=FIELD2415
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2415` DATETIME DEFAULT NULL FECHA DE VENCIMIENTO DE SENTENCIA
+            
+            FIELD_NAME_LATEX=FECHA DE VENCIMIENTO DE SENTENCIA
+            FIELD_CODE_NAME_LATEX=field2415
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE LA SENTENCIA
+            FIELD_CODE_NAME_UPPER=FIELD2416
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2416` DATETIME DEFAULT NULL FECHA DE LA SENTENCIA
+            
+            FIELD_NAME_LATEX=FECHA DE LA SENTENCIA
+            FIELD_CODE_NAME_LATEX=field2416
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=PROCEDIMIENTO
+            FIELD_CODE_NAME_UPPER=FIELD2410
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2410` VARCHAR(45) DEFAULT NULL PROCEDIMIENTO
+            
+            FIELD_NAME_LATEX=PROCEDIMIENTO
+            FIELD_CODE_NAME_LATEX=field2410
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=SENTIDO DE LA RESOLUCIÓN
+            FIELD_CODE_NAME_UPPER=FIELD2417
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2417` VARCHAR(255) DEFAULT NULL SENTIDO DE LA RESOLUCIÓN
+            
+            FIELD_NAME_LATEX=SENTIDO DE LA RESOLUCI\'ON
+            FIELD_CODE_NAME_LATEX=field2417
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
 {-1.3}
     
 {1.0}
@@ -38031,6 +40619,297 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=HUELLA DE QUIEN RECIBE LA DEVOLUCION DE LA CEDULA
             FIELD_CODE_NAME_LATEX=field10h
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
+    Compobject_name=Libro de remisión al archivo
+    Compobject_description_ini=
+	
+    COMPOBJECT=LSPS09
+    compobject=lsps09
+    CompObject=Lsps09
+    
+    compobject_name=libro de remisión al archivo
+    CompObject_name=LIBRO DE REMISIÓN AL ARCHIVO
+    CompObject_short_name=Lsps09
+    Compobject_short_name=Lsps09
+    compobject_short_name=lsps09
+    
+    COMPOBJECTPLURAL=LSPS09S
+    compobjectplural=lsps09s
+    CompObjectPlural=Lsps09s
+    compobject_plural_name=libro de remisión al archivo
+    CompObject_plural_name=LIBRO DE REMISIÓN AL ARCHIVO
+    compobject_short_plural_name=lsps09s
+    CompObject_short_plural_name=Lsps09s
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=LSPS09_FS
+        FIELDSET_NAME=lsps09_fs
+        FIELDSET_CODE_NAME_UPPER=LSPS09_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Año j.
+            FIELD_CODE_NAME_UPPER=ANOJ
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
+            
+            FIELD_NAME_LATEX=A\~no j.
+            FIELD_CODE_NAME_LATEX=anoj
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FOJAS
+            FIELD_CODE_NAME_UPPER=FIELD2418
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2418` VARCHAR(45) DEFAULT NULL FOJAS
+            
+            FIELD_NAME_LATEX=FOJAS
+            FIELD_CODE_NAME_LATEX=field2418
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DEL AUTO DE REMISIÓN
+            FIELD_CODE_NAME_UPPER=FIELD2419
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2419` DATETIME DEFAULT NULL FECHA DEL AUTO DE REMISIÓN
+            
+            FIELD_NAME_LATEX=FECHA DEL AUTO DE REMISI\'ON
+            FIELD_CODE_NAME_LATEX=field2419
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=ESTADO PROCESAL
+            FIELD_CODE_NAME_UPPER=FIELD2420
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2420` VARCHAR(45) DEFAULT NULL ESTADO PROCESAL
+            
+            FIELD_NAME_LATEX=ESTADO PROCESAL
+            FIELD_CODE_NAME_LATEX=field2420
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE RECEPCIÓN AL ARCHIVO
+            FIELD_CODE_NAME_UPPER=FIELD2421
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2421` DATETIME DEFAULT NULL FECHA DE RECEPCIÓN AL ARCHIVO
+            
+            FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON AL ARCHIVO
+            FIELD_CODE_NAME_LATEX=field2421
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=PERSONA QUE RECIBIÓ DEL ARCHIVO
+            FIELD_CODE_NAME_UPPER=FIELD2422
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2422` VARCHAR(255) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO
+            
+            FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO
+            FIELD_CODE_NAME_LATEX=field2422
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE ARCHIVO
+            FIELD_CODE_NAME_UPPER=FIELD2423
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2423` DATETIME DEFAULT NULL FECHA DE ARCHIVO
+            
+            FIELD_NAME_LATEX=FECHA DE ARCHIVO
+            FIELD_CODE_NAME_LATEX=field2423
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NO. DE FOLIO
+            FIELD_CODE_NAME_UPPER=FIELD2424
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2424` VARCHAR(45) DEFAULT NULL NO. DE FOLIO
+            
+            FIELD_NAME_LATEX=NO. DE FOLIO
+            FIELD_CODE_NAME_LATEX=field2424
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE DEVOLUCIÓN
+            FIELD_CODE_NAME_UPPER=FIELD2425
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2425` DATETIME DEFAULT NULL FECHA DE DEVOLUCIÓN
+            
+            FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
+            FIELD_CODE_NAME_LATEX=field2425
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -41669,6 +44548,357 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
+    Compobject_name=Libro de control de multas
+    Compobject_description_ini=
+	
+    COMPOBJECT=LSPS10
+    compobject=lsps10
+    CompObject=Lsps10
+    
+    compobject_name=libro de control de multas
+    CompObject_name=LIBRO DE CONTROL DE MULTAS
+    CompObject_short_name=Lsps10
+    Compobject_short_name=Lsps10
+    compobject_short_name=lsps10
+    
+    COMPOBJECTPLURAL=LSPS10S
+    compobjectplural=lsps10s
+    CompObjectPlural=Lsps10s
+    compobject_plural_name=libro de control de multas
+    CompObject_plural_name=LIBRO DE CONTROL DE MULTAS
+    compobject_short_plural_name=lsps10s
+    CompObject_short_plural_name=Lsps10s
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=LSPS10_FS
+        FIELDSET_NAME=lsps10_fs
+        FIELDSET_CODE_NAME_UPPER=LSPS10_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Año j.
+            FIELD_CODE_NAME_UPPER=ANOJ
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
+            
+            FIELD_NAME_LATEX=A\~no j.
+            FIELD_CODE_NAME_LATEX=anoj
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=MONTO DE LA MULTA
+            FIELD_CODE_NAME_UPPER=FIELD2426
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=37
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2426` DECIMAL(11,2) DEFAULT NULL MONTO DE LA MULTA
+            
+            FIELD_NAME_LATEX=MONTO DE LA MULTA
+            FIELD_CODE_NAME_LATEX=field2426
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=CONCEPTO DE LA MULTA
+            FIELD_CODE_NAME_UPPER=FIELD2427
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2427` VARCHAR(45) DEFAULT NULL CONCEPTO DE LA MULTA
+            
+            FIELD_NAME_LATEX=CONCEPTO DE LA MULTA
+            FIELD_CODE_NAME_LATEX=field2427
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE RESOLUCIÓN QUE LA DECRETA
+            FIELD_CODE_NAME_UPPER=FIELD2428
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2428` DATETIME DEFAULT NULL FECHA DE RESOLUCIÓN QUE LA DECRETA
+            
+            FIELD_NAME_LATEX=FECHA DE RESOLUCI\'ON QUE LA DECRETA
+            FIELD_CODE_NAME_LATEX=field2428
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (isMoral)
+            FIELD_CODE_NAME_UPPER=FIELD2429_ISMORAL
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2429_isMoral` TINYINT(1) NOT NULL DEFAULT '0' NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (isMoral)
+            
+            FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (isMoral)
+            FIELD_CODE_NAME_LATEX=field2429\_isMoral
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (paterno)
+            FIELD_CODE_NAME_UPPER=FIELD2429_PATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2429_paterno` VARCHAR(255) DEFAULT NULL NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (paterno)
+            
+            FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (paterno)
+            FIELD_CODE_NAME_LATEX=field2429\_paterno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (materno)
+            FIELD_CODE_NAME_UPPER=FIELD2429_MATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2429_materno` VARCHAR(45) DEFAULT NULL NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (materno)
+            
+            FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (materno)
+            FIELD_CODE_NAME_LATEX=field2429\_materno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (nombre)
+            FIELD_CODE_NAME_UPPER=FIELD2429_NOMBRE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2429_nombre` VARCHAR(45) DEFAULT NULL NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (nombre)
+            
+            FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (nombre)
+            FIELD_CODE_NAME_LATEX=field2429\_nombre
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NO.  DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIÓN
+            FIELD_CODE_NAME_UPPER=FIELD2430
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2430` VARCHAR(45) DEFAULT NULL NO.  DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIÓN
+            
+            FIELD_NAME_LATEX=NO.  DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCI\'ON
+            FIELD_CODE_NAME_LATEX=field2430
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIÓN
+            FIELD_CODE_NAME_UPPER=FIELD2446
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2446` DATETIME DEFAULT NULL FECHA DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIÓN
+            
+            FIELD_NAME_LATEX=FECHA DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCI\'ON
+            FIELD_CODE_NAME_LATEX=field2446
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA EN LA QUE ES ENTREGADO
+            FIELD_CODE_NAME_UPPER=FIELD2431
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2431` DATETIME DEFAULT NULL FECHA EN LA QUE ES ENTREGADO
+            
+            FIELD_NAME_LATEX=FECHA EN LA QUE ES ENTREGADO
+            FIELD_CODE_NAME_LATEX=field2431
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=OBSERVACIONES
+            FIELD_CODE_NAME_UPPER=FIELD2432
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=4
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2432` TEXT DEFAULT NULL OBSERVACIONES
+            
+            FIELD_NAME_LATEX=OBSERVACIONES
+            FIELD_CODE_NAME_LATEX=field2432
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
     Compobject_name=Libreta de oficios (oficial)
     Compobject_description_ini=<p>Libro a nivel de la secretaria general de la sala.</p><br/><p>En libros de primera instancia se han generado tickets debido al consecutivo de libros, pues éste no siempre les coincide con el número de oficio.</p><br/><p>Al momento de hacer la implementación de éste libro sería conveniente establecer si el sistema les debe proporcionar el consecutivo siguiente para que éste sea usado como número de oficio o bien, si es al contrario y primero escriben el oficio y luego lo registran en el Sistema. La segunda opción puede generar problemas por duplicados debido a que mientras un usuario escribe un oficio, otro puede intentar registrar uno con el mismo número progresivo.</p><br/><p>20170929 DEGT indicó que el NÚMERO DE OFICIO no es consecutivos del sistema, es campo abierto de texto.</p>.<br/>El expediente es opcional
 	
@@ -44802,6 +48032,417 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
+    Compobject_name=Libro de control de fianza
+    Compobject_description_ini=<p>para implementar validación de billetes, cuál de los dos campos correspondería con el número de billete:NO. DE BOLETA o NUMERO DE POLIZA DE FIANZA<br /><br /></p>
+	
+    COMPOBJECT=LSPS11
+    compobject=lsps11
+    CompObject=Lsps11
+    
+    compobject_name=libro de control de fianza
+    CompObject_name=LIBRO DE CONTROL DE FIANZA
+    CompObject_short_name=Lsps11
+    Compobject_short_name=Lsps11
+    compobject_short_name=lsps11
+    
+    COMPOBJECTPLURAL=LSPS11S
+    compobjectplural=lsps11s
+    CompObjectPlural=Lsps11s
+    compobject_plural_name=libro de control de fianza
+    CompObject_plural_name=LIBRO DE CONTROL DE FIANZA
+    compobject_short_plural_name=lsps11s
+    CompObject_short_plural_name=Lsps11s
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=LSPS11_FS
+        FIELDSET_NAME=lsps11_fs
+        FIELDSET_CODE_NAME_UPPER=LSPS11_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Año j.
+            FIELD_CODE_NAME_UPPER=ANOJ
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
+            
+            FIELD_NAME_LATEX=A\~no j.
+            FIELD_CODE_NAME_LATEX=anoj
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=BENEFICIARIO (isMoral)
+            FIELD_CODE_NAME_UPPER=FIELD2433_ISMORAL
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2433_isMoral` TINYINT(1) NOT NULL DEFAULT '0' BENEFICIARIO (isMoral)
+            
+            FIELD_NAME_LATEX=BENEFICIARIO (isMoral)
+            FIELD_CODE_NAME_LATEX=field2433\_isMoral
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=BENEFICIARIO (paterno)
+            FIELD_CODE_NAME_UPPER=FIELD2433_PATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2433_paterno` VARCHAR(255) DEFAULT NULL BENEFICIARIO (paterno)
+            
+            FIELD_NAME_LATEX=BENEFICIARIO (paterno)
+            FIELD_CODE_NAME_LATEX=field2433\_paterno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=BENEFICIARIO (materno)
+            FIELD_CODE_NAME_UPPER=FIELD2433_MATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2433_materno` VARCHAR(45) DEFAULT NULL BENEFICIARIO (materno)
+            
+            FIELD_NAME_LATEX=BENEFICIARIO (materno)
+            FIELD_CODE_NAME_LATEX=field2433\_materno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=BENEFICIARIO (nombre)
+            FIELD_CODE_NAME_UPPER=FIELD2433_NOMBRE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2433_nombre` VARCHAR(45) DEFAULT NULL BENEFICIARIO (nombre)
+            
+            FIELD_NAME_LATEX=BENEFICIARIO (nombre)
+            FIELD_CODE_NAME_LATEX=field2433\_nombre
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=CONCEPTO DE FIANZA
+            FIELD_CODE_NAME_UPPER=FIELD2434
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2434` VARCHAR(45) DEFAULT NULL CONCEPTO DE FIANZA
+            
+            FIELD_NAME_LATEX=CONCEPTO DE FIANZA
+            FIELD_CODE_NAME_LATEX=field2434
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NO. DE BOLETA
+            FIELD_CODE_NAME_UPPER=FIELD2435
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2435` VARCHAR(45) DEFAULT NULL NO. DE BOLETA
+            
+            FIELD_NAME_LATEX=NO. DE BOLETA
+            FIELD_CODE_NAME_LATEX=field2435
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA EN QUE SE RECIBE POLIZA DE FIANZA
+            FIELD_CODE_NAME_UPPER=FIELD2436
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2436` DATETIME DEFAULT NULL FECHA EN QUE SE RECIBE POLIZA DE FIANZA
+            
+            FIELD_NAME_LATEX=FECHA EN QUE SE RECIBE POLIZA DE FIANZA
+            FIELD_CODE_NAME_LATEX=field2436
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=MONTO
+            FIELD_CODE_NAME_UPPER=FIELD2437
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=37
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2437` DECIMAL(11,2) DEFAULT NULL MONTO
+            
+            FIELD_NAME_LATEX=MONTO
+            FIELD_CODE_NAME_LATEX=field2437
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NÚMERO DE PÓLIZA DE FIANZA
+            FIELD_CODE_NAME_UPPER=FIELD2438
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2438` VARCHAR(45) DEFAULT NULL NÚMERO DE PÓLIZA DE FIANZA
+            
+            FIELD_NAME_LATEX=N\'UMERO DE P\'OLIZA DE FIANZA
+            FIELD_CODE_NAME_LATEX=field2438
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA DE DEVOLUCIÓN
+            FIELD_CODE_NAME_UPPER=FIELD2439
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2439` DATETIME DEFAULT NULL FECHA DE DEVOLUCIÓN 
+            
+            FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
+            FIELD_CODE_NAME_LATEX=field2439
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=A QUIEN SE DEVUELVE (isMoral)
+            FIELD_CODE_NAME_UPPER=FIELD2440_ISMORAL
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2440_isMoral` TINYINT(1) NOT NULL DEFAULT '0' A QUIEN SE DEVUELVE (isMoral)
+            
+            FIELD_NAME_LATEX=A QUIEN SE DEVUELVE (isMoral)
+            FIELD_CODE_NAME_LATEX=field2440\_isMoral
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=A QUIEN SE DEVUELVE (paterno)
+            FIELD_CODE_NAME_UPPER=FIELD2440_PATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2440_paterno` VARCHAR(255) DEFAULT NULL A QUIEN SE DEVUELVE (paterno)
+            
+            FIELD_NAME_LATEX=A QUIEN SE DEVUELVE (paterno)
+            FIELD_CODE_NAME_LATEX=field2440\_paterno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=A QUIEN SE DEVUELVE (materno)
+            FIELD_CODE_NAME_UPPER=FIELD2440_MATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2440_materno` VARCHAR(45) DEFAULT NULL A QUIEN SE DEVUELVE (materno)
+            
+            FIELD_NAME_LATEX=A QUIEN SE DEVUELVE (materno)
+            FIELD_CODE_NAME_LATEX=field2440\_materno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=A QUIEN SE DEVUELVE (nombre)
+            FIELD_CODE_NAME_UPPER=FIELD2440_NOMBRE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2440_nombre` VARCHAR(45) DEFAULT NULL A QUIEN SE DEVUELVE (nombre)
+            
+            FIELD_NAME_LATEX=A QUIEN SE DEVUELVE (nombre)
+            FIELD_CODE_NAME_LATEX=field2440\_nombre
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -48051,6 +51692,257 @@ architectcomp=jtca
     
 {1.0}
 	{COMPONENT_OBJECT}
+    Compobject_name=Registro de promociones
+    Compobject_description_ini=
+	
+    COMPOBJECT=LSPS12
+    compobject=lsps12
+    CompObject=Lsps12
+    
+    compobject_name=registro de promociones
+    CompObject_name=REGISTRO DE PROMOCIONES
+    CompObject_short_name=Lsps12
+    Compobject_short_name=Lsps12
+    compobject_short_name=lsps12
+    
+    COMPOBJECTPLURAL=LSPS12S
+    compobjectplural=lsps12s
+    CompObjectPlural=Lsps12s
+    compobject_plural_name=registro de promociones
+    CompObject_plural_name=REGISTRO DE PROMOCIONES
+    compobject_short_plural_name=lsps12s
+    CompObject_short_plural_name=Lsps12s
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=LSPS12_FS
+        FIELDSET_NAME=lsps12_fs
+        FIELDSET_CODE_NAME_UPPER=LSPS12_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Año j.
+            FIELD_CODE_NAME_UPPER=ANOJ
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
+            
+            FIELD_NAME_LATEX=A\~no j.
+            FIELD_CODE_NAME_LATEX=anoj
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FECHA Y HORA DE RECEPCIÓN
+            FIELD_CODE_NAME_UPPER=FIELD2441
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=36
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2441` DATETIME DEFAULT NULL FECHA Y HORA DE RECEPCIÓN
+            
+            FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
+            FIELD_CODE_NAME_LATEX=field2441
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=PROMOVENTE (isMoral)
+            FIELD_CODE_NAME_UPPER=FIELD2442_ISMORAL
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2442_isMoral` TINYINT(1) NOT NULL DEFAULT '0' PROMOVENTE (isMoral)
+            
+            FIELD_NAME_LATEX=PROMOVENTE (isMoral)
+            FIELD_CODE_NAME_LATEX=field2442\_isMoral
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=PROMOVENTE (paterno)
+            FIELD_CODE_NAME_UPPER=FIELD2442_PATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2442_paterno` VARCHAR(255) DEFAULT NULL PROMOVENTE (paterno)
+            
+            FIELD_NAME_LATEX=PROMOVENTE (paterno)
+            FIELD_CODE_NAME_LATEX=field2442\_paterno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=PROMOVENTE (materno)
+            FIELD_CODE_NAME_UPPER=FIELD2442_MATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2442_materno` VARCHAR(45) DEFAULT NULL PROMOVENTE (materno)
+            
+            FIELD_NAME_LATEX=PROMOVENTE (materno)
+            FIELD_CODE_NAME_LATEX=field2442\_materno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=PROMOVENTE (nombre)
+            FIELD_CODE_NAME_UPPER=FIELD2442_NOMBRE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2442_nombre` VARCHAR(45) DEFAULT NULL PROMOVENTE (nombre)
+            
+            FIELD_NAME_LATEX=PROMOVENTE (nombre)
+            FIELD_CODE_NAME_LATEX=field2442\_nombre
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=ASUNTO
+            FIELD_CODE_NAME_UPPER=FIELD2443
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2443` VARCHAR(45) DEFAULT NULL ASUNTO
+            
+            FIELD_NAME_LATEX=ASUNTO
+            FIELD_CODE_NAME_LATEX=field2443
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
     Compobject_name=Papeletas para el préstamo de expedientes
     Compobject_description_ini=<p>De implementarse campos torales vinculados se evitaría la recaptura y permitiría comprobar que la persona que solicita el préstamo tiene interés jurídico. Será de utilidad la implementación de diversas clasificaciones de interés jurídico diferentes a actor y demandado, como puede ser representante legal del actor, etc.</p><br/><p>Considero que sería de utilidad agregar también un campo para la captura de la imagen electrónica de la huella digital.</p><br/><p>20170929 la DEGT Está pendiente de definirse el libro de papeletas. Propongo que esté a nivel de presidencia de sala para que cualquier empleado del recinto pueda capturar.</p><br/><p>CHANGELOG</p><br/><p>20170921 Quité el campo FECHA para combinarlo con el campo HORA</p>
 	
@@ -51142,6 +55034,237 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field6
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
+    Compobject_name=Control de firmas del procesado
+    Compobject_description_ini=<p><strong>CHANGELOG</strong></p><br/><p>Cambié el campo FECHA DE FIRMA por FIRMA DEL PROCESADO y le asocié la fecha del sistema referenciada UTC-6</p>
+	
+    COMPOBJECT=LSPS13
+    compobject=lsps13
+    CompObject=Lsps13
+    
+    compobject_name=control de firmas del procesado
+    CompObject_name=CONTROL DE FIRMAS DEL PROCESADO
+    CompObject_short_name=Lsps13
+    Compobject_short_name=Lsps13
+    compobject_short_name=lsps13
+    
+    COMPOBJECTPLURAL=LSPS13S
+    compobjectplural=lsps13s
+    CompObjectPlural=Lsps13s
+    compobject_plural_name=control de firmas del procesado
+    CompObject_plural_name=CONTROL DE FIRMAS DEL PROCESADO
+    compobject_short_plural_name=lsps13s
+    CompObject_short_plural_name=Lsps13s
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=LSPS13_FS
+        FIELDSET_NAME=lsps13_fs
+        FIELDSET_CODE_NAME_UPPER=LSPS13_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Expediente
+            FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=33
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_expediente` INT(10) DEFAULT NULL Expediente
+            
+            FIELD_NAME_LATEX=Expediente
+            FIELD_CODE_NAME_LATEX=id\_expediente
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Órgano
+            FIELD_CODE_NAME_UPPER=ID_ORGANO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_organo` INT(10) DEFAULT NULL Órgano
+            
+            FIELD_NAME_LATEX=\'Organo
+            FIELD_CODE_NAME_LATEX=id\_organo
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Secretaría
+            FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=18
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_secretaria` INT(10) DEFAULT NULL Secretaría
+            
+            FIELD_NAME_LATEX=Secretar\'i{}a
+            FIELD_CODE_NAME_LATEX=id\_secretaria
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Año j.
+            FIELD_CODE_NAME_UPPER=ANOJ
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`anoj` YEAR(4) DEFAULT NULL Año j.
+            
+            FIELD_NAME_LATEX=A\~no j.
+            FIELD_CODE_NAME_LATEX=anoj
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DEL INCULPADO (isMoral)
+            FIELD_CODE_NAME_UPPER=FIELD2444_ISMORAL
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2444_isMoral` TINYINT(1) NOT NULL DEFAULT '0' NOMBRE DEL INCULPADO (isMoral)
+            
+            FIELD_NAME_LATEX=NOMBRE DEL INCULPADO (isMoral)
+            FIELD_CODE_NAME_LATEX=field2444\_isMoral
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DEL INCULPADO (paterno)
+            FIELD_CODE_NAME_UPPER=FIELD2444_PATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2444_paterno` VARCHAR(255) DEFAULT NULL NOMBRE DEL INCULPADO (paterno)
+            
+            FIELD_NAME_LATEX=NOMBRE DEL INCULPADO (paterno)
+            FIELD_CODE_NAME_LATEX=field2444\_paterno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DEL INCULPADO (materno)
+            FIELD_CODE_NAME_UPPER=FIELD2444_MATERNO
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2444_materno` VARCHAR(45) DEFAULT NULL NOMBRE DEL INCULPADO (materno)
+            
+            FIELD_NAME_LATEX=NOMBRE DEL INCULPADO (materno)
+            FIELD_CODE_NAME_LATEX=field2444\_materno
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=NOMBRE DEL INCULPADO (nombre)
+            FIELD_CODE_NAME_UPPER=FIELD2444_NOMBRE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=41
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2444_nombre` VARCHAR(45) DEFAULT NULL NOMBRE DEL INCULPADO (nombre)
+            
+            FIELD_NAME_LATEX=NOMBRE DEL INCULPADO (nombre)
+            FIELD_CODE_NAME_LATEX=field2444\_nombre
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=FIRMA DEL PROCESADO
+            FIELD_CODE_NAME_UPPER=FIELD2445
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=34
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`field2445` INT(10) DEFAULT NULL FIRMA DEL PROCESADO
+            
+            FIELD_NAME_LATEX=FIRMA DEL PROCESADO
+            FIELD_CODE_NAME_LATEX=field2445
             FIELD_DBCOMMENT_LATEX=
             
 

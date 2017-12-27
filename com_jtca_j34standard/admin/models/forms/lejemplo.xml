@@ -84,6 +84,16 @@
         description="COM_JTCA_LEJEMPLOS_FIELDSET_LEJEMPLO_FS_DESC"
     >
         <field
+            name="id_expediente"
+            type="modal_expedientes"
+            label="COM_JTCA_LEJEMPLOS_FIELD_ID_EXPEDIENTE_LABEL"
+            description="COM_JTCA_LEJEMPLOS_FIELD_ID_EXPEDIENTE_DESC"
+            class="modal"
+			required="true"
+			default="0"
+        >
+        </field>  
+        <field
             name="id_organo"
             type="sql"
             label="COM_JTCA_LEJEMPLOS_FIELD_ID_ORGANO_LABEL"
@@ -126,16 +136,6 @@
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_BOOLEAN_DESC"
             class="inputbox"
 			value="1"
-        >
-        </field>  
-        <field
-            name="id_expediente"
-            type="modal_expedientes"
-            label="COM_JTCA_LEJEMPLOS_FIELD_ID_EXPEDIENTE_LABEL"
-            description="COM_JTCA_LEJEMPLOS_FIELD_ID_EXPEDIENTE_DESC"
-            class="modal"
-			required="true"
-			default="0"
         >
         </field>  
         <field

@@ -192,6 +192,13 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lejemplo_id_expediente',0)) : ?>
+						<td class="list-id_expediente">
+							<?php 
+								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
+							?>
+						</td>
+					<?php endif; ?>
 					<?php if ($this->params->get('list_show_lejemplo_id_organo',0)) : ?>
 						<td class="list-id_organo">
 							<?php 
@@ -251,13 +258,6 @@ $empty = $component->params->get('default_empty_field', '');
 										echo JText::_('JNONE');
 										break;
 								endswitch;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lejemplo_id_expediente',0)) : ?>
-						<td class="list-id_expediente">
-							<?php 
-								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
 							?>
 						</td>
 					<?php endif; ?>

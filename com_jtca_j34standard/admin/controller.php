@@ -717,6 +717,18 @@ class JtCaController extends JControllerLegacy
 					return false;
 				}
 				break;				
+			case 'lsps01': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps01', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps01s', false));
+
+					return false;
+				}
+				break;				
 			case 'lsc02': 
 				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsc02', $id))
 				{
@@ -809,6 +821,18 @@ class JtCaController extends JControllerLegacy
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
 					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=ljjadg02s', false));
+
+					return false;
+				}
+				break;				
+			case 'lsps02': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps02', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps02s', false));
 
 					return false;
 				}
@@ -921,6 +945,18 @@ class JtCaController extends JControllerLegacy
 					return false;
 				}
 				break;				
+			case 'lsps03': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps03', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps03s', false));
+
+					return false;
+				}
+				break;				
 			case 'lsc04': 
 				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsc04', $id))
 				{
@@ -1025,6 +1061,18 @@ class JtCaController extends JControllerLegacy
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
 					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=ljjadg04s', false));
+
+					return false;
+				}
+				break;				
+			case 'lsps04': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps04', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps04s', false));
 
 					return false;
 				}
@@ -1149,6 +1197,18 @@ class JtCaController extends JControllerLegacy
 					return false;
 				}
 				break;				
+			case 'lsps05': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps05', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps05s', false));
+
+					return false;
+				}
+				break;				
 			case 'lsc06': 
 				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsc06', $id))
 				{
@@ -1269,6 +1329,18 @@ class JtCaController extends JControllerLegacy
 					return false;
 				}
 				break;				
+			case 'lsps06': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps06', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps06s', false));
+
+					return false;
+				}
+				break;				
 			case 'lsc07': 
 				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsc07', $id))
 				{
@@ -1361,6 +1433,18 @@ class JtCaController extends JControllerLegacy
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
 					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=ljjadng07s', false));
+
+					return false;
+				}
+				break;				
+			case 'lsps07': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps07', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps07s', false));
 
 					return false;
 				}
@@ -1485,6 +1569,18 @@ class JtCaController extends JControllerLegacy
 					return false;
 				}
 				break;				
+			case 'lsps08': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps08', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps08s', false));
+
+					return false;
+				}
+				break;				
 			case 'lsc09': 
 				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsc09', $id))
 				{
@@ -1601,6 +1697,18 @@ class JtCaController extends JControllerLegacy
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
 					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=ljjadg09s', false));
+
+					return false;
+				}
+				break;				
+			case 'lsps09': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps09', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps09s', false));
 
 					return false;
 				}
@@ -1725,6 +1833,18 @@ class JtCaController extends JControllerLegacy
 					return false;
 				}
 				break;				
+			case 'lsps10': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps10', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps10s', false));
+
+					return false;
+				}
+				break;				
 			case 'lsc11': 
 				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsc11', $id))
 				{
@@ -1829,6 +1949,18 @@ class JtCaController extends JControllerLegacy
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
 					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=ljjadg11s', false));
+
+					return false;
+				}
+				break;				
+			case 'lsps11': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps11', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps11s', false));
 
 					return false;
 				}
@@ -1941,6 +2073,18 @@ class JtCaController extends JControllerLegacy
 					return false;
 				}
 				break;				
+			case 'lsps12': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps12', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps12s', false));
+
+					return false;
+				}
+				break;				
 			case 'lsc13': 
 				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsc13', $id))
 				{
@@ -2045,6 +2189,18 @@ class JtCaController extends JControllerLegacy
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
 					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=ljjadg13s', false));
+
+					return false;
+				}
+				break;				
+			case 'lsps13': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps13', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps13s', false));
 
 					return false;
 				}

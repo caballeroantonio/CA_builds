@@ -1,0 +1,43 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_expediente & INT(10) & Expediente: \tabularnewline\hline 
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	id\_secretaria & INT(10) & Secretar\'i{}a: \tabularnewline\hline 
+	anoj & YEAR(4) & A\~no j.: \tabularnewline\hline 
+	billete & VARCHAR(45) & NO. DE BILLETE: \tabularnewline\hline 
+	field2405 & DATETIME & FECHA EN QUE SE EXPIDE: \tabularnewline\hline 
+	field2406 & DATETIME & FECHA EN QUE SE RECIBE: \tabularnewline\hline 
+	field2407 & DECIMAL(11,2) & MONTO: \tabularnewline\hline 
+	field2408\_isMoral & TINYINT(1) & NOMBRE DE QUIEN DEPOSITA (isMoral): \tabularnewline\hline 
+	field2408\_paterno & VARCHAR(255) & NOMBRE DE QUIEN DEPOSITA (paterno): \tabularnewline\hline 
+	field2408\_materno & VARCHAR(45) & NOMBRE DE QUIEN DEPOSITA (materno): \tabularnewline\hline 
+	field2408\_nombre & VARCHAR(45) & NOMBRE DE QUIEN DEPOSITA (nombre): \tabularnewline\hline 
+	field2409 & VARCHAR(45) & MOTIVO: \tabularnewline\hline 

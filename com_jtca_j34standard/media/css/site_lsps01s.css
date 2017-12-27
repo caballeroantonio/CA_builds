@@ -1,0 +1,230 @@
+/**
+ * @version 		$Id:$
+ * @name			TSJ CDMX Libros TxCA
+ * @author			caballeroantonio (caballeroantonio.com)
+ * @package			com_jtca
+ * @subpackage		com_jtca.site
+ * @copyright		Copyright (c) 2017 - 2020. All Rights Reserved
+ * @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html 
+ * 
+ * The following Component Architect header section must remain in any distribution of this file
+ *
+ * @CAversion		Id: site_compobjectplural.css 604 2016-01-14 13:05:26Z BrianWade $
+ * @CAauthor		Component Architect (www.componentarchitect.com)
+ * @CApackage		architectcomp
+ * @CAsubpackage	architectcomp.site
+ * @CAtemplate		joomla_3_4_standard (Release 0.5.0)
+ * @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved
+ * @Joomlacopyright Copyright (c)2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @CAlicense		GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html
+ * 
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ */
+/*#################### lsps01s list table with grid settings ############################ */
+.lsps01s-list table.lsps01s
+{
+        font-size:1em;
+        margin:10px 10px 20px 0px;
+        width:99%;
+}
+.lsps01s-list table.lsps01s td
+{
+        padding:7px;
+}
+.lsps01s-list table.lsps01s th
+{
+        padding:7px;
+}
+.lsps01s .display-limit
+{
+    float: right;
+    display: inline;
+}
+/*#################### lsps01s list grid settings ############################ */
+.lsps01s-list td.list-order
+{
+	    text-align: center;
+}
+.lsps01s-list a.jgrid:hover
+{
+    text-decoration: none;
+}
+
+.lsps01s-list .jgrid span.state
+{
+	    display: inline-block;
+	    height: 16px;
+	    width: 16px;
+}
+.lsps01s-list .jgrid span.text 
+{
+        display:none;
+}
+.lsps01s-list .jgrid span.downarrow				
+{
+        background-image: url(../images/downarrow.png);
+}
+.lsps01s-list .jgrid span.downarrow_disabled
+{
+       background-image: url(../images/downarrow0.png);
+       background-position: 0 -12px;
+}
+.lsps01s-list .jgrid span.uparrow	
+{
+        background-image: url(../images/uparrow.png);
+}
+.lsps01s-list .jgrid span.uparrow_disabled
+{
+        background-image: url(../images/uparrow0.png);
+        background-position: 0 -12px;
+}
+/*#################### lsps01s list actions icons ############################ */
+.lsps01s-list ul.actions
+{
+        padding:0 ;
+        width:100%;
+        margin:0;
+        list-style-type: none;
+}
+.lsps01s-list ul.actions a
+{
+        text-decoration:none
+}
+/*#################### lsps01s list pagination ############################ */
+.lsps01s-list .pagination p.counter
+{
+        text-align: center;
+        margin: 0 auto 0 auto; 
+}
+/*#################### lsps01s modal list ############################ */
+.lsps01s-modal
+{
+        width: 760px;
+}
+/*#################### lsps01s modal list tables ############################ */
+.lsps01s-modal table.lsps01s th a {
+}
+.lsps01s-modal table.lsps01s th  a img {
+	    border:solid 0px ;
+}
+.lsps01s-modal table.lsps01s
+{
+        font-size:1em;
+        margin:10px 10px 20px 0px;
+        width:99%;
+}
+.lsps01s-modal table.lsps01s td
+{
+        padding:7px;
+}
+.lsps01s-modal table.lsps01s th
+{
+        padding:7px;
+        text-align:left;
+	    background:#444 ;        
+}
+.lsps01s-modal table.lsps01s th
+{
+	    color:#fff
+}
+/*#################### lsps01s modal list pagination ############################ */
+
+.lsps01s-modal .pagination p.counter
+{
+        text-align: center;
+        margin: 0 auto 0 auto; 
+}
+
+/*#################### lsps01 view ############################ */
+.lsps01-view
+{
+        padding:0 5px;
+        display:block;
+        overflow:hidden
+}
+.lsps01-view .formelm label,
+{
+    width: 200px;
+}
+/* #main required */
+#main .lsps01-view .formelm ul
+{
+        list-style-type: none;
+        margin-top: 0px;
+        margin-left: 0px;
+        padding-left: 0px;
+}
+#main .lsps01-view .formelm ul label
+{
+         font-weight: normal;
+}
+.lsps01-view .formelm fieldset
+{
+        padding: 0;
+        margin: 0;
+        margin-top: 5px;
+        display: inline;
+}
+.lsps01-view .formelm label,
+.lsps01-view .formelm-area label  
+{
+        font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: 5px;    
+}
+.lsps01-view .formelm span  
+{
+        margin-bottom: 5px;    
+}
+.lsps01-view fieldset legend
+{
+        font-weight: bold;
+        font-size: 120%;
+}
+/*#################### lsps01 view actions icons ############################ */
+.lsps01-view ul.actions
+{
+        text-align:right;
+        padding:0 ;
+        width:100%;
+        margin:0
+}
+.lsps01-view ul.actions li
+{
+        display:inline
+}
+.lsps01-view ul.actions a
+{
+        text-decoration:none
+}
+
+/*#################### lsps01 edit form ############################ */
+.lsps01-edit
+{
+        padding:0 5px;
+        display:block;
+        overflow:hidden
+}
+.lsps01-edit .button2-left,
+.lsps01-edit .button2-left div,
+.lsps01-edit .button2-left a
+{
+        float: none;
+        display: inline;
+}
+.lsps01-edit .control-group .control-label
+{
+        display: inline-block !important; 
+}
+.lsps01-edit .control-group .controls
+{
+        display: inline-block !important;      
+}
+.lsps01-edit .control-group .control-label
+{
+        width: 150px !important;      
+}

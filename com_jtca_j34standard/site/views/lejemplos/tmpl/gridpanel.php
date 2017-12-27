@@ -34,6 +34,28 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
+        'FIELD_NAME' => 'Expediente',
+        'FIELD_CODE_NAME' => 'id_expediente',
+        'FIELD_DESCRIPTION' => '<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>',//<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
+        'FIELDTYPE_ID' => 33,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+                FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) DEFAULT NULL Expediente
+
+                FIELD_NAME_LATEX=Expediente
+                FIELD_CODE_NAME_LATEX=id\_expediente
+                FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
+
+
+    */
+    $fields['id_expediente'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
         'FIELD_NAME' => 'Órgano',
         'FIELD_CODE_NAME' => 'id_organo',
         'FIELD_DESCRIPTION' => '',//
@@ -120,28 +142,6 @@ function getFields(){
 
     */
     $fields['my_boolean'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'Expediente',
-        'FIELD_CODE_NAME' => 'id_expediente',
-        'FIELD_DESCRIPTION' => '<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>',//<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-        'FIELDTYPE_ID' => 33,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-                FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) DEFAULT NULL Expediente
-
-                FIELD_NAME_LATEX=Expediente
-                FIELD_CODE_NAME_LATEX=id\_expediente
-                FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-
-
-    */
-    $fields['id_expediente'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'my int',

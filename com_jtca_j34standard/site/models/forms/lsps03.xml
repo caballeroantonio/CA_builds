@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- @version 			$Id:$ -->
+<!-- @name			    TSJ CDMX Libros TxCA -->
+<!-- @author			caballeroantonio (caballeroantonio.com) -->
+<!-- @package			com_jtca -->
+<!-- @subpackage		com_jtca.site -->
+<!-- @copyright		    Copyright (c) 2017 - 2020. All Rights Reserved -->
+<!-- @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- The following Component Architect header section must remain in any distribution of this file -->
+
+<!-- @CAversion			Id: compobject.xml 571 2016-01-04 15:03:02Z BrianWade $ -->
+<!-- @CAauthor		    Component Architect (www.componentarchitect.com) -->
+<!-- @CApackage		    architectcomp -->
+<!-- @CAsubpackage	    architectcomp.site -->
+<!-- @CAtemplate		joomla_3_4_standard (Release 1.0.1) -->
+<!-- @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved -->
+<!-- @Joomlacopyright   Copyright (c)2005 - 2016 Open Source Matters, Inc. All rights reserved. -->
+<!-- @CAlicense		    GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or (at your option) any later version. -->
+
+<!-- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of -->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. -->
+
+<form
+    addfieldpath="/components/com_jtca/models/fields"
+    addrulepath="/components/com_jtca/models/rules"
+>
+    <fieldset>
+        <field
+			id="id"
+			name="id"
+			type="hidden"
+			label="COM_JTCA_ID_LABEL"
+			class="readonly"
+			default="0"
+			readonly="true"
+		/>
+
+        <field
+			id="contenthistory"
+			name="contenthistory"
+			type="contenthistory"
+			label="JTOOLBAR_VERSIONS"
+			data-typeAlias="com_jtca.lsps03"
+		/>
+
+        <field
+			id="created"
+			name="created"
+			type="calendar"
+			label="COM_JTCA_FIELD_CREATED_LABEL"
+			description="COM_JTCA_LSPS03S_FIELD_CREATED_BY_DESC"
+			class="inputbox"
+			size="22"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc"		
+		/>
+        <field
+			id="created_by"
+			name="created_by"
+			type="user"
+			label="COM_JTCA_FIELD_CREATED_BY_LABEL"
+			description="COM_JTCA_LSPS03S_FIELD_CREATED_BY_DESC"
+		/>
+        <field
+            id="modified"
+            name="modified"
+            type="calendar"
+			label="COM_JTCA_FIELD_MODIFIED_LABEL"
+			description="COM_JTCA_LSPS03S_FIELD_MODIFIED_DESC"
+            class="readonly"
+			size="22"
+			readonly="true"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc"
+		/>
+        <field
+            id="modified_by"
+            name="modified_by"
+            type="user"
+		    label="COM_JTCA_FIELD_MODIFIED_BY_LABEL"
+		    class="readonly"
+		    readonly="true"
+		    filter="unset"
+		/>
+        <field
+            id="state"
+            name="state"
+            type="list"
+            label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC"
+			class="chzn-color-state"
+            size="1"
+            default="1"
+	    >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASH</option>
+        </field>
+        <field
+			id="version_note"
+			name="version_note"
+			type="text"
+			label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
+			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
+			class="inputbox"
+			size="45"
+		/>
+    </fieldset>
+    <fieldset
+        name="fieldset_lsps03_fs"
+        label="COM_JTCA_LSPS03S_FIELDSET_LSPS03_FS_LABEL"
+    >
+
+        <field
+            id="id_expediente"
+            name="id_expediente"
+            type="modal_expedientes"
+            label="COM_JTCA_LSPS03S_FIELD_ID_EXPEDIENTE_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_ID_EXPEDIENTE_DESC"
+            class="modal"
+			required="true"
+			default="0"
+        >
+        </field>  
+        <field
+            id="id_organo"
+            name="id_organo"
+            type="sql"
+            label="COM_JTCA_LSPS03S_FIELD_ID_ORGANO_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_ID_ORGANO_DESC"
+            class="inputbox"
+			size="1"
+			query="SELECT id, organo FROM jtc_organos"
+			key_field="id"
+			value_field="organo"
+        >
+            <option value="">COM_JTCA_LSPS03S_SELECT_ID_ORGANO</option>
+        </field>  
+        <field
+            id="id_secretaria"
+            name="id_secretaria"
+            type="sql"
+            label="COM_JTCA_LSPS03S_FIELD_ID_SECRETARIA_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_ID_SECRETARIA_DESC"
+            class="inputbox"
+			size="1"
+			query="SELECT id, secretaria FROM jtc_secretarias"
+			key_field="id"
+			value_field="secretaria"
+        >
+            <option value="">COM_JTCA_LSPS03S_SELECT_ID_SECRETARIA</option>
+        </field>  
+        <field
+            id="anoj"
+            name="anoj"
+            type="text"
+            label="COM_JTCA_LSPS03S_FIELD_ANOJ_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_ANOJ_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="field2370"
+            name="field2370"
+            type="text"
+            label="COM_JTCA_LSPS03S_FIELD_FIELD2370_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_FIELD2370_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="field2371"
+            name="field2371"
+            type="text"
+            label="COM_JTCA_LSPS03S_FIELD_FIELD2371_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_FIELD2371_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="field2372"
+            name="field2372"
+            type="text"
+            label="COM_JTCA_LSPS03S_FIELD_FIELD2372_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_FIELD2372_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="field2373"
+            name="field2373"
+            type="text"
+            label="COM_JTCA_LSPS03S_FIELD_FIELD2373_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_FIELD2373_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="field2374"
+            name="field2374"
+            type="checkbox"
+            label="COM_JTCA_LSPS03S_FIELD_FIELD2374_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_FIELD2374_DESC"
+            class="inputbox"
+			value="1"
+        >
+        </field>  
+        <field
+            id="field2375"
+            name="field2375"
+            type="editor"
+            label="COM_JTCA_LSPS03S_FIELD_FIELD2375_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_FIELD2375_DESC"
+            width="100%"
+			height="250"
+			cols="50"
+			rows="5"
+			buttons="*"
+			hide_buttons="*"
+			default=""
+        >
+        </field>  
+        <field
+            id="field2376"
+            name="field2376"
+            type="checkbox"
+            label="COM_JTCA_LSPS03S_FIELD_FIELD2376_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_FIELD2376_DESC"
+            class="inputbox"
+			value="1"
+        >
+        </field>  
+        <field
+            id="field2377"
+            name="field2377"
+            type="text"
+            label="COM_JTCA_LSPS03S_FIELD_FIELD2377_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_FIELD2377_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="field2378"
+            name="field2378"
+            type="calendar"
+            label="COM_JTCA_LSPS03S_FIELD_FIELD2378_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_FIELD2378_DESC"
+            class="inputbox validate-date"
+			size="22"
+			maxlength="25"
+			format="%Y-%m-%d"
+			filter="fixed"
+			validate="date"
+        >
+        </field>  
+        <field
+            id="field2379"
+            name="field2379"
+            type="text"
+            label="COM_JTCA_LSPS03S_FIELD_FIELD2379_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_FIELD2379_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="field2380"
+            name="field2380"
+            type="editor"
+            label="COM_JTCA_LSPS03S_FIELD_FIELD2380_LABEL"
+            description="COM_JTCA_LSPS03S_FIELD_FIELD2380_DESC"
+            width="100%"
+			height="250"
+			cols="50"
+			rows="5"
+			buttons="*"
+			hide_buttons="*"
+			default=""
+        >
+        </field>  
+    </fieldset>
+</form>

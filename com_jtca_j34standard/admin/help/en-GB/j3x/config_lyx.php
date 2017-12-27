@@ -102,6 +102,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LSPE06S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPE06S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSPE07S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPE07S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSPE08S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPE08S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_JTCA_LSPS01S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPS01S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSC02S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSC02S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC02S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC02S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJP02S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJP02S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
@@ -110,6 +111,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LJPES02S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPES02S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADNG02S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADNG02S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADG02S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADG02S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_JTCA_LSPS02S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPS02S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LEJEMPLOS_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LEJEMPLOS_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSC03S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSC03S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC03S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC03S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
@@ -119,6 +121,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LJPES03S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPES03S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADNG03S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADNG03S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADG03S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADG03S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_JTCA_LSPS03S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPS03S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSC04S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSC04S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC04S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC04S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJF04S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJF04S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
@@ -128,6 +131,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LJPES04S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPES04S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADNG04S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADNG04S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADG04S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADG04S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_JTCA_LSPS04S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPS04S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSC05S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSC05S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC05S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC05S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJF05S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJF05S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
@@ -138,6 +142,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LJPES05S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPES05S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADNG05S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADNG05S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADG05S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADG05S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_JTCA_LSPS05S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPS05S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSC06S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSC06S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC06S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC06S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJF06S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJF06S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
@@ -148,6 +153,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LJPES06S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPES06S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADNG06S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADNG06S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADG06S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADG06S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_JTCA_LSPS06S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPS06S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSC07S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSC07S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC07S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC07S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJF07S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJF07S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
@@ -156,6 +162,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LJPDNG07S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPDNG07S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJPES07S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPES07S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADNG07S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADNG07S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_JTCA_LSPS07S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPS07S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSC08S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSC08S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC08S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC08S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJF08S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJF08S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
@@ -166,6 +173,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LJPES08S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPES08S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADNG08S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADNG08S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSC14S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSC14S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_JTCA_LSPS08S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPS08S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSC09S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSC09S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC09S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC09S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJF09S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJF09S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
@@ -176,6 +184,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LJPES09S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPES09S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADNG09S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADNG09S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADG09S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADG09S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_JTCA_LSPS09S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPS09S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSC10S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSC10S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC10S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC10S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJF10S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJF10S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
@@ -186,6 +195,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LJPES10S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPES10S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADNG10S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADNG10S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADG10S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADG10S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_JTCA_LSPS10S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPS10S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSC11S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSC11S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJF11S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJF11S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJP11S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJP11S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
@@ -195,6 +205,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LJPES11S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPES11S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADNG11S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADNG11S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADG11S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADG11S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_JTCA_LSPS11S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPS11S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSC12S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSC12S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC12S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC12S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJF12S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJF12S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
@@ -204,6 +215,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LJPDNG12S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPDNG12S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJPES12S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPES12S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADNG12S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADNG12S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_JTCA_LSPS12S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPS12S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LSC13S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSC13S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC13S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC13S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJF13S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJF13S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
@@ -213,6 +225,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_JTCA_LJPDNG13S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPDNG13S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJPES13S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJPES13S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJJADG13S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJJADG13S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_JTCA_LSPS13S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LSPS13S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJC14S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJC14S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJF14S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJF14S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_JTCA_LJP14S_FIELD_SAVE_HISTORY_LABEL'). ' & ' . $this->jtext2lyx('COM_JTCA_LJP14S_FIELD_SAVE_HISTORY_DESC'). ' \tabularnewline\hline '. "\r\n";

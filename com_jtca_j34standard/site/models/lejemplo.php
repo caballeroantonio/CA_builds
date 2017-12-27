@@ -55,11 +55,11 @@ class JtCaModelLejemplo extends JModelItem
 		{
 			$config['lejemplo_filter_fields'] = array(
 				'id', 'a.id',
+				'id_expediente','a.id_expediente',
 				'id_organo','a.id_organo',
 				'id_secretaria','a.id_secretaria',
 				'anoj','a.anoj',
 				'my_boolean','a.my_boolean',
-				'id_expediente','a.id_expediente',
 				'my_int','a.my_int',
 				'my_currency','a.my_currency',
 				'my_date','a.my_date',
@@ -262,6 +262,7 @@ class JtCaModelLejemplo extends JModelItem
 				// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
 			
 
+				
 				if (isset($item->id_organo) AND $item->id_organo !='')
 				{
 					$sql = 'SELECT '.$db->quoteName('list.id').' AS id, '.$db->quoteName('list.organo').' AS value FROM (SELECT id, organo FROM jtc_organos) AS list';
@@ -301,7 +302,6 @@ class JtCaModelLejemplo extends JModelItem
 				{
 					$item->id_secretaria = array();
 				}
-				
 				
 				
 				

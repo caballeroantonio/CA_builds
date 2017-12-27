@@ -3353,6 +3353,82 @@ LEFT JOIN jt_expedientes e ON e.id = l.id_expediente
 LEFT JOIN jt_uploadedfiles f_2445 ON l.field2445 = f_2445.id 
 ;
 
+INSERT INTO `jtc_libros` (`id`,`id_tipoorgano`,`id_materia`,`nombre`,`clave`,`tabla`,`view`,`url`,`published`,`ordering`,`distribution`,`json`,`exp_optional`) VALUES 
+(301,2,5,'LIBRO DE OFICIOS','lsps14','jt_lsps14s','jt_vlsps14s','index.php?option=com_tsjdf_libros2&view=v4&layout=libro&clave=lsps14',1,14,1,NULL,1);
+
+INSERT INTO `jt3_campos` (`id`,`published`,`ordering`,`clave`,`dataIndex`,`columnText`,`columnTooltip`,`dataType`,`store`,`displayField`,`alwaysChange`,`comments`) VALUES 
+(2447,1,1,'lsps14','field2447','FECHA DEL OFICIO',NULL,'date',NULL,NULL,1,NULL),
+(2448,1,2,'lsps14','field2448','DESTINATARIO',NULL,'VARCHAR255',NULL,NULL,1,NULL),
+(2449,1,3,'lsps14','field2449','ASUNTO',NULL,NULL,NULL,NULL,1,NULL),
+(2450,1,4,'lsps14','field2450','FECHA DE ENTREGA AL DESTINATARIO',NULL,'date',NULL,NULL,1,NULL),
+(2451,1,5,'lsps14','field2451','FECHA DE DEVOLUCIÓN AL JUZGADO',NULL,'date',NULL,NULL,1,NULL);
+
+
+DROP TABLE IF EXISTS `jt_lsps14s`;
+CREATE TABLE IF NOT EXISTS `jt_lsps14s` (
+	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	 PRIMARY KEY (`id`),
+	`state` TINYINT(1) NOT NULL DEFAULT 1,
+	`created` DATETIME NULL,
+	`created_by` INT NULL,
+	INDEX `l3_301_createdby_idx` (`created_by` ASC),
+	CONSTRAINT `l3_301_createdby`
+		FOREIGN KEY (`created_by`)
+		REFERENCES `jos_users` (`id`)
+		ON DELETE RESTRICT
+		ON UPDATE CASCADE,
+	`modified` DATETIME NULL,
+	`modified_by` INT NULL,
+	`id_expediente` INT NULL,
+	INDEX `l3_301_expediente_idx` (`id_expediente` ASC),
+	CONSTRAINT `l3_301_expediente`
+		FOREIGN KEY (`id_expediente`)
+		REFERENCES `jt_expedientes` (`id`)
+		ON DELETE RESTRICT
+		ON UPDATE CASCADE,
+
+	`id_organo` INT NULL,
+	INDEX `l3_301_organo_idx` (`id_organo` ASC),
+	CONSTRAINT `l3_301_organo`
+		FOREIGN KEY (`id_organo`)
+		REFERENCES `jtc_organos` (`id`)
+		ON DELETE RESTRICT
+		ON UPDATE CASCADE,
+        
+	`id_secretaria` INT NULL,
+	INDEX `l3_301_secretaria_idx` (`id_organo` ASC, `id_secretaria` ASC),
+	CONSTRAINT `l3_301_secretaria`
+		FOREIGN KEY (`id_organo` , `id_secretaria`)
+		REFERENCES `jtc_secretarias` (`id_organo` , `id`)
+		ON DELETE RESTRICT
+		ON UPDATE CASCADE,
+ 	`anoj` YEAR NULL,
+ 	INDEX `l3_301_anoj_idx` (`anoj` ASC),
+	`ordering` INT NOT NULL,
+ 
+	`field2447` DATETIME NULL COMMENT 'FECHA DEL OFICIO'
+        ,	`field2448` VARCHAR(255) NULL COMMENT 'DESTINATARIO'
+        , 
+	`field2449` VARCHAR(45) NULL COMMENT 'ASUNTO'
+        , 
+	`field2450` DATETIME NULL COMMENT 'FECHA DE ENTREGA AL DESTINATARIO'
+        , 
+	`field2451` DATETIME NULL COMMENT 'FECHA DE DEVOLUCIÓN AL JUZGADO'
+         
+)COMMENT = 'generado el 2017-12-28 04:01:26'; 
+
+
+DROP TABLE IF EXISTS `jt_vlsps14s`;
+DROP VIEW IF EXISTS `jt_vlsps14s`;
+CREATE OR REPLACE VIEW jt_vlsps14s AS
+
+SELECT l.id,l.id_organo, l.anoj, l.ordering, l.id_expediente 
+,e.name 'e__name', e.txt_tipojuicio 'e__txt_tipojuicio', e.numero 'e__numero', e.ano 'e__ano' 
+,l.field2447,l.field2448,l.field2449,l.field2450,l.field2451
+FROM jt_lsps14s l
+LEFT JOIN jt_expedientes e ON e.id = l.id_expediente 
+;
+
 #@BUG
 CREATE OR REPLACE VIEW jtvr_h_accounts AS
 SELECT 
