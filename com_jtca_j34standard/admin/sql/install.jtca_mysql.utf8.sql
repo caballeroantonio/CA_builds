@@ -1,5 +1,5 @@
 -- @version 		$Id:$
--- @name			TSJ CDMX Libros TxCA (Release 1.0.0)
+-- @name			TSJ CDMX Libros TxCA
 -- @author			caballeroantonio (caballeroantonio.com)
 -- @package			com_jtca
 -- @subpackage		com_jtca.admin
@@ -1559,56 +1559,6 @@ CREATE TABLE IF NOT EXISTS `jt_lcp41s` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `jt_ljomf01s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf01s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf01s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf01_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljemst01s`
---
-
-#DROP TABLE IF EXISTS `jt_ljemst01s`;
-CREATE TABLE IF NOT EXISTS `jt_ljemst01s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljemst01_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
 -- Table structure for table `jt_lspe01s`
 --
 
@@ -1847,6 +1797,7 @@ CREATE TABLE IF NOT EXISTS `jt_lspe08s` (
   `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
   `id_expediente` INT(10) DEFAULT NULL COMMENT 'Toca',
   `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Ponencia',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'No DE BILLETE',
   `field2334` VARCHAR(255) DEFAULT NULL COMMENT 'MOTIVO DE INGRESO DE BILLETE',
   `field2335` DATETIME DEFAULT NULL COMMENT 'FECHA DE INGRESO DE BILLETE',
   `field2336` DATETIME DEFAULT NULL COMMENT 'FECHA DE EXPEDICIÓN DE BILLETE ',
@@ -1869,6 +1820,7 @@ CREATE TABLE IF NOT EXISTS `jt_lspe08s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -1914,7 +1866,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljc02s` (
   `field2` DATETIME DEFAULT NULL COMMENT 'FECHA EN QUE SE RECIBE EL DOCUMENTO',
   `field3` DATETIME DEFAULT NULL COMMENT 'FECHA EN QUE SE EXPIDE EL DOCUMENTO',
   `field10` VARCHAR(45) DEFAULT NULL COMMENT 'REFERENCIA',
-  `field4` VARCHAR(45) DEFAULT NULL COMMENT 'No. DEL DOCUMENTO',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'No. DEL DOCUMENTO',
   `field5` DECIMAL(11,2) DEFAULT NULL COMMENT 'MONTO DEL DOCUMENTO',
   `field6` VARCHAR(45) DEFAULT NULL COMMENT 'QUIEN LO EXPIDE',
   `field9` TEXT DEFAULT NULL COMMENT 'OBSERVACIONES',
@@ -1928,31 +1880,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljc02s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljf02s`
---
-
-#DROP TABLE IF EXISTS `jt_ljf02s`;
-CREATE TABLE IF NOT EXISTS `jt_ljf02s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljf02_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -1968,7 +1896,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljp02s` (
   `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
   `id_expediente` INT(10) DEFAULT NULL COMMENT 'CAUSA',
   `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `field2` VARCHAR(45) DEFAULT NULL COMMENT 'No DE BILLETE',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'No DE BILLETE',
   `field3` DATETIME DEFAULT NULL COMMENT 'FECHA EN QUE SE EXPIDE ',
   `field4` DATETIME DEFAULT NULL COMMENT 'FECHA EN QUE SE RECIBE ',
   `field5` DECIMAL(11,2) DEFAULT NULL COMMENT 'MONTO ',
@@ -1985,6 +1913,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljp02s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -2003,7 +1932,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljccm02s` (
   `field1` VARCHAR(45) DEFAULT NULL COMMENT 'No. DE ORDEN',
   `field5` DATETIME DEFAULT NULL COMMENT 'FECHA EN QUE SE RECIBE EL DOCUMENTO',
   `field6` DATETIME DEFAULT NULL COMMENT 'FECHA EN QUE SE EXPIDE EL DOCUMENTO',
-  `field7` VARCHAR(45) DEFAULT NULL COMMENT 'No. DEL DOCUMENTO',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'No. DEL DOCUMENTO',
   `field13` VARCHAR(45) DEFAULT NULL COMMENT 'MOTIVO DE INGRESO',
   `field8` DECIMAL(11,2) DEFAULT NULL COMMENT 'MONTO DEL DOCUMENTO',
   `field9` VARCHAR(45) DEFAULT NULL COMMENT 'QUIEN LO EXPIDE',
@@ -2018,6 +1947,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljccm02s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -2033,7 +1963,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljpdng02s` (
   `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
   `id_expediente` INT(10) DEFAULT NULL COMMENT 'CAUSA',
   `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `field2` VARCHAR(45) DEFAULT NULL COMMENT 'No. DE BILLETE',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'No. DE BILLETE',
   `field3` DATETIME DEFAULT NULL COMMENT 'FECHA EN QUE SE EXPIDE EL BILLETE',
   `field4` DATETIME DEFAULT NULL COMMENT 'FECHA EN QUE SE RECIBE EL BILLETE',
   `field5` DECIMAL(11,2) DEFAULT NULL COMMENT 'MONTO DEL BILLETE',
@@ -2051,6 +1981,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljpdng02s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -2135,56 +2066,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg02s` (
   `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
   KEY `idx_createdby` (`created_by`),
   CONSTRAINT `jtca_ljjadg02_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljomf02s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf02s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf02s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf02_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljemst02s`
---
-
-#DROP TABLE IF EXISTS `jt_ljemst02s`;
-CREATE TABLE IF NOT EXISTS `jt_ljemst02s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljemst02_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
@@ -2293,7 +2174,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljc03s` (
   `field1_nombre` VARCHAR(45) DEFAULT NULL COMMENT 'BENEFICIARIO (nombre)',
   `field2` VARCHAR(45) DEFAULT NULL COMMENT 'PERSONALIDAD',
   `field3` DATETIME DEFAULT NULL COMMENT 'FECHA EN QUE RECIBE',
-  `field4` VARCHAR(45) DEFAULT NULL COMMENT 'No DEL BILLETE',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'No DEL BILLETE',
   `field5` DECIMAL(11,2) DEFAULT NULL COMMENT 'MONTO',
   `field6_paterno` VARCHAR(255) DEFAULT NULL COMMENT 'NOMBRE DE QUIEN RECIBE (a. paterno)',
   `field6_materno` VARCHAR(45) DEFAULT NULL COMMENT 'NOMBRE DE QUIEN RECIBE (a. materno)',
@@ -2322,56 +2203,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljc03s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljf03s`
---
-
-#DROP TABLE IF EXISTS `jt_ljf03s`;
-CREATE TABLE IF NOT EXISTS `jt_ljf03s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljf03_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljp03s`
---
-
-#DROP TABLE IF EXISTS `jt_ljp03s`;
-CREATE TABLE IF NOT EXISTS `jt_ljp03s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'CAUSA',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljp03_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -2387,7 +2219,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljccm03s` (
   `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
   `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
   `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `field5` VARCHAR(45) DEFAULT NULL COMMENT 'No DEL DOCUMENTO',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'No DEL DOCUMENTO',
   `field6` DECIMAL(11,2) DEFAULT NULL COMMENT 'MONTO DEL DOCUMENTO',
   `field7` VARCHAR(45) DEFAULT NULL COMMENT 'No. DE ORDEN DE INGRESO',
   `field8_isMoral` TINYINT(1) NOT NULL DEFAULT '0' COMMENT 'NOMBRE DE QUIEN RECIBE (isMoral)',
@@ -2411,6 +2243,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljccm03s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -2451,7 +2284,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljpdng03s` (
   `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
   `id_expediente` INT(10) DEFAULT NULL COMMENT 'CAUSA',
   `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `field2` VARCHAR(45) DEFAULT NULL COMMENT 'No DE BILLETE',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'No DE BILLETE',
   `field3` DATETIME DEFAULT NULL COMMENT 'FECHA EN QUE SE EXPIDE EL BILLETE',
   `field4` DATETIME DEFAULT NULL COMMENT 'FECHA DE ENTREGA',
   `field5` DECIMAL(11,2) DEFAULT NULL COMMENT 'MONTO DEL BILLETE',
@@ -2477,6 +2310,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljpdng03s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -2558,7 +2392,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg03s` (
   `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
   `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
   `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `field2` VARCHAR(45) DEFAULT NULL COMMENT 'NO. DE BILLETE',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'NO. DE BILLETE',
   `field3` DATETIME DEFAULT NULL COMMENT 'FECHA EN QUE SE EXPIDE',
   `field9` VARCHAR(45) DEFAULT NULL COMMENT 'NATURALEZA DE LA GARANTÍA',
   `field4` DATETIME DEFAULT NULL COMMENT 'FECHA EN QUE SE RECIBE',
@@ -2579,56 +2413,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg03s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljomf03s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf03s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf03s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf03_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljemst03s`
---
-
-#DROP TABLE IF EXISTS `jt_ljemst03s`;
-CREATE TABLE IF NOT EXISTS `jt_ljemst03s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljemst03_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -2748,31 +2533,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljp04s` (
   `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
   KEY `idx_createdby` (`created_by`),
   CONSTRAINT `jtca_ljp04_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljccm04s`
---
-
-#DROP TABLE IF EXISTS `jt_ljccm04s`;
-CREATE TABLE IF NOT EXISTS `jt_ljccm04s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljccm04_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
@@ -2917,7 +2677,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg04s` (
   `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
   `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
   `field12` TEXT DEFAULT NULL COMMENT 'NOMBRES DEL ADOLESCENTE',
-  `field3` VARCHAR(45) DEFAULT NULL COMMENT 'No. DE BILLETE',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'No. DE BILLETE',
   `field4` DECIMAL(11,2) DEFAULT NULL COMMENT 'MONTO',
   `field5` DATETIME DEFAULT NULL COMMENT 'FECHA DE ENTREGA',
   `field7` VARCHAR(45) DEFAULT NULL COMMENT 'ORDEN DE PAGO o TRANSFERENCIA',
@@ -2936,56 +2696,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg04s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljomf04s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf04s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf04s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf04_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljemst04s`
---
-
-#DROP TABLE IF EXISTS `jt_ljemst04s`;
-CREATE TABLE IF NOT EXISTS `jt_ljemst04s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljemst04_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -3309,56 +3020,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg05s` (
   `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
   KEY `idx_createdby` (`created_by`),
   CONSTRAINT `jtca_ljjadg05_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljomf05s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf05s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf05s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf05_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljemst05s`
---
-
-#DROP TABLE IF EXISTS `jt_ljemst05s`;
-CREATE TABLE IF NOT EXISTS `jt_ljemst05s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljemst05_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
@@ -3740,56 +3401,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg06s` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `jt_ljomf06s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf06s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf06s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf06_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljemst06s`
---
-
-#DROP TABLE IF EXISTS `jt_ljemst06s`;
-CREATE TABLE IF NOT EXISTS `jt_ljemst06s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljemst06_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
 -- Table structure for table `jt_lsc07s`
 --
 
@@ -3812,7 +3423,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsc07s` (
   `field167_paterno` VARCHAR(255) DEFAULT NULL COMMENT 'NOMBRE DEL JUEZ O MAGISTRADO (paterno)',
   `field167_materno` VARCHAR(45) DEFAULT NULL COMMENT 'NOMBRE DEL JUEZ O MAGISTRADO (materno)',
   `field167_nombre` VARCHAR(45) DEFAULT NULL COMMENT 'NOMBRE DEL JUEZ O MAGISTRADO (nombre)',
-  `field168` VARCHAR(45) DEFAULT NULL COMMENT 'NÚMERO DE BILLETE DE DEPÓSITO',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'NÚMERO DE BILLETE DE DEPÓSITO',
   `field169` DECIMAL(11,2) DEFAULT NULL COMMENT 'CANTIDAD EN NÚMERO',
   `field169b` VARCHAR(255) DEFAULT NULL COMMENT 'CANTIDAD EN LETRA',
   `field170` VARCHAR(45) DEFAULT NULL COMMENT 'ASIENTO DE CAJA FOLIO',
@@ -3830,6 +3441,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsc07s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -4062,81 +3674,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadng07s` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `jt_ljjadg07s`
---
-
-#DROP TABLE IF EXISTS `jt_ljjadg07s`;
-CREATE TABLE IF NOT EXISTS `jt_ljjadg07s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljjadg07_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljomf07s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf07s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf07s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf07_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljemst07s`
---
-
-#DROP TABLE IF EXISTS `jt_ljemst07s`;
-CREATE TABLE IF NOT EXISTS `jt_ljemst07s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljemst07_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
 -- Table structure for table `jt_lsc08s`
 --
 
@@ -4148,7 +3685,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsc08s` (
   `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
   `field177` DATETIME DEFAULT NULL COMMENT 'FECHA DE ENTRADA',
   `id_expediente` INT(10) DEFAULT NULL COMMENT 'TOCA',
-  `field178` VARCHAR(45) DEFAULT NULL COMMENT 'NÚMERO DE CERTIFICADO',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'NÚMERO DE CERTIFICADO',
   `state` TINYINT(1) NOT NULL DEFAULT '0',
   `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
@@ -4159,6 +3696,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsc08s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -4424,81 +3962,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadng08s` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `jt_ljjadg08s`
---
-
-#DROP TABLE IF EXISTS `jt_ljjadg08s`;
-CREATE TABLE IF NOT EXISTS `jt_ljjadg08s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljjadg08_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljomf08s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf08s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf08s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf08_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljemst08s`
---
-
-#DROP TABLE IF EXISTS `jt_ljemst08s`;
-CREATE TABLE IF NOT EXISTS `jt_ljemst08s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljemst08_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
 -- Table structure for table `jt_lsc14s`
 --
 
@@ -4509,7 +3972,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsc14s` (
   `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
   `id_expediente` INT(10) DEFAULT NULL COMMENT 'Toca',
   `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Ponencia',
-  `field182` VARCHAR(45) DEFAULT NULL COMMENT 'NÚMERO DE PÓLIZA',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'NÚMERO DE PÓLIZA',
   `field267` DECIMAL(11,2) DEFAULT NULL COMMENT 'IMPORTE',
   `field183` DATETIME DEFAULT NULL COMMENT 'FECHA DE EGRESO',
   `state` TINYINT(1) NOT NULL DEFAULT '0',
@@ -4522,6 +3985,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsc14s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -4847,56 +4311,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg09s` (
   `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
   KEY `idx_createdby` (`created_by`),
   CONSTRAINT `jtca_ljjadg09_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljomf09s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf09s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf09s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf09_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljemst09s`
---
-
-#DROP TABLE IF EXISTS `jt_ljemst09s`;
-CREATE TABLE IF NOT EXISTS `jt_ljemst09s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljemst09_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
@@ -5272,56 +4686,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg10s` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `jt_ljomf10s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf10s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf10s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf10_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljemst10s`
---
-
-#DROP TABLE IF EXISTS `jt_ljemst10s`;
-CREATE TABLE IF NOT EXISTS `jt_ljemst10s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljemst10_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
 -- Table structure for table `jt_lsc11s`
 --
 
@@ -5341,31 +4705,6 @@ CREATE TABLE IF NOT EXISTS `jt_lsc11s` (
   `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
   KEY `idx_createdby` (`created_by`),
   CONSTRAINT `jtca_lsc11_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljc11s`
---
-
-#DROP TABLE IF EXISTS `jt_ljc11s`;
-CREATE TABLE IF NOT EXISTS `jt_ljc11s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljc11_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
@@ -5576,7 +4915,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljpes11s` (
   `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
   `field11` VARCHAR(45) DEFAULT NULL COMMENT 'MOTIVO DE INGRESO',
   `field2` DATETIME DEFAULT NULL COMMENT 'FECHA DE INGRESO DEL BILLETE',
-  `field3` VARCHAR(45) DEFAULT NULL COMMENT 'No. DEL BILLETE',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'No. DEL BILLETE',
   `field4` DATETIME DEFAULT NULL COMMENT 'FECHA DE EXPEDICIÓN ',
   `field5` DECIMAL(11,2) DEFAULT NULL COMMENT 'IMPORTE',
   `field6_isMoral` TINYINT(1) NOT NULL DEFAULT '0' COMMENT 'SENTENCIADO (isMoral)',
@@ -5602,6 +4941,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljpes11s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -5661,56 +5001,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg11s` (
   `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
   KEY `idx_createdby` (`created_by`),
   CONSTRAINT `jtca_ljjadg11_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljomf11s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf11s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf11s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf11_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljemst11s`
---
-
-#DROP TABLE IF EXISTS `jt_ljemst11s`;
-CREATE TABLE IF NOT EXISTS `jt_ljemst11s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljemst11_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
@@ -6007,31 +5297,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljpes12s` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `jt_ljjadg12s`
---
-
-#DROP TABLE IF EXISTS `jt_ljjadg12s`;
-CREATE TABLE IF NOT EXISTS `jt_ljjadg12s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljjadg12_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
 -- Table structure for table `jt_ljjadng12s`
 --
 
@@ -6043,7 +5308,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadng12s` (
   `id_expediente` INT(10) DEFAULT NULL COMMENT 'CAUSA',
   `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
   `field2` VARCHAR(255) DEFAULT NULL COMMENT 'NOMBRE DEL BENEFICIARIO',
-  `field3` VARCHAR(45) DEFAULT NULL COMMENT 'NÚMERO DE BILLETE DE DEPÓSITO',
+  `billete` VARCHAR(45) DEFAULT NULL COMMENT 'NÚMERO DE BILLETE DE DEPÓSITO',
   `field4` DATETIME DEFAULT NULL COMMENT 'FECHA DE EXPEDICIÓN',
   `field5` DATETIME DEFAULT NULL COMMENT 'FECHA DE RECEPCIÓN',
   `field6` DECIMAL(11,2) DEFAULT NULL COMMENT 'MONTO',
@@ -6068,56 +5333,7 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadng12s` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljomf12s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf12s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf12s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf12_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljemst12s`
---
-
-#DROP TABLE IF EXISTS `jt_ljemst12s`;
-CREATE TABLE IF NOT EXISTS `jt_ljemst12s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljemst12_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
+  KEY `idx_billete` (`billete`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   
@@ -6445,31 +5661,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg13s` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `jt_ljomf13s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf13s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf13s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf13_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
 -- Table structure for table `jt_ljc14s`
 --
 
@@ -6717,31 +5908,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg14s` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `jt_ljomf14s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf14s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf14s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf14_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
 -- Table structure for table `jt_ljf15s`
 --
 
@@ -6892,31 +6058,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg15s` (
   `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
   KEY `idx_createdby` (`created_by`),
   CONSTRAINT `jtca_ljjadg15_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljomf15s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf15s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf15s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf15_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
@@ -7136,31 +6277,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg16s` (
   `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
   KEY `idx_createdby` (`created_by`),
   CONSTRAINT `jtca_ljjadg16_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljomf16s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf16s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf16s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf16_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
@@ -7411,31 +6527,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg17s` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `jt_ljomf17s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf17s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf17s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf17_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
 -- Table structure for table `jt_ljc18s`
 --
 
@@ -7640,31 +6731,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljjadg18s` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `jt_ljomf18s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf18s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf18s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf18_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
 -- Table structure for table `jt_ljpes18s`
 --
 
@@ -7787,31 +6853,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljp19s` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `jt_ljomf19s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf19s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf19s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf19_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
 -- Table structure for table `jt_ljc20s`
 --
 
@@ -7897,31 +6938,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljp20s` (
   `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
   KEY `idx_createdby` (`created_by`),
   CONSTRAINT `jtca_ljp20_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljomf20s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf20s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf20s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf20_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
@@ -8042,31 +7058,6 @@ CREATE TABLE IF NOT EXISTS `jt_ljp21s` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `jt_ljomf21s`
---
-
-#DROP TABLE IF EXISTS `jt_ljomf21s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf21s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf21_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
 -- Table structure for table `jt_ljf22s`
 --
 
@@ -8099,37 +7090,10 @@ CREATE TABLE IF NOT EXISTS `jt_ljf22s` (
   PRIMARY KEY (`id`)
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `jt_ljomf22s`
---
 
-#DROP TABLE IF EXISTS `jt_ljomf22s`;
-CREATE TABLE IF NOT EXISTS `jt_ljomf22s` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_organo` INT(10) DEFAULT NULL COMMENT 'Órgano',
-  `anoj` YEAR(4) DEFAULT NULL COMMENT 'Año j.',
-  `id_expediente` INT(10) DEFAULT NULL COMMENT 'Expediente',
-  `id_secretaria` INT(10) DEFAULT NULL COMMENT 'Secretaría',
-  `state` TINYINT(1) NOT NULL DEFAULT '0',
-  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
-  KEY `idx_createdby` (`created_by`),
-  CONSTRAINT `jtca_ljomf22_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  `ordering` INT(11) NOT NULL DEFAULT '0',
-  KEY `idx_state` (`state`),
-  KEY `idx_ordering` (`ordering`),
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- END CUSTOM CODE
 */
-
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE REGISTRO DE SENTENCIAS -TURNO- (OFICIAL)',
 'com_jtca.lsc01',
@@ -8140,7 +7104,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"field2347","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"field2348","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE GOBIERNO',
 'com_jtca.ljc01',
@@ -8151,7 +7115,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field6","targetTable":"jtc_cuantia","targetColumn":"id","displayColumn":"cuantia"},{"sourceColumn":"field14","targetTable":"jtc_currency","targetColumn":"id","displayColumn":"currency"},{"sourceColumn":"field8","targetTable":"jtc_resolucion6","targetColumn":"id","displayColumn":"resolucion"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE GOBIERNO',
 'com_jtca.ljf01',
@@ -8162,7 +7126,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field6","targetTable":"jtc_resolucion6","targetColumn":"id","displayColumn":"resolucion"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE GOBIERNO',
 'com_jtca.ljp01',
@@ -8173,7 +7137,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field19","targetTable":"jtc_situacion5","targetColumn":"id","displayColumn":"situacion"},{"sourceColumn":"field10","targetTable":"jtc_resolucion6","targetColumn":"id","displayColumn":"resolucion"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE GOBIERNO',
 'com_jtca.ljccm01',
@@ -8184,7 +7148,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field6","targetTable":"jtc_cuantia","targetColumn":"id","displayColumn":"cuantia"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE GOBIERNO',
 'com_jtca.ljoc01',
@@ -8195,7 +7159,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljoc01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field6_divisa","targetTable":"jtc_currency","targetColumn":"id","displayColumn":"currency"},{"sourceColumn":"field7","targetTable":"jtc_asunto","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"field8","targetTable":"jtc_baja","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"field9","targetTable":"jtc_enviados","targetColumn":"id","displayColumn":"text"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE GOBIERNO',
 'com_jtca.ljpdng01',
@@ -8206,7 +7170,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE GOBIERNO',
 'com_jtca.ljpes01',
@@ -8217,7 +7181,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE GOBIERNO',
 'com_jtca.ljjadng01',
@@ -8228,7 +7192,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadng01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field7","targetTable":"jtc_ejecucion","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"field8","targetTable":"jtc_situacion5","targetColumn":"id","displayColumn":"situacion"},{"sourceColumn":"field11","targetTable":"jtc_acuerdo","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"field27","targetTable":"jtc_resolucion8","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"field28","targetTable":"jtc_resolucion8","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"field29","targetTable":"jtc_resolucion8","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"field35","targetTable":"jtc_resolucion8","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"field36","targetTable":"jtc_resolucion8","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"field37","targetTable":"jtc_resolucion8","targetColumn":"id","displayColumn":"text"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE GOBIERNO',
 'com_jtca.ljjadg01',
@@ -8239,7 +7203,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field7","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES CON DETENIDO',
 'com_jtca.lcp01',
@@ -8250,7 +7214,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES SIN DETENIDO',
 'com_jtca.lcp02',
@@ -8261,7 +7225,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp02.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO DE REMISIONES CON DETENIDO DE JUZGADOS ADOLESCENTES',
 'com_jtca.lcp03',
@@ -8272,7 +7236,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES CON DETENIDO DE PGR',
 'com_jtca.lcp04',
@@ -8283,7 +7247,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES SIN DETENIDO DE PGR',
 'com_jtca.lcp05',
@@ -8294,7 +7258,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO PARA INCOMPETENCIAS ADOLESCENTES',
 'com_jtca.lcp06',
@@ -8305,7 +7269,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"field8","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"organo2","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO PARA EXCUSAS DE ADOLESCENTES',
 'com_jtca.lcp07',
@@ -8316,7 +7280,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp07.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field6","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"organo2","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ETAPA DE EJECUCIÓN PARA ADOLESCENTES',
 'com_jtca.lcp09',
@@ -8327,7 +7291,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp09.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"organo2","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO DE BENEFICIOS PENITENCIARIOS.',
 'com_jtca.lcp10',
@@ -8338,7 +7302,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp10.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO PARA CONSIGNACIONES CON DETENIDO PRIMERA INSTANCIA.',
 'com_jtca.lcp18',
@@ -8349,7 +7313,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp18.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO PARA CONSIGNACIONES SIN DETENIDO PRIMERA INSTANCIA.',
 'com_jtca.lcp19',
@@ -8360,7 +7324,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp19.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO PARA INCOMPETENCIAS PRIMERA INSTANCIA.',
 'com_jtca.lcp20',
@@ -8371,7 +7335,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp20.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"field9","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"organo2","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO DE EXCUSAS PARA JUZGADOS DE PRIMERA INSTANCIA.',
 'com_jtca.lcp21',
@@ -8382,7 +7346,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp21.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field6","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"organo2","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ORDENES DE ARRAIGOS Y DE CATEOS PRIMERA INSTANCIA.',
 'com_jtca.lcp22',
@@ -8393,7 +7357,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp22.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field6","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ORDENES DE APREHENSIÓN, REAPREHENSION Y TRASLADO.',
 'com_jtca.lcp23',
@@ -8404,7 +7368,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp23.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field4","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO DE LA LEY DE ACCESO A LAS MUJERES A UNA VIDA LIBRE DE VIOLENCIA.',
 'com_jtca.lcp24',
@@ -8415,7 +7379,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp24.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field4","targetTable":"jtc_delegaciones","targetColumn":"id","displayColumn":"delegacion"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO PARA CONSIGNACIONES CON DETENIDO DELITOS NO GRAVES',
 'com_jtca.lcp25',
@@ -8426,7 +7390,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp25.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO PARA CONSIGNACIONES SIN DETENIDO DELITOS NO GRAVES',
 'com_jtca.lcp26',
@@ -8437,7 +7401,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp26.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO PARA INCOMPETENCIAS DELITOS NO GRAVES',
 'com_jtca.lcp27',
@@ -8448,7 +7412,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp27.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"field8","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"organo2","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO DE EXCUSAS PARA JUZGADOS  DE DELITOS NO GRAVES',
 'com_jtca.lcp28',
@@ -8459,7 +7423,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp28.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field6","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"organo2","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ORDENES PARA ARRAIGOS Y CATEOS DELITOS NO GRAVES',
 'com_jtca.lcp29',
@@ -8470,7 +7434,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp29.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field6","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE OFICIOS.',
 'com_jtca.lcp11',
@@ -8481,7 +7445,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp11.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE TURNO DE SALAS PARA JUZGADOS ORALES.',
 'com_jtca.lcp12',
@@ -8492,7 +7456,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp12.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"organo2","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE EXPEDIENTILLOS DE JUZGADOS DE EJECUCIÓN PARA JUZGADOS PENAL O NO GRAVES.',
 'com_jtca.lcp13',
@@ -8503,7 +7467,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp13.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"organo2","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE CUMPLIMIENTO DE EJECUTORIAS PARA JUZGADOS DE EJECUCIÓN.',
 'com_jtca.lcp14',
@@ -8514,7 +7478,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp14.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE OFICIOS DE AMPAROS DE TRAMITE.',
 'com_jtca.lcp15',
@@ -8525,7 +7489,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp15.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE  OFICIOS DE AMPAROS DE CONOCIMIENTO.',
 'com_jtca.lcp16',
@@ -8536,7 +7500,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp16.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE LIBERTADES JUZGADOS DE PRIMERA INSTANCIA',
 'com_jtca.lcp30',
@@ -8547,7 +7511,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp30.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE LIBERTADES JUZGADOS DE DELITOS NO GRAVES',
 'com_jtca.lcp31',
@@ -8558,7 +7522,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp31.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE LIBERTADES JUZGADOS DE EJECUCIÓN DE SENTENCIA',
 'com_jtca.lcp32',
@@ -8569,7 +7533,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp32.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE LIBERTADES DE SALAS PENALES',
 'com_jtca.lcp33',
@@ -8580,7 +7544,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp33.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE LIBERTADES JUZGADOS DE ADOLESCENTES',
 'com_jtca.lcp34',
@@ -8591,7 +7555,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp34.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE LIBERTADES DE SALAS DE ADOLESCENTES',
 'com_jtca.lcp35',
@@ -8602,7 +7566,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp35.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE RETURNO DE ADOLESCENTES',
 'com_jtca.lcp36',
@@ -8613,7 +7577,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp36.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO DE EXCUSAS PARA JUZGADOS DE JUSTICIA PARA ADOLESCENTES',
 'com_jtca.lcp39',
@@ -8624,7 +7588,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp39.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field6","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"organo2","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ORDENES DE DETENCIÓN PARA JUZGADOS DE JUSTICIA PARA ADOLESCENTES',
 'com_jtca.lcp40',
@@ -8635,7 +7599,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp40.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO DE REMISIONES SIN DETENIDO DE JUZGADOS ADOLESCENTES',
 'com_jtca.lcp41',
@@ -8646,29 +7610,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lcp41.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"organo1","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE GOBIERNO',
-'com_jtca.ljomf01',
-'{"special":{"dbtable":"jtca_ljomf01s","key":"id","type":"ljomf01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf01Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE GOBIERNO',
-'com_jtca.ljemst01',
-'{"special":{"dbtable":"jtca_ljemst01s","key":"id","type":"ljemst01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljemst01Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljemst01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE GOBIERNO',
 'com_jtca.lspe01',
@@ -8679,7 +7621,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lspe01.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RESOLUCIONES DE PLANO',
 'com_jtca.lspe02',
@@ -8690,7 +7632,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lspe02.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RESOLUCIONES',
 'com_jtca.lspe03',
@@ -8701,7 +7643,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lspe03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE BENEFICIOS REVOCADO Y O/A',
 'com_jtca.lspe04',
@@ -8712,7 +7654,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lspe04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE DESISTIMIENTO',
 'com_jtca.lspe05',
@@ -8723,7 +7665,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lspe05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ARCHIVO',
 'com_jtca.lspe06',
@@ -8734,7 +7676,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lspe06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE FINANZAS',
 'com_jtca.lspe07',
@@ -8745,7 +7687,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lspe07.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE INGRESO Y EGRESO DE BILLETES',
 'com_jtca.lspe08',
@@ -8756,7 +7698,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lspe08.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE REGISTRO DE ASISTENCIA (OFICIAL)',
 'com_jtca.lsc02',
@@ -8767,7 +7709,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc02.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE INGRESOS DE VALORES',
 'com_jtca.ljc02',
@@ -8778,18 +7720,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc02.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE INGRESOS DE VALORES',
-'com_jtca.ljf02',
-'{"special":{"dbtable":"jtca_ljf02s","key":"id","type":"ljf02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljf02Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf02.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO DE BILLETES DE DEPÓSITO (INGRESOS)',
 'com_jtca.ljp02',
@@ -8800,7 +7731,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp02.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE INGRESO DE VALORES',
 'com_jtca.ljccm02',
@@ -8811,7 +7742,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm02.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CERTIFICADO DE DEPÓSITOS DE INGRESO',
 'com_jtca.ljpdng02',
@@ -8822,7 +7753,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng02.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE PROMOCIONES',
 'com_jtca.ljpes02',
@@ -8833,7 +7764,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes02.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE PROMOCIONES',
 'com_jtca.ljjadng02',
@@ -8844,7 +7775,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadng02.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE PROMOCIONES',
 'com_jtca.ljjadg02',
@@ -8855,29 +7786,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg02.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field7","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE INGRESOS DE VALORES',
-'com_jtca.ljomf02',
-'{"special":{"dbtable":"jtca_ljomf02s","key":"id","type":"ljomf02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf02Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf02.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE PROMOCIONES',
-'com_jtca.ljemst02',
-'{"special":{"dbtable":"jtca_ljemst02s","key":"id","type":"ljemst02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljemst02Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljemst02.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Libro de ejemplo',
 'com_jtca.lejemplo',
@@ -8888,7 +7797,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lejemplo.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"my_ref2","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"my_ref","targetTable":"gpcb.jtc_country","targetColumn":"id","displayColumn":"country"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE VISTAS AL M.P (OFICIAL)',
 'com_jtca.lsc03',
@@ -8899,7 +7808,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EGRESOS DE VALORES',
 'com_jtca.ljc03',
@@ -8910,29 +7819,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EGRESOS DE VALORES',
-'com_jtca.ljf03',
-'{"special":{"dbtable":"jtca_ljf03s","key":"id","type":"ljf03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljf03Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EGRESOS DE VALORES',
-'com_jtca.ljp03',
-'{"special":{"dbtable":"jtca_ljp03s","key":"id","type":"ljp03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljp03Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EGRESOS DE VALORES',
 'com_jtca.ljccm03',
@@ -8943,7 +7830,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CERTIFICADO DE DEPÓSITOS DE INGRESOS Y EGRESOS',
 'com_jtca.ljoc03',
@@ -8954,7 +7841,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljoc03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CERTIFICADO DE DEPÓSITOS DE EGRESO',
 'com_jtca.ljpdng03',
@@ -8965,7 +7852,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RECURSOS DE APELACIÓN',
 'com_jtca.ljpes03',
@@ -8976,7 +7863,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('AGENDA DE AUDIENCIAS',
 'com_jtca.ljjadng03',
@@ -8987,7 +7874,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadng03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE INGRESOS',
 'com_jtca.ljjadg03',
@@ -8998,29 +7885,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EGRESOS DE VALORES',
-'com_jtca.ljomf03',
-'{"special":{"dbtable":"jtca_ljomf03s","key":"id","type":"ljomf03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf03Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('AGENDA DE AUDIENCIAS',
-'com_jtca.ljemst03',
-'{"special":{"dbtable":"jtca_ljemst03s","key":"id","type":"ljemst03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljemst03Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljemst03.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE MULTAS (OFICIAL)',
 'com_jtca.lsc04',
@@ -9031,7 +7896,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO DE PROMOCIONES',
 'com_jtca.ljc04',
@@ -9042,7 +7907,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE PROMOCIONES',
 'com_jtca.ljf04',
@@ -9053,7 +7918,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO DE PROMOCIONES',
 'com_jtca.ljp04',
@@ -9064,18 +7929,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO DE PROMOCIONES',
-'com_jtca.ljccm04',
-'{"special":{"dbtable":"jtca_ljccm04s","key":"id","type":"ljccm04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljccm04Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE PROMOCIONES',
 'com_jtca.ljoc04',
@@ -9086,7 +7940,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljoc04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE PROMOCIONES',
 'com_jtca.ljpdng04',
@@ -9097,7 +7951,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE OFICIOS',
 'com_jtca.ljpes04',
@@ -9108,7 +7962,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE SENTENCIAS',
 'com_jtca.ljjadng04',
@@ -9119,7 +7973,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadng04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EGRESOS',
 'com_jtca.ljjadg04',
@@ -9130,29 +7984,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE PROMOCIONES',
-'com_jtca.ljomf04',
-'{"special":{"dbtable":"jtca_ljomf04s","key":"id","type":"ljomf04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf04Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE SENTENCIAS',
-'com_jtca.ljemst04',
-'{"special":{"dbtable":"jtca_ljemst04s","key":"id","type":"ljemst04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljemst04Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljemst04.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('AGENDA (OFICIAL)',
 'com_jtca.lsc05',
@@ -9163,7 +7995,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO PARA SENTENCIA',
 'com_jtca.ljc05',
@@ -9174,7 +8006,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field10","targetTable":"jtc_resolucion6","targetColumn":"id","displayColumn":"resolucion"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE SENTENCIAS',
 'com_jtca.ljf05',
@@ -9185,7 +8017,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO PARA SENTENCIA',
 'com_jtca.ljp05',
@@ -9196,7 +8028,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO PARA SENTENCIA',
 'com_jtca.ljccm05',
@@ -9207,7 +8039,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field10","targetTable":"jtc_resolucion6","targetColumn":"id","displayColumn":"resolucion"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE SENTENCIAS',
 'com_jtca.ljoc05',
@@ -9218,7 +8050,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljoc05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field8","targetTable":"jtc_resolucion6","targetColumn":"id","displayColumn":"resolucion"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO PARA SENTENCIAS',
 'com_jtca.ljpdng05',
@@ -9229,7 +8061,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ACTUARIOS',
 'com_jtca.ljpes05',
@@ -9240,7 +8072,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RECURSOS DE APELACIÓN',
 'com_jtca.ljjadng05',
@@ -9251,7 +8083,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadng05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE SENTENCIAS',
 'com_jtca.ljjadg05',
@@ -9262,29 +8094,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE SENTENCIAS',
-'com_jtca.ljomf05',
-'{"special":{"dbtable":"jtca_ljomf05s","key":"id","type":"ljomf05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf05Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RECURSOS DE APELACIÓN',
-'com_jtca.ljemst05',
-'{"special":{"dbtable":"jtca_ljemst05s","key":"id","type":"ljemst05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljemst05Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljemst05.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE BILLETES Y PÓLIZAS (OFICIAL)',
 'com_jtca.lsc06',
@@ -9295,7 +8105,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RECURSOS DE APELACIÓN',
 'com_jtca.ljc06',
@@ -9306,7 +8116,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RECURSOS DE APELACIÓN',
 'com_jtca.ljf06',
@@ -9317,7 +8127,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field17","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RECURSOS DE APELACIÓN',
 'com_jtca.ljp06',
@@ -9328,7 +8138,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RECURSOS DE APELACIÓN',
 'com_jtca.ljccm06',
@@ -9339,7 +8149,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field16","targetTable":"jtc_admision","targetColumn":"id","displayColumn":"admision"},{"sourceColumn":"field12","targetTable":"jtc_tipoapelacion","targetColumn":"id","displayColumn":"tipo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EXHORTOS',
 'com_jtca.ljoc06',
@@ -9350,7 +8160,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljoc06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field4","targetTable":"jtc_exhortos","targetColumn":"id","displayColumn":"exhorto"},{"sourceColumn":"field11","targetTable":"jtc_devueltos","targetColumn":"id","displayColumn":"text"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RECURSOS DE APELACIÓN',
 'com_jtca.ljpdng06',
@@ -9361,7 +8171,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AMPAROS',
 'com_jtca.ljpes06',
@@ -9372,7 +8182,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EXHORTOS',
 'com_jtca.ljjadng06',
@@ -9383,7 +8193,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadng06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RECURSOS DE APELACIÓN',
 'com_jtca.ljjadg06',
@@ -9394,29 +8204,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RECURSOS DE APELACIÓN',
-'com_jtca.ljomf06',
-'{"special":{"dbtable":"jtca_ljomf06s","key":"id","type":"ljomf06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf06Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EXHORTOS',
-'com_jtca.ljemst06',
-'{"special":{"dbtable":"jtca_ljemst06s","key":"id","type":"ljemst06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljemst06Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljemst06.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EGRESOS (OFICIAL)',
 'com_jtca.lsc07',
@@ -9427,7 +8215,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc07.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EXHORTOS',
 'com_jtca.ljc07',
@@ -9438,7 +8226,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc07.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EXHORTOS',
 'com_jtca.ljf07',
@@ -9449,7 +8237,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf07.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EXHORTOS',
 'com_jtca.ljccm07',
@@ -9460,7 +8248,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm07.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE OFICIOS',
 'com_jtca.ljoc07',
@@ -9471,7 +8259,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljoc07.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EXHORTOS',
 'com_jtca.ljpdng07',
@@ -9482,7 +8270,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng07.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AMPAROS CIRCULANTES',
 'com_jtca.ljpes07',
@@ -9493,7 +8281,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes07.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE OFICIOS',
 'com_jtca.ljjadng07',
@@ -9504,40 +8292,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadng07.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EXHORTOS',
-'com_jtca.ljjadg07',
-'{"special":{"dbtable":"jtca_ljjadg07s","key":"id","type":"ljjadg07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljjadg07Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg07.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EXHORTOS',
-'com_jtca.ljomf07',
-'{"special":{"dbtable":"jtca_ljomf07s","key":"id","type":"ljomf07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf07Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf07.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE OFICIOS',
-'com_jtca.ljemst07',
-'{"special":{"dbtable":"jtca_ljemst07s","key":"id","type":"ljemst07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljemst07Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljemst07.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE PÓLIZAS Y FIANZAS (OFICIAL) - ingresos',
 'com_jtca.lsc08',
@@ -9548,7 +8303,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc08.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE OFICIOS',
 'com_jtca.ljc08',
@@ -9559,7 +8314,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc08.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE OFICIOS',
 'com_jtca.ljf08',
@@ -9570,7 +8325,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf08.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EXHORTOS',
 'com_jtca.ljp08',
@@ -9581,7 +8336,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp08.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE OFICIOS',
 'com_jtca.ljccm08',
@@ -9592,7 +8347,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm08.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ACTUARIOS',
 'com_jtca.ljoc08',
@@ -9603,7 +8358,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljoc08.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field10","targetTable":"jtc_tipodiligencia","targetColumn":"id","displayColumn":"tipo"},{"sourceColumn":"field13","targetTable":"jtc_lanzamientos","targetColumn":"id","displayColumn":"text"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE OFICIOS',
 'com_jtca.ljpdng08',
@@ -9614,7 +8369,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng08.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE PEDIMENTOS',
 'com_jtca.ljpes08',
@@ -9625,7 +8380,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes08.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AMPAROS',
 'com_jtca.ljjadng08',
@@ -9636,40 +8391,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadng08.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field3","targetTable":"jtc_amparo2","targetColumn":"id","displayColumn":"text"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE OFICIOS',
-'com_jtca.ljjadg08',
-'{"special":{"dbtable":"jtca_ljjadg08s","key":"id","type":"ljjadg08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljjadg08Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg08.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE OFICIOS',
-'com_jtca.ljomf08',
-'{"special":{"dbtable":"jtca_ljomf08s","key":"id","type":"ljomf08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf08Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf08.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AMPAROS',
-'com_jtca.ljemst08',
-'{"special":{"dbtable":"jtca_ljemst08s","key":"id","type":"ljemst08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljemst08Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljemst08.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE PÓLIZAS Y FIANZAS (OFICIAL) - egresos',
 'com_jtca.lsc14',
@@ -9680,7 +8402,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc14.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE GOBIERNO (OFICIAL)',
 'com_jtca.lsc09',
@@ -9691,7 +8413,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc09.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ACTUARIOS',
 'com_jtca.ljc09',
@@ -9702,7 +8424,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc09.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ACTUARIOS',
 'com_jtca.ljf09',
@@ -9713,7 +8435,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf09.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE OFICIOS',
 'com_jtca.ljp09',
@@ -9724,7 +8446,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp09.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ACTUARIOS',
 'com_jtca.ljccm09',
@@ -9735,7 +8457,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm09.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA',
 'com_jtca.ljoc09',
@@ -9746,7 +8468,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljoc09.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field5","targetTable":"jtc_tipoauxiliar","targetColumn":"id","displayColumn":"tipo"},{"sourceColumn":"field7","targetTable":"jtc_especialidades","targetColumn":"id","displayColumn":"especialidad"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ACTUARIOS',
 'com_jtca.ljpdng09',
@@ -9757,7 +8479,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng09.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE MULTAS JUDICIALES',
 'com_jtca.ljpes09',
@@ -9768,7 +8490,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes09.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ACTUARIO',
 'com_jtca.ljjadng09',
@@ -9779,7 +8501,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadng09.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ACTUARIOS',
 'com_jtca.ljjadg09',
@@ -9790,29 +8512,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg09.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ACTUARIOS',
-'com_jtca.ljomf09',
-'{"special":{"dbtable":"jtca_ljomf09s","key":"id","type":"ljomf09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf09Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf09.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ACTUARIO',
-'com_jtca.ljemst09',
-'{"special":{"dbtable":"jtca_ljemst09s","key":"id","type":"ljemst09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljemst09Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljemst09.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ACTUARIO (OFICIAL)',
 'com_jtca.lsc10',
@@ -9823,7 +8523,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc10.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA',
 'com_jtca.ljc10',
@@ -9834,7 +8534,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc10.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field6","targetTable":"jtc_especialidades","targetColumn":"id","displayColumn":"especialidad"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA, TUTORES Y CURADORES',
 'com_jtca.ljf10',
@@ -9845,7 +8545,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf10.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field7","targetTable":"jtc_especialidades","targetColumn":"id","displayColumn":"especialidad"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ACTUARIO',
 'com_jtca.ljp10',
@@ -9856,7 +8556,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp10.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO PARA NOTARIOS',
 'com_jtca.ljccm10',
@@ -9867,7 +8567,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm10.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AMPAROS',
 'com_jtca.ljoc10',
@@ -9878,7 +8578,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljoc10.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field6","targetTable":"jtc_amparo","targetColumn":"id","displayColumn":"amparo"},{"sourceColumn":"field11","targetTable":"jtc_informe","targetColumn":"id","displayColumn":"informe"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO DE AMPAROS',
 'com_jtca.ljpdng10',
@@ -9889,7 +8589,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng10.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('AGENDA DE AUDIENCIAS PARA JUICIOS ORALES',
 'com_jtca.ljpes10',
@@ -9900,7 +8600,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes10.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE PEDIMENTOS',
 'com_jtca.ljjadng10',
@@ -9911,7 +8611,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadng10.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AMPAROS',
 'com_jtca.ljjadg10',
@@ -9922,29 +8622,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg10.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field12","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"field6","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA, TUTORES Y CURADORES',
-'com_jtca.ljomf10',
-'{"special":{"dbtable":"jtca_ljomf10s","key":"id","type":"ljomf10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf10Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf10.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE PEDIMENTOS',
-'com_jtca.ljemst10',
-'{"special":{"dbtable":"jtca_ljemst10s","key":"id","type":"ljemst10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljemst10Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljemst10.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRETA DE OFICIOS (OFICIAL)',
 'com_jtca.lsc11',
@@ -9955,18 +8633,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc11.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO PARA NOTARIOS',
-'com_jtca.ljc11',
-'{"special":{"dbtable":"jtca_ljc11s","key":"id","type":"ljc11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljc11Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc11.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO PARA NOTARIOS',
 'com_jtca.ljf11',
@@ -9977,7 +8644,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf11.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO DE AMPAROS',
 'com_jtca.ljp11',
@@ -9988,7 +8655,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp11.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO DE AMPAROS',
 'com_jtca.ljccm11',
@@ -9999,7 +8666,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm11.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field7","targetTable":"jtc_procedencia","targetColumn":"id","displayColumn":"procedencia"},{"sourceColumn":"field12","targetTable":"jtc_informe","targetColumn":"id","displayColumn":"informe"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE MULTAS',
 'com_jtca.ljoc11',
@@ -10010,7 +8677,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljoc11.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AMPAROS CIRCULANTES O NEGADOS',
 'com_jtca.ljpdng11',
@@ -10021,7 +8688,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng11.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE INGRESOS Y EGRESOS DE BILLETES DE DEPÓSITO',
 'com_jtca.ljpes11',
@@ -10032,7 +8699,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes11.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REMISIÓN AL ARCHIVO',
 'com_jtca.ljjadng11',
@@ -10043,7 +8710,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadng11.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field6","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE FIANZAS',
 'com_jtca.ljjadg11',
@@ -10054,29 +8721,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg11.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO PARA NOTARIOS',
-'com_jtca.ljomf11',
-'{"special":{"dbtable":"jtca_ljomf11s","key":"id","type":"ljomf11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf11Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf11.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REMISIÓN AL ARCHIVO',
-'com_jtca.ljemst11',
-'{"special":{"dbtable":"jtca_ljemst11s","key":"id","type":"ljemst11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljemst11Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljemst11.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO DE AMPAROS (OFICIAL)',
 'com_jtca.lsc12',
@@ -10087,7 +8732,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc12.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO DE AMPAROS',
 'com_jtca.ljc12',
@@ -10098,7 +8743,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc12.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field7","targetTable":"jtc_procedencia","targetColumn":"id","displayColumn":"procedencia"},{"sourceColumn":"field12","targetTable":"jtc_informe","targetColumn":"id","displayColumn":"informe"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO DE AMPAROS',
 'com_jtca.ljf12',
@@ -10109,7 +8754,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf12.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field7","targetTable":"jtc_amparo","targetColumn":"id","displayColumn":"amparo"},{"sourceColumn":"field9","targetTable":"jtc_procedencia","targetColumn":"id","displayColumn":"procedencia"},{"sourceColumn":"field11","targetTable":"jtc_informe","targetColumn":"id","displayColumn":"informe"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO DE AMPAROS CIRCULANTES O NEGADOS',
 'com_jtca.ljp12',
@@ -10120,7 +8765,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp12.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE FIANZAS',
 'com_jtca.ljccm12',
@@ -10131,7 +8776,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm12.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('AGENDA DE AUDIENCIAS',
 'com_jtca.ljoc12',
@@ -10142,7 +8787,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljoc12.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field5","targetTable":"jtc_tipoaudiencia","targetColumn":"id","displayColumn":"tipo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE FIANZAS',
 'com_jtca.ljpdng12',
@@ -10153,7 +8798,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng12.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE FIANZAS',
 'com_jtca.ljpes12',
@@ -10164,18 +8809,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes12.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE MULTAS',
-'com_jtca.ljjadg12',
-'{"special":{"dbtable":"jtca_ljjadg12s","key":"id","type":"ljjadg12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljjadg12Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg12.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBROS DE VALORES',
 'com_jtca.ljjadng12',
@@ -10186,29 +8820,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadng12.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO DE AMPAROS',
-'com_jtca.ljomf12',
-'{"special":{"dbtable":"jtca_ljomf12s","key":"id","type":"ljomf12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf12Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf12.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBROS DE VALORES',
-'com_jtca.ljemst12',
-'{"special":{"dbtable":"jtca_ljemst12s","key":"id","type":"ljemst12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljemst12Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljemst12.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('PAPELETAS PARA EL PRÉSTAMO DE EXPEDIENTES',
 'com_jtca.lsc13',
@@ -10219,7 +8831,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lsc13.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE FIANZAS',
 'com_jtca.ljc13',
@@ -10230,7 +8842,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc13.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE FIANZAS',
 'com_jtca.ljf13',
@@ -10241,7 +8853,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf13.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE FIANZAS',
 'com_jtca.ljp13',
@@ -10252,7 +8864,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp13.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE MULTAS',
 'com_jtca.ljccm13',
@@ -10263,7 +8875,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm13.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE NOTARIOS',
 'com_jtca.ljoc13',
@@ -10274,7 +8886,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljoc13.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE MULTAS',
 'com_jtca.ljpdng13',
@@ -10285,7 +8897,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng13.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RESOLUCIONES EN AUDIENCIA',
 'com_jtca.ljpes13',
@@ -10296,7 +8908,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes13.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('AGENDA DE AUDIENCIAS',
 'com_jtca.ljjadg13',
@@ -10307,18 +8919,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg13.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE FIANZAS',
-'com_jtca.ljomf13',
-'{"special":{"dbtable":"jtca_ljomf13s","key":"id","type":"ljomf13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf13Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf13.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE MULTAS',
 'com_jtca.ljc14',
@@ -10329,7 +8930,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc14.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE MULTAS',
 'com_jtca.ljf14',
@@ -10340,7 +8941,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf14.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE MULTAS',
 'com_jtca.ljp14',
@@ -10351,7 +8952,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp14.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE FIANZAS',
 'com_jtca.ljoc14',
@@ -10362,7 +8963,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljoc14.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('AGENDA DE AUDIENCIAS',
 'com_jtca.ljpdng14',
@@ -10373,7 +8974,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng14.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE RESOLUCIONES DE PLANO',
 'com_jtca.ljpes14',
@@ -10384,7 +8985,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes14.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE PEDIMENTOS',
 'com_jtca.ljjadg14',
@@ -10395,18 +8996,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg14.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE MULTAS',
-'com_jtca.ljomf14',
-'{"special":{"dbtable":"jtca_ljomf14s","key":"id","type":"ljomf14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf14Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf14.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO A CARGO DE LOS SECRETARIOS DE ACUERDOS',
 'com_jtca.ljf15',
@@ -10417,7 +9007,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf15.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('AGENDA DE AUDIENCIAS',
 'com_jtca.ljccm15',
@@ -10428,7 +9018,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm15.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE PEDIMENTOS',
 'com_jtca.ljpdng15',
@@ -10439,7 +9029,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng15.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE BENEFICIOS REVOCADOS Y ORDENES DE RE-APREHENSIÓN',
 'com_jtca.ljpes15',
@@ -10450,7 +9040,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes15.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('ARTICULO 36 o ARTICULO 28 LJADF',
 'com_jtca.ljjadg15',
@@ -10461,18 +9051,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg15.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO A CARGO DE LOS SECRETARIOS DE ACUERDOS',
-'com_jtca.ljomf15',
-'{"special":{"dbtable":"jtca_ljomf15s","key":"id","type":"ljomf15s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf15Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf15.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('AGENDA DE AUDIENCIAS',
 'com_jtca.ljc16',
@@ -10483,7 +9062,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc16.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('AGENDA DE AUDIENCIAS',
 'com_jtca.ljf16',
@@ -10494,7 +9073,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf16.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('AGENDA DE AUDIENCIAS',
 'com_jtca.ljp16',
@@ -10505,7 +9084,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp16.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field5","targetTable":"jtc_procedimiento","targetColumn":"id","displayColumn":"procedimiento"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REMISIÓN DE EXPEDIENTES AL ARCHIVO',
 'com_jtca.ljccm16',
@@ -10516,7 +9095,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm16.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO EN QUE SE HAYA OBSEQUIADO O NEGADO LA ORDEN DE APREHENSIÓN, COMPARECENCIA, PRESENTACIÓN, ARTÍCULO 36 DEL CÓDIGO DE PROCEDIMIENTOS PENALES Y OTROS',
 'com_jtca.ljpdng16',
@@ -10527,7 +9106,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng16.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE DESISTIMIENTOS',
 'com_jtca.ljpes16',
@@ -10538,7 +9117,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes16.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE PRESENTACIÓN DE ADOLESCENTES EN LIBERTAD ANTE EL JUEZ',
 'com_jtca.ljjadg16',
@@ -10549,18 +9128,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg16.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('AGENDA DE AUDIENCIAS',
-'com_jtca.ljomf16',
-'{"special":{"dbtable":"jtca_ljomf16s","key":"id","type":"ljomf16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf16Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf16.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REMISIÓN AL ARCHIVO',
 'com_jtca.ljc17',
@@ -10571,7 +9139,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc17.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field15","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REMISIÓN AL ARCHIVO',
 'com_jtca.ljf17',
@@ -10582,7 +9150,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf17.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE PEDIMENTOS',
 'com_jtca.ljp17',
@@ -10593,7 +9161,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp17.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO',
 'com_jtca.ljccm17',
@@ -10604,7 +9172,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljccm17.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE FIRMAS PROCESADOS',
 'com_jtca.ljpdng17',
@@ -10615,7 +9183,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng17.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ARCHIVO',
 'com_jtca.ljpes17',
@@ -10626,7 +9194,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes17.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REMISIÓN AL ARCHIVO',
 'com_jtca.ljjadg17',
@@ -10637,18 +9205,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg17.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REMISIÓN AL ARCHIVO',
-'com_jtca.ljomf17',
-'{"special":{"dbtable":"jtca_ljomf17s","key":"id","type":"ljomf17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf17Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf17.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO',
 'com_jtca.ljc18',
@@ -10659,7 +9216,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc18.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO',
 'com_jtca.ljf18',
@@ -10670,7 +9227,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf18.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REGISTRO EN QUE SE HAYA OBSEQUIADO O NEGADO LA ORDEN DE APREHENSIÓN, COMPARECENCIA, PRESENTACIÓN, ARTÍCULO 36 DEL CÓDIGO DE PROCEDIMIENTOS PENALES Y OTROS',
 'com_jtca.ljp18',
@@ -10681,7 +9238,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp18.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REMISIÓN AL ARCHIVO',
 'com_jtca.ljpdng18',
@@ -10692,7 +9249,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpdng18.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"jorigen","targetTable":"jtc_organosextintos","targetColumn":"id","displayColumn":"organo"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE AMPAROS *LOCOS*',
 'com_jtca.ljjadg18',
@@ -10703,18 +9260,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljjadg18.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field12","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"field6","targetTable":"jtc_jtc_general","targetColumn":"id","displayColumn":"text"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO',
-'com_jtca.ljomf18',
-'{"special":{"dbtable":"jtca_ljomf18s","key":"id","type":"ljomf18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf18Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf18.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE EXHORTOS',
 'com_jtca.ljpes18',
@@ -10725,7 +9271,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljpes18.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN',
 'com_jtca.ljc19',
@@ -10736,7 +9282,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc19.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN',
 'com_jtca.ljf19',
@@ -10747,7 +9293,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf19.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE FIRMAS DE PROCESADOS',
 'com_jtca.ljp19',
@@ -10758,18 +9304,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp19.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN',
-'com_jtca.ljomf19',
-'{"special":{"dbtable":"jtca_ljomf19s","key":"id","type":"ljomf19s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf19Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf19.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA',
 'com_jtca.ljc20',
@@ -10780,7 +9315,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc20.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA',
 'com_jtca.ljf20',
@@ -10791,7 +9326,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf20.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE TURNO PARA CONCLUSIONES',
 'com_jtca.ljp20',
@@ -10802,18 +9337,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp20.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA',
-'com_jtca.ljomf20',
-'{"special":{"dbtable":"jtca_ljomf20s","key":"id","type":"ljomf20s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf20Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf20.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE MINISTERIO PÚBLICO',
 'com_jtca.ljc21',
@@ -10824,7 +9348,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljc21.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE ADOPCIONES INTERNACIONALES',
 'com_jtca.ljf21',
@@ -10835,7 +9359,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf21.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field5","targetTable":"jtc_country","targetColumn":"id","displayColumn":"country"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE REMISIÓN AL ARCHIVO',
 'com_jtca.ljp21',
@@ -10846,18 +9370,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljp21.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE ADOPCIONES INTERNACIONALES',
-'com_jtca.ljomf21',
-'{"special":{"dbtable":"jtca_ljomf21s","key":"id","type":"ljomf21s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf21Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf21.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljf22s`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE RESTITUCIONES INTERNACIONALES',
 'com_jtca.ljf22',
@@ -10866,15 +9379,4 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'jtcaHelperRoute::getljf22Route',
 '{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljf22.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"field4","targetTable":"jtc_country","targetColumn":"id","displayColumn":"country"}]}'
-);
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `jt_ljomf22s`
---
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('LIBRO DE CONTROL DE RESTITUCIONES INTERNACIONALES',
-'com_jtca.ljomf22',
-'{"special":{"dbtable":"jtca_ljomf22s","key":"id","type":"ljomf22s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'jtcaHelperRoute::getljomf22Route',
-'{"formFile":"administrator\/components\/com_jtca\/models\/forms\/ljomf22.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"}]}'
 );

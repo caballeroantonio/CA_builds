@@ -1,6 +1,6 @@
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA (Release 1.0.1)
+ * @name			TSJ CDMX Libros TxCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
