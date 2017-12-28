@@ -2579,7 +2579,7 @@ LEFT JOIN jos_users u_1391 ON f_1391.created_by = u_1391.id
 
 #jt3_campos civiles
 
-DELETE FROM `jt3_campos` WHERE clave LIKE 'lsc__';
+DELETE FROM `jt3_campos` WHERE clave LIKE 'lsc__' OR clave LIKE 'lsc08_';
 INSERT INTO `jt3_campos` (`id`,`published`,`ordering`,`clave`,`dataIndex`,`columnText`,`columnTooltip`,`dataType`,`store`,`displayField`,`alwaysChange`,`comments`) VALUES 
 (2158,1,2,'lsc01','field116','FECHA DE RECEPCIÓN DEL ASUNTO',NULL,'date',NULL,NULL,1,NULL),
 (2159,1,3,'lsc01','field117','NÚMERO DE PROYECTO',NULL,NULL,NULL,NULL,1,NULL),
@@ -2681,7 +2681,10 @@ INSERT INTO `jt3_campos` (`id`,`published`,`ordering`,`clave`,`dataIndex`,`colum
 
 
 #jtc_libros lsc__
-DELETE FROM `jtc_libros` WHERE clave LIKE 'lsc__';
+DELETE FROM `jtc_libros` WHERE clave LIKE 'lsc__' OR clave LIKE 'lsc08_';
+DROP TABLE IF EXISTS `jt_lsc08is`;
+DROP TABLE IF EXISTS `jt_lsc08es`;
+
 INSERT INTO `jtc_libros` (`id`,`id_tipoorgano`,`id_materia`,`nombre`,`clave`,`tabla`,`view`,`url`,`published`,`ordering`,`distribution`,`json`,`exp_optional`) VALUES 
 (266,2,1,'LIBRETA DE REGISTRO DE SENTENCIAS -TURNO- (OFICIAL)','lsc01','jt_lsc01s','jt_vlsc01s','index.php?option=com_tsjdf_libros2&view=v4&layout=libro&clave=lsc01',1,1,1,NULL,0),
 (267,2,1,'LIBRETA DE REGISTRO DE ASISTENCIA (OFICIAL)','lsc02','jt_lsc02s','jt_vlsc02s','index.php?option=com_tsjdf_libros2&view=v4&layout=lsc02',1,2,1,NULL,1),

@@ -1,0 +1,1 @@
+UPDATE `jt3_campos` SET `columnText`='Pena total o medida privativa' WHERE `id`='2346';

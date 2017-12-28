@@ -2289,17 +2289,30 @@ WHERE `type_alias`='com_jtca.ljf22';
 
 ##end automatic UCHO 
 
+#@BUG
+CREATE OR REPLACE VIEW jtvr_h_accounts AS
+SELECT 
+a.id, a.e__id, a.e__id_rol, a.e__id_organo, a.e__id_secretaria, a.u__block, a.begin, a.end,
+u.username 'u__username', u.name 'u__name'
+, r.text 'rol', o.organo, s.secretaria
+FROM jt_h_accounts a
+LEFT JOIN jos_users u ON a.e__id = u.id
+LEFT JOIN jtc_general r ON a.e__id_rol = r.id
+LEFT JOIN jtc_organos o ON a.e__id_organo = o.id
+LEFT JOIN jtc_secretarias s ON a.e__id_secretaria = s.id;
+
 #catalogos para lsps__
-INSERT INTO `jtc_general` (`id`,`ordering`,`state`,`checked_out`,`checked_out_time`,`created_by`,`modified_by`,`id_catalogo`,`text`) VALUES 
+INSERT IGNORE INTO `jtc_general` (`id`,`ordering`,`state`,`checked_out`,`checked_out_time`,`created_by`,`modified_by`,`id_catalogo`,`text`) VALUES 
 (125,1,1,0,'0000-00-00 00:00:00',1,1,30,'Unitario'),
 (126,2,1,0,'0000-00-00 00:00:00',1,1,30,'Colegiado');
 
-INSERT INTO `jtc_general` (`id`,`ordering`,`state`,`checked_out`,`checked_out_time`,`created_by`,`modified_by`,`id_catalogo`,`text`) VALUES (127,24,1,0,'0000-00-00 00:00:00',1,1,28,'Imputado'),
+INSERT IGNORE INTO `jtc_general` (`id`,`ordering`,`state`,`checked_out`,`checked_out_time`,`created_by`,`modified_by`,`id_catalogo`,`text`) VALUES (127,24,1,0,'0000-00-00 00:00:00',1,1,28,'Imputado'),
 (128,25,1,0,'0000-00-00 00:00:00',1,1,28,'Acusado'),
 (129,26,1,0,'0000-00-00 00:00:00',1,1,28,'Ofendido'),
 (130,27,1,0,'0000-00-00 00:00:00',1,1,28,'Apelante');
 
 #LIBROS lsps__
+DELETE FROM `jtc_libros` WHERE AND clave LIKE 'lsps__';
 INSERT INTO `jtc_libros` (`id`,`id_tipoorgano`,`id_materia`,`nombre`,`clave`,`tabla`,`view`,`url`,`published`,`ordering`,`distribution`,`json`,`exp_optional`) VALUES 
 (288,2,5,'LIBRO DE GOBIERNO (SISTEMA TRADICIONAL)','lsps01','jt_lsps01s','jt_vlsps01s','index.php?option=com_tsjdf_libros2&view=v4&layout=libro&clave=lsps01',1,1,1,NULL,0),
 (289,2,5,'LIBRO DE GOBIERNO (NUEVO SISTEMA) (UNITARIO)','lsps02','jt_lsps02s','jt_vlsps02s','index.php?option=com_tsjdf_libros2&view=v4&layout=libro&clave=lsps02',1,2,1,NULL,0),
@@ -2313,12 +2326,15 @@ INSERT INTO `jtc_libros` (`id`,`id_tipoorgano`,`id_materia`,`nombre`,`clave`,`ta
 (297,2,5,'LIBRO DE CONTROL DE MULTAS','lsps10','jt_lsps10s','jt_vlsps10s','index.php?option=com_tsjdf_libros2&view=v4&layout=libro&clave=lsps10',1,10,1,NULL,0),
 (298,2,5,'LIBRO DE CONTROL DE FIANZA','lsps11','jt_lsps11s','jt_vlsps11s','index.php?option=com_tsjdf_libros2&view=v4&layout=libro&clave=lsps11',1,11,1,NULL,0),
 (299,2,5,'REGISTRO DE PROMOCIONES','lsps12','jt_lsps12s','jt_vlsps12s','index.php?option=com_tsjdf_libros2&view=v4&layout=libro&clave=lsps12',1,12,1,NULL,0),
-(300,2,5,'CONTROL DE FIRMAS DEL PROCESADO','lsps13','jt_lsps13s','jt_vlsps13s','index.php?option=com_tsjdf_libros2&view=v4&layout=lsps13',1,13,1,NULL,0);
+(300,2,5,'CONTROL DE FIRMAS DEL PROCESADO','lsps13','jt_lsps13s','jt_vlsps13s','index.php?option=com_tsjdf_libros2&view=v4&layout=lsps13',1,13,1,NULL,0),
+(301,2,5,'LIBRO DE OFICIOS','lsps14','jt_lsps14s','jt_vlsps14s','index.php?option=com_tsjdf_libros2&view=v4&layout=libro&clave=lsps14',1,14,1,NULL,1);
 
-#libros
-INSERT INTO `jt3_campos` (`id`,`published`,`ordering`,`clave`,`dataIndex`,`columnText`,`columnTooltip`,`dataType`,`store`,`displayField`,`alwaysChange`,`comments`) VALUES (2350,1,1,'lsps01','field2350','CLASIFICACIÓN',NULL,'ref2','30',NULL,1,NULL),
-(2351,1,2,'lsps01','field2351','JUZGADO DE PROCEDENCIA',NULL,'VARCHAR255',NULL,NULL,1,NULL),
-(2352,1,3,'lsps01','field2352','MAGISTRADO PONENTE',NULL,'VARCHAR255',NULL,NULL,1,NULL),
+#campos
+DELETE FROM `jt3_campos` WHERE AND clave LIKE 'lsps__';
+INSERT INTO `jt3_campos` (`id`,`published`,`ordering`,`clave`,`dataIndex`,`columnText`,`columnTooltip`,`dataType`,`store`,`displayField`,`alwaysChange`,`comments`) VALUES 
+(2350,1,1,'lsps01','field2350','CLASIFICACIÓN',NULL,'ref2','30',NULL,1,NULL),
+(2351,1,2,'lsps01','field2351','JUZGADO DE PROCEDENCIA',NULL,'suggest','organos_jp','organo',1,NULL),
+(2352,1,3,'lsps01','field2352','MAGISTRADO PONENTE',NULL,'suggest','magistradop','u__name',1,NULL),
 (2353,1,4,'lsps01','field2353','SENTENCIA (SENTIDO)',NULL,'VARCHAR255',NULL,NULL,1,NULL),
 (2354,1,5,'lsps01','field2354','FECHA',NULL,'date',NULL,NULL,1,NULL),
 (2355,1,6,'lsps01','field2355','RESOLUTIVOS',NULL,'VARCHAR255',NULL,NULL,1,NULL),
@@ -2332,7 +2348,7 @@ INSERT INTO `jt3_campos` (`id`,`published`,`ordering`,`clave`,`dataIndex`,`colum
 (2363,1,5,'lsps02','field2363','CON AUDIENCIA DE ALEGATOS ACLARATORIOS',NULL,'boolean',NULL,NULL,1,NULL),
 (2364,1,6,'lsps02','field2364','DOCUMENTACIÓN RECIBIDA',NULL,'VARCHAR255',NULL,NULL,1,NULL),
 (2365,1,7,'lsps02','field2365','CON DETENIDO',NULL,'boolean',NULL,NULL,1,NULL),
-(2366,1,8,'lsps02','field2366','MAGISTRADO UNITARIO',NULL,'VARCHAR255',NULL,NULL,1,NULL),
+(2366,1,8,'lsps02','field2366','MAGISTRADO UNITARIO',NULL,'suggest','magistradop','u__name',1,NULL),
 (2367,1,9,'lsps02','field2367','FECHA SENT. SEG. INST.',NULL,'date',NULL,NULL,1,NULL),
 (2368,1,10,'lsps02','field2368','RESOLUTIVOS',NULL,'VARCHAR255',NULL,NULL,1,NULL),
 (2369,1,11,'lsps02','field2369','OBSERVACIONES',NULL,'multiline',NULL,NULL,1,NULL),
@@ -2349,11 +2365,11 @@ INSERT INTO `jt3_campos` (`id`,`published`,`ordering`,`clave`,`dataIndex`,`colum
 (2380,1,11,'lsps03','field2380','OBSERVACIONES',NULL,'multiline',NULL,NULL,1,NULL),
 (2381,1,1,'lsps04','field2381','DESTINATARIO',NULL,'VARCHAR255',NULL,NULL,1,NULL),
 (2382,1,2,'lsps04','field2382','FECHA DE ENTREGA',NULL,'date',NULL,NULL,1,NULL),
-(2383,1,3,'lsps04','field2383','NOMBRE DEL ACTUARIO',NULL,'VARCHAR255',NULL,NULL,1,NULL),
+(2383,1,3,'lsps04','field2383','NOMBRE DEL ACTUARIO',NULL,'person',NULL,'1',1,NULL),
 (2384,1,4,'lsps04','field2384','FECHA DEL AUTO POR DELIGENCIAR',NULL,'date',NULL,NULL,1,NULL),
 (2385,1,5,'lsps04','field2385','FECHA DE DILIGENCIA',NULL,'date',NULL,NULL,1,NULL),
 (2386,1,6,'lsps04','field2386','FECHA DE DEVOLUCIÓN',NULL,'date',NULL,NULL,1,NULL),
-(2387,1,7,'lsps04','field2387','NOMBRE  DE QUIEN RECIBE LA DEVOLUCIÓN',NULL,'person',NULL,NULL,1,NULL),
+(2387,1,7,'lsps04','field2387','NOMBRE  DE QUIEN RECIBE LA DEVOLUCIÓN',NULL,'person',NULL,'1',1,NULL),
 (2388,1,8,'lsps04','field2388','OBSERVACIONES',NULL,'multiline',NULL,NULL,1,NULL),
 (2389,1,1,'lsps05','field2389','NO. DE AMPARO',NULL,NULL,NULL,NULL,1,NULL),
 (2390,1,2,'lsps05','field2390','TIPO DE AMPARO',NULL,NULL,NULL,NULL,1,NULL),
@@ -2380,7 +2396,7 @@ INSERT INTO `jt3_campos` (`id`,`published`,`ordering`,`clave`,`dataIndex`,`colum
 (2411,1,1,'lsps08','field2411','FECHA DE AUDIENCIA DE VISTA',NULL,'date',NULL,NULL,1,NULL),
 (2412,1,2,'lsps08','field2412','NO. DE FOJAS',NULL,NULL,NULL,NULL,1,NULL),
 (2413,1,3,'lsps08','field2413','FECHA DE TURNO AL PROYECTISTA',NULL,'date',NULL,NULL,1,NULL),
-(2414,1,4,'lsps08','field2414','NOMBRE DEL PROYECTISTA',NULL,'VARCHAR255',NULL,NULL,1,NULL),
+(2414,1,4,'lsps08','field2414','NOMBRE DEL PROYECTISTA',NULL,'person',NULL,'1',1,NULL),
 (2415,1,5,'lsps08','field2415','FECHA DE VENCIMIENTO DE SENTENCIA',NULL,'date',NULL,NULL,1,NULL),
 (2416,1,6,'lsps08','field2416','FECHA DE LA SENTENCIA',NULL,'date',NULL,NULL,1,NULL),
 (2417,1,7,'lsps08','field2417','SENTIDO DE LA RESOLUCIÓN',NULL,'VARCHAR255',NULL,NULL,1,NULL),
@@ -2395,7 +2411,7 @@ INSERT INTO `jt3_campos` (`id`,`published`,`ordering`,`clave`,`dataIndex`,`colum
 (2426,1,1,'lsps10','field2426','MONTO DE LA MULTA',NULL,'currency',NULL,NULL,1,NULL),
 (2427,1,2,'lsps10','field2427','CONCEPTO DE LA MULTA',NULL,NULL,NULL,NULL,1,NULL),
 (2428,1,3,'lsps10','field2428','FECHA DE RESOLUCIÓN QUE LA DECRETA',NULL,'date',NULL,NULL,1,NULL),
-(2429,1,4,'lsps10','field2429','NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE',NULL,'person',NULL,NULL,1,NULL),
+(2429,1,4,'lsps10','field2429','NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE',NULL,'person',NULL,'1',1,NULL),
 (2430,1,5,'lsps10','field2430','NO.  DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCIÓN',NULL,NULL,NULL,NULL,1,NULL),
 (2431,1,7,'lsps10','field2431','FECHA EN LA QUE ES ENTREGADO',NULL,'date',NULL,NULL,1,NULL),
 (2432,1,8,'lsps10','field2432','OBSERVACIONES',NULL,'multiline',NULL,NULL,1,NULL),
@@ -2411,8 +2427,15 @@ INSERT INTO `jt3_campos` (`id`,`published`,`ordering`,`clave`,`dataIndex`,`colum
 (2441,1,1,'lsps12','field2441','FECHA Y HORA DE RECEPCIÓN',NULL,'datetime',NULL,NULL,1,NULL),
 (2442,1,2,'lsps12','field2442','PROMOVENTE',NULL,'person',NULL,NULL,1,NULL),
 (2443,1,3,'lsps12','field2443','ASUNTO',NULL,NULL,NULL,NULL,1,NULL),
-(2444,1,4,'lsps13','field2444','NOMBRE DEL INCULPADO',NULL,'person',NULL,NULL,1,NULL),
-(2445,1,5,'lsps13','field2445','FIRMA DEL PROCESADO',NULL,'Fexterna',NULL,NULL,1,NULL);
+(2444,1,4,'lsps13','field2444','NOMBRE DEL INCULPADO',NULL,'person',NULL,'1',1,NULL),
+(2445,1,5,'lsps13','field2445','FIRMA DEL PROCESADO',NULL,'Fexterna',NULL,NULL,1,NULL),
+(2447,1,1,'lsps14','field2447','FECHA DEL OFICIO',NULL,'date',NULL,NULL,1,NULL),
+(2448,1,2,'lsps14','field2448','DESTINATARIO',NULL,'VARCHAR255',NULL,NULL,1,NULL),
+(2449,1,3,'lsps14','field2449','ASUNTO',NULL,NULL,NULL,NULL,1,NULL),
+(2450,1,4,'lsps14','field2450','FECHA DE ENTREGA AL DESTINATARIO',NULL,'date',NULL,NULL,1,NULL),
+(2451,1,5,'lsps14','field2451','FECHA DE DEVOLUCIÓN AL JUZGADO',NULL,'date',NULL,NULL,1,NULL);
+
+
 
 
 -- http://localhost/gpcb/index.php?option=com_tsjdf_libros2&view=guest&layout=tortidb&showCreateTableX=false&clave=lsps01
@@ -2465,8 +2488,12 @@ CREATE TABLE IF NOT EXISTS `jt_lsps01s` (
 		REFERENCES `jtc_general` (`id`)
 		ON DELETE RESTRICT
 		ON UPDATE CASCADE 
-		,	`field2351` VARCHAR(255) NULL COMMENT 'JUZGADO DE PROCEDENCIA'
-        ,	`field2352` VARCHAR(255) NULL COMMENT 'MAGISTRADO PONENTE'
+		, 
+	`txt_field2351` VARCHAR(255) NULL COMMENT 'JUZGADO DE PROCEDENCIA',
+	`id_field2351` INT(11) NULL COMMENT 'FK organos_jp'
+        , 
+	`txt_field2352` VARCHAR(255) NULL COMMENT 'MAGISTRADO PONENTE',
+	`id_field2352` INT(11) NULL COMMENT 'FK magistradop'
         ,	`field2353` VARCHAR(255) NULL COMMENT 'SENTENCIA (SENTIDO)'
         , 
 	`field2354` DATETIME NULL COMMENT 'FECHA'
@@ -2478,7 +2505,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsps01s` (
         , 
 	`field2358` DATETIME NULL COMMENT 'FECHA DE ARCHIVO'
          
-)COMMENT = 'generado el 2017-12-27 03:18:10'; 
+)COMMENT = 'generado el 2017-12-29 19:09:05'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps01s`;
@@ -2487,7 +2514,7 @@ CREATE OR REPLACE VIEW jt_vlsps01s AS
 
 SELECT l.id,l.id_organo, l.anoj, l.ordering, l.id_expediente 
 ,e.name 'e__name', e.txt_tipojuicio 'e__txt_tipojuicio', e.numero 'e__numero', e.ano 'e__ano' 
-,l.field2350,l.field2351,l.field2352,l.field2353,l.field2354,l.field2355,l.field2356,l.field2357,l.field2358
+,l.field2350,l.id_field2351, l.txt_field2351,l.id_field2352, l.txt_field2352,l.field2353,l.field2354,l.field2355,l.field2356,l.field2357,l.field2358
 FROM jt_lsps01s l
 LEFT JOIN jt_expedientes e ON e.id = l.id_expediente 
 ;
@@ -2543,14 +2570,16 @@ CREATE TABLE IF NOT EXISTS `jt_lsps02s` (
         ,	`field2364` VARCHAR(255) NULL COMMENT 'DOCUMENTACIÓN RECIBIDA'
         , 
 	`field2365` TINYINT(1) NULL COMMENT 'CON DETENIDO'
-        ,	`field2366` VARCHAR(255) NULL COMMENT 'MAGISTRADO UNITARIO'
+        , 
+	`txt_field2366` VARCHAR(255) NULL COMMENT 'MAGISTRADO UNITARIO',
+	`id_field2366` INT(11) NULL COMMENT 'FK magistradop'
         , 
 	`field2367` DATETIME NULL COMMENT 'FECHA SENT. SEG. INST.'
         ,	`field2368` VARCHAR(255) NULL COMMENT 'RESOLUTIVOS'
         , 
 	`field2369` TEXT NULL COMMENT 'OBSERVACIONES'
          
-)COMMENT = 'generado el 2017-12-27 03:18:10'; 
+)COMMENT = 'generado el 2017-12-29 19:09:06'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps02s`;
@@ -2559,7 +2588,7 @@ CREATE OR REPLACE VIEW jt_vlsps02s AS
 
 SELECT l.id,l.id_organo, l.anoj, l.ordering, l.id_expediente 
 ,e.name 'e__name', e.txt_tipojuicio 'e__txt_tipojuicio', e.numero 'e__numero', e.ano 'e__ano' 
-,l.field2359,l.field2360,l.field2361,l.field2362,l.field2363,l.field2364,l.field2365,l.field2366,l.field2367,l.field2368,l.field2369
+,l.field2359,l.field2360,l.field2361,l.field2362,l.field2363,l.field2364,l.field2365,l.id_field2366, l.txt_field2366,l.field2367,l.field2368,l.field2369
 FROM jt_lsps02s l
 LEFT JOIN jt_expedientes e ON e.id = l.id_expediente 
 ;
@@ -2623,7 +2652,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsps03s` (
         , 
 	`field2380` TEXT NULL COMMENT 'OBSERVACIONES'
          
-)COMMENT = 'generado el 2017-12-27 03:18:10'; 
+)COMMENT = 'generado el 2017-12-29 19:09:06'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps03s`;
@@ -2681,7 +2710,8 @@ CREATE TABLE IF NOT EXISTS `jt_lsps04s` (
 	`field2381` VARCHAR(255) NULL COMMENT 'DESTINATARIO'
         , 
 	`field2382` DATETIME NULL COMMENT 'FECHA DE ENTREGA'
-        ,	`field2383` VARCHAR(255) NULL COMMENT 'NOMBRE DEL ACTUARIO'
+        , 
+	`field2383_paterno` VARCHAR(255) NULL, `field2383_materno` VARCHAR(45) NULL, `field2383_nombre` VARCHAR(45) NULL, `field2383_isMoral` TINYINT(1) NOT NULL
         , 
 	`field2384` DATETIME NULL COMMENT 'FECHA DEL AUTO POR DELIGENCIAR'
         , 
@@ -2693,7 +2723,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsps04s` (
         , 
 	`field2388` TEXT NULL COMMENT 'OBSERVACIONES'
          
-)COMMENT = 'generado el 2017-12-27 03:18:11'; 
+)COMMENT = 'generado el 2017-12-29 19:09:06'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps04s`;
@@ -2702,7 +2732,10 @@ CREATE OR REPLACE VIEW jt_vlsps04s AS
 
 SELECT l.id,l.id_organo, l.anoj, l.ordering, l.id_expediente 
 ,e.name 'e__name', e.txt_tipojuicio 'e__txt_tipojuicio', e.numero 'e__numero', e.ano 'e__ano' 
-,l.field2381,l.field2382,l.field2383,l.field2384,l.field2385,l.field2386,
+,l.field2381,l.field2382,
+ CONCAT_WS(' ',l.field2383_paterno, l.field2383_materno, l.field2383_nombre) AS field2383,
+ l.field2383_paterno, l.field2383_materno, l.field2383_nombre, l.field2383_isMoral 
+,l.field2384,l.field2385,l.field2386,
  CONCAT_WS(' ',l.field2387_paterno, l.field2387_materno, l.field2387_nombre) AS field2387,
  l.field2387_paterno, l.field2387_materno, l.field2387_nombre, l.field2387_isMoral 
 ,l.field2388
@@ -2768,7 +2801,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsps05s` (
         , 
 	`field2398` TEXT NULL COMMENT 'OBSERVACIONES'
          
-)COMMENT = 'generado el 2017-12-27 03:18:11'; 
+)COMMENT = 'generado el 2017-12-29 19:09:06'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps05s`;
@@ -2836,7 +2869,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsps06s` (
         , 
 	`field2403` VARCHAR(45) NULL COMMENT 'MOTIVO DE LA SOLICITUD'
          
-)COMMENT = 'generado el 2017-12-27 03:18:11'; 
+)COMMENT = 'generado el 2017-12-29 19:09:06'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps06s`;
@@ -2904,7 +2937,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsps07s` (
         , 
 	`field2409` VARCHAR(45) NULL COMMENT 'MOTIVO'
          
-)COMMENT = 'generado el 2017-12-27 03:18:11'; 
+)COMMENT = 'generado el 2017-12-29 19:09:07'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps07s`;
@@ -2968,7 +3001,8 @@ CREATE TABLE IF NOT EXISTS `jt_lsps08s` (
 	`field2412` VARCHAR(45) NULL COMMENT 'NO. DE FOJAS'
         , 
 	`field2413` DATETIME NULL COMMENT 'FECHA DE TURNO AL PROYECTISTA'
-        ,	`field2414` VARCHAR(255) NULL COMMENT 'NOMBRE DEL PROYECTISTA'
+        , 
+	`field2414_paterno` VARCHAR(255) NULL, `field2414_materno` VARCHAR(45) NULL, `field2414_nombre` VARCHAR(45) NULL, `field2414_isMoral` TINYINT(1) NOT NULL
         , 
 	`field2415` DATETIME NULL COMMENT 'FECHA DE VENCIMIENTO DE SENTENCIA'
         , 
@@ -2977,7 +3011,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsps08s` (
 	`field2410` VARCHAR(45) NULL COMMENT 'PROCEDIMIENTO'
         ,	`field2417` VARCHAR(255) NULL COMMENT 'SENTIDO DE LA RESOLUCIÓN'
          
-)COMMENT = 'generado el 2017-12-27 03:18:12'; 
+)COMMENT = 'generado el 2017-12-29 19:09:07'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps08s`;
@@ -2986,7 +3020,10 @@ CREATE OR REPLACE VIEW jt_vlsps08s AS
 
 SELECT l.id,l.id_organo, l.anoj, l.ordering, l.id_expediente 
 ,e.name 'e__name', e.txt_tipojuicio 'e__txt_tipojuicio', e.numero 'e__numero', e.ano 'e__ano' 
-,l.field2411,l.field2412,l.field2413,l.field2414,l.field2415,l.field2416,l.field2410,l.field2417
+,l.field2411,l.field2412,l.field2413,
+ CONCAT_WS(' ',l.field2414_paterno, l.field2414_materno, l.field2414_nombre) AS field2414,
+ l.field2414_paterno, l.field2414_materno, l.field2414_nombre, l.field2414_isMoral 
+,l.field2415,l.field2416,l.field2410,l.field2417
 FROM jt_lsps08s l
 LEFT JOIN jt_expedientes e ON e.id = l.id_expediente 
 ;
@@ -3048,7 +3085,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsps09s` (
         , 
 	`field2425` DATETIME NULL COMMENT 'FECHA DE DEVOLUCIÓN'
          
-)COMMENT = 'generado el 2017-12-27 03:18:12'; 
+)COMMENT = 'generado el 2017-12-29 19:09:07'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps09s`;
@@ -3120,7 +3157,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsps10s` (
         , 
 	`field2432` TEXT NULL COMMENT 'OBSERVACIONES'
          
-)COMMENT = 'generado el 2017-12-27 03:18:12'; 
+)COMMENT = 'generado el 2017-12-29 19:09:07'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps10s`;
@@ -3195,7 +3232,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsps11s` (
         , 
 	`field2440_paterno` VARCHAR(255) NULL, `field2440_materno` VARCHAR(45) NULL, `field2440_nombre` VARCHAR(45) NULL, `field2440_isMoral` TINYINT(1) NOT NULL
          
-)COMMENT = 'generado el 2017-12-27 03:18:12'; 
+)COMMENT = 'generado el 2017-12-29 19:09:07'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps11s`;
@@ -3263,7 +3300,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsps12s` (
         , 
 	`field2443` VARCHAR(45) NULL COMMENT 'ASUNTO'
          
-)COMMENT = 'generado el 2017-12-27 03:18:12'; 
+)COMMENT = 'generado el 2017-12-29 19:09:08'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps12s`;
@@ -3332,7 +3369,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsps13s` (
 		ON DELETE RESTRICT
 		ON UPDATE CASCADE
          
-)COMMENT = 'generado el 2017-12-27 03:18:13'; 
+)COMMENT = 'generado el 2017-12-29 19:09:08'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps13s`;
@@ -3352,18 +3389,7 @@ LEFT JOIN jt_expedientes e ON e.id = l.id_expediente
 
 LEFT JOIN jt_uploadedfiles f_2445 ON l.field2445 = f_2445.id 
 ;
-
-INSERT INTO `jtc_libros` (`id`,`id_tipoorgano`,`id_materia`,`nombre`,`clave`,`tabla`,`view`,`url`,`published`,`ordering`,`distribution`,`json`,`exp_optional`) VALUES 
-(301,2,5,'LIBRO DE OFICIOS','lsps14','jt_lsps14s','jt_vlsps14s','index.php?option=com_tsjdf_libros2&view=v4&layout=libro&clave=lsps14',1,14,1,NULL,1);
-
-INSERT INTO `jt3_campos` (`id`,`published`,`ordering`,`clave`,`dataIndex`,`columnText`,`columnTooltip`,`dataType`,`store`,`displayField`,`alwaysChange`,`comments`) VALUES 
-(2447,1,1,'lsps14','field2447','FECHA DEL OFICIO',NULL,'date',NULL,NULL,1,NULL),
-(2448,1,2,'lsps14','field2448','DESTINATARIO',NULL,'VARCHAR255',NULL,NULL,1,NULL),
-(2449,1,3,'lsps14','field2449','ASUNTO',NULL,NULL,NULL,NULL,1,NULL),
-(2450,1,4,'lsps14','field2450','FECHA DE ENTREGA AL DESTINATARIO',NULL,'date',NULL,NULL,1,NULL),
-(2451,1,5,'lsps14','field2451','FECHA DE DEVOLUCIÓN AL JUZGADO',NULL,'date',NULL,NULL,1,NULL);
-
-
+-- http://localhost/gpcb/index.php?option=com_tsjdf_libros2&view=guest&layout=tortidb&showCreateTableX=false&clave=lsps14
 DROP TABLE IF EXISTS `jt_lsps14s`;
 CREATE TABLE IF NOT EXISTS `jt_lsps14s` (
 	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -3415,7 +3441,7 @@ CREATE TABLE IF NOT EXISTS `jt_lsps14s` (
         , 
 	`field2451` DATETIME NULL COMMENT 'FECHA DE DEVOLUCIÓN AL JUZGADO'
          
-)COMMENT = 'generado el 2017-12-28 04:01:26'; 
+)COMMENT = 'generado el 2017-12-29 19:09:08'; 
 
 
 DROP TABLE IF EXISTS `jt_vlsps14s`;
@@ -3428,15 +3454,3 @@ SELECT l.id,l.id_organo, l.anoj, l.ordering, l.id_expediente
 FROM jt_lsps14s l
 LEFT JOIN jt_expedientes e ON e.id = l.id_expediente 
 ;
-
-#@BUG
-CREATE OR REPLACE VIEW jtvr_h_accounts AS
-SELECT 
-a.id, a.e__id, a.e__id_rol, a.e__id_organo, a.e__id_secretaria, a.u__block, a.begin, a.end,
-u.username 'u__username', u.name 'u__name'
-, r.text 'rol', o.organo, s.secretaria
-FROM jt_h_accounts a
-LEFT JOIN jos_users u ON a.e__id = u.id
-LEFT JOIN jtc_general r ON a.e__id_rol = r.id
-LEFT JOIN jtc_organos o ON a.e__id_organo = o.id
-LEFT JOIN jtc_secretarias s ON a.e__id_secretaria = s.id;
