@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- @version 			$Id:$ -->
+<!-- @name			    RealEstateManager -->
+<!-- @author			caballeroantonio (caballeroantonio.com) -->
+<!-- @package			com_remca -->
+<!-- @subpackage		com_remca.admin -->
+<!-- @copyright		     -->
+<!-- @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- The following Component Architect header section must remain in any distribution of this file -->
+
+<!-- @CAversion			Id: architectcomp.xml 604 2016-01-14 13:05:26Z BrianWade $ -->
+<!-- @CAauthor		    Component Architect (www.componentarchitect.com) -->
+<!-- @CApackage		    architectcomp -->
+<!-- @CAsubpackage	    architectcomp.admin -->
+<!-- @CAtemplate		joomla_3_4_standard (Release 1.0.1) -->
+<!-- @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved -->
+<!-- @Joomlacopyright   Copyright (c)2005 - 2016 Open Source Matters, Inc. All rights reserved. -->
+<!-- @CAlicense		    GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or (at your option) any later version. -->
+
+<!-- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of -->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. -->
+
+<extension type="component" version="3.4" method="upgrade">
+    <name>com_remca</name>
+    <author>caballeroantonio</author>
+    <creationDate>January 2018</creationDate>
+    <copyright>
+    </copyright>
+    <license>
+        GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html
+    </license>
+    <authorEmail>caballeroantonio@hotmail.com</authorEmail>
+    <authorUrl>caballeroantonio.com</authorUrl>
+    <version>1.0.0</version>
+    <description>COM_REMCA_XML_DESCRIPTION</description>
+    <files folder="site">
+        <filename>remca.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>language</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+    <languages folder="site/language">
+			<language tag="en-GB">en-GB/en-GB.com_remca.ini</language>
+			<language tag="en-GB">es-ES/es-ES.com_remca.ini</language>
+    </languages>
+    <media destination="com_remca" folder="media">
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+    </media>
+
+    <administration>
+        <!--
+				Note that all & must be escaped to &amp; for the file to be valid
+				XML and be parsed by the installer
+			-->
+        <menu img="../media/com_remca/images/remca.png"
+              alt="RealEstateManager">COM_REMCA</menu>
+        <submenu>
+            <menu link="option=com_remca&amp;view=houses" alias="houses" img="../media/com_remca/images/remca-houses.png"
+                    alt="RealEstateManager/Houses">COM_REMCA_HOUSES</menu>
+            <menu link="option=com_remca&amp;view=main_categories" alias="main_categories" img="../media/com_remca/images/remca-main_categories.png"
+                    alt="RealEstateManager/Main_categories">COM_REMCA_MAIN_CATEGORIES</menu>
+            <menu link="option=com_remca&amp;view=mime_types" alias="mime_types" img="../media/com_remca/images/remca-mime_types.png"
+                    alt="RealEstateManager/Mime_types">COM_REMCA_MIME_TYPES</menu>
+            <menu link="option=com_remca&amp;view=mls_for_delete" alias="mls_for_delete" img="../media/com_remca/images/remca-mls_for_delete.png"
+                    alt="RealEstateManager/Mls_for_delete">COM_REMCA_MLS_FOR_DELETE</menu>
+            <menu link="option=com_remca&amp;view=orders" alias="orders" img="../media/com_remca/images/remca-orders.png"
+                    alt="RealEstateManager/Orders">COM_REMCA_ORDERS</menu>
+            <menu link="option=com_remca&amp;view=orders_details" alias="orders_details" img="../media/com_remca/images/remca-orders_details.png"
+                    alt="RealEstateManager/Orders_details">COM_REMCA_ORDERS_DETAILS</menu>
+            <menu link="option=com_remca&amp;view=photos" alias="photos" img="../media/com_remca/images/remca-photos.png"
+                    alt="RealEstateManager/Photos">COM_REMCA_PHOTOS</menu>
+            <menu link="option=com_remca&amp;view=rent" alias="rent" img="../media/com_remca/images/remca-rent.png"
+                    alt="RealEstateManager/Rent">COM_REMCA_RENT</menu>
+            <menu link="option=com_remca&amp;view=rent_request" alias="rent_request" img="../media/com_remca/images/remca-rent_request.png"
+                    alt="RealEstateManager/Rent_request">COM_REMCA_RENT_REQUEST</menu>
+            <menu link="option=com_remca&amp;view=rent_sal" alias="rent_sal" img="../media/com_remca/images/remca-rent_sal.png"
+                    alt="RealEstateManager/Rent_sal">COM_REMCA_RENT_SAL</menu>
+            <menu link="option=com_remca&amp;view=review" alias="review" img="../media/com_remca/images/remca-review.png"
+                    alt="RealEstateManager/Review">COM_REMCA_REVIEW</menu>
+            <menu link="option=com_remca&amp;view=track_source" alias="track_source" img="../media/com_remca/images/remca-track_source.png"
+                    alt="RealEstateManager/Track_source">COM_REMCA_TRACK_SOURCE</menu>
+            <menu link="option=com_remca&amp;view=users_wishlist" alias="users_wishlist" img="../media/com_remca/images/remca-users_wishlist.png"
+                    alt="RealEstateManager/Users_wishlist">COM_REMCA_USERS_WISHLIST</menu>
+            <menu link="option=com_remca&amp;view=video_source" alias="video_source" img="../media/com_remca/images/remca-video_source.png"
+                    alt="RealEstateManager/Video_source">COM_REMCA_VIDEO_SOURCE</menu>
+            <menu link="option=com_remca&amp;view=buying_request" alias="buying_request" img="../media/com_remca/images/remca-buying_request.png"
+                    alt="RealEstateManager/Buying_request">COM_REMCA_BUYING_REQUEST</menu>
+            <menu link="option=com_remca&amp;view=categories" alias="categories" img="../media/com_remca/images/remca-categories.png"
+                    alt="RealEstateManager/Categories">COM_REMCA_CATEGORIES</menu>
+            <menu link="option=com_remca&amp;view=const" alias="const" img="../media/com_remca/images/remca-const.png"
+                    alt="RealEstateManager/Const">COM_REMCA_CONST</menu>
+            <menu link="option=com_remca&amp;view=const_language" alias="const_language" img="../media/com_remca/images/remca-const_language.png"
+                    alt="RealEstateManager/Const_language">COM_REMCA_CONST_LANGUAGE</menu>
+            <menu link="option=com_remca&amp;view=feature" alias="feature" img="../media/com_remca/images/remca-feature.png"
+                    alt="RealEstateManager/Feature">COM_REMCA_FEATURE</menu>
+            <menu link="option=com_remca&amp;view=feature_houses" alias="feature_houses" img="../media/com_remca/images/remca-feature_houses.png"
+                    alt="RealEstateManager/Feature_houses">COM_REMCA_FEATURE_HOUSES</menu>
+            <menu link="option=com_remca&amp;view=languages" alias="languages" img="../media/com_remca/images/remca-languages.png"
+                    alt="RealEstateManager/Languages">COM_REMCA_LANGUAGES</menu>
+            <menu link="option=com_categories&amp;extension=com_remca" view="categories" img="../media/com_remca/images/remca-categories.png"
+                    alt="RealEstateManager/Categories">COM_REMCA_CATEGORIES</menu>
+        </submenu>
+
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>remca.php</filename>
+            <filename>controller.php</filename>
+            <filename>remca_uninstall.html</filename>
+            <filename>gpl-3.0.txt</filename>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>language</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>sql</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="admin/language">
+            <language tag="en-GB">en-GB/en-GB.com_remca.sys.ini</language>
+        </languages>
+    </administration>
+    <modules>
+        <module folder="modules" module="mod_remca" />
+    </modules>
+
+    <plugins>
+        <plugin folder="plugins/remca" plugin="plg_remca_emailcloak" group="remca" />
+        <plugin folder="plugins/remca" plugin="plg_remca_finder" group="remca" />
+        <plugin folder="plugins/remca" plugin="plg_remca_itemnavigation" group="remca" />
+        <plugin folder="plugins/remca" plugin="plg_remca_loadmodule" group="remca" />
+        <plugin folder="plugins/remca" plugin="plg_remca_pagebreak" group="remca" />
+        <plugin folder="plugins/remca" plugin="plg_remca_vote" group="remca" />
+    </plugins>
+    <!-- Runs on install/uninstall/update; -->
+    <scriptfile>remca_install.php</scriptfile>
+          
+    <install>
+        <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.remca_mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.remca_mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update>
+        <!-- Runs on update; -->
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+    <config>  
+        <fields name="params">
+            <fieldset
+                name="versioncontrol"
+                label="COM_REMCA_FIELDSET_VERSION_CONTROL_LABEL"
+		        description="COM_REMCA_FIELDSET_VERSION_CONTROL_DESC"
+	        >
+                <field
+			        name="history_limit"
+			        type="text"
+			        label="JGLOBAL_HISTORY_LIMIT_OPTIONS_LABEL"
+			        description="JGLOBAL_HISTORY_LIMIT_OPTIONS_DESC"
+			        default="10"
+			        filter="integer"
+		        />
+                <field
+                    name="save_history"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    label="JGLOBAL_SAVE_HISTORY_OPTIONS_LABEL"
+                    description="COM_REMCA_SAVE_HISTORY_OPTIONS_DESC"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>		        
+                <field
+			        name="house_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_HOUSES_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_HOUSES_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="maincategory_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_MAIN_CATEGORIES_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_MAIN_CATEGORIES_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="mimetype_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_MIME_TYPES_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_MIME_TYPES_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="mlsfordelete_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_MLS_FOR_DELETE_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_MLS_FOR_DELETE_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="order_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_ORDERS_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_ORDERS_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="ordersdetail_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_ORDERS_DETAILS_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_ORDERS_DETAILS_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="photo_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_PHOTOS_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_PHOTOS_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="rent_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_RENT_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_RENT_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="rentrequest_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_RENT_REQUEST_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_RENT_REQUEST_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="rentsal_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_RENT_SAL_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_RENT_SAL_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="review_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_REVIEW_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_REVIEW_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="tracksource_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_TRACK_SOURCE_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_TRACK_SOURCE_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="userswishlist_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_USERS_WISHLIST_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_USERS_WISHLIST_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="videosource_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_VIDEO_SOURCE_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_VIDEO_SOURCE_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="buyingrequest_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_BUYING_REQUEST_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_BUYING_REQUEST_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="category_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_CATEGORIES_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_CATEGORIES_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="const_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_CONST_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_CONST_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="constlanguage_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_CONST_LANGUAGE_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_CONST_LANGUAGE_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="feature_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_FEATURE_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_FEATURE_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="featurehouse_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_FEATURE_HOUSES_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_FEATURE_HOUSES_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="language_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_REMCA_LANGUAGES_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_LANGUAGES_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="categories"
+                label="JCATEGORIES"
+                description="COM_REMCA_FIELD_CONFIG_CATEGORIES_DESC"
+	        >
+                <field
+                    name="show_base_description"
+                    type="radio"
+                    label="JGLOBAL_FIELD_SHOW_BASE_DESCRIPTION_LABEL"
+                    description="JGLOBAL_FIELD_SHOW_BASE_DESCRIPTION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_empty_categories"
+                    type="radio"
+                    label="JGLOBAL_SHOW_EMPTY_CATEGORIES_LABEL"
+                    description="COM_REMCA_SHOW_EMPTY_CATEGORIES_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_subcategories_desc"
+                    type="radio"
+                    label="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_LABEL"
+                    description="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_categories_max_level"
+                    type="list"
+                    label="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_LABEL"
+                    description="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_DESC"
+			        class="chzn-color"
+                    default="-1"
+		        >
+                    <option value="-1">JALL</option>
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                    <option value="5">J5</option>
+                </field>
+                <field
+                    name="show_categories_noauth"
+                    type="radio"
+                    label="COM_REMCA_SHOW_UNAUTH_LINKS_LABEL"
+                    description="COM_REMCA_SHOW_CATEGORY_UNAUTH_LINKS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="items_to_display"
+                    type="list"
+                    label="COM_REMCA_CATEGORY_ITEMS_TO_DISPLAY_LABEL"
+                    description="COM_REMCA_CATEGORY_ITEMS_TO_DISPLAY_DESC"
+			        class="chzn-color"
+                default=""
+		        >
+                    <option value="">JNONE</option>
+                    <option value="Houses">COM_REMCA_HOUSES</option>
+                </field>
+                <field
+                    name="show_categories_num_items"
+                    type="radio"
+                    label="COM_REMCA_NUMBER_CATEGORY_ITEMS_LABEL"
+                    description="COM_REMCA_NUMBER_CATEGORY_ITEMS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="Category"
+                label="JCATEGORY"
+                description="COM_REMCA_FIELD_CONFIG_CATEGORY_DESC"
+	        >
+                <field
+                    id="category_component"
+                    name="category_component"
+                    type="component"
+                    label="COM_REMCA_FIELD_CATEGORY_COMPONENT_LABEL"
+                    description="COM_REMCA_FIELD_CATEGORY_COMPONENT_DESC"
+                    extension="com_remca"
+                />
+                <field
+                    name="show_cat_title"
+                    type="radio"
+                    label="JGLOBAL_SHOW_CATEGORY_TITLE"
+                    description="JGLOBAL_SHOW_CATEGORY_TITLE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_cat_description"
+                    type="radio"
+                    label="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_LABEL"
+                    description="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_cat_description_image"
+                    type="radio"
+                    label="JGLOBAL_SHOW_CATEGORY_IMAGE_LABEL"
+                    description="JGLOBAL_SHOW_CATEGORY_IMAGE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_cat_subcat_heading"
+                    type="radio"
+                    label="JGLOBAL_SHOW_CATEGORY_HEADING_TITLE_TEXT_LABEL"
+                    description="JGLOBAL_SHOW_CATEGORY_HEADING_TITLE_TEXT_DESC"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>                
+                <field
+                    name="show_empty_cat"
+                    type="radio"
+                    label="JGLOBAL_SHOW_EMPTY_CATEGORIES_LABEL"
+                    description="COM_REMCA_SHOW_EMPTY_CATEGORIES_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_subcat_desc"
+                    type="radio"
+                    label="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_LABEL"
+                    description="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_category_max_level"
+                    type="list"
+                    label="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_LABEL"
+                    description="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_DESC"
+			        class="chzn-color"
+                    default="-1"
+		        >
+                    <option value="-1">JALL</option>
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                    <option value="5">J5</option>
+                </field>
+                <field
+                    name="show_cat_noauth"
+                    type="radio"
+                    label="COM_REMCA_SHOW_UNAUTH_LINKS_LABEL"
+                    description="COM_REMCA_SHOW_CATEGORY_UNAUTH_LINKS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_cat_num_items"
+                    type="radio"
+                    label="COM_REMCA_NUMBER_CATEGORY_ITEMS_LABEL"
+                    description="COM_REMCA_NUMBER_CATEGORY_ITEMS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_cat_tags"
+                    type="radio"
+                    label="COM_REMCA_FIELD_SHOW_CATEGORY_TAGS_LABEL"
+                    description="COM_REMCA_FIELD_SHOW_CATEGORY_TAGS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="global-permissions"
+                label="COM_REMCA_PERMISSIONS_LABEL"
+                description="COM_REMCA_PERMISSIONS_DESC"
+	        >
+                <field
+                    name="rules"
+                    type="rules"
+                    label="COM_REMCA_PERMISSIONS_LABEL"
+                    filter="rules"
+                    validate="rules"
+                    component="com_remca"
+                    section="component"
+		        />
+            </fieldset>
+        </fields>
+    </config>    
+</extension>
+

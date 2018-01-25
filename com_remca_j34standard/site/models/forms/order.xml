@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- @version 			$Id:$ -->
+<!-- @name			    RealEstateManager -->
+<!-- @author			caballeroantonio (caballeroantonio.com) -->
+<!-- @package			com_remca -->
+<!-- @subpackage		com_remca.site -->
+<!-- @copyright		     -->
+<!-- @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- The following Component Architect header section must remain in any distribution of this file -->
+
+<!-- @CAversion			Id: compobject.xml 571 2016-01-04 15:03:02Z BrianWade $ -->
+<!-- @CAauthor		    Component Architect (www.componentarchitect.com) -->
+<!-- @CApackage		    architectcomp -->
+<!-- @CAsubpackage	    architectcomp.site -->
+<!-- @CAtemplate		joomla_3_4_standard (Release 1.0.1) -->
+<!-- @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved -->
+<!-- @Joomlacopyright   Copyright (c)2005 - 2016 Open Source Matters, Inc. All rights reserved. -->
+<!-- @CAlicense		    GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or (at your option) any later version. -->
+
+<!-- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of -->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. -->
+
+<form
+    addfieldpath="/components/com_remca/models/fields"
+    addrulepath="/components/com_remca/models/rules"
+>
+    <fieldset>
+        <field
+			id="id"
+			name="id"
+			type="hidden"
+			label="COM_REMCA_ID_LABEL"
+			class="readonly"
+			default="0"
+			readonly="true"
+		/>
+
+        <field
+			id="contenthistory"
+			name="contenthistory"
+			type="contenthistory"
+			label="JTOOLBAR_VERSIONS"
+			data-typeAlias="com_remca.order"
+		/>
+        <field
+			id="name"
+			name="name"
+			type="text"
+			label="COM_REMCA_ORDERS_FIELD_NAME_LABEL"
+			description="COM_REMCA_ORDERS_FIELD_NAME_DESC"
+			class="inputbox"
+			size="50"
+			required="true"
+		/>
+
+        <field
+			id="version_note"
+			name="version_note"
+			type="text"
+			label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
+			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
+			class="inputbox"
+			size="45"
+		/>
+    </fieldset>
+    <fieldset
+        name="fieldset_jos_rem_orders_fs"
+        label="COM_REMCA_ORDERS_FIELDSET_JOS_REM_ORDERS_FS_LABEL"
+    >
+
+        <field
+            id="fk_user_id"
+            name="fk_user_id"
+            type="modal_jusers"
+            label="COM_REMCA_ORDERS_FIELD_FK_USER_ID_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_FK_USER_ID_DESC"
+            class="modal"
+			default="0"
+        >
+        </field>  
+        <field
+            id="fk_houses_htitle"
+            name="fk_houses_htitle"
+            type="text"
+            label="COM_REMCA_ORDERS_FIELD_FK_HOUSES_HTITLE_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_FK_HOUSES_HTITLE_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="email"
+            name="email"
+            type="text"
+            label="COM_REMCA_ORDERS_FIELD_EMAIL_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_EMAIL_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="status"
+            name="status"
+            type="text"
+            label="COM_REMCA_ORDERS_FIELD_STATUS_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_STATUS_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="order_date"
+            name="order_date"
+            type="calendar"
+            label="COM_REMCA_ORDERS_FIELD_ORDER_DATE_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_ORDER_DATE_DESC"
+            class="inputbox validate-date"
+			size="22"
+			maxlength="25"
+			format="%Y-%m-%d"
+			filter="fixed"
+			validate="date"
+        >
+        </field>  
+        <field
+            id="fk_house_id"
+            name="fk_house_id"
+            type="modal_houses"
+            label="COM_REMCA_ORDERS_FIELD_FK_HOUSE_ID_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_FK_HOUSE_ID_DESC"
+            class="modal"
+			default="0"
+        >
+        </field>  
+        <field
+            id="txn_type"
+            name="txn_type"
+            type="text"
+            label="COM_REMCA_ORDERS_FIELD_TXN_TYPE_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_TXN_TYPE_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="txn_id"
+            name="txn_id"
+            type="text"
+            label="COM_REMCA_ORDERS_FIELD_TXN_ID_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_TXN_ID_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="payer_id"
+            name="payer_id"
+            type="text"
+            label="COM_REMCA_ORDERS_FIELD_PAYER_ID_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_PAYER_ID_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="payer_status"
+            name="payer_status"
+            type="text"
+            label="COM_REMCA_ORDERS_FIELD_PAYER_STATUS_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_PAYER_STATUS_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="order_calculated_price"
+            name="order_calculated_price"
+            type="text"
+            label="COM_REMCA_ORDERS_FIELD_ORDER_CALCULATED_PRICE_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_ORDER_CALCULATED_PRICE_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="order_price"
+            name="order_price"
+            type="integer"
+            label="COM_REMCA_ORDERS_FIELD_ORDER_PRICE_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_ORDER_PRICE_DESC"
+            class="inputbox"
+			size="1"
+			default="0"
+        >
+        </field>  
+        <field
+            id="order_currency_code"
+            name="order_currency_code"
+            type="text"
+            label="COM_REMCA_ORDERS_FIELD_ORDER_CURRENCY_CODE_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_ORDER_CURRENCY_CODE_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="paypal_paykay"
+            name="paypal_paykay"
+            type="text"
+            label="COM_REMCA_ORDERS_FIELD_PAYPAL_PAYKAY_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_PAYPAL_PAYKAY_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+    </fieldset>
+</form>

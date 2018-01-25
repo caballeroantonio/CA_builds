@@ -1,0 +1,177 @@
+<project name="remca" default="dist" basedir=".">
+    <property name="link_dir" description="vinculo simbolico de JPATH_BASE" value="D:/www/htdocs/JPruebas" /> 
+    
+    <target name="remove-package" description="Warning, delete directory follow symlinks. When uninstall Joomla extension or delete directory that has symlinks you loose your src code.">
+        <delete dir="${link_dir}/administrator/components/com_remca" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.com_remca.ini" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.com_remca.sys.ini" />
+        <delete dir="${link_dir}/components/com_remca"  />
+        <delete file="${link_dir}/language/en-GB/en-GB.com_remca.ini" />
+		<delete file="${link_dir}/language/es-ES/es-ES.com_remca.ini" />
+        <delete dir="${link_dir}/media/com_remca" />
+        
+
+        <delete dir="${link_dir}/modules/mod_remca" />
+        <delete file="${link_dir}/language/en-GB/en-GB.mod_remca.ini" />
+        <delete file="${link_dir}/language/en-GB/en-GB.mod_remca.sys.ini" />
+        
+        <delete dir="${link_dir}/plugins/remca/emailcloak" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailcloak.ini" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailcloak.sys.ini" />
+        <delete dir="${link_dir}/plugins/remca/itemnavigation" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_itemnavigation.ini" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_itemnavigation.sys.ini" />
+        <delete dir="${link_dir}/plugins/remca/loadmodule" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_loadmodule.ini" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_loadmodule.sys.ini" />
+        <delete dir="${link_dir}/plugins/remca/pagebreak" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_pagebreak.ini" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_pagebreak.sys.ini" />
+        <delete dir="${link_dir}/plugins/remca/vote" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_vote.ini" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_vote.sys.ini" />
+        
+    </target>
+
+    <target name="copy-symlinks-win" description="copy symlynks to joomla to test directy on development directory">
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/administrator/components/com_remca" "${basedir}\admin"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/components/com_remca" "${basedir}\site"'/>
+        </exec>
+        
+		<!--admin language-->
+		<exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.com_remca.ini" "${basedir}\admin\language\en-GB\en-GB.com_remca.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.com_remca.sys.ini" "${basedir}\admin\language\en-GB\en-GB.com_remca.sys.ini"'/>
+        </exec>
+		
+		<exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.com_remca.ini" "${basedir}\admin\language\es-ES\es-ES.com_remca.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.com_remca.sys.ini" "${basedir}\admin\language\es-ES\es-ES.com_remca.sys.ini"'/>
+        </exec>
+		<!--site language-->
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/language/en-GB/en-GB.com_remca.ini" "${basedir}\site\language\en-GB\en-GB.com_remca.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/language/es-ES/es-ES.com_remca.ini" "${basedir}\site\language\es-ES\es-ES.com_remca.ini"'/>
+        </exec>
+		
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/media/com_remca" "${basedir}\media"'/>
+        </exec>
+
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/modules/mod_remca" "${basedir}\modules\mod_remca"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/language/en-GB/en-GB.mod_remca.ini" "${basedir}\modules\mod_remca\language\en-GB\en-GB.mod_remca.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/language/en-GB/en-GB.mod_remca.sys.ini" "${basedir}\modules\mod_remca\language\en-GB\en-GB.mod_remca.sys.ini"'/>
+        </exec>
+        
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/plugins/remca/emailcloak" "${basedir}\plugins\remca\plg_remca_emailcloak"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailcloak.ini" "${basedir}\plugins\remca\plg_remca_emailcloak\language\en-GB\en-GB.plg_remca_emailcloak.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailcloak.sys.ini" "${basedir}\plugins\remca\plg_remca_emailcloak\language\en-GB\en-GB.plg_remca_emailcloak.sys.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/plugins/remca/itemnavigation" "${basedir}\plugins\remca\plg_remca_itemnavigation"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_itemnavigation.ini" "${basedir}\plugins\remca\plg_remca_itemnavigation\language\en-GB\en-GB.plg_remca_itemnavigation.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_itemnavigation.sys.ini" "${basedir}\plugins\remca\plg_remca_itemnavigation\language\en-GB\en-GB.plg_remca_itemnavigation.sys.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/plugins/remca/loadmodule" "${basedir}\plugins\remca\plg_remca_loadmodule"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_loadmodule.ini" "${basedir}\plugins\remca\plg_remca_loadmodule\language\en-GB\en-GB.plg_remca_loadmodule.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_loadmodule.sys.ini" "${basedir}\plugins\remca\plg_remca_loadmodule\language\en-GB\en-GB.plg_remca_loadmodule.sys.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/plugins/remca/pagebreak" "${basedir}\plugins\remca\plg_remca_pagebreak"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_pagebreak.ini" "${basedir}\plugins\remca\plg_remca_pagebreak\language\en-GB\en-GB.plg_remca_pagebreak.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_pagebreak.sys.ini" "${basedir}\plugins\remca\plg_remca_pagebreak\language\en-GB\en-GB.plg_remca_pagebreak.sys.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/plugins/remca/vote" "${basedir}\plugins\remca\plg_remca_vote"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_vote.ini" "${basedir}\plugins\remca\plg_remca_vote\language\en-GB\en-GB.plg_remca_vote.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_vote.sys.ini" "${basedir}\plugins\remca\plg_remca_vote\language\en-GB\en-GB.plg_remca_vote.sys.ini"'/>
+        </exec>
+        
+    </target>   
+     
+    <target name="remove-symlinks-win" description="remove test symlinks">
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/administrator/components/com_remca"'/>
+        </exec>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.com_remca.ini"/>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.com_remca.sys.ini"/>
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/components/com_remca"'/>
+        </exec>
+        <delete file="${link_dir}/language/en-GB/en-GB.com_remca.ini"/>
+        <delete file="${link_dir}/language/es-ES/es-ES.com_remca.ini"/>
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/media/com_remca"'/>
+        </exec>
+
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/modules/mod_remca"'/>
+        </exec>
+        <delete file="${link_dir}/language/en-GB/en-GB.mod_remca.ini"/>
+        <delete file="${link_dir}/language/en-GB/en-GB.mod_remca.sys.ini"/>
+        
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/plugins/remca/emailcloak"'/>
+        </exec>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailcloak.ini"/>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailcloak.sys.ini"/>
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/plugins/remca/itemnavigation"'/>
+        </exec>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_itemnavigation.ini"/>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_itemnavigation.sys.ini"/>
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/plugins/remca/loadmodule"'/>
+        </exec>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_loadmodule.ini"/>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_loadmodule.sys.ini"/>
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/plugins/remca/pagebreak"'/>
+        </exec>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_pagebreak.ini"/>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_pagebreak.sys.ini"/>
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/plugins/remca/vote"'/>
+        </exec>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_vote.ini"/>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_vote.sys.ini"/>
+        
+    </target>    
+
+</project>
