@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -133,7 +133,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo JString::trim($this->item->h_house_id);
+									echo JString::trim($this->item->h_house_name);
 								?>
 							</span>
 						</div>	

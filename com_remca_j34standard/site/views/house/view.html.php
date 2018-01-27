@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML House View class for the RealEstateManager component
+ * HTML House View class for the RealEstateManagerCA component
  *
  */
 class RemcaViewHouse extends JViewLegacy
@@ -161,6 +161,8 @@ class RemcaViewHouse extends JViewLegacy
 		$results = $dispatcher->trigger('onHousePrepare', array ('com_remca.house', &$item, &$this->params, $offset));
 
 		$item->event = new stdClass;
+		$results = $dispatcher->trigger('onHouseAfterName', array('com_remca.house', &$item, &$this->params, $offset));
+		$item->event->afterDisplayHouseName = JString::trim(implode("\n", $results));
 		
 		$results = $dispatcher->trigger('onHouseBeforeDisplay', array('com_remca.house', &$item, &$this->params, $offset));
 		$item->event->beforeDisplayHouse = JString::trim(implode("\n", $results));
@@ -200,7 +202,7 @@ class RemcaViewHouse extends JViewLegacy
 		}
 		else
 		{
-			$this->params->def('page_heading', JText::sprintf('COM_REMCA_HOUSE_ID_TITLE', $this->item->id));
+			$this->params->def('page_heading', $this->item->name);
 		}
 
 		$title = $this->params->get('page_title', '');
@@ -210,7 +212,12 @@ class RemcaViewHouse extends JViewLegacy
 		// if the menu item does not concern this house
 		if ($menu AND ($menu->query['option'] != 'com_remca' OR $menu->query['view'] != 'house' OR $id != $this->item->id))
 		{
-			$path = array(array('title' => $this->item->id, 'link' => ''));
+			// If this is not a single house menu item, set the page title to the house name
+			if ($this->item->name)
+			{
+				$title = $this->item->name;
+			}
+			$path = array(array('title' => $this->item->name, 'link' => ''));
 			if ( $this->params->get('show_house_category_breadcrumb', '0'))
 			{			
 				$options['countItems'] = false;
@@ -238,6 +245,10 @@ class RemcaViewHouse extends JViewLegacy
 		{
 			$title = JText::sprintf('JPAGETITLE', htmlspecialchars_decode($app->get('sitename')), $title);
 		}
+		if (empty($title))
+		{
+			$title = $this->item->name;
+		}
 		$this->document->setTitle($title);
 
 		if ($this->params->get('menu-meta_description'))
@@ -258,6 +269,7 @@ class RemcaViewHouse extends JViewLegacy
 		// If there is a pagebreak heading or title, add it to the page title
 		if (!empty($this->item->page_title))
 		{
+			$this->item->name = $this->item->name . ' - ' . $this->item->page_title;
 			$this->document->setTitle($this->item->page_title . ' - ' . JText::sprintf('COM_REMCA_PAGEBREAK_PAGE_NUM', $this->state->get('list.offset') + 1));
 		}
 

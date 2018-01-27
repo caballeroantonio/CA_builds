@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -66,6 +66,7 @@ class RemcaTableRent extends JTable
 	public function check()
 	{
 		// Set name
+		$this->name = htmlspecialchars_decode($this->name, ENT_QUOTES);
 
 
 

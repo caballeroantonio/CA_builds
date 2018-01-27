@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -65,7 +65,7 @@ class JFormFieldModal_Rent extends JFormField
 		$script[] = '	function jSelectRent_'.$this->id.'(id, name, object)';
 		$script[] = '	{';
 		$script[] = '		document.getElementById("'.$this->id.'_id").value = id;';
-		$script[] = '		document.getElementById("'.$this->id.'_name").value = "objeto modal";';
+		$script[] = '		document.getElementById("'.$this->id.'_name").value = name;';
 		if ($allow_edit)
 		{
 			$script[] = '		jQuery("#'.$this->id.'_edit").removeClass("hidden");';
@@ -86,7 +86,8 @@ class JFormFieldModal_Rent extends JFormField
 			$script_clear = true;
 
 			$script[] = '	function jClearRent(id) {';
-			$script[] = '		document.getElementById(id + "_id").value = "'.htmlspecialchars(JText::_('COM_REMCA_RENT_SELECT_ITEM_LABEL', true), ENT_COMPAT, 'UTF-8').'";';
+			$script[] = '		document.getElementById(id + "_id").value = "";';
+			$script[] = '		document.getElementById(id + "_name").value = "'.htmlspecialchars(JText::_('COM_REMCA_RENT_SELECT_ITEM_LABEL', true), ENT_COMPAT, 'UTF-8').'";';
 			$script[] = '		jQuery("#"+id + "_clear").addClass("hidden");';
 			$script[] = '		if (document.getElementById(id + "_edit")) {';
 			$script[] = '			jQuery("#"+id + "_edit").addClass("hidden");';
@@ -98,7 +99,28 @@ class JFormFieldModal_Rent extends JFormField
 		// Add the script to the document head.
 		JFactory::getDocument()->addScriptDeclaration(implode("\n", $script));
 		
-		$title = JText::_('COM_REMCA_RENT_SELECT_ITEM_LABEL');
+		// Get the title of the linked chart
+		$db = JFactory::getDbo();
+		$db->setQuery(
+			'SELECT name' .
+			' FROM #__rem_rent' .
+			' WHERE id = '.(int) $this->value
+		);
+
+		try
+		{
+			$title = $db->loadResult();
+		}
+		catch (RuntimeException $e)
+		{
+			JError::raiseWarning(500, $e->getMessage());
+		}
+
+		if (empty($title))
+		{
+			$title = JText::_('COM_REMCA_RENT_SELECT_ITEM_LABEL');
+		}
+		$title = htmlspecialchars($title, ENT_QUOTES, 'UTF-8');		
 		$link = 'index.php?option=com_remca&amp;view=rent&amp;layout=modal&amp;tmpl=component&amp;function=jSelectRent_'.$this->id;
 
 
@@ -137,7 +159,7 @@ class JFormFieldModal_Rent extends JFormField
 			$class = ' class="required modal-value"';
 		}
 
-		$html[] = '<input type="hidden" id="'.$this->id.'_id"'.$class.' name="'.$this->id.'_name" value="'.$value.'" />';
+		$html[] = '<input type="hidden" id="'.$this->id.'_id"'.$class.' name="'.$this->name.'" value="'.$value.'" />';
 		return implode("\n", $html);		
 	}
 }

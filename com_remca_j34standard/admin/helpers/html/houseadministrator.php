@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -92,6 +92,7 @@ abstract class JHtmlHouseAdministrator
 							array('title' => $item->language_title),
 							true
 						),
+						$item->name,
 						'(' . $item->category_title . ')'
 					);
 					$item->link = JHtml::_('tooltip', implode(' ', $tooltip_parts), null, null, $text, $url, null, 'hasTooltip label label-association label-' . $item->lang_sef);

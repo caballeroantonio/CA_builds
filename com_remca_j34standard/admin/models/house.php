@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -81,6 +81,59 @@ class RemcaModelHouse extends JModelAdmin
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}	
+	/**	
+	 * Method to test whether a record can be deleted.
+	 *
+	 * @param	object	record	A record object.
+	 * @return	boolean	True if allowed to delete the record. Defaults to the permission set in the component.
+	 */
+	protected function canDelete($record)
+	{
+		$user = JFactory::getUser();
+	
+		if ($record->state != -2)
+		{
+			return false;
+		}
+		if (!empty($record->id))
+		{
+			return $user->authorise('core.delete', 'com_remca.house.'.(int) $record->id);
+		}
+		else
+		{
+			return $user->authorise('core.delete', 'com_remca');
+		}							
+	}
+
+	/**
+	 * Method to test whether a record can have its state changed.
+	 *
+	 * @param	object	A record object.
+	 * @return	boolean	True if allowed to change the state of the record. Defaults to the permission set in the component.
+	 */
+	protected function canEditState($record)
+	{
+		$user = JFactory::getUser();
+
+		// Check against the id.
+		if (!empty($record->id))
+		{
+			return $user->authorise('core.edit.state', 'com_remca.house.'.(int) $record->id);
+		}
+		else
+		{
+			// New house, so check against the category.		
+			if (!empty($record->catid))
+			{
+				return $user->authorise('core.edit.state', 'com_remca.category.'.(int) $record->catid);
+			}
+			else 
+			{
+			// Default to component settings.			
+				return parent::canEditState($record);
+			}
+		}
+	}
 	/**
 	 * Method to get a single record.
 	 *
@@ -164,6 +217,20 @@ class RemcaModelHouse extends JModelAdmin
 			// New record. Can only create in selected categories.
 			$form->setFieldAttribute('catid', 'action', 'core.create');
 		}
+		// Modify the form based on access controls.
+		if (!$this->canEditState((object) $data))
+		{
+			// Disable fields for display.
+
+			$form->setFieldAttribute('ordering', 'disabled', 'true');
+			$form->setFieldAttribute('state', 'disabled', 'true');
+
+			// Disable fields while saving.
+			// The controller has already verified this is a record you can edit.
+			$form->setFieldAttribute('ordering', 'filter', 'unset');
+			$form->setFieldAttribute('state', 'filter', 'unset');
+			$form->setFieldAttribute('language', 'filter', 'unset');
+		}
 
 		// Prevent messing with House language and category when editing existing House with associations
 		$app = JFactory::getApplication();
@@ -219,6 +286,8 @@ class RemcaModelHouse extends JModelAdmin
 		$date = JFactory::getDate();
 		$user = JFactory::getUser();
 		
+		$table->name = htmlspecialchars_decode($table->name, ENT_QUOTES);
+		
 		// Increment the house version number.
 		$table->version++;
 		
@@ -244,7 +313,7 @@ class RemcaModelHouse extends JModelAdmin
 	 */
 	public function save($data)
 	{
-		// Include the realestatemanager plugins for the onSave events.
+		// Include the realestatemanagerca plugins for the onSave events.
 		JPluginHelper::importPlugin('remca');	
 		
 		$input = JFactory::getApplication()->input;
@@ -376,6 +445,7 @@ class RemcaModelHouse extends JModelAdmin
 	
 		$condition = array();
 		$condition[] = $db->quoteName('catid').' = '.(int) $table->catid;	
+		$condition[] = $db->quoteName('price').' = '. $db->quote($table->price);	
 		$condition[] = $db->quoteName('state').' >= 0';
 		return $condition;
 	}

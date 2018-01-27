@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * RealEstateManager controller class.
+ * RealEstateManagerCA controller class.
  *
  */
 class RemcaControllerRemca extends JControllerForm

@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -78,6 +78,20 @@ $params = $this->state->get('params');
 			<h1><?php echo $this->escape($params->get('page_heading')); ?></h1>
 		</div>
 	<?php endif; ?>
+	<?php if ($params->get('show_rent_name')) : ?>
+		<div style="float: left;">
+		<h2>
+			<?php  
+				if (!is_null($this->item->id)) :
+					echo JText::sprintf('COM_REMCA_EDIT_ITEM', $this->escape($this->item->name)); 
+				else :
+					echo JText::_('COM_REMCA_RENT_CREATE_ITEM');
+				endif;
+			?>
+		</h2>
+		</div>
+		<div style="clear:both;"></div>
+	<?php endif; ?>
 	<form action="<?php echo JRoute::_('index.php?option=com_remca&view=rentform&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="rent-form" class="form-validate">
 		<div class="btn-toolbar">
 			<div class="btn-group">
@@ -104,6 +118,7 @@ $params = $this->state->get('params');
 		<div style="clear:both;padding-top: 10px;"></div>
         <!--begin all fields-->
         			<!-- begin fields basic-details-->
+					<?php echo $this->form->renderField('name', null, null, array('group_id' => 'field_name')); ?>
 <?php /*?>                    
                     <?php
 						$user  = JFactory::getUser();

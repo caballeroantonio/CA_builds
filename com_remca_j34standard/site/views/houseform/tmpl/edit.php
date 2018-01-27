@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -78,6 +78,20 @@ $params = $this->state->get('params');
 			<h1><?php echo $this->escape($params->get('page_heading')); ?></h1>
 		</div>
 	<?php endif; ?>
+	<?php if ($params->get('show_house_name')) : ?>
+		<div style="float: left;">
+		<h2>
+			<?php  
+				if (!is_null($this->item->id)) :
+					echo JText::sprintf('COM_REMCA_EDIT_ITEM', $this->escape($this->item->name)); 
+				else :
+					echo JText::_('COM_REMCA_HOUSES_CREATE_ITEM');
+				endif;
+			?>
+		</h2>
+		</div>
+		<div style="clear:both;"></div>
+	<?php endif; ?>
 	<form action="<?php echo JRoute::_('index.php?option=com_remca&view=houseform&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="house-form" class="form-validate">
 		<div class="btn-toolbar">
 			<div class="btn-group">
@@ -104,6 +118,7 @@ $params = $this->state->get('params');
 		<div style="clear:both;padding-top: 10px;"></div>
         <!--begin all fields-->
         			<!-- begin fields basic-details-->
+					<?php echo $this->form->renderField('name', null, null, array('group_id' => 'field_name')); ?>
 					<?php echo $this->form->renderField('catid', null, null, array('group_id' => 'field_catid')); ?>
 <?php /*?>                    
                     <?php
@@ -163,8 +178,10 @@ $params = $this->state->get('params');
 <?php /*?>			<ul class="nav nav-tabs">
 				<li class="active"><a href="#basic-details" data-toggle="tab"><?php echo JText::_('COM_REMCA_HOUSES_FIELDSET_DETAILS_LABEL');?></a></li>
 				<li><a href="#fieldset-jos_rem_houses_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_HOUSES_FIELDSET_JOS_REM_HOUSES_FS_LABEL');?></a></li>
+				<?php if ($this->item->params->get('access-change')): ?>
 				<li><a href="#publishing" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_PUBLISHING_LABEL');?></a></li>
 				<li><a href="#language" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_LANGUAGE_LABEL');?></a></li>
+				<?php endif; ?>				
 			</ul>		<?php */?>
 		
 		
@@ -175,10 +192,12 @@ $params = $this->state->get('params');
 
 
 				
+				<?php if ($this->item->params->get('access-change')): ?>
 						
 					<div class="tab-pane" id="language">
 						<?php echo $this->form->renderField('language', null, null, array('group_id' => 'language')); ?>						
 					</div>	
+				<?php endif; ?>
 				<input type="hidden" name="task" value="" />
 				<input type="hidden" name="form_id" id="form_id" value="house-form" />
 				<input type="hidden" name="return" value="<?php echo $this->return_page;?>" />

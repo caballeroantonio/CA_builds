@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -36,6 +36,16 @@ require_once JPATH_COMPONENT.'/helpers/remca.php';
 $app = JFactory::getApplication();
 $user  = JFactory::getUser();
 
+
+if ($app->input->get('view') === 'houses' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_remca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
 
 $controller = JControllerLegacy::getInstance('Remca');
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -64,6 +64,10 @@ $empty = $component->params->get('default_empty_field', '');
 		</div>
 		<hr class="hr-condensed">
 		<div class="filters pull-left">
+			<select name="filter_price" class="input-medium js-stools-field-order" onchange="this.form.submit()">
+				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_PRICE');?></option>
+				<?php echo JHtml::_('select.options', $this->price_values, 'value', 'text', $this->state->get('filter.price'));?>
+			</select>	
 
 			<select name="filter_state" class="input-medium" onchange="this.form.submit()">
 				<option value=""><?php echo JText::_('COM_REMCA_SELECT_STATUS');?></option>
@@ -93,6 +97,12 @@ $empty = $component->params->get('default_empty_field', '');
 	<table class="table table-striped table-condensed">
 		<thead>
 			<tr>
+				<th class="center nowrap">
+					<?php echo JHtml::_('grid.sort',  'COM_REMCA_HEADING_NAME', 'a.name', $list_dirn, $list_order); ?>
+				</th>
+				<th width="10%" class="center nowrap">
+					<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>						
+				</th>	
 				<th width="20%" class="center nowrap">
 					<?php echo JHtml::_('grid.sort', 'JCATEGORY', 'category_title', $list_dirn, $list_order); ?>
 				</th>
@@ -125,18 +135,30 @@ $empty = $component->params->get('default_empty_field', '');
 				endif;
 			?>
 			<tr class="row<?php echo $i % 2; ?>">
+				<td>
+					<a href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
+						<?php echo $this->escape($item->name); ?>
+					</a>		
+				</td>
 				<td class="center">
-					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
+					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
+						<?php 
+							echo $item->price != '' ? $item->price : $empty; 
+						?>					
+					</a>		
+				</td>	
+				<td class="center">
+					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
 						<?php echo $this->escape($item->category_title); ?>
 					</a>		
 				</td>	
 				<td class="center">
-					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
+					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
 						<?php echo JHtml::_('jgrid.published', $item->state, $i, 'houses.', false, 'cb'); ?>
 					</a>		
 				</td>
 				<td class="center">
-					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
+					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
 					<?php if ($item->language=='*'):?>
 						<?php echo JText::alt('JALL', 'language'); ?>
 					<?php else:?>
@@ -145,7 +167,7 @@ $empty = $component->params->get('default_empty_field', '');
 					</a>		
 				</td>
 				<td class="center">
-					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
+					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
 						<?php echo $item->id; ?>
 					</a>		
 				</td>

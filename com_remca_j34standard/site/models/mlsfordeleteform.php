@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -257,7 +257,7 @@ class RemcaModelMlsForDeleteForm extends RemcaModelMlsForDelete
 		}
 
 
-		// Include the realestatemanager plugins for the onSave events.
+		// Include the realestatemanagerca plugins for the onSave events.
 		JPluginHelper::importPlugin('remca');
 
 		$result = $dispatcher->trigger('onMlsForDeleteBeforeSave', array('com_remca.mlsfordelete', &$table, $is_new));

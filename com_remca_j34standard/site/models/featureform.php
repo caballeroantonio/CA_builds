@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -257,7 +257,7 @@ class RemcaModelFeatureForm extends RemcaModelFeature
 		}
 
 
-		// Include the realestatemanager plugins for the onSave events.
+		// Include the realestatemanagerca plugins for the onSave events.
 		JPluginHelper::importPlugin('remca');
 
 		$result = $dispatcher->trigger('onFeatureBeforeSave', array('com_remca.feature', &$table, $is_new));

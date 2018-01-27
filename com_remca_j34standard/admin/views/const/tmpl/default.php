@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -87,7 +87,7 @@ $empty = $component->params->get('default_empty_field', '');
                         'view' => $this,
                         'options' => array(
                             'searchButton' => 
-                            FALSE
+                            TRUE
                         ),
                     )
                 );
@@ -105,6 +105,9 @@ $empty = $component->params->get('default_empty_field', '');
 					<th width="1%" class="center">
 						<?php echo JHtml::_('grid.checkall'); ?>
 					</th>
+					<th>
+						<?php echo JHtml::_('searchtools.sort',  'COM_REMCA_HEADING_NAME', 'a.name', $list_dirn, $list_order); ?>
+					</th>
 					<th width="1%" class="nowrap center">
 						<?php echo JHtml::_('searchtools.sort', 'JGRID_HEADING_ID', 'a.id', $list_dirn, $list_order); ?>
 					</th>
@@ -119,6 +122,12 @@ $empty = $component->params->get('default_empty_field', '');
 				<tr class="row<?php echo $i % 2; ?>">
 					<td class="center">
 						<?php echo JHtml::_('grid.id', $i, $item->id); ?>
+					</td>
+					<td class="nowrap has-context">
+						<div class="pull-left break-word">
+								<a class="hasTooltip" href="<?php echo JRoute::_('index.php?option=com_remca&task=const.edit&id='.(int) $item->id); ?>">
+								<?php echo $this->escape($item->name); ?></a>
+						</div>
 					</td>
 					<td class="center">
 						<?php echo $item->id; ?>

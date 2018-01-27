@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -177,6 +177,41 @@ class RemcaModelHouseForm extends RemcaModelHouse
 
 		// Get user name.
 		
+		$asset	= 'com_remca.house.'.$item->id;
+
+		// Check general edit permission first.
+		if ($user->authorise('core.edit', $asset)) 
+		{
+			$item->params->set('access-edit', true);
+		}
+		if ($user->authorise('core.create', $asset))
+		{
+			$item->params->set('access-create', true);
+		}	
+		if ($user->authorise('core.delete', $asset)) 
+		{
+			$item->params->set('access-delete', true);
+		}
+		// Check edit state permission.
+		if ($item_id)
+		{
+			// Existing item
+			$item->params->set('access-change', $user->authorise('core.edit.state', $asset));
+		}
+		else
+		{
+			// New item.
+			$cat_id = (int) $this->getState('house.catid');
+			if ($cat_id)
+			{
+				$item->params->set('access-change', $user->authorise('core.edit.state', 'com_remca.category.'.$cat_id));
+				$item->catid = $cat_id;
+			}
+			else 
+			{
+				$item->params->set('access-change', $user->authorise('core.edit.state', 'com_remca'));
+			}
+		}
 		
 
 				
@@ -195,10 +230,20 @@ class RemcaModelHouseForm extends RemcaModelHouse
 	 */
 	public function validate($form, $data, $group = null)
 	{
+		$this->setAccessFilters($form, $data);
 
 		return parent::validate($form, $data, $group);
 	}
 
+	protected function setAccessFilters(&$form, $data)
+	{
+		$user = JFactory::getUser();
+
+		if (!$user->authorise('core.edit.state', 'com_remca'))
+		{
+			$form->setFieldAttribute('state', 'filter', 'unset');
+		}
+	}
 
 	/**
 	 * Method to get the data that should be injected in the form.
@@ -254,6 +299,17 @@ class RemcaModelHouseForm extends RemcaModelHouse
 			$table->load($pk);
 			$is_new = false;
 		}
+		else
+		{
+			// Save the default (empty) rules for the component
+			$actions = JAccess::getActions('com_remca');
+			$action_array = array();
+			foreach ($actions as $action)
+			{
+				$action_array[$action->name] = array(); 
+			}
+			$data['rules'] = $action_array;
+		}
 		
 		// Bind the data.
 		if (!$table->bind($data))
@@ -278,7 +334,7 @@ class RemcaModelHouseForm extends RemcaModelHouse
 			$table->reorder($conditions);
 		}
 
-		// Include the realestatemanager plugins for the onSave events.
+		// Include the realestatemanagerca plugins for the onSave events.
 		JPluginHelper::importPlugin('remca');
 
 		$result = $dispatcher->trigger('onHouseBeforeSave', array('com_remca.house', &$table, $is_new));
@@ -391,6 +447,7 @@ class RemcaModelHouseForm extends RemcaModelHouse
 		
 		$condition = array();
 		$condition[] = $db->quoteName('catid').' = '.(int) $table->catid;	
+		$condition[] = $db->quoteName('price').' = '. $db->quote($table->price);	
 		$condition[] = $db->quoteName('state').' >= 0';
 		return $condition;
 	}	

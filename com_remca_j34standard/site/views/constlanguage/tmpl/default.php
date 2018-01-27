@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -155,9 +155,9 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-fk_constid">
 							<?php 
 								if ($params->get('list_link_constlanguage_fk_constid')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getConstRoute($item->fk_constid, 0)).'">'.JString::trim($item->c1_const_id).'</a>';
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getConstRoute($item->fk_constid, 0)).'">'.JString::trim($item->c1_const_name).'</a>';
 								else :
-									echo JString::trim($item->c1_const_id);
+									echo JString::trim($item->c1_const_name);
 								endif; 
 							?>
 						</td>
@@ -166,9 +166,9 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-fk_languagesid">
 							<?php 
 								if ($params->get('list_link_constlanguage_fk_languagesid')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getLanguageRoute($item->fk_languagesid, 0)).'">'.JString::trim($item->l_language_id).'</a>';
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getLanguageRoute($item->fk_languagesid, 0)).'">'.JString::trim($item->l_language_name).'</a>';
 								else :
-									echo JString::trim($item->l_language_id);
+									echo JString::trim($item->l_language_name);
 								endif; 
 							?>
 						</td>

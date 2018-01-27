@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -55,6 +55,8 @@ class RemcaModelHouses extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
+				'name', 'a.name',
+				'price', 'a.price',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				'catid', 'a.catid', 'category_title', 'category_id',
@@ -111,6 +113,8 @@ class RemcaModelHouses extends JModelList
 		// Load the filter state.
 		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
 		$this->setState('filter.search', $search);
+		$price = $app->getUserStateFromRequest($this->context.'.filter.price', 'filter_price', 0, 'int');
+		$this->setState('filter.price', $price);
 		$category_id = $app->getUserStateFromRequest($this->context.'.filter.category_id', 'filter_category_id');
 		$this->setState('filter.category_id', $category_id);		
 		
@@ -157,6 +161,7 @@ class RemcaModelHouses extends JModelList
 		$id	.= ':'.$this->getState('filter.category_id');
 		$id	.= ':'.$this->getState('filter.state');
 		$id	.= ':'.$this->getState('filter.language');
+		$id	.= ':'.$this->getState('filter.price');	
 		return parent::getStoreId($id);
 	}	
 	/**
@@ -200,6 +205,13 @@ class RemcaModelHouses extends JModelList
 			{
 				$query->where($db->quoteName('a.id').' = '.(int) JString::substr($search, 3));
 			}
+			else
+			{
+                            $search = $db->quote('%'.$db->escape(JString::trim($search), true).'%', false);
+                            $query->where('( '.
+                            "{$db->quoteName('a.name')} LIKE {$search} "
+                            .' )');
+			}
 		}
 		// Filter on the language.
 		if ($language = $this->getState('filter.language'))
@@ -238,7 +250,7 @@ class RemcaModelHouses extends JModelList
 		
 
 		// Filter by and return name for fk_rentid level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
-		$query->select($db->quoteName('r.id').' AS r_rent_id');
+		$query->select($db->quoteName('r.name').' AS r_rent_name');
 		$query->select($db->quoteName('r.id').' AS r_rent_id');
 
 		$query->join('LEFT', $db->quoteName('#__rem_rent').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.fk_rentid'));	
@@ -248,6 +260,11 @@ class RemcaModelHouses extends JModelList
 
 		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.owner_id'));	
 		
+		if ($price = $this->getState('filter.price'))
+		{
+			$price = $db->escape(JString::strtolower($price), true);			
+			$query->where('LOWER('.$db->quoteName('a.price').') = ' . $db->quote($price));
+		}
 				
 		// Filter by a single or group of categories.
 		$baselevel = 1;

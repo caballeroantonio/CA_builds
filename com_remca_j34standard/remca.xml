@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- @version 			$Id:$ -->
-<!-- @name			    RealEstateManager -->
+<!-- @name			    RealEstateManagerCA -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
 <!-- @package			com_remca -->
 <!-- @subpackage		com_remca.admin -->
@@ -64,52 +64,52 @@
 				XML and be parsed by the installer
 			-->
         <menu img="../media/com_remca/images/remca.png"
-              alt="RealEstateManager">COM_REMCA</menu>
+              alt="RealEstateManagerCA">COM_REMCA</menu>
         <submenu>
             <menu link="option=com_remca&amp;view=houses" alias="houses" img="../media/com_remca/images/remca-houses.png"
-                    alt="RealEstateManager/Houses">COM_REMCA_HOUSES</menu>
+                    alt="RealEstateManagerCA/Houses">COM_REMCA_HOUSES</menu>
             <menu link="option=com_remca&amp;view=main_categories" alias="main_categories" img="../media/com_remca/images/remca-main_categories.png"
-                    alt="RealEstateManager/Main_categories">COM_REMCA_MAIN_CATEGORIES</menu>
+                    alt="RealEstateManagerCA/Main_categories">COM_REMCA_MAIN_CATEGORIES</menu>
             <menu link="option=com_remca&amp;view=mime_types" alias="mime_types" img="../media/com_remca/images/remca-mime_types.png"
-                    alt="RealEstateManager/Mime_types">COM_REMCA_MIME_TYPES</menu>
+                    alt="RealEstateManagerCA/Mime_types">COM_REMCA_MIME_TYPES</menu>
             <menu link="option=com_remca&amp;view=mls_for_delete" alias="mls_for_delete" img="../media/com_remca/images/remca-mls_for_delete.png"
-                    alt="RealEstateManager/Mls_for_delete">COM_REMCA_MLS_FOR_DELETE</menu>
+                    alt="RealEstateManagerCA/Mls_for_delete">COM_REMCA_MLS_FOR_DELETE</menu>
             <menu link="option=com_remca&amp;view=orders" alias="orders" img="../media/com_remca/images/remca-orders.png"
-                    alt="RealEstateManager/Orders">COM_REMCA_ORDERS</menu>
+                    alt="RealEstateManagerCA/Orders">COM_REMCA_ORDERS</menu>
             <menu link="option=com_remca&amp;view=orders_details" alias="orders_details" img="../media/com_remca/images/remca-orders_details.png"
-                    alt="RealEstateManager/Orders_details">COM_REMCA_ORDERS_DETAILS</menu>
+                    alt="RealEstateManagerCA/Orders_details">COM_REMCA_ORDERS_DETAILS</menu>
             <menu link="option=com_remca&amp;view=photos" alias="photos" img="../media/com_remca/images/remca-photos.png"
-                    alt="RealEstateManager/Photos">COM_REMCA_PHOTOS</menu>
+                    alt="RealEstateManagerCA/Photos">COM_REMCA_PHOTOS</menu>
             <menu link="option=com_remca&amp;view=rent" alias="rent" img="../media/com_remca/images/remca-rent.png"
-                    alt="RealEstateManager/Rent">COM_REMCA_RENT</menu>
+                    alt="RealEstateManagerCA/Rent">COM_REMCA_RENT</menu>
             <menu link="option=com_remca&amp;view=rent_request" alias="rent_request" img="../media/com_remca/images/remca-rent_request.png"
-                    alt="RealEstateManager/Rent_request">COM_REMCA_RENT_REQUEST</menu>
+                    alt="RealEstateManagerCA/Rent_request">COM_REMCA_RENT_REQUEST</menu>
             <menu link="option=com_remca&amp;view=rent_sal" alias="rent_sal" img="../media/com_remca/images/remca-rent_sal.png"
-                    alt="RealEstateManager/Rent_sal">COM_REMCA_RENT_SAL</menu>
+                    alt="RealEstateManagerCA/Rent_sal">COM_REMCA_RENT_SAL</menu>
             <menu link="option=com_remca&amp;view=review" alias="review" img="../media/com_remca/images/remca-review.png"
-                    alt="RealEstateManager/Review">COM_REMCA_REVIEW</menu>
+                    alt="RealEstateManagerCA/Review">COM_REMCA_REVIEW</menu>
             <menu link="option=com_remca&amp;view=track_source" alias="track_source" img="../media/com_remca/images/remca-track_source.png"
-                    alt="RealEstateManager/Track_source">COM_REMCA_TRACK_SOURCE</menu>
+                    alt="RealEstateManagerCA/Track_source">COM_REMCA_TRACK_SOURCE</menu>
             <menu link="option=com_remca&amp;view=users_wishlist" alias="users_wishlist" img="../media/com_remca/images/remca-users_wishlist.png"
-                    alt="RealEstateManager/Users_wishlist">COM_REMCA_USERS_WISHLIST</menu>
+                    alt="RealEstateManagerCA/Users_wishlist">COM_REMCA_USERS_WISHLIST</menu>
             <menu link="option=com_remca&amp;view=video_source" alias="video_source" img="../media/com_remca/images/remca-video_source.png"
-                    alt="RealEstateManager/Video_source">COM_REMCA_VIDEO_SOURCE</menu>
+                    alt="RealEstateManagerCA/Video_source">COM_REMCA_VIDEO_SOURCE</menu>
             <menu link="option=com_remca&amp;view=buying_request" alias="buying_request" img="../media/com_remca/images/remca-buying_request.png"
-                    alt="RealEstateManager/Buying_request">COM_REMCA_BUYING_REQUEST</menu>
+                    alt="RealEstateManagerCA/Buying_request">COM_REMCA_BUYING_REQUEST</menu>
             <menu link="option=com_remca&amp;view=categories" alias="categories" img="../media/com_remca/images/remca-categories.png"
-                    alt="RealEstateManager/Categories">COM_REMCA_CATEGORIES</menu>
+                    alt="RealEstateManagerCA/Categories">COM_REMCA_CATEGORIES</menu>
             <menu link="option=com_remca&amp;view=const" alias="const" img="../media/com_remca/images/remca-const.png"
-                    alt="RealEstateManager/Const">COM_REMCA_CONST</menu>
+                    alt="RealEstateManagerCA/Const">COM_REMCA_CONST</menu>
             <menu link="option=com_remca&amp;view=const_language" alias="const_language" img="../media/com_remca/images/remca-const_language.png"
-                    alt="RealEstateManager/Const_language">COM_REMCA_CONST_LANGUAGE</menu>
+                    alt="RealEstateManagerCA/Const_language">COM_REMCA_CONST_LANGUAGE</menu>
             <menu link="option=com_remca&amp;view=feature" alias="feature" img="../media/com_remca/images/remca-feature.png"
-                    alt="RealEstateManager/Feature">COM_REMCA_FEATURE</menu>
+                    alt="RealEstateManagerCA/Feature">COM_REMCA_FEATURE</menu>
             <menu link="option=com_remca&amp;view=feature_houses" alias="feature_houses" img="../media/com_remca/images/remca-feature_houses.png"
-                    alt="RealEstateManager/Feature_houses">COM_REMCA_FEATURE_HOUSES</menu>
+                    alt="RealEstateManagerCA/Feature_houses">COM_REMCA_FEATURE_HOUSES</menu>
             <menu link="option=com_remca&amp;view=languages" alias="languages" img="../media/com_remca/images/remca-languages.png"
-                    alt="RealEstateManager/Languages">COM_REMCA_LANGUAGES</menu>
+                    alt="RealEstateManagerCA/Languages">COM_REMCA_LANGUAGES</menu>
             <menu link="option=com_categories&amp;extension=com_remca" view="categories" img="../media/com_remca/images/remca-categories.png"
-                    alt="RealEstateManager/Categories">COM_REMCA_CATEGORIES</menu>
+                    alt="RealEstateManagerCA/Categories">COM_REMCA_CATEGORIES</menu>
         </submenu>
 
         <files folder="admin">

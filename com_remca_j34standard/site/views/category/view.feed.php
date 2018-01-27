@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML View class for the RealEstateManager component
+ * HTML View class for the RealEstateManagerCA component
  *
  */
 class RemcaViewCategory extends JViewLegacy
@@ -59,7 +59,7 @@ class RemcaViewCategory extends JViewLegacy
 		foreach ($rows as $row)
 		{
 			// strip html from feed item title
-			$title = $this->escape($row->id);
+			$title = $this->escape($row->name);
 			
 			$title = html_entity_decode($title, ENT_COMPAT, 'UTF-8');
 

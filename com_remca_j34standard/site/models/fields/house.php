@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -60,7 +60,7 @@ class JFormFieldHouse extends JFormFieldList
 
 		$query->select($db->quoteName('id').' AS value, '.$db->quoteName('name').' AS text');
 		$query->from($db->quoteName('#__rem_houses').' AS a');
-		$query->order('a.ordering');
+		$query->order($db->quoteName('a.name'));
 		
 		// Get the options.
 		$db->setQuery($query);

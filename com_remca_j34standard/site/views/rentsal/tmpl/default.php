@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -155,9 +155,9 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-fk_houseid">
 							<?php 
 								if ($params->get('list_link_rentsal_fk_houseid')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->fk_houseid, 0)).'">'.JString::trim($item->h_house_id).'</a>';
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->fk_houseid, 0)).'">'.JString::trim($item->h_house_name).'</a>';
 								else :
-									echo JString::trim($item->h_house_id);
+									echo JString::trim($item->h_house_name);
 								endif; 
 							?>
 						</td>

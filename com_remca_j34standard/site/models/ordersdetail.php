@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * RealEstateManager Component Orders_detail Model
+ * RealEstateManagerCA Component Orders_detail Model
  *
  */
 class RemcaModelOrdersDetail extends JModelItem
@@ -175,7 +175,7 @@ class RemcaModelOrdersDetail extends JModelItem
 				$query->select($db->quoteName('u.name').' AS u_user_name');
 				$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.fk_user_id'));	
 				// Filter by and return name for fk_house_id level.
-				$query->select($db->quoteName('h.id').' AS h_house_id');
+				$query->select($db->quoteName('h.name').' AS h_house_name');
 				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_house_id'));	
 																				
 				$db->setQuery($query);

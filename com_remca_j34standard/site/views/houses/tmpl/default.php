@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -60,6 +60,7 @@ $list_dirn	= $this->state->get('list.direction');
 
 $layout		= $this->params->get('house_layout', 'default');
 
+$can_create	= $user->authorise('core.create', 'com_remca');
 // Get from global settings the text to use for an empty field
 $component = JComponentHelper::getComponent( 'com_remca' );
 $empty = $component->params->get('default_empty_field', '');
@@ -99,6 +100,12 @@ $empty = $component->params->get('default_empty_field', '');
 					<option value=""><?php echo JText::_('JOPTION_SELECT_CATEGORY');?></option>
 					<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_remca'), 'value', 'text', $this->state->get('filter.category_id'));?>
 				</select>
+				<?php if ($this->params->get('list_show_house_price',0)) : ?>
+					<select name="filter_price" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_PRICE');?></option>
+					<?php echo JHtml::_('select.options', $this->price_values, 'value', 'text', $this->state->get('filter.price'));?>
+					</select>
+				<?php endif; ?>	
 			</div>
 		<?php endif; ?>
 
@@ -122,6 +129,9 @@ $empty = $component->params->get('default_empty_field', '');
 				<tr>
 					<th width="1%" style="display:none;">
 					</th>				
+					<th class="list-name" id="tableOrderingname">
+					<?php  echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_NAME', 'a.name', $list_dirn, $list_order) ; ?>
+					</th>
 					<?php if ($date = $this->params->get('list_show_house_date')) : ?>
 						<th class="list-date" id="tableOrderingdate">
 							<?php echo JHtml::_('grid.sort', 'COM_REMCA_FIELD_'.JString::strtoupper($date).'_LABEL', 'a.'.$date, $list_dirn, $list_order); ?>
@@ -133,14 +143,21 @@ $empty = $component->params->get('default_empty_field', '');
 						<?php echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_HITS', 'a.hits', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_house_price',0)) : ?>
+						<th class="list-price" id="tableOrderingprice">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>
+						</th>
+					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_ordering',0)) : ?>
 						<th width="10%">
 							<?php echo JHtml::_('grid.sort',  'COM_REMCA_HEADING_ORDERING', 'a.ordering', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>	
+					<?php if ($show_actions) : ?>
 						<th width="12%" class="list-actions">
 							<?php echo JText::_('COM_REMCA_HEADING_ACTIONS'); ?>						
 						</th> 					
+					<?php endif; ?>
 				</tr>
 			</thead>
 			<?php endif; ?>
@@ -149,6 +166,10 @@ $empty = $component->params->get('default_empty_field', '');
 
 				<?php foreach ($this->items as $i => $item) :
 				
+					$can_edit	= $item->params->get('access-edit');
+			
+					$can_delete	= $item->params->get('access-delete');
+
 							
 				?>			
 					<?php $params = $item->params; ?>		
@@ -161,6 +182,16 @@ $empty = $component->params->get('default_empty_field', '');
 					<td class="center" style="display:none;">
 						<?php echo JHtml::_('grid.id', $i, $item->id); ?>
 					</td>				
+					<td class="list-name">
+						<a href="<?php echo JRoute::_(RemcaHelperRoute::getHouseRoute($item->slug, 
+																									$item->catid, 
+																									$item->language,
+																									$layout,									
+																									$params->get('keep_house_itemid'))); ?>" 
+																									>
+								<?php echo $this->escape($item->name); ?>
+						</a>
+					</td>
 
 					<?php if ($this->params->get('list_show_house_date')) : ?>
 						<td class="list-date">
@@ -203,9 +234,9 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-fk_rentid">
 							<?php 
 								if ($params->get('list_link_house_fk_rentid')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getRentRoute($item->fk_rentid, 0, $item->language)).'">'.JString::trim($item->r_rent_id).'</a>';
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getRentRoute($item->fk_rentid, 0, $item->language)).'">'.JString::trim($item->r_rent_name).'</a>';
 								else :
-									echo JString::trim($item->r_rent_id);
+									echo JString::trim($item->r_rent_name);
 								endif; 
 							?>
 						</td>
@@ -242,13 +273,6 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-priceunit">
 							<?php 
 								echo $item->priceunit != '' ? $item->priceunit : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_htitle',0)) : ?>
-						<td class="list-htitle">
-							<?php 
-								echo $item->htitle != '' ? $item->htitle : $empty;
 							?>
 						</td>
 					<?php endif; ?>
@@ -563,16 +587,24 @@ $empty = $component->params->get('default_empty_field', '');
 						</td>
 					<?php endif; ?>
 					
+					<?php if ($show_actions) : ?>
 						<td class="list-actions">
+							<?php if ($can_edit OR $can_delete ) : ?>
 								<ul class="actions">
+									<?php if ($can_edit ) : ?>
 										<li class="edit-icon">
 											<?php echo JHtml::_('houseicon.edit',$item, $params); ?>
 										</li>
+									<?php endif; ?>					
+									<?php if ($can_delete) : ?>
 										<li class="delete-icon">
 											<?php echo JHtml::_('houseicon.delete',$item, $params); ?>
 										</li>
+									<?php endif; ?>					
 								</ul>
+							<?php endif; ?>
 						</td>															
+					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
@@ -602,7 +634,9 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php endif; ?>
 		<?php // Code to add a link to submit an house. ?>
 		<?php if ($this->params->get('show_house_add_link', 1)) : ?>
-			<?php echo JHtml::_('houseicon.create', $this->params); ?>
+			<?php if ($can_create) : ?>
+				<?php echo JHtml::_('houseicon.create', $this->params); ?>
+			<?php  endif; ?>
 		<?php endif; ?>		
                 <?php echo '<button>export</button>'//JHtml::_('houseicon.create', $this->params); ?>
 	</form>

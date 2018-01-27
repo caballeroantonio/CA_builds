@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Language View class for the RealEstateManager component
+ * HTML Language View class for the RealEstateManagerCA component
  *
  */
 class RemcaViewLanguage extends JViewLegacy
@@ -151,6 +151,8 @@ class RemcaViewLanguage extends JViewLegacy
 		$results = $dispatcher->trigger('onLanguagePrepare', array ('com_remca.language', &$item, &$this->params, $offset));
 
 		$item->event = new stdClass;
+		$results = $dispatcher->trigger('onLanguageAfterName', array('com_remca.language', &$item, &$this->params, $offset));
+		$item->event->afterDisplayLanguageName = JString::trim(implode("\n", $results));
 		
 		$results = $dispatcher->trigger('onLanguageBeforeDisplay', array('com_remca.language', &$item, &$this->params, $offset));
 		$item->event->beforeDisplayLanguage = JString::trim(implode("\n", $results));
@@ -187,7 +189,7 @@ class RemcaViewLanguage extends JViewLegacy
 		}
 		else
 		{
-			$this->params->def('page_heading', JText::sprintf('COM_REMCA_LANGUAGE_ID_TITLE', $this->item->id));
+			$this->params->def('page_heading', $this->item->name);
 		}
 
 		$title = $this->params->get('page_title', '');
@@ -197,7 +199,12 @@ class RemcaViewLanguage extends JViewLegacy
 		// if the menu item does not concern this language
 		if ($menu AND ($menu->query['option'] != 'com_remca' OR $menu->query['view'] != 'language' OR $id != $this->item->id))
 		{
-			$path = array(array('title' => $this->item->id, 'link' => ''));
+			// If this is not a single language menu item, set the page title to the language name
+			if ($this->item->name)
+			{
+				$title = $this->item->name;
+			}
+			$path = array(array('title' => $this->item->name, 'link' => ''));
 			$path = array_reverse($path);
 			foreach($path as $item)
 			{
@@ -213,6 +220,10 @@ class RemcaViewLanguage extends JViewLegacy
 		elseif ($app->get('sitename_pagetitles', 0))
 		{
 			$title = JText::sprintf('JPAGETITLE', htmlspecialchars_decode($app->get('sitename')), $title);
+		}
+		if (empty($title))
+		{
+			$title = $this->item->name;
 		}
 		$this->document->setTitle($title);
 
@@ -234,6 +245,7 @@ class RemcaViewLanguage extends JViewLegacy
 		// If there is a pagebreak heading or title, add it to the page title
 		if (!empty($this->item->page_title))
 		{
+			$this->item->name = $this->item->name . ' - ' . $this->item->page_title;
 			$this->document->setTitle($this->item->page_title . ' - ' . JText::sprintf('COM_REMCA_PAGEBREAK_PAGE_NUM', $this->state->get('list.offset') + 1));
 		}
 

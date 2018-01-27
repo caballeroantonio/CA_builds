@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -211,28 +211,6 @@ function getFields(){
 
     */
     $fields['priceunit'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'htitle',
-        'FIELD_CODE_NAME' => 'htitle',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=HTITLE
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(200) NOT NULL DEFAULT '' htitle
-
-                FIELD_NAME_LATEX=htitle
-                FIELD_CODE_NAME_LATEX=htitle
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['htitle'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'hcountry',

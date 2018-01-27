@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -183,12 +183,12 @@ class RemcaModelConstLanguage extends JModelList
 		
 
 		// Filter by and return name for fk_constid level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
-		$query->select($db->quoteName('c1.id').' AS c1_const_id');
+		$query->select($db->quoteName('c1.name').' AS c1_const_name');
 		$query->select($db->quoteName('c1.id').' AS c1_const_id');
 
 		$query->join('LEFT', $db->quoteName('#__rem_const').' AS c1 ON '.$db->quoteName('c1.id').' = '.$db->quoteName('a.fk_constid'));	
 		// Filter by and return name for fk_languagesid level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
-		$query->select($db->quoteName('l.id').' AS l_language_id');
+		$query->select($db->quoteName('l.name').' AS l_language_name');
 		$query->select($db->quoteName('l.id').' AS l_language_id');
 
 		$query->join('LEFT', $db->quoteName('#__rem_languages').' AS l ON '.$db->quoteName('l.id').' = '.$db->quoteName('a.fk_languagesid'));	

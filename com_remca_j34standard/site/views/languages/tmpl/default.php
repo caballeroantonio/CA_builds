@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -118,6 +118,9 @@ $empty = $component->params->get('default_empty_field', '');
 				<tr>
 					<th width="1%" style="display:none;">
 					</th>				
+					<th class="list-name" id="tableOrderingname">
+					<?php  echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_NAME', 'a.name', $list_dirn, $list_order) ; ?>
+					</th>
 					<?php if ($date = $this->params->get('list_show_language_date')) : ?>
 						<th class="list-date" id="tableOrderingdate">
 							<?php echo JHtml::_('grid.sort', 'COM_REMCA_FIELD_'.JString::strtoupper($date).'_LABEL', 'a.'.$date, $list_dirn, $list_order); ?>
@@ -143,6 +146,14 @@ $empty = $component->params->get('default_empty_field', '');
 					<td class="center" style="display:none;">
 						<?php echo JHtml::_('grid.id', $i, $item->id); ?>
 					</td>				
+					<td class="list-name">
+						<a href="<?php echo JRoute::_(RemcaHelperRoute::getLanguageRoute($item->slug, 
+																									$layout,									
+																									$params->get('keep_language_itemid'))); ?>" 
+																									>
+								<?php echo $this->escape($item->name); ?>
+						</a>
+					</td>
 
 					<?php if ($this->params->get('list_show_language_date')) : ?>
 						<td class="list-date">

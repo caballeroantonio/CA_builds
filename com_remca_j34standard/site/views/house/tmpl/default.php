@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -52,6 +52,8 @@ if ($lang->isRTL())
 $params		= &$this->item->params;
 $user		= JFactory::getUser();
 
+$can_edit	= $params->get('access-edit');
+$can_delete	= $params->get('access-delete');
 // Get from global settings the text to use for an empty field
 $component = JComponentHelper::getComponent( 'com_remca' );
 $empty = $component->params->get('default_empty_field', '');
@@ -72,6 +74,8 @@ $empty = $component->params->get('default_empty_field', '');
 	<?php if ($params->get('show_house_icons',-1) >= 0) : ?>
 		<?php if ($params->get('show_house_print_icon') 
 			OR $params->get('show_house_email_icon') 
+			OR $can_edit 
+			OR $can_delete 
 			): ?>
 			<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
@@ -88,12 +92,16 @@ $empty = $component->params->get('default_empty_field', '');
 										<?php echo JHtml::_('houseicon.email',  $this->item, $params); ?>
 								</li>
 							<?php endif; ?>
+							<?php if ($can_edit) : ?>
 								<li class="edit-icon">
 									<?php echo JHtml::_('houseicon.edit', $this->item, $params); ?>
 								</li>
+							<?php endif; ?>
+							<?php if ($can_delete) : ?>
 								<li class="delete-icon">
 									<?php echo JHtml::_('houseicon.delete',$this->item, $params); ?>
 								</li>					
+							<?php endif; ?>
 					<?php else : ?>
 						<li>
 							<?php echo JHtml::_('houseicon.print_screen',  $this->item, $params); ?>
@@ -104,6 +112,19 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php endif; ?>
 	<?php endif; ?>
 
+	<?php if ($params->get('show_house_name')) : ?>
+		<div style="float: left;">
+			<h2>
+				<?php if ($params->get('link_house_names') AND !empty($this->item->readmore_link)) : ?>
+					<a href="<?php echo $this->item->readmore_link; ?>">
+					<?php echo $this->escape($this->item->name); ?></a>
+				<?php else : ?>
+					<?php echo $this->escape($this->item->name); ?>
+				<?php endif; ?>
+			</h2>
+		</div>
+	<?php endif; ?>
+	<?php  echo $this->item->event->afterDisplayHouseName;	?>
 	
 	<?php echo $this->item->event->beforeDisplayHouse; ?>
 	<?php if ($params->get('show_house_hits') != '0') : ?>		
@@ -132,7 +153,6 @@ $empty = $component->params->get('default_empty_field', '');
 								($params->get('show_house_listing_type')) OR 
 								($params->get('show_house_price')) OR 
 								($params->get('show_house_priceunit')) OR 
-								($params->get('show_house_htitle')) OR 
 								($params->get('show_house_hcountry')) OR 
 								($params->get('show_house_hregion')) OR 
 								($params->get('show_house_hcity')) OR 
@@ -215,7 +235,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo JString::trim($this->item->r_rent_id);
+									echo JString::trim($this->item->r_rent_name);
 								?>
 							</span>
 						</div>	
@@ -276,18 +296,6 @@ $empty = $component->params->get('default_empty_field', '');
 							<span>
 								<?php
 									echo $this->item->priceunit != '' ? $this->item->priceunit : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_house_htitle')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_HTITLE_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->htitle != '' ? $this->item->htitle : $empty;
 								?>
 							</span>
 						</div>	
@@ -858,6 +866,7 @@ $empty = $component->params->get('default_empty_field', '');
 					</span>
 				</div>								
 			<?php endif; ?>						
+			<?php if ($params->get('access-change')): ?>
 				<?php if ($params->get('show_house_admin')) : ?>
 				
 					<div class="formelm">
@@ -893,6 +902,7 @@ $empty = $component->params->get('default_empty_field', '');
 					</div>	
 				<?php endif; ?>
 				
+			<?php endif; ?>
 			
 			<?php if ($display_fieldset) : ?>				
 					</fieldset>	

@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -197,7 +197,7 @@ class RemcaModelOrdersDetails extends JModelList
 
 		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.fk_user_id'));	
 		// Filter by and return name for fk_house_id level.
-		$query->select($db->quoteName('h.id').' AS h_house_id');
+		$query->select($db->quoteName('h.name').' AS h_house_name');
 		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
 
 		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_house_id'));	

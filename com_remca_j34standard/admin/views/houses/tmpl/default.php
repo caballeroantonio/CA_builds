@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -65,6 +65,7 @@ $search		= $this->state->get('filter.search','');
 // Get from global settings the text to use for an empty field
 $component = JComponentHelper::getComponent( 'com_remca' );
 $empty = $component->params->get('default_empty_field', '');
+$can_order	= $user->authorise('core.edit.state', 'com_remca');
 
 $save_order	= ($list_order=='ordering' OR $list_order=='a.ordering');
 
@@ -96,7 +97,7 @@ $assoc	= JLanguageAssociations::isEnabled();
                         'view' => $this,
                         'options' => array(
                             'searchButton' => 
-                            FALSE
+                            TRUE
                         ),
                     )
                 );
@@ -120,6 +121,12 @@ $assoc	= JLanguageAssociations::isEnabled();
 					<th width="1%" style="min-width:55px" class="nowrap center">
 						<?php echo JHtml::_('searchtools.sort', 'JSTATUS', 'a.state', $list_dirn, $list_order); ?>
 					</th>
+					<th>
+						<?php echo JHtml::_('searchtools.sort',  'COM_REMCA_HEADING_NAME', 'a.name', $list_dirn, $list_order); ?>
+					</th>
+					<th width="10%" class="nowrap center hidden-phone">
+						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>						
+					</th>	
 					<th width="10%" class="center hidden-phone">
 						<?php echo JHtml::_('searchtools.sort', 'JCATEGORY', 'category_title', $list_dirn, $list_order); ?>
 					</th>
@@ -145,7 +152,14 @@ $assoc	= JLanguageAssociations::isEnabled();
 				$item->max_ordering = 0; //??
 				$ordering	= ($list_order=='ordering' OR $list_order=='a.ordering');
 				$can_change = true;
-					$can_checkin	= $item->checked_out == $user_id OR $item->checked_out == 0;
+					$can_checkin	= $user->authorise('core.manage',		'com_checkin') OR $item->checked_out == $user_id OR $item->checked_out == 0;
+				$can_edit	= $user->authorise('core.edit',	'com_remca.house.'.$item->id);
+		
+				$can_edit_own	= $user->authorise('core.edit.own',		'com_remca.house.'.$item->id) 
+								;
+				$can_change	= $user->authorise('core.edit.state',	'com_remca.house.'.$item->id) 
+								AND $can_checkin
+								;
 				if ($item->language == '*'):
 					$language = JText::alt('JALL', 'language');
 				else:
@@ -192,9 +206,27 @@ $assoc	= JLanguageAssociations::isEnabled();
 								endif;
 
 								// Render dropdown list
-								echo JHtml::_('actionsdropdown.render');
+								echo JHtml::_('actionsdropdown.render', $this->escape($item->name));
 							?>
 						</div>
+					</td>	
+					<td class="nowrap has-context">
+						<div class="pull-left break-word">
+							<?php if ($item->checked_out) : ?>
+								<?php echo JHtml::_('jgrid.checkedout', $i, $item->editor, $item->checked_out_time, 'houses.', $can_checkin); ?>
+							<?php endif; ?>	
+							<?php if ($can_edit OR $can_edit_own) : ?>
+								<a class="hasTooltip" href="<?php echo JRoute::_('index.php?option=com_remca&task=house.edit&id='.(int) $item->id); ?>">
+								<?php echo $this->escape($item->name); ?></a>
+							<?php else : ?>
+								<?php echo $this->escape($item->name); ?>
+							<?php endif; ?>
+						</div>
+					</td>
+					<td class="nowrap small center hidden-phone">
+						<?php 
+							echo $item->price != '' ? $item->price : $empty; 
+						?>				
 					</td>	
 					<td class="nowrap small center hidden-phone">
 						<?php echo $this->escape($item->category_title); ?>

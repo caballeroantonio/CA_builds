@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- @version 			$Id:$ -->
-<!-- @name			    RealEstateManager -->
+<!-- @name			    RealEstateManagerCA -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
 <!-- @package			com_remca -->
 <!-- @subpackage		com_remca.admin -->
@@ -43,5 +43,10 @@
         <action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_CATEGORY_ACCESS_EDITSTATE_DESC" />
         <action name="core.edit.own" title="JACTION_EDITOWN" description="COM_CATEGORY_ACCESS_EDITOWN_DESC" />
         <action name="core.delete" title="JACTION_DELETE" description="COM_CATEGORY_ACCESS_DELETE_DESC" />
+    </section>
+    <section name="house">
+        <action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+        <action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+        <action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
     </section>
 </access>

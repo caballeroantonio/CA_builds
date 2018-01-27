@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- @version 			$Id:$ -->
-<!-- @name			    RealEstateManager -->
+<!-- @name			    RealEstateManagerCA -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
 <!-- @package			com_remca -->
 <!-- @subpackage		com_remca.admin -->
@@ -32,6 +32,20 @@
 			label="COM_REMCA_HOUSES_FILTER_SEARCH_DESC"
 			hint="JSEARCH_FILTER"
 		/>
+        <field
+			name="price"
+			type="sql"
+			label="COM_REMCA_FILTER_PRICE_LABEL"
+			description="COM_REMCA_FILTER_PRICE_DESC"
+			onchange="this.form.submit();"
+			query="SELECT DISTINCT `a`.`PRICE` AS `value`, `a`.`PRICE` AS `text`
+		            FROM `#__rem_houses` AS `a` 
+		            ORDER BY `a`.`PRICE`"
+			key_field="value"
+			value_field="text"
+		>
+            <option value="">COM_REMCA_HOUSES_SELECT_PRICE</option>
+        </field>
         <field
 			name="state"
 			type="status"
@@ -73,6 +87,10 @@
 			<option value="">JGLOBAL_SORT_BY</option>
 			<option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
 			<option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+            <option value="a.name ASC">COM_REMCA_FIELD_NAME_SORT_ASC_LABEL</option>
+            <option value="a.name DESC">COM_REMCA_FIELD_NAME_SORT_DESC_LABEL</option>
+            <option value="a.price ASC">COM_REMCA_HOUSES_FIELD_PRICE_SORT_ASC_LABEL</option>
+            <option value="a.price DESC">COM_REMCA_HOUSES_FIELD_PRICE_SORT_DESC_LABEL</option>
 			<option value="a.state ASC">JSTATUS_ASC</option>
 			<option value="a.state DESC">JSTATUS_DESC</option>
 			<option value="category_title ASC">JCATEGORY_ASC</option>

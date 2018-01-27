@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Orders_detail View class for the RealEstateManager component
+ * HTML Orders_detail View class for the RealEstateManagerCA component
  *
  */
 class RemcaViewOrdersDetail extends JViewLegacy

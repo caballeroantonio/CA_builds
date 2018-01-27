@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -84,6 +84,8 @@ class RemcaViewConst extends JViewLegacy
 
 			$item->event = new stdClass;
 
+			$results = $dispatcher->trigger('onConstAfterName', array('com_remca.const', &$item, &$item->params, $i));
+			$item->event->afterDisplayConstName = JString::trim(implode("\n", $results));
 
 			$results = $dispatcher->trigger('onConstBeforeDisplay', array('com_remca.const', &$item, &$item->params, $i));
 			$item->event->beforeDisplayConst = JString::trim(implode("\n", $results));

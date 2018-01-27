@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -84,6 +84,8 @@ class RemcaViewRent extends JViewLegacy
 
 			$item->event = new stdClass;
 
+			$results = $dispatcher->trigger('onRentAfterName', array('com_remca.rent', &$item, &$item->params, $i));
+			$item->event->afterDisplayRentName = JString::trim(implode("\n", $results));
 
 			$results = $dispatcher->trigger('onRentBeforeDisplay', array('com_remca.rent', &$item, &$item->params, $i));
 			$item->event->beforeDisplayRent = JString::trim(implode("\n", $results));

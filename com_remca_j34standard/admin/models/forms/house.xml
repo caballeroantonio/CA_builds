@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- @version 			$Id:$ -->
-<!-- @name			    RealEstateManager -->
+<!-- @name			    RealEstateManagerCA -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
 <!-- @package			com_remca -->
 <!-- @subpackage		com_remca.admin -->
@@ -40,6 +40,19 @@
 			readonly="true"
 			class="readonly"
             default="0"
+		/>
+        <field
+            name="asset_id"
+            type="hidden"
+            filter="unset"
+        />
+        <field
+		    name="name"
+		    type="text"
+			label="COM_REMCA_FIELD_NAME_LABEL"
+			description="COM_REMCA_HOUSES_FIELD_NAME_DESC"
+			size="50"
+			required="true"
 		/>
         <field
             name="version_note"
@@ -96,6 +109,16 @@
             buttons="true"
             hide="article,pagebreak"                
         />
+        <field
+            name="rules"
+            type="rules"
+            label="JFIELD_RULES_LABEL"
+     		translate_label="false"
+			filter="rules"
+			component="com_remca"
+			section="house"
+			validate="rules"
+		/>
         <field
             name="language"
             type="contentlanguage"
@@ -195,16 +218,6 @@
             type="text"
             label="COM_REMCA_HOUSES_FIELD_PRICEUNIT_LABEL"
             description="COM_REMCA_HOUSES_FIELD_PRICEUNIT_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            name="htitle"
-            type="text"
-            label="COM_REMCA_HOUSES_FIELD_HTITLE_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_HTITLE_DESC"
             class="inputbox"
 			size="50"
 			maxlength="255"

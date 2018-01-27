@@ -1,7 +1,7 @@
 #one [%%IF per line
-Titulo=RealEstateManager
+Titulo=RealEstateManagerCA
 Nombre del paquete com_architectcomp=com_remca
-Descripción <ul><br/><li>De momento plural_name va a conservar los nombres del código fuente original</li><br/><li>Cambiar los campos published por JoomlaFeatured.Status (state), ya comprobé que son compatibles.</li><br/><li>Tiene implementado acceso a registros por grupos definidos en jos_rem_main_categories.params que es del tipo text y resulta muy costoso computacionalmente</li><br/><li></li><br/></ul><br/><p>CHANGELOG</p><br/><ul><br/><li>20180123 Se modificó el ENGINE de las tablas para soportar CONSTRAINTS, se agregó la tabla vivanuncios_items que contiene los datos del scraping, se agregó indices a las columnas published para acelerar las búsquedas</li><br/><li>20180125 cambié published por state para generarlo desde joomla_features</li><br/><li>20180125 deshabilite #__rem_houses.approved, considero que no se debería utilizar porque existe published indexado, y approved es costoso.</li><br/></ul> <ul><br/><li>De momento plural_name va a conservar los nombres del código fuente original</li><br/><li>Cambiar los campos published por JoomlaFeatured.Status (state), ya comprobé que son compatibles.</li><br/><li>Tiene implementado acceso a registros por grupos definidos en jos_rem_main_categories.params que es del tipo text y resulta muy costoso computacionalmente</li><br/><li></li><br/></ul><br/><p>CHANGELOG</p><br/><ul><br/><li>20180123 Se modificó el ENGINE de las tablas para soportar CONSTRAINTS, se agregó la tabla vivanuncios_items que contiene los datos del scraping, se agregó indices a las columnas published para acelerar las búsquedas</li><br/><li>20180125 cambié published por state para generarlo desde joomla_features</li><br/><li>20180125 deshabilite #__rem_houses.approved, considero que no se debería utilizar porque existe published indexado, y approved es costoso.</li><br/></ul>
+Descripción <ul><br/><li>De momento plural_name va a conservar los nombres del código fuente original</li><br/><li>Cambiar los campos published por JoomlaFeatured.Status (state), ya comprobé que son compatibles.</li><br/><li>Tiene implementado acceso a registros por grupos definidos en jos_rem_main_categories.params que es del tipo text y resulta muy costoso computacionalmente</li><br/><li></li><br/></ul><br/><p>CHANGELOG</p><br/><ul><br/><li>20180123 Se modificó el ENGINE de las tablas para soportar CONSTRAINTS, se agregó la tabla vivanuncios_items que contiene los datos del scraping, se agregó indices a las columnas published para acelerar las búsquedas</li><br/><li>20180125 cambié published por state para generarlo desde joomla_features</li><br/><li>20180125 deshabilite #__rem_houses.approved, considero que no se debería utilizar porque existe published indexado, y approved es costoso.</li><br/><li>20180129 renombre house.htitle por house.name. Los objetos modales requieren la columna name, la agregué en const, language, rent.</li><br/></ul> <ul><br/><li>De momento plural_name va a conservar los nombres del código fuente original</li><br/><li>Cambiar los campos published por JoomlaFeatured.Status (state), ya comprobé que son compatibles.</li><br/><li>Tiene implementado acceso a registros por grupos definidos en jos_rem_main_categories.params que es del tipo text y resulta muy costoso computacionalmente</li><br/><li></li><br/></ul><br/><p>CHANGELOG</p><br/><ul><br/><li>20180123 Se modificó el ENGINE de las tablas para soportar CONSTRAINTS, se agregó la tabla vivanuncios_items que contiene los datos del scraping, se agregó indices a las columnas published para acelerar las búsquedas</li><br/><li>20180125 cambié published por state para generarlo desde joomla_features</li><br/><li>20180125 deshabilite #__rem_houses.approved, considero que no se debería utilizar porque existe published indexado, y approved es costoso.</li><br/><li>20180129 renombre house.htitle por house.name. Los objetos modales requieren la columna name, la agregué en const, language, rent.</li><br/></ul>
 Release 1.0.0
 Copyright 
 COMPONENTSTARTVERSION=1.0.0
@@ -9,7 +9,7 @@ COMPONENTAUTHOR=caballeroantonio
 COMPONENTWEBSITE=caballeroantonio.com
 
 
-architectcomp_name=realestatemanager
+architectcomp_name=realestatemanagerca
 COM_ARCHITECTCOMP=COM_REMCA
 ARCHITECTCOMP=REMCA
 ArchitectComp=Remca
@@ -203,26 +203,6 @@ architectcomp=remca
             
             FIELD_NAME_LATEX=priceunit
             FIELD_CODE_NAME_LATEX=priceunit
-            FIELD_DBCOMMENT_LATEX=
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=htitle
-            FIELD_CODE_NAME_UPPER=HTITLE
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`htitle` VARCHAR(200) NOT NULL DEFAULT '' htitle
-            
-            FIELD_NAME_LATEX=htitle
-            FIELD_CODE_NAME_LATEX=htitle
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -1110,6 +1090,8 @@ architectcomp=remca
     
 
     
+{1.3}
+        	{FILTER_FIELD}
 {-1.3}
     
 {1.0}

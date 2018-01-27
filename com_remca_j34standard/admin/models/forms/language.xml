@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- @version 			$Id:$ -->
-<!-- @name			    RealEstateManager -->
+<!-- @name			    RealEstateManagerCA -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
 <!-- @package			com_remca -->
 <!-- @subpackage		com_remca.admin -->
@@ -40,6 +40,14 @@
 			readonly="true"
 			class="readonly"
             default="0"
+		/>
+        <field
+		    name="name"
+		    type="text"
+			label="COM_REMCA_FIELD_NAME_LABEL"
+			description="COM_REMCA_LANGUAGES_FIELD_NAME_DESC"
+			size="50"
+			required="true"
 		/>
         <field
             name="version_note"

@@ -168,11 +168,11 @@ Query exportar observaciones CA
 \end_layout
 
 \begin_layout Part
-RealEstateManager
+RealEstateManagerCA
 \end_layout
 
 \begin_layout Title
-RealEstateManager
+RealEstateManagerCA
 \end_layout
 
 \begin_layout Author
@@ -246,6 +246,7 @@ CHANGELOG
 <li>20180123 Se modificó el ENGINE de las tablas para soportar CONSTRAINTS, se agregó la tabla vivanuncios_items que contiene los datos del scraping, se agregó indices a las columnas published para acelerar las búsquedas</li>
 <li>20180125 cambié published por state para generarlo desde joomla_features</li>
 <li>20180125 deshabilite #__rem_houses.approved, considero que no se debería utilizar porque existe published indexado, y approved es costoso.</li>
+<li>20180129 renombre house.htitle por house.name. Los objetos modales requieren la columna name, la agregué en const, language, rent.</li>
 </ul>
 \end_layout
 
@@ -457,7 +458,7 @@ Portal de administración
 \begin_layout Itemize
 Navegar en el menú System\SpecialChar menuseparator
 Global Configuration\SpecialChar menuseparator
-RealEstateManager
+RealEstateManagerCA
 \end_layout
 
 \begin_layout Standard
@@ -14171,7 +14172,7 @@ Create Language
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "RealEstateManager Categories List"
+name "RealEstateManagerCA Categories List"
 target "SERVER?option=com_remca&view=categories"
 
 \end_inset
@@ -14217,7 +14218,7 @@ Lista de categorías
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "RealEstateManager Category - Details and items"
+name "RealEstateManagerCA Category - Details and items"
 target "SERVER?option=com_remca&view=category"
 
 \end_inset

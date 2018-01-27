@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -70,6 +70,7 @@ class RemcaTableHouses extends JTable
 	public function check()
 	{
 		// Set name
+		$this->name = htmlspecialchars_decode($this->name, ENT_QUOTES);
 
 		// Set ordering
 		if ($this->state < 0)
@@ -84,6 +85,7 @@ class RemcaTableHouses extends JTable
 				// Set ordering to last if ordering was 0
 				
 				$additional_order = '';	
+				$additional_order .= $this->_db->quoteName('price').'=' . $this->_db->Quote($this->price).' AND ';
 				$this->ordering = self::getNextOrder($additional_order.' state>=0');
 			}
 		}
@@ -103,6 +105,13 @@ class RemcaTableHouses extends JTable
 	 */
 	public function bind($array, $ignore = array())
 	{
+		
+		// Bind the rules.
+		if (isset($array['rules']) AND is_array($array['rules']))
+		{
+			$rules = new JAccessRules($array['rules']);
+			$this->setRules($rules);
+		}
 
 		return parent::bind($array, $ignore);
 	}
@@ -205,5 +214,63 @@ class RemcaTableHouses extends JTable
 		// Attempt to store the data.
 		return parent::store($update_nulls);
 	}	
+	/**
+	 * Method to compute the default name of the asset.
+	 * The default name is in the form `table_name.id`
+	 * where id is the value of the primary key of the table.
+	 *
+	 * @return      string
+	 * 
+	 */
+	protected function _getAssetName()
+	{
+		$k = $this->_tbl_key;
+		return 'com_remca.house.'.(int) $this->$k;
+	}
+	
+	/**
+	 * Method to return the title to use for the asset table.
+	 *
+	 * @return      string
+	 * 
+	 */
+	protected function _getAssetTitle()
+	{
+		return $this->name;
+		
+	}
+	
+	/**
+	 * Get the parent asset id for the record
+	 *
+	 * @param   JTable   $table  A JTable object for the asset parent.
+	 * @param	integer  $id     Id to look up
+	 * 
+	 * @return  integer
+	 * 
+	 */
+	protected function _getAssetParentId(JTable $table = null, $id = null)
+	{
+		
+		$asset = JTable::getInstance('Asset');
+		// Find the parent-asset
+		if (($this->catid) AND !empty($this->catid))
+		{
+			// The item has a category as asset-parent
+			if ($asset->loadByName('com_remca.category.' . (int) $this->catid))
+			{
+				return $asset->id;
+			}
+		}
+		
+		if ($asset->loadByName('com_remca'))
+		{
+			return $asset->id;
+		}
+		else
+		{		
+			return $asset->getRootId();
+		}	
+	}
 }
 

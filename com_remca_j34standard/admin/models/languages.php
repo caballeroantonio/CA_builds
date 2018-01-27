@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -55,6 +55,7 @@ class RemcaModelLanguages extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
+				'name', 'a.name',
 			);
 
 			$assoc = JLanguageAssociations::isEnabled();
@@ -174,6 +175,13 @@ class RemcaModelLanguages extends JModelList
 			if (stripos($search, 'id:') === 0)
 			{
 				$query->where($db->quoteName('a.id').' = '.(int) JString::substr($search, 3));
+			}
+			else
+			{
+                            $search = $db->quote('%'.$db->escape(JString::trim($search), true).'%', false);
+                            $query->where('( '.
+                            "{$db->quoteName('a.name')} LIKE {$search} "
+                            .' )');
 			}
 		}
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -60,6 +60,9 @@ $input = $app->input;
 
 <form action="<?php echo JRoute::_('index.php?option=com_remca&view=language&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="language-form" class="form-validate">
 
+	<div class="form-inline form-inline-header">	
+		<?php echo $this->form->renderField('name', null, null, array('group_id' => 'field_name')); ?>
+	</div>
 	<!-- Begin Content -->
 	<div class="form-horizontal">
 		<?php echo JHtml::_('bootstrap.startTabSet', 'language-tabs', array('active' => 'details')); ?>

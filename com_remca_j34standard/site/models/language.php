@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * RealEstateManager Component Language Model
+ * RealEstateManagerCA Component Language Model
  *
  */
 class RemcaModelLanguage extends JModelItem
@@ -55,6 +55,7 @@ class RemcaModelLanguage extends JModelItem
 		{
 			$config['language_filter_fields'] = array(
 				'id', 'a.id',
+				'name', 'a.name',
 				'lang_code','a.lang_code',
 				'title','a.title',
 				'sef','a.sef',

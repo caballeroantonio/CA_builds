@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -104,6 +104,19 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php endif; ?>
 	<?php endif; ?>
 
+	<?php if ($params->get('show_language_name')) : ?>
+		<div style="float: left;">
+			<h2>
+				<?php if ($params->get('link_language_names') AND !empty($this->item->readmore_link)) : ?>
+					<a href="<?php echo $this->item->readmore_link; ?>">
+					<?php echo $this->escape($this->item->name); ?></a>
+				<?php else : ?>
+					<?php echo $this->escape($this->item->name); ?>
+				<?php endif; ?>
+			</h2>
+		</div>
+	<?php endif; ?>
+	<?php  echo $this->item->event->afterDisplayLanguageName;	?>
 	
 	<?php echo $this->item->event->beforeDisplayLanguage; ?>
 	<div style="clear:both; padding-top: 10px;">

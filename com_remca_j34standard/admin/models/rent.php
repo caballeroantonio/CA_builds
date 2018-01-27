@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -55,6 +55,7 @@ class RemcaModelRent extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
+				'name', 'a.name',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 			);
@@ -180,6 +181,13 @@ class RemcaModelRent extends JModelList
 			{
 				$query->where($db->quoteName('a.id').' = '.(int) JString::substr($search, 3));
 			}
+			else
+			{
+                            $search = $db->quote('%'.$db->escape(JString::trim($search), true).'%', false);
+                            $query->where('( '.
+                            "{$db->quoteName('a.name')} LIKE {$search} "
+                            .' )');
+			}
 		}
 
 
@@ -188,7 +196,7 @@ class RemcaModelRent extends JModelList
 		
 
 		// Filter by and return name for fk_houseid level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
-		$query->select($db->quoteName('h.id').' AS h_house_id');
+		$query->select($db->quoteName('h.name').' AS h_house_name');
 		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
 
 		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_houseid'));	

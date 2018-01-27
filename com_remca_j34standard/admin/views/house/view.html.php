@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -52,6 +52,7 @@ class RemcaViewHouse extends JViewLegacy
 		$this->form		= $this->get('Form');
 		$this->item		= $this->get('Item');
 		$this->state	= $this->get('State');
+		$this->can_do = JHelperContent::getActions('com_remca', 'house', $this->item->id);
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
@@ -89,14 +90,26 @@ class RemcaViewHouse extends JViewLegacy
 				'houses.png'
 		);
 
+		// If not checked out, can save the item.
+		if (($this->can_do->get('core.edit') 
+			OR $this->can_do->get('core.create') 
+			)
+			AND !$checkedOut 
+			) 
+		{
+			JToolbarHelper::apply('house.apply', 'JTOOLBAR_APPLY');
+			JToolbarHelper::save('house.save', 'JTOOLBAR_SAVE');
 
-		JToolbarHelper::apply('house.apply', 'JTOOLBAR_APPLY');
-		JToolbarHelper::save('house.save', 'JTOOLBAR_SAVE');
-
-		JToolbarHelper::custom('house.save2new', 'save-new.png', 'save-new_f2.png', 'JTOOLBAR_SAVE_AND_NEW', false);
+			if ($this->can_do->get('core.create'))
+			{
+				JToolbarHelper::custom('house.save2new', 'save-new.png', 'save-new_f2.png', 'JTOOLBAR_SAVE_AND_NEW', false);
+			}
+		}
 
 		if ($this->state->params->get('save_history', 1) AND $this->state->params->get('house_save_history', 1)
 			AND !$is_new  
+				AND ($this->can_do->get('core.edit') 
+				)
 			)
 		{
 			$item_id = $this->item->id;

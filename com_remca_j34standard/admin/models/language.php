@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -164,6 +164,8 @@ class RemcaModelLanguage extends JModelAdmin
 		$date = JFactory::getDate();
 		$user = JFactory::getUser();
 		
+		$table->name = htmlspecialchars_decode($table->name, ENT_QUOTES);
+		
 		// Increment the language version number.
 		$table->version++;
 	}
@@ -177,7 +179,7 @@ class RemcaModelLanguage extends JModelAdmin
 	 */
 	public function save($data)
 	{
-		// Include the realestatemanager plugins for the onSave events.
+		// Include the realestatemanagerca plugins for the onSave events.
 		JPluginHelper::importPlugin('remca');	
 		
 		$input = JFactory::getApplication()->input;

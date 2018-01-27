@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * RealEstateManager Component Category Model
+ * RealEstateManagerCA Component Category Model
  *
  */
 class RemcaModelCategory extends JModelItem
@@ -154,7 +154,7 @@ class RemcaModelCategory extends JModelItem
 				
 					
 				// Filter by and return name for iditem level.
-				$query->select($db->quoteName('h.id').' AS h_house_id');
+				$query->select($db->quoteName('h.name').' AS h_house_name');
 				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.iditem'));	
 				// Filter by and return name for idcat level.
 				$query->select($db->quoteName('m.name').' AS m_main_category_name');

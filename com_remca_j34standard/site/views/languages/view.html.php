@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -84,6 +84,8 @@ class RemcaViewLanguages extends JViewLegacy
 
 			$item->event = new stdClass;
 
+			$results = $dispatcher->trigger('onLanguageAfterName', array('com_remca.language', &$item, &$item->params, $i));
+			$item->event->afterDisplayLanguageName = JString::trim(implode("\n", $results));
 
 			$results = $dispatcher->trigger('onLanguageBeforeDisplay', array('com_remca.language', &$item, &$item->params, $i));
 			$item->event->beforeDisplayLanguage = JString::trim(implode("\n", $results));

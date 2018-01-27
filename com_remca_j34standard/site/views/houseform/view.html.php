@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML House View class for the RealEstateManager component
+ * HTML House View class for the RealEstateManagerCA component
  *
  */
 class RemcaViewHouseForm extends JViewLegacy
@@ -61,6 +61,22 @@ class RemcaViewHouseForm extends JViewLegacy
 		$item = $this->item;
 
 
+		if (empty($item->id))
+		{
+			$authorised = $user->authorise('core.create', 'com_remca') 
+			OR (count($user->getAuthorisedCategories('com_remca', 'core.create')))
+			;
+		}
+		else
+		{
+			$authorised = $item->params->get('access-edit');
+		}
+
+		if ($authorised !== true)
+		{
+			JError::raiseError(403, JText::_('JERROR_ALERTNOAUTHOR'));
+			return false;
+		}
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
@@ -114,7 +130,7 @@ class RemcaViewHouseForm extends JViewLegacy
 		{
 			$title = $this->params->def('page_title', JText::_('COM_REMCA_HOUSES_EDIT_ITEM'));
 			
-			$pathway->addItem(JText::sprintf('COM_REMCA_EDIT_ITEM', JText::sprintf('COM_REMCA_HOUSES_ID_TITLE', $this->item->id)),''); 
+			$pathway->addItem(JText::sprintf('COM_REMCA_EDIT_ITEM', $this->escape($this->item->name)),''); 
 		}
 		else
 		{
@@ -150,6 +166,7 @@ class RemcaViewHouseForm extends JViewLegacy
 		// If there is a pagebreak heading or title, add it to the page title
 		if (!empty($this->item->page_title))
 		{
+			$house->name = $house->name .' - '. $house->page_title;
 			$this->document->setTitle($house->page_title.' - '.JText::sprintf('COM_REMCA_PAGEBREAK_PAGE_NUM', $this->state->get('page.offset') + 1));
 		}
 		

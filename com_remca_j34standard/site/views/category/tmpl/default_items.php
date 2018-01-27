@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -40,6 +40,7 @@ $n			= count($this->houses);
 $list_order	= $this->state->get('list.ordering');
 $list_dirn	= $this->state->get('list.direction');
 $layout		= str_replace('_:','',$params->get('house_layout'));
+$can_create	= $user->authorise('core.create', 'com_remca');
 // Get from global settings the text to use for an empty field
 $component = JComponentHelper::getComponent( 'com_remca' );
 $empty = $component->params->get('default_empty_field', '');	
@@ -76,6 +77,9 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php if ($this->params->get('show_house_headings')) :?>
 				<thead>
 					<tr>
+						<th class="list-name" id="tableOrderingname">
+							<?php  echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_NAME', 'a.name', $list_dirn, $list_order) ; ?>
+						</th>
 						<?php if ($date = $this->params->get('list_show_house_date')) : ?>
 							<th class="list-date" id="tableOrderingdate">
 								<?php echo JHtml::_('grid.sort', 'COM_REMCA_FIELD_'.JString::strtoupper($date).'_LABEL', 'a.'.$date, $list_dirn, $list_order); ?>
@@ -87,9 +91,25 @@ $empty = $component->params->get('default_empty_field', '');
 								<?php echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_HITS', 'a.hits', $list_dirn, $list_order); ?>
 							</th>
 						<?php endif; ?>
+						<?php if ($this->params->get('list_show_house_price',0)) : ?>
+							<th class="list-price" id="tableOrderingprice">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>
+							</th>
+						<?php endif; ?>	
+						<?php $show_actions = false;
+							foreach ($this->houses as $item) : ?>
+							<?php if ($item->params->get('access-edit') 
+									OR $item->params->get('access-delete')) : ?>
+									<?php $show_actions = true;
+										  continue; ?>
+							<?php endif;?>
+							
+						<?php endforeach; ?>
+						<?php if ($show_actions) : ?>
 							<th width="12%" class="list-actions">
 								<?php echo JText::_('COM_REMCA_HEADING_ACTIONS'); ?>						
 							</th> 				
+						<?php endif; ?>
 					</tr>
 				</thead>
 			<?php endif; ?>
@@ -97,12 +117,25 @@ $empty = $component->params->get('default_empty_field', '');
 			<tbody>
 
 			<?php foreach ($this->houses as $i => $item) : ?>
+				<?php
+					$can_edit	= $item->params->get('access-edit');
+					$can_delete	= $item->params->get('access-delete');
+				?>
 
 				<?php if ($item->state == 0) : ?>
 					<tr class="system-unpublished cat-list-row<?php echo $i % 2; ?>">
 				<?php else: ?>
 					<tr class="cat-list-row<?php echo $i % 2; ?>" >
 				<?php endif; ?>
+						<td class="list-name">
+							<a href="<?php echo JRoute::_(RemcaHelperRoute::getHouseRoute($item->slug, 
+																									$item->catid, 
+																									$item->language,
+																									$layout,									
+																									$this->params->get('keep_house_itemid'))); ?>">
+						
+							<?php echo $this->escape($item->name); ?></a>
+						</td>
 
 						<?php if ($this->params->get('list_show_house_date')) : ?>
 						<td class="list-date">
@@ -118,17 +151,32 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</td>
 						<?php endif; ?>
+						<?php if ($this->params->get('list_show_house_price',0)) : ?>
+							<td class="list-price">
+								<?php 
+									echo $item->price != '' ? $item->price : $empty; 
+								?>
+							</td>
+						<?php endif; ?>
 
+					<?php if ($show_actions) : ?>
 						<td class="list-actions">
+							<?php if ($can_edit OR $can_delete) : ?>
 								<ul class="actions">
+									<?php if ($can_edit ) : ?>
 										<li class="edit-icon">
 											<?php echo JHtml::_('houseicon.edit',$item, $params); ?>
 										</li>
+									<?php endif; ?>					
+									<?php if ($can_delete) : ?>
 										<li class="delete-icon">
 											<?php echo JHtml::_('houseicon.delete',$item, $params); ?>
 										</li>
+									<?php endif; ?>					
 								</ul>
+							<?php endif; ?>
 						</td>	
+					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
@@ -161,5 +209,7 @@ $empty = $component->params->get('default_empty_field', '');
 <?php endif; ?>
 <?php // Code to add a link to submit an house. ?>
 <?php if ($this->params->get('show_house_add_link',1)) : ?>
+	<?php if ($this->category->getParams()->get('access-create')) : ?>
 		<?php echo JHtml::_('houseicon.create', $params); ?>
+	<?php  endif; ?>
 <?php  endif; ?>

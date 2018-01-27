@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * RealEstateManager Component Route Helper
+ * RealEstateManagerCA Component Route Helper
  *
  */
 abstract class RemcaHelperRoute
@@ -690,7 +690,8 @@ abstract class RemcaHelperRoute
 
 		return $link;
 	}
-	public static function getCategoryRoute($cat_id, $keep_item_id = false, $language = 0)
+		//se está repitiendo
+	public static function getCategoryRoute_($cat_id, $keep_item_id = false, $language = 0)
 	{
 		if ($cat_id instanceof JCategoryNode)
 		{

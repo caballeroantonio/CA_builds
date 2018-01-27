@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -78,6 +78,9 @@ $empty = $component->params->get('default_empty_field', '');
 		<table class="languages">
 			<thead>
 				<tr>
+					<th>
+						<?php echo JHtml::_('grid.sort',  'COM_REMCA_HEADING_NAME', 'a.name', $list_dirn, $list_order); ?>
+					</th>
 						
 					<th width="1%" class="nowrap" style="display: none;">
 						<?php echo JHtml::_('grid.sort', 'JGRID_HEADING_ID', 'a.id', $list_dirn, $list_order); ?>
@@ -87,6 +90,11 @@ $empty = $component->params->get('default_empty_field', '');
 			<tbody>
 			<?php foreach ($this->items as $i => $item) : ?>
 				<tr class="row<?php echo $i % 2; ?>">
+					<td>
+						<a class="pointer" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
+							<?php echo $this->escape($item->name); ?>
+						</a>	
+					</td>
 
 					<td class="center" style="display: none;">
 							<?php echo $item->id; ?>

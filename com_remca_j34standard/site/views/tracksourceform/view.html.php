@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Track_source View class for the RealEstateManager component
+ * HTML Track_source View class for the RealEstateManagerCA component
  *
  */
 class RemcaViewTrackSourceForm extends JViewLegacy

@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -74,6 +74,10 @@ $empty = $component->params->get('default_empty_field', '');
 				<option value=""><?php echo JText::_('JOPTION_SELECT_CATEGORY');?></option>
 				<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_remca'), 'value', 'text', $this->state->get('filter.category_id'));?>
 			</select>
+			<select name="filter_price" onchange="this.form.submit()">
+				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_PRICE');?></option>
+				<?php echo JHtml::_('select.options', $this->price_values, 'value', 'text', $this->state->get('filter.price'));?>
+			</select>	
 			<div class="display-limit">
 				<?php echo $this->pagination->getLimitBox(); ?>
 			</div>
@@ -82,6 +86,12 @@ $empty = $component->params->get('default_empty_field', '');
 		<table class="houses">
 			<thead>
 				<tr>
+					<th>
+						<?php echo JHtml::_('grid.sort',  'COM_REMCA_HEADING_NAME', 'a.name', $list_dirn, $list_order); ?>
+					</th>
+					<th width="10%">
+						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>
+					</th>	
 					<th width="10%">
 						<?php echo JHtml::_('grid.sort', 'JCATEGORY', 'category_title', $list_dirn, $list_order); ?>
 					</th>
@@ -94,8 +104,20 @@ $empty = $component->params->get('default_empty_field', '');
 			<tbody>
 			<?php foreach ($this->items as $i => $item) : ?>
 				<tr class="row<?php echo $i % 2; ?>">
+					<td>
+						<a class="pointer" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
+							<?php echo $this->escape($item->name); ?>
+						</a>	
+					</td>
 					<td class="center">
-						<a class="pointer" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
+						<a class="pointer" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
+							<?php 
+								echo $item->price != '' ? $item->price : $empty; 
+							?>
+						</a>	
+					</td>	
+					<td class="center">
+						<a class="pointer" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
 							<?php echo $this->escape($item->category_title); ?>
 						</a>	
 					</td>	

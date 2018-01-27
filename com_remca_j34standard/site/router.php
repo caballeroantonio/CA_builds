@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -28,13 +28,13 @@
 
 defined('_JEXEC') or die;
 /**
- * Routing class for the RealEstateManager component
+ * Routing class for the RealEstateManagerCA component
  *
  */
 class RemcaRouter extends JComponentRouterBase
 {
 	/**
-	 * Build the route for the RealEstateManager component
+	 * Build the route for the RealEstateManagerCA component
 	 *
 	 * @param	array	$query		An array of URL arguments
 	 *

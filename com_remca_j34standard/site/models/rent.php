@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -53,6 +53,7 @@ class RemcaModelRent extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
+				'name', 'a.name',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				);
@@ -106,10 +107,10 @@ class RemcaModelRent extends JModelList
 		$this->setState('filter.search', $search);
 		
 
-		$order_col = $app->getUserStateFromRequest($this->context. '.filter_order', 'filter_order', $params->get('rent_initial_sort','a.id'), 'string');
+		$order_col = $app->getUserStateFromRequest($this->context. '.filter_order', 'filter_order', $params->get('rent_initial_sort','a.name'), 'string');
 		if (!in_array($order_col, $this->filter_fields))
 		{
-			$order_col = $params->get('rent_initial_sort','a.id');
+			$order_col = $params->get('rent_initial_sort','a.name');
 		}
 
 		$this->setState('list.ordering', $order_col);
@@ -188,7 +189,7 @@ class RemcaModelRent extends JModelList
 
 		
 		// Filter by and return name for fk_houseid level.
-		$query->select($db->quoteName('h.id').' AS h_house_id');
+		$query->select($db->quoteName('h.name').' AS h_house_name');
 		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
 
 		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_houseid'));	
@@ -232,7 +233,9 @@ class RemcaModelRent extends JModelList
 
 			switch ($params->get('show_rent_filter_field'))
 			{
-				default:
+				case 'name':
+				default: // default to 'name' if parameter is not valid
+					$query->where('LOWER('.$db->quoteName('a.name').') LIKE '.$filter);
 					break;
 				
 			}
@@ -263,7 +266,7 @@ class RemcaModelRent extends JModelList
 
 			if ($order_col == '')
 			{
-				$order_col = is_string($this->getState('list.ordering')) ? $db->quoteName($this->getState('list.ordering')) : $db->quoteName('a.id');
+				$order_col = is_string($this->getState('list.ordering')) ? $db->quoteName($this->getState('list.ordering')) : $db->quoteName('a.name');
 				$order_col .= ' '.$order_dirn;
 			}
 			$query->order($db->escape($order_col));			

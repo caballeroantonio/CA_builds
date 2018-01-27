@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Language View class for the RealEstateManager component
+ * HTML Language View class for the RealEstateManagerCA component
  *
  */
 class RemcaViewLanguageForm extends JViewLegacy
@@ -110,7 +110,7 @@ class RemcaViewLanguageForm extends JViewLegacy
 		{
 			$title = $this->params->def('page_title', JText::_('COM_REMCA_LANGUAGES_EDIT_ITEM'));
 			
-			$pathway->addItem(JText::sprintf('COM_REMCA_EDIT_ITEM', JText::sprintf('COM_REMCA_LANGUAGES_ID_TITLE', $this->item->id)),''); 
+			$pathway->addItem(JText::sprintf('COM_REMCA_EDIT_ITEM', $this->escape($this->item->name)),''); 
 		}
 		else
 		{
@@ -146,6 +146,7 @@ class RemcaViewLanguageForm extends JViewLegacy
 		// If there is a pagebreak heading or title, add it to the page title
 		if (!empty($this->item->page_title))
 		{
+			$language->name = $language->name .' - '. $language->page_title;
 			$this->document->setTitle($language->page_title.' - '.JText::sprintf('COM_REMCA_PAGEBREAK_PAGE_NUM', $this->state->get('page.offset') + 1));
 		}
 		

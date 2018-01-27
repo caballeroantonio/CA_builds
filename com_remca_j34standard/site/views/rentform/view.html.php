@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Rent View class for the RealEstateManager component
+ * HTML Rent View class for the RealEstateManagerCA component
  *
  */
 class RemcaViewRentForm extends JViewLegacy
@@ -110,7 +110,7 @@ class RemcaViewRentForm extends JViewLegacy
 		{
 			$title = $this->params->def('page_title', JText::_('COM_REMCA_RENT_EDIT_ITEM'));
 			
-			$pathway->addItem(JText::sprintf('COM_REMCA_EDIT_ITEM', JText::sprintf('COM_REMCA_RENT_ID_TITLE', $this->item->id)),''); 
+			$pathway->addItem(JText::sprintf('COM_REMCA_EDIT_ITEM', $this->escape($this->item->name)),''); 
 		}
 		else
 		{
@@ -146,6 +146,7 @@ class RemcaViewRentForm extends JViewLegacy
 		// If there is a pagebreak heading or title, add it to the page title
 		if (!empty($this->item->page_title))
 		{
+			$rent->name = $rent->name .' - '. $rent->page_title;
 			$this->document->setTitle($rent->page_title.' - '.JText::sprintf('COM_REMCA_PAGEBREAK_PAGE_NUM', $this->state->get('page.offset') + 1));
 		}
 		

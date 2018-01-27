@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- @version 			$Id:$ -->
-<!-- @name			    RealEstateManager -->
+<!-- @name			    RealEstateManagerCA -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
 <!-- @package			com_remca -->
 <!-- @subpackage		com_remca.admin -->
@@ -42,6 +42,8 @@
 			default=""
 		>
 			<option value="">JGLOBAL_SORT_BY</option>
+            <option value="a.name ASC">COM_REMCA_FIELD_NAME_SORT_ASC_LABEL</option>
+            <option value="a.name DESC">COM_REMCA_FIELD_NAME_SORT_DESC_LABEL</option>
 			<option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
 			<option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
         </field>

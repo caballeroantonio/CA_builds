@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -53,6 +53,8 @@ class RemcaModelHouses extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
+				'name', 'a.name',
+				'price','a.price',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				'catid', 'a.catid', 'category_title',
@@ -127,8 +129,18 @@ class RemcaModelHouses extends JModelList
 		}
 		$this->setState('list.direction', $list_order);
 		
+		$price = $app->getUserStateFromRequest($this->context.'.filter.price', 'filter_price', 0, 'int');
+		$this->setState('filter.price', $price);
 				
-		$this->setState('filter.published', 1);		
+		if ((!$user->authorise('core.edit.state', 'com_remca')) AND  (!$user->authorise('core.edit', 'com_remca')))
+		{
+			// filter on status of published for those who do not have edit or edit.state rights.
+			$this->setState('filter.published', 1);
+		}
+		else
+		{
+			$this->setState('filter.published', array(0, 1, 2));
+		}		
 
 		$this->setState('filter.language',JLanguageMultilang::isEnabled());
 		
@@ -166,6 +178,7 @@ class RemcaModelHouses extends JModelList
 		$id .= ':'.$this->getState('filter.archived');			
 		$id .= ':'.serialize($this->getState('filter.category_id'));
 		$id .= ':'.serialize($this->getState('filter.category_id.include'));
+		$id	.= ':'.$this->getState('filter.price');	
 		$id .= ':'.serialize($this->getState('filter.house_id'));
 		$id .= ':'.$this->getState('filter.house_id.include');				
 		
@@ -256,7 +269,7 @@ class RemcaModelHouses extends JModelList
 
 		
 		// Filter by and return name for fk_rentid level.
-		$query->select($db->quoteName('r.id').' AS r_rent_id');
+		$query->select($db->quoteName('r.name').' AS r_rent_name');
 		$query->select($db->quoteName('r.id').' AS r_rent_id');
 
 		$query->join('LEFT', $db->quoteName('#__rem_rent').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.fk_rentid'));	
@@ -266,6 +279,11 @@ class RemcaModelHouses extends JModelList
 
 		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.owner_id'));	
 					
+		if ($price = $this->getState('filter.price'))
+		{
+			$price = $db->escape(JString::strtolower($price), true);			
+			$query->where('LOWER('.$db->quoteName('a.price').') = ' . $db->quote($price));
+		}	
 
 		// Filter by a single or group of houses.
 		$house_id = $this->getState('filter.house_id');
@@ -347,7 +365,9 @@ class RemcaModelHouses extends JModelList
 				case 'hits':
 					$query->where($db->quoteName('a.hits').' >= '.(int) $hits_filter.' ');
 					break;
-				default:
+				case 'name':
+				default: // default to 'name' if parameter is not valid
+					$query->where('LOWER('.$db->quoteName('a.name').') LIKE '.$filter);
 					break;
 				
 			}
@@ -489,7 +509,6 @@ class RemcaModelHouses extends JModelList
 				
 				
 				
-				
 		
 							
 
@@ -546,12 +565,59 @@ class RemcaModelHouses extends JModelList
 							break;
 					}
 				}
+				// Compute the asset access permissions.
+				// Technically guest could edit an house, but lets not check that to improve performance a little.
+				if (!$guest) 
+				{
+					$asset	= 'com_remca.house.'.$item->id;
+
+					// Check general edit permission first.
+					if ($user->authorise('core.edit', $asset))
+					{
+						$item->params->set('access-edit', true);
+					}
+					if ($user->authorise('core.create', $asset))
+					{
+						$item->params->set('access-create', true);
+					}	
+						
+					
+					if ($user->authorise('core.delete', $asset)) 
+					{
+						$item->params->set('access-delete', true);
+					}
+				}
 
 
 			}
 		}
 		return $items;
 	}
+	/**
+	 * Build a list of distinct values in the price field
+	 *
+	 * @return	JDatabaseQuery
+	 */
+	public function getPricevalues()
+	{
+				// Create a new query object.
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+
+		// Construct the query
+		$query->select('DISTINCT '.$db->quoteName('price').' AS value, '.$db->quoteName('price').' AS text');
+		$query->from($db->quoteName('#__rem_houses'));
+		$query->where($db->quoteName('price').' != \'\'');
+
+		$query->order($db->quoteName('price'));
+
+		// Setup the query
+		$db->setQuery($query);
+
+		// Return the result
+		return $db->loadObjectList();
+
+	}				
 	
         /*
          * Function that allows download database information

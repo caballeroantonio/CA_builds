@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$ 
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -28,7 +28,7 @@
 
 defined('JPATH_BASE') or die;
 /**
- * Supports an HTML ordering select list for objects in component realestatemanager
+ * Supports an HTML ordering select list for objects in component realestatemanagerca
  *
  */
 class JFormFieldRemcaOrdering extends JFormField

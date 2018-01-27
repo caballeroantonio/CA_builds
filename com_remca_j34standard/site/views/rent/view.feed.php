@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -58,7 +58,7 @@ class RemcaViewRent extends JViewLegacy
 		foreach ($rows as $row)
 		{
 			// strip html from feed item name
-			$title = $this->escape($row->id);
+			$title = $this->escape($row->name);
 						
 			$title = html_entity_decode($title, ENT_COMPAT, 'UTF-8');
 

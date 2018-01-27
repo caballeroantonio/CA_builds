@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -52,6 +52,73 @@ class RemcaControllerHouse extends JControllerForm
 		parent::__construct($config);	
 
 		$this->view_list = 'houses';
+	}
+	/**
+	 * Method override to check if you can add a new record.
+	 *
+	 * @param	array	$data	An array of input data.
+	 *
+	 * @return	boolean
+	 * 
+	 */
+	protected function allowAdd($data = array())
+	{
+
+		$user		= JFactory::getUser();
+		$category_id	= JArrayHelper::getValue($data, 'catid', $this->input->getInt('filter_category_id'), 'int');
+		if ($category_id) 
+		{
+			// If the category has been passed in the URL check create access on it and the object.
+			$result = $user->authorise('core.create', 'com_remca.category.'.$category_id) AND
+					  $user->authorise('core.create', 'com_remca');
+			if($result === null)		
+			{
+				// In the absense of better information, revert to the component permissions.
+				return parent::allowAdd($data);		
+			}
+			else
+			{
+				return $result;
+			}
+		}
+		else
+		{
+			// In the absense of category id, revert to the component permissions.
+			return parent::allowAdd($data);		
+		}
+	}			
+	/**
+	 * Method override to check if you can edit an existing record.
+	 *
+	 * @param	array	$data	An array of input data.
+	 * @param	string	$key	The name of the key for the primary key.
+	 *
+	 * @return	boolean
+	 * 
+	 */
+	protected function allowEdit($data = array(), $key = 'id')
+	{
+
+		$record_id	= (int) isset($data[$key]) ? $data[$key] : 0;
+		$user		= JFactory::getUser();
+		$user_id		= $user->get('id');
+		$category_id	= (int) isset($data['catid']) ? $data['catid'] : 0;
+
+		if ($category_id) 
+		{
+			// If the category has been passed in the URL check it.
+			if(!$user->authorise('core.edit', 'com_remca.category.'.$category_id))
+			{
+				return false;
+			}
+		}
+		// Check general edit permission first.
+		if ($user->authorise('core.edit', 'com_remca.house.'.$record_id))
+		{
+			return true;
+		}
+		// Since there is no asset tracking, revert to the component permissions.
+		return parent::allowEdit($data, $key);
 	}
 	/**
 	 * Function that allows child controller access to model data after the data has been saved.

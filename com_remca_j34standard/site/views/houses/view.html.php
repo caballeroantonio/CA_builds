@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.site
@@ -69,6 +69,7 @@ class RemcaViewHouses extends JViewLegacy
 		}
 
 		// PREPARE THE DATA
+		$this->price_values	= $this->get('Pricevalues');
 		// Compute the house slugs and set the trigger events.
 		foreach ($items as $i => &$item)
 		{
@@ -86,6 +87,8 @@ class RemcaViewHouses extends JViewLegacy
 
 			$item->event = new stdClass;
 
+			$results = $dispatcher->trigger('onHouseAfterName', array('com_remca.house', &$item, &$item->params, $i));
+			$item->event->afterDisplayHouseName = JString::trim(implode("\n", $results));
 
 			$results = $dispatcher->trigger('onHouseBeforeDisplay', array('com_remca.house', &$item, &$item->params, $i));
 			$item->event->beforeDisplayHouse = JString::trim(implode("\n", $results));

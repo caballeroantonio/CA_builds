@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			RealEstateManager
+ * @name			RealEstateManagerCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_remca
  * @subpackage		com_remca.admin
@@ -37,6 +37,8 @@ class RemcaViewHouses extends JViewLegacy
 	protected $items;
 	protected $pagination;
 	protected $state;
+	protected $can_do;
+	protected $price_values;
 
 	/**
 	 * Execute and display a template script.
@@ -54,6 +56,7 @@ class RemcaViewHouses extends JViewLegacy
 		$this->filterForm    = $this->get('FilterForm');
 		$this->activeFilters = $this->get('ActiveFilters');
 		
+		$this->can_do = JHelperContent::getActions('com_remca', 'category', $this->state->get('filter.category_id'));
 				
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
@@ -83,9 +86,17 @@ class RemcaViewHouses extends JViewLegacy
 			
 		JToolbarHelper::title(JText::_('COM_REMCA_HOUSES_LIST_HEADER'), 'stack houses');
 
-		JToolbarHelper::addNew('house.add','JTOOLBAR_NEW');
+		if ($this->can_do->get('core.create')) 
+		{
+			JToolbarHelper::addNew('house.add','JTOOLBAR_NEW');
+		}
 		
-		JToolbarHelper::editList('house.edit','JTOOLBAR_EDIT');
+		if ($this->can_do->get('core.edit') OR $this->can_do->get('core.edit.own')) 
+		{
+			JToolbarHelper::editList('house.edit','JTOOLBAR_EDIT');
+		}
+		if ($this->can_do->get('core.edit.state') ) 
+		{
 
 			if ($this->state->get('filter.state') != 2)
 			{
@@ -107,23 +118,36 @@ class RemcaViewHouses extends JViewLegacy
 					}
 				}
 			}
+		}
 		
-		JToolbarHelper::custom('houses.checkin', 'checkin.png', 'checkin_f2.png', 'JTOOLBAR_CHECKIN', true);
+		if ($this->can_do->get('core.edit.state')) 
+		{
+			JToolbarHelper::custom('houses.checkin', 'checkin.png', 'checkin_f2.png', 'JTOOLBAR_CHECKIN', true);
+		}
 
 	
 		if ($this->state->get('filter.state') == -2)
 		{
-			JToolbarHelper::deleteList('', 'houses.delete','JTOOLBAR_EMPTY_TRASH');
+			if ($this->can_do->get('core.delete'))
+			{
+				JToolbarHelper::deleteList('', 'houses.delete','JTOOLBAR_EMPTY_TRASH');
+			}
 		}
 		else 
 		{
-			JToolbarHelper::trash('houses.trash','JTOOLBAR_TRASH');
+			if ($this->can_do->get('core.edit.state')) 
+			{
+				JToolbarHelper::trash('houses.trash','JTOOLBAR_TRASH');
+			}
 		}
                         
                 JToolbarHelper::custom('houses.export', 'download','download', 'JTOOLBAR_EXPORT', FALSE);
 
 				
-		JToolbarHelper::preferences('com_remca');
+		if ($user->authorise('core.admin', 'com_remca') OR $user->authorise('core.options', 'com_remca')) 
+		{
+			JToolbarHelper::preferences('com_remca');
+		}
 		JToolbarHelper::help('JHELP_COMPONENTS_COM_REMCA_HOUSE', true, null, 'com_remca');
 	}
 	/**
