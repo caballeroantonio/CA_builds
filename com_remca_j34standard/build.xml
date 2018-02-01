@@ -1,5 +1,5 @@
 <project name="remca" default="dist" basedir=".">
-    <property name="link_dir" description="vinculo simbolico de JPATH_BASE" value="D:/www/htdocs/JPruebas" /> 
+    <property name="link_dir" description="vinculo simbolico de JPATH_BASE" value="D:/www/htdocs/borrame" /> 
     
     <target name="remove-package" description="Warning, delete directory follow symlinks. When uninstall Joomla extension or delete directory that has symlinks you loose your src code.">
         <delete dir="${link_dir}/administrator/components/com_remca" />
