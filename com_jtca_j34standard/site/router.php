@@ -106,30 +106,6 @@ class JtCaRouter extends JComponentRouterBase
 		{
 			switch ($view)
 			{
-				case 'lsc01':
-					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
-					{
-						if($advanced)
-						{
-							list($tmp, $id) = explode(':', $query['id'], 2);
-						}
-						else
-						{
-							$id = isset($query['id']) ? $query['id'] : null;
-						}
-						$segments[] = $view;					
-						$segments[] = $id;
-					}
-					unset($query['view']);				
-					unset($query['id']);
-					break;
-				case 'lsc01s':
-					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
-					{
-						$segments[] = $view;											
-					}
-					unset($query['view']);				
-					break;					
 				case 'ljc01':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
@@ -148,6 +124,30 @@ class JtCaRouter extends JComponentRouterBase
 					unset($query['id']);
 					break;
 				case 'ljc01s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'lsc01':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'lsc01s':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						$segments[] = $view;											
@@ -4570,6 +4570,30 @@ class JtCaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
+				case 'lsps14':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'lsps14s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
 				case 'ljf15':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
@@ -5481,30 +5505,6 @@ class JtCaRouter extends JComponentRouterBase
 
 			if ($found == 0)
 			{
-				if ($item->query['view'] == 'lsc01' OR $view == 'lsc01')
-				{
-					if($advanced)
-					{
-						$db = JFactory::getDbo();
-							
-						$query = $db->getQuery(true);
-						$query->select($db->quoteName('id'));
-						$query->from($db->quoteName('jt_lsc01s'));
-								
-						$db->setQuery($query);
-						$nid = $db->loadResult();
-					}
-					else
-					{
-						$nid = $segment;
-					}
-					$vars['id'] = $nid;
-					$vars['view'] = $view;
-				}
-				if ($item->query['view'] == 'lsc01s'OR $view == 'lsc01s')
-				{
-					$vars['view'] = $view;
-				}				
 				if ($item->query['view'] == 'ljc01' OR $view == 'ljc01')
 				{
 					if($advanced)
@@ -5526,6 +5526,30 @@ class JtCaRouter extends JComponentRouterBase
 					$vars['view'] = $view;
 				}
 				if ($item->query['view'] == 'ljc01s'OR $view == 'ljc01s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'lsc01' OR $view == 'lsc01')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_lsc01s'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'lsc01s'OR $view == 'lsc01s')
 				{
 					$vars['view'] = $view;
 				}				
@@ -9942,6 +9966,30 @@ class JtCaRouter extends JComponentRouterBase
 					$vars['view'] = $view;
 				}
 				if ($item->query['view'] == 'ljjadg14s'OR $view == 'ljjadg14s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'lsps14' OR $view == 'lsps14')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_lsps14s'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'lsps14s'OR $view == 'lsps14s')
 				{
 					$vars['view'] = $view;
 				}				

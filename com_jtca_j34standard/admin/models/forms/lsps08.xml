@@ -166,10 +166,40 @@
         >
         </field>  
         <field
-            name="field2414"
-            type="text"
-            label="COM_JTCA_LSPS08S_FIELD_FIELD2414_LABEL"
-            description="COM_JTCA_LSPS08S_FIELD_FIELD2414_DESC"
+            name="field2414_isMoral"
+            type="person"
+            label="COM_JTCA_LSPS08S_FIELD_FIELD2414_ISMORAL_LABEL"
+            description="COM_JTCA_LSPS08S_FIELD_FIELD2414_ISMORAL_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            name="field2414_paterno"
+            type="person"
+            label="COM_JTCA_LSPS08S_FIELD_FIELD2414_PATERNO_LABEL"
+            description="COM_JTCA_LSPS08S_FIELD_FIELD2414_PATERNO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            name="field2414_materno"
+            type="person"
+            label="COM_JTCA_LSPS08S_FIELD_FIELD2414_MATERNO_LABEL"
+            description="COM_JTCA_LSPS08S_FIELD_FIELD2414_MATERNO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            name="field2414_nombre"
+            type="person"
+            label="COM_JTCA_LSPS08S_FIELD_FIELD2414_NOMBRE_LABEL"
+            description="COM_JTCA_LSPS08S_FIELD_FIELD2414_NOMBRE_DESC"
             class="inputbox"
 			size="50"
 			maxlength="255"
@@ -202,20 +232,20 @@
         >
         </field>  
         <field
-            name="field2410"
+            name="field2417"
             type="text"
-            label="COM_JTCA_LSPS08S_FIELD_FIELD2410_LABEL"
-            description="COM_JTCA_LSPS08S_FIELD_FIELD2410_DESC"
+            label="COM_JTCA_LSPS08S_FIELD_FIELD2417_LABEL"
+            description="COM_JTCA_LSPS08S_FIELD_FIELD2417_DESC"
             class="inputbox"
 			size="50"
 			maxlength="255"
         >
         </field>  
         <field
-            name="field2417"
+            name="field2410"
             type="text"
-            label="COM_JTCA_LSPS08S_FIELD_FIELD2417_LABEL"
-            description="COM_JTCA_LSPS08S_FIELD_FIELD2417_DESC"
+            label="COM_JTCA_LSPS08S_FIELD_FIELD2410_LABEL"
+            description="COM_JTCA_LSPS08S_FIELD_FIELD2410_DESC"
             class="inputbox"
 			size="50"
 			maxlength="255"

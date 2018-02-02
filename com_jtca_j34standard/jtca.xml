@@ -28,7 +28,7 @@
 <extension type="component" version="3.4" method="upgrade">
     <name>com_jtca</name>
     <author>caballeroantonio</author>
-    <creationDate>December 2017</creationDate>
+    <creationDate>February 2018</creationDate>
     <copyright>
         Copyright (c) 2017 - 2020. All Rights Reserved
     </copyright>
@@ -51,7 +51,7 @@
     </files>
     <languages folder="site/language">
 			<language tag="en-GB">en-GB/en-GB.com_jtca.ini</language>
-			<language tag="en-GB">es-ES/es-ES.com_jtca.ini</language>
+			<language tag="es-ES">es-ES/es-ES.com_jtca.ini</language>
     </languages>
     <media destination="com_jtca" folder="media">
         <folder>css</folder>
@@ -67,10 +67,10 @@
         <menu img="../media/com_jtca/images/jtca.png"
               alt="TSJ CDMX Libros TxCA">COM_JTCA</menu>
         <submenu>
-            <menu link="option=com_jtca&amp;view=lsc01s" alias="lsc01s" img="../media/com_jtca/images/jtca-lsc01s.png"
-                    alt="TSJ CDMX Libros TxCA/LIBRETA DE REGISTRO DE SENTENCIAS -TURNO- (OFICIAL">COM_JTCA_LSC01S</menu>
             <menu link="option=com_jtca&amp;view=ljc01s" alias="ljc01s" img="../media/com_jtca/images/jtca-ljc01s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJC01S</menu>
+            <menu link="option=com_jtca&amp;view=lsc01s" alias="lsc01s" img="../media/com_jtca/images/jtca-lsc01s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRETA DE REGISTRO DE SENTENCIAS -TURNO- (OFICIAL">COM_JTCA_LSC01S</menu>
             <menu link="option=com_jtca&amp;view=ljf01s" alias="ljf01s" img="../media/com_jtca/images/jtca-ljf01s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE GOBIERNO">COM_JTCA_LJF01S</menu>
             <menu link="option=com_jtca&amp;view=ljp01s" alias="ljp01s" img="../media/com_jtca/images/jtca-ljp01s.png"
@@ -439,6 +439,8 @@
                     alt="TSJ CDMX Libros TxCA/LIBRO DE RESOLUCIONES DE PLANO">COM_JTCA_LJPES14S</menu>
             <menu link="option=com_jtca&amp;view=ljjadg14s" alias="ljjadg14s" img="../media/com_jtca/images/jtca-ljjadg14s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE CONTROL DE PEDIMENTOS">COM_JTCA_LJJADG14S</menu>
+            <menu link="option=com_jtca&amp;view=lsps14s" alias="lsps14s" img="../media/com_jtca/images/jtca-lsps14s.png"
+                    alt="TSJ CDMX Libros TxCA/LIBRO DE OFICIOS">COM_JTCA_LSPS14S</menu>
             <menu link="option=com_jtca&amp;view=ljf15s" alias="ljf15s" img="../media/com_jtca/images/jtca-ljf15s.png"
                     alt="TSJ CDMX Libros TxCA/LIBRO DE TURNO A CARGO DE LOS SECRETARIOS DE ACUER">COM_JTCA_LJF15S</menu>
             <menu link="option=com_jtca&amp;view=ljccm15s" alias="ljccm15s" img="../media/com_jtca/images/jtca-ljccm15s.png"
@@ -579,23 +581,23 @@
                     <option	value="0">JNO</option>
                 </field>		        
                 <field
-			        name="lsc01_save_history"
-			        type="radio"
-			        class="btn-group btn-group-yesno"
-			        default="1"
-			        label="COM_JTCA_LSC01S_FIELD_SAVE_HISTORY_LABEL"
-			        description="COM_JTCA_LSC01S_FIELD_SAVE_HISTORY_DESC"
-			        >
-                    <option	value="1">JYES</option>
-                    <option	value="0">JNO</option>
-                </field>
-                <field
 			        name="ljc01_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
 			        label="COM_JTCA_LJC01S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJC01S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsc01_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSC01S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSC01S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -2620,6 +2622,17 @@
 			        default="1"
 			        label="COM_JTCA_LJJADG14S_FIELD_SAVE_HISTORY_LABEL"
 			        description="COM_JTCA_LJJADG14S_FIELD_SAVE_HISTORY_DESC"
+			        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+			        name="lsps14_save_history"
+			        type="radio"
+			        class="btn-group btn-group-yesno"
+			        default="1"
+			        label="COM_JTCA_LSPS14S_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_JTCA_LSPS14S_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>

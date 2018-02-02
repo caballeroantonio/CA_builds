@@ -62,11 +62,14 @@ class JtCaModelLsps08 extends JModelItem
 				'field2411','a.field2411',
 				'field2412','a.field2412',
 				'field2413','a.field2413',
-				'field2414','a.field2414',
+				'field2414_isMoral','a.field2414_isMoral',
+				'field2414_paterno','a.field2414_paterno',
+				'field2414_materno','a.field2414_materno',
+				'field2414_nombre','a.field2414_nombre',
 				'field2415','a.field2415',
 				'field2416','a.field2416',
-				'field2410','a.field2410',
 				'field2417','a.field2417',
+				'field2410','a.field2410',
 				'state', 'a.state',
 				'created', 'a.created',
 				'created_by', 'a.created_by',
@@ -286,6 +289,9 @@ class JtCaModelLsps08 extends JModelItem
 				{
 					$item->id_secretaria = array();
 				}
+				
+				
+				
 				
 				
 				

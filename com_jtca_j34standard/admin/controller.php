@@ -57,18 +57,6 @@ class JtCaController extends JControllerLegacy
 		// Check for edit form.
 		switch ($view)
 		{
-			case 'lsc01': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsc01', $id))
-				{
-
-					// Somehow the person just went to the form - we don't allow that.
-					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
-					$this->setMessage($this->getError(), 'error');
-					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsc01s', false));
-
-					return false;
-				}
-				break;				
 			case 'ljc01': 
 				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.ljc01', $id))
 				{
@@ -77,6 +65,18 @@ class JtCaController extends JControllerLegacy
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
 					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=ljc01s', false));
+
+					return false;
+				}
+				break;				
+			case 'lsc01': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsc01', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsc01s', false));
 
 					return false;
 				}
@@ -2285,6 +2285,18 @@ class JtCaController extends JControllerLegacy
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
 					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=ljjadg14s', false));
+
+					return false;
+				}
+				break;				
+			case 'lsps14': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_jtca.edit.lsps14', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_jtca&view=lsps14s', false));
 
 					return false;
 				}

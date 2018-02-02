@@ -61,7 +61,10 @@ class JtCaModelLsps04 extends JModelItem
 				'anoj','a.anoj',
 				'field2381','a.field2381',
 				'field2382','a.field2382',
-				'field2383','a.field2383',
+				'field2383_isMoral','a.field2383_isMoral',
+				'field2383_paterno','a.field2383_paterno',
+				'field2383_materno','a.field2383_materno',
+				'field2383_nombre','a.field2383_nombre',
 				'field2384','a.field2384',
 				'field2385','a.field2385',
 				'field2386','a.field2386',
@@ -289,6 +292,9 @@ class JtCaModelLsps04 extends JModelItem
 				{
 					$item->id_secretaria = array();
 				}
+				
+				
+				
 				
 				
 				

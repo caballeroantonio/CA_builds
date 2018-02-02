@@ -129,11 +129,14 @@ $empty = $component->params->get('default_empty_field', '');
 								($params->get('show_lsps08_field2411')) OR 
 								($params->get('show_lsps08_field2412')) OR 
 								($params->get('show_lsps08_field2413')) OR 
-								($params->get('show_lsps08_field2414')) OR 
+								($params->get('show_lsps08_field2414_isMoral')) OR 
+								($params->get('show_lsps08_field2414_paterno')) OR 
+								($params->get('show_lsps08_field2414_materno')) OR 
+								($params->get('show_lsps08_field2414_nombre')) OR 
 								($params->get('show_lsps08_field2415')) OR 
 								($params->get('show_lsps08_field2416')) OR 
-								($params->get('show_lsps08_field2410')) OR 
 								($params->get('show_lsps08_field2417')) OR 
+								($params->get('show_lsps08_field2410')) OR 
 								$dummy
 								);
 			?>
@@ -250,14 +253,50 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_lsps08_field2414')) : ?>
+						<?php if ($params->get('show_lsps08_field2414_isMoral')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_JTCA_LSPS08S_FIELD_FIELD2414_LABEL'); ?>
+								<?php echo JText::_('COM_JTCA_LSPS08S_FIELD_FIELD2414_ISMORAL_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->field2414 != '' ? $this->item->field2414 : $empty;
+									echo $this->item->field2414_isMoral != '' ? $this->item->field2414_isMoral : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lsps08_field2414_paterno')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LSPS08S_FIELD_FIELD2414_PATERNO_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->field2414_paterno != '' ? $this->item->field2414_paterno : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lsps08_field2414_materno')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LSPS08S_FIELD_FIELD2414_MATERNO_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->field2414_materno != '' ? $this->item->field2414_materno : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lsps08_field2414_nombre')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LSPS08S_FIELD_FIELD2414_NOMBRE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->field2414_nombre != '' ? $this->item->field2414_nombre : $empty;
 								?>
 							</span>
 						</div>	
@@ -286,18 +325,6 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_lsps08_field2410')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LSPS08S_FIELD_FIELD2410_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->field2410 != '' ? $this->item->field2410 : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
 						<?php if ($params->get('show_lsps08_field2417')) : ?>
 						<div class="formelm">
 							<label>
@@ -306,6 +333,18 @@ $empty = $component->params->get('default_empty_field', '');
 							<span>
 								<?php
 									echo $this->item->field2417 != '' ? $this->item->field2417 : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lsps08_field2410')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LSPS08S_FIELD_FIELD2410_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->field2410 != '' ? $this->item->field2410 : $empty;
 								?>
 							</span>
 						</div>	

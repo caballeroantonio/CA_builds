@@ -37,7 +37,7 @@ $app = JFactory::getApplication();
 $user  = JFactory::getUser();
 
 
-if ($app->input->get('view') === 'lsc01s' AND $app->input->get('layout') === 'modal')
+if ($app->input->get('view') === 'ljc01s' AND $app->input->get('layout') === 'modal')
 {
 	if (!$user->authorise('core.edit', 'com_jtca'))
 	{
@@ -47,7 +47,7 @@ if ($app->input->get('view') === 'lsc01s' AND $app->input->get('layout') === 'mo
 	}
 }
 
-if ($app->input->get('view') === 'ljc01s' AND $app->input->get('layout') === 'modal')
+if ($app->input->get('view') === 'lsc01s' AND $app->input->get('layout') === 'modal')
 {
 	if (!$user->authorise('core.edit', 'com_jtca'))
 	{
@@ -1888,6 +1888,16 @@ if ($app->input->get('view') === 'ljpes14s' AND $app->input->get('layout') === '
 }
 
 if ($app->input->get('view') === 'ljjadg14s' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_jtca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'lsps14s' AND $app->input->get('layout') === 'modal')
 {
 	if (!$user->authorise('core.edit', 'com_jtca'))
 	{

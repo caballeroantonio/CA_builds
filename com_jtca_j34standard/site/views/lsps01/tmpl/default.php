@@ -127,8 +127,8 @@ $empty = $component->params->get('default_empty_field', '');
 								($params->get('show_lsps01_id_secretaria')) OR 
 								($params->get('show_lsps01_anoj')) OR 
 								($params->get('show_lsps01_field2350')) OR 
-								($params->get('show_lsps01_field2351')) OR 
-								($params->get('show_lsps01_field2352')) OR 
+								($params->get('show_lsps01_txt_field2351')) OR 
+								($params->get('show_lsps01_txt_field2352')) OR 
 								($params->get('show_lsps01_field2353')) OR 
 								($params->get('show_lsps01_field2354')) OR 
 								($params->get('show_lsps01_field2355')) OR 
@@ -227,26 +227,26 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_lsps01_field2351')) : ?>
+						<?php if ($params->get('show_lsps01_txt_field2351')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_JTCA_LSPS01S_FIELD_FIELD2351_LABEL'); ?>
+								<?php echo JText::_('COM_JTCA_LSPS01S_FIELD_TXT_FIELD2351_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->field2351 != '' ? $this->item->field2351 : $empty;
+									echo $this->item->txt_field2351 != '' ? $this->item->txt_field2351 : $empty;
 								?>
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_lsps01_field2352')) : ?>
+						<?php if ($params->get('show_lsps01_txt_field2352')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_JTCA_LSPS01S_FIELD_FIELD2352_LABEL'); ?>
+								<?php echo JText::_('COM_JTCA_LSPS01S_FIELD_TXT_FIELD2352_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->field2352 != '' ? $this->item->field2352 : $empty;
+									echo $this->item->txt_field2352 != '' ? $this->item->txt_field2352 : $empty;
 								?>
 							</span>
 						</div>	

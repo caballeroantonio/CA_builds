@@ -145,47 +145,47 @@ function getFields(){
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'JUZGADO DE PROCEDENCIA',
-        'FIELD_CODE_NAME' => 'field2351',
+        'FIELD_CODE_NAME' => 'txt_field2351',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
+        'FIELDTYPE_ID' => 40,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD2351
+                FIELD_CODE_NAME_UPPER=TXT_FIELD2351
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
                 FIELD_DB=`` VARCHAR(255) DEFAULT NULL JUZGADO DE PROCEDENCIA
 
                 FIELD_NAME_LATEX=JUZGADO DE PROCEDENCIA
-                FIELD_CODE_NAME_LATEX=field2351
+                FIELD_CODE_NAME_LATEX=txt\_field2351
                 FIELD_DBCOMMENT_LATEX=
 
 
     */
-    $fields['field2351'] = $field;
+    $fields['txt_field2351'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'MAGISTRADO PONENTE',
-        'FIELD_CODE_NAME' => 'field2352',
+        'FIELD_CODE_NAME' => 'txt_field2352',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
+        'FIELDTYPE_ID' => 40,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD2352
+                FIELD_CODE_NAME_UPPER=TXT_FIELD2352
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
                 FIELD_DB=`` VARCHAR(255) DEFAULT NULL MAGISTRADO PONENTE
 
                 FIELD_NAME_LATEX=MAGISTRADO PONENTE
-                FIELD_CODE_NAME_LATEX=field2352
+                FIELD_CODE_NAME_LATEX=txt\_field2352
                 FIELD_DBCOMMENT_LATEX=
 
 
     */
-    $fields['field2352'] = $field;
+    $fields['txt_field2352'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'SENTENCIA (SENTIDO)',

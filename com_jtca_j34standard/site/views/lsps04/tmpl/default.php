@@ -128,7 +128,10 @@ $empty = $component->params->get('default_empty_field', '');
 								($params->get('show_lsps04_anoj')) OR 
 								($params->get('show_lsps04_field2381')) OR 
 								($params->get('show_lsps04_field2382')) OR 
-								($params->get('show_lsps04_field2383')) OR 
+								($params->get('show_lsps04_field2383_isMoral')) OR 
+								($params->get('show_lsps04_field2383_paterno')) OR 
+								($params->get('show_lsps04_field2383_materno')) OR 
+								($params->get('show_lsps04_field2383_nombre')) OR 
 								($params->get('show_lsps04_field2384')) OR 
 								($params->get('show_lsps04_field2385')) OR 
 								($params->get('show_lsps04_field2386')) OR 
@@ -241,14 +244,50 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_lsps04_field2383')) : ?>
+						<?php if ($params->get('show_lsps04_field2383_isMoral')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_JTCA_LSPS04S_FIELD_FIELD2383_LABEL'); ?>
+								<?php echo JText::_('COM_JTCA_LSPS04S_FIELD_FIELD2383_ISMORAL_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->field2383 != '' ? $this->item->field2383 : $empty;
+									echo $this->item->field2383_isMoral != '' ? $this->item->field2383_isMoral : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lsps04_field2383_paterno')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LSPS04S_FIELD_FIELD2383_PATERNO_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->field2383_paterno != '' ? $this->item->field2383_paterno : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lsps04_field2383_materno')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LSPS04S_FIELD_FIELD2383_MATERNO_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->field2383_materno != '' ? $this->item->field2383_materno : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lsps04_field2383_nombre')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LSPS04S_FIELD_FIELD2383_NOMBRE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->field2383_nombre != '' ? $this->item->field2383_nombre : $empty;
 								?>
 							</span>
 						</div>	

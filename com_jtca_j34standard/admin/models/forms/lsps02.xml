@@ -198,13 +198,10 @@
         >
         </field>  
         <field
-            name="field2366"
-            type="text"
-            label="COM_JTCA_LSPS02S_FIELD_FIELD2366_LABEL"
-            description="COM_JTCA_LSPS02S_FIELD_FIELD2366_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
+            name="txt_field2366"
+            type="combo_suggest"
+            label="COM_JTCA_LSPS02S_FIELD_TXT_FIELD2366_LABEL"
+            description="COM_JTCA_LSPS02S_FIELD_TXT_FIELD2366_DESC"
         >
         </field>  
         <field

@@ -25,12 +25,12 @@
 --
 -- Uninstall of `#__jtca` tables
 --
-DROP TABLE IF EXISTS `jt_lsc01s`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.lsc01';
-DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LSC01S' AND `type`='component';
 DROP TABLE IF EXISTS `jt_ljc01s`;
 DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljc01';
 DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC01S' AND `type`='component';
+DROP TABLE IF EXISTS `jt_lsc01s`;
+DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.lsc01';
+DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LSC01S' AND `type`='component';
 DROP TABLE IF EXISTS `jt_ljf01s`;
 DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljf01';
 DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJF01S' AND `type`='component';
@@ -583,6 +583,9 @@ DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJPES14S' AND `type`='component';
 DROP TABLE IF EXISTS `jt_ljjadg14s`;
 DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljjadg14';
 DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJJADG14S' AND `type`='component';
+DROP TABLE IF EXISTS `jt_lsps14s`;
+DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.lsps14';
+DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LSPS14S' AND `type`='component';
 DROP TABLE IF EXISTS `jt_ljf15s`;
 DELETE FROM #__content_types WHERE `type_alias` = 'com_jtca.ljf15';
 DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJF15S' AND `type`='component';

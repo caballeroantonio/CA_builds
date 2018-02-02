@@ -313,10 +313,10 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsps02_field2366',0)) : ?>
-						<td class="list-field2366">
+					<?php if ($this->params->get('list_show_lsps02_txt_field2366',0)) : ?>
+						<td class="list-txt_field2366">
 							<?php 
-								echo $item->field2366 != '' ? $item->field2366 : $empty;
+								echo $item->txt_field2366 != '' ? $item->txt_field2366 : $empty;
 							?>
 						</td>
 					<?php endif; ?>

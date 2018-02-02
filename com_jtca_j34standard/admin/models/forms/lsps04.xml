@@ -153,10 +153,40 @@
         >
         </field>  
         <field
-            name="field2383"
-            type="text"
-            label="COM_JTCA_LSPS04S_FIELD_FIELD2383_LABEL"
-            description="COM_JTCA_LSPS04S_FIELD_FIELD2383_DESC"
+            name="field2383_isMoral"
+            type="person"
+            label="COM_JTCA_LSPS04S_FIELD_FIELD2383_ISMORAL_LABEL"
+            description="COM_JTCA_LSPS04S_FIELD_FIELD2383_ISMORAL_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            name="field2383_paterno"
+            type="person"
+            label="COM_JTCA_LSPS04S_FIELD_FIELD2383_PATERNO_LABEL"
+            description="COM_JTCA_LSPS04S_FIELD_FIELD2383_PATERNO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            name="field2383_materno"
+            type="person"
+            label="COM_JTCA_LSPS04S_FIELD_FIELD2383_MATERNO_LABEL"
+            description="COM_JTCA_LSPS04S_FIELD_FIELD2383_MATERNO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            name="field2383_nombre"
+            type="person"
+            label="COM_JTCA_LSPS04S_FIELD_FIELD2383_NOMBRE_LABEL"
+            description="COM_JTCA_LSPS04S_FIELD_FIELD2383_NOMBRE_DESC"
             class="inputbox"
 			size="50"
 			maxlength="255"

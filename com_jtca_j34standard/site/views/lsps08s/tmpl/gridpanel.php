@@ -188,26 +188,92 @@ function getFields(){
     $fields['field2413'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'NOMBRE DEL PROYECTISTA',
-        'FIELD_CODE_NAME' => 'field2414',
+        'FIELD_NAME' => 'NOMBRE DEL PROYECTISTA (isMoral)',
+        'FIELD_CODE_NAME' => 'field2414_isMoral',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
+        'FIELDTYPE_ID' => 41,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD2414
+                FIELD_CODE_NAME_UPPER=FIELD2414_ISMORAL
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(255) DEFAULT NULL NOMBRE DEL PROYECTISTA
+                FIELD_DB=`` TINYINT(1) NOT NULL DEFAULT '0' NOMBRE DEL PROYECTISTA (isMoral)
 
-                FIELD_NAME_LATEX=NOMBRE DEL PROYECTISTA
-                FIELD_CODE_NAME_LATEX=field2414
+                FIELD_NAME_LATEX=NOMBRE DEL PROYECTISTA (isMoral)
+                FIELD_CODE_NAME_LATEX=field2414\_isMoral
                 FIELD_DBCOMMENT_LATEX=
 
 
     */
-    $fields['field2414'] = $field;
+    $fields['field2414_isMoral'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'NOMBRE DEL PROYECTISTA (paterno)',
+        'FIELD_CODE_NAME' => 'field2414_paterno',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 41,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=FIELD2414_PATERNO
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(255) DEFAULT NULL NOMBRE DEL PROYECTISTA (paterno)
+
+                FIELD_NAME_LATEX=NOMBRE DEL PROYECTISTA (paterno)
+                FIELD_CODE_NAME_LATEX=field2414\_paterno
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['field2414_paterno'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'NOMBRE DEL PROYECTISTA (materno)',
+        'FIELD_CODE_NAME' => 'field2414_materno',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 41,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=FIELD2414_MATERNO
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(45) DEFAULT NULL NOMBRE DEL PROYECTISTA (materno)
+
+                FIELD_NAME_LATEX=NOMBRE DEL PROYECTISTA (materno)
+                FIELD_CODE_NAME_LATEX=field2414\_materno
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['field2414_materno'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'NOMBRE DEL PROYECTISTA (nombre)',
+        'FIELD_CODE_NAME' => 'field2414_nombre',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 41,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=FIELD2414_NOMBRE
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(45) DEFAULT NULL NOMBRE DEL PROYECTISTA (nombre)
+
+                FIELD_NAME_LATEX=NOMBRE DEL PROYECTISTA (nombre)
+                FIELD_CODE_NAME_LATEX=field2414\_nombre
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['field2414_nombre'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'FECHA DE VENCIMIENTO DE SENTENCIA',
@@ -254,28 +320,6 @@ function getFields(){
     $fields['field2416'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'PROCEDIMIENTO',
-        'FIELD_CODE_NAME' => 'field2410',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD2410
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(45) DEFAULT NULL PROCEDIMIENTO
-
-                FIELD_NAME_LATEX=PROCEDIMIENTO
-                FIELD_CODE_NAME_LATEX=field2410
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['field2410'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
         'FIELD_NAME' => 'SENTIDO DE LA RESOLUCIÓN',
         'FIELD_CODE_NAME' => 'field2417',
         'FIELD_DESCRIPTION' => '',//
@@ -296,6 +340,28 @@ function getFields(){
 
     */
     $fields['field2417'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'PROCEDIMIENTO',
+        'FIELD_CODE_NAME' => 'field2410',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 1,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=FIELD2410
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(45) DEFAULT NULL PROCEDIMIENTO
+
+                FIELD_NAME_LATEX=PROCEDIMIENTO
+                FIELD_CODE_NAME_LATEX=field2410
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['field2410'] = $field;
     return $fields;
 }
 

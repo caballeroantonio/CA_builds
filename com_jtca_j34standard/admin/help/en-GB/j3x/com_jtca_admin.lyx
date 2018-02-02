@@ -180,7 +180,7 @@ caballeroantonio (caballeroantonio.com)
 \end_layout
 
 \begin_layout Date
-Revisión 1.0.2 del 
+Revisión 1.0.3 del 
 \begin_inset ERT
 status collapsed
 
@@ -260,6 +260,18 @@ En el futuro se requerirá modificar los objetos y quitar el "_s" del code_name 
 \end_layout
 \begin_layout Standard
 20171222 Solicitaron que en los libros de ingresos y egresos se valide la captura única de los números de billete
+\end_layout
+\begin_layout Standard
+10.0 objetos ljc_
+\end_layout
+\begin_layout Standard
+1.0.1 todos los objetos l% restantes (not lsps included)
+\end_layout
+\begin_layout Standard
+1.0.2.sql for lsps__ objects (not UCM CHO included)
+\end_layout
+\begin_layout Standard
+1.0.3 lsps__ (UCM CHO included)
 \end_layout
 \begin_layout Standard
  
@@ -3655,11 +3667,226 @@ Diagrama entidad relación
 \begin_layout Standard
 \end_layout
 
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
 \begin_layout Section
 Modelo de datos (tablas)
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Modelo-de-datos"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Subsection
+jt_ljc01s
+\end_layout
+
+\begin_layout Subparagraph
+Descripción
+\end_layout
+
+\begin_layout Standard
+Es la tabla para almacenar LIBRO DE GOBIERNO
+\end_layout
+
+\begin_layout Standard
+<br/>Este libro tiene reglas partículares en el layout
+\end_layout
+
+\begin_layout Subsubsection
+Diccionario de datos tx
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="40text%">
+<row endhead="true" endfirsthead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nombre 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DataType
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "ljc01_admin.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Lista de campos}
+\backslash
+
+\backslash
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename der_ljc01s.svg
+	lyxscale 30
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama entidad relación
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -3867,209 +4094,6 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename der_lsc01s.svg
-	lyxscale 30
-	width 80text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Diagrama entidad relación
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\end_layout
-
-\begin_layout Subsection
-jt_ljc01s
-\end_layout
-
-\begin_layout Subparagraph
-Descripción
-\end_layout
-
-\begin_layout Standard
-Es la tabla para almacenar LIBRO DE GOBIERNO
-\end_layout
-
-\begin_layout Standard
-<br/>Este libro tiene reglas partículares en el layout
-\end_layout
-
-\begin_layout Subsubsection
-Diccionario de datos tx
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="3">
-<features islongtable="true" longtabularalignment="center">
-<column alignment="center" valignment="top" width="20text%">
-<column alignment="center" valignment="top" width="20text%">
-<column alignment="center" valignment="top" width="40text%">
-<row endhead="true" endfirsthead="true">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Nombre 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DataType
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Descripción
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-preview true
-filename "ljc01_admin.tex"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{Lista de campos}
-\backslash
-
-\backslash
-%
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename der_ljc01s.svg
 	lyxscale 30
 	width 80text%
 
@@ -13204,6 +13228,9 @@ Es la tabla para almacenar LIBRO DE GOBIERNO
 \end_layout
 
 \begin_layout Standard
+\begin_layout Standard
+En diversos libros solicitaron campos como: PENA DE PRISIÓN, PENA, PENA TOTAL lo homologué a PENA TOTAL O MEDIDA PRIVATIVA
+\end_layout
 \end_layout
 
 \begin_layout Subsubsection
@@ -14825,13 +14852,16 @@ Es la tabla para almacenar LIBRO DE GOBIERNO (SISTEMA TRADICIONAL)
 
 \begin_layout Standard
 \begin_layout Standard
-El campo pena debe decir PENA O MEDIDA PRIVATIVA.
-\end_layout
-\begin_layout Standard
 Dependiendo del sistema jurídico, tradicional o nuevo, los términos jurídicos cambian de acusado a imputado, pero la implementación le permite al usuario elegir el témino adecuado.
 \end_layout
 \begin_layout Standard
 FECHA DE REMISIÓN DEL TESTIMONIO Y DEVOLUCIÓN DE LA CAUSA es uno  o dos eventos?
+\end_layout
+\begin_layout Standard
+<strong>CHANGELOG</strong>
+\end_layout
+\begin_layout Standard
+El campo pena debe decir PENA O MEDIDA PRIVATIVA, lo cambié por PENA TOTAL O MEDIDA PRIVATIVA
 \end_layout
 \end_layout
 
@@ -41584,6 +41614,208 @@ Diagrama entidad relación
 \end_layout
 
 \begin_layout Subsection
+jt_lsps14s
+\end_layout
+
+\begin_layout Subparagraph
+Descripción
+\end_layout
+
+\begin_layout Standard
+Es la tabla para almacenar LIBRO DE OFICIOS
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Subsubsection
+Diccionario de datos tx
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="40text%">
+<row endhead="true" endfirsthead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nombre 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DataType
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "lsps14_admin.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Lista de campos}
+\backslash
+
+\backslash
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename der_lsps14s.svg
+	lyxscale 30
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama entidad relación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Subsection
 jt_ljf15s
 \end_layout
 
@@ -48689,6 +48921,413 @@ Interfaces
 \end_layout
 
 \begin_layout Subsubsection
+Libro de gobierno
+\end_layout
+
+\begin_layout Subparagraph
+Descripción
+\end_layout
+
+\begin_layout Standard
+<br/>Este libro tiene reglas partículares en el layout
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="60text%">
+<row endhead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Nombre
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "ljc01_user.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Lista de campos en Libro de gobierno}
+\backslash
+
+\backslash
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "LIBRO DE GOBIERNO - Grid Panel Layout"
+target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]&layout=gridpanel"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_ljc01s.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Grid Panel Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "LIBRO DE GOBIERNO - Default List Layout"
+target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectplural.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Default List Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "LIBRO DE GOBIERNO - Blog Layout"
+target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]&layout=blog"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectplural&layout=blog.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Blog Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "LIBRO DE GOBIERNO - Single LIBRO DE GOBIERNO Layout"
+target "SERVER?option=com_jtca&view=ljc01&id=1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobject&id=1.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Single LIBRO DE GOBIERNO Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "LIBRO DE GOBIERNO - Single LIBRO DE GOBIERNO Article Layout"
+target "SERVER?option=com_jtca&view=ljc01&layout=article&id=1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobject&layout=article&id=1.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Single LIBRO DE GOBIERNO Article Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "LIBRO DE GOBIERNO - Create LIBRO DE GOBIERNO"
+target "SERVER?option=com_jtca&view=ljc01form&layout=edit&id=1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectform&layout=edit&id=1.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Create LIBRO DE GOBIERNO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Subsubsection
 Libreta de registro de sentencias -turno- (oficial)
 \end_layout
 
@@ -49097,413 +49736,6 @@ status collapsed
 
 \begin_layout Plain Layout
 Create LIBRETA DE REGISTRO DE SENTENCIAS -TURNO- (OFICIAL)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\end_layout
-
-\begin_layout Standard
-\end_layout
-
-\begin_layout Standard
-\end_layout
-
-\begin_layout Subsubsection
-Libro de gobierno
-\end_layout
-
-\begin_layout Subparagraph
-Descripción
-\end_layout
-
-\begin_layout Standard
-<br/>Este libro tiene reglas partículares en el layout
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="2">
-<features islongtable="true" longtabularalignment="center">
-<column alignment="center" valignment="top" width="20text%">
-<column alignment="center" valignment="top" width="60text%">
-<row endhead="true">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Nombre
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Descripción
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "ljc01_user.tex"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{Lista de campos en Libro de gobierno}
-\backslash
-
-\backslash
-%
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph
-\begin_inset CommandInset href
-LatexCommand href
-name "LIBRO DE GOBIERNO - Grid Panel Layout"
-target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]&layout=gridpanel"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_ljc01s.jpg
-	lyxscale 30
-	width 80col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Grid Panel Layout
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph
-\begin_inset CommandInset href
-LatexCommand href
-name "LIBRO DE GOBIERNO - Default List Layout"
-target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectplural.jpg
-	lyxscale 30
-	width 80col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Default List Layout
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph
-\begin_inset CommandInset href
-LatexCommand href
-name "LIBRO DE GOBIERNO - Blog Layout"
-target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]&layout=blog"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectplural&layout=blog.jpg
-	lyxscale 30
-	width 80col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Blog Layout
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph
-\begin_inset CommandInset href
-LatexCommand href
-name "LIBRO DE GOBIERNO - Single LIBRO DE GOBIERNO Layout"
-target "SERVER?option=com_jtca&view=ljc01&id=1"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobject&id=1.jpg
-	lyxscale 30
-	width 80col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Single LIBRO DE GOBIERNO Layout
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph
-\begin_inset CommandInset href
-LatexCommand href
-name "LIBRO DE GOBIERNO - Single LIBRO DE GOBIERNO Article Layout"
-target "SERVER?option=com_jtca&view=ljc01&layout=article&id=1"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobject&layout=article&id=1.jpg
-	lyxscale 30
-	width 80col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Single LIBRO DE GOBIERNO Article Layout
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph
-\begin_inset CommandInset href
-LatexCommand href
-name "LIBRO DE GOBIERNO - Create LIBRO DE GOBIERNO"
-target "SERVER?option=com_jtca&view=ljc01form&layout=edit&id=1"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectform&layout=edit&id=1.jpg
-	lyxscale 30
-	width 80col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Create LIBRO DE GOBIERNO
 \end_layout
 
 \end_inset
@@ -67807,6 +68039,9 @@ Descripción
 \end_layout
 
 \begin_layout Standard
+\begin_layout Standard
+En diversos libros solicitaron campos como: PENA DE PRISIÓN, PENA, PENA TOTAL lo homologué a PENA TOTAL O MEDIDA PRIVATIVA
+\end_layout
 \end_layout
 
 \begin_layout Standard
@@ -71060,13 +71295,16 @@ Descripción
 
 \begin_layout Standard
 \begin_layout Standard
-El campo pena debe decir PENA O MEDIDA PRIVATIVA.
-\end_layout
-\begin_layout Standard
 Dependiendo del sistema jurídico, tradicional o nuevo, los términos jurídicos cambian de acusado a imputado, pero la implementación le permite al usuario elegir el témino adecuado.
 \end_layout
 \begin_layout Standard
 FECHA DE REMISIÓN DEL TESTIMONIO Y DEVOLUCIÓN DE LA CAUSA es uno  o dos eventos?
+\end_layout
+\begin_layout Standard
+<strong>CHANGELOG</strong>
+\end_layout
+\begin_layout Standard
+El campo pena debe decir PENA O MEDIDA PRIVATIVA, lo cambié por PENA TOTAL O MEDIDA PRIVATIVA
 \end_layout
 \end_layout
 
@@ -124525,6 +124763,412 @@ status collapsed
 
 \begin_layout Plain Layout
 Create LIBRO DE CONTROL DE PEDIMENTOS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Subsubsection
+Libro de oficios
+\end_layout
+
+\begin_layout Subparagraph
+Descripción
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="60text%">
+<row endhead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Nombre
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "lsps14_user.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Lista de campos en Libro de oficios}
+\backslash
+
+\backslash
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "LIBRO DE OFICIOS - Grid Panel Layout"
+target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]&layout=gridpanel"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_lsps14s.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Grid Panel Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "LIBRO DE OFICIOS - Default List Layout"
+target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectplural.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Default List Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "LIBRO DE OFICIOS - Blog Layout"
+target "SERVER?option=com_jtca&view=[%%ccompobjectplural%%]&layout=blog"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectplural&layout=blog.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Blog Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "LIBRO DE OFICIOS - Single LIBRO DE OFICIOS Layout"
+target "SERVER?option=com_jtca&view=lsps14&id=1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobject&id=1.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Single LIBRO DE OFICIOS Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "LIBRO DE OFICIOS - Single LIBRO DE OFICIOS Article Layout"
+target "SERVER?option=com_jtca&view=lsps14&layout=article&id=1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobject&layout=article&id=1.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Single LIBRO DE OFICIOS Article Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "LIBRO DE OFICIOS - Create LIBRO DE OFICIOS"
+target "SERVER?option=com_jtca&view=lsps14form&layout=edit&id=1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectform&layout=edit&id=1.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Create LIBRO DE OFICIOS
 \end_layout
 
 \end_inset

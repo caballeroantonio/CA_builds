@@ -137,23 +137,17 @@
         >
         </field>  
         <field
-            name="field2351"
-            type="text"
-            label="COM_JTCA_LSPS01S_FIELD_FIELD2351_LABEL"
-            description="COM_JTCA_LSPS01S_FIELD_FIELD2351_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
+            name="txt_field2351"
+            type="combo_suggest"
+            label="COM_JTCA_LSPS01S_FIELD_TXT_FIELD2351_LABEL"
+            description="COM_JTCA_LSPS01S_FIELD_TXT_FIELD2351_DESC"
         >
         </field>  
         <field
-            name="field2352"
-            type="text"
-            label="COM_JTCA_LSPS01S_FIELD_FIELD2352_LABEL"
-            description="COM_JTCA_LSPS01S_FIELD_FIELD2352_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
+            name="txt_field2352"
+            type="combo_suggest"
+            label="COM_JTCA_LSPS01S_FIELD_TXT_FIELD2352_LABEL"
+            description="COM_JTCA_LSPS01S_FIELD_TXT_FIELD2352_DESC"
         >
         </field>  
         <field

@@ -258,10 +258,31 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsps04_field2383',0)) : ?>
-						<td class="list-field2383">
+					<?php if ($this->params->get('list_show_lsps04_field2383_isMoral',0)) : ?>
+						<td class="list-field2383_isMoral">
 							<?php 
-								echo $item->field2383 != '' ? $item->field2383 : $empty;
+								echo $item->field2383_isMoral != '' ? $item->field2383_isMoral : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsps04_field2383_paterno',0)) : ?>
+						<td class="list-field2383_paterno">
+							<?php 
+								echo $item->field2383_paterno != '' ? $item->field2383_paterno : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsps04_field2383_materno',0)) : ?>
+						<td class="list-field2383_materno">
+							<?php 
+								echo $item->field2383_materno != '' ? $item->field2383_materno : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsps04_field2383_nombre',0)) : ?>
+						<td class="list-field2383_nombre">
+							<?php 
+								echo $item->field2383_nombre != '' ? $item->field2383_nombre : $empty;
 							?>
 						</td>
 					<?php endif; ?>

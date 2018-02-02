@@ -265,10 +265,31 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsps08_field2414',0)) : ?>
-						<td class="list-field2414">
+					<?php if ($this->params->get('list_show_lsps08_field2414_isMoral',0)) : ?>
+						<td class="list-field2414_isMoral">
 							<?php 
-								echo $item->field2414 != '' ? $item->field2414 : $empty;
+								echo $item->field2414_isMoral != '' ? $item->field2414_isMoral : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsps08_field2414_paterno',0)) : ?>
+						<td class="list-field2414_paterno">
+							<?php 
+								echo $item->field2414_paterno != '' ? $item->field2414_paterno : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsps08_field2414_materno',0)) : ?>
+						<td class="list-field2414_materno">
+							<?php 
+								echo $item->field2414_materno != '' ? $item->field2414_materno : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsps08_field2414_nombre',0)) : ?>
+						<td class="list-field2414_nombre">
+							<?php 
+								echo $item->field2414_nombre != '' ? $item->field2414_nombre : $empty;
 							?>
 						</td>
 					<?php endif; ?>
@@ -286,17 +307,17 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsps08_field2410',0)) : ?>
-						<td class="list-field2410">
-							<?php 
-								echo $item->field2410 != '' ? $item->field2410 : $empty;
-							?>
-						</td>
-					<?php endif; ?>
 					<?php if ($this->params->get('list_show_lsps08_field2417',0)) : ?>
 						<td class="list-field2417">
 							<?php 
 								echo $item->field2417 != '' ? $item->field2417 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsps08_field2410',0)) : ?>
+						<td class="list-field2410">
+							<?php 
+								echo $item->field2410 != '' ? $item->field2410 : $empty;
 							?>
 						</td>
 					<?php endif; ?>

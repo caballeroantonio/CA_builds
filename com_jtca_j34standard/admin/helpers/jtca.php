@@ -94,19 +94,19 @@ class JtCaHelper extends JHelperContent
 	public static function addSubmenu($view_name)
 	{
 
-		$active = $view_name == 'lsc01s'? true : false;
-		JHtmlSidebar::addEntry(
-			JText::_('COM_JTCA_LSC01S_SUBMENU'),
-			'index.php?option=com_jtca&view=lsc01s',
-			$view_name == 'lsc01s',
-			$active
-		);
-	
 		$active = $view_name == 'ljc01s'? true : false;
 		JHtmlSidebar::addEntry(
 			JText::_('COM_JTCA_LJC01S_SUBMENU'),
 			'index.php?option=com_jtca&view=ljc01s',
 			$view_name == 'ljc01s',
+			$active
+		);
+	
+		$active = $view_name == 'lsc01s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LSC01S_SUBMENU'),
+			'index.php?option=com_jtca&view=lsc01s',
+			$view_name == 'lsc01s',
 			$active
 		);
 	
@@ -1579,6 +1579,14 @@ class JtCaHelper extends JHelperContent
 			JText::_('COM_JTCA_LJJADG14S_SUBMENU'),
 			'index.php?option=com_jtca&view=ljjadg14s',
 			$view_name == 'ljjadg14s',
+			$active
+		);
+	
+		$active = $view_name == 'lsps14s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_LSPS14S_SUBMENU'),
+			'index.php?option=com_jtca&view=lsps14s',
+			$view_name == 'lsps14s',
 			$active
 		);
 	

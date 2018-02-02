@@ -166,26 +166,92 @@ function getFields(){
     $fields['field2382'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'NOMBRE DEL ACTUARIO',
-        'FIELD_CODE_NAME' => 'field2383',
+        'FIELD_NAME' => 'NOMBRE DEL ACTUARIO (isMoral)',
+        'FIELD_CODE_NAME' => 'field2383_isMoral',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
+        'FIELDTYPE_ID' => 41,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD2383
+                FIELD_CODE_NAME_UPPER=FIELD2383_ISMORAL
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(255) DEFAULT NULL NOMBRE DEL ACTUARIO
+                FIELD_DB=`` TINYINT(1) NOT NULL DEFAULT '0' NOMBRE DEL ACTUARIO (isMoral)
 
-                FIELD_NAME_LATEX=NOMBRE DEL ACTUARIO
-                FIELD_CODE_NAME_LATEX=field2383
+                FIELD_NAME_LATEX=NOMBRE DEL ACTUARIO (isMoral)
+                FIELD_CODE_NAME_LATEX=field2383\_isMoral
                 FIELD_DBCOMMENT_LATEX=
 
 
     */
-    $fields['field2383'] = $field;
+    $fields['field2383_isMoral'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'NOMBRE DEL ACTUARIO (paterno)',
+        'FIELD_CODE_NAME' => 'field2383_paterno',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 41,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=FIELD2383_PATERNO
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(255) DEFAULT NULL NOMBRE DEL ACTUARIO (paterno)
+
+                FIELD_NAME_LATEX=NOMBRE DEL ACTUARIO (paterno)
+                FIELD_CODE_NAME_LATEX=field2383\_paterno
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['field2383_paterno'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'NOMBRE DEL ACTUARIO (materno)',
+        'FIELD_CODE_NAME' => 'field2383_materno',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 41,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=FIELD2383_MATERNO
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(45) DEFAULT NULL NOMBRE DEL ACTUARIO (materno)
+
+                FIELD_NAME_LATEX=NOMBRE DEL ACTUARIO (materno)
+                FIELD_CODE_NAME_LATEX=field2383\_materno
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['field2383_materno'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'NOMBRE DEL ACTUARIO (nombre)',
+        'FIELD_CODE_NAME' => 'field2383_nombre',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 41,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=FIELD2383_NOMBRE
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(45) DEFAULT NULL NOMBRE DEL ACTUARIO (nombre)
+
+                FIELD_NAME_LATEX=NOMBRE DEL ACTUARIO (nombre)
+                FIELD_CODE_NAME_LATEX=field2383\_nombre
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['field2383_nombre'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'FECHA DEL AUTO POR DELIGENCIAR',

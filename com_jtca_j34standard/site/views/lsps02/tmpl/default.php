@@ -133,7 +133,7 @@ $empty = $component->params->get('default_empty_field', '');
 								($params->get('show_lsps02_field2363')) OR 
 								($params->get('show_lsps02_field2364')) OR 
 								($params->get('show_lsps02_field2365')) OR 
-								($params->get('show_lsps02_field2366')) OR 
+								($params->get('show_lsps02_txt_field2366')) OR 
 								($params->get('show_lsps02_field2367')) OR 
 								($params->get('show_lsps02_field2368')) OR 
 								($params->get('show_lsps02_field2369')) OR 
@@ -321,14 +321,14 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_lsps02_field2366')) : ?>
+						<?php if ($params->get('show_lsps02_txt_field2366')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_JTCA_LSPS02S_FIELD_FIELD2366_LABEL'); ?>
+								<?php echo JText::_('COM_JTCA_LSPS02S_FIELD_TXT_FIELD2366_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->field2366 != '' ? $this->item->field2366 : $empty;
+									echo $this->item->txt_field2366 != '' ? $this->item->txt_field2366 : $empty;
 								?>
 							</span>
 						</div>	

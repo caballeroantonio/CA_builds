@@ -79,16 +79,16 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
 	{
 		$buttons = array();
 		$buttons[] = array(
-                    'link'=>'index.php?option=com_jtca&view=lsc01s&layout=gridpanel&tmpl=component',
-                    'object'=>'lsc01s',
-                    'text'=>'LIBRETA DE REGISTRO DE SENTENCIAS -TURNO- (OFICIAL',//JText::_('JTCA_COMPONENT_WIZARD'),
-                    'desc'=>JText::_('COM_JTCA_LSC01_DESCRIPTION')
-                );
-		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljc01s&layout=gridpanel&tmpl=component',
                     'object'=>'ljc01s',
                     'text'=>'LIBRO DE GOBIERNO',//JText::_('JTCA_COMPONENT_WIZARD'),
                     'desc'=>JText::_('COM_JTCA_LJC01_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=lsc01s&layout=gridpanel&tmpl=component',
+                    'object'=>'lsc01s',
+                    'text'=>'LIBRETA DE REGISTRO DE SENTENCIAS -TURNO- (OFICIAL',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LSC01_DESCRIPTION')
                 );
 		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljf01s&layout=gridpanel&tmpl=component',
@@ -1193,6 +1193,12 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
                     'object'=>'ljjadg14s',
                     'text'=>'LIBRO DE CONTROL DE PEDIMENTOS',//JText::_('JTCA_COMPONENT_WIZARD'),
                     'desc'=>JText::_('COM_JTCA_LJJADG14_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=lsps14s&layout=gridpanel&tmpl=component',
+                    'object'=>'lsps14s',
+                    'text'=>'LIBRO DE OFICIOS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_LSPS14_DESCRIPTION')
                 );
 		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=ljf15s&layout=gridpanel&tmpl=component',

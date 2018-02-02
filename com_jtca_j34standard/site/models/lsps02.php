@@ -66,7 +66,7 @@ class JtCaModelLsps02 extends JModelItem
 				'field2363','a.field2363',
 				'field2364','a.field2364',
 				'field2365','a.field2365',
-				'field2366','a.field2366',
+				'txt_field2366','a.txt_field2366',
 				'field2367','a.field2367',
 				'field2368','a.field2368',
 				'field2369','a.field2369',
