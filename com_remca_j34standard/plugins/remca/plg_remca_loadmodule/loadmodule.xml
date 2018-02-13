@@ -27,7 +27,7 @@
 <extension type="plugin" version="3.4" group="remca" method="upgrade">
     <name>plg_remca_loadmodule</name>
     <author>caballeroantonio</author>
-    <creationDate>January 2018</creationDate>
+    <creationDate>February 2018</creationDate>
     <copyright>
     </copyright>
     <license>
@@ -46,6 +46,25 @@
 	</languages>
 	<config>
 		<fields name="params">
+            <fieldset
+                name="house_settings"
+				label="PLG_REMCA_HOUSES_LOADMODULE_FIELDSET_LABEL"
+                description="PLG_REMCA_HOUSES_LOADMODULE_FIELDSET_DESC"
+              >
+                <field
+                    name="house_style"
+                    type="list"
+					label="PLG_REMCA_LOADMODULE_FIELD_STYLE_LABEL"
+                    description="PLG_REMCA_HOUSES_LOADMODULE_FIELD_STYLE_DESC"
+                    default="table"
+                >
+                    <option value="table">PLG_REMCA_LOADMODULE_FIELD_VALUE_TABLE</option>
+                    <option value="horz">PLG_REMCA_LOADMODULE_FIELD_VALUE_HORIZONTAL</option>
+                    <option value="xhtml">PLG_REMCA_LOADMODULE_FIELD_VALUE_DIVS</option>
+                    <option value="rounded">PLG_REMCA_LOADMODULE_FIELD_VALUE_MULTIPLEDIVS</option>
+                    <option value="none">PLG_REMCA_LOADMODULE_FIELD_VALUE_RAW</option>
+                </field>
+            </fieldset>
         </fields>
 	</config>
 </extension>

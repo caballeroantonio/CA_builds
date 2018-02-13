@@ -36,6 +36,15 @@ require_once JPATH_COMPONENT.'/helpers/remca.php';
 $app = JFactory::getApplication();
 $user  = JFactory::getUser();
 
+if ($app->input->get('view') === 'house' AND $app->input->get('layout') === 'pagebreak')
+{
+	if (!$user->authorise('core.edit', 'com_remca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
 
 if ($app->input->get('view') === 'houses' AND $app->input->get('layout') === 'modal')
 {

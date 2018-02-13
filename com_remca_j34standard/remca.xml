@@ -28,7 +28,7 @@
 <extension type="component" version="3.4" method="upgrade">
     <name>com_remca</name>
     <author>caballeroantonio</author>
-    <creationDate>January 2018</creationDate>
+    <creationDate>February 2018</creationDate>
     <copyright>
     </copyright>
     <license>
@@ -50,7 +50,7 @@
     </files>
     <languages folder="site/language">
 			<language tag="en-GB">en-GB/en-GB.com_remca.ini</language>
-			<language tag="en-GB">es-ES/es-ES.com_remca.ini</language>
+			<language tag="es-ES">es-ES/es-ES.com_remca.ini</language>
     </languages>
     <media destination="com_remca" folder="media">
         <folder>css</folder>
@@ -133,9 +133,12 @@
     </administration>
     <modules>
         <module folder="modules" module="mod_remca" />
+        <module folder="modules" module="mod_remca_houses" />
     </modules>
 
     <plugins>
+        <plugin folder="plugins/finder" plugin="plg_finder_houses" group="finder" />
+        <plugin folder="plugins/search" plugin="plg_search_houses" group="search" />
         <plugin folder="plugins/remca" plugin="plg_remca_emailcloak" group="remca" />
         <plugin folder="plugins/remca" plugin="plg_remca_finder" group="remca" />
         <plugin folder="plugins/remca" plugin="plg_remca_itemnavigation" group="remca" />

@@ -1918,7 +1918,7 @@ class RemcaHelper extends JHelperContent
 //    if (!function_exists('getWhereUsergroupsCondition')) {
 
             /**
-            me parece una implementaciÃ³n incongruente ACL 
+            me parece una implementación incongruente ACL 
             */
       function REMgetWhereUsergroupsCondition($table_alias) { 
                     return ' 1 ';

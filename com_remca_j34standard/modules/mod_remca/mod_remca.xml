@@ -27,7 +27,7 @@
 <extension type="module" version="3.4" client="site" method="upgrade">
     <name>mod_remca</name>
     <author>caballeroantonio</author>
-    <creationDate>January 2018</creationDate>
+    <creationDate>February 2018</creationDate>
     <copyright>
     </copyright>
     <license>
@@ -61,6 +61,7 @@
 			        class="chzn-color"
                     required="true"
 		        >
+                    <option value="House:Houses">House</option>
                 </field>
                 <field
 					name="user_id"
@@ -82,6 +83,10 @@
 			        class="chzn-color"
 				>
 
+                    <option value="houses h_dsc">MOD_REMCA_HOUSES_VALUE_MOST_HITS</option>
+                    <option value="houses n_asc">MOD_REMCA_HOUSES_VALUE_NAME_ALPHA</option>
+                    <option value="houses n_dsc">MOD_REMCA_HOUSES_VALUE_NAME_RALPHA</option>
+                    <option value="houses o_asc">MOD_REMCA_HOUSES_VALUE_ORDERING</option>
                 </field>
                 <field
 					name="count"

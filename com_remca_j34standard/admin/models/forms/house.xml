@@ -107,7 +107,7 @@
             description="COM_REMCA_HOUSES_FIELD_DESCRIPTION_DESC"
             filter="JComponentHelper::filterText"
             buttons="true"
-            hide="article,pagebreak"                
+            hide="article"
         />
         <field
             name="rules"

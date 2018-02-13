@@ -27,7 +27,7 @@
 <extension type="plugin" version="3.4" group="remca" method="upgrade">
     <name>plg_remca_itemnavigation</name>
     <author>caballeroantonio</author>
-    <creationDate>January 2018</creationDate>
+    <creationDate>February 2018</creationDate>
     <copyright>
     </copyright>
     <license>
@@ -51,6 +51,48 @@
 			<fieldset
 			name="basic"
 			>
+			    <field
+			        name="house_position"
+			        type="radio"
+				    label="PLG_REMCA_HOUSES_ITEMNAVIGATION_FIELD_POSITION_LABEL"
+				    description="PLG_REMCA_HOUSES_ITEMNAVIGATION_FIELD_POSITION_DESC"
+                    class="btn-group"
+				    default="1"
+			    >
+			        <option value="1">PLG_REMCA_ITEMNAVIGATION_FIELD_VALUE_BELOW</option>
+			        <option value="0">PLG_REMCA_ITEMNAVIGATION_FIELD_VALUE_ABOVE</option>
+			    </field>
+			    <field name="house_relative"
+			        type="radio"
+			        description="PLG_REMCA_HOUSES_ITEMNAVIGATION_FIELD_RELATIVE_DESC"
+			        label="PLG_REMCA_HOUSES_ITEMNAVIGATION_FIELD_RELATIVE_LABEL"
+                    class="btn-group"    
+			        default="1"
+			    >
+			        <option value="1">PLG_REMCA_HOUSES_ITEMNAVIGATION_FIELD_VALUE_HOUSE</option>
+			        <option value="0">PLG_REMCA_ITEMNAVIGATION_FIELD_VALUE_TEXT</option>
+			    </field>
+			    <field
+			        name="keep_house_itemid"
+			        type="radio"
+			        label="PLG_REMCA_KEEP_ITEMID_LABEL"
+			        description="PLG_REMCA_HOUSES_KEEP_ITEMID_DESC"
+                    class="btn-group"    
+			        default="1"
+			    >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="display"
+                    type="list"
+                    label="PLG_REMCA_ITEMNAVIGATION_FIELD_DISPLAY_LABEL"
+                    description="PLG_REMCA_[ITEMNAVIGATION_FIELD_DISPLAY_DESC"
+                    default="0"
+    			>
+                    <option value="0">PLG_REMCA_ITEMNAVIGATION_FIELD_VALUE_NEXTPREV</option>
+                    <option value="1">PLG_REMCA_HOUSES_ITEMNAVIGATION_FIELD_VALUE_NAME</option>
+                </field>
             </fieldset>
 		</fields>
 	</config>

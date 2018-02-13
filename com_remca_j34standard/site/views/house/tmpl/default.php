@@ -71,6 +71,11 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php echo $this->escape($this->params->get('page_heading')); ?>
 	</h1>
 	<?php endif; ?>
+	<?php
+		if (!empty($this->item->pagination) AND $this->item->pagination AND !$this->item->paginationposition AND $this->item->paginationrelative):
+			 echo $this->item->pagination;
+		endif;
+	?>	
 	<?php if ($params->get('show_house_icons',-1) >= 0) : ?>
 		<?php if ($params->get('show_house_print_icon') 
 			OR $params->get('show_house_email_icon') 
@@ -136,9 +141,24 @@ $empty = $component->params->get('default_empty_field', '');
 	<?php endif; ?>	
 	<div style="clear:both; padding-top: 10px;">
 
+		<?php 
+			if (isset ($this->item->toc)) : 
+				echo $this->item->toc; 
+			endif;
+		?>		
+				<?php
+					if (!empty($this->item->pagination) AND $this->item->pagination AND !$this->item->paginationposition AND !$this->item->paginationrelative) :
+						echo $this->item->pagination;
+					endif;
+				?>		
 				<div>
 				<?php echo $this->item->description; ?>
 				</div>
+				<?php
+					if (!empty($this->item->pagination) AND $this->item->pagination AND $this->item->paginationposition AND !$this->item->paginationrelative):
+						echo $this->item->pagination;
+					endif;
+				?>		
 	</div>
 	<div style="padding-top: 10px;">
 
@@ -908,6 +928,11 @@ $empty = $component->params->get('default_empty_field', '');
 					</fieldset>	
 			<?php endif;?>	
 			</form>
+		<?php
+			if (!empty($this->item->pagination) AND $this->item->pagination AND $this->item->paginationposition AND $this->item->paginationrelative):
+				 echo $this->item->pagination;
+			endif;
+		?>	
 		<?php echo $this->item->event->afterDisplayHouse; ?>
 	</div>		
 </div>

@@ -35,6 +35,79 @@ defined('_JEXEC') or die;
 class PlgRemcaFinder extends JPlugin
 {
 	/**
+	 * Smart Search after save house method
+	 * House is passed by reference, but after the save, so no changes will be saved.
+	 * Method is called right after the house is saved
+	 *
+	 * @param	string		$context	The context of the item passed to the plugin
+	 * @param	object		$house	A JTableHouse object
+	 * @param	boolean		$is_new		If the house has just been created
+	 */
+	public function onHouseAfterSave($context, $house, $is_new)
+	{
+		$dispatcher	= JEventDispatcher::getInstance();
+		JPluginHelper::importPlugin('finder.houses');
+
+		// Trigger the onFinderAfterSave event.
+		$dispatcher->trigger('onFinderAfterSave', array($context, $house, $is_new));
+
+	}
+	/**
+	 * Smart Search before save house method
+	 * House is passed by reference, but after the save, so no changes will be saved.
+	 * Method is called right after the content is saved
+	 *
+	 * @param	string		$context	The context of the item passed to the plugin
+	 * @param	object		$house	A JTableHouse object
+	 * @param	boolean		$is_new		If the house has just been created
+	 */
+	public function onHouseBeforeSave($context, $house, $is_new)
+	{
+		$dispatcher	= JEventDispatcher::getInstance();
+		JPluginHelper::importPlugin('finder.houses');
+
+		// Trigger the onFinderBeforeSave event.
+		$dispatcher->trigger('onFinderBeforeSave', array($context, $house, $is_new));
+
+	}
+	/**
+	 * Smart Search after delete house method
+	 * house is passed by reference, but after the save, so no changes will be saved.
+	 * Method is called right after the house is saved
+	 *
+	 * @param	string		$context	The context of the item passed to the plugin
+	 * @param	object		$house	A JTableHouse object
+	 * 
+	 */
+	public function onHouseAfterDelete($context, $house)
+	{
+		$dispatcher	= JEventDispatcher::getInstance();
+		JPluginHelper::importPlugin('finder.houses');
+
+		// Trigger the onFinderAfterDelete event.
+		$dispatcher->trigger('onFinderAfterDelete', array($context, $house));
+
+	}
+	/**
+	 * Smart Search change state house method
+	 * Method to update the link information for items that have been changed
+	 * from outside the edit screen. This is fired when the item's state,
+	 * is changed from the list view.
+	 *
+	 * @param   string   $context  The context for the item passed to the plugin.
+	 * @param   array    $pks      A list of primary key ids of the records that have changed state.
+	 * @param   integer  $value    The value of the state that the records have been changed to.
+	 * 
+	 */
+	public function onHouseChangeState($context, $pks, $value)
+	{
+		$dispatcher	= JEventDispatcher::getInstance();
+		JPluginHelper::importPlugin('finder.houses');
+
+		// Trigger the onFinderChangeState event.
+		$dispatcher->trigger('onFinderChangeState', array($context, $pks, $value));
+	}
+	/**
 	 * Smart Search change category state method
 	 *
 	 * @param   string   $extension  The extension whose category has been updated.

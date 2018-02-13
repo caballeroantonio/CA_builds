@@ -39,6 +39,58 @@ class PlgRemcaVote extends JPlugin
 	protected $autoloadLanguage = true;
 
 	/**
+	 * On Before Display event procedure for Voting
+	 * 
+	 * @param	string			$context	Context of the paging
+	 * @param	array			&$row		Passed by reference and row updated with html for prev and/or next buttons
+	 * @param	json/registry	&$params	Item navigation parameters	
+	 * @param	integer			$page		Current Item page		
+	 * 
+	 * @return  string			$html		HTML to be output
+	 */			
+	public function onHouseBeforeDisplay($context, &$row, &$params, $page=0)
+	{
+		$parts = explode(".", $context);
+		if ($parts[0] != 'com_remca')
+		{
+			return false;
+		}	
+		$html = '';
+
+		if (!empty($params) AND $params->get('show_house_vote', null) AND $this->params->get('house_position', '1') == '0')
+		{
+			$html = $this->OutputRating($context, $row, $params, $page=0,'house');
+		}
+
+		return $html;
+	}
+	/**
+	 * On After Display event procedure for Voting
+	 * 
+	 * @param	string			$context	Context of the paging
+	 * @param	array			&$row		Passed by reference and row updated with html for prev and/or next buttons
+	 * @param	json/registry	&$params	Item navigation parameters	
+	 * @param	integer			$page		Current Item page		
+	 * 
+	 * @return  string			$html		HTML to be output
+	 */		
+	public function onHouseAfterDisplay($context, &$row, &$params, $page=0)
+	{
+		$parts = explode(".", $context);
+		if ($parts[0] != 'com_remca')
+		{
+			return false;
+		}	
+		$html = '';
+
+		if (!empty($params) AND $params->get('show_house_vote') AND $this->params->get('house_position', '1') == '1')
+		{
+			$html = $this->OutputRating($context, $row, $params, $page=0,'house');
+		}
+
+		return $html;
+	}	
+	/**
 	 * Create the rating information to be output
 	 * 
 	 * @param	string			$context	Context of the paging

@@ -27,7 +27,7 @@
 <extension type="plugin" version="3.4" group="remca" method="upgrade">
     <name>plg_remca_pagebreak</name>
     <author>caballeroantonio</author>
-    <creationDate>January 2018</creationDate>
+    <creationDate>February 2018</creationDate>
     <copyright>
     </copyright>
     <license>
@@ -46,6 +46,76 @@
 	</languages>
 	<config>
 		<fields name="params">
+            <fieldset
+                name="house_settings"
+				label="PLG_REMCA_HOUSES_PAGEBREAK_FIELDSET_LABEL"
+                description="PLG_REMCA_HOUSES_PAGEBREAK_FIELDSET_DESC"
+              >
+                <field
+                    name="house_title"
+                    type="radio"
+					label="PLG_REMCA_PAGEBREAK_SITE_TITLE_LABEL"
+					description="PLG_REMCA_HOUSES_PAGEBREAK_SITE_TITLE_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+				>
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field
+                    name="house_index"
+                    type="radio"
+					label="PLG_REMCA_HOUSES_PAGEBREAK_SITE_INDEX_LABEL"
+					description="PLG_REMCA_HOUSES_PAGEBREAK_SITE_INDEX_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+				>
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field
+                    name="house_index_text"
+                    type="text" default=""
+					label="PLG_REMCA_HOUSES_PAGEBREAK_SITE_INDEX_TEXT_LABEL"
+					description="PLG_REMCA_HOUSES_PAGEBREAK_SITE_INDEX_TEXT_DESC"
+				/>
+
+                <field
+                    name="house_multipage_toc"
+                    type="radio"
+					label="PLG_REMCA_PAGEBREAK_TOC_LABEL"
+					description="PLG_REMCA_HOUSES_PAGEBREAK_TOC_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+				>
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+
+                <field
+                    name="house_showall"
+                    type="radio"
+					label="PLG_REMCA_PAGEBREAK_SHOW_ALL_LABEL"
+					description="PLG_REMCA_HOUSES_PAGEBREAK_SHOW_ALL_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+				>
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field
+                    name="house_style"
+                    type="list"
+					label="PLG_REMCA_PAGEBREAK_STYLE_LABEL"
+					description="PLG_REMCA_HOUSES_PAGEBREAK_STYLE_DESC"
+			        class="chzn-color"
+					default="pages"
+				>
+                    <option value="pages">PLG_REMCA_PAGEBREAK_PAGES</option>
+                    <option value="sliders">PLG_REMCA_PAGEBREAK_SLIDERS</option>
+                    <option value="tabs">PLG_REMCA_PAGEBREAK_TABS</option>
+                </field>
+            </fieldset>
         </fields>
 	</config>
 </extension>

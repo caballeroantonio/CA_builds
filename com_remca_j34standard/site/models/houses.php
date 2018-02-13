@@ -60,6 +60,7 @@ class RemcaModelHouses extends JModelList
 				'catid', 'a.catid', 'category_title',
 				'language', 'a.language',
 				'hits', 'a.hits',
+				'rating',
 				'ordering', 'a.ordering',
 				);
 		}
@@ -237,6 +238,9 @@ class RemcaModelHouses extends JModelList
 			$query->where($db->quoteName('a.language').' IN (' . $db->quote(JFactory::getLanguage()->getTag()) . ',' . $db->quote('*') . ')');
 		}
 		
+		// Join on vote rating table
+		$query->select('ROUND('.$db->quoteName('v.rating_sum').' / '.$db->quoteName('v.rating_count').', 0) AS rating, '.$db->quoteName('v.rating_count').' as rating_count');
+		$query->join('LEFT', $db->quoteName('#__rem_rating').' AS v ON '.$db->quoteName('a.id').' = '.$db->quoteName('v.content_id').' AND '.$db->quoteName('v.content_type').' = '.$db->quote('houses'));
 
 
 

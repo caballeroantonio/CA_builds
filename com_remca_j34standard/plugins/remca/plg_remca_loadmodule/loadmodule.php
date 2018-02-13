@@ -41,6 +41,101 @@ class PlgRemcaLoadmodule extends JPlugin
 
 
 	/**
+	 * Plugin that adds a loadmodule into the text and truncates text at that point
+	 *
+	 * @param   string   $context  The context of the content being passed to the plugin.
+	 * @param   object   &$row     The house object.  Note $house->text is also available
+	 * @param   mixed    &$params  The house  params
+	 * @param   integer  $page     The 'page' number
+	 *
+	 * @return  mixed  Always returns void or true
+	 */
+	public function onHousePrepare($context, &$row, &$params, $page = 0)
+	{
+		// Don't run this plugin when the houses are being indexed
+		if ($context == 'com_finder.indexer')
+		{
+			return true;
+		}
+		// Simple performance check to determine whether bot should process further
+		if (strpos($row->description, 'loadposition') === false && strpos($row->description, 'loadmodule') === false)
+		{
+			return true;
+		}
+
+		// Expression to search for (positions)
+		$regex		= '/{loadposition\s(.*?)}/i';
+		$style		= $this->params->def('house_style', 'none');
+
+		// Expression to search for(modules)
+		$regexmod	= '/{loadmodule\s(.*?)}/i';
+		$stylemod	= $this->params->def('house_style', 'none');
+
+		// Find all instances of plugin and put in $matches for loadposition
+		// $matches[0] is full pattern match, $matches[1] is the position
+		preg_match_all($regex, $row->description, $matches, PREG_SET_ORDER);
+
+		// No matches, skip this
+		if ($matches)
+		{
+			foreach ($matches as $match)
+			{
+				$matcheslist = explode(',', $match[1]);
+
+				// We may not have a module style so fall back to the plugin default.
+				if (!array_key_exists(1, $matcheslist))
+				{
+					$matcheslist[1] = $style;
+				}
+
+				$position = trim($matcheslist[0]);
+				$style    = trim($matcheslist[1]);
+
+				$output = $this->_load($position, $style);
+
+				// We should replace only first occurrence in order to allow positions with the same name to regenerate their content:
+				$row->description = preg_replace("|$match[0]|", addcslashes($output, '\\$'), $row->description, 1);
+				$style = $this->params->def('house_style', 'none');
+			}
+		}
+
+		// Find all instances of plugin and put in $matchesmod for loadmodule
+		preg_match_all($regexmod, $row->description, $matchesmod, PREG_SET_ORDER);
+		
+
+		// If no matches, skip this
+		if ($matchesmod)
+		{
+			foreach ($matchesmod as $matchmod)
+			{
+				$matchesmodlist = explode(',', $matchmod[1]);
+
+				// We may not have a specific module so set to null
+				if (!array_key_exists(1, $matchesmodlist))
+				{
+					$matchesmodlist[1] = null;
+				}
+
+				// We may not have a module style so fall back to the plugin default.
+				if (!array_key_exists(2, $matchesmodlist))
+				{
+					$matchesmodlist[2] = $stylemod;
+				}
+
+				$module = trim($matchesmodlist[0]);
+				$name   = htmlspecialchars_decode(trim($matchesmodlist[1]));
+				$stylemod  = trim($matchesmodlist[2]);
+
+				// $match[0] is full pattern match, $match[1] is the module,$match[2] is the title
+				$output = $this->_loadmod($module, $name, $stylemod);
+
+				// We should replace only first occurrence in order to allow positions with the same name to regenerate their content:
+				$row->description = preg_replace("|$matchmod[0]|", addcslashes($output, '\\$'), $row->description, 1);
+				$stylemod = $this->params->def('house_style', 'none');
+			}
+		}
+	}
+	/**
 	 * Loads and renders the module
 	 *
 	 * @param   string  $position  The position assigned to the module

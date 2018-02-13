@@ -458,6 +458,8 @@ class RemcaModelHouse extends JModelAdmin
 	protected function cleanCache($group = null, $client_id = 0)
 	{
 		parent::cleanCache('com_remca');
+		parent::cleanCache('mod_remca');
+		parent::cleanCache('mod_remca_houses');
 
 	}
 	/**

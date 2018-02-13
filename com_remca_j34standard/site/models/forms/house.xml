@@ -72,7 +72,7 @@
 			class="inputbox"
             filter="JComponentHelper::filterText"
 			buttons="true"
-            hide="article,pagebreak"                
+            hide="article"
 		/>
         <field
 			id="catid"

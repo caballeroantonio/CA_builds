@@ -246,6 +246,7 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php endforeach; ?>
 			</tbody>
 			</table>
+<!--begin pagination-->
 			<?php if (($this->params->def('show_rentsal_pagination', 2) == 1  OR ($this->params->get('show_rentsal_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
 			<div class="pagination">
 
@@ -258,7 +259,7 @@ $empty = $component->params->get('default_empty_field', '');
 				<?php echo $this->pagination->getPagesLinks(); ?>
 			</div>
 			<?php endif; ?>
-
+<!--end pagination-->
 			<div>
 				<!-- @TODO add hidden inputs -->
 				<input type="hidden" name="task" value="" />

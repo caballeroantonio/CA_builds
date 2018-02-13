@@ -34,7 +34,7 @@ if ($realestatemanager_configuration['location_tab']['show']
   $api_key = $realestatemanager_configuration['api_key'] ? "key=" . $realestatemanager_configuration['api_key'] : JFactory::getApplication()->enqueueMessage("<a target='_blank' href='//developers.google.com/maps/documentation/geocoding/get-api-key'>" . JText::_('_REALESTATE_MANAGER_GOOGLEMAP_API_KEY_LINK_MESSAGE') . "</a>", JText::_('_REALESTATE_MANAGER_GOOGLEMAP_API_KEY_ERROR')); 
   $this->document->addScript("//maps.googleapis.com/maps/api/js?{$api_key}");
   //dibujar_mapa
-
+}
 ?>
 <div id="overDiv" ></div>
 
