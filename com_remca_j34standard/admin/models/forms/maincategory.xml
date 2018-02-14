@@ -259,6 +259,7 @@
 				description="COM_REMCA_SHOW_ICONS_DESC"
                 class="btn-group"
 			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="0">COM_REMCA_SHOW_ICONS_VALUE_TEXT</option>
                 <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
                 <option	value="-1">JHIDE</option>
@@ -270,6 +271,7 @@
 				description="COM_REMCA_SHOW_PRINT_ICON_DESC"
                 class="btn-group"
 			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="0">JHIDE</option>
                 <option	value="1">JSHOW</option>
             </field>
@@ -280,6 +282,7 @@
 				description="COM_REMCA_MAIN_CATEGORIES_SHOW_EMAIL_ICON_DESC"
                 class="btn-group"
 			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="0">JHIDE</option>
                 <option	value="1">JSHOW</option>
             </field>
@@ -291,6 +294,7 @@
                 class="btn-group"
 				default=""
 			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="0">COM_REMCA_VALUE_ABOVE</option>
                 <option value="1">COM_REMCA_VALUE_BELOW</option>
             </field>
@@ -316,6 +320,7 @@
 				description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_DESC"
                 class="btn-group"
 			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
@@ -326,6 +331,7 @@
 				description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_NAME_DESC"
                 class="btn-group"
 			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
@@ -350,6 +356,7 @@
 				description="COM_REMCA_MAIN_CATEGORIES_SHOW_UNAUTH_LINKS_DESC"
                 class="btn-group"
 	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="1">JYES</option>
                 <option	value="0">JNO</option>
             </field>
@@ -365,6 +372,7 @@
 			    description="COM_REMCA_MAIN_CATEGORIES_SHOW_NAME_DESC"
                 class="btn-group"
 		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
@@ -375,6 +383,7 @@
 			    description="COM_REMCA_MAIN_CATEGORIES_LINKED_NAMES_DESC"
                 class="btn-group"
 		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="1">JYES</option>
                 <option	value="0">JNO</option>
             </field>
@@ -390,6 +399,7 @@
 			    description="COM_REMCA_MAIN_CATEGORIES_SHOW_ADMIN_DESC"
 				class="btn-group"
 		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
@@ -400,6 +410,7 @@
                 description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARENT_ID_DESC"
 				class="btn-group"
             >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="1">JSHOW</option>
                 <option	value="0">JHIDE</option>
             </field>
@@ -410,6 +421,7 @@
                 description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_ASSOCIATE_CATEGORY_DESC"
 				class="btn-group"
             >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="1">JSHOW</option>
                 <option	value="0">JHIDE</option>
             </field>
@@ -420,6 +432,7 @@
                 description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_TITLE_DESC"
 				class="btn-group"
             >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="1">JSHOW</option>
                 <option	value="0">JHIDE</option>
             </field>
@@ -430,6 +443,7 @@
                 description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_DESC"
 				class="btn-group"
             >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="1">JSHOW</option>
                 <option	value="0">JHIDE</option>
             </field>
@@ -440,6 +454,7 @@
                 description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_SECTION_DESC"
 				class="btn-group"
             >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="1">JSHOW</option>
                 <option	value="0">JHIDE</option>
             </field>
@@ -450,6 +465,7 @@
                 description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_POSITION_DESC"
 				class="btn-group"
             >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="1">JSHOW</option>
                 <option	value="0">JHIDE</option>
             </field>
@@ -460,6 +476,7 @@
                 description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_EDITOR_DESC"
 				class="btn-group"
             >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="1">JSHOW</option>
                 <option	value="0">JHIDE</option>
             </field>
@@ -470,6 +487,7 @@
                 description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_COUNT_DESC"
 				class="btn-group"
             >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="1">JSHOW</option>
                 <option	value="0">JHIDE</option>
             </field>
@@ -480,6 +498,7 @@
                 description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARAMS2_DESC"
 				class="btn-group"
             >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="1">JSHOW</option>
                 <option	value="0">JHIDE</option>
             </field>

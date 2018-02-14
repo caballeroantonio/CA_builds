@@ -143,6 +143,72 @@
         margin: 0 auto 0 auto; 
 }
 
+/*#################### houses blog ############################ */
+.houses-blog h1
+{
+        margin:0 0px 10px 0px
+}
+/*#################### houses blog actions icons ############################ */
+.houses-blog ul.actions
+{
+        text-align:right;
+        padding:0 ;
+        width:100%;
+        margin:0
+}
+.houses-blog ul.actions li
+{
+        display:inline
+}
+.houses-blog ul.actions a
+{
+        text-decoration:none
+}
+/*#################### houses blog items more ############################ */
+.houses-blog .items-more
+{
+        padding-top:10px;
+}
+.houses-blog .items-more h3
+{
+        font-weight:normal;
+        margin:0;
+        padding:5px 5px 5px 5px;
+        font-size:1.4em
+}
+.houses-blog .items-more ol
+{
+        line-height:1.3em;
+        list-style-type:none;
+        margin:0;
+        padding:10px 0 10px 2px;
+}
+.houses-blog .items-more ol li
+{
+        padding:2px;
+}
+.houses-blog .items-more ol li a
+{
+        display:inline;
+        margin:0;
+        font-weight:normal;
+        padding:5px 5px 5px 20px;
+}
+.houses-blog .items-more ol li a:hover,
+.houses-blog .items-more ol li a:active,
+.houses-blog .items-more ol li a:focus
+{
+        font-weight:normal;
+        padding:5px 5px 5px 20px;
+        text-decoration:none
+}
+/*#################### houses blog pagination ############################ */
+.houses-blog .pagination p.counter
+{
+        text-align: center;
+        margin: 0 auto 0 auto; 
+}
+
 /*#################### house view ############################ */
 .house-view
 {
@@ -205,6 +271,61 @@
 {
         text-decoration:none
 }
+/*#################### house article ############################ */
+.house-article
+{
+        padding:0 5px;
+        display:block;
+        overflow:hidden
+}
+.house-article dt.info-title,
+.house-article dt.fields-title
+{
+        font-weight: bold;
+        font-size: 120%;
+		margin-top: 10px;
+}
+#main .house-article dd ul
+{
+        list-style-type: none;
+        margin-top: 0px;
+        margin-left: 0px;
+        padding-left: 0px;
+}
+#main .house-article dd.field label
+{
+         font-weight: bold;
+         margin-top: 10px;
+}
+#main .house-article dd ul label
+{
+         font-weight: bold;
+         margin-top: 10px;
+}
+.house-article dd fieldset
+{
+        padding: 0;
+        margin: 0;
+        margin-top: 5px;
+        display: inline;
+}
+/*#################### house article actions icons ############################ */
+.house-article ul.actions
+{
+        text-align:right;
+        padding:0 ;
+        width:100%;
+        margin:0
+}
+.house-article ul.actions li
+{
+        display:inline
+}
+.house-article ul.actions a
+{
+        text-decoration:none
+}
+
 
 /*#################### house edit form ############################ */
 .house-edit

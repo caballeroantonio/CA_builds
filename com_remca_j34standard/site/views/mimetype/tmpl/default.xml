@@ -56,5 +56,144 @@
     <fields
 	    name="params"
 	>
+        <!-- Basic options. -->
+        <fieldset
+            name="mimetype_basic_settings"
+            label="COM_REMCA_MIME_TYPES_FIELDSET_LAYOUT"
+        >
+            <field
+                name="show_mimetype_icons"
+                type="radio"
+                label="COM_REMCA_SHOW_ICONS_LABEL"
+                description="COM_REMCA_SHOW_ICONS_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">COM_REMCA_SHOW_ICONS_VALUE_TEXT</option>
+                <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
+                <option	value="-1">JHIDE</option>
+            </field>
+            <field
+                name="show_mimetype_print_icon"
+                type="radio"
+                label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
+                description="COM_REMCA_SHOW_PRINT_ICON_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_mimetype_email_icon"
+                type="radio"
+                label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
+                description="COM_REMCA_MIME_TYPES_SHOW_EMAIL_ICON_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+		        name="mimetype_info_block_position"
+		        type="radio"
+		        label="COM_REMCA_MIME_TYPES_INFOBLOCK_POSITION_LABEL"
+		        description="COM_REMCA_MIME_TYPES_INFOBLOCK_POSITION_DESC"
+                class="btn-group"            
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">COM_REMCA_VALUE_ABOVE</option>
+                <option value="1">COM_REMCA_VALUE_BELOW</option>
+            </field>            
+            <field
+                name="keep_mimetype_itemid"
+                type="radio"
+                label="COM_REMCA_KEEP_ITEMID_LABEL"
+                description="COM_REMCA_MIME_TYPES_KEEP_ITEMID_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="show_mimetype_navigation"
+                type="radio"
+                label="COM_REMCA_SHOW_NAVIGATION_LABEL"
+                description="COM_REMCA_MIME_TYPES_SHOW_NAVIGATION_DESC"
+                class="btn-group"            
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="spacer2"
+                type="spacer"
+                hr="true"
+			/>
+            <field
+                name="show_mimetype_readmore"
+                type="radio"
+                label="COM_REMCA_SHOW_READMORE_LABEL"
+                description="COM_REMCA_MIME_TYPES_SHOW_READMORE_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="mimetype_readmore_limit"
+                type="text"
+                label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
+                description="COM_REMCA_MIME_TYPES_SHOW_READMORE_LIMIT_DESC"
+                default="100"
+	        />
+        </fieldset>
+        <fieldset
+            name="mimetype_field_settings"
+	        label="COM_REMCA_MIME_TYPES_FIELDSET_FIELDS"
+	    >
+            <field
+                name="spacer3"
+                type="spacer"
+                hr="true"
+	        />
+            <field
+                name="show_mimetype_admin"
+                type="radio"
+                label="COM_REMCA_SHOW_ADMIN_LABEL"
+                description="COM_REMCA_MIME_TYPES_SHOW_ADMIN_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_mimetype_mime_ext"
+                type="radio"
+                label="COM_REMCA_MIME_TYPES_SHOW_FIELD_MIME_EXT_LABEL"
+                description="COM_REMCA_MIME_TYPES_SHOW_FIELD_MIME_EXT_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_mimetype_mime_type"
+                type="radio"
+                label="COM_REMCA_MIME_TYPES_SHOW_FIELD_MIME_TYPE_LABEL"
+                description="COM_REMCA_MIME_TYPES_SHOW_FIELD_MIME_TYPE_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+        </fieldset>
     </fields>
 </metadata>

@@ -127,6 +127,10 @@ class RemcaViewHouse extends JViewLegacy
 				$temp->merge($item->params);
 				$item->params = $temp;
 				
+				if ($this->getLayout() == 'blog')
+				{
+					$this->setLayout('article');
+				}
 			}
 		}
 		else

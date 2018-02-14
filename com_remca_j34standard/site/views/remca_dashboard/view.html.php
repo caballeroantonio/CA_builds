@@ -78,6 +78,12 @@ class RemcaViewRemca_Dashboard extends JViewLegacy
 	protected function prepareButtons()
 	{
 		$buttons = array();
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_remca&view=houses&layout=gridpanel&tmpl=component',
+                    'object'=>'houses',
+                    'text'=>'Houses',//JText::_('REMCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_REMCA_HOUSE_DESCRIPTION')
+                );
 
 		return $buttons;
 	}	

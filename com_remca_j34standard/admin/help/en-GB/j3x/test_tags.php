@@ -1091,7 +1091,7 @@ architectcomp=remca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} price
 {-1.3}
     
 {1.0}

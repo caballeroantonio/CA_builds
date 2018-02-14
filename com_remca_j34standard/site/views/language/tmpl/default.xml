@@ -56,5 +56,188 @@
     <fields
 	    name="params"
 	>
+        <!-- Basic options. -->
+        <fieldset
+            name="language_basic_settings"
+            label="COM_REMCA_LANGUAGES_FIELDSET_LAYOUT"
+        >
+            <field
+                name="show_language_icons"
+                type="radio"
+                label="COM_REMCA_SHOW_ICONS_LABEL"
+                description="COM_REMCA_SHOW_ICONS_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">COM_REMCA_SHOW_ICONS_VALUE_TEXT</option>
+                <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
+                <option	value="-1">JHIDE</option>
+            </field>
+            <field
+                name="show_language_print_icon"
+                type="radio"
+                label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
+                description="COM_REMCA_SHOW_PRINT_ICON_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_language_email_icon"
+                type="radio"
+                label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
+                description="COM_REMCA_LANGUAGES_SHOW_EMAIL_ICON_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+		        name="language_info_block_position"
+		        type="radio"
+		        label="COM_REMCA_LANGUAGES_INFOBLOCK_POSITION_LABEL"
+		        description="COM_REMCA_LANGUAGES_INFOBLOCK_POSITION_DESC"
+                class="btn-group"            
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">COM_REMCA_VALUE_ABOVE</option>
+                <option value="1">COM_REMCA_VALUE_BELOW</option>
+            </field>            
+            <field
+                name="keep_language_itemid"
+                type="radio"
+                label="COM_REMCA_KEEP_ITEMID_LABEL"
+                description="COM_REMCA_LANGUAGES_KEEP_ITEMID_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="show_language_navigation"
+                type="radio"
+                label="COM_REMCA_SHOW_NAVIGATION_LABEL"
+                description="COM_REMCA_LANGUAGES_SHOW_NAVIGATION_DESC"
+                class="btn-group"            
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="spacer2"
+                type="spacer"
+                hr="true"
+			/>
+            <field
+                name="show_language_readmore"
+                type="radio"
+                label="COM_REMCA_SHOW_READMORE_LABEL"
+                description="COM_REMCA_LANGUAGES_SHOW_READMORE_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="language_readmore_limit"
+                type="text"
+                label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
+                description="COM_REMCA_LANGUAGES_SHOW_READMORE_LIMIT_DESC"
+                default="100"
+	        />
+            <field
+                name="show_language_readmore_name"
+                type="radio"
+                label="COM_REMCA_LANGUAGES_SHOW_READMORE_NAME_LABEL"
+                description="COM_REMCA_LANGUAGES_SHOW_READMORE_NAME_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+        </fieldset>
+        <fieldset
+            name="language_field_settings"
+	        label="COM_REMCA_LANGUAGES_FIELDSET_FIELDS"
+	    >
+            <field
+                name="show_language_name"
+                type="radio"
+                label="COM_REMCA_SHOW_NAME_LABEL"
+                description="COM_REMCA_LANGUAGES_SHOW_NAME_DESC"
+                class="btn-group"
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="link_language_names"
+                type="radio"
+                label="COM_REMCA_LINKED_NAMES_LABEL"
+                description="COM_REMCA_LANGUAGES_LINKED_NAMES_DESC"
+                class="btn-group"
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="spacer3"
+                type="spacer"
+                hr="true"
+	        />
+            <field
+                name="show_language_admin"
+                type="radio"
+                label="COM_REMCA_SHOW_ADMIN_LABEL"
+                description="COM_REMCA_LANGUAGES_SHOW_ADMIN_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_language_lang_code"
+                type="radio"
+                label="COM_REMCA_LANGUAGES_SHOW_FIELD_LANG_CODE_LABEL"
+                description="COM_REMCA_LANGUAGES_SHOW_FIELD_LANG_CODE_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_language_title"
+                type="radio"
+                label="COM_REMCA_LANGUAGES_SHOW_FIELD_TITLE_LABEL"
+                description="COM_REMCA_LANGUAGES_SHOW_FIELD_TITLE_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_language_sef"
+                type="radio"
+                label="COM_REMCA_LANGUAGES_SHOW_FIELD_SEF_LABEL"
+                description="COM_REMCA_LANGUAGES_SHOW_FIELD_SEF_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+        </fieldset>
     </fields>
 </metadata>

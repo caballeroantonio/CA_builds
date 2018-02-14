@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `asset_id` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table',
   KEY `idx_checkout` (`checked_out`),
   KEY `idx_state` (`state`),
-  KEY `idx_price` (`price`),
+  KEY `idx_price` (`price`) COMMENT 'FILTER_FIELD price',
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
   

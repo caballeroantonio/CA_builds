@@ -103,7 +103,14 @@ class RemcaModelHouses extends JModelList
 		$this->setState('filter.house_id', $pk);
 		
 		// List state information
+		if ($app->input->getString('layout', 'default') == 'blog')
+		{
+			$limit = $params->def('house_num_leading', 1) + $params->def('house_num_intro', 4) + $params->def('house_num_links', 4);
+		}
+		else
+		{		
 			$limit = $app->getUserStateFromRequest($this->context.'.list.' . $item_id . '.limit', 'limit', $params->get('house_num_per_page'),'integer');
+		}
 		$this->setState('list.limit', $limit);
 
 		$value = $app->input->get('limitstart', 0, 'uint');

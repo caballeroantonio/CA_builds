@@ -69,7 +69,10 @@ class RemcaViewHouses extends JViewLegacy
 		}
 
 		// PREPARE THE DATA
-		$this->price_values	= $this->get('Pricevalues');
+		if ($app->input->getString('layout', 'default') != 'blog')
+		{			
+			$this->price_values	= $this->get('Pricevalues');
+		}	
 		// Compute the house slugs and set the trigger events.
 		foreach ($items as $i => &$item)
 		{
@@ -98,6 +101,48 @@ class RemcaViewHouses extends JViewLegacy
 
 			$dispatcher = JEventDispatcher::getInstance();
 
+		}
+		if ($app->input->getString('layout', 'default') == 'blog')
+		{			
+			// Get the metrics for the structural page layout.
+			$num_leading = (int) $params->def('house_num_leading', 1);
+			$num_intro   = (int) $params->def('house_num_intro', 4);
+			$num_links   = (int) $params->def('house_num_links', 4);
+		
+			// Preprocess the breakdown of leading, intro and linked houses.
+			// This makes it much easier for the designer to just interogate the arrays.
+			$max = count($items);
+
+			// The first group is the leading houses.
+			$limit = $num_leading;
+			for ($i = 0; $i < $limit AND $i < $max; $i++)
+			{
+				$this->lead_items[$i] = &$items[$i];
+			}
+
+			// The second group is the intro houses.
+			$limit = $num_leading + $num_intro;
+			// Order houses across, then down (or single column mode)
+			for ($i = $num_leading; $i < $limit AND $i < $max; $i++)
+			{
+				$this->intro_items[$i] = &$items[$i];
+			}
+
+			$this->columns = max(1, $params->def('house_num_columns', 1));
+			$order = $params->def('house_multi_column_order', 1);
+
+			if ($order == 0 AND $this->columns > 1)
+			{
+				// call order down helper
+				$this->intro_items = RemcaHelperQuery::orderDownColumns($this->intro_items, $this->columns);
+			}
+
+			// The remainder are the links.
+			$limit = $num_leading + $num_intro + $num_links;			
+			for ($i = $num_leading + $num_intro; $i < $limit AND $i < $max; $i++)
+			{
+				$this->link_items[$i] = &$items[$i];
+			}
 		}
 		
 		//Escape strings for HTML output
