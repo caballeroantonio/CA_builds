@@ -27,12 +27,12 @@ jimport('joomla.plugin.plugin');
 jimport('joomla.version');
 
 /**
- * plgContentEmailit
+ * plgRemcaEmailit
  *
  * Creates Emailit sharing button with each and every posts.
  *
  */
-class plgContentEmailit extends JPlugin {
+class plgRemcaEmailit extends JPlugin {
 
     /**
      * Constructor
@@ -144,7 +144,7 @@ class plgContentEmailit extends JPlugin {
             $outputValue .= "var e_mailit_config = {" . implode(",", $configValues) . "};";
             $outputValue .= "(function() {	var b=document.createElement('script');	
                                 b.type='text/javascript';b.async=true;\r\n	
-                                b.src='plugins/content/emailit/js/button.js';\r\n	
+                                b.src='plugins/remca/emailit/js/button.js';\r\n	
                                 var c=document.getElementsByTagName('head')[0];	c.appendChild(b) })()";
             $outputValue .= PHP_EOL;
 
@@ -153,10 +153,10 @@ class plgContentEmailit extends JPlugin {
         }
     }
     /*
-     * onContentPrepare
+     * onRemcaPrepare
      */
 
-    public function onContentPrepare($context, &$article, &$params, $limitstart) {
+    public function onRemcaPrepare($context, &$article, &$params, $limitstart) {
         $app = JFactory::getApplication();
         $doc = JFactory::getDocument();
         $menu = $app->getMenu();
@@ -312,8 +312,8 @@ class plgContentEmailit extends JPlugin {
                             // Otherwise, a standard Joomla article
                             else
                             {
-                                    require_once(JPATH_SITE . DS . 'components' . DS . 'com_content' . DS . 'helpers' . DS . 'route.php');
-                                    $url = JRoute::_(ContentHelperRoute::getArticleRoute($article->id, $article->catid));
+                                    require_once(JPATH_SITE . DS . 'components' . DS . 'com_remca' . DS . 'helpers' . DS . 'route.php');
+                                    $url = JRoute::_(RemcaHelperRoute::getArticleRoute($article->id, $article->catid));
                             }
 
                             return JRoute::_($this->baseURL . $url, true, 0);
@@ -324,4 +324,61 @@ class plgContentEmailit extends JPlugin {
                     }
             }
     }
+    
+	public function onHouseBeforeDisplay($context, &$row, &$params, $page=0)
+	{
+		$parts = explode(".", $context);
+		if ($parts[0] != 'com_remca')
+		{
+			return false;
+		}	
+		$html = '';
+
+		if (!empty($params) AND $params->get('show_house_vote', null) AND $this->params->get('house_position', '1') == '0')
+		{
+			$html = $this->OutputRating($context, $row, $params, $page=0,'house');
+		}
+
+		return $html;
+	}
+	/**
+	 * On After Display event procedure for Voting
+	 * 
+	 * @param	string			$context	Context of the paging
+	 * @param	array			&$row		Passed by reference and row updated with html for prev and/or next buttons
+	 * @param	json/registry	&$params	Item navigation parameters	
+	 * @param	integer			$page		Current Item page		
+	 * 
+	 * @return  string			$html		HTML to be output
+	 */		
+	public function onHouseAfterDisplay($context, &$row, &$params, $page=0)
+	{
+		$parts = explode(".", $context);
+		if ($parts[0] != 'com_remca')
+		{
+			return false;
+		}	
+		$html = '';
+
+		if (!empty($params) AND $params->get('show_house_vote') AND $this->params->get('house_position', '1') == '1')
+		{
+			$html = $this->OutputRating($context, $row, $params, $page=0,'house');
+		}
+
+		return $html;
+	}	
+	protected function OutputRating($context, &$row, &$params, $page=0, $object)
+        {
+
+$link = 'xxx';		
+
+            $share = true;
+            $title = 'xxx';//isset($article->title) ? $article->title : '';
+            $outputValue = '';
+            if($share){
+                $outputValue .= $this->emailit_createButton($this->arrParamValues, $link, $title);
+            }
+            
+            return $outputValue;
+        }
 }

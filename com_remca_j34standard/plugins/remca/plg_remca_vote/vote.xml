@@ -40,6 +40,7 @@
 	<description>PLG_REMCA_VOTE_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="vote">vote.php</filename>
+		<folder>tmpl</folder>
 	</files>
     <languages>
         <language tag="en-GB">language/en-GB/en-GB.plg_remca_vote.ini</language>

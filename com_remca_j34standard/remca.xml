@@ -145,6 +145,7 @@
         <plugin folder="plugins/remca" plugin="plg_remca_loadmodule" group="remca" />
         <plugin folder="plugins/remca" plugin="plg_remca_pagebreak" group="remca" />
         <plugin folder="plugins/remca" plugin="plg_remca_vote" group="remca" />
+        <plugin folder="plugins/remca" plugin="plg_remca_emailit" group="remca" />
     </plugins>
     <!-- Runs on install/uninstall/update; -->
     <scriptfile>remca_install.php</scriptfile>
@@ -655,6 +656,17 @@
                     type="radio"
                     label="COM_REMCA_SHOW_VOTE_LABEL"
                     description="COM_REMCA_HOUSES_SHOW_VOTE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_house_share"
+                    type="radio"
+                    label="COM_REMCA_SHOW_SHARE_LABEL"
+                    description="COM_REMCA_HOUSES_SHOW_SHARE_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 		        >

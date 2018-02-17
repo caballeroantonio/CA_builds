@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
     e_mailit_config = {mobile_bar: false};
-    jQuery.getScript("plugins/content/emailit/js/button.js", function () {
+    jQuery.getScript("plugins/remca/emailit/js/button.js", function () {
         var share = e_mailit.services.split(","); // Get buttons
         for (var key = 0; key < share.length; key++) {
             var services = share[key];

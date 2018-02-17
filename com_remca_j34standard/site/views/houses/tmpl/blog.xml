@@ -433,6 +433,17 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
+                name="show_house_share"
+                type="radio"
+                label="COM_REMCA_SHOW_SHARE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_SHARE_DESC"
+                class="btn-group"
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
                 name="show_house_houseid"
                 type="radio"
                 label="COM_REMCA_HOUSES_SHOW_FIELD_HOUSEID_LABEL"

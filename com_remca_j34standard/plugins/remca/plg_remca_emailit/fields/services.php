@@ -22,15 +22,15 @@ class JFormFieldServices extends JFormField {
 					JHtml::script('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
 					JFactory::getApplication()->set('jquery', true);
 				}
-				JHtml::script(JURI::root().'plugins/content/emailit/js/script2.5.js');
+				JHtml::script(JURI::root().'plugins/remca/emailit/js/script2.5.js');
 			} else {
 				JHtml::_('jquery.framework');
-				JHtml::script(JURI::root().'plugins/content/emailit/js/script.js');
+				JHtml::script(JURI::root().'plugins/remca/emailit/js/script.js');
 			}	
-            JHtml::script(JURI::root().'plugins/content/emailit/js/jquery-ui.min.js');
+            JHtml::script(JURI::root().'plugins/remca/emailit/js/jquery-ui.min.js');
             
-            JHtml::stylesheet(JURI::root().'plugins/content/emailit/css/jquery-ui.min.css');
-            JHtml::stylesheet(JURI::root().'plugins/content/emailit/css/style.css');
+            JHtml::stylesheet(JURI::root().'plugins/remca/emailit/css/jquery-ui.min.css');
+            JHtml::stylesheet(JURI::root().'plugins/remca/emailit/css/style.css');
             return '<div class="out-of-the-box">'.
                     '<ul id="social_services" class="large"></ul>'.
                     '<div class="services_buttons">'.

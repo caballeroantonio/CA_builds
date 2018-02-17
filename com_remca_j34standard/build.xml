@@ -1,5 +1,5 @@
 <project name="remca" default="dist" basedir=".">
-    <property name="link_dir" description="vinculo simbolico de JPATH_BASE" value="D:/www/htdocs/borrame" /> 
+    <property name="link_dir" description="vinculo simbolico de JPATH_BASE" value="D:/www/htdocs/JPruebas" /> 
     
     <target name="remove-package" description="Warning, delete directory follow symlinks. When uninstall Joomla extension or delete directory that has symlinks you loose your src code.">
         <delete dir="${link_dir}/administrator/components/com_remca" />
@@ -64,6 +64,11 @@
         <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_vote.sys.ini" />
         <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_remca_vote.ini" />
         <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_remca_vote.sys.ini" />
+        <delete dir="${link_dir}/plugins/remca/emailit" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailit.ini" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailit.sys.ini" />
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_remca_emailit.ini" />
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_remca_emailit.sys.ini" />
         
     </target>
 
@@ -134,7 +139,7 @@
         </exec>
         
         <mkdir dir="${link_dir}/plugins/remca/"/>
-		<exec executable="cmd" >
+        <exec executable="cmd" >
             <arg value='/c mklink /d "${link_dir}/plugins/remca/finder" "${basedir}\plugins\remca\plg_remca_finder"'/>
         </exec>
         <exec executable="cmd" >
@@ -254,6 +259,21 @@
         <exec executable="cmd" >
             <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.plg_remca_vote.sys.ini" "${basedir}\plugins\remca\plg_remca_vote\language\es-ES\es-ES.plg_remca_vote.sys.ini"'/>
         </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/plugins/remca/emailit" "${basedir}\plugins\remca\plg_remca_emailit"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailit.ini" "${basedir}\plugins\remca\plg_remca_emailit\language\en-GB\en-GB.plg_remca_emailit.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailit.sys.ini" "${basedir}\plugins\remca\plg_remca_emailit\language\en-GB\en-GB.plg_remca_emailit.sys.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.plg_remca_emailit.ini" "${basedir}\plugins\remca\plg_remca_emailit\language\es-ES\es-ES.plg_remca_emailit.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.plg_remca_emailit.sys.ini" "${basedir}\plugins\remca\plg_remca_emailit\language\es-ES\es-ES.plg_remca_emailit.sys.ini"'/>
+        </exec>
         
     </target>   
      
@@ -345,6 +365,13 @@
         <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_vote.sys.ini"/>
         <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_remca_vote.ini"/>
         <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_remca_vote.sys.ini"/>
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/plugins/remca/emailit"'/>
+        </exec>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailit.ini"/>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailit.sys.ini"/>
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_remca_emailit.ini"/>
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_remca_emailit.sys.ini"/>
         
     </target>    
 
