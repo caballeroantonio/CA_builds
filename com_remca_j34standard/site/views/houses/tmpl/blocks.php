@@ -28,59 +28,17 @@
 
 defined('_JEXEC') or die;
 
-$doc = JFactory::getDocument();
-// add stylesheet
-$doc->addStyleSheet('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-$doc->addStyleSheet('//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css');
-$doc->addStyleSheet('components/com_realestatemanager/includes/animate.css');
-//$doc->addScript('//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js');
-$doc->addStyleSheet('components/com_realestatemanager/includes/jQuerREL-ui.css');
-$doc->addStyleSheet('components/com_realestatemanager/includes/bootstrapREL.css');
-$doc->addStyleSheet('components/com_realestatemanager/includes/realestatemanager.css');
-// $doc->addStyleSheet('components/com_realestatemanager/lightbox/css/lightbox.css');
-$doc->addStyleSheet('components/com_realestatemanager/TABS/tabcontent.css');
-
-// add js
-$doc->addScript('components/com_realestatemanager/includes/functions.js');
-
-if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-1.2.6.js") === false ) {
-  $doc->addScript('components/com_realestatemanager/lightbox/js/jQuerREL-1.2.6.js');
-} 
-
-$doc->addScriptDeclaration("jQuerREL=jQuerREL.noConflict();");
-
-if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-ui.js") === false ) {
-  $doc->addScript('components/com_realestatemanager/includes/jQuerREL-ui.js');
-}
-
-$doc->addScript('components/com_realestatemanager/includes/wishlist.js');
-// $doc->addScript('components/com_realestatemanager/lightbox/js/lightbox-2.6.min.js');
-$doc->addScript('components/com_realestatemanager/includes/jquery.raty.js');
-$doc->addScript('components/com_realestatemanager/TABS/tabcontent.js');
-
-//add fancybox & swiper slider
-$doc->addScript('components/com_realestatemanager/includes/swiper.js');
-$doc->addStyleSheet('components/com_realestatemanager/includes/swiper.css');
-
-
-$doc->addStyleSheet('components/com_realestatemanager/includes/jquery.fancyboxREL.min.css');
-$doc->addStyleSheet('components/com_realestatemanager/includes/styleFuncyboxThumbs.css');
-
-$doc->addScript('components/com_realestatemanager/includes/jquery.fancyboxREL.min.js');
-//add fancybox & swiper slider
+require_once( __DIR__.'/../../house/tmpl/rem_scripts.php');
 
 $watermark_path = ($this->params->get('watermark_show',0) == 1) ? 'watermark/' : '';
 $watermark = ($this->params->get('watermark_show',0) == 1) ? true : false;  
 ?>
 
 <!--begin maps-->
-<?php if ( $this->params->get('location_map',1)): ?>
-    <div id="map_canvas" class="re_map_canvas re_map_canvas_01"></div>
-<?php
+<?php 
+if ( $this->params->get('location_map',1)){
     RemcaHelper::add_google_map($this->params, $this->items);
-?>
-
-<?php endif ?>
+} ?>
 <!--end maps-->
 
 <!--begin blocks-->

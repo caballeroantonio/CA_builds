@@ -8210,4 +8210,359 @@
 			section="component"
 		/>
     </fieldset>
+    <fieldset
+        name="ordasoft_rem"
+        label="COM_REMCA_FIELDSET_ordasoft_rem_LABEL"
+		description="COM_REMCA_FIELDSET_ordasoft_rem_DESC"
+	>
+<field name="release_version" type="text" default="4.2.16 PRO" label="" description="" />
+<field name="release_date" type="text" default="November 2017" label="" description="" />
+<!-- edit house  -->
+<field name="edithouse_default_lang" type="text" default="" label="" description="" />
+<!-- price settings -->
+<field name="price_string" type="text" default="1" label="" description="" />
+<field name="price_show" type="text" default="1" label="" description="" />
+<field name="price_registrationlevel" type="text" default="-2" label="" description="" />
+<!-- auto increment for houseid, if 1 - can't add random houseid  -->
+<field name="houseid_auto-increment_boolean" type="text" default="0" label="" description="" />
+<!-- review settings -->
+<field name="reviews_show" type="text" default="1" label="" description="" />
+<field name="reviews_registrationlevel" type="text" default="-2" label="" description="" />
+<!-- show contacts -->
+<field name="contacts_show" type="text" default="1" label="" description="" />
+<field name="contacts_registrationlevel" type="text" default="-2" label="" description="" />
+<!-- show cb_myhouse -->
+<field name="cb_myhouse_show" type="text" default="0" label="" description="" />
+<field name="cb_myhouse_registrationlevel" type="text" default="" label="" description="" />
+<!-- show cb_edit -->
+<field name="cb_edit_show" type="text" default="0" label="" description="" />
+<field name="cb_edit_registrationlevel" type="text" default="" label="" description="" />
+<!-- show cb_rent -->
+<field name="cb_rent_show" type="text" default="0" label="" description="" />
+<field name="cb_rent_registrationlevel" type="text" default="" label="" description="" />
+<!-- show cb_buy -->
+<field name="cb_buy_show" type="text" default="0" label="" description="" />
+<field name="cb_buy_registrationlevel" type="text" default="" label="" description="" />
+<!-- show cb_history -->
+<field name="cb_history_show" type="text" default="0" label="" description="" />
+<field name="cb_history_registrationlevel" type="text" default="" label="" description="" />
+<!-- show Location -->
+<field name="location_tab_show" type="text" default="1" label="" description="" />
+<field name="location_tab_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="street_view_show" type="text" default="1" label="" description="" />
+<field name="street_view_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="reviews_tab_show" type="text" default="1" label="" description="" />
+<field name="reviews_tab_registrationlevel" type="text" default="-2" label="" description="" />
+<!-- rent settings -->
+<field name="rentstatus_show" type="text" default="1" label="" description="" />
+<field name="rentrequest_registrationlevel" type="text" default="-2" label="" description="" />
+<!-- status settings -->
+<field name="housestatus_show" type="text" default="1" label="" description="" />
+<field name="houserequest_registrationlevel" type="text" default="-2" label="" description="" />
+<!-- buy settings -->
+<field name="buystatus_show" type="text" default="1" label="" description="" />
+<field name="buyrequest_registrationlevel" type="text" default="-2" label="" description="" />
+<!-- edoc settings -->
+<field name="edocs_allow" type="text" default="1" label="" description="" />
+<field name="edocs_show" type="text" default="1" label="" description="" />
+<field name="edocs_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="edocs_location" type="text" default="/components/com_realestatemanager/edocs/" label="" description="" />
+<!-- video and track -->
+<field name="videos_tracks_show" type="text" default="1" label="" description="" />
+<field name="allowed_exts_video" type="text" default="mp4,ogv,webm" label="" description="" />
+<field name="allowed_exts_track" type="text" default="vtt" label="" description="" />
+<field name="videos_location" type="text" default="/components/com_realestatemanager/media/video/" label="" description="" />
+<field name="tracks_location" type="text" default="/components/com_realestatemanager/media/track/" label="" description="" />
+<!-- debuging -->
+<field name="debug" type="text" default="" label="" description="" />
+<field name="page_items" type="text" default="10" label="" description="" />
+<!-- foto size -->
+<field name="thumb_param_show" type="text" default="1" label="" description="" />
+<field name="foto_high" type="text" default="250" label="" description="" />
+<field name="foto_width" type="text" default="400" label="" description="" />
+<field name="fotomain_high" type="text" default="440" label="" description="" />
+<field name="fotomain_width" type="text" default="808" label="" description="" />
+<field name="fotoupload_high" type="text" default="600" label="" description="" />
+<field name="fotoupload_width" type="text" default="1400" label="" description="" />
+<field name="fotogallery_high" type="text" default="100" label="" description="" />
+<field name="fotogallery_width" type="text" default="100" label="" description="" />
+<field name="fotocategory_high" type="text" default="250" label="" description="" />
+<field name="fotocategory_width" type="text" default="400" label="" description="" />
+<field name="fotogal_high" type="text" default="100" label="" description="" />
+<field name="fotogal_width" type="text" default="100" label="" description="" />
+<field name="license_show" type="text" default="1" label="" description="" />
+<field name="license_text" type="text" default="&lt;p&gt;Untitled document&lt;/p&gt;&lt;p&gt;License Text&lt;/p&gt;" label="" description="" />
+<!-- user manager  -->
+<field name="user_manager_rem_-2_count_homes" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_-2_count_foto" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_29_count_homes" type="text" default="5" label="" description="" />
+<field name="user_manager_rem_29_count_foto" type="text" default="" label="" description="" />
+<field name="user_manager_rem_18_count_homes" type="text" default="5" label="" description="" />
+<field name="user_manager_rem_18_count_foto" type="text" default="" label="" description="" />
+<field name="user_manager_rem_19_count_homes" type="text" default="5" label="" description="" />
+<field name="user_manager_rem_19_count_foto" type="text" default="" label="" description="" />
+<field name="user_manager_rem_20_count_homes" type="text" default="5" label="" description="" />
+<field name="user_manager_rem_20_count_foto" type="text" default="" label="" description="" />
+<field name="user_manager_rem_21_count_homes" type="text" default="5" label="" description="" />
+<field name="user_manager_rem_21_count_foto" type="text" default="" label="" description="" />
+<field name="user_manager_rem_32_count_homes" type="text" default="5" label="" description="" />
+<field name="user_manager_rem_32_count_foto" type="text" default="" label="" description="" />
+<field name="user_manager_rem_30_count_homes" type="text" default="5" label="" description="" />
+<field name="user_manager_rem_30_count_foto" type="text" default="" label="" description="" />
+<field name="user_manager_rem_23_count_homes" type="text" default="5" label="" description="" />
+<field name="user_manager_rem_23_count_foto" type="text" default="" label="" description="" />
+<field name="user_manager_rem_24_count_homes" type="text" default="5" label="" description="" />
+<field name="user_manager_rem_24_count_foto" type="text" default="" label="" description="" />
+<field name="user_manager_rem_25_count_homes" type="text" default="5" label="" description="" />
+<field name="user_manager_rem_25_count_foto" type="text" default="" label="" description="" />
+<field name="user_manager_rem__count_homes" type="text" default="0" label="" description="" />
+<field name="user_manager_rem__count_foto" type="text" default="" label="" description="" />
+<field name="user_manager_rem_1_count_homes" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_1_count_foto" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_6_count_homes" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_6_count_foto" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_7_count_homes" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_7_count_foto" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_2_count_homes" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_2_count_foto" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_3_count_homes" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_3_count_foto" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_4_count_homes" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_4_count_foto" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_5_count_homes" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_5_count_foto" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_8_count_homes" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_8_count_foto" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_10_count_homes" type="text" default="10" label="" description="" />
+<field name="user_manager_rem_10_count_foto" type="text" default="10" label="" description="" />
+<field name="user_manager_rem_12_count_homes" type="text" default="10" label="" description="" />
+<field name="user_manager_rem_12_count_foto" type="text" default="10" label="" description="" />
+<field name="user_manager_rem_9_count_homes" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_9_count_foto" type="text" default="6" label="" description="" />
+<field name="user_manager_rem_11_count_homes" type="text" default="11" label="" description="" />
+<field name="user_manager_rem_11_count_foto" type="text" default="10" label="" description="" />
+<field name="cancel_url" type="text" default="" label="" description="" />
+<field name="success_url" type="text" default="" label="" description="" />
+<field name="paypal_real_or_test_show" type="text" default="0" label="" description="" />
+<!-- paypal buy settings -->
+<field name="special_price_show" type="text" default="0" label="" description="" />
+<field name="paypal_buy_status_show" type="text" default="0" label="" description="" />
+<field name="paypal_buy_registrationlevel" type="text" default="" label="" description="" />
+<field name="paypal_buy_status_sale_show" type="text" default="0" label="" description="" />
+<field name="paypal_buy_sale_registrationlevel" type="text" default="" label="" description="" />
+<!-- 2checkout buy settings -->
+<field name="2checkout_buy_status_show" type="text" default="0" label="" description="" />
+<field name="2checkout_buy_registrationlevel" type="text" default="" label="" description="" />
+<field name="2checkout_buy_status_sale_show" type="text" default="0" label="" description="" />
+<field name="2checkout_buy_sale_registrationlevel" type="text" default="" label="" description="" />
+<!-- button '[ Add a house ]' -->
+<field name="add_house_show" type="text" default="1" label="" description="" />
+<field name="add_house_registrationlevel" type="text" default="-2" label="" description="" />
+<!-- button '[ print PDF ]' -->
+<field name="print_pdf_show" type="text" default="1" label="" description="" />
+<field name="print_pdf_registrationlevel" type="text" default="-2" label="" description="" />
+<!-- button '[ print View ]' -->
+<field name="print_view_show" type="text" default="1" label="" description="" />
+<field name="print_view_registrationlevel" type="text" default="-2" label="" description="" />
+<!-- button '[ mail_to ]' -->
+<field name="mail_to_show" type="text" default="1" label="" description="" />
+<field name="mail_to_registrationlevel" type="text" default="-2" label="" description="" />
+<!-- send email for admin -->
+<field name="add_email_address" type="text" default="" label="" description="" />
+<field name="add_email_show" type="text" default="0" label="" description="" />
+<field name="add_email_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="review_email_address" type="text" default="" label="" description="" />
+<field name="review_added_email_show" type="text" default="0" label="" description="" />
+<field name="review_added_email_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="rentrequest_email_address" type="text" default="admin@gmail.com" label="" description="" />
+<field name="rentrequest_email_show" type="text" default="1" label="" description="" />
+<field name="rentrequest_email_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="buyingrequest_email_address" type="text" default="admin@gmail.com" label="" description="" />
+<field name="buyingrequest_email_show" type="text" default="1" label="" description="" />
+<field name="buyingrequest_email_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="owner_show" type="text" default="1" label="" description="" />
+<field name="owner_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="approve_on_add_show" type="text" default="1" label="" description="" />
+<field name="approve_on_add_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="publish_on_add_show" type="text" default="1" label="" description="" />
+<field name="publish_on_add_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="publish_on_review_show" type="text" default="1" label="" description="" />
+<field name="publish_on_review_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="captcha_option_show" type="text" default="0" label="" description="" />
+<field name="captcha_option_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="captcha_option_booking_show" type="text" default="0" label="" description="" />
+<field name="captcha_option_booking_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="captcha_option_sendmessage_show" type="text" default="0" label="" description="" />
+<field name="captcha_option_sendmessage_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="searchlayout_map_show" type="text" default="1" label="" description="" />
+<field name="searchlayout_map_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="searchlayout_orderby_show" type="text" default="1" label="" description="" />
+<field name="searchlayout_orderby_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="searchlayout_form_show" type="text" default="1" label="" description="" />
+<field name="searchlayout_form_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="option_edit_show" type="text" default="1" label="" description="" />
+<field name="option_edit_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="search_option_show" type="text" default="" label="" description="" />
+<field name="search_option_registrationlevel" type="text" default="" label="" description="" />
+<!-- show in category picture -->
+<field name="cat_pic_show" type="text" default="1" label="" description="" />
+<!-- show subcategory -->
+<field name="subcategory_show" type="text" default="1" label="" description="" />
+<!-- view_house  -->
+<field name="view_house" type="text" default="" label="" description="" />
+<!-- show location map  -->
+<field name="location_map" type="text" default="1" label="" description="" />
+<!-- cat_orderind_default  -->
+<field name="cat_orderind_default" type="text" default="name" label="" description="" />
+<field name="rss_show" type="text" default="1" label="" description="" />
+<field name="rss_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="wishlist_show" type="text" default="1" label="" description="" />
+<field name="wishlist_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="owner_show" type="text" default="1" label="" description="" />
+<field name="owner_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="ownerslist_show" type="text" default="1" label="" description="" />
+<field name="ownerslist_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="calendar_show" type="text" default="1" label="" description="" />
+<field name="calendarlist_show" type="text" default="" label="" description="" />
+<field name="calendarlist_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="rent_answer" type="text" default="1" label="" description="" />
+<field name="rent_form" type="text" default="0" label="" description="" />
+<field name="buy_answer" type="text" default="1" label="" description="" />
+<field name="buy_form" type="text" default="0" label="" description="" />
+<!-- end rent notify  -->
+<field name="rent_before_end_notify" type="text" default="0" label="" description="" />
+<field name="rent_before_end_notify_days" type="text" default="2" label="" description="" />
+<field name="rent_before_end_notify_email" type="text" default="" label="" description="" />
+<field name="calendar_placeholder" type="text" default="" label="" description="" />
+<!-- manager_feature_category  -->
+<field name="manager_feature_category" type="text" default="1" label="" description="" />
+<!-- sale_separator  -->
+<field name="sale_separator" type="text" default="1" label="" description="" />
+<!-- extra1  -->
+<field name="extra1" type="text" default="1" label="" description="" />
+<!-- extra2  -->
+<field name="extra2" type="text" default="1" label="" description="" />
+<!-- extra3  -->
+<field name="extra3" type="text" default="1" label="" description="" />
+<!-- extra4  -->
+<field name="extra4" type="text" default="1" label="" description="" />
+<!-- extra5  -->
+<field name="extra5" type="text" default="1" label="" description="" />
+<!-- extra6  -->
+<field name="extra6" type="text" default="1" label="" description="" />
+<!-- extra7  -->
+<field name="extra7" type="text" default="1" label="" description="" />
+<!-- extra8  -->
+<field name="extra8" type="text" default="1" label="" description="" />
+<!-- extra9  -->
+<field name="extra9" type="text" default="1" label="" description="" />
+<!-- extra10  -->
+<field name="extra10" type="text" default="1" label="" description="" />
+<field name="featuredmanager_placeholder" type="text" default="Interior, Exterior, Specific" label="" description="" />
+<field name="currency" type="text" default="USD=1;EUR=0.89;CAD=1.2;" label="" description="" />
+<field name="allowed_exts" type="text" default="zip,pdf" label="" description="" />
+<field name="allowed_exts_img" type="text" default="jpeg,jpg,png,gif" label="" description="" />
+<field name="price_format" type="text" default="." label="" description="" />
+<!-- 1 - affter 0 - beffore -->
+<field name="price_unit_show" type="text" default="1" label="" description="" />
+<field name="date_format" type="text" default="%Y-%m-%d" label="" description="" />
+<field name="datetime_format" type="text" default="%H:%i:%s" label="" description="" />
+<field name="plugin_name_select" type="text" default="" label="" description="" />
+<field name="toronto_login" type="text" default="" label="" description="" />
+<field name="toronto_password" type="text" default="" label="" description="" />
+<field name="api_key" type="text" default="AIzaSyD4ZY-54e-nzN0-KejXHkUh-D7bbexDMKk" label="" description="" />
+<field name="update_map" type="text" default="/index.php?option=com_realestatemanager&amp;task=update_map" label="" description="" />
+<field name="toronto_link_import" type="text" default="/index.php?option=com_realestatemanager&amp;task=toronto_link_import" label="" description="" />
+<field name="mresdms_login" type="text" default="" label="" description="" />
+<field name="mresdms_password" type="text" default="" label="" description="" />
+<field name="mresdms_link_import" type="text" default="/index.php?option=com_realestatemanager&amp;task=mresdms_link_import" label="" description="" />
+<field name="search_form_on_nothing_found_page_show" type="text" default="1" label="" description="" />
+<field name="search_form_on_result_search_page_show" type="text" default="1" label="" description="" />
+<field name="search_button_show" type="text" default="1" label="" description="" />
+<field name="search_button_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="search_form_search_keyword_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_check_in_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_check_out_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_price_field_show" type="text" default="1" label="" description="" />
+<field name="search_lot_size_field_show" type="text" default="1" label="" description="" />
+<field name="search_house_size_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_category_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_listing_type_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_listing_status_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_property_type_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_propertyid_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_comment_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_title_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_country_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_house_size_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_address_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_region_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_city_field_show" type="text" default="1" label="" description="" />
+<field name="extra6_advanced" type="text" default="1" label="" description="" />
+<field name="extra7_advanced" type="text" default="1" label="" description="" />
+<field name="extra8_advanced" type="text" default="1" label="" description="" />
+<field name="extra9_advanced" type="text" default="1" label="" description="" />
+<field name="extra10_advanced" type="text" default="1" label="" description="" />
+<field name="search_form_zipcode_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_lot_size_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_owner_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_rooms_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_bathrooms_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_bedrooms_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_exactly_to_all_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_garages_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_build_year_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_contacts_field_show" type="text" default="1" label="" description="" />
+<field name="search_form_agent_field_show" type="text" default="1" label="" description="" />
+<field name="extra1_advanced" type="text" default="1" label="" description="" />
+<field name="extra2_advanced" type="text" default="1" label="" description="" />
+<field name="extra3_advanced" type="text" default="1" label="" description="" />
+<field name="extra4_advanced" type="text" default="1" label="" description="" />
+<field name="extra5_advanced" type="text" default="1" label="" description="" />
+<field name="default_search_layout" type="text" default="" label="" description="" />
+<field name="google_captcha_by_default_show" type="text" default="0" label="" description="" />
+<field name="show_country_region_city_as_text_field" type="text" default="0" label="" description="" />
+<field name="rentrequest_user_email_notification" type="text" default="1" label="" description="" />
+<field name="buyingrequest_user_email_notification" type="text" default="1" label="" description="" />
+<field name="input_link_rent" type="text" default="1" label="" description="" />
+<field name="input_link_sale" type="text" default="1" label="" description="" />
+<field name="mandatory_built_year_field" type="text" default="1" label="" description="" />
+<field name="mandatory_address_field" type="text" default="1" label="" description="" />
+<field name="mandatory_price_field" type="text" default="1" label="" description="" />
+<field name="mandatory_photo_field" type="text" default="1" label="" description="" />
+<field name="search_all_houses_show" type="text" default="1" label="" description="" />
+<field name="search_all_houses_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="search_alone_category_show" type="text" default="1" label="" description="" />
+<field name="search_alone_category_registrationlevel" type="text" default="-2" label="" description="" />
+<field name="search_check_in_show" type="text" default="0" label="" description="" />
+<field name="search_check_out_show" type="text" default="0" label="" description="" />
+<field name="search_rooms_num_field_show" type="text" default="1" label="" description="" />
+<field name="search_bathrooms_num_field_show" type="text" default="1" label="" description="" />
+<field name="search_bedrooms_num_field_show" type="text" default="1" label="" description="" />
+<field name="order_by_default" type="text" default="date" label="" description="" />
+<field name="energy_field_show" type="text" default="1" label="" description="" />
+<field name="show_house_slider" type="text" default="1" label="" description="" />
+<field name="initial_year" type="text" default="2016" label="" description="" />
+<field name="final_year" type="text" default="2018" label="" description="" />
+<field name="sale_fraction" type="text" default="1" label="" description="" />
+<field name="rel_data_columns_adv_lg" type="text" default="3" label="" description="" />
+<field name="rel_data_columns_adv_md" type="text" default="3" label="" description="" />
+<field name="rel_data_columns_adv_sm" type="text" default="2" label="" description="" />
+<field name="rel_data_columns_adv_xs" type="text" default="2" label="" description="" />
+<field name="rel_data_columns_map_lg" type="text" default="2" label="" description="" />
+<field name="rel_data_columns_map_md" type="text" default="2" label="" description="" />
+<field name="rel_data_columns_map_sm" type="text" default="1" label="" description="" />
+<field name="rel_data_columns_map_xs" type="text" default="2" label="" description="" />
+<field name="watermark_show" type="text" default="0" label="" description="" />
+<field name="watermark_text" type="text" default="Watermark" label="" description="" />
+<field name="watermark_size" type="text" default="50" label="" description="" />
+<field name="watermark_color" type="text" default="rgba(5, 5, 5, 0.75)" label="" description="" />
+<field name="watermark_angle" type="text" default="0" label="" description="" />
+<field name="watermark_position" type="text" default="center" label="" description="" />
+<field name="watermark_opacity" type="text" default="60" label="" description="" />
+<field name="watermark_min_width" type="text" default="100" label="" description="" />
+<field name="watermark_min_height" type="text" default="100" label="" description="" />
+<field name="slider_height" type="text" default="56" label="" description="" />
+<field name="slider_object_fit" type="text" default="cover" label="" description="" />
+    </fieldset>
 </config>

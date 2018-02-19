@@ -1,7 +1,157 @@
+
+<?php
+
+
+?>
+
+
+<!-- scripts -->
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="utf-8" />
+	<meta name="keywords" content="REM| Cottage | Departamento Preventa 3 Recámaras con Balcón Heriberto Frías #1142 Col. Del Valle" />
+	<meta name="rights" content="Copyright caballeroantonio (c) 2017 - 2020. All Rights Reserved" />
+	<meta name="description" content="REM| Cottage | Departamento Preventa 3 Recámaras con Balcón Heriberto Frías #1142 Col. Del Valle" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>REM| Cottage | Departamento Preventa 3 Recámaras con Balcón Heriberto</title>
+	<link href="/jpruebas/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://localhost/jpruebas/index.php?option=com_search&amp;task=view&amp;id=5&amp;catid=50&amp;Itemid=112&amp;format=opensearch" rel="search" title="Search jpruebas" type="application/opensearchdescription+xml" />
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/animate.css" rel="stylesheet" />
+	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/jQuerREL-ui.css" rel="stylesheet" />
+	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/bootstrapREL.css" rel="stylesheet" />
+	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/realestatemanager.css" rel="stylesheet" />
+	<link href="http://localhost/jpruebas//components/com_realestatemanager/TABS/tabcontent.css" rel="stylesheet" />
+	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/swiper.css" rel="stylesheet" />
+	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/jquery.fancyboxREL.min.css" rel="stylesheet" />
+	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/styleFuncyboxThumbs.css" rel="stylesheet" />
+	<link href="/jpruebas/templates/protostar/css/template.css?eec19618931a41de90d4629367cd5943" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<link href="http://localhost/jpruebas/modules/mod_socialmedialinksgenius/assets/font-awesome.css" rel="stylesheet" />
+	<link href="http://localhost/jpruebas/modules/mod_socialmedialinksgenius/assets/style.css" rel="stylesheet" />
+	<link href="http://localhost/jpruebas/modules/mod_slogin/tmpl/default/slogin.min.css?v=1" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"7174ff684a63f4785fb5973e96ded581","system.paths":{"root":"\/jpruebas","base":"\/jpruebas"}}</script>
+	<script src="http://localhost/jpruebas//components/com_realestatemanager/includes/functions.js"></script>
+	<script src="/jpruebas/components/com_realestatemanager/lightbox/js/jQuerREL-1.2.6.js"></script>
+	<script src="/jpruebas/components/com_realestatemanager/includes/jQuerREL-ui.js"></script>
+	<script src="http://localhost/jpruebas//components/com_realestatemanager/includes/wishlist.js"></script>
+	<script src="http://localhost/jpruebas//components/com_realestatemanager/includes/jquery.raty.js"></script>
+	<script src="http://localhost/jpruebas//components/com_realestatemanager/TABS/tabcontent.js"></script>
+	<script src="http://localhost/jpruebas//components/com_realestatemanager/includes/swiper.js"></script>
+	<script src="http://localhost/jpruebas//components/com_realestatemanager/includes/jquery.fancyboxREL.min.js"></script>
+	<script src="/jpruebas/media/system/js/mootools-core.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="/jpruebas/media/system/js/core.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="/jpruebas/media/system/js/mootools-more.js?eec19618931a41de90d4629367cd5943"></script>
+	
+
+	<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyD4ZY-54e-nzN0-KejXHkUh-D7bbexDMKk"></script>
+	
+	<script src="/jpruebas/media/jui/js/jquery.min.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="/jpruebas/media/jui/js/jquery-noconflict.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="/jpruebas/media/jui/js/jquery-migrate.min.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="/jpruebas/media/jui/js/bootstrap.min.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="/jpruebas/templates/protostar/js/template.js?eec19618931a41de90d4629367cd5943"></script>
+	<!--[if lt IE 9]><script src="/jpruebas/media/jui/js/html5.js?eec19618931a41de90d4629367cd5943"></script><![endif]-->
+	<script src="http://localhost/jpruebas/modules/mod_slogin/media/slogin.min.js?v=1"></script>
+	<script src="//ulogin.ru/js/ulogin.js"></script>
+	<script src="/jpruebas/media/system/js/html5fallback.js?eec19618931a41de90d4629367cd5943"></script>
+	<script>
+		jQuerREL=jQuerREL.noConflict();
+		jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+<script type="text/javascript">var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-113017529-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+          </script>
+
+
+<script type="text/javascript">  
+/* 
+ Funcion tomada de:
+ C:\xampp\htdocs\jpruebas\components\com_realestatemanager\views\view_house\tmpl\default.php 
+ TODO: Falta parametrizar datos de mapa
+*/
+      window.addEvent('domready', function() {
+        initialize();
+      });
+      var map;
+      var myLatlng=new google.maps.LatLng( 20.667249, -103.346184 );
+      var sv = new google.maps.StreetViewService();
+
+      var panorama;
+      function initialize(){
+        var myOptions = {
+            zoom: 14,
+            center: myLatlng,
+            scrollwheel: false,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.LARGE
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        if(document.getElementById("map_canvas") != undefined){
+          map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+        }
+        var imgCatalogPath = "http://localhost/jpruebas//components/com_realestatemanager/";
+          var srcForPic = "";
+        var image = '';
+        if(srcForPic.length){
+          var image = new google.maps.MarkerImage(imgCatalogPath + srcForPic,
+          new google.maps.Size(32, 32),
+          new google.maps.Point(0,0),
+          new google.maps.Point(16, 32));
+        }
+        var marker = new google.maps.Marker({ icon: image,position: myLatlng });
+        marker.setMap(map);
+        var panoramaOptions = {
+          position: myLatlng,
+          pov: {
+            heading: 34,
+            pitch: 10
+          }
+        };
+        var streetViewService = new google.maps.StreetViewService();
+        var STREETVIEW_MAX_DISTANCE = 50;
+        streetViewService.getPanoramaByLocation(myLatlng, STREETVIEW_MAX_DISTANCE, function (streetViewPanoramaData, status) {
+          if (status === google.maps.StreetViewStatus.OK) {
+            // ok
+            var panorama = new google.maps.StreetViewPanorama(document.getElementById('map_pano'), panoramaOptions);
+            map.setStreetView(panorama);
+          } else {
+            document.getElementById('map_pano').style.display = "none";
+            // no street view available in this range, or some error occurred
+          }
+        });
+
+      }
+    </script>
+		  
+		  
+<!-- scripts -->
+
+
+
 <?php 
-require_once('rem_scripts.php');
+
 
 $database = JFactory::getDBO();
+
 
 if (!defined('_VALID_MOS') && !defined('_JEXEC')) 
   die('Direct Access to ' . basename(__FILE__) . ' is not allowed.');
@@ -16,24 +166,27 @@ if (!defined('_VALID_MOS') && !defined('_JEXEC'))
  *
  */
 
-global $hide_js, $mainframe, $Itemid, 
-  $mosConfig_live_site, $my, $arr, $acl,$langContent;
+global $hide_js, $mainframe, $Itemid, $realestatemanager_configuration, 
+  $mosConfig_live_site, $mosConfig_absolute_path, $my, $arr, $acl,$langContent;
 
 
-$watermark_path = ($this->params->get('watermark_show') == 1) ? 'watermark/' : '';
-$watermark = ($this->params->get('watermark_show') == 1) ? true : false;  
+$watermark_path = ($realestatemanager_configuration['watermark']['show'] == 1) ? 'watermark/' : '';
+$watermark = ($realestatemanager_configuration['watermark']['show'] == 1) ? true : false;  
 
 JHtml::_('behavior.framework', true);
 
+  
 if (!JFactory::getApplication()->get('os_lightbox')) 
   JFactory::getApplication()->set('os_lightbox', true);
 // add os_lightbox
 ////////////Adding google map
-if ($this->params->get('location_tab_show') 
-    || $this->params->get('street_view_show')) {
-  $api_key = $this->params->get('api_key') ? "key=" . $this->params->get('api_key') : JFactory::getApplication()->enqueueMessage("<a target='_blank' href='//developers.google.com/maps/documentation/geocoding/get-api-key'>" . JText::_('_REALESTATE_MANAGER_GOOGLEMAP_API_KEY_LINK_MESSAGE') . "</a>", JText::_('_REALESTATE_MANAGER_GOOGLEMAP_API_KEY_ERROR')); 
-  $this->document->addScript("//maps.googleapis.com/maps/api/js?{$api_key}");
-  require_once('dibujar_mapa.php');
+$realestatemanager_configuration = $GLOBALS['realestatemanager_configuration'];
+if ($realestatemanager_configuration['location_tab']['show'] 
+    || $realestatemanager_configuration['street_view']['show']) {
+  //$api_key = $realestatemanager_configuration['api_key'] ? "key=" . $realestatemanager_configuration['api_key'] : JFactory::getApplication()->enqueueMessage("<a target='_blank' href='//developers.google.com/maps/documentation/geocoding/get-api-key'>" . JText::_('_REALESTATE_MANAGER_GOOGLEMAP_API_KEY_LINK_MESSAGE') . "</a>", JText::_('_REALESTATE_MANAGER_GOOGLEMAP_API_KEY_ERROR')); 
+	$api_key = "AIzaSyD4ZY-54e-nzN0-KejXHkUh-D7bbexDMKk";
+	//$this->document->addScript("//maps.googleapis.com/maps/api/js?{$api_key}");
+  //dibujar_mapa
 }
 ?>
 <div id="overDiv" ></div>
@@ -43,6 +196,8 @@ JPluginHelper::importPlugin('content');
 $dispatcher = JDispatcher::getInstance();
 
 ?>  
+	
+	
 <script language="javascript" type="text/javascript">
 
 function review_submitbutton() {
@@ -138,7 +293,7 @@ function isValidEmail(str){
 
     var unavailableDates = Array();
     
-    jQuery(document).ready(function() {
+    jQuerREL(document).ready(function() {
         var k=0;
         <?php if(!empty($date_NA)){?>
             <?php foreach ($date_NA as $N_A){ ?>
@@ -150,7 +305,7 @@ function isValidEmail(str){
         function unavailableFrom(date) {
             dmy = date.getFullYear() + "-" + ('0'+(date.getMonth() + 1)).slice(-2) + 
               "-" + ('0'+date.getDate()).slice(-2);
-            if (jQuery.inArray(dmy, unavailableDates) == -1) {
+            if (jQuerREL.inArray(dmy, unavailableDates) == -1) {
                 return [true, ""];
             } else {
                 return [false, "", "Unavailable"];
@@ -159,8 +314,8 @@ function isValidEmail(str){
 
         function unavailableUntil(date) {
             dmy = date.getFullYear() + "-" + ('0'+(date.getMonth() + 1)).slice(-2) + 
-              "-" + ('0'+(date.getDate()-("<?php  if(!$this->params->get('special_price_show')) echo '1';?>"))).slice(-2);
-            if (jQuery.inArray(dmy, unavailableDates) == -1) {
+              "-" + ('0'+(date.getDate()-("<?php  if(!$realestatemanager_configuration['special_price']['show']) echo '1';?>"))).slice(-2);
+            if (jQuerREL.inArray(dmy, unavailableDates) == -1) {
                 return [true, ""];
             } else {
                 return [false, "", "Unavailable"];
@@ -168,65 +323,64 @@ function isValidEmail(str){
         }
 
 
-
-        jQuery( "#rent_from" ).datepicker(
+        jQuerREL( "#rent_from" ).datepicker(
         {
           minDate: "+0",
           dateFormat: "<?php echo transforDateFromPhpToJquery();?>",
           beforeShowDay: unavailableFrom,
           onClose: function () {
-              jQuery.ajax({ 
+              jQuerREL.ajax({ 
                   type: "POST",
-                  update: jQuery(" #alert_date "),
+                  update: jQuerREL(" #alert_date "),
                   success: function( data ) {
-                      jQuery("#alert_date").html("");
+                      jQuerREL("#alert_date").html("");
                   }
               });
 
-              var rent_from = jQuery(" #rent_from ").val();
-              var rent_until = jQuery(" #rent_until ").val();
-              jQuery.ajax({ 
+              var rent_from = jQuerREL(" #rent_from ").val();
+              var rent_until = jQuerREL(" #rent_until ").val();
+              jQuerREL.ajax({ 
                   type: "POST",
                   url: "index.php?option=com_realestatemanager&task=ajax_rent_calcualete"
                     +"&bid=<?php echo $this->item->id; ?>&rent_from="+
                     rent_from+"&rent_until="+rent_until,
                   data: { " #do " : " #1 " },
-                  update: jQuery(" #message-here "),
+                  update: jQuerREL(" #message-here "),
                   success: function( data ) {
-                      jQuery("#message-here").html(data);
-                      jQuery("#calculated_price").val(data);
+                      jQuerREL("#message-here").html(data);
+                      jQuerREL("#calculated_price").val(data);
                   }
               });
           }
         });          
         
-        jQuery( "#rent_until" ).datepicker(
+        jQuerREL( "#rent_until" ).datepicker(
         {
 
           minDate: "+0",
           dateFormat: "<?php echo transforDateFromPhpToJquery();?>",
           beforeShowDay: unavailableUntil,
           onClose: function () {
-              jQuery.ajax({ 
+              jQuerREL.ajax({ 
                   type: "POST",
-                  update: jQuery(" #alert_date "),
+                  update: jQuerREL(" #alert_date "),
                   success: function( data ) {
-                      jQuery("#alert_date").html("");
+                      jQuerREL("#alert_date").html("");
                   }
               });
 
-              var rent_from = jQuery(" #rent_from ").val();
-              var rent_until = jQuery(" #rent_until ").val();
-              jQuery.ajax({ 
+              var rent_from = jQuerREL(" #rent_from ").val();
+              var rent_until = jQuerREL(" #rent_until ").val();
+              jQuerREL.ajax({ 
                   type: "POST",
                   url: "index.php?option=com_realestatemanager&task=ajax_rent_calcualete"
                     +"&bid=<?php echo $this->item->id; ?>&rent_from="+
                     rent_from+"&rent_until="+rent_until,
                   data: { " #do " : " #1 " },
-                  update: jQuery(" #message-here "),
+                  update: jQuerREL(" #message-here "),
                   success: function( data ) {
-                      jQuery("#message-here").html(data);
-                      jQuery("#calculated_price").val(data);
+                      jQuerREL("#message-here").html(data);
+                      jQuerREL("#calculated_price").val(data);
                   }
               });
           }
@@ -240,7 +394,7 @@ function isValidEmail(str){
         var form = document.rent_request_form;
         var datef = form.rent_from.value;
         var dateu = form.rent_until.value;
-        var dayornight = "<?php echo $this->params->get('special_price_show')?>";
+        var dayornight = "<?php echo $realestatemanager_configuration['special_price']['show']?>";
         var frep = datef.replace(/\//gi,"-").replace(/\s/gi,"-").replace(/\*/gi,"-");
         var urep = dateu.replace(/\//gi,"-").replace(/\s/gi,"-").replace(/\*/gi,"-");
         var re = /\n*\-\d\d\d\d/;
@@ -293,15 +447,15 @@ function isValidEmail(str){
     } 
 ?>  
 <script  type="text/javascript" charset="utf-8" async defer>
-    jQuery(document).ready(function () {
-      jQuery('input,textarea').focus(function(){
-        jQuery(this).data('placeholder',jQuery(this).attr('placeholder'))
-        jQuery(this).attr('placeholder','')
-        jQuery(this).css('color','#a3a3a3');
-        jQuery(this).css('border-color','#ddd');
+    jQuerREL(document).ready(function () {
+      jQuerREL('input,textarea').focus(function(){
+        jQuerREL(this).data('placeholder',jQuerREL(this).attr('placeholder'))
+        jQuerREL(this).attr('placeholder','')
+        jQuerREL(this).css('color','#a3a3a3');
+        jQuerREL(this).css('border-color','#ddd');
       });
-      jQuery('input,textarea').blur(function(){
-        jQuery(this).attr('placeholder',jQuery(this).data('placeholder'));
+      jQuerREL('input,textarea').blur(function(){
+        jQuerREL(this).attr('placeholder',jQuerREL(this).data('placeholder'));
       });
     });
 
@@ -330,7 +484,7 @@ function isValidEmail(str){
 <?php
 
         $is_edit_all_houses = false ;
-        if (checkAccess_REM($this->params->get('option_edit_registrationlevel'), 'RECURSE', userGID_REM($my->id), $acl)) {
+        if (checkAccess_REM($realestatemanager_configuration['option_edit']['registrationlevel'], 'RECURSE', userGID_REM($my->id), $acl)) {
             $is_edit_all_houses = true ;
         }
 
@@ -366,11 +520,11 @@ if ($my->id == $this->item->owner_id && $my->id != '' || $isroot):
 
 if(!incorrect_price($this->item->price)){
 
-    if ($this->params->get('price_unit_show') == '1') {
+    if ($realestatemanager_configuration['price_unit_show'] == '1') {
         if ($this->params->get('show_sale_separator')) {
             echo "<div class=\"pricemoney\">
                     <span class=\"money\">" 
-                    . formatMoney($this->item->price, $this->params->get('sale_fraction'), $this->params->get('price_format')) . 
+                    . formatMoney($this->item->price, $realestatemanager_configuration['sale_fraction'], $realestatemanager_configuration['price_format']) . 
                     "</span>";
             echo "<span class=\"price\">&nbsp;" . $this->item->priceunit . "</span></div>";
         } else {
@@ -381,7 +535,7 @@ if(!incorrect_price($this->item->price)){
         if ($this->params->get('show_sale_separator')) {
             echo "<div class=\"pricemoney\"><span class=\"price\">" . $this->item->priceunit . "</span>";
             echo "&nbsp;<span class=\"money\">"
-                 . formatMoney($this->item->price, $this->params->get('sale_fraction'), $this->params->get('price_format')) 
+                 . formatMoney($this->item->price, $realestatemanager_configuration['sale_fraction'], $realestatemanager_configuration['price_format']) 
                  . "</span></div>";
         } else {
             echo "<div class=\"pricemoney\"><span class=\"price\">" . $this->item->priceunit . "</span>";
@@ -391,10 +545,10 @@ if(!incorrect_price($this->item->price)){
     if($currencys_price){
       foreach ($currencys_price as $key => $row) {
         if ($this->item->priceunit != $key) {
-          if ($this->params->get('price_unit_show') == '1') {
+          if ($realestatemanager_configuration['price_unit_show'] == '1') {
             if ($this->params->get('show_sale_separator')) {
               echo "<div class=\"pricemoney\"><span class=\"money\">" 
-                  . formatMoney($row, $this->params->get('sale_fraction'), $this->params->get('price_format')) . "</span>";
+                  . formatMoney($row, $realestatemanager_configuration['sale_fraction'], $realestatemanager_configuration['price_format']) . "</span>";
               echo "<span class=\"price\">&nbsp;" . $key . "</span></div>";
             } else {
               echo "<div class=\"pricemoney\"><span class=\"money\">" . $row . "</span>";
@@ -404,7 +558,7 @@ if(!incorrect_price($this->item->price)){
             if ($this->params->get('show_sale_separator')) {
               echo "<div class=\"pricemoney\"><span class=\"price\">" . $key . "</span>";
               echo "&nbsp;<span class=\"money\">" 
-                  . formatMoney($row, $this->params->get('sale_fraction'), $this->params->get('price_format')) . 
+                  . formatMoney($row, $realestatemanager_configuration['sale_fraction'], $realestatemanager_configuration['price_format']) . 
                   "</span></div>";
             } else {
               echo "<div class=\"pricemoney\"><span class=\"price\">" . $key . "</span>";
@@ -457,14 +611,14 @@ if(!incorrect_price($this->item->price)){
 $imageURL = ($this->item->image_link);
 if ($imageURL == '') $imageURL = JText::_('_REALESTATE_MANAGER_NO_PICTURE_BIG');
 
-    // $file_name = RemcaHelper::rem_picture_thumbnail($imageURL,
-    //    $this->params->get('fotomain_width'),
-    //    $this->params->get('fotomain_high'));
+    // $file_name = rem_picture_thumbnail($imageURL,
+    //    $realestatemanager_configuration['fotomain']['width'],
+    //    $realestatemanager_configuration['fotomain']['high']);
 
      $file_name = $imageURL;
     $file = $mosConfig_live_site . '/components/com_realestatemanager/photos/' . $file_name;
 echo '<div style="position:relative">';
-if($this->params->get('show_house_slider')=='1') {
+if($realestatemanager_configuration['show_house_slider']=='1') {
   $stdClassImage = new stdClass();
   $stdClassImage->main_img = $file_name;
   // $house_photos[] = $stdClassImage;
@@ -513,14 +667,14 @@ if($this->params->get('show_house_slider')=='1') {
          ?> 
 
             <a href="./components/com_realestatemanager/photos/<?php 
-               echo RemcaHelper::rem_picture_thumbnail($house_photos[$i]->main_img,
-               $this->params->get('fotomain_width'),
-               $this->params->get('fotomain_high'), $watermark); ?>" data-fancybox="slider" title="photo">
+               echo rem_picture_thumbnail($house_photos[$i]->main_img,
+               $realestatemanager_configuration['fotomain']['width'],
+               $realestatemanager_configuration['fotomain']['high'], $watermark); ?>" data-fancybox="slider" title="photo">
               <img alt="<?php echo $this->item->name; ?>" title="<?php echo $this->item->name; ?>" 
               src="./components/com_realestatemanager/photos/<?php 
-               echo RemcaHelper::rem_picture_thumbnail($house_photos[$i]->main_img,
-               $this->params->get('fotomain_width'),
-               $this->params->get('fotomain_high'), $watermark); ?>"
+               echo rem_picture_thumbnail($house_photos[$i]->main_img,
+               $realestatemanager_configuration['fotomain']['width'],
+               $realestatemanager_configuration['fotomain']['high'], $watermark); ?>"
  />
             </a>
     
@@ -553,24 +707,32 @@ else {
     </span>
 
     <div class="table_gallery table_07">
+	
+<?php 
+	// Obtencion de Imagenes de Inmueble //
+	$database = JFactory::getDBO();
+	$query = "select main_img from #__rem_photos WHERE fk_houseid='2' order by img_ordering,id";
+	$database->setQuery($query);
+	$house_photos = $database->loadObjectList();
+?>	
 <?php if (count($house_photos) > 0) { ?>
     <div class="gallery_img">
     <?php for ($i = 0;$i < count($house_photos);$i++) { ?>
         <div class="thumbnail viewHouses" 
-              style="width: <?php echo $this->params->get('fotogal_width');?>px; height: <?php 
-              echo $this->params->get('fotogal_high');?>px;" >
+              style="width: <?php echo $realestatemanager_configuration['fotogal']['width'];?>px; height: <?php 
+              echo $realestatemanager_configuration['fotogal']['high'];?>px;" >
 
          <?php $house_photos[$i]->main_img = str_ireplace('watermark/', '', $house_photos[$i]->main_img) ?>
 
               <a href="./components/com_realestatemanager/photos/<?php 
-               echo RemcaHelper::rem_picture_thumbnail($house_photos[$i]->main_img,
-               $this->params->get('fotomain_width'),
-               $this->params->get('fotomain_high'), $watermark); ?>" data-fancybox="gallery" title="photo" >
+               echo rem_picture_thumbnail($house_photos[$i]->main_img,
+               $realestatemanager_configuration['fotomain']['width'],
+               $realestatemanager_configuration['fotomain']['high'], $watermark); ?>" data-fancybox="gallery" title="photo" >
                <img alt="<?php echo $this->item->name; ?>" title="<?php echo $this->item->name; ?>" 
                src="./components/com_realestatemanager/photos/<?php 
-               echo RemcaHelper::rem_picture_thumbnail($house_photos[$i]->main_img,
-               $this->params->get('fotogal_width'),
-               $this->params->get('fotogal_high'), $watermark); ?>" style = "vertical-align:middle;" />
+               echo rem_picture_thumbnail($house_photos[$i]->main_img,
+               $realestatemanager_configuration['fotogal']['width'],
+               $realestatemanager_configuration['fotogal']['high'], $watermark); ?>" style = "vertical-align:middle;" />
               </a>
           </div>
            <?php
@@ -644,7 +806,7 @@ else {
                 <?php
             }
             ?>
-            <?php if ($this->params->get('extra1') == 1 && $this->item->extra1 != "") {
+            <?php if ($realestatemanager_configuration['extra1'] == 1 && $this->item->extra1 != "") {
     ?>
             <div class="row_text">
                 <span class="col_text_1"><?php echo JText::_('_REALESTATE_MANAGER_LABEL_EXTRA1'); ?>:</span>
@@ -652,7 +814,7 @@ else {
             </div>
                 <?php
             }
-            if ($this->params->get('extra2') == 1 && $this->item->extra2 != "") {
+            if ($realestatemanager_configuration['extra2'] == 1 && $this->item->extra2 != "") {
                 ?>
             <div class="row_text">
                 <span class="col_text_1"><?php echo JText::_('_REALESTATE_MANAGER_LABEL_EXTRA2'); ?>:</span>
@@ -660,7 +822,7 @@ else {
             </div>
                 <?php
             }
-            if ($this->params->get('extra3') == 1 && $this->item->extra3 != "") {
+            if ($realestatemanager_configuration['extra3'] == 1 && $this->item->extra3 != "") {
                 ?>
             <div class="row_text">
                 <span class="col_text_1"><?php echo JText::_('_REALESTATE_MANAGER_LABEL_EXTRA3'); ?>:</span>
@@ -668,7 +830,7 @@ else {
             </div>
     <?php
 }
-if ($this->params->get('extra4') == 1 && $this->item->extra4 != "") {
+if ($realestatemanager_configuration['extra4'] == 1 && $this->item->extra4 != "") {
     ?>
             <div class="row_text">
                 <span class="col_text_1"><?php echo JText::_('_REALESTATE_MANAGER_LABEL_EXTRA4'); ?>:</span>
@@ -676,7 +838,7 @@ if ($this->params->get('extra4') == 1 && $this->item->extra4 != "") {
             </div>
                 <?php
             }
-            if ($this->params->get('extra5') == 1 && $this->item->extra5 != "") {
+            if ($realestatemanager_configuration['extra5'] == 1 && $this->item->extra5 != "") {
                 ?>
             <div class="row_text">
                 <span class="col_text_1"><?php echo JText::_('_REALESTATE_MANAGER_LABEL_EXTRA5'); ?>:</span>
@@ -684,7 +846,7 @@ if ($this->params->get('extra4') == 1 && $this->item->extra4 != "") {
             </div>
     <?php
 }
-if ($this->params->get('extra6') == 1 && $this->item->extra6 > 0) {
+if ($realestatemanager_configuration['extra6'] == 1 && $this->item->extra6 > 0) {
     $extra1 = explode(',', JText::_('_REALESTATE_MANAGER_EXTRA6_SELECTLIST'));
     $i = 1;
     foreach ($extra1 as $extra2) {
@@ -698,7 +860,7 @@ if ($this->params->get('extra6') == 1 && $this->item->extra6 > 0) {
             </div>
     <?php
 }
-if ($this->params->get('extra7') == 1 && $this->item->extra7 > 0) {
+if ($realestatemanager_configuration['extra7'] == 1 && $this->item->extra7 > 0) {
     $extra1 = explode(',', JText::_('_REALESTATE_MANAGER_EXTRA7_SELECTLIST'));
     $i = 1;
     foreach ($extra1 as $extra2) {
@@ -712,7 +874,7 @@ if ($this->params->get('extra7') == 1 && $this->item->extra7 > 0) {
             </div>
     <?php
 }
-if ($this->params->get('extra8') == 1 && $this->item->extra8 > 0) {
+if ($realestatemanager_configuration['extra8'] == 1 && $this->item->extra8 > 0) {
     $extra1 = explode(',', JText::_('_REALESTATE_MANAGER_EXTRA8_SELECTLIST'));
     $i = 1;
     foreach ($extra1 as $extra2) {
@@ -726,7 +888,7 @@ if ($this->params->get('extra8') == 1 && $this->item->extra8 > 0) {
             </div>
     <?php
 }
-if ($this->params->get('extra9') == 1 && $this->item->extra9 > 0) {
+if ($realestatemanager_configuration['extra9'] == 1 && $this->item->extra9 > 0) {
     $extra1 = explode(',', JText::_('_REALESTATE_MANAGER_EXTRA9_SELECTLIST'));
     $i = 1;
     foreach ($extra1 as $extra2) {
@@ -740,7 +902,7 @@ if ($this->params->get('extra9') == 1 && $this->item->extra9 > 0) {
             </div>
             <?php
         }
-        if ($this->params->get('extra10') == 1 && $this->item->extra10 > 0) {
+        if ($realestatemanager_configuration['extra10'] == 1 && $this->item->extra10 > 0) {
             $extra1 = explode(',', JText::_('_REALESTATE_MANAGER_EXTRA10_SELECTLIST'));
             $i = 1;
             foreach ($extra1 as $extra2) {
@@ -775,7 +937,7 @@ if ($this->params->get('extra9') == 1 && $this->item->extra9 > 0) {
 ?>
         </div>
         <?php
-        if($this->params->get('energy_field_show')) {
+        if($realestatemanager_configuration['energy_field_show']) {
           $result = $this->params->get('diagramma');
           if($result){ ?>
         <!-- <div class="diagramm"> -->
@@ -786,6 +948,19 @@ if ($this->params->get('extra9') == 1 && $this->item->extra9 > 0) {
         }
       }
       ?>
+
+<?php
+
+$this->params->set('show_locationtab_registrationlevel', 1);
+$this->params->set('show_location', 1);
+
+$this->params->set('show_reviews_tab', 1);
+$this->params->set('show_reviewstab_registrationlevel', 1);
+
+$this->params->set('calendar_show', 1);
+?>
+	  
+	  
 <div class="tabs_buttons">
     <!--list of the tabs-->
     <ul id="countrytabs" class="shadetabs">
@@ -961,7 +1136,8 @@ if ($this->params->get('extra9') == 1 && $this->item->extra9 > 0) {
     
     <!--       *******************************************************************         -->
     <?php 
-    if($this->params->get('special_price_show')){
+    global $database, $realestatemanager_configuration;
+    if($realestatemanager_configuration['special_price']['show']){
         $switchTranslateDayNight = JText::_('_REALESTATE_MANAGER_RENT_SPECIAL_PRICE_PER_DAY');       
     }else{
         $switchTranslateDayNight = JText::_('_REALESTATE_MANAGER_RENT_SPECIAL_PRICE_PER_NIGHT');    
@@ -987,7 +1163,7 @@ if ($this->params->get('extra9') == 1 && $this->item->extra9 > 0) {
                     <?php                                                
                         $DateToFormat = str_replace("D",'d',
                           (str_replace("M",'m',(str_replace('%','',
-                          $this->params->get('date_format'))))));
+                          $realestatemanager_configuration['date_format'])))));
                         for ($i = 0; $i < count($rentTerm); $i++) {   
                         $date_from = new DateTime($rentTerm[$i]->price_from);
                         $date_to = new DateTime($rentTerm[$i]->price_to);
@@ -996,10 +1172,10 @@ if ($this->params->get('extra9') == 1 && $this->item->extra9 > 0) {
                         <td align ='center'><?php echo date_format($date_from, "$DateToFormat"); ?></td>
                         <td align ='center'><?php echo date_format($date_to, "$DateToFormat"); ?></td>
                         <?php
-                                if ($this->params->get('sale_separator') == '1') { ?>
+                                if ($realestatemanager_configuration['sale_separator'] == '1') { ?>
                                     <td align ='center'><?php 
-                                      echo formatMoney($rentTerm[$i]->special_price, $this->params->get('sale_fraction'),
-                                         $this->params->get('price_format')); ?></td>
+                                      echo formatMoney($rentTerm[$i]->special_price, $realestatemanager_configuration['sale_fraction'],
+                                         $realestatemanager_configuration['price_format']); ?></td>
                         <?php   } else { ?>
                                     <td align ='center'><?php echo $rentTerm[$i]->special_price; ?></td>
                         <?php   }
@@ -1012,7 +1188,42 @@ if ($this->params->get('extra9') == 1 && $this->item->extra9 > 0) {
             </div>
 <?php   } ?>
 
-<?php //require_once ('house_feature.php'); ?>
+<!--       *******************************************************************         -->
+<?php if($realestatemanager_configuration['manager_feature_category'] == 1) { ?>
+<div class="table_country3 ">
+  <?php 
+    //if (count($house_feature)) {
+	$house_feature = array();
+    if (count($house_feature)) {
+  ?>
+    <div class="row_text">
+        <div class="rem_features_title">
+        <?php echo JText::_('_REALESTATE_MANAGER_LABEL_FEATURED_MANAGER_FEATURE'); ?>:
+        </div>
+        <span class="col_text_2">
+        <?php 
+        for ($i = 0; $i < count($house_feature); $i++) {
+          if ($i != 0) {
+            if ($house_feature[$i]->categories !== $house_feature[$i - 1]->categories)
+              echo "<div class='rem_features_category'>" . $house_feature[$i]->categories . "</div>";
+          }
+          else {
+            echo "<div class='rem_features_category'>" . $house_feature[$i]->categories . "</div>";
+          }
+          echo "<span class='rem_features_name'><i class='fa  fa-check rem_fa'></i>"
+             . $house_feature[$i]->name . "</span>";
+          if ($i != count($house_feature)-1) {
+            if ($house_feature[$i]->categories == $house_feature[$i + 1]->categories);            
+          }
+        }
+        ?>
+        </span>
+    </div>
+
+        <?php }
+    ?>
+</div>
+<?php } ?>
         </div>
     </div><!--end of tab-->
 <div id="country2" class="tabcontent">
@@ -1034,9 +1245,209 @@ if ($this->params->get('extra9') == 1 && $this->item->extra9 > 0) {
         echo JText::_('_REALESTATE_MANAGER_LABEL_NO_LOCATION_AVAILIBLE');
         ?>
     </div>
-<?php 
-//require_once('getReviews.php'); 
-require_once('calendar.php')
+   <!--tab for reviews-->
+    <div id="country4" class="tabcontent">
+<?php
+//show the reviews
+    //if ($reviews = $this->item->getReviews()) {
+	$reviews = array();
+    if ($reviews) {
+        ?>
+        <br />
+        <div class="componentheading<?php echo $this->params->get('pageclass_sfx'); ?>">
+            <?php echo JText::_('_REALESTATE_MANAGER_LABEL_REVIEWS'); ?> 
+        </div>
+
+        <div class="reviews_table table_06">
+            <?php
+            if ($reviews != null && count($reviews) > 0) {
+                for ($m = 0, $n = count($reviews); $m < $n; $m++) {
+                    $review = $reviews[$m];
+                    if ($review->state != 0) {
+                        ?>
+                        <div class="box_comment">
+                            <div class="user_name"><?php echo $review->user_name; ?></div>
+                            <span class="arrow_up_comment"></span>
+                            <div class="head_comment">
+                                <div class="title_rating">
+                                    <h4 class="col_title_rev"><?php echo $review->title; ?></h4>
+                                    <span class="col_rating_rev">
+                                        <img src="./components/com_realestatemanager/images/rating-<?php
+                                             echo $review->rating; ?>.png" 
+                                             alt="<?php echo ($review->rating) / 2; ?>" border="0" align="right"/>
+                                    </span>
+                                </div>
+                                <div class="row_comment">
+                                    <?php echo $review->comment; ?>
+                                </div>
+                                <div class="date">
+                                    <span class="date_format">
+                                        <?php echo data_transform_rem($review->date); ?>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                }
+            }
+            ?>
+        </div>
+
+        <?php
+    } else{
+      echo "<p>No reviews for house</p>";
+    }
+
+if ($this->params->get('show_reviews')) {
+    $reviews = array();//$this->item->getReviews();
+    ?><?php
+    if ($this->params->get('show_inputreviews')) {
+        ?><?php positions_rem($this->params->get('view07')); ?><div id="hidden_review">
+            <form action="<?php echo sefRelToAbs("index.php?option="
+                 . $option . "&amp;task=review_house&amp;Itemid=" .
+                   $Itemid); ?>" method="post" name="review_house"> 
+                <input type="hidden" name="user_name" value="<?php echo $my->username ?>">
+                <input type="hidden" name="fk_userid" value="<?php echo $my->id ?>">
+                <input type="hidden" name="user_email" value="<?php echo $my->email ?>">
+                <div class="componentheading<?php echo $this->params->get('pageclass_sfx'); ?>">
+                    <hr />
+                    <?php echo JText::_('_REALESTATE_MANAGER_LABEL_ADDREVIEW'); ?>
+                </div>
+
+                <div class="add_table_review table_09">
+                    <div class="row_01"><?php echo JText::_('_REALESTATE_MANAGER_LABEL_REVIEW_TITLE'); ?></div>
+                    <div class="row_02">
+                        <input class="inputbox" type="text" name="title" size="80" 
+                        value="<?php if (isset($_REQUEST["title"])) {
+                        echo $_REQUEST["title"]; } ?>" /> 
+                    </div>
+                    <div class="row_03"><?php echo JText::_('_REALESTATE_MANAGER_LABEL_REVIEW_COMMENT'); ?></div>
+                    <div class="row_04">
+                            <?php
+                            $comm_val = "";
+                            if (isset($_REQUEST["comment"])) {
+                                $comm_val = protectInjectionWithoutQuote("comment",'','STRING');
+                            }
+                            //editorArea( 'editor1',  $comm_val, 'comment', '410', '200', '60', '10' );
+                            ?>
+                        <textarea name="comment" cols="50" rows="8" ><?php echo $comm_val; ?></textarea>
+                    </div>
+
+                    <!-- #### RATING #### -->
+                    <?php if (version_compare(JVERSION, "3.0", "ge")): ?>
+                    <script type="text/javascript">
+                        os_img_path = '<?php echo $mosConfig_live_site . '/components/com_realestatemanager/images/'; ?>' ;
+                        jQuerREL(document).ready(function(){
+                            jQuerREL('#star').raty({
+                                starHalf: os_img_path+'star-half.png',
+                                starOff: os_img_path+'star-off.png',
+                                starOn: os_img_path+'star-on.png' 
+                            });
+                        });
+                    </script>
+
+                        <div class="row_rating_j3">
+                            <span class="lable_rating"><?php echo JText::_('_REALESTATE_MANAGER_LABEL_REVIEW_RATING'); ?></span>
+                            <span id="star"></span>
+                        </div>
+
+                            <?php else:
+                            ?>
+                        <div class="row_rating_j2">
+                            <span class="col_01"><?php echo JText::_('_REALESTATE_MANAGER_LABEL_REVIEW_RATING'); ?></span>
+                            <br />
+                            <span>  
+                            <?php
+                            $k = 0;
+                            while ($k < 11) {
+                                ?>
+                            <input type="radio" name="rating" value="<?php echo $k; ?>" <?php
+                            if (isset($_REQUEST["rating"]) && $_REQUEST["rating"] == $k) {
+                                echo "CHECKED";
+                            }
+                            ?> alt="Rating" />
+                            <img src="./components/com_realestatemanager/images/rating-<?php echo $k; ?>.png" 
+                              alt="<?php echo ($k) / 2; ?>" border="0" /><br />
+                                <?php
+                                $k++;
+                            }
+                            ?>
+                            </span>
+                        </div>
+
+                        <?php endif; ?>
+
+            <div  class="row_button_review">
+                <span class="button_save"> 
+                    <!-- save review button-->
+                    <input class="button" type="button" value="<?php 
+                      echo JText::_('_REALESTATE_MANAGER_LABEL_BUTTON_SAVE'); ?>" onclick="review_submitbutton()"/>
+                </span>
+            </div>
+
+        </div>
+
+        <input type="hidden" name="fk_houseid" value="<?php echo $this->item->id; ?>" />
+        <input type="hidden" name="catid" value="<?php $temp = $this->item->catid;
+        echo $temp[0]; ?>" />
+            </form>
+        </div> 
+        <!-- end <div id="hidden_review"> -->
+        <?php
+    } //end if($this->params->get('show_inputreviews'))
+} // end if( $this->params->get('show_reviews'))
+?>
+    </div>
+<?php
+/////////////////////////////////////////////START CALENDAR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+if ($this->item->listing_type == 1) {
+  if ($this->params->get('show_rentrequest') && $this->params->get('show_rentstatus') && $this->params->get('calendar_show')) {
+?>
+    <div id="country5" class="tabcontent">
+      <div style="text-align: center;" >
+        <h4><?php echo JText::_('_REALESTATE_MANAGER_LABEL_CALENDAR_TITLE'); ?></h4>
+        <form action="" method="post" id="calendar" name="calendar" >    
+        <!-- year select list on display -->
+        <?php
+        echo $this->params->get('months_list');
+        echo $this->params->get('years_list');
+        $calendar = $this->params->get('calendar');
+        ?>
+        <!-- year select list on display -->
+        </form>
+        <div class="rem_tableC basictable">
+          <div class="row_01">
+              <span class="col_01"><?php echo $calendar->tab1; ?></span>
+              <span class="col_02"><?php echo $calendar->tab2; ?></span>
+              <span class="col_03"><?php echo $calendar->tab3; ?></span>
+              <span class="col_03"><?php echo $calendar->tab4; ?></span>
+          </div>
+          <div class="row_02">
+              <span class="col_01"><?php echo $calendar->tab21; ?></span>
+              <span class="col_02"><?php echo $calendar->tab22; ?></span>
+              <span class="col_02"><?php echo $calendar->tab23; ?></span>
+              <span class="col_03"><?php echo $calendar->tab24; ?><br /></span>
+          </div>
+          <div class="calendar_notation row_03">
+            <div class="row_calendar">
+              <span class="label_calendar_available">
+              <?php echo JText::_('_REALESTATE_MANAGER_LABEL_CALENDAR_AVAILABLE'); ?></span>
+              <div class="calendar_available_notation"></div>
+            </div>
+            <div class="row_calendar">
+              <span class="label_calendar_available">
+                <?php echo JText::_('_REALESTATE_MANAGER_LABEL_CALENDAR_NOT_AVAILABLE'); ?></span>
+              <div class="calendar_not_available_notation"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <?php
+  }
+} 
+/////////////////////////////////////////////END CALENDAR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\   
 ?>
 </div> <!--end all tabs -->
 
@@ -1172,7 +1583,7 @@ require_once('calendar.php')
         window.onload = function ()
         {
             var today = new Date();
-            var date = today.toLocaleFormat("<?php echo $this->params->get('date_format') ?>");
+            var date = today.toLocaleFormat("<?php echo $realestatemanager_configuration['date_format'] ?>");
            //fix later //first load date dug.
            // document.getElementById('rent_from').value = date;
            // document.getElementById('rent_until').value = date;
@@ -1188,6 +1599,7 @@ require_once('calendar.php')
 
           <div class="row_06">
             <p><?php echo JText::_('_REALESTATE_MANAGER_LABEL_RENT_REQUEST_FROM'); ?>:</p>
+    <?php global $realestatemanager_configuration;?>
             <p><input type="text" id="rent_from" name="rent_from"></p>
           </div>
           <div class="row_07">
@@ -1336,8 +1748,8 @@ require_once('calendar.php')
  <?php positions_rem($this->params->get('similaires')); ?>
  
 <div>
+
     <?php
-	//reparar:
     //mosHTML::BackButton($params, $hide_js);
     ?>
 </div>
@@ -1354,35 +1766,32 @@ require_once('calendar.php')
 </div>
 
 <?php 
-  $slider_object_fit = $this->params->get('slider_object_fit');
-  $slider_height = $this->params->get('slider_height')/100;
+  $slider_object_fit = $realestatemanager_configuration['slider']['object_fit'];
+  $slider_height = $realestatemanager_configuration['slider']['height']/100;
 ?>
 
 <script type="text/javascript">
-$(function() {
-    var mySwiper = new Swiper ('#rem_house_galery .swiper-container', {
-      nextButton: '#rem_house_galery .swiper-button-next',
-      prevButton: '#rem_house_galery .swiper-button-prev'
-    })
-  // fancybox
-   jQuery('[data-fancybox]').fancybox({
-    thumbs : {
-      autoStart : true
-    }
+  var mySwiper = new Swiper ('#rem_house_galery .swiper-container', {
+    nextButton: '#rem_house_galery .swiper-button-next',
+    prevButton: '#rem_house_galery .swiper-button-prev'
   })
+// fancybox
+ jQuerREL('[data-fancybox]').fancybox({
+  thumbs : {
+    autoStart : true
+  }
+})
 
 
-  var width = jQuery('#rem_house_galery .swiper-container').width();
-  jQuery('#rem_house_galery .swiper-container .swiper-slide img').height(width*<?php echo $slider_height; ?>);
-  jQuery('#rem_house_galery .swiper-container .swiper-slide img').css('object-fit','<?php echo $slider_object_fit; ?>');
+var width = jQuerREL('#rem_house_galery .swiper-container').width();
+jQuerREL('#rem_house_galery .swiper-container .swiper-slide img').height(width*<?php echo $slider_height; ?>);
+jQuerREL('#rem_house_galery .swiper-container .swiper-slide img').css('object-fit','<?php echo $slider_object_fit; ?>');
 
-  jQuery(window).resize(function(){
-    var width = jQuery('#rem_house_galery .swiper-container').width();
-    jQuery('#rem_house_galery .swiper-container .swiper-slide img').height(width*<?php echo $slider_height; ?>);
-  })
-});
+jQuerREL(window).resize(function(){
+  var width = jQuerREL('#rem_house_galery .swiper-container').width();
+  jQuerREL('#rem_house_galery .swiper-container .swiper-slide img').height(width*<?php echo $slider_height; ?>);
+})
 
 
 </script>
-
 

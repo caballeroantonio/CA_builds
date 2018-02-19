@@ -1,17 +1,18 @@
-<?php
-  if($this->params->get('street_view_show')){
+  if($realestatemanager_configuration['street_view']['show']){
     ?>
     <script type="text/javascript">  
-      jQuery( initialize );
+      window.addEvent('domready', function() {
+        initialize();
+      });
       var map;
       var myLatlng=new google.maps.LatLng(<?php
-        if ($this->item->hlatitude && $this->item->hlatitude != '')
-          echo $this->item->hlatitude;
+        if ($house->hlatitude && $house->hlatitude != '')
+          echo $house->hlatitude;
         else
           echo 0;
         ?>,<?php
-        if ($this->item->hlongitude && $this->item->hlongitude != '')
-          echo $this->item->hlongitude;
+        if ($house->hlongitude && $house->hlongitude != '')
+          echo $house->hlongitude;
         else
           echo 0;
         ?>);
@@ -20,8 +21,8 @@
       var panorama;
       function initialize(){
         var myOptions = {
-            zoom: <?php if ($this->item->map_zoom)
-                            echo $this->item->map_zoom;
+            zoom: <?php if ($house->map_zoom)
+                            echo $house->map_zoom;
                         else
                             echo 1;
                         ?>,
@@ -38,10 +39,10 @@
         var imgCatalogPath = "<?php echo $mosConfig_live_site;
          ?>/components/com_realestatemanager/";
   <?php
-        $newArr = explode(",", JText::_('_REALESTATE_MANAGER_HOUSE_MARKER'));
+        $newArr = explode(",", _REALESTATE_MANAGER_HOUSE_MARKER);
         $numPick = '';
-        if (isset($newArr[$this->item->property_type])) {
-            $numPick = $newArr[$this->item->property_type];
+        if (isset($newArr[$house->property_type])) {
+            $numPick = $newArr[$house->property_type];
         }
   ?>
         var srcForPic = "<?php echo $numPick; ?>";
@@ -81,25 +82,26 @@
   }else{
 
     ?>
-<!--    <script type="text/javascript">  
-
-      jQuery( initialize );
+    <script type="text/javascript">  
+      window.addEvent('domready', function() {
+        initialize();
+      });
       var map;
       var myLatlng=new google.maps.LatLng(<?php
-        if ($this->item->hlatitude && $this->item->hlatitude != '')
-          echo $this->item->hlatitude;
+        if ($house->hlatitude && $house->hlatitude != '')
+          echo $house->hlatitude;
         else
           echo 0;
         ?>,<?php
-        if ($this->item->hlongitude && $this->item->hlongitude != '')
-          echo $this->item->hlongitude;
+        if ($house->hlongitude && $house->hlongitude != '')
+          echo $house->hlongitude;
         else
           echo 0;
         ?>); 
       function initialize(){
         var myOptions = {
-            zoom: <?php if ($this->item->map_zoom)
-                            echo $this->item->map_zoom;
+            zoom: <?php if ($house->map_zoom)
+                            echo $house->map_zoom;
                         else
                             echo 1;
                         ?>,
@@ -114,10 +116,10 @@
         var imgCatalogPath = "<?php echo $mosConfig_live_site;
          ?>/components/com_realestatemanager/";
   <?php
-        $newArr = explode(",", JText::_('_REALESTATE_MANAGER_HOUSE_MARKER'));
+        $newArr = explode(",", _REALESTATE_MANAGER_HOUSE_MARKER);
         $numPick = '';
-        if (isset($newArr[$this->item->property_type])) {
-            $numPick = $newArr[$this->item->property_type];
+        if (isset($newArr[$house->property_type])) {
+            $numPick = $newArr[$house->property_type];
         }
   ?>
         var srcForPic = "<?php echo $numPick; ?>";
@@ -131,5 +133,7 @@
         var marker = new google.maps.Marker({ icon: image,position: myLatlng });
         marker.setMap(map);
       }
-    </script>-->
+    </script>
     <?php }
+
+  }

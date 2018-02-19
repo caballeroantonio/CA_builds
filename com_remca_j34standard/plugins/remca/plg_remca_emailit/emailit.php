@@ -152,11 +152,12 @@ class plgRemcaEmailit extends JPlugin {
             $doc->addScriptDeclaration($outputValue);
         }
     }
+
     /*
      * onRemcaPrepare
      */
 
-    public function onRemcaPrepare($context, &$article, &$params, $limitstart) {
+    public function onHousePrepare($context, &$row, &$params, $limitstart) {
         $app = JFactory::getApplication();
         $doc = JFactory::getDocument();
         $menu = $app->getMenu();
@@ -165,45 +166,60 @@ class plgRemcaEmailit extends JPlugin {
         
         $share = true;
         // If no text or no title
-		if (!isset($article->text) || !isset($article->title)){
-			$share = false;
-		}elseif ($this->arrParamValues["filter_art"] != "") {
+        if (!isset($row->description) || !isset($row->name)){
+            $share = false;
+        }elseif ($this->arrParamValues["filter_art"] != "") {
             $filter_artArray = explode(",", str_replace(" ", "", trim($this->arrParamValues["filter_art"]))); // array with excluded articles
-            if (in_array($article->id, $filter_artArray))
+            if (in_array($row->id, $filter_artArray))
                 $share = false;
         }elseif ($this->params->get('show_content', '1') != '1') {
             $share = false;
-        }elseif (strpos($article->text, '{no_emailit}') !== false) {
+        }elseif (strpos($row->description, '{no_emailit}') !== false) {
             $share = false;
-            $article->text = str_replace('{no_emailit}', '', $article->text);
+            $row->description = str_replace('{no_emailit}', '', $row->description);
         }elseif ($front_page && $this->params->get('show_frontpage', '1') != '1') {
             $share = false;
         }elseif ($app->input->get('view') == 'category' &&!$front_page && $this->params->get('show_categories', '1') != '1') {
             $share = false;
         }elseif ($this->params->get('filter_cat', 0) != 0) {
-            if (in_array($article->catid, $this->params->get('filter_cat', array()))) {
+            if (in_array($row->catid, $this->params->get('filter_cat', array()))) {
                 $share = false;
             }
         }
 
-        $url = $this->getArticleUrl($article);
-        $title = isset($article->title) ? $article->title : '';
+//like houseicon->email
+		$uri	= JUri::getInstance();
+		$base	= $uri->toString(array('scheme', 'host', 'port'));
+		$app	= JFactory::getApplication();
+		
+		$layout = $app->input->getString('layout', 'default');
+
+		$link	= $base.JRoute::_(RemcaHelperRoute::getHouseRoute($row->slug,
+									$row->catid,
+									$row->language,
+									$layout,
+									$params->get('keep_house_itemid')) , false);
+        
+        
+        $title = 
+                isset($row->name) ? $row->name : 
+                '';
         if($share){
-            $outputValue = $this->emailit_createButton($this->arrParamValues, $url, $title);
+            $outputValue = $this->emailit_createButton($this->arrParamValues, $link, $title);
 
             //Positioning button according to the position chosen
-            if (isset($article->text)) {
+            if (isset($row->description)) {
                 if ("top" == $this->arrParamValues["position"]) {
-                    $article->text = $outputValue . $article->text;
+                    $row->description = $outputValue . $row->description;
                 } elseif ("bottom" == $this->arrParamValues["position"]) {
-                    $article->text = $article->text . $outputValue;
+                    $row->description = $row->description . $outputValue;
                 } else {
-                    $article->text = $outputValue . $article->text . $outputValue;
+                    $row->description = $outputValue . $row->description . $outputValue;
                 }
             }
         }
-        if(strpos($article->text, '{emailit}') !== false){
-            $article->text = str_replace('{emailit}', $this->emailit_createButton($this->arrParamValues, $url, $title), $article->text);
+        if(strpos($row->description, '{emailit}') !== false){
+            $row->description = str_replace('{emailit}', $this->emailit_createButton($this->arrParamValues, $link, $title), $row->description);
         }
     }
 
@@ -297,88 +313,4 @@ class plgRemcaEmailit extends JPlugin {
         $uri = JURI::getInstance();
         $this->baseURL = $uri->toString(array('scheme', 'host', 'port'));
     }
-
-    private function getArticleUrl(&$article)
-    {
-            if (!is_null($article))
-            {
-                    if (isset($article->id) && isset($article->catid))
-                    {
-                            // If a K2 item
-                            if (class_exists('K2HelperRoute') && is_object($article->params) && $article->params->exists('k2Sef'))
-                            {
-                                    $url = JRoute::_(K2HelperRoute::getItemRoute($article->id, $article->catid));
-                            }
-                            // Otherwise, a standard Joomla article
-                            else
-                            {
-                                    require_once(JPATH_SITE . DS . 'components' . DS . 'com_remca' . DS . 'helpers' . DS . 'route.php');
-                                    $url = JRoute::_(RemcaHelperRoute::getArticleRoute($article->id, $article->catid));
-                            }
-
-                            return JRoute::_($this->baseURL . $url, true, 0);
-                    }
-                    else
-                    {
-                            return null;
-                    }
-            }
-    }
-    
-	public function onHouseBeforeDisplay($context, &$row, &$params, $page=0)
-	{
-		$parts = explode(".", $context);
-		if ($parts[0] != 'com_remca')
-		{
-			return false;
-		}	
-		$html = '';
-
-		if (!empty($params) AND $params->get('show_house_vote', null) AND $this->params->get('house_position', '1') == '0')
-		{
-			$html = $this->OutputRating($context, $row, $params, $page=0,'house');
-		}
-
-		return $html;
-	}
-	/**
-	 * On After Display event procedure for Voting
-	 * 
-	 * @param	string			$context	Context of the paging
-	 * @param	array			&$row		Passed by reference and row updated with html for prev and/or next buttons
-	 * @param	json/registry	&$params	Item navigation parameters	
-	 * @param	integer			$page		Current Item page		
-	 * 
-	 * @return  string			$html		HTML to be output
-	 */		
-	public function onHouseAfterDisplay($context, &$row, &$params, $page=0)
-	{
-		$parts = explode(".", $context);
-		if ($parts[0] != 'com_remca')
-		{
-			return false;
-		}	
-		$html = '';
-
-		if (!empty($params) AND $params->get('show_house_vote') AND $this->params->get('house_position', '1') == '1')
-		{
-			$html = $this->OutputRating($context, $row, $params, $page=0,'house');
-		}
-
-		return $html;
-	}	
-	protected function OutputRating($context, &$row, &$params, $page=0, $object)
-        {
-
-$link = 'xxx';		
-
-            $share = true;
-            $title = 'xxx';//isset($article->title) ? $article->title : '';
-            $outputValue = '';
-            if($share){
-                $outputValue .= $this->emailit_createButton($this->arrParamValues, $link, $title);
-            }
-            
-            return $outputValue;
-        }
 }
