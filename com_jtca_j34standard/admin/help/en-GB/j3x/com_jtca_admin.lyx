@@ -180,7 +180,7 @@ caballeroantonio (caballeroantonio.com)
 \end_layout
 
 \begin_layout Date
-Revisión 1.0.3 del 
+Revisión 1.0.7 del 
 \begin_inset ERT
 status collapsed
 
@@ -821,6 +821,41 @@ status collapsed
 
 \begin_layout Plain Layout
 Permisos para que usuarios Registrados visualicen los cambios
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/administrator_option=com_config&view=component&component=com_contenthistory.png
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Permisos para ocultar los botones del control de cambios
 \end_layout
 
 \end_inset

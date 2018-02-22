@@ -91,7 +91,6 @@ if ($save_order)
 	<?php endif;?>
 
 	<?php
-		// Search tools bar,@ToDo evaluar si existen campos de busqueda global
 		echo JLayoutHelper::render('joomla.searchtools.default', array(
                         'view' => $this,
                         'options' => array(

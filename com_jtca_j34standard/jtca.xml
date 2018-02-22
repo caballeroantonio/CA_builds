@@ -37,7 +37,7 @@
     </license>
     <authorEmail>caballeroantonio@hotmail.com</authorEmail>
     <authorUrl>caballeroantonio.com</authorUrl>
-    <version>1.0.3</version>
+    <version>1.0.7</version>
     <description>COM_JTCA_XML_DESCRIPTION</description>
     <files folder="site">
         <filename>jtca.php</filename>

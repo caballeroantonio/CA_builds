@@ -250,6 +250,14 @@
         >
         </field>  
         <field
+            id="id_field2366"
+            name="id_field2366"
+            type="combo_suggest"
+            label="COM_JTCA_LSPS02S_FIELD_ID_FIELD2366_LABEL"
+            description="COM_JTCA_LSPS02S_FIELD_ID_FIELD2366_DESC"
+        >
+        </field>  
+        <field
             id="field2367"
             name="field2367"
             type="calendar"

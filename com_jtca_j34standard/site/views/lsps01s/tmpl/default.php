@@ -258,10 +258,24 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsps01_id_field2351',0)) : ?>
+						<td class="list-id_field2351">
+							<?php 
+								echo $item->id_field2351 != '' ? $item->id_field2351 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
 					<?php if ($this->params->get('list_show_lsps01_txt_field2352',0)) : ?>
 						<td class="list-txt_field2352">
 							<?php 
 								echo $item->txt_field2352 != '' ? $item->txt_field2352 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsps01_id_field2352',0)) : ?>
+						<td class="list-id_field2352">
+							<?php 
+								echo $item->id_field2352 != '' ? $item->id_field2352 : $empty;
 							?>
 						</td>
 					<?php endif; ?>

@@ -2,9 +2,9 @@
 Titulo=TSJ CDMX Libros TxCA
 Nombre del paquete com_architectcomp=com_jtca
 Descripción <ul><br/><li class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</li><br/><li class=&quot;standard&quot;>Debido a la gran cantidad de código que se producirá en CA había decidido generar un componente por materia y un componente adicional para administrar los objetos de apoyo, como son los objetos anidados. No funcionó adapatar sistemas de nombres, se generará mucho más ruido. Todo en un solo componente.</li><br/><li class=&quot;standard&quot;>Quieren formularios continuos, son reticentes con las ventanas modales que se utilizan con los objetos anidados.</li><br/><li class=&quot;standard&quot;>Actualmente &quot;persons&quot; es un elemento no anidado, pero me gustaría convertirlo en anidado para hacer más limpio el código.</li><br/><li class=&quot;standard&quot;>Para cumplir con la burocrácia CA la clave del libro la utilizaré como singular y +s para el plural. He renombrado las tablas, pero he conservado el prefijo jtl_{clave}s para conservar compatibilidad con otras reglas que pueda haber.</li><br/><li class=&quot;standard&quot;>Otros libros que les faltaría el campo a plural son:</li><br/></ul><br/><p style=&quot;padding-left: 60px;&quot;>dil_jccm07<br />dil_jccm09<br />dep_joc03<br />incul_jpdng01<br />ofen_jpdng01 <br />decl_jpdng01<br />dili_jpdng09<br />firm_jpdng17<br />adol_jjadg05<br />firm_jjadg16<br />adol_jjadg01 <br />averiguacion<br />personaliasedad<br />personedadsexo<br />persondelito<br />personalias<br />jempleado_bb <br />address</p><br/><p style=&quot;padding-left: 60px;&quot;> </p><br/><div class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</div><br/><div class=&quot;standard&quot;>En el futuro se requerirá modificar los objetos y quitar el &quot;_s&quot; del code_name y agregar &quot;s&quot; al plural_code_name; y re-nombrar las tablas y vistas.</div><br/><div class=&quot;standard&quot;> </div><br/><div class=&quot;standard&quot;><strong>CHANGELOG</strong></div><br/><div class=&quot;standard&quot;>20171222 Solicitaron que en los libros de ingresos y egresos se valide la captura única de los números de billete</div><br/><div class=&quot;standard&quot;>10.0 objetos ljc_</div><br/><div class=&quot;standard&quot;>1.0.1 todos los objetos l% restantes (not lsps included)</div><br/><div class=&quot;standard&quot;>1.0.2.sql for lsps__ objects (not UCM CHO included)</div><br/><div class=&quot;standard&quot;>1.0.3 lsps__ (UCM CHO included)</div><br/><div class=&quot;standard&quot;> </div> <ul><br/><li class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</li><br/><li class=&quot;standard&quot;>Debido a la gran cantidad de código que se producirá en CA había decidido generar un componente por materia y un componente adicional para administrar los objetos de apoyo, como son los objetos anidados. No funcionó adapatar sistemas de nombres, se generará mucho más ruido. Todo en un solo componente.</li><br/><li class=&quot;standard&quot;>Quieren formularios continuos, son reticentes con las ventanas modales que se utilizan con los objetos anidados.</li><br/><li class=&quot;standard&quot;>Actualmente &quot;persons&quot; es un elemento no anidado, pero me gustaría convertirlo en anidado para hacer más limpio el código.</li><br/><li class=&quot;standard&quot;>Para cumplir con la burocrácia CA la clave del libro la utilizaré como singular y +s para el plural. He renombrado las tablas, pero he conservado el prefijo jtl_{clave}s para conservar compatibilidad con otras reglas que pueda haber.</li><br/><li class=&quot;standard&quot;>Otros libros que les faltaría el campo a plural son:</li><br/></ul><br/><p style=&quot;padding-left: 60px;&quot;>dil_jccm07<br />dil_jccm09<br />dep_joc03<br />incul_jpdng01<br />ofen_jpdng01 <br />decl_jpdng01<br />dili_jpdng09<br />firm_jpdng17<br />adol_jjadg05<br />firm_jjadg16<br />adol_jjadg01 <br />averiguacion<br />personaliasedad<br />personedadsexo<br />persondelito<br />personalias<br />jempleado_bb <br />address</p><br/><p style=&quot;padding-left: 60px;&quot;> </p><br/><div class=&quot;standard&quot;>El objetivo del componente es sustituir los libros físicos que se utilizan en los órganos jurisdiccionales del TSJ CDMX por libros virtuales.</div><br/><div class=&quot;standard&quot;>En el futuro se requerirá modificar los objetos y quitar el &quot;_s&quot; del code_name y agregar &quot;s&quot; al plural_code_name; y re-nombrar las tablas y vistas.</div><br/><div class=&quot;standard&quot;> </div><br/><div class=&quot;standard&quot;><strong>CHANGELOG</strong></div><br/><div class=&quot;standard&quot;>20171222 Solicitaron que en los libros de ingresos y egresos se valide la captura única de los números de billete</div><br/><div class=&quot;standard&quot;>10.0 objetos ljc_</div><br/><div class=&quot;standard&quot;>1.0.1 todos los objetos l% restantes (not lsps included)</div><br/><div class=&quot;standard&quot;>1.0.2.sql for lsps__ objects (not UCM CHO included)</div><br/><div class=&quot;standard&quot;>1.0.3 lsps__ (UCM CHO included)</div><br/><div class=&quot;standard&quot;> </div>
-Release 1.0.3
+Release 1.0.7
 Copyright Copyright (c) 2017 - 2020. All Rights Reserved
-COMPONENTSTARTVERSION=1.0.3
+COMPONENTSTARTVERSION=1.0.7
 COMPONENTAUTHOR=caballeroantonio
 COMPONENTWEBSITE=caballeroantonio.com
 
@@ -15659,7 +15659,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -15815,6 +15815,26 @@ architectcomp=jtca
 {-1.2}
 
             {OBJECT_FIELD}
+            FIELD_NAME=JUZGADO DE PROCEDENCIA
+            FIELD_CODE_NAME_UPPER=ID_FIELD2351
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=40
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_field2351` INT(10) DEFAULT NULL JUZGADO DE PROCEDENCIA
+            
+            FIELD_NAME_LATEX=JUZGADO DE PROCEDENCIA
+            FIELD_CODE_NAME_LATEX=id\_field2351
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
             FIELD_NAME=MAGISTRADO PONENTE
             FIELD_CODE_NAME_UPPER=TXT_FIELD2352
             FIELD_INTRO=
@@ -15827,6 +15847,26 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=MAGISTRADO PONENTE
             FIELD_CODE_NAME_LATEX=txt\_field2352
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=MAGISTRADO PONENTE
+            FIELD_CODE_NAME_UPPER=ID_FIELD2352
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=40
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_field2352` INT(10) DEFAULT NULL MAGISTRADO PONENTE
+            
+            FIELD_NAME_LATEX=MAGISTRADO PONENTE
+            FIELD_CODE_NAME_LATEX=id\_field2352
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -16414,7 +16454,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -16687,7 +16727,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -16980,7 +17020,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -17273,7 +17313,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -18214,6 +18254,26 @@ architectcomp=jtca
             
             FIELD_NAME_LATEX=MAGISTRADO UNITARIO
             FIELD_CODE_NAME_LATEX=txt\_field2366
+            FIELD_DBCOMMENT_LATEX=
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=MAGISTRADO UNITARIO
+            FIELD_CODE_NAME_UPPER=ID_FIELD2366
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=40
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_field2366` INT(10) DEFAULT NULL MAGISTRADO UNITARIO
+            
+            FIELD_NAME_LATEX=MAGISTRADO UNITARIO
+            FIELD_CODE_NAME_LATEX=id\_field2366
             FIELD_DBCOMMENT_LATEX=
             
 
@@ -19849,7 +19909,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -20262,7 +20322,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -20846,7 +20906,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -21781,7 +21841,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -24453,7 +24513,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -32619,7 +32679,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -35060,7 +35120,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -37501,7 +37561,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -47633,7 +47693,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}
@@ -51807,7 +51867,7 @@ architectcomp=jtca
 
     
 {1.3}
-        	{FILTER_FIELD}
+        	{FILTER_FIELD} billete
 {-1.3}
     
 {1.0}

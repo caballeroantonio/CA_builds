@@ -298,6 +298,28 @@ function getFields(){
     $fields['txt_field2366'] = $field;
     //{OBJECT_FIELD}
     $field = array(
+        'FIELD_NAME' => 'MAGISTRADO UNITARIO',
+        'FIELD_CODE_NAME' => 'id_field2366',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 40,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_FIELD2366
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) DEFAULT NULL MAGISTRADO UNITARIO
+
+                FIELD_NAME_LATEX=MAGISTRADO UNITARIO
+                FIELD_CODE_NAME_LATEX=id\_field2366
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['id_field2366'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
         'FIELD_NAME' => 'FECHA SENT. SEG. INST.',
         'FIELD_CODE_NAME' => 'field2367',
         'FIELD_DESCRIPTION' => '',//

@@ -144,10 +144,24 @@
         >
         </field>  
         <field
+            name="id_field2351"
+            type="combo_suggest"
+            label="COM_JTCA_LSPS01S_FIELD_ID_FIELD2351_LABEL"
+            description="COM_JTCA_LSPS01S_FIELD_ID_FIELD2351_DESC"
+        >
+        </field>  
+        <field
             name="txt_field2352"
             type="combo_suggest"
             label="COM_JTCA_LSPS01S_FIELD_TXT_FIELD2352_LABEL"
             description="COM_JTCA_LSPS01S_FIELD_TXT_FIELD2352_DESC"
+        >
+        </field>  
+        <field
+            name="id_field2352"
+            type="combo_suggest"
+            label="COM_JTCA_LSPS01S_FIELD_ID_FIELD2352_LABEL"
+            description="COM_JTCA_LSPS01S_FIELD_ID_FIELD2352_DESC"
         >
         </field>  
         <field
