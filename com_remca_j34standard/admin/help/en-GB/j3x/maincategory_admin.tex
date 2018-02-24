@@ -1,0 +1,43 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+	name & VARCHAR(255) & no description \tabularnewline\hline 
+		alias & VARCHAR(255) & no description \tabularnewline\hline 
+
+	description & MEDIUMTEXT & no description \tabularnewline\hline 
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+
+
+  checked\_out & INT(10) & no description \tabularnewline\hline
+  checked\_out\_time & DATETIME & no description \tabularnewline\hline
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+  params & VARCHAR(5120) & no description \tabularnewline\hline
+
+
+
+  language & CHAR(7) & no description \tabularnewline\hline
+
+
+  access & INT(10) & no description \tabularnewline\hline
+
+
+%each field
+	parent\_id & INT(11) & parent\_id:Sirve para modelar en forma de arbol dentro del mismo objeto. \tabularnewline\hline 
+	associate\_category & VARCHAR(255) & associate\_category: \tabularnewline\hline 
+	title & VARCHAR(255) & title: \tabularnewline\hline 
+	image & VARCHAR(255) & image: \tabularnewline\hline 
+	section & VARCHAR(50) & section: \tabularnewline\hline 
+	image\_position & VARCHAR(30) & image\_position: \tabularnewline\hline 
+	editor & VARCHAR(50) & editor: \tabularnewline\hline 
+	count & INT(11) & count: \tabularnewline\hline 
+	params2 & TEXT & params2: \tabularnewline\hline 
