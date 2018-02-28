@@ -1,6 +1,14 @@
 <?php 
 require_once('rem_scripts.php');
 
+$remca_helper = new RemcaHelper();
+
+$this->params->set('show_rentstatus',1);
+$this->params->set('show_rentrequest',1);
+$this->params->set('show_pricerequest',1);
+$this->params->set('show_sale_separator',1);
+
+
 $database = JFactory::getDBO();
 
 if (!defined('_VALID_MOS') && !defined('_JEXEC')) 
@@ -140,12 +148,13 @@ function isValidEmail(str){
     
     jQuery(document).ready(function() {
         var k=0;
-        <?php if(!empty($date_NA)){?>
-            <?php foreach ($date_NA as $N_A){ ?>
-                 unavailableDates[k]= '<?php echo $N_A; ?>';
-                k++;
-            <?php } ?>
-        <?php } ?>
+        <?php 
+        if(!empty($date_NA)){
+            	foreach ($date_NA as $N_A){
+                    echo "unavailableDates[k]={$N_A};k++;";
+                }
+        }
+        ?>
 
         function unavailableFrom(date) {
             dmy = date.getFullYear() + "-" + ('0'+(date.getMonth() + 1)).slice(-2) + 
@@ -388,6 +397,37 @@ if(!incorrect_price($this->item->price)){
             echo "&nbsp;<span class=\"money\">" . $this->item->price . "</span></div>";
         }
     }    
+	
+/*******************end from realestatemanager.php***************************/
+        $currencyArr = array();
+        $currentCurrency='';
+        $currencys = explode(';', $this->params->get('currency'));
+        foreach ($currencys as $oneCurency) {
+            $oneCurrArr = explode('=', $oneCurency);
+            if(!empty($oneCurrArr[0]) && !empty($oneCurrArr[1])){
+               $currencyArr[$oneCurrArr[0]] = $oneCurrArr[1]; 
+               if( $this->item->priceunit == $oneCurrArr[0]){
+                   $currentCurrency = $oneCurrArr[1];
+               }
+            }
+        }
+
+        if(empty( $this->item->price))  $this->item->price = 0;
+
+        if($currentCurrency){
+            foreach ($currencyArr as $key=>$value) {
+                if(!incorrect_price( $this->item->price)){
+                    $currencys_price[$key] = round($value / $currentCurrency *  $this->item->price, 2);
+                }
+            }
+        }else{
+            if( $this->item->owner_id == $my->id){
+                JError::raiseWarning( 100, _REALESTATE_MANAGER_CURRENCY_ERROR);
+            }
+        }
+
+/*******************end from realestatemanager.php***************************/
+	
     if($currencys_price){
       foreach ($currencys_price as $key => $row) {
         if ($this->item->priceunit != $key) {
@@ -457,9 +497,9 @@ if(!incorrect_price($this->item->price)){
 $imageURL = ($this->item->image_link);
 if ($imageURL == '') $imageURL = JText::_('_REALESTATE_MANAGER_NO_PICTURE_BIG');
 
-    // $file_name = RemcaHelper::rem_picture_thumbnail($imageURL,
-    //    $this->params->get('fotomain_width'),
-    //    $this->params->get('fotomain_high'));
+     $file_name = RemcaHelper::rem_picture_thumbnail($imageURL,
+        $this->params->get('fotomain_width'),
+        $this->params->get('fotomain_high'));
 
      $file_name = $imageURL;
     $file = $mosConfig_live_site . '/components/com_realestatemanager/photos/' . $file_name;
@@ -501,12 +541,6 @@ if($this->params->get('show_house_slider')=='1') {
               echo '<div class="rem_listing_status view_veh">'.$listing_status[$this->item->listing_status].'</div>';
             }
           }
-
-        ?>
- 
-        <?php 
-
-
         $house_photos[$i]->main_img = str_ireplace('watermark/', '', $house_photos[$i]->main_img);
 
 

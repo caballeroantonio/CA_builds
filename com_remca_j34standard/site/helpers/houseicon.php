@@ -403,8 +403,9 @@ class JHTMLHouseIcon
             {
                     $text = '<span class="icon-archive"></span>&#160;' . JText::_('JTOOLBAR_VERSIONS') . '&#160;';
             }
-            return '<a href="#" data-toggle="modal" data-target="#collapseModal" class2="btn btn-small" data-remote="'.
-			"index.php?option=com_remca&task=house.showHistory&item_id={$house->id}".
-			'">'.$text.'</a>';
+//            return '<a href="#" data-toggle="modal" data-target="#collapsibleModal" class2="btn btn-small" data-remote="'.
+//			"index.php?option=com_remca&task=house.showHistory&item_id={$house->id}".
+//			'">'.$text.'</a>';
+			return "<a href=\"#\" onclick=\"show_collapseModal({$house->id});return false; \">{$text}</a>";
 	}
 }

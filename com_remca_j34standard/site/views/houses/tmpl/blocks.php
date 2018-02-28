@@ -30,6 +30,8 @@ defined('_JEXEC') or die;
 
 require_once( __DIR__.'/../../house/tmpl/rem_scripts.php');
 
+$remca_helper = new RemcaHelper();
+
 $watermark_path = ($this->params->get('watermark_show',0) == 1) ? 'watermark/' : '';
 $watermark = ($this->params->get('watermark_show',0) == 1) ? true : false;  
 ?>
@@ -144,7 +146,7 @@ if ( $this->params->get('location_map',1)){
                                 <?php echo JText::_('_REALESTATE_MANAGER_LABEL_SIZE_SUFFIX'); ?>
                             </span>
                         </div>
-                    <?php endif ?>
+                    <?php endif; ?>
 
                     <?php if (trim($row->rooms)):?>
                     <div class="row_text">
@@ -152,14 +154,14 @@ if ( $this->params->get('location_map',1)){
                         <span class="col_text_1"><?php echo JText::_( '_REALESTATE_MANAGER_LABEL_ROOMS' ); ?>:</span>
                         <span class="col_text_2"><?php echo $row->rooms; ?></span>
                     </div>
-                    <?php endif ?>
+                    <?php endif; ?>
                     <?php if (trim($row->year)): ?>
                 <div class="row_text">
                     <i class="fa fa-calendar"></i>
                     <span class="col_text_1"><?php echo JText::_( '_REALESTATE_MANAGER_LABEL_BUILD_YEAR' ); ?>:</span>
                     <span class="col_text_2"><?php echo $row->year; ?></span>
                 </div>
-                <?php endif ?>
+                <?php endif; ?>
 
                 <?php if (trim($row->bedrooms)):?>
             <div class="row_text">
@@ -167,7 +169,7 @@ if ( $this->params->get('location_map',1)){
                 <span class="col_text_1"><?php echo JText::_( '_REALESTATE_MANAGER_LABEL_BEDROOMS' ); ?>:</span>
                 <span class="col_text_2"><?php echo $row->bedrooms; ?></span>
             </div>
-            <?php endif ?>
+            <?php endif; ?>
 
     </div>
     
@@ -202,10 +204,10 @@ if ( $this->params->get('location_map',1)){
     <div style="clear: both;"></div>
             </div>
         </div>
-<?php endforeach ?>
+<?php endforeach; ?>
     </div>
 
-<?php endif ?>
+<?php endif; ?>
 
 <!--end blocks-->
 
