@@ -233,6 +233,12 @@ Descripción
 \end_layout
 
 \begin_layout Standard
+\begin_layout Standard
+@ToDo revisar <a href="http://fancyapps.com/fancybox/#license:">http://fancyapps.com/fancybox/#license:</a>
+\end_layout
+\begin_layout Standard
+You are <b>free</b> to use fancyBox for your personal or non-profit website projects. <br /> You can get the author's permission to use fancyBox for commercial websites by <a href="http://fancyapps.com/store/">paying a fee</a>.
+\end_layout
 <ul>
 <li>De momento plural_name va a conservar los nombres del código fuente original</li>
 <li>Cambiar los campos published por JoomlaFeatured.Status (state), ya comprobé que son compatibles.</li>
@@ -872,6 +878,41 @@ status collapsed
 
 \begin_layout Plain Layout
 Permisos para que usuarios Registrados visualicen los cambios
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/administrator_option=com_config&view=component&component=com_contenthistory.png
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Permisos para ocultar los botones del control de cambios
 \end_layout
 
 \end_inset

@@ -112,6 +112,7 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php endif; ?>
 
 		<?php else : ?>
+		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="rent_sal">
 			<?php if ($this->params->get('show_rentsal_headings')) :?>
 			<thead>
@@ -124,9 +125,66 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
+					<?php if ($this->params->get('list_show_rentsal_fk_houseid',0)) : ?>
+						<th class="list-fk_houseid" id="tableOrderingfk_houseid">
+							<?php echo JTEXT::_('COM_REMCA_RENT_SAL_HEADING_FK_HOUSEID'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_rentsal_monthW',0)) : ?>
+						<th class="list-monthW" id="tableOrderingmonthW">
+							<?php echo JTEXT::_('COM_REMCA_RENT_SAL_HEADING_MONTHW'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_rentsal_yearW',0)) : ?>
+						<th class="list-yearW" id="tableOrderingyearW">
+							<?php echo JTEXT::_('COM_REMCA_RENT_SAL_HEADING_YEARW'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_rentsal_week',0)) : ?>
+						<th class="list-week" id="tableOrderingweek">
+							<?php echo JTEXT::_('COM_REMCA_RENT_SAL_HEADING_WEEK'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_rentsal_weekend',0)) : ?>
+						<th class="list-weekend" id="tableOrderingweekend">
+							<?php echo JTEXT::_('COM_REMCA_RENT_SAL_HEADING_WEEKEND'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_rentsal_midweek',0)) : ?>
+						<th class="list-midweek" id="tableOrderingmidweek">
+							<?php echo JTEXT::_('COM_REMCA_RENT_SAL_HEADING_MIDWEEK'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_rentsal_price_from',0)) : ?>
+						<th class="list-price_from" id="tableOrderingprice_from">
+							<?php echo JTEXT::_('COM_REMCA_RENT_SAL_HEADING_PRICE_FROM'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_rentsal_price_to',0)) : ?>
+						<th class="list-price_to" id="tableOrderingprice_to">
+							<?php echo JTEXT::_('COM_REMCA_RENT_SAL_HEADING_PRICE_TO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_rentsal_special_price',0)) : ?>
+						<th class="list-special_price" id="tableOrderingspecial_price">
+							<?php echo JTEXT::_('COM_REMCA_RENT_SAL_HEADING_SPECIAL_PRICE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_rentsal_comment_price',0)) : ?>
+						<th class="list-comment_price" id="tableOrderingcomment_price">
+							<?php echo JTEXT::_('COM_REMCA_RENT_SAL_HEADING_COMMENT_PRICE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_rentsal_priceunit',0)) : ?>
+						<th class="list-priceunit" id="tableOrderingpriceunit">
+							<?php echo JTEXT::_('COM_REMCA_RENT_SAL_HEADING_PRICEUNIT'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($show_actions) : ?>
 						<th width="12%" class="list-actions">
 							<?php echo JText::_('COM_REMCA_HEADING_ACTIONS'); ?>						
 						</th> 					
+					<?php endif; ?>
 				</tr>
 			</thead>
 			<?php endif; ?>
@@ -232,21 +290,36 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
+					<?php if ($show_actions) : ?>
 						<td class="list-actions">
-								<ul class="actions">
-										<li class="edit-icon">
-											<?php echo JHtml::_('rentsalicon.edit',$item, $params); ?>
-										</li>
-										<li class="delete-icon">
-											<?php echo JHtml::_('rentsalicon.delete',$item, $params); ?>
-										</li>
-								</ul>
+                        	<div class="btn-group pull-right">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
+                                <ul class="dropdown-menu">
+							<?php if ($params->get('show_house_print_icon')) : ?>
+								<li class="print-icon">
+										<?php echo JHtml::_('houseicon.print_popup',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+
+							<?php if ($params->get('show_house_email_icon')) : ?>
+								<li class="email-icon">
+										<?php echo JHtml::_('houseicon.email',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+								<li class="version-icon">
+									<?php echo JHtml::_('houseicon.versions',$item, $params); ?>
+								</li>	
+							<?php endif; ?>	
+                                </ul>
+                            </div>
 						</td>															
+					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
 			</table>
-<!--begin pagination-->
+		</div>
 			<?php if (($this->params->def('show_rentsal_pagination', 2) == 1  OR ($this->params->get('show_rentsal_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
 			<div class="pagination">
 
@@ -259,7 +332,7 @@ $empty = $component->params->get('default_empty_field', '');
 				<?php echo $this->pagination->getPagesLinks(); ?>
 			</div>
 			<?php endif; ?>
-<!--end pagination-->
+
 			<div>
 				<!-- @TODO add hidden inputs -->
 				<input type="hidden" name="task" value="" />
@@ -277,3 +350,20 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('rentsalicon.create', $this->params); ?>
 	</form>
 </div>
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+<script>
+jQuery(document).ready(function($) {
+   $('#collapseModal')
+   .on('hide.bs.modal', function () {
+        $(this).removeData('modal');
+   });
+});
+</script>
+<div id="collapseModal" tabindex="-1" class="modal hide fade">
+	<div class="modal-header">
+			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
+				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>
+	</div>
+	<div class="modal-body"></div>
+</div>
+<?php endif; ?>	

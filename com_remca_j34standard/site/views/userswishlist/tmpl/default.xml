@@ -184,6 +184,28 @@
 				description="JGLOBAL_DATE_FORMAT_DESC"
 				size="15"
 			/>
+            <field
+                name="list_show_userswishlist_fk_houseid"
+                type="radio"
+                label="COM_REMCA_USERS_WISHLIST_LIST_FK_HOUSEID_LABEL"
+				description="COM_REMCA_USERS_WISHLIST_LIST_FK_HOUSEID_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_userswishlist_fk_userid"
+                type="radio"
+                label="COM_REMCA_USERS_WISHLIST_LIST_FK_USERID_LABEL"
+				description="COM_REMCA_USERS_WISHLIST_LIST_FK_USERID_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
         </fieldset>
         <fieldset
             name="userswishlist_layout_settings"

@@ -195,6 +195,94 @@
 				description="JGLOBAL_DATE_FORMAT_DESC"
 				size="15"
 			/>
+            <field
+                name="list_show_review_fk_houseid"
+                type="radio"
+                label="COM_REMCA_REVIEW_LIST_FK_HOUSEID_LABEL"
+				description="COM_REMCA_REVIEW_LIST_FK_HOUSEID_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_review_fk_userid"
+                type="radio"
+                label="COM_REMCA_REVIEW_LIST_FK_USERID_LABEL"
+				description="COM_REMCA_REVIEW_LIST_FK_USERID_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_review_user_name"
+                type="radio"
+                label="COM_REMCA_REVIEW_LIST_USER_NAME_LABEL"
+				description="COM_REMCA_REVIEW_LIST_USER_NAME_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_review_user_email"
+                type="radio"
+                label="COM_REMCA_REVIEW_LIST_USER_EMAIL_LABEL"
+				description="COM_REMCA_REVIEW_LIST_USER_EMAIL_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_review_date"
+                type="radio"
+                label="COM_REMCA_REVIEW_LIST_DATE_LABEL"
+				description="COM_REMCA_REVIEW_LIST_DATE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_review_rating"
+                type="radio"
+                label="COM_REMCA_REVIEW_LIST_RATING_LABEL"
+				description="COM_REMCA_REVIEW_LIST_RATING_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_review_title"
+                type="radio"
+                label="COM_REMCA_REVIEW_LIST_TITLE_LABEL"
+				description="COM_REMCA_REVIEW_LIST_TITLE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_review_comment"
+                type="radio"
+                label="COM_REMCA_REVIEW_LIST_COMMENT_LABEL"
+				description="COM_REMCA_REVIEW_LIST_COMMENT_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
         </fieldset>
         <fieldset
             name="review_layout_settings"

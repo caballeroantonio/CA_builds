@@ -186,6 +186,94 @@
 				description="JGLOBAL_DATE_FORMAT_DESC"
 				size="15"
 			/>
+            <field
+                name="list_show_rent_fk_houseid"
+                type="radio"
+                label="COM_REMCA_RENT_LIST_FK_HOUSEID_LABEL"
+				description="COM_REMCA_RENT_LIST_FK_HOUSEID_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_rent_fk_userid"
+                type="radio"
+                label="COM_REMCA_RENT_LIST_FK_USERID_LABEL"
+				description="COM_REMCA_RENT_LIST_FK_USERID_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_rent_rent_from"
+                type="radio"
+                label="COM_REMCA_RENT_LIST_RENT_FROM_LABEL"
+				description="COM_REMCA_RENT_LIST_RENT_FROM_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_rent_rent_until"
+                type="radio"
+                label="COM_REMCA_RENT_LIST_RENT_UNTIL_LABEL"
+				description="COM_REMCA_RENT_LIST_RENT_UNTIL_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_rent_rent_return"
+                type="radio"
+                label="COM_REMCA_RENT_LIST_RENT_RETURN_LABEL"
+				description="COM_REMCA_RENT_LIST_RENT_RETURN_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_rent_user_name"
+                type="radio"
+                label="COM_REMCA_RENT_LIST_USER_NAME_LABEL"
+				description="COM_REMCA_RENT_LIST_USER_NAME_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_rent_user_email"
+                type="radio"
+                label="COM_REMCA_RENT_LIST_USER_EMAIL_LABEL"
+				description="COM_REMCA_RENT_LIST_USER_EMAIL_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_rent_user_mailing"
+                type="radio"
+                label="COM_REMCA_RENT_LIST_USER_MAILING_LABEL"
+				description="COM_REMCA_RENT_LIST_USER_MAILING_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
         </fieldset>
         <fieldset
             name="rent_layout_settings"

@@ -41,7 +41,7 @@ class RemcaHelper extends JHelperContent
 	 */
 	public function __construct()
 	{
-		$GLOBALS['doc'] = $doc = JFactory::getDocument();
+		$this->doc = JFactory::getDocument();
 	}
 
     static function showRentRequest(& $houses, & $currentcat, & $params, & $tabclass,
@@ -164,16 +164,16 @@ class RemcaHelper extends JHelperContent
 
     static function showTabs(&$params, &$userid, &$username, &$comprofiler, &$option) {
 
-        global $mosConfig_live_site, $doc;
-        $doc->addStyleSheet($mosConfig_live_site . '/components/com_realestatemanager/TABS/tabcontent.css');
-        $doc->addScript($mosConfig_live_site . '/components/com_realestatemanager/TABS/tabcontent.js');
+        global $mosConfig_live_site;
+        $this->doc->addStyleSheet($mosConfig_live_site . '/components/com_realestatemanager/TABS/tabcontent.css');
+        $this->doc->addScript($mosConfig_live_site . '/components/com_realestatemanager/TABS/tabcontent.js');
 
 
 ?>
 
          <?php 
         if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-1.2.6.js") === false ) {
-        $doc->addScript(JURI::root(true) . '/components/com_realestatemanager/lightbox/js/jQuerREL-1.2.6.js');
+        $this->doc->addScript(JURI::root(true) . '/components/com_realestatemanager/lightbox/js/jQuerREL-1.2.6.js');
         } 
     ?>
         <script type="text/javascript">jQuerREL=jQuerREL.noConflict();</script>
@@ -259,11 +259,11 @@ class RemcaHelper extends JHelperContent
             }
 
            static function showRentHouses($option, $house1, $rows, & $userlist, $type) {
-                global $my, $mosConfig_live_site, $mainframe, $doc, $Itemid;
+                global $my, $mosConfig_live_site, $mainframe, $Itemid;
         ?>
         <?php 
         if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-1.2.6.js") === false ) {
-        $doc->addScript(JURI::root(true) . '/components/com_realestatemanager/lightbox/js/jQuerREL-1.2.6.js');
+        $this->doc->addScript(JURI::root(true) . '/components/com_realestatemanager/lightbox/js/jQuerREL-1.2.6.js');
         } 
     ?>
         <script type="text/javascript">jQuerREL=jQuerREL.noConflict();</script>
@@ -272,14 +272,14 @@ class RemcaHelper extends JHelperContent
         <?php 
 
             if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-ui.js") === false ) {
-            $doc->addScript(JURI::root(true) . '          echo $mosConfig_live_site; ?>/components/com_realestatemanager/includes/jQuerREL-ui.js');
+            $this->doc->addScript(JURI::root(true) . '          echo $mosConfig_live_site; ?>/components/com_realestatemanager/includes/jQuerREL-ui.js');
             }
 
         ?>
 
       <?php
-        $doc->addScript($mosConfig_live_site . '/components/com_realestatemanager/includes/functions.js');
-        $doc->addStyleSheet($mosConfig_live_site .
+        $this->doc->addScript($mosConfig_live_site . '/components/com_realestatemanager/includes/functions.js');
+        $this->doc->addStyleSheet($mosConfig_live_site .
                  '/components/com_realestatemanager/includes/realestatemanager.css');
         ?>
         <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
@@ -574,12 +574,12 @@ class RemcaHelper extends JHelperContent
 
  static function editRentHouses($option, $house1, $rows, $title_assoc, & $userlist, & $all_assosiate_rent, $type) {
     global $my, $mosConfig_live_site, $mainframe, $Itemid;
-	$doc = JFactory::getDocument();
+	
 
     ?>
      <?php 
         if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-1.2.6.js") === false ) {
-        $doc->addScript(JURI::root(true) . '/components/com_realestatemanager/lightbox/js/jQuerREL-1.2.6.js');
+        $this->doc->addScript(JURI::root(true) . '/components/com_realestatemanager/lightbox/js/jQuerREL-1.2.6.js');
         } 
     ?>
     <script type="text/javascript">jQuerREL=jQuerREL.noConflict();</script>
@@ -589,7 +589,7 @@ class RemcaHelper extends JHelperContent
     <?php 
 
       if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-ui.js") === false ) {
-        $doc->addScript(JURI::root(true) . '/components/com_realestatemanager/includes/jQuerREL-ui.js');
+        $this->doc->addScript(JURI::root(true) . '/components/com_realestatemanager/includes/jQuerREL-ui.js');
       }
 
 
@@ -600,8 +600,8 @@ class RemcaHelper extends JHelperContent
     <?php
 
 
-    $doc->addScript($mosConfig_live_site . '/components/com_realestatemanager/includes/functions.js');
-    $doc->addStyleSheet($mosConfig_live_site . '/components/com_realestatemanager/includes/realestatemanager.css');
+    $this->doc->addScript($mosConfig_live_site . '/components/com_realestatemanager/includes/functions.js');
+    $this->doc->addStyleSheet($mosConfig_live_site . '/components/com_realestatemanager/includes/realestatemanager.css');
     ?>
 
  <!--///////////////////////////////calendar///////////////////////////////////////-->
@@ -862,10 +862,10 @@ class RemcaHelper extends JHelperContent
 
 
     static function showRentHistory($option, $rows, $pageNav) {
-        global $my, $Itemid, $mosConfig_live_site, $mainframe, $doc;
+        global $my, $Itemid, $mosConfig_live_site, $mainframe;
         $session = JFactory::getSession();
         $arr = $session->get("array", "default");
-        $doc->addStyleSheet($mosConfig_live_site . '/components/com_realestatemanager/includes/realestatemanager.css');
+        $this->doc->addStyleSheet($mosConfig_live_site . '/components/com_realestatemanager/includes/realestatemanager.css');
         ?>
         <form action="index.php" method="get" name="adminForm" id="adminForm">
             <table id="my_houses_history" class="table_64 basictable">
@@ -914,12 +914,12 @@ class RemcaHelper extends JHelperContent
 
     static function showRequestRentHouses($option, $rent_requests, &$pageNav) {
         global $my, $mosConfig_live_site, $mainframe, $Itemid;
-		$doc = JFactory::getDocument();
+		
         $session = JFactory::getSession();
         $arr = $session->get("array", "default");
-        $doc->addScript($mosConfig_live_site .
+        $this->doc->addScript($mosConfig_live_site .
          '/components/com_realestatemanager/includes/functions.js');
-        $doc->addStyleSheet($mosConfig_live_site .
+        $this->doc->addStyleSheet($mosConfig_live_site .
          '/components/com_realestatemanager/includes/realestatemanager.css');
         ?>
         <form action="index.php" method="get" name="adminForm" id="adminForm">
@@ -1028,8 +1028,8 @@ class RemcaHelper extends JHelperContent
     }
 
  static function listCategories(&$params, $cat_all, $catid, $tabclass, $currentcat) {
-                global $Itemid, $mosConfig_live_site, $doc;
-                $doc->addStyleSheet($mosConfig_live_site .
+                global $Itemid, $mosConfig_live_site;
+                $this->doc->addStyleSheet($mosConfig_live_site .
                  '/components/com_realestatemanager/includes/realestatemanager.css');
                 ?>
         <?php positions_rem($params->get('allcategories04')); ?>
@@ -1058,9 +1058,9 @@ class RemcaHelper extends JHelperContent
 
     static function showInsertSubCategory($id, $cat_all, $params, $tabclass, $Itemid, $deep) {
         global $g_item_count, $mosConfig_live_site;
-        global $doc;
+        
 
-        $doc->addStyleSheet($mosConfig_live_site .
+        $this->doc->addStyleSheet($mosConfig_live_site .
          '/components/com_realestatemanager/includes/realestatemanager.css');
 
         $deep++;
@@ -1203,11 +1203,11 @@ class RemcaHelper extends JHelperContent
 
     static function showRequestBuyingHouses($option, $buy_requests, $pageNav, $Itemid) {
 
-        global $my, $mosConfig_live_site, $mainframe, $doc;
+        global $my, $mosConfig_live_site, $mainframe;
         $session = JFactory::getSession();
         $arr = $session->get("array", "default");
-        $doc->addScript($mosConfig_live_site . '/components/com_realestatemanager/includes/functions.js');
-        $doc->addStyleSheet($mosConfig_live_site .
+        $this->doc->addScript($mosConfig_live_site . '/components/com_realestatemanager/includes/functions.js');
+        $this->doc->addStyleSheet($mosConfig_live_site .
          '/components/com_realestatemanager/includes/realestatemanager.css');
         ?>
         <form action="index.php" method="get" name="adminForm" id="adminForm">
@@ -1284,14 +1284,13 @@ class RemcaHelper extends JHelperContent
         <?php
     }
 
-
   static function add_google_map($params, &$rows) {
   	echo '<div id="map_canvas" class="re_map_canvas re_map_canvas_01"></div>';
     $layout = $params->get('house_layout', 'default');
      global  $mosConfig_live_site, $Itemid;
-	 $doc = JFactory::getDocument();
+	 
           $api_key = $this->params->get('api_key') ? "key=" . $this->params->get('api_key') : JFactory::getApplication()->enqueueMessage("<a target='_blank' href='//developers.google.com/maps/documentation/geocoding/get-api-key'>" . _REALESTATE_MANAGER_GOOGLEMAP_API_KEY_LINK_MESSAGE . "</a>", _REALESTATE_MANAGER_GOOGLEMAP_API_KEY_ERROR); 
-          $doc->addScript("//maps.googleapis.com/maps/api/js?$api_key"); ?>
+          $this->doc->addScript("//maps.googleapis.com/maps/api/js?$api_key"); ?>
 
 
       <script type="text/javascript">
@@ -2389,7 +2388,7 @@ class RemcaHelper extends JHelperContent
 //    if(!function_exists('checkRentDayNightREM')){
 
 
-      function REMcheckRentDayNightREM ($from, $until, $rent_from, $rent_until, $this->params{
+      function REMcheckRentDayNightREM ($from, $until, $rent_from, $rent_until, $params){
 
           if(1 && $this->params->get('special_price_show')){
 
@@ -2500,7 +2499,7 @@ class RemcaHelper extends JHelperContent
 
           foreach ($rentTerm as $oneTerm){
               $returnMessage = checkRentDayNightREM (($oneTerm->price_from),($oneTerm->price_to),
-                 $rent_from_transf, $rent_until_transf, $this->params;
+                 $rent_from_transf, $rent_until_transf, $this->params);
 
               if(strlen($returnMessage) > 0){
                   createRentTable($rentTerm, $returnMessage, 'error');
@@ -2526,7 +2525,7 @@ class RemcaHelper extends JHelperContent
 
 
 //    if(!function_exists('calculatePriceREM')){
-      function REMcalculatePriceREM ($hid,$rent_from,$rent_until, $this->params,$database){      
+      function REMcalculatePriceREM ($hid,$rent_from,$rent_until, $params,$database){      
           $rent_from = data_transform_rem($rent_from);
           $rent_until = data_transform_rem($rent_until);
 
@@ -2613,7 +2612,7 @@ class RemcaHelper extends JHelperContent
 //    if(!function_exists('getCountHouseForSingleUserREM')){
 
 
-      function REMgetCountHouseForSingleUserREM($my,$database,$this->params{
+      function REMgetCountHouseForSingleUserREM($my,$database,$params){
 
 
           $user_group = userGID_REM($my->id);         
@@ -3353,6 +3352,7 @@ class RemcaHelper extends JHelperContent
             mkdir(JPATH_SITE . '/components/com_realestatemanager/photos/watermark','755');
           }
 
+
           $min_image_width = $this->params->get('watermark_min_width');
           $min_image_high = $this->params->get('watermark_min_height');
 
@@ -3693,7 +3693,7 @@ class RemcaHelper extends JHelperContent
 //    }
 
 //    if(!function_exists('getAvilableRM')){
-      function REMgetAvilableRM ($calenDate,$month,$year, $this->params,$day){
+      function REMgetAvilableRM ($calenDate,$month,$year, $params,$day){
         global $flag3;
         if(strlen($month) == 1){
             $month = '0'.$month ;
@@ -3711,7 +3711,7 @@ class RemcaHelper extends JHelperContent
           $from=explode(' ',$oneTerm->rent_from);
           $until=explode(' ',$oneTerm->rent_until);
           if($cheackDataFrom >= $oneTerm->rent_until)continue;
-          $resultmsg = checkRentDayNightREM (($oneTerm->rent_from),($oneTerm->rent_until), $cheackDataFrom, $cheackDataTo, $this->params;       
+          $resultmsg = checkRentDayNightREM (($oneTerm->rent_from),($oneTerm->rent_until), $cheackDataFrom, $cheackDataTo, $this->params);       
           if($cheackDataTo <= date('Y-m-d') && strlen($resultmsg) > 1){
             if(!$this->params->get('special_price_show') 
                 && ($cheackDataFrom == $until[0] || $cheackDataFrom == $from[0] )){
@@ -3828,9 +3828,9 @@ class RemcaHelper extends JHelperContent
 //    if (!function_exists('checkJavaScriptIncludedRE')) {
       function checkJavaScriptIncludedRE($name) {
 
-          $doc = JFactory::getDocument();
+          
 
-          foreach($doc->_scripts as $script_path=>$value){
+          foreach($this->doc->_scripts as $script_path=>$value){
             if(strpos( $script_path, $name ) !== false ) return true ;
           }
           return false;

@@ -186,6 +186,28 @@
 				description="JGLOBAL_DATE_FORMAT_DESC"
 				size="15"
 			/>
+            <field
+                name="list_show_const_const"
+                type="radio"
+                label="COM_REMCA_CONST_LIST_CONST_LABEL"
+				description="COM_REMCA_CONST_LIST_CONST_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_const_sys_type"
+                type="radio"
+                label="COM_REMCA_CONST_LIST_SYS_TYPE_LABEL"
+				description="COM_REMCA_CONST_LIST_SYS_TYPE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
         </fieldset>
         <fieldset
             name="const_layout_settings"

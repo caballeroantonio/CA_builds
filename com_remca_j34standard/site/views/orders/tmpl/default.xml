@@ -186,6 +186,160 @@
 				description="JGLOBAL_DATE_FORMAT_DESC"
 				size="15"
 			/>
+            <field
+                name="list_show_order_fk_user_id"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_FK_USER_ID_LABEL"
+				description="COM_REMCA_ORDERS_LIST_FK_USER_ID_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_order_fk_houses_htitle"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_FK_HOUSES_HTITLE_LABEL"
+				description="COM_REMCA_ORDERS_LIST_FK_HOUSES_HTITLE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_order_email"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_EMAIL_LABEL"
+				description="COM_REMCA_ORDERS_LIST_EMAIL_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_order_status"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_STATUS_LABEL"
+				description="COM_REMCA_ORDERS_LIST_STATUS_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_order_order_date"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_ORDER_DATE_LABEL"
+				description="COM_REMCA_ORDERS_LIST_ORDER_DATE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_order_fk_house_id"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_FK_HOUSE_ID_LABEL"
+				description="COM_REMCA_ORDERS_LIST_FK_HOUSE_ID_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_order_txn_type"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_TXN_TYPE_LABEL"
+				description="COM_REMCA_ORDERS_LIST_TXN_TYPE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_order_txn_id"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_TXN_ID_LABEL"
+				description="COM_REMCA_ORDERS_LIST_TXN_ID_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_order_payer_id"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_PAYER_ID_LABEL"
+				description="COM_REMCA_ORDERS_LIST_PAYER_ID_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_order_payer_status"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_PAYER_STATUS_LABEL"
+				description="COM_REMCA_ORDERS_LIST_PAYER_STATUS_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_order_order_calculated_price"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_ORDER_CALCULATED_PRICE_LABEL"
+				description="COM_REMCA_ORDERS_LIST_ORDER_CALCULATED_PRICE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_order_order_price"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_ORDER_PRICE_LABEL"
+				description="COM_REMCA_ORDERS_LIST_ORDER_PRICE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_order_order_currency_code"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_ORDER_CURRENCY_CODE_LABEL"
+				description="COM_REMCA_ORDERS_LIST_ORDER_CURRENCY_CODE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_order_paypal_paykay"
+                type="radio"
+                label="COM_REMCA_ORDERS_LIST_PAYPAL_PAYKAY_LABEL"
+				description="COM_REMCA_ORDERS_LIST_PAYPAL_PAYKAY_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
         </fieldset>
         <fieldset
             name="order_layout_settings"

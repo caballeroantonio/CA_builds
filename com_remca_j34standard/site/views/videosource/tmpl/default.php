@@ -112,6 +112,7 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php endif; ?>
 
 		<?php else : ?>
+		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="video_source">
 			<?php if ($this->params->get('show_videosource_headings')) :?>
 			<thead>
@@ -124,9 +125,41 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
+					<?php if ($this->params->get('list_show_videosource_fk_house_id',0)) : ?>
+						<th class="list-fk_house_id" id="tableOrderingfk_house_id">
+							<?php echo JTEXT::_('COM_REMCA_VIDEO_SOURCE_HEADING_FK_HOUSE_ID'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_videosource_sequence_number',0)) : ?>
+						<th class="list-sequence_number" id="tableOrderingsequence_number">
+							<?php echo JTEXT::_('COM_REMCA_VIDEO_SOURCE_HEADING_SEQUENCE_NUMBER'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_videosource_src',0)) : ?>
+						<th class="list-src" id="tableOrderingsrc">
+							<?php echo JTEXT::_('COM_REMCA_VIDEO_SOURCE_HEADING_SRC'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_videosource_type',0)) : ?>
+						<th class="list-type" id="tableOrderingtype">
+							<?php echo JTEXT::_('COM_REMCA_VIDEO_SOURCE_HEADING_TYPE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_videosource_media',0)) : ?>
+						<th class="list-media" id="tableOrderingmedia">
+							<?php echo JTEXT::_('COM_REMCA_VIDEO_SOURCE_HEADING_MEDIA'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_videosource_youtube',0)) : ?>
+						<th class="list-youtube" id="tableOrderingyoutube">
+							<?php echo JTEXT::_('COM_REMCA_VIDEO_SOURCE_HEADING_YOUTUBE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($show_actions) : ?>
 						<th width="12%" class="list-actions">
 							<?php echo JText::_('COM_REMCA_HEADING_ACTIONS'); ?>						
 						</th> 					
+					<?php endif; ?>
 				</tr>
 			</thead>
 			<?php endif; ?>
@@ -197,21 +230,36 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
+					<?php if ($show_actions) : ?>
 						<td class="list-actions">
-								<ul class="actions">
-										<li class="edit-icon">
-											<?php echo JHtml::_('videosourceicon.edit',$item, $params); ?>
-										</li>
-										<li class="delete-icon">
-											<?php echo JHtml::_('videosourceicon.delete',$item, $params); ?>
-										</li>
-								</ul>
+                        	<div class="btn-group pull-right">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
+                                <ul class="dropdown-menu">
+							<?php if ($params->get('show_house_print_icon')) : ?>
+								<li class="print-icon">
+										<?php echo JHtml::_('houseicon.print_popup',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+
+							<?php if ($params->get('show_house_email_icon')) : ?>
+								<li class="email-icon">
+										<?php echo JHtml::_('houseicon.email',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+								<li class="version-icon">
+									<?php echo JHtml::_('houseicon.versions',$item, $params); ?>
+								</li>	
+							<?php endif; ?>	
+                                </ul>
+                            </div>
 						</td>															
+					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
 			</table>
-<!--begin pagination-->
+		</div>
 			<?php if (($this->params->def('show_videosource_pagination', 2) == 1  OR ($this->params->get('show_videosource_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
 			<div class="pagination">
 
@@ -224,7 +272,7 @@ $empty = $component->params->get('default_empty_field', '');
 				<?php echo $this->pagination->getPagesLinks(); ?>
 			</div>
 			<?php endif; ?>
-<!--end pagination-->
+
 			<div>
 				<!-- @TODO add hidden inputs -->
 				<input type="hidden" name="task" value="" />
@@ -242,3 +290,20 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('videosourceicon.create', $this->params); ?>
 	</form>
 </div>
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+<script>
+jQuery(document).ready(function($) {
+   $('#collapseModal')
+   .on('hide.bs.modal', function () {
+        $(this).removeData('modal');
+   });
+});
+</script>
+<div id="collapseModal" tabindex="-1" class="modal hide fade">
+	<div class="modal-header">
+			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
+				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>
+	</div>
+	<div class="modal-body"></div>
+</div>
+<?php endif; ?>	

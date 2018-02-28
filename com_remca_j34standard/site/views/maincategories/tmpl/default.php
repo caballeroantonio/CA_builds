@@ -112,6 +112,7 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php endif; ?>
 
 		<?php else : ?>
+		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="main_categories">
 			<?php if ($this->params->get('show_maincategory_headings')) :?>
 			<thead>
@@ -127,14 +128,61 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
+					<?php if ($this->params->get('list_show_maincategory_parent_id',0)) : ?>
+						<th class="list-parent_id" id="tableOrderingparent_id">
+							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_PARENT_ID'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_maincategory_associate_category',0)) : ?>
+						<th class="list-associate_category" id="tableOrderingassociate_category">
+							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_ASSOCIATE_CATEGORY'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_maincategory_title',0)) : ?>
+						<th class="list-title" id="tableOrderingtitle">
+							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_TITLE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_maincategory_image',0)) : ?>
+						<th class="list-image" id="tableOrderingimage">
+							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_IMAGE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_maincategory_section',0)) : ?>
+						<th class="list-section" id="tableOrderingsection">
+							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_SECTION'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_maincategory_image_position',0)) : ?>
+						<th class="list-image_position" id="tableOrderingimage_position">
+							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_IMAGE_POSITION'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_maincategory_editor',0)) : ?>
+						<th class="list-editor" id="tableOrderingeditor">
+							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_EDITOR'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_maincategory_count',0)) : ?>
+						<th class="list-count" id="tableOrderingcount">
+							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_COUNT'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_maincategory_params2',0)) : ?>
+						<th class="list-params2" id="tableOrderingparams2">
+							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_PARAMS2'); ?>
+						</th>
+					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_maincategory_ordering',0)) : ?>
 						<th width="10%">
 							<?php echo JHtml::_('grid.sort',  'COM_REMCA_HEADING_ORDERING', 'a.ordering', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>	
+					<?php if ($show_actions) : ?>
 						<th width="12%" class="list-actions">
 							<?php echo JText::_('COM_REMCA_HEADING_ACTIONS'); ?>						
 						</th> 					
+					<?php endif; ?>
 				</tr>
 			</thead>
 			<?php endif; ?>
@@ -242,22 +290,36 @@ $empty = $component->params->get('default_empty_field', '');
 						</td>
 					<?php endif; ?>
 					
+					<?php if ($show_actions) : ?>
 						<td class="list-actions">
-								<ul class="actions">
-										<li class="edit-icon">
-											<?php echo JHtml::_('maincategoryicon.edit',$item, $params); ?>
-										</li>
-										<li class="delete-icon">
-											<?php echo JHtml::_('maincategoryicon.delete',$item, $params); ?>
-										</li>
-								</ul>
+                        	<div class="btn-group pull-right">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
+                                <ul class="dropdown-menu">
+							<?php if ($params->get('show_house_print_icon')) : ?>
+								<li class="print-icon">
+										<?php echo JHtml::_('houseicon.print_popup',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+
+							<?php if ($params->get('show_house_email_icon')) : ?>
+								<li class="email-icon">
+										<?php echo JHtml::_('houseicon.email',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+								<li class="version-icon">
+									<?php echo JHtml::_('houseicon.versions',$item, $params); ?>
+								</li>	
+							<?php endif; ?>	
+                                </ul>
+                            </div>
 						</td>															
-				<?php endif; ?>
+					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
 			</table>
-<!--begin pagination-->
+		</div>
 			<?php if (($this->params->def('show_maincategory_pagination', 2) == 1  OR ($this->params->get('show_maincategory_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
 			<div class="pagination">
 
@@ -270,7 +332,7 @@ $empty = $component->params->get('default_empty_field', '');
 				<?php echo $this->pagination->getPagesLinks(); ?>
 			</div>
 			<?php endif; ?>
-<!--end pagination-->
+
 			<div>
 				<!-- @TODO add hidden inputs -->
 				<input type="hidden" name="task" value="" />
@@ -288,3 +350,20 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('maincategoryicon.create', $this->params); ?>
 	</form>
 </div>
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+<script>
+jQuery(document).ready(function($) {
+   $('#collapseModal')
+   .on('hide.bs.modal', function () {
+        $(this).removeData('modal');
+   });
+});
+</script>
+<div id="collapseModal" tabindex="-1" class="modal hide fade">
+	<div class="modal-header">
+			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
+				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>
+	</div>
+	<div class="modal-body"></div>
+</div>
+<?php endif; ?>	

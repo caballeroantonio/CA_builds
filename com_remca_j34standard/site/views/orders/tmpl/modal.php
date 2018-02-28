@@ -104,7 +104,6 @@ $empty = $component->params->get('default_empty_field', '');
 				<?php endforeach; ?>
 			</tbody>
 		</table>
-<!--begin pagination-->
 		<div class="pagination">
 
 			<?php if ($this->params->def('show_order_pagination_results', 0)) : ?>
@@ -115,7 +114,6 @@ $empty = $component->params->get('default_empty_field', '');
 
 			<?php echo $this->pagination->getPagesLinks(); ?>
 		</div>
-<!--end pagination-->
 		<input type="hidden" name="task" value="" />
 		<input type="hidden" name="filter_order" value="<?php echo $list_order; ?>" />
 		<input type="hidden" name="filter_order_Dir" value="<?php echo $list_dirn; ?>" />

@@ -209,6 +209,105 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
+            <field
+                name="list_show_maincategory_parent_id"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_PARENT_ID_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_PARENT_ID_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_maincategory_associate_category"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_ASSOCIATE_CATEGORY_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_ASSOCIATE_CATEGORY_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_maincategory_title"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_TITLE_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_TITLE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_maincategory_image"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_maincategory_section"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_SECTION_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_SECTION_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_maincategory_image_position"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_POSITION_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_POSITION_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_maincategory_editor"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_EDITOR_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_EDITOR_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_maincategory_count"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_COUNT_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_COUNT_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_maincategory_params2"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_PARAMS2_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_PARAMS2_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
         </fieldset>
         <fieldset
             name="maincategory_layout_settings"

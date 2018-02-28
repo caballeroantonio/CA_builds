@@ -184,6 +184,72 @@
 				description="JGLOBAL_DATE_FORMAT_DESC"
 				size="15"
 			/>
+            <field
+                name="list_show_videosource_fk_house_id"
+                type="radio"
+                label="COM_REMCA_VIDEO_SOURCE_LIST_FK_HOUSE_ID_LABEL"
+				description="COM_REMCA_VIDEO_SOURCE_LIST_FK_HOUSE_ID_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_videosource_sequence_number"
+                type="radio"
+                label="COM_REMCA_VIDEO_SOURCE_LIST_SEQUENCE_NUMBER_LABEL"
+				description="COM_REMCA_VIDEO_SOURCE_LIST_SEQUENCE_NUMBER_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_videosource_src"
+                type="radio"
+                label="COM_REMCA_VIDEO_SOURCE_LIST_SRC_LABEL"
+				description="COM_REMCA_VIDEO_SOURCE_LIST_SRC_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_videosource_type"
+                type="radio"
+                label="COM_REMCA_VIDEO_SOURCE_LIST_TYPE_LABEL"
+				description="COM_REMCA_VIDEO_SOURCE_LIST_TYPE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_videosource_media"
+                type="radio"
+                label="COM_REMCA_VIDEO_SOURCE_LIST_MEDIA_LABEL"
+				description="COM_REMCA_VIDEO_SOURCE_LIST_MEDIA_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_videosource_youtube"
+                type="radio"
+                label="COM_REMCA_VIDEO_SOURCE_LIST_YOUTUBE_LABEL"
+				description="COM_REMCA_VIDEO_SOURCE_LIST_YOUTUBE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
         </fieldset>
         <fieldset
             name="videosource_layout_settings"
