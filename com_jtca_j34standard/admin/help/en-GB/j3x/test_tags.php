@@ -62,6 +62,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -81,6 +82,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -102,6 +104,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -121,6 +124,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -142,6 +146,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -161,6 +166,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CUANT\'IA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -182,6 +188,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -201,6 +208,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SUERTE PRINCIPAL
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -222,6 +230,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -241,6 +250,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -262,6 +272,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -281,6 +292,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA RESOLUCI\'ON DE LA SALA
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -302,6 +314,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -321,6 +334,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -393,6 +407,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -412,6 +427,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -433,6 +449,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -452,6 +469,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -473,6 +491,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field116
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -492,6 +511,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE PROYECTO
             FIELD_CODE_NAME_LATEX=field117
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -513,6 +533,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field120
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -532,6 +553,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RESOLUCI\'ON RECURRIDA
             FIELD_CODE_NAME_LATEX=field121
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -553,6 +575,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field122
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -572,6 +595,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE CIRCULACI\'ON
             FIELD_CODE_NAME_LATEX=field236
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -593,6 +617,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2347
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -612,6 +637,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL DICTADO DE LA SENTENCIA
             FIELD_CODE_NAME_LATEX=field123
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -633,6 +659,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field124
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -653,6 +680,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2348
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -672,6 +700,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DE QUIEN RECIBE LAS CONSTANCIAS
             FIELD_CODE_NAME_LATEX=field253
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -744,6 +773,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -763,6 +793,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -784,6 +815,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -803,6 +835,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -824,6 +857,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -843,6 +877,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -864,6 +899,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -884,6 +920,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -903,6 +940,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -975,6 +1013,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -994,6 +1033,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -1015,6 +1055,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -1034,6 +1075,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1055,6 +1097,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1074,6 +1117,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DELITO(S)
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1095,6 +1139,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field19
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1114,6 +1159,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO QUE LE RECAE A LA PETICI\'ON
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1135,6 +1181,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field20
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1154,6 +1201,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO DE PLAZO CONSTITUCIONAL
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1175,6 +1223,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1194,6 +1243,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTENCIA
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1215,6 +1265,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1234,6 +1285,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1255,6 +1307,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1275,6 +1328,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field18
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1294,6 +1348,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1366,6 +1421,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1385,6 +1441,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -1406,6 +1463,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -1425,6 +1483,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1446,6 +1505,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1465,6 +1525,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CUANT\'IA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1486,6 +1547,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1505,6 +1567,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1526,6 +1589,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1545,6 +1609,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA RESOLUCI\'ON DE LA SALA O DE LA AUTORIDAD FEDERAL
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1566,6 +1631,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1585,6 +1651,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1657,6 +1724,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1676,6 +1744,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -1697,6 +1766,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -1716,6 +1786,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1737,6 +1808,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1756,6 +1828,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SUERTE PRINCIPAL RECLAMADA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1777,6 +1850,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_divisa
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1796,6 +1870,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ASUNTOS CONCLUIDOS
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1817,6 +1892,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1836,6 +1912,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ENVIADOS AL ARCHIVO JUDICIAL
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1857,6 +1934,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1877,6 +1955,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1896,6 +1975,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1968,6 +2048,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1987,6 +2068,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -2008,6 +2090,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -2027,6 +2110,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2048,6 +2132,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2067,6 +2152,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MOTIVO CONSIGNACI\'ON
             FIELD_CODE_NAME_LATEX=txt\_field975
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2088,6 +2174,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_field975
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2107,6 +2194,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO QUE RECAE A LA PETICION MINISTERIAL
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2128,6 +2216,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2147,6 +2236,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=EXTINCION DE LA PRETENSION PUNITIVA
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2168,6 +2258,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2188,6 +2279,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2207,6 +2299,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2279,6 +2372,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2298,6 +2392,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -2319,6 +2414,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -2338,6 +2434,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2359,6 +2456,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2378,6 +2476,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CAUSA DE ORIGEN
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2399,6 +2498,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2418,6 +2518,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DELITO(S)
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2439,6 +2540,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2458,6 +2560,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PETICI\'ON
             FIELD_CODE_NAME_LATEX=txt\_field1198
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2479,6 +2582,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_field1198
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2498,6 +2602,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=txt\_field1199
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2519,6 +2624,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_field1199
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2538,6 +2644,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2610,6 +2717,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2629,6 +2737,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -2650,6 +2759,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -2669,6 +2779,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2690,6 +2801,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2709,6 +2821,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=AUTORIDAD REMITENTE
             FIELD_CODE_NAME_LATEX=txt\_field2032
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2730,6 +2843,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_field2032
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2749,6 +2863,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CONDUCTA TIPIFICADA COMO DELITO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2770,6 +2885,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2789,6 +2905,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=REMISI\'ON
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2810,6 +2927,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2829,6 +2947,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CONDUCTA TIPIFICADA COMO DELITO MOTIVO DE LA VINCULACI\'ON
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2850,6 +2969,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2869,6 +2989,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SUSPENSI\'ON DE PROCESO A PRUEBA
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2890,6 +3011,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2909,6 +3031,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUICIO ABREVIADO
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2930,6 +3053,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2949,6 +3073,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=AUTO DE APERTURA
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2970,6 +3095,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field17
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2989,6 +3115,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE SENTENCIA
             FIELD_CODE_NAME_LATEX=field18
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3010,6 +3137,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field19
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3029,6 +3157,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=COMENTARIO
             FIELD_CODE_NAME_LATEX=field20
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3050,6 +3179,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field21
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3069,6 +3199,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=COMENTARIO
             FIELD_CODE_NAME_LATEX=field22
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3090,6 +3221,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field23
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3109,6 +3241,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=COMENTARIO
             FIELD_CODE_NAME_LATEX=field24
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3130,6 +3263,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field25
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3149,6 +3283,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MEDIDAS IMPUESTAS Y DURACI\'ON
             FIELD_CODE_NAME_LATEX=field26
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3170,6 +3305,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field27
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3189,6 +3325,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=REPARACI\'ON DEL DA\~NO MORAL
             FIELD_CODE_NAME_LATEX=field28
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3210,6 +3347,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field29
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3229,6 +3367,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DECOMISO
             FIELD_CODE_NAME_LATEX=field30
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3250,6 +3389,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field31
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3269,6 +3409,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OTRAS FORMAS DE TERMINACI\'ON
             FIELD_CODE_NAME_LATEX=field32
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3290,6 +3431,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field33
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3309,6 +3451,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MEDIDAS IMPUESTAS Y DURACI\'ON
             FIELD_CODE_NAME_LATEX=field34
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3330,6 +3473,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field35
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3349,6 +3493,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=REPARACI\'ON DEL DA\~NO MORAL
             FIELD_CODE_NAME_LATEX=field36
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3370,6 +3515,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field37
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3389,6 +3535,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DESTRUCCI\'ON DE OBJETOS
             FIELD_CODE_NAME_LATEX=field38
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3410,6 +3557,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field39
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3430,6 +3578,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field40
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3449,6 +3598,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field42
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3521,6 +3671,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3540,6 +3691,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -3561,6 +3713,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -3580,6 +3733,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3601,6 +3755,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3620,6 +3775,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA EN QUE SE RECIBE EL ASUNTO
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3641,6 +3797,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3660,6 +3817,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CONDUCTA TIPIFICADA COMO DELITO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3732,6 +3890,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3751,6 +3910,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -3772,6 +3932,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3791,6 +3952,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3812,6 +3974,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3831,6 +3994,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3852,6 +4016,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3872,6 +4037,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3891,6 +4057,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3963,6 +4130,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3982,6 +4150,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -4003,6 +4172,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4022,6 +4192,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4043,6 +4214,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4062,6 +4234,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4083,6 +4256,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4103,6 +4277,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4122,6 +4297,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4194,6 +4370,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4213,6 +4390,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -4234,6 +4412,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4253,6 +4432,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4274,6 +4454,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4293,6 +4474,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO ASIGNADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4314,6 +4496,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4333,6 +4516,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4405,6 +4589,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4424,6 +4609,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -4445,6 +4631,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4464,6 +4651,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4485,6 +4673,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4504,6 +4693,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4525,6 +4715,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4545,6 +4736,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4564,6 +4756,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4636,6 +4829,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4655,6 +4849,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -4676,6 +4871,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4695,6 +4891,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4716,6 +4913,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4735,6 +4933,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4756,6 +4955,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4776,6 +4976,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4795,6 +4996,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4867,6 +5069,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4886,6 +5089,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -4907,6 +5111,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4926,6 +5131,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4947,6 +5153,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4966,6 +5173,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO INCOMPETENTE
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4987,6 +5195,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5006,6 +5215,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO
             FIELD_CODE_NAME_LATEX=organo2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5027,6 +5237,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5047,6 +5258,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5066,6 +5278,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5138,6 +5351,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5157,6 +5371,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -5178,6 +5393,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5197,6 +5413,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5218,6 +5435,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5237,6 +5455,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SITUACI\'ON JURIDICA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5258,6 +5477,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5277,6 +5497,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO EXCUSADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5298,6 +5519,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=organo2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5317,6 +5539,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA/HORA ENTREGA
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5389,6 +5612,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5408,6 +5632,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -5429,6 +5654,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5448,6 +5674,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5469,6 +5696,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5488,6 +5716,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO QUE REMITE
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5509,6 +5738,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=organo2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5529,6 +5759,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5548,6 +5779,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5620,6 +5852,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5639,6 +5872,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -5660,6 +5894,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5679,6 +5914,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5700,6 +5936,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5719,6 +5956,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO ASIGNADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5740,6 +5978,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5759,6 +5998,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5831,6 +6071,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5850,6 +6091,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -5871,6 +6113,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5890,6 +6133,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5911,6 +6155,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5930,6 +6175,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO ASIGNADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -5951,6 +6197,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5971,6 +6218,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -5990,6 +6238,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6062,6 +6311,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6081,6 +6331,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -6102,6 +6353,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6121,6 +6373,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6142,6 +6395,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6161,6 +6415,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO ASIGNADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6182,6 +6437,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6202,6 +6458,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6221,6 +6478,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6293,6 +6551,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6312,6 +6571,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -6333,6 +6593,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6352,6 +6613,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6373,6 +6635,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6392,6 +6655,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO INCOMPETENTE
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6413,6 +6677,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6432,6 +6697,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO ASIGNADO
             FIELD_CODE_NAME_LATEX=organo2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6453,6 +6719,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6473,6 +6740,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6492,6 +6760,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6564,6 +6833,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6583,6 +6853,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -6604,6 +6875,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6623,6 +6895,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6644,6 +6917,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6663,6 +6937,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SITUACI\'ON JURIDICA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6684,6 +6959,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6703,6 +6979,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO EXCUSADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6724,6 +7001,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=organo2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6744,6 +7022,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6763,6 +7042,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6835,6 +7115,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6854,6 +7135,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -6875,6 +7157,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6894,6 +7177,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6915,6 +7199,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6934,6 +7219,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE ORDEN
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6955,6 +7241,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -6974,6 +7261,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FOJAS
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -6995,6 +7283,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7014,6 +7303,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7086,6 +7376,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7105,6 +7396,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -7126,6 +7418,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7145,6 +7438,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7166,6 +7460,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7185,6 +7480,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE ORDEN
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7206,6 +7502,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7226,6 +7523,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7245,6 +7543,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7317,6 +7616,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7336,6 +7636,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -7357,6 +7658,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7376,6 +7678,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7397,6 +7700,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7416,6 +7720,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DELEGACION
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7437,6 +7742,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7456,6 +7762,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Art. 66 Frac. II
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7477,6 +7784,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7496,6 +7804,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Art. 66 Frac. IV
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7517,6 +7826,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7536,6 +7846,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Art. 71 Frac. I
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7557,6 +7868,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7576,6 +7888,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Art. 71 Frac. III
             FIELD_CODE_NAME_LATEX=field17
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7597,6 +7910,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field18
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7616,6 +7930,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO EN TURNO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7637,6 +7952,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7656,6 +7972,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE QUIEN INFORMO RESOLUCI\'ON (isMoral)
             FIELD_CODE_NAME_LATEX=field9\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7677,6 +7994,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7697,6 +8015,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7716,6 +8035,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE QUIEN INFORMO RESOLUCI\'ON (nombre)
             FIELD_CODE_NAME_LATEX=field9\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7788,6 +8108,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7807,6 +8128,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -7828,6 +8150,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7847,6 +8170,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7868,6 +8192,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7887,6 +8212,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO ASIGNADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -7908,6 +8234,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7928,6 +8255,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -7947,6 +8275,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8019,6 +8348,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8038,6 +8368,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -8059,6 +8390,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8078,6 +8410,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8099,6 +8432,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8118,6 +8452,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO ASIGNADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8139,6 +8474,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8159,6 +8495,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8178,6 +8515,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8250,6 +8588,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8269,6 +8608,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -8290,6 +8630,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8309,6 +8650,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8330,6 +8672,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8349,6 +8692,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO INCOMPETENTE
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8370,6 +8714,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8389,6 +8734,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO ASIGNADO
             FIELD_CODE_NAME_LATEX=organo2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8410,6 +8756,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8430,6 +8777,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8449,6 +8797,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8521,6 +8870,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8540,6 +8890,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -8561,6 +8912,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8580,6 +8932,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8601,6 +8954,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8620,6 +8974,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SITUACI\'ON JURIDICA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8641,6 +8996,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8660,6 +9016,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO EXCUSADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8681,6 +9038,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=organo2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8701,6 +9059,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8720,6 +9079,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8792,6 +9152,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8811,6 +9172,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -8832,6 +9194,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8851,6 +9214,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8872,6 +9236,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8891,6 +9256,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE ORDEN
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8912,6 +9278,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8931,6 +9298,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FOJAS
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -8952,6 +9320,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -8971,6 +9340,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9043,6 +9413,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9062,6 +9433,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -9083,6 +9455,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9102,6 +9475,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9123,6 +9497,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9142,6 +9517,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE OFICIO QUE SE CONTESTA
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9163,6 +9539,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9183,6 +9560,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9202,6 +9580,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9274,6 +9653,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9293,6 +9673,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -9314,6 +9695,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9333,6 +9715,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9354,6 +9737,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9373,6 +9757,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SALA DE PROCEDENCIA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9394,6 +9779,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9413,6 +9799,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO TURNADO
             FIELD_CODE_NAME_LATEX=organo2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9434,6 +9821,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9453,6 +9841,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9525,6 +9914,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9544,6 +9934,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -9565,6 +9956,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9584,6 +9976,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9605,6 +9998,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9624,6 +10018,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO REMITENTE
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9645,6 +10040,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=organo2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9665,6 +10061,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9684,6 +10081,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9756,6 +10154,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9775,6 +10174,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -9796,6 +10196,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9815,6 +10216,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9836,6 +10238,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9855,6 +10258,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ASUNTO
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9876,6 +10280,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9896,6 +10301,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -9915,6 +10321,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -9987,6 +10394,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10006,6 +10414,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -10027,6 +10436,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10046,6 +10456,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10067,6 +10478,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10086,6 +10498,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE AMPARO
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10107,6 +10520,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10126,6 +10540,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO TURNADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10147,6 +10562,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10166,6 +10582,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10238,6 +10655,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10257,6 +10675,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -10278,6 +10697,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10297,6 +10717,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10318,6 +10739,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10337,6 +10759,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE AMPARO
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10358,6 +10781,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10378,6 +10802,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10397,6 +10822,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10469,6 +10895,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10488,6 +10915,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -10509,6 +10937,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10528,6 +10957,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10549,6 +10979,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10568,6 +10999,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10589,6 +11021,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10608,6 +11041,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (paterno)
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10629,6 +11063,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10648,6 +11083,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (nombre)
             FIELD_CODE_NAME_LATEX=field6\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10669,6 +11105,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10689,6 +11126,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10708,6 +11146,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE INCULPADOS
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10780,6 +11219,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10799,6 +11239,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -10820,6 +11261,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10839,6 +11281,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10860,6 +11303,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10879,6 +11323,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10900,6 +11345,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10919,6 +11365,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (paterno)
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10940,6 +11387,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -10959,6 +11407,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (nombre)
             FIELD_CODE_NAME_LATEX=field6\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -10980,6 +11429,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11000,6 +11450,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11019,6 +11470,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE INCULPADOS
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11091,6 +11543,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11110,6 +11563,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -11131,6 +11585,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11150,6 +11605,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11171,6 +11627,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11190,6 +11647,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11211,6 +11669,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11230,6 +11689,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (paterno)
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11251,6 +11711,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11270,6 +11731,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (nombre)
             FIELD_CODE_NAME_LATEX=field6\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11291,6 +11753,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11311,6 +11774,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11330,6 +11794,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE INCULPADOS
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11402,6 +11867,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11421,6 +11887,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -11442,6 +11909,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11461,6 +11929,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SALA
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11482,6 +11951,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11501,6 +11971,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE OFICIO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11522,6 +11993,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11541,6 +12013,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (isMoral)
             FIELD_CODE_NAME_LATEX=field7\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11562,6 +12035,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11581,6 +12055,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (materno)
             FIELD_CODE_NAME_LATEX=field7\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11602,6 +12077,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11621,6 +12097,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CARGO
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11642,6 +12119,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11661,6 +12139,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE INCULPADOS
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11733,6 +12212,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11752,6 +12232,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -11773,6 +12254,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11792,6 +12274,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11813,6 +12296,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11832,6 +12316,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11853,6 +12338,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11872,6 +12358,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (paterno)
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11893,6 +12380,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11912,6 +12400,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (nombre)
             FIELD_CODE_NAME_LATEX=field6\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -11933,6 +12422,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11953,6 +12443,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -11972,6 +12463,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE ADOLESCENTES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12044,6 +12536,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12063,6 +12556,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -12084,6 +12578,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12103,6 +12598,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SALA
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12124,6 +12620,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12143,6 +12640,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE OFICIO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12164,6 +12662,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12183,6 +12682,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (isMoral)
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12204,6 +12704,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12223,6 +12724,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (materno)
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12244,6 +12746,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12263,6 +12766,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CARGO
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12284,6 +12788,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12303,6 +12808,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE ADOLESCENTES
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12375,6 +12881,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12394,6 +12901,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -12415,6 +12923,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12434,6 +12943,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=AV PREVIA
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12455,6 +12965,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12474,6 +12985,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DELITOS
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12495,6 +13007,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12514,6 +13027,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (isMoral)
             FIELD_CODE_NAME_LATEX=field9\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12535,6 +13049,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12554,6 +13069,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE EMITE LIBERTAD (materno)
             FIELD_CODE_NAME_LATEX=field9\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12575,6 +13091,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12595,6 +13112,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12614,6 +13132,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CARPETA
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12686,6 +13205,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12705,6 +13225,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -12726,6 +13247,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12745,6 +13267,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12766,6 +13289,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12785,6 +13309,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SITUACI\'ON JURIDICA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12806,6 +13331,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12825,6 +13351,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO EXCUSADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12846,6 +13373,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=organo2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12865,6 +13393,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA/HORA ENTREGA
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -12937,6 +13466,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12956,6 +13486,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -12977,6 +13508,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -12996,6 +13528,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13017,6 +13550,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13037,6 +13571,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13056,6 +13591,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA/HORA ENTREGA
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13128,6 +13664,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13147,6 +13684,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -13168,6 +13706,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13187,6 +13726,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=fh\_recepcion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13208,6 +13748,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13227,6 +13768,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO ASIGNADO
             FIELD_CODE_NAME_LATEX=organo1
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13248,6 +13790,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13267,6 +13810,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13339,6 +13883,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13358,6 +13903,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -13379,6 +13925,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -13398,6 +13945,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13419,6 +13967,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2286
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13438,6 +13987,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO PENAL
             FIELD_CODE_NAME_LATEX=field2287
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13459,6 +14009,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2288
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13478,6 +14029,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA RESOLUCI\'ON APELADA
             FIELD_CODE_NAME_LATEX=field2289
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13499,6 +14051,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2290
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13518,6 +14071,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PETICI\'ON CONCEDIDA
             FIELD_CODE_NAME_LATEX=field2291
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13539,6 +14093,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2292
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13558,6 +14113,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUIEN APELA (isMoral)
             FIELD_CODE_NAME_LATEX=field2293\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13579,6 +14135,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2293\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13598,6 +14155,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUIEN APELA (materno)
             FIELD_CODE_NAME_LATEX=field2293\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13619,6 +14177,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2293\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13638,6 +14197,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=LUGAR DE RECLUSI\'ON
             FIELD_CODE_NAME_LATEX=field2294
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13659,6 +14219,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2295
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13678,6 +14239,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field2296
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13699,6 +14261,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2297
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13718,6 +14281,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NO. DE AMPARO
             FIELD_CODE_NAME_LATEX=field2343
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13739,6 +14303,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2344
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13758,6 +14323,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field2298
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13830,6 +14396,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13849,6 +14416,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -13870,6 +14438,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -13889,6 +14458,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13910,6 +14480,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2299
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13929,6 +14500,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field2300
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -13950,6 +14522,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2301
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -13969,6 +14542,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field2302
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14041,6 +14615,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14060,6 +14635,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -14081,6 +14657,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -14100,6 +14677,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14121,6 +14699,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2303
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14140,6 +14719,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE AUDIENCIA
             FIELD_CODE_NAME_LATEX=field2304
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14161,6 +14741,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2305
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14181,6 +14762,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2306
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14200,6 +14782,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field2307
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14272,6 +14855,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14291,6 +14875,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -14312,6 +14897,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -14331,6 +14917,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14352,6 +14939,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2308
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14371,6 +14959,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=BENEFICIO PENITENCIARIO
             FIELD_CODE_NAME_LATEX=field2309
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14392,6 +14981,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2310
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14411,6 +15001,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTIDO DE RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field2311
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14432,6 +15023,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2312
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14451,6 +15043,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE REVOCACI\'ON
             FIELD_CODE_NAME_LATEX=field2313
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14472,6 +15065,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2314
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14491,6 +15085,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field2315
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14563,6 +15158,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14582,6 +15178,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -14603,6 +15200,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -14622,6 +15220,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14643,6 +15242,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2316
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14662,6 +15262,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=BENEFICIO PENITENCIARIO
             FIELD_CODE_NAME_LATEX=field2317
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14683,6 +15284,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2318
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14702,6 +15304,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field2319
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14774,6 +15377,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14793,6 +15397,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -14814,6 +15419,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -14833,6 +15439,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14854,6 +15461,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2320
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14873,6 +15481,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FOJAS DEL EXPEDIENTE TOMAS Y DOCUMENTOS
             FIELD_CODE_NAME_LATEX=field2321
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -14894,6 +15503,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2322
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14914,6 +15524,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2323
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -14933,6 +15544,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field2324
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15005,6 +15617,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15024,6 +15637,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -15045,6 +15659,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -15064,6 +15679,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15085,6 +15701,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2325
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15104,6 +15721,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO DE FINANZA
             FIELD_CODE_NAME_LATEX=field2326
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15125,6 +15743,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2327
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15144,6 +15763,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=IMPORTE
             FIELD_CODE_NAME_LATEX=field2328
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15165,6 +15785,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2329
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15184,6 +15805,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MOTIVO DE CANCELACI\'ON DE FIANZA
             FIELD_CODE_NAME_LATEX=field2330
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15205,6 +15827,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2331
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15225,6 +15848,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2332
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15244,6 +15868,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field2333
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15316,6 +15941,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15335,6 +15961,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -15356,6 +15983,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -15375,6 +16003,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15396,6 +16025,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15415,6 +16045,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MOTIVO DE INGRESO DE BILLETE
             FIELD_CODE_NAME_LATEX=field2334
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15436,6 +16067,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2335
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15455,6 +16087,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE EXPEDICI\'ON DE BILLETE
             FIELD_CODE_NAME_LATEX=field2336
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15476,6 +16109,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2337
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15495,6 +16129,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE EGRESO DE BILLETE
             FIELD_CODE_NAME_LATEX=field2338
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15516,6 +16151,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2339
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15535,6 +16171,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBE (isMoral)
             FIELD_CODE_NAME_LATEX=field2340\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15556,6 +16193,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2340\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15575,6 +16213,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBE (materno)
             FIELD_CODE_NAME_LATEX=field2340\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15596,6 +16235,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2340\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15616,6 +16256,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2341
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15635,6 +16276,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field2342
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15709,6 +16351,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15728,6 +16371,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15749,6 +16393,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15768,6 +16413,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15789,6 +16435,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2350
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15808,6 +16455,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO DE PROCEDENCIA
             FIELD_CODE_NAME_LATEX=txt\_field2351
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15829,6 +16477,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_field2351
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15848,6 +16497,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MAGISTRADO PONENTE
             FIELD_CODE_NAME_LATEX=txt\_field2352
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15869,6 +16519,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_field2352
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15888,6 +16539,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTENCIA (SENTIDO)
             FIELD_CODE_NAME_LATEX=field2353
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15909,6 +16561,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2354
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15928,6 +16581,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RESOLUTIVOS
             FIELD_CODE_NAME_LATEX=field2355
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -15949,6 +16603,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2356
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15969,6 +16624,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2357
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -15988,6 +16644,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ARCHIVO
             FIELD_CODE_NAME_LATEX=field2358
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16060,6 +16717,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16079,6 +16737,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16100,6 +16759,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
+            
 
 
         
@@ -16119,6 +16779,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL PROYECTISTA
             FIELD_CODE_NAME_LATEX=field126
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16140,6 +16801,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field130
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16159,6 +16821,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FIRMA DE SALIDA
             FIELD_CODE_NAME_LATEX=field127
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16231,6 +16894,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -16250,6 +16914,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16271,6 +16936,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16290,6 +16956,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -16311,6 +16978,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16330,6 +16998,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE SE EXPIDE EL DOCUMENTO
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16351,6 +17020,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16370,6 +17040,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DEL DOCUMENTO
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16391,6 +17062,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16411,6 +17083,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16430,6 +17103,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16504,6 +17178,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16523,6 +17198,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -16544,6 +17220,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -16563,6 +17240,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16584,6 +17262,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16603,6 +17282,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE SE EXPIDE
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16624,6 +17304,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16643,6 +17324,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16664,6 +17346,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16684,6 +17367,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16703,6 +17387,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16777,6 +17462,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16796,6 +17482,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -16817,6 +17504,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -16836,6 +17524,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16857,6 +17546,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16876,6 +17566,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE SE RECIBE EL DOCUMENTO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16897,6 +17588,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16916,6 +17608,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DEL DOCUMENTO
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16937,6 +17630,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16956,6 +17650,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO DEL DOCUMENTO
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -16977,6 +17672,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -16996,6 +17692,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17070,6 +17767,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17089,6 +17787,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -17110,6 +17809,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -17129,6 +17829,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17150,6 +17851,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17169,6 +17871,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE SE EXPIDE EL BILLETE
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17190,6 +17893,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17209,6 +17913,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO DEL BILLETE
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17230,6 +17935,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17249,6 +17955,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17270,6 +17977,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17289,6 +17997,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17363,6 +18072,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17382,6 +18092,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -17403,6 +18114,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -17422,6 +18134,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17443,6 +18156,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17462,6 +18176,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PROMOVENTE
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17483,6 +18198,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17502,6 +18218,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL SECRETARIO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17574,6 +18291,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17593,6 +18311,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -17614,6 +18333,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -17633,6 +18353,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17654,6 +18375,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17673,6 +18395,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PROMOVENTE
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17694,6 +18417,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17713,6 +18437,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17785,6 +18510,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17804,6 +18530,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -17825,6 +18552,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -17844,6 +18572,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17865,6 +18594,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17884,6 +18614,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PROCEDENCIA
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17905,6 +18636,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17924,6 +18656,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FUNCI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -17945,6 +18678,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -17964,6 +18698,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18036,6 +18771,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18055,6 +18791,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18076,6 +18813,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18095,6 +18833,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18116,6 +18855,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2359
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18135,6 +18875,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CARPETA ADMINISTRATIVA
             FIELD_CODE_NAME_LATEX=field2360
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18156,6 +18897,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2361
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18175,6 +18917,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RESOLUCI\'ON APELADA
             FIELD_CODE_NAME_LATEX=field2362
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18196,6 +18939,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2363
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18215,6 +18959,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DOCUMENTACI\'ON RECIBIDA
             FIELD_CODE_NAME_LATEX=field2364
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18236,6 +18981,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2365
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18255,6 +19001,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MAGISTRADO UNITARIO
             FIELD_CODE_NAME_LATEX=txt\_field2366
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18276,6 +19023,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_field2366
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18295,6 +19043,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA SENT. SEG. INST.
             FIELD_CODE_NAME_LATEX=field2367
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18316,6 +19065,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2368
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18335,6 +19085,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field2369
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18407,6 +19158,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -18426,6 +19178,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18447,6 +19200,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18466,6 +19220,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -18487,6 +19242,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=my\_boolean
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18506,6 +19262,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=my int
             FIELD_CODE_NAME_LATEX=my\_int
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18528,6 +19285,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=my\_currency
             FIELD_DBCOMMENT_LATEX=- Numeros flotantes de 2 digitos, con preferencias en mysql settings- @ToDo - cambiar el campo de texto del front end
             
+            
 
 
         
@@ -18547,6 +19305,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=my date
             FIELD_CODE_NAME_LATEX=my\_date
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18568,6 +19327,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=my\_datetime
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18587,6 +19347,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=my var45
             FIELD_CODE_NAME_LATEX=my\_var45
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18608,6 +19369,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=txt\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18627,6 +19389,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=my var255
             FIELD_CODE_NAME_LATEX=my\_var255
             FIELD_DBCOMMENT_LATEX=Ejemplo varchar 255
+            
             
 
 
@@ -18648,6 +19411,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=txt\_my\_suggest
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18667,6 +19431,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=my multiline
             FIELD_CODE_NAME_LATEX=my\_multiline
             FIELD_DBCOMMENT_LATEX=@ToDo  cambiar el sql que pone TEXT(255)
+            
             
 
 
@@ -18690,6 +19455,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=my\_ref2
             FIELD_DBCOMMENT_LATEX=@ToDo poner constaints     INDEX `c3\textbackslash \textbackslash \_10\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_ref2` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_10`        FOREIGN KEY (`my\textbackslash \textbackslash \_ref2`)        REFERENCES `jtc\textbackslash \textbackslash \_general` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE         ,
             
+            
 
 
         
@@ -18712,6 +19478,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=my\_ref
             FIELD_DBCOMMENT_LATEX=Campo de referencia a un cat\'alogo@ToDo agregar constraints    INDEX `c3\textbackslash \textbackslash \_1924\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_ref` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_1924`        FOREIGN KEY (`my\textbackslash \textbackslash \_ref`)        REFERENCES `jtc\textbackslash \textbackslash \_materia` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE         ,
             
+            
 
 
         
@@ -18731,6 +19498,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=id\_my\_suggest
             FIELD_CODE_NAME_LATEX=id\_my\_suggest
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18759,6 +19527,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=my\_NFempleado
             FIELD_DBCOMMENT_LATEX=@ToDo Debiera ser un campo int que hace referencia a un archivo`field14` INT NULL COMMENT \textbackslash 'id Firma interna\textbackslash ',		INDEX `c3\textbackslash \textbackslash \_11\textbackslash \textbackslash \_idx` (`field14` ASC),	CONSTRAINT `c3\textbackslash \textbackslash \_11`		FOREIGN KEY (`field14`)		REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)		ON DELETE RESTRICT		ON UPDATE CASCADE 
             
+            
 
 
         
@@ -18779,6 +19548,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=my Fexterna
             FIELD_CODE_NAME_LATEX=my\_fexterna
             FIELD_DBCOMMENT_LATEX=@ToDo debieran ser 2 campos int, uno para huella y otro para firma    `my\textbackslash \textbackslash \_fexterna` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_firma Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexterna` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexterna`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE,    `my\textbackslash \textbackslash \_fexternah` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_huella Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14h\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexternah` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14h`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexternah`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE         , 
+            
             
 
 
@@ -18801,6 +19571,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=my\_hexterna
             FIELD_DBCOMMENT_LATEX=@ToDo debieran ser 2 campos int, uno para huella y otro para firma    `my\textbackslash \textbackslash \_fexterna` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_firma Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexterna` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexterna`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE,    `my\textbackslash \textbackslash \_fexternah` INT NULL COMMENT \textbackslash 'id\textbackslash \textbackslash \_huella Firma externa\textbackslash ',    INDEX `c3\textbackslash \textbackslash \_14h\textbackslash \textbackslash \_idx` (`my\textbackslash \textbackslash \_fexternah` ASC),    CONSTRAINT `c3\textbackslash \textbackslash \_14h`        FOREIGN KEY (`my\textbackslash \textbackslash \_fexternah`)        REFERENCES `jt\textbackslash \textbackslash \_uploadedfiles` (`id`)        ON DELETE RESTRICT        ON UPDATE CASCADE         , 
             
+            
 
 
         
@@ -18815,7 +19586,7 @@ architectcomp=jtca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`my_parent` INT(10) NOT NULL DEFAULT '0' my parent
+            FIELD_DB=`my_parent` INT(10) UNSIGNED  NOT NULL DEFAULT '0' my parent
             
             FIELD_NAME_LATEX=my parent
             FIELD_CODE_NAME_LATEX=my\_parent
@@ -18824,6 +19595,7 @@ architectcomp=jtca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=LDE
                 FIELD_FOREIGN_OBJECT_UPPER=LEJEMPLO
+            
 
 
         
@@ -18843,6 +19615,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=my person isMoral
             FIELD_CODE_NAME_LATEX=my\_person\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18864,6 +19637,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=my\_person\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18884,6 +19658,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=my\_person\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18903,6 +19678,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=my person nombre
             FIELD_CODE_NAME_LATEX=my\_person\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -18975,6 +19751,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -18994,6 +19771,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19015,6 +19793,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
+            
 
 
         
@@ -19034,6 +19813,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE TOCA
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19055,6 +19835,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field131
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19074,6 +19855,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE FIRMA DEL M.P.
             FIELD_CODE_NAME_LATEX=field134
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19095,6 +19877,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field135\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19114,6 +19897,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL M.P. (paterno)
             FIELD_CODE_NAME_LATEX=field135\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19135,6 +19919,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field135\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19155,6 +19940,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field135\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19174,6 +19960,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FIRMA DEL M.P.
             FIELD_CODE_NAME_LATEX=field254
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19246,6 +20033,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -19265,6 +20053,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19286,6 +20075,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19305,6 +20095,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -19326,6 +20117,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
             
+            
 
 
         
@@ -19346,6 +20138,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
+            
 
 
         
@@ -19365,6 +20158,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=BENEFICIARIO (nombre)
             FIELD_CODE_NAME_LATEX=field1\_nombre
             FIELD_DBCOMMENT_LATEX=nombre
+            
             
 
 
@@ -19386,6 +20180,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1\_isMoral
             FIELD_DBCOMMENT_LATEX=es Moral
             
+            
 
 
         
@@ -19405,6 +20200,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=BENEFICIARIO (isMoral)
             FIELD_CODE_NAME_LATEX=field1\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19426,6 +20222,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19445,6 +20242,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=BENEFICIARIO (materno)
             FIELD_CODE_NAME_LATEX=field1\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19466,6 +20264,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19485,6 +20284,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONALIDAD
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19506,6 +20306,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19525,6 +20326,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No DEL BILLETE
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19546,6 +20348,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19565,6 +20368,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (a. paterno)
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
+            
             
 
 
@@ -19586,6 +20390,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
+            
 
 
         
@@ -19605,6 +20410,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (nombre)
             FIELD_CODE_NAME_LATEX=field6\_nombre
             FIELD_DBCOMMENT_LATEX=nombre
+            
             
 
 
@@ -19626,6 +20432,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_isMoral
             FIELD_DBCOMMENT_LATEX=es Moral
             
+            
 
 
         
@@ -19645,6 +20452,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (isMoral)
             FIELD_CODE_NAME_LATEX=field6\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19666,6 +20474,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19685,6 +20494,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (materno)
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19706,6 +20516,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19725,6 +20536,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DE QUIEN RECIBE
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19746,6 +20558,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7h
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19765,6 +20578,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DATOS DE IDENTIFICACI\'ON
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19786,6 +20600,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19805,6 +20620,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL JUEZ
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19826,6 +20642,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19845,6 +20662,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CONCEPTO
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19866,6 +20684,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19885,6 +20704,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -19959,6 +20779,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -19978,6 +20799,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -19999,6 +20821,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -20018,6 +20841,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20039,6 +20863,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20058,6 +20883,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO DEL DOCUMENTO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20079,6 +20905,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20098,6 +20925,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (isMoral)
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20119,6 +20947,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20138,6 +20967,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (materno)
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20159,6 +20989,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20178,6 +21009,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=IDENTIFICACION
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20199,6 +21031,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20218,6 +21051,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FIRMA DE QUIEN RECIBE
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20239,6 +21073,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11h
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20258,6 +21093,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL JUEZ
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20279,6 +21115,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20298,6 +21135,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20372,6 +21210,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20391,6 +21230,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -20412,6 +21252,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -20431,6 +21272,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20503,6 +21345,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20522,6 +21365,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -20543,6 +21387,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -20562,6 +21407,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20583,6 +21429,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20602,6 +21449,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE SE EXPIDE EL BILLETE
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20623,6 +21471,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20642,6 +21491,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO DEL BILLETE
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20663,6 +21513,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20682,6 +21533,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE A QUIEN SE ENTREGA (paterno)
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20703,6 +21555,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20722,6 +21575,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE A QUIEN SE ENTREGA (nombre)
             FIELD_CODE_NAME_LATEX=field6\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20743,6 +21597,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20762,6 +21617,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=HUELLA DE QUIEN RECIBE
             FIELD_CODE_NAME_LATEX=field7h
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20783,6 +21639,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20802,6 +21659,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL SECRETARIO
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20823,6 +21681,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20842,6 +21701,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20863,6 +21723,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20882,6 +21743,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -20956,6 +21818,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -20975,6 +21838,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -20996,6 +21860,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -21015,6 +21880,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21036,6 +21902,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21055,6 +21922,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DELITO(S)
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21076,6 +21944,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21095,6 +21964,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RESOLUCI\'ON RECURRIDA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21116,6 +21986,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21135,6 +22006,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OFICIO DE REMISI\'ON A LA SALA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21156,6 +22028,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21175,6 +22048,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TOCA
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21196,6 +22070,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21215,6 +22090,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON AL JUZGADO
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21236,6 +22112,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21256,6 +22133,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21275,6 +22153,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21347,6 +22226,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21366,6 +22246,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -21387,6 +22268,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -21406,6 +22288,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21427,6 +22310,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21447,6 +22331,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21466,6 +22351,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21538,6 +22424,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21557,6 +22444,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -21578,6 +22466,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -21597,6 +22486,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21618,6 +22508,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21637,6 +22528,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE SE EXPIDE
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21658,6 +22550,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21677,6 +22570,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE SE RECIBE
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21698,6 +22592,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21717,6 +22612,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL DEPOSITANTE (isMoral)
             FIELD_CODE_NAME_LATEX=field6\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21738,6 +22634,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21757,6 +22654,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL DEPOSITANTE (materno)
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21778,6 +22676,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21798,6 +22697,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21817,6 +22717,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21891,6 +22792,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21910,6 +22812,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21931,6 +22834,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21950,6 +22854,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -21971,6 +22876,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2370
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -21990,6 +22896,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CARPETA ADMINISTRATIVA
             FIELD_CODE_NAME_LATEX=field2371
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22011,6 +22918,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2372
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22030,6 +22938,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RESOLUCI\'ON APELADA
             FIELD_CODE_NAME_LATEX=field2373
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22051,6 +22960,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2374
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22070,6 +22980,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DOCUMENTACI\'ON RECIBIDA
             FIELD_CODE_NAME_LATEX=field2375
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22091,6 +23002,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2376
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22110,6 +23022,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MAGISTRADO RELATOR
             FIELD_CODE_NAME_LATEX=field2377
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22131,6 +23044,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2378
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22151,6 +23065,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2379
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22170,6 +23085,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field2380
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22242,6 +23158,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22261,6 +23178,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22282,6 +23200,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
+            
 
 
         
@@ -22301,6 +23220,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TOCA
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22322,6 +23242,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field137
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22341,6 +23262,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO DE LA MULTA
             FIELD_CODE_NAME_LATEX=field139
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22362,6 +23284,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field140
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22381,6 +23304,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A QUI\'EN SE DECRETA (isMoral)
             FIELD_CODE_NAME_LATEX=field141\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22402,6 +23326,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field141\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22421,6 +23346,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A QUI\'EN SE DECRETA (materno)
             FIELD_CODE_NAME_LATEX=field141\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22442,6 +23368,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field141\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22461,6 +23388,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DEL OFICIO
             FIELD_CODE_NAME_LATEX=field142
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22482,6 +23410,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field250
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22501,6 +23430,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field143
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22573,6 +23503,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -22592,6 +23523,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22613,6 +23545,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22632,6 +23565,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -22653,6 +23587,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22673,6 +23608,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22692,6 +23628,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22764,6 +23701,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22783,6 +23721,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -22804,6 +23743,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -22823,6 +23763,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22844,6 +23785,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22863,6 +23805,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PROMOVENTE (isMoral)
             FIELD_CODE_NAME_LATEX=field5\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22884,6 +23827,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22903,6 +23847,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PROMOVENTE (materno)
             FIELD_CODE_NAME_LATEX=field5\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -22924,6 +23869,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22944,6 +23890,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -22963,6 +23910,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -23035,6 +23983,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23054,6 +24003,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -23075,6 +24025,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -23094,6 +24045,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -23115,6 +24067,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23134,6 +24087,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PROMOVENTE
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -23155,6 +24109,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23174,6 +24129,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -23246,6 +24202,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23265,6 +24222,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -23286,6 +24244,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -23305,6 +24264,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -23326,6 +24286,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23346,6 +24307,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23365,6 +24327,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -23437,6 +24400,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23456,6 +24420,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -23477,6 +24442,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -23496,6 +24462,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -23517,6 +24484,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23536,6 +24504,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OCURSANTE
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -23557,6 +24526,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23576,6 +24546,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL SECRETARIO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -23597,6 +24568,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23617,6 +24589,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23636,6 +24609,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -23708,6 +24682,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23727,6 +24702,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -23748,6 +24724,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -23767,6 +24744,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -23788,6 +24766,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23807,6 +24786,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -23828,6 +24808,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=txt\_field1219
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23848,6 +24829,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_field1219
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23867,6 +24849,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ASUNTO
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -23939,6 +24922,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -23958,6 +24942,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -23979,6 +24964,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -23998,6 +24984,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24019,6 +25006,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24038,6 +25026,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ADOLESCENTE  (paterno)
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24059,6 +25048,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24078,6 +25068,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ADOLESCENTE  (nombre)
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24099,6 +25090,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24118,6 +25110,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA SENTENCIA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24139,6 +25132,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24158,6 +25152,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24230,6 +25225,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24249,6 +25245,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -24270,6 +25267,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -24289,6 +25287,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24310,6 +25309,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24329,6 +25329,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DE BILLETE
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24350,6 +25351,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24369,6 +25371,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTREGA
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24390,6 +25393,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24409,6 +25413,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FIRMA DE RECEPCION
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24430,6 +25435,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8h
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24449,6 +25455,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=IDENTIFICACI\'ON U OFICIO
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24470,6 +25477,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24489,6 +25497,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL JUEZ
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24563,6 +25572,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24582,6 +25592,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24603,6 +25614,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24622,6 +25634,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24643,6 +25656,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2381
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24662,6 +25676,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTREGA
             FIELD_CODE_NAME_LATEX=field2382
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24683,6 +25698,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2383\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24702,6 +25718,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL ACTUARIO (paterno)
             FIELD_CODE_NAME_LATEX=field2383\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24723,6 +25740,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2383\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24742,6 +25760,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL ACTUARIO (nombre)
             FIELD_CODE_NAME_LATEX=field2383\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24763,6 +25782,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2384
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24782,6 +25802,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DILIGENCIA
             FIELD_CODE_NAME_LATEX=field2385
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24803,6 +25824,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2386
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24822,6 +25844,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE  DE QUIEN RECIBE LA DEVOLUCI\'ON (isMoral)
             FIELD_CODE_NAME_LATEX=field2387\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24843,6 +25866,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2387\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24862,6 +25886,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE  DE QUIEN RECIBE LA DEVOLUCI\'ON (materno)
             FIELD_CODE_NAME_LATEX=field2387\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24883,6 +25908,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2387\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24902,6 +25928,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field2388
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -24974,6 +26001,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -24993,6 +26021,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25014,6 +26043,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
+            
 
 
         
@@ -25033,6 +26063,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TOCA
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25054,6 +26085,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field146
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25074,6 +26106,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=faudiencia
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25093,6 +26126,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE DILIGENCIA
             FIELD_CODE_NAME_LATEX=field148
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25165,6 +26199,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -25184,6 +26219,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25205,6 +26241,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25224,6 +26261,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -25245,6 +26283,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25264,6 +26303,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE CITACI\'ON
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25285,6 +26325,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25304,6 +26345,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE SENTENCIA
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25325,6 +26367,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25344,6 +26387,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE SENTENCIA
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25365,6 +26409,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25384,6 +26429,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25456,6 +26502,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25475,6 +26522,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -25496,6 +26544,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -25515,6 +26564,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25536,6 +26586,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25555,6 +26606,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA PUBLICACI\'ON EN BOLET\'IN
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25576,6 +26628,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25595,6 +26648,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE SENTENCIA
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25616,6 +26670,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25635,6 +26690,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE BOLET\'IN JUDICIAL
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25656,6 +26712,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25675,6 +26732,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25747,6 +26805,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25766,6 +26825,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -25787,6 +26847,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -25806,6 +26867,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25827,6 +26889,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25846,6 +26909,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ACUSADO (paterno)
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25867,6 +26931,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25886,6 +26951,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ACUSADO (nombre)
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25907,6 +26973,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25926,6 +26993,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE AUDIENCIA DE VISTA O CONCLUSIONES VERBALES
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25947,6 +27015,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -25966,6 +27035,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE TURNO AL PROYECTISTA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -25987,6 +27057,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26006,6 +27077,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE VENCIMIENTO DE LA SENTENCIA
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26027,6 +27099,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26046,6 +27119,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTIDO DE LA RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26067,6 +27141,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26086,6 +27161,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DELITO
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26158,6 +27234,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26177,6 +27254,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -26198,6 +27276,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -26217,6 +27296,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26238,6 +27318,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26257,6 +27338,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE CITACI\'ON
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26278,6 +27360,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26297,6 +27380,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA PUBLICACI\'ON DE LA CITACI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26318,6 +27402,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26337,6 +27422,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE SENTENCIA
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26358,6 +27444,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26377,6 +27464,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26449,6 +27537,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26468,6 +27557,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -26489,6 +27579,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -26508,6 +27599,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26529,6 +27621,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26548,6 +27641,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE CITACI\'ON
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26569,6 +27663,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26588,6 +27683,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE SENTENCIA
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26609,6 +27705,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26629,6 +27726,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26648,6 +27746,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26720,6 +27819,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26739,6 +27839,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -26760,6 +27861,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -26779,6 +27881,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26800,6 +27903,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26819,6 +27923,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE CONCLUSIONES
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26840,6 +27945,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26859,6 +27965,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA SENTENCIA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26880,6 +27987,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26899,6 +28007,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -26920,6 +28029,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -26939,6 +28049,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27011,6 +28122,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27030,6 +28142,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -27051,6 +28164,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -27070,6 +28184,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27091,6 +28206,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27110,6 +28226,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=AUTO A DILIGENCIAR
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27131,6 +28248,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27150,6 +28268,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE (paterno)
             FIELD_CODE_NAME_LATEX=field4\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27171,6 +28290,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27190,6 +28310,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE (nombre)
             FIELD_CODE_NAME_LATEX=field4\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27211,6 +28332,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27230,6 +28352,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTREGA DE CEDULAS
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27251,6 +28374,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27270,6 +28394,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27342,6 +28467,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27361,6 +28487,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -27382,6 +28509,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -27401,6 +28529,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27422,6 +28551,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27441,6 +28571,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA RESOLUCI\'ON APELADA
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27462,6 +28593,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27481,6 +28613,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=EFECTO ADMISORIO
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27502,6 +28635,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27521,6 +28655,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE OFICIO DE REMISI\'ON
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27542,6 +28677,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27561,6 +28697,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA RESOLUCI\'ON DE SALA
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27582,6 +28719,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27602,6 +28740,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27621,6 +28760,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27693,6 +28833,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27712,6 +28853,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -27733,6 +28875,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -27753,6 +28896,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27772,6 +28916,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL PROYECTISTA
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27844,6 +28989,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27863,6 +29009,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27884,6 +29031,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27903,6 +29051,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27924,6 +29073,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2389
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27943,6 +29093,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE AMPARO
             FIELD_CODE_NAME_LATEX=field2390
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -27964,6 +29115,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2391\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -27983,6 +29135,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (paterno)
             FIELD_CODE_NAME_LATEX=field2391\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28004,6 +29157,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2391\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28023,6 +29177,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (nombre)
             FIELD_CODE_NAME_LATEX=field2391\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28044,6 +29199,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2392
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28063,6 +29219,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO
             FIELD_CODE_NAME_LATEX=field2393
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28084,6 +29241,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2394
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28103,6 +29261,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENVIO DEL INFORME
             FIELD_CODE_NAME_LATEX=field2395
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28124,6 +29283,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2396
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28144,6 +29304,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2397
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28163,6 +29324,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field2398
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28235,6 +29397,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28254,6 +29417,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Toca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
+            
             
 
 
@@ -28275,6 +29439,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28294,6 +29459,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -28315,6 +29481,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field149
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28334,6 +29501,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTRADA
             FIELD_CODE_NAME_LATEX=field150
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28355,6 +29523,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field151
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28374,6 +29543,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE EXPEDICI\'ON
             FIELD_CODE_NAME_LATEX=field152
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28395,6 +29565,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field153
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28414,6 +29585,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=EXPEDIDOR
             FIELD_CODE_NAME_LATEX=field154
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28435,6 +29607,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field155\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28454,6 +29627,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=BENEFICIARIO (paterno)
             FIELD_CODE_NAME_LATEX=field155\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28475,6 +29649,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field155\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28494,6 +29669,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=BENEFICIARIO (nombre)
             FIELD_CODE_NAME_LATEX=field155\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28515,6 +29691,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field157
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28534,6 +29711,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A QUI\'EN SE DEVUELVE (isMoral)
             FIELD_CODE_NAME_LATEX=field158\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28555,6 +29733,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field158\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28574,6 +29753,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A QUI\'EN SE DEVUELVE (materno)
             FIELD_CODE_NAME_LATEX=field158\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28595,6 +29775,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field158\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28615,6 +29796,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field160
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28634,6 +29816,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FIRMA
             FIELD_CODE_NAME_LATEX=field159
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28706,6 +29889,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -28725,6 +29909,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28746,6 +29931,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28765,6 +29951,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -28786,6 +29973,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field17
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28805,6 +29993,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RESOLUCI\'ON  APELADA
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28826,6 +30015,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28845,6 +30035,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO ADMISORIO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28866,6 +30057,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28885,6 +30077,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE REMISI\'ON A  LA SALA
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28906,6 +30099,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28925,6 +30119,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON DE LA SALA
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28946,6 +30141,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -28965,6 +30161,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -28986,6 +30183,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29005,6 +30203,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29077,6 +30276,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29096,6 +30296,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -29117,6 +30318,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -29136,6 +30338,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29157,6 +30360,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29176,6 +30380,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE SE INTERPUSO LA APELACI\'ON
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29197,6 +30402,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29216,6 +30422,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE RESOLUCI\'ON APELADA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29237,6 +30444,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29256,6 +30464,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=EFECTO EN QUE SE ADMITE
             FIELD_CODE_NAME_LATEX=field18
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29277,6 +30486,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29296,6 +30506,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SALA A LA QUE SE TURN\'O EL RECURSO
             FIELD_CODE_NAME_LATEX=field17
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29317,6 +30528,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29336,6 +30548,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NUM. DEL OFICIO A LA SALA
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29357,6 +30570,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29376,6 +30590,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON EN LA SALA
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29397,6 +30612,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29416,6 +30632,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTIDO EN QUE RESUELVE LA SALA
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29488,6 +30705,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29507,6 +30725,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -29528,6 +30747,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -29547,6 +30767,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29568,6 +30789,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29587,6 +30809,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA  DE LA RESOLUCI\'ON APELADA
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29608,6 +30831,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29627,6 +30851,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE SE ADMITE
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29648,6 +30873,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29667,6 +30893,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SALA ASIGNADA
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29688,6 +30915,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29707,6 +30935,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE TOCA
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29728,6 +30957,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29747,6 +30977,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29819,6 +31050,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29838,6 +31070,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -29859,6 +31092,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -29878,6 +31112,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29899,6 +31134,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29918,6 +31154,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO ADMISORIO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29939,6 +31176,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29958,6 +31196,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE CONTESTACI\'ON DE AGRAVIOS O REBELD\'IA
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -29979,6 +31218,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -29998,6 +31238,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DE OFICIO DE REMISI\'ON
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30019,6 +31260,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30038,6 +31280,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE APELACION
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30059,6 +31302,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30079,6 +31323,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30098,6 +31343,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30170,6 +31416,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30189,6 +31436,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -30210,6 +31458,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -30229,6 +31478,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30250,6 +31500,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30269,6 +31520,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30290,6 +31542,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30309,6 +31562,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=AUTORIDAD EXHORTANTE
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30330,6 +31584,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30349,6 +31604,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DILIGENCIA ENCOMENDADA
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30370,6 +31626,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30389,6 +31646,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEVUELTOS
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30410,6 +31668,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30430,6 +31689,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30449,6 +31709,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30521,6 +31782,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30540,6 +31802,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -30561,6 +31824,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -30580,6 +31844,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30601,6 +31866,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30620,6 +31886,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RECURRENTES(S)
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30641,6 +31908,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30660,6 +31928,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA RESOLUCI\'ON APELADA
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30681,6 +31950,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30700,6 +31970,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO ADMISORIO
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30721,6 +31992,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30740,6 +32012,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON OFICIALIA DE PARTES COM\'UN
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30761,6 +32034,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30780,6 +32054,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No DE SALA
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30801,6 +32076,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30820,6 +32096,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON DE LA RESOLUCI\'ON DE LA SALA
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30841,6 +32118,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30860,6 +32138,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30881,6 +32160,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30900,6 +32180,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -30972,6 +32253,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -30991,6 +32273,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -31012,6 +32295,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -31031,6 +32315,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31052,6 +32337,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31071,6 +32357,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DE AMPARO
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31092,6 +32379,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31111,6 +32399,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (paterno)
             FIELD_CODE_NAME_LATEX=field4\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31132,6 +32421,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31151,6 +32441,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (nombre)
             FIELD_CODE_NAME_LATEX=field4\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31172,6 +32463,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=txt\_field1233
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31191,6 +32483,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO
             FIELD_CODE_NAME_LATEX=id\_field1233
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31212,6 +32505,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31232,6 +32526,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31251,6 +32546,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31323,6 +32619,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31342,6 +32639,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -31363,6 +32661,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -31382,6 +32681,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31403,6 +32703,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31422,6 +32723,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31443,6 +32745,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31462,6 +32765,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DILIGENCIA ENCOMENDADA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31483,6 +32787,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31502,6 +32807,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31523,6 +32829,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31542,6 +32849,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31614,6 +32922,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31633,6 +32942,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -31654,6 +32964,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -31673,6 +32984,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31694,6 +33006,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31713,6 +33026,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE RESOLUCI\'ON APELADA
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31734,6 +33048,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31753,6 +33068,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE SE IMPUGNA
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31774,6 +33090,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31793,6 +33110,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL OFICIO DE REMISI\'ON A LA SALA
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31814,6 +33132,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31833,6 +33152,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTIDO EN QUE RESUELVE LA SALA
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31854,6 +33174,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31874,6 +33195,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31893,6 +33215,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE TOCA
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -31965,6 +33288,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -31984,6 +33308,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32005,6 +33330,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32024,6 +33350,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32045,6 +33372,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2399
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32064,6 +33392,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=LUGAR DE RECLUSI\'ON
             FIELD_CODE_NAME_LATEX=field2400
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32085,6 +33414,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2401
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32105,6 +33435,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2402
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32124,6 +33455,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MOTIVO DE LA SOLICITUD
             FIELD_CODE_NAME_LATEX=field2403
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32196,6 +33528,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32215,6 +33548,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Toca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
+            
             
 
 
@@ -32236,6 +33570,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32255,6 +33590,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -32276,6 +33612,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field162
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32295,6 +33632,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SECRETAR\'IA
             FIELD_CODE_NAME_LATEX=field163
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32316,6 +33654,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field164\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32335,6 +33674,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE (paterno)
             FIELD_CODE_NAME_LATEX=field164\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32356,6 +33696,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field164\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32375,6 +33716,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE (nombre)
             FIELD_CODE_NAME_LATEX=field164\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32396,6 +33738,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field165
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32415,6 +33758,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUEZ O MAGISTRADO
             FIELD_CODE_NAME_LATEX=field166
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32436,6 +33780,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field167\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32455,6 +33800,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL JUEZ O MAGISTRADO (paterno)
             FIELD_CODE_NAME_LATEX=field167\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32476,6 +33822,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field167\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32495,6 +33842,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL JUEZ O MAGISTRADO (nombre)
             FIELD_CODE_NAME_LATEX=field167\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32516,6 +33864,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32535,6 +33884,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CANTIDAD EN N\'UMERO
             FIELD_CODE_NAME_LATEX=field169
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32556,6 +33906,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field169b
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32575,6 +33926,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ASIENTO DE CAJA FOLIO
             FIELD_CODE_NAME_LATEX=field170
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32596,6 +33948,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field171
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32615,6 +33968,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FIRMA
             FIELD_CODE_NAME_LATEX=field172
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32636,6 +33990,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field173
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32655,6 +34010,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DE SECRETARIA DE ACUERDOS
             FIELD_CODE_NAME_LATEX=field174
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32729,6 +34085,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -32748,6 +34105,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32769,6 +34127,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32788,6 +34147,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -32809,6 +34169,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32828,6 +34189,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTRADA
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32849,6 +34211,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32868,6 +34231,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=AUTO DE RADICACI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32889,6 +34253,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32908,6 +34273,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DILIGENCIACI\'ON
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32929,6 +34295,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32948,6 +34315,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -32969,6 +34337,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -32988,6 +34357,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33060,6 +34430,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33079,6 +34450,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -33100,6 +34472,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -33119,6 +34492,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33140,6 +34514,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33159,6 +34534,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTRADA
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33180,6 +34556,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33199,6 +34576,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DILIGENCIA ENCOMENDADA
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33220,6 +34598,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33239,6 +34618,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SE CUMPLIMENT\'O
             FIELD_CODE_NAME_LATEX=txt\_field1967
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33260,6 +34640,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_field1967
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33280,6 +34661,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33299,6 +34681,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33371,6 +34754,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33390,6 +34774,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -33411,6 +34796,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -33430,6 +34816,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33451,6 +34838,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33470,6 +34858,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTRADA
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33491,6 +34880,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33510,6 +34900,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=AUTO DE RADICACI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33531,6 +34922,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33551,6 +34943,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33570,6 +34963,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33642,6 +35036,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33661,6 +35056,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -33682,6 +35078,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -33701,6 +35098,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33722,6 +35120,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33741,6 +35140,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DESTINATARIO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33762,6 +35162,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33781,6 +35182,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ASUNTO
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33802,6 +35204,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33822,6 +35225,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33841,6 +35245,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No DE OFICIO
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33913,6 +35318,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -33932,6 +35338,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -33953,6 +35360,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -33972,6 +35380,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -33993,6 +35402,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34012,6 +35422,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTRADA
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34033,6 +35444,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34052,6 +35464,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DILIGENCIA ENCOMENDADA
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34073,6 +35486,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34092,6 +35506,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34113,6 +35528,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34132,6 +35548,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SE CUMPLIMENTO
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34153,6 +35570,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34172,6 +35590,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No DE OFICIO DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34193,6 +35612,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34213,6 +35633,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34232,6 +35653,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34304,6 +35726,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34323,6 +35746,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -34344,6 +35768,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -34363,6 +35788,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34384,6 +35810,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34404,6 +35831,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34423,6 +35851,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=JUZGADO FEDERAL
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34495,6 +35924,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34514,6 +35944,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -34535,6 +35966,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -34554,6 +35986,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34575,6 +36008,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34595,6 +36029,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34614,6 +36049,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34686,6 +36122,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34705,6 +36142,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34726,6 +36164,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34745,6 +36184,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34766,6 +36206,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34785,6 +36226,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE SE EXPIDE
             FIELD_CODE_NAME_LATEX=field2405
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34806,6 +36248,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2406
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34825,6 +36268,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO
             FIELD_CODE_NAME_LATEX=field2407
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34846,6 +36290,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2408\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34865,6 +36310,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE QUIEN DEPOSITA (paterno)
             FIELD_CODE_NAME_LATEX=field2408\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34886,6 +36332,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2408\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34906,6 +36353,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2408\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -34925,6 +36373,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MOTIVO
             FIELD_CODE_NAME_LATEX=field2409
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -34997,6 +36446,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35016,6 +36466,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35037,6 +36488,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
+            
 
 
         
@@ -35056,6 +36508,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTRADA
             FIELD_CODE_NAME_LATEX=field177
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35077,6 +36530,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35096,6 +36550,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE CERTIFICADO
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35170,6 +36625,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente El expediente es opcional en los libros de oficios
             
+            
 
 
         
@@ -35189,6 +36645,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35210,6 +36667,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35229,6 +36687,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -35250,6 +36709,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35269,6 +36729,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DE OFICIO
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35290,6 +36751,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35310,6 +36772,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35329,6 +36792,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35401,6 +36865,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35420,6 +36885,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -35441,6 +36907,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -35460,6 +36927,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35481,6 +36949,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35500,6 +36969,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DESTINATARIOS
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35521,6 +36991,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35540,6 +37011,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTREGA
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35612,6 +37084,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35631,6 +37104,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -35652,6 +37126,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -35671,6 +37146,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35692,6 +37168,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35711,6 +37188,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE PARTIDA
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35732,6 +37210,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35751,6 +37230,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=AUTORIDAD EXHORTANTE
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35772,6 +37252,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35791,6 +37272,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL DESPACHO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35812,6 +37294,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=txt\_field1975
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35831,6 +37314,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SE CUMPLIMENT\'O
             FIELD_CODE_NAME_LATEX=id\_field1975
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35852,6 +37336,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35872,6 +37357,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35891,6 +37377,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -35963,6 +37450,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -35982,6 +37470,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -36003,6 +37492,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -36022,6 +37512,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36043,6 +37534,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36062,6 +37554,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL OFICIO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36083,6 +37576,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36103,6 +37597,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36122,6 +37617,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36194,6 +37690,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36213,6 +37710,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -36234,6 +37732,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -36253,6 +37752,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36274,6 +37774,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36293,6 +37794,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DE CEDULAS
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36314,6 +37816,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36333,6 +37836,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO POR DILIGENCIAR
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36354,6 +37858,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36373,6 +37878,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE DILIGENCIA ORDENADA
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36394,6 +37900,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36413,6 +37920,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36434,6 +37942,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36454,6 +37963,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36473,6 +37983,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=LANZAMIENTOS
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36545,6 +38056,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36564,6 +38076,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -36585,6 +38098,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -36604,6 +38118,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36625,6 +38140,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36644,6 +38160,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DESTINATARIO
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36665,6 +38182,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36684,6 +38202,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36705,6 +38224,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36724,6 +38244,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36745,6 +38266,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36764,6 +38286,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36836,6 +38359,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36855,6 +38379,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -36876,6 +38401,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -36895,6 +38421,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36916,6 +38443,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36935,6 +38463,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CENTRO DE RECLUSI\'ON
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -36956,6 +38485,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36976,6 +38506,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -36995,6 +38526,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37067,6 +38599,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37086,6 +38619,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -37107,6 +38641,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -37126,6 +38661,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37147,6 +38683,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37166,6 +38703,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE AMPARO
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37187,6 +38725,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37206,6 +38745,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (paterno)
             FIELD_CODE_NAME_LATEX=field4\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37227,6 +38767,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37246,6 +38787,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (nombre)
             FIELD_CODE_NAME_LATEX=field4\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37267,6 +38809,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37286,6 +38829,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=AUTORIDAD DE AMPARO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37307,6 +38851,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37327,6 +38872,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37346,6 +38892,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37418,6 +38965,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37437,6 +38985,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -37458,6 +39007,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -37477,6 +39027,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37498,6 +39049,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37518,6 +39070,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field267
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37537,6 +39090,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE EGRESO
             FIELD_CODE_NAME_LATEX=field183
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37611,6 +39165,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37630,6 +39185,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37651,6 +39207,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37670,6 +39227,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37691,6 +39249,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2411
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37710,6 +39269,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NO. DE FOJAS
             FIELD_CODE_NAME_LATEX=field2412
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37731,6 +39291,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2413
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37750,6 +39311,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL PROYECTISTA (isMoral)
             FIELD_CODE_NAME_LATEX=field2414\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37771,6 +39333,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2414\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37790,6 +39353,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL PROYECTISTA (materno)
             FIELD_CODE_NAME_LATEX=field2414\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37811,6 +39375,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2414\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37830,6 +39395,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE VENCIMIENTO DE SENTENCIA
             FIELD_CODE_NAME_LATEX=field2415
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37851,6 +39417,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2416
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37871,6 +39438,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2417
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37890,6 +39458,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PROCEDIMIENTO
             FIELD_CODE_NAME_LATEX=field2410
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -37962,6 +39531,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -37981,6 +39551,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38002,6 +39573,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
+            
 
 
         
@@ -38021,6 +39593,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE TOCA
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38042,6 +39615,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field187
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38061,6 +39635,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RESOLUCI\'ON RECURRIDA
             FIELD_CODE_NAME_LATEX=field191
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38082,6 +39657,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field192
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38102,6 +39678,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field193
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38121,6 +39698,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field194
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38193,6 +39771,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -38212,6 +39791,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38233,6 +39813,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38252,6 +39833,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -38273,6 +39855,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38292,6 +39875,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTREGA AL ACTUARIO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38313,6 +39897,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38332,6 +39917,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=LUGAR DONDE DEBE ACTUARSE
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38353,6 +39939,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38372,6 +39959,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38393,6 +39981,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38413,6 +40002,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=Breve descripci\'on para presentar reporte por convenios con la SSP
             
+            
 
 
         
@@ -38432,6 +40022,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38504,6 +40095,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38523,6 +40115,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -38544,6 +40137,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -38563,6 +40157,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38584,6 +40179,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38603,6 +40199,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTREGA AL ACTUARIO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38624,6 +40221,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38643,6 +40241,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=LUGAR DONDE DEBE REALIZARSE
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38664,6 +40263,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38684,6 +40284,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38703,6 +40304,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38775,6 +40377,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38794,6 +40397,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -38815,6 +40419,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -38834,6 +40439,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38855,6 +40461,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38874,6 +40481,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DE OFICIO
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38895,6 +40503,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38914,6 +40523,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -38935,6 +40545,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -38954,6 +40565,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39026,6 +40638,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39045,6 +40658,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -39066,6 +40680,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -39085,6 +40700,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39106,6 +40722,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39125,6 +40742,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTREGA AL ACTUARIO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39146,6 +40764,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39166,6 +40785,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39185,6 +40805,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39257,6 +40878,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39276,6 +40898,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -39297,6 +40920,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -39316,6 +40940,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39337,6 +40962,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39356,6 +40982,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL AUXILIAR (isMoral)
             FIELD_CODE_NAME_LATEX=field6\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39377,6 +41004,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39396,6 +41024,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL AUXILIAR (materno)
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39417,6 +41046,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39436,6 +41066,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ESPECIALIDAD
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39457,6 +41088,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39476,6 +41108,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE NOTIFICACI\'ON DE SU DESIGNACI\'ON
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39497,6 +41130,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39517,6 +41151,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39536,6 +41171,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39608,6 +41244,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39627,6 +41264,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -39648,6 +41286,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -39667,6 +41306,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39688,6 +41328,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39707,6 +41348,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL ACTUARIO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39728,6 +41370,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39748,6 +41391,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39767,6 +41411,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39839,6 +41484,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39858,6 +41504,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -39879,6 +41526,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -39898,6 +41546,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39919,6 +41568,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39938,6 +41588,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39959,6 +41610,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -39978,6 +41630,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA A  LA QUE SE LE IMPONE
             FIELD_CODE_NAME_LATEX=txt\_field1248
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -39999,6 +41652,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_field1248
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40018,6 +41672,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NO. DE OFICIO CON EL QUE SE COMUNICA LA SANCI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40039,6 +41694,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40058,6 +41714,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTREGA DEL OFICIO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40130,6 +41787,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40149,6 +41807,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -40170,6 +41829,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -40189,6 +41849,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40210,6 +41871,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40229,6 +41891,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA A QUIEN SE DIRIGE LA C\'EDULA
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40250,6 +41913,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40269,6 +41933,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DE ENTREGA AL ACTUARIO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40290,6 +41955,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40309,6 +41975,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA DILIGENCIA
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40330,6 +41997,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40349,6 +42017,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40421,6 +42090,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40440,6 +42110,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -40461,6 +42132,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -40480,6 +42152,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40501,6 +42174,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40520,6 +42194,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DESTINATARIO (paterno)
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40541,6 +42216,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40560,6 +42236,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DESTINATARIO (nombre)
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40581,6 +42258,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40600,6 +42278,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTREGA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40621,6 +42300,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40640,6 +42320,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO POR DILIGENCIAR
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40661,6 +42342,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40680,6 +42362,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40701,6 +42384,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40720,6 +42404,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE QUIEN  RECIBE LA DEVOLUCI\'ON (paterno)
             FIELD_CODE_NAME_LATEX=field9\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40741,6 +42426,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40760,6 +42446,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE QUIEN  RECIBE LA DEVOLUCI\'ON (nombre)
             FIELD_CODE_NAME_LATEX=field9\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40781,6 +42468,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40800,6 +42488,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=HUELLA DE QUIEN RECIBE LA DEVOLUCION DE LA CEDULA
             FIELD_CODE_NAME_LATEX=field10h
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40872,6 +42561,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40891,6 +42581,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40912,6 +42603,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40931,6 +42623,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40952,6 +42645,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2418
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -40971,6 +42665,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO DE REMISI\'ON
             FIELD_CODE_NAME_LATEX=field2419
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -40992,6 +42687,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2420
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41011,6 +42707,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON AL ARCHIVO
             FIELD_CODE_NAME_LATEX=field2421
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41032,6 +42729,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2422
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41051,6 +42749,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ARCHIVO
             FIELD_CODE_NAME_LATEX=field2423
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41072,6 +42771,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2424
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41091,6 +42791,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field2425
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41163,6 +42864,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41182,6 +42884,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41203,6 +42906,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
+            
 
 
         
@@ -41222,6 +42926,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO TOCA
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41243,6 +42948,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field199
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41262,6 +42968,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO A DILIGENCIAR
             FIELD_CODE_NAME_LATEX=field200
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41283,6 +42990,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field201
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41302,6 +43010,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA DILIGENCIA
             FIELD_CODE_NAME_LATEX=field202
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41323,6 +43032,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field203
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41342,6 +43052,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field204
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41414,6 +43125,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -41433,6 +43145,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41454,6 +43167,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41473,6 +43187,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -41494,6 +43209,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
             
+            
 
 
         
@@ -41513,6 +43229,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL PERITO (a. materno)
             FIELD_CODE_NAME_LATEX=field5\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
+            
             
 
 
@@ -41534,6 +43251,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5\_nombre
             FIELD_DBCOMMENT_LATEX=nombre
             
+            
 
 
         
@@ -41553,6 +43271,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL PERITO (es Moral)
             FIELD_CODE_NAME_LATEX=field5\_isMoral
             FIELD_DBCOMMENT_LATEX=es Moral
+            
             
 
 
@@ -41574,6 +43293,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41593,6 +43313,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL PERITO (paterno)
             FIELD_CODE_NAME_LATEX=field5\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41614,6 +43335,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41633,6 +43355,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL PERITO (nombre)
             FIELD_CODE_NAME_LATEX=field5\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41654,6 +43377,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41673,6 +43397,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO DE DESIGNACI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41694,6 +43419,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41713,6 +43439,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ACEPTACI\'ON
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41734,6 +43461,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41753,6 +43481,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41825,6 +43554,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41844,6 +43574,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -41865,6 +43596,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -41884,6 +43616,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41905,6 +43638,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41924,6 +43658,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE (isMoral)
             FIELD_CODE_NAME_LATEX=field5\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41945,6 +43680,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -41964,6 +43700,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE (materno)
             FIELD_CODE_NAME_LATEX=field5\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -41985,6 +43722,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42004,6 +43742,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ART. 910 C.P.C.
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42025,6 +43764,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42044,6 +43784,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO DE DESIGNACI\'ON
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42065,6 +43806,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42084,6 +43826,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ACEPTACI\'ON
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42105,6 +43848,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42124,6 +43868,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42196,6 +43941,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42215,6 +43961,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -42236,6 +43983,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -42255,6 +44003,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42276,6 +44025,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42295,6 +44045,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DESTINATARIO
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42316,6 +44067,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42335,6 +44087,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL ACTUARIO
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42356,6 +44109,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42375,6 +44129,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=LUGAR DONDE DEBE ACTUARSE
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42396,6 +44151,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42415,6 +44171,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42436,6 +44193,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42455,6 +44213,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42527,6 +44286,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42546,6 +44306,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -42567,6 +44328,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -42586,6 +44348,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42607,6 +44370,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42626,6 +44390,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL NOTARIO (isMoral)
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42647,6 +44412,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42666,6 +44432,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL NOTARIO (materno)
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42687,6 +44454,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42706,6 +44474,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DIRECCI\'ON
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42727,6 +44496,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42746,6 +44516,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA AUTORIZADA QUE RECIBE EL EXP. (paterno)
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42767,6 +44538,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42786,6 +44558,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA AUTORIZADA QUE RECIBE EL EXP. (nombre)
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42807,6 +44580,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42826,6 +44600,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TRAMITE A REALIZAR
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42847,6 +44622,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42866,6 +44642,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL SRIO. DE ACDOS.
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42887,6 +44664,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42906,6 +44684,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DATOS DE IDENTIFICACION
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -42978,6 +44757,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -42997,6 +44777,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -43018,6 +44799,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -43037,6 +44819,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43058,6 +44841,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43077,6 +44861,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE AMPARO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43098,6 +44883,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43117,6 +44903,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (paterno)
             FIELD_CODE_NAME_LATEX=field7\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43138,6 +44925,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43157,6 +44945,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (nombre)
             FIELD_CODE_NAME_LATEX=field7\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43178,6 +44967,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43197,6 +44987,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TERCERO INTERESADO (paterno)
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43218,6 +45009,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43237,6 +45029,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TERCERO INTERESADO (nombre)
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43258,6 +45051,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43277,6 +45071,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43298,6 +45093,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43317,6 +45113,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTIDO DE LA RESOLUCI\'ON DE AMPARO
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43338,6 +45135,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43358,6 +45156,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43377,6 +45176,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43449,6 +45249,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43468,6 +45269,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -43489,6 +45291,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -43508,6 +45311,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43529,6 +45333,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43548,6 +45353,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ORGANO DE PROCEDENCIA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43569,6 +45375,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43588,6 +45395,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43609,6 +45417,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43628,6 +45437,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON DEL INFORME
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43649,6 +45459,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43668,6 +45479,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RESOLUCI\'ON DE AMPARO
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43689,6 +45501,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43708,6 +45521,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CUMPLIMIENTO
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43729,6 +45543,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43749,6 +45564,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43768,6 +45584,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43840,6 +45657,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43859,6 +45677,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -43880,6 +45699,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -43899,6 +45719,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43920,6 +45741,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=faudiencia
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43939,6 +45761,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MATERIA
             FIELD_CODE_NAME_LATEX=txt\_field1252
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -43960,6 +45783,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_field1252
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -43979,6 +45803,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DELITO(s)
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44051,6 +45876,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44070,6 +45896,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -44091,6 +45918,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -44110,6 +45938,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44131,6 +45960,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44150,6 +45980,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL ADOLESCENTE (isMoral)
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44171,6 +46002,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44190,6 +46022,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL ADOLESCENTE (materno)
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44211,6 +46044,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44230,6 +46064,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=LUGAR DE INTERNAMIENTO
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44251,6 +46086,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44270,6 +46106,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44342,6 +46179,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44361,6 +46199,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -44382,6 +46221,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -44401,6 +46241,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44422,6 +46263,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44441,6 +46283,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL QUEJOSO (isMoral)
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44462,6 +46305,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44481,6 +46325,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL QUEJOSO (materno)
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44502,6 +46347,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44521,6 +46367,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ORGANO DE PROCEDENCIA (JDO DE DTO O TRIB. COL)
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44542,6 +46389,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44561,6 +46409,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44582,6 +46431,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44601,6 +46451,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENV\'IO DE INFORME PREVIO
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44622,6 +46473,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44641,6 +46493,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RESOLUCI\'ON DE AMPARO
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44662,6 +46515,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44682,6 +46536,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44701,6 +46556,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENV\'IO DE INFORME JUSTIFICADO
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44773,6 +46629,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44792,6 +46649,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44813,6 +46671,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44832,6 +46691,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44853,6 +46713,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2426
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44872,6 +46733,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CONCEPTO DE LA MULTA
             FIELD_CODE_NAME_LATEX=field2427
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44893,6 +46755,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2428
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44912,6 +46775,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (isMoral)
             FIELD_CODE_NAME_LATEX=field2429\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44933,6 +46797,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2429\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44952,6 +46817,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A LA QUE SE LE IMPONE (materno)
             FIELD_CODE_NAME_LATEX=field2429\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -44973,6 +46839,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2429\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -44992,6 +46859,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NO.  DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCI\'ON
             FIELD_CODE_NAME_LATEX=field2430
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45013,6 +46881,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2446
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45033,6 +46902,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2431
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45052,6 +46922,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field2432
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45124,6 +46995,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45143,6 +47015,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45164,6 +47037,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
+            
 
 
         
@@ -45183,6 +47057,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TOCA
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX= El expediente es opcional en los libros de oficios
+            
             
 
 
@@ -45204,6 +47079,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field205
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45223,6 +47099,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DESTINATARIO
             FIELD_CODE_NAME_LATEX=field207
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45244,6 +47121,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field209
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45263,6 +47141,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL QUE REGISTRA
             FIELD_CODE_NAME_LATEX=field210
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45335,6 +47214,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45354,6 +47234,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -45375,6 +47256,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -45394,6 +47276,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45415,6 +47298,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45434,6 +47318,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL NOTARIO (isMoral)
             FIELD_CODE_NAME_LATEX=field3\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45455,6 +47340,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45474,6 +47360,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL NOTARIO (materno)
             FIELD_CODE_NAME_LATEX=field3\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45495,6 +47382,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45514,6 +47402,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DIRECCION Y TEL\'EFONO
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45535,6 +47424,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45554,6 +47444,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FOJAS
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45575,6 +47466,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45594,6 +47486,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTREGA
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45615,6 +47508,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45634,6 +47528,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TRAMITE A REALIZAR
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45655,6 +47550,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45674,6 +47570,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA AUTORIZADA (paterno)
             FIELD_CODE_NAME_LATEX=field14\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45695,6 +47592,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45714,6 +47612,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA AUTORIZADA (nombre)
             FIELD_CODE_NAME_LATEX=field14\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45735,6 +47634,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45754,6 +47654,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=HUELLA DE LA PERSONA AUTORIZADA
             FIELD_CODE_NAME_LATEX=field15h
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45775,6 +47676,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45795,6 +47697,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field17
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45814,6 +47717,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DE DEVOLUCI\'ON DEL EXPEDIENTE AL JUZGADO
             FIELD_CODE_NAME_LATEX=field18
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45886,6 +47790,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45905,6 +47810,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -45926,6 +47832,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -45945,6 +47852,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -45966,6 +47874,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -45985,6 +47894,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (isMoral)
             FIELD_CODE_NAME_LATEX=field3\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46006,6 +47916,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46025,6 +47936,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (materno)
             FIELD_CODE_NAME_LATEX=field3\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46046,6 +47958,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46065,6 +47978,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'ORGANO DE PROCEDENCIA (JDO DE DTO O TRIB.COL)
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46086,6 +48000,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46105,6 +48020,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46126,6 +48042,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46145,6 +48062,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENV\'IO DEL INFORME
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46166,6 +48084,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46185,6 +48104,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RESOLUCI\'ON DE AMPARO
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46206,6 +48126,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46226,6 +48147,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46245,6 +48167,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46317,6 +48240,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46336,6 +48260,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -46357,6 +48282,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -46376,6 +48302,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46397,6 +48324,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46416,6 +48344,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'ORGANO DE PROCEDENCIA
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46437,6 +48366,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46456,6 +48386,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46477,6 +48408,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46496,6 +48428,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENV\'IO DEL INFORME
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46517,6 +48450,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46537,6 +48471,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46556,6 +48491,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46628,6 +48564,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46647,6 +48584,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -46668,6 +48606,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -46687,6 +48626,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46708,6 +48648,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46727,6 +48668,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA  A QUE SE LE IMPUSO (isMoral)
             FIELD_CODE_NAME_LATEX=field7\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46748,6 +48690,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46767,6 +48710,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA  A QUE SE LE IMPUSO (materno)
             FIELD_CODE_NAME_LATEX=field7\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46788,6 +48732,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46807,6 +48752,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DEL FORMATO Y/O EXHORTO EN QUE SE COMUNICA A LA AUTORIDAD
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46828,6 +48774,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46848,6 +48795,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46867,6 +48815,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -46939,6 +48888,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -46958,6 +48908,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -46979,6 +48930,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -46998,6 +48950,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47019,6 +48972,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47038,6 +48992,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No DE AMPARO
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47059,6 +49014,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47078,6 +49034,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=INFORME SOLICITADO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47099,6 +49056,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47118,6 +49076,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No DE OFICIO DE INFORME
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47139,6 +49098,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47159,6 +49119,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47178,6 +49139,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47250,6 +49212,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47269,6 +49232,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -47290,6 +49254,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -47309,6 +49274,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47330,6 +49296,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47349,6 +49316,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO DEL BILLETE
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47370,6 +49338,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47389,6 +49358,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE EXPEDICI\'ON
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47410,6 +49380,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47429,6 +49400,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTENCIADO (isMoral)
             FIELD_CODE_NAME_LATEX=field6\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47450,6 +49422,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47469,6 +49442,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTENCIADO (materno)
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47490,6 +49464,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47509,6 +49484,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MOTIVO DE EGRESO
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47530,6 +49506,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47549,6 +49526,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBE (isMoral)
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47570,6 +49548,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47589,6 +49568,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBE (materno)
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47610,6 +49590,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47629,6 +49610,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FIRMA DE LA PERSONA
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47650,6 +49632,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9h
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47669,6 +49652,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47743,6 +49727,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47762,6 +49747,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -47783,6 +49769,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -47802,6 +49789,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47823,6 +49811,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47842,6 +49831,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CONDUCTA T\'IFICADA COMO DELITO
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47863,6 +49853,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47882,6 +49873,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO AL ARCHIVO JUDICIAL
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47903,6 +49895,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47922,6 +49915,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FOLIO DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -47943,6 +49937,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -47962,6 +49957,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON DEL ARCHIVO AL JUZGADO
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48034,6 +50030,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48053,6 +50050,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -48074,6 +50072,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -48093,6 +50092,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48114,6 +50114,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48133,6 +50134,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE SE RECIBE LA POLIZA DE FIANZA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48154,6 +50156,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48173,6 +50176,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48194,6 +50198,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48213,6 +50218,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48285,6 +50291,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48304,6 +50311,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48325,6 +50333,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48344,6 +50353,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48365,6 +50375,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2433\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48384,6 +50395,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=BENEFICIARIO (paterno)
             FIELD_CODE_NAME_LATEX=field2433\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48405,6 +50417,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2433\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48424,6 +50437,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=BENEFICIARIO (nombre)
             FIELD_CODE_NAME_LATEX=field2433\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48445,6 +50459,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2434
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48464,6 +50479,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NO. DE BOLETA
             FIELD_CODE_NAME_LATEX=field2435
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48485,6 +50501,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2436
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48504,6 +50521,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO
             FIELD_CODE_NAME_LATEX=field2437
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48525,6 +50543,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2438
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48544,6 +50563,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field2439
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48565,6 +50585,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2440\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48584,6 +50605,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A QUIEN SE DEVUELVE (paterno)
             FIELD_CODE_NAME_LATEX=field2440\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48605,6 +50627,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2440\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48624,6 +50647,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A QUIEN SE DEVUELVE (nombre)
             FIELD_CODE_NAME_LATEX=field2440\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48696,6 +50720,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48715,6 +50740,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48736,6 +50762,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
+            
 
 
         
@@ -48755,6 +50782,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TOCA
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48776,6 +50804,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field211
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48795,6 +50824,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=EXPEDIENTE
             FIELD_CODE_NAME_LATEX=field213
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48816,6 +50846,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field214
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48835,6 +50866,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE REGISTRO
             FIELD_CODE_NAME_LATEX=field216
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48856,6 +50888,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field217
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48875,6 +50908,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (isMoral)
             FIELD_CODE_NAME_LATEX=field219\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48896,6 +50930,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field219\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48915,6 +50950,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (materno)
             FIELD_CODE_NAME_LATEX=field219\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -48936,6 +50972,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field219\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -48955,6 +50992,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LLEGADA
             FIELD_CODE_NAME_LATEX=field220
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49027,6 +51065,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -49046,6 +51085,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49067,6 +51107,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49086,6 +51127,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -49107,6 +51149,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49126,6 +51169,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (a. paterno)
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
+            
             
 
 
@@ -49147,6 +51191,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
+            
 
 
         
@@ -49166,6 +51211,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (nombre)
             FIELD_CODE_NAME_LATEX=field6\_nombre
             FIELD_DBCOMMENT_LATEX=nombre
+            
             
 
 
@@ -49187,6 +51233,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_isMoral
             FIELD_DBCOMMENT_LATEX=es Moral
             
+            
 
 
         
@@ -49206,6 +51253,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (isMoral)
             FIELD_CODE_NAME_LATEX=field6\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49227,6 +51275,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49246,6 +51295,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (materno)
             FIELD_CODE_NAME_LATEX=field6\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49267,6 +51317,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49286,6 +51337,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'ORGANO DE PROCEDENCIA
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49307,6 +51359,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49326,6 +51379,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49347,6 +51401,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49366,6 +51421,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENV\'IO DEL INFORME
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49387,6 +51443,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49407,6 +51464,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49426,6 +51484,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49498,6 +51557,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49517,6 +51577,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -49538,6 +51599,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -49557,6 +51619,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49578,6 +51641,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49597,6 +51661,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49618,6 +51683,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49637,6 +51703,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (isMoral)
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49658,6 +51725,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49677,6 +51745,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (materno)
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49698,6 +51767,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49717,6 +51787,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'ORGANO DE PROCEDENCIA
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49738,6 +51809,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49757,6 +51829,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENV\'IO DEL INFORME
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49778,6 +51851,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49797,6 +51871,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE CAUS\'O EJECUTORIA
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49818,6 +51893,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49837,6 +51913,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49909,6 +51986,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -49928,6 +52006,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -49949,6 +52028,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -49968,6 +52048,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -49989,6 +52070,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50008,6 +52090,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (isMoral)
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50029,6 +52112,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50048,6 +52132,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=QUEJOSO (materno)
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50069,6 +52154,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50088,6 +52174,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ORGANO DE PROCEDENCIA
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50109,6 +52196,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50128,6 +52216,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=INFORME SOLICITADO
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50149,6 +52238,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50169,6 +52259,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50188,6 +52279,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50260,6 +52352,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50279,6 +52372,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -50300,6 +52394,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -50319,6 +52414,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50340,6 +52436,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50359,6 +52456,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=GARANTE (paterno)
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50380,6 +52478,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50399,6 +52498,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=GARANTE (nombre)
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50420,6 +52520,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50439,6 +52540,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA AFIANZADORA
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50460,6 +52562,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50479,6 +52582,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SE HIZO EFECTIVA LA GARANTIA ?
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50500,6 +52604,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50519,6 +52624,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50591,6 +52697,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50610,6 +52717,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -50631,6 +52739,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -50650,6 +52759,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50671,6 +52781,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50691,6 +52802,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=faudiencia
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50710,6 +52822,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50782,6 +52895,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50801,6 +52915,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -50822,6 +52937,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -50841,6 +52957,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50862,6 +52979,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50881,6 +52999,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE RECIBE LA P\'OLIZA DE FIANZA
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50902,6 +53021,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50921,6 +53041,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50942,6 +53063,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -50961,6 +53083,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE NOTIFICACI\'ON A LA AFIANZADORA
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -50982,6 +53105,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51001,6 +53125,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51022,6 +53147,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51041,6 +53167,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51113,6 +53240,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51132,6 +53260,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -51153,6 +53282,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -51172,6 +53302,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51193,6 +53324,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51212,6 +53344,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTENCIADO (paterno)
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51233,6 +53366,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51252,6 +53386,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTENCIADO (nombre)
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51273,6 +53408,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51292,6 +53428,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE SE RECIBE LA P\'OLIZA
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51313,6 +53450,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51332,6 +53470,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51353,6 +53492,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51373,6 +53513,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51392,6 +53533,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51464,6 +53606,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51483,6 +53626,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -51504,6 +53648,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -51523,6 +53668,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51544,6 +53690,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51563,6 +53710,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE BILLETE DE DEP\'OSITO
             FIELD_CODE_NAME_LATEX=billete
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51584,6 +53732,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51603,6 +53752,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51624,6 +53774,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51643,6 +53794,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE EGRESO
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51664,6 +53816,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51683,6 +53836,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (isMoral)
             FIELD_CODE_NAME_LATEX=field9\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51704,6 +53858,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51723,6 +53878,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (materno)
             FIELD_CODE_NAME_LATEX=field9\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51744,6 +53900,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51763,6 +53920,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FIRMA DE QUIEN RECIBE
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51784,6 +53942,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10h
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51803,6 +53962,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL SECRETARIO
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51824,6 +53984,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51843,6 +54004,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51917,6 +54079,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51936,6 +54099,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51957,6 +54121,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -51976,6 +54141,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -51997,6 +54163,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2441
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52016,6 +54183,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PROMOVENTE (isMoral)
             FIELD_CODE_NAME_LATEX=field2442\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52037,6 +54205,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2442\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52056,6 +54225,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PROMOVENTE (materno)
             FIELD_CODE_NAME_LATEX=field2442\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52077,6 +54247,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2442\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52096,6 +54267,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ASUNTO
             FIELD_CODE_NAME_LATEX=field2443
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52168,6 +54340,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52187,6 +54360,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Ponencia
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52208,6 +54382,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field225\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52227,6 +54402,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE COMPLETO DEL SOLICITANTE (paterno)
             FIELD_CODE_NAME_LATEX=field225\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52248,6 +54424,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field225\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52267,6 +54444,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE COMPLETO DEL SOLICITANTE (nombre)
             FIELD_CODE_NAME_LATEX=field225\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52288,6 +54466,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=txt\_field2283
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52307,6 +54486,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=AUTORIZADO POR QU\'E PARTE
             FIELD_CODE_NAME_LATEX=id\_field2283
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52328,6 +54508,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
+            
 
 
         
@@ -52347,6 +54528,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE TOCA
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52368,6 +54550,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field227
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52387,6 +54570,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE IDENTIFICACI\'ON
             FIELD_CODE_NAME_LATEX=field228
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52408,6 +54592,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field229
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52428,6 +54613,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field230
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52447,6 +54633,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FIRMA DEL SOLICITANTE
             FIELD_CODE_NAME_LATEX=field231
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52519,6 +54706,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -52538,6 +54726,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52559,6 +54748,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52578,6 +54768,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -52599,6 +54790,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
             
+            
 
 
         
@@ -52618,6 +54810,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=GARANTE (a. materno)
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
+            
             
 
 
@@ -52639,6 +54832,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=nombre
             
+            
 
 
         
@@ -52658,6 +54852,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=GARANTE (es Moral)
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=es Moral
+            
             
 
 
@@ -52679,6 +54874,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52698,6 +54894,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=GARANTE (paterno)
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52719,6 +54916,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52738,6 +54936,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=GARANTE (nombre)
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52759,6 +54958,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52778,6 +54978,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA AFIANZADORA
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52799,6 +55000,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52819,6 +55021,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52838,6 +55041,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52910,6 +55114,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -52929,6 +55134,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -52950,6 +55156,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -52969,6 +55176,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -52990,6 +55198,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53009,6 +55218,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEPOSITANTE (paterno)
             FIELD_CODE_NAME_LATEX=field4\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53030,6 +55240,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53049,6 +55260,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEPOSITANTE (nombre)
             FIELD_CODE_NAME_LATEX=field4\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53070,6 +55282,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53089,6 +55302,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA AFIANZADORA
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53110,6 +55324,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53129,6 +55344,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DE P\'OLIZA DE FIANZA
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53150,6 +55366,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53169,6 +55386,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53241,6 +55459,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53260,6 +55479,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -53281,6 +55501,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -53300,6 +55521,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53321,6 +55543,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53340,6 +55563,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DE BOLETA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53361,6 +55585,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53380,6 +55605,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA AFIANZADORA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53401,6 +55627,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53420,6 +55647,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DE LA P\'OLIZA DE FIANZA
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53441,6 +55669,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53461,6 +55690,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53480,6 +55710,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53552,6 +55783,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53571,6 +55803,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -53592,6 +55825,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -53611,6 +55845,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53632,6 +55867,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53651,6 +55887,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RESOLUCION QUE LA DECRETA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53672,6 +55909,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53691,6 +55929,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (paterno)
             FIELD_CODE_NAME_LATEX=field7\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53712,6 +55951,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53731,6 +55971,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (nombre)
             FIELD_CODE_NAME_LATEX=field7\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53752,6 +55993,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53771,6 +56013,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL DOCUMENTO
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53792,6 +56035,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53811,6 +56055,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53883,6 +56128,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53902,6 +56148,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -53923,6 +56170,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -53942,6 +56190,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -53963,6 +56212,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -53982,6 +56232,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DE NOTARIA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54003,6 +56254,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54022,6 +56274,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL NOTARIO (paterno)
             FIELD_CODE_NAME_LATEX=field7\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54043,6 +56296,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54062,6 +56316,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL NOTARIO (nombre)
             FIELD_CODE_NAME_LATEX=field7\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54083,6 +56338,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54102,6 +56358,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=EXPEDIENTE
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54123,6 +56380,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54142,6 +56400,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ASUNTO
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54163,6 +56422,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54182,6 +56442,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE FIRMA DE ESCRITURA
             FIELD_CODE_NAME_LATEX=field20
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54203,6 +56464,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54222,6 +56484,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE (paterno)
             FIELD_CODE_NAME_LATEX=field13\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54243,6 +56506,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54262,6 +56526,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE (nombre)
             FIELD_CODE_NAME_LATEX=field13\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54283,6 +56548,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54302,6 +56568,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=IDENTIFICACI\'ON
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54323,6 +56590,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54342,6 +56610,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=HUELLA DE LA PERSONA
             FIELD_CODE_NAME_LATEX=field16h
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54363,6 +56632,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field17
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54383,6 +56653,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field18
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54402,6 +56673,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field19
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54474,6 +56746,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54493,6 +56766,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -54514,6 +56788,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -54533,6 +56808,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54554,6 +56830,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54573,6 +56850,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA RESOLUCI\'ON QUE LA ORDENA
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54594,6 +56872,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54613,6 +56892,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA QUE SE LE IMPUSO (paterno)
             FIELD_CODE_NAME_LATEX=field4\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54634,6 +56914,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54653,6 +56934,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA QUE SE LE IMPUSO (nombre)
             FIELD_CODE_NAME_LATEX=field4\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54674,6 +56956,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54693,6 +56976,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54714,6 +56998,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54733,6 +57018,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54805,6 +57091,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54824,6 +57111,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -54845,6 +57133,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -54864,6 +57153,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54885,6 +57175,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54904,6 +57195,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PENA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54925,6 +57217,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54944,6 +57237,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE AUDIENCIA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -54965,6 +57259,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -54985,6 +57280,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55004,6 +57300,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55076,6 +57373,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55095,6 +57393,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -55116,6 +57415,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -55135,6 +57435,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55156,6 +57457,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55175,6 +57477,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA AUDIENCIA
             FIELD_CODE_NAME_LATEX=faudiencia
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55196,6 +57499,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55215,6 +57519,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55287,6 +57592,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55306,6 +57612,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55327,6 +57634,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55346,6 +57654,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55367,6 +57676,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2444\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55386,6 +57696,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL INCULPADO (paterno)
             FIELD_CODE_NAME_LATEX=field2444\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55407,6 +57718,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2444\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55427,6 +57739,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2444\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55446,6 +57759,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FIRMA DEL PROCESADO
             FIELD_CODE_NAME_LATEX=field2445
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55518,6 +57832,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -55537,6 +57852,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55558,6 +57874,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55577,6 +57894,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -55598,6 +57916,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55617,6 +57936,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (a. paterno)
             FIELD_CODE_NAME_LATEX=field5\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
+            
             
 
 
@@ -55638,6 +57958,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
+            
 
 
         
@@ -55657,6 +57978,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (nombre)
             FIELD_CODE_NAME_LATEX=field5\_nombre
             FIELD_DBCOMMENT_LATEX=nombre
+            
             
 
 
@@ -55678,6 +58000,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5\_isMoral
             FIELD_DBCOMMENT_LATEX=es Moral
             
+            
 
 
         
@@ -55697,6 +58020,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (isMoral)
             FIELD_CODE_NAME_LATEX=field5\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55718,6 +58042,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55737,6 +58062,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A QUIEN SE LE IMPUSO (materno)
             FIELD_CODE_NAME_LATEX=field5\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55758,6 +58084,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55777,6 +58104,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DEL DOCUMENTO EN EL QUE SE COMUNICA LA SANCI\'ON
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55798,6 +58126,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55817,6 +58146,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO DE LA MULTA
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55838,6 +58168,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55857,6 +58188,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -55929,6 +58261,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -55948,6 +58281,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -55969,6 +58303,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -55988,6 +58323,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56009,6 +58345,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56028,6 +58365,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A  QUIEN SE LE IMPUSO (isMoral)
             FIELD_CODE_NAME_LATEX=field7\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56049,6 +58387,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56068,6 +58407,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A  QUIEN SE LE IMPUSO (materno)
             FIELD_CODE_NAME_LATEX=field7\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56089,6 +58429,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56108,6 +58449,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DE OFICIO EN  EL QUE SE  COMUNICA LA SANCI\'ON
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56129,6 +58471,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56148,6 +58491,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO DE LA  MULTA
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56169,6 +58513,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56188,6 +58533,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENTREGA A LA DIRECCI\'ON DE MULTAS JUDICIALES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56260,6 +58606,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56279,6 +58626,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -56300,6 +58648,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -56319,6 +58668,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56340,6 +58690,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56359,6 +58710,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MONTO DE LA MULTA
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56380,6 +58732,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56399,6 +58752,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A LA QUE SE LE IMPUSO (isMoral)
             FIELD_CODE_NAME_LATEX=field4\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56420,6 +58774,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56439,6 +58794,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DE LA PERSONA A LA QUE SE LE IMPUSO (materno)
             FIELD_CODE_NAME_LATEX=field4\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56460,6 +58816,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56479,6 +58836,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DEL DOCUMENTO EN QUE SE COMUNICA LA SANCI\'ON
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56500,6 +58858,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56520,6 +58879,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56539,6 +58899,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56611,6 +58972,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56630,6 +58992,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -56651,6 +59014,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -56670,6 +59034,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56691,6 +59056,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56710,6 +59076,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CONCEPTO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56731,6 +59098,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56750,6 +59118,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56771,6 +59140,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56790,6 +59160,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=GARANTE
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56811,6 +59182,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56830,6 +59202,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MOTIVOS POR LOS QUE SE HIZO EFECTIVA LA GARANT\'IA
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56851,6 +59224,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56870,6 +59244,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL BENEFICIARIO (paterno)
             FIELD_CODE_NAME_LATEX=field13\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56891,6 +59266,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56910,6 +59286,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL BENEFICIARIO (nombre)
             FIELD_CODE_NAME_LATEX=field13\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56931,6 +59308,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56950,6 +59328,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=IDENTIFICACI\'ON
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -56971,6 +59350,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -56990,6 +59370,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=HUELLA DEL BENEFICIARIO
             FIELD_CODE_NAME_LATEX=field16h
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57011,6 +59392,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field17
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57030,6 +59412,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL JUEZ
             FIELD_CODE_NAME_LATEX=field18
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57051,6 +59434,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field20
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57070,6 +59454,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field22
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57142,6 +59527,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57161,6 +59547,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -57182,6 +59569,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -57201,6 +59589,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57222,6 +59611,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57241,6 +59631,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA AUDIENCIA
             FIELD_CODE_NAME_LATEX=faudiencia
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57262,6 +59653,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57281,6 +59673,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57302,6 +59695,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57321,6 +59715,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57393,6 +59788,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57412,6 +59808,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -57433,6 +59830,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -57452,6 +59850,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57473,6 +59872,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57492,6 +59892,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PENA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57513,6 +59914,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57532,6 +59934,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTIDO DE LA RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57553,6 +59956,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57572,6 +59976,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57644,6 +60049,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57663,6 +60069,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -57684,6 +60091,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -57703,6 +60111,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57724,6 +60133,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57743,6 +60153,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=MOTIVO
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57764,6 +60175,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57784,6 +60196,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57803,6 +60216,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57875,6 +60289,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57894,6 +60309,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57915,6 +60331,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57934,6 +60351,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57955,6 +60373,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2447
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -57974,6 +60393,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DESTINATARIO
             FIELD_CODE_NAME_LATEX=field2448
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -57995,6 +60415,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2449
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58015,6 +60436,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2450
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58034,6 +60456,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON AL JUZGADO
             FIELD_CODE_NAME_LATEX=field2451
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58106,6 +60529,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58125,6 +60549,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -58146,6 +60571,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -58165,6 +60591,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58186,6 +60613,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58205,6 +60633,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE PUBLICACI\'ON EN EL BOLET\'IN JUDICIAL
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58226,6 +60655,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58245,6 +60675,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL EMPLEADO/ACTUARIO
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58266,6 +60697,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58285,6 +60717,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58357,6 +60790,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58376,6 +60810,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -58397,6 +60832,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -58416,6 +60852,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58437,6 +60874,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58456,6 +60894,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA AUDIENCIA
             FIELD_CODE_NAME_LATEX=faudiencia
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58477,6 +60916,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58497,6 +60937,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58516,6 +60957,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58588,6 +61030,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58607,6 +61050,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -58628,6 +61072,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -58647,6 +61092,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58668,6 +61114,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58687,6 +61134,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE LA DILIGENCIA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58708,6 +61156,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58727,6 +61176,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No OFICIO PEDIMENTO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58748,6 +61198,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58767,6 +61218,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58788,6 +61240,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58807,6 +61260,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58879,6 +61333,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58898,6 +61353,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -58919,6 +61375,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -58938,6 +61395,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58959,6 +61417,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -58978,6 +61437,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PENA POR CUMPLIR
             FIELD_CODE_NAME_LATEX=field14
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -58999,6 +61459,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59018,6 +61479,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=BENEFICIO PENITENCIARIO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59039,6 +61501,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59058,6 +61521,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTIDO DE LA RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59079,6 +61543,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59098,6 +61563,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE REVOCACI\'ON DEL BENEFICIO
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59119,6 +61585,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59139,6 +61606,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59158,6 +61626,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59230,6 +61699,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59249,6 +61719,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -59270,6 +61741,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -59289,6 +61761,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59310,6 +61783,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59329,6 +61803,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE PETICI\'ON DEL MINISTERIO P\'UBLICO
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59350,6 +61825,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59370,6 +61846,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59389,6 +61866,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59461,6 +61939,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -59480,6 +61959,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59501,6 +61981,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59520,6 +62001,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -59541,6 +62023,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59560,6 +62043,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE AUDIENCIA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59581,6 +62065,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=faudiencia
             FIELD_DBCOMMENT_LATEX=FECHA Y HORA DE LA CELEBRACI\'ON DE LA AUDIENCIA
             
+            
 
 
         
@@ -59601,6 +62086,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59620,6 +62106,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59692,6 +62179,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59711,6 +62199,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -59732,6 +62221,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -59751,6 +62241,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59772,6 +62263,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=faudiencia
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59791,6 +62283,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO EN EL QUE SE SE\~NALA LA AUDIENCIA
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59812,6 +62305,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59831,6 +62325,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59903,6 +62398,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -59922,6 +62418,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -59943,6 +62440,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -59962,6 +62460,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -59983,6 +62482,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60002,6 +62502,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PROCEDIMIENTO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60023,6 +62524,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=faudiencia
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60042,6 +62544,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=TIPO DE AUDIENCIA
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60063,6 +62566,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60082,6 +62586,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60154,6 +62659,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60173,6 +62679,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -60194,6 +62701,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -60213,6 +62721,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60234,6 +62743,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60253,6 +62763,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. Y DESCRIPCI\'ON DE LOS EXPEDIENTES
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60274,6 +62785,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60293,6 +62805,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ESTADO PROCESAL
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60314,6 +62827,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60333,6 +62847,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (isMoral)
             FIELD_CODE_NAME_LATEX=field10\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60354,6 +62869,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60373,6 +62889,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (materno)
             FIELD_CODE_NAME_LATEX=field10\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60394,6 +62911,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60414,6 +62932,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60433,6 +62952,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60505,6 +63025,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60524,6 +63045,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -60545,6 +63067,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -60564,6 +63087,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60585,6 +63109,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60604,6 +63129,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DELITO(S)
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60625,6 +63151,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60644,6 +63171,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=AUTO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60665,6 +63193,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60684,6 +63213,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PRESCRIPCI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60705,6 +63235,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60725,6 +63256,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60744,6 +63276,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60816,6 +63349,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60835,6 +63369,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -60856,6 +63391,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -60875,6 +63411,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60896,6 +63433,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60915,6 +63453,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=BENEFICIO PENITENCIARIO
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -60936,6 +63475,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -60955,6 +63495,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DESISTIMIENTO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61027,6 +63568,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61046,6 +63588,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -61067,6 +63610,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -61086,6 +63630,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61107,6 +63652,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61126,6 +63672,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL ADOLESCENTE (paterno)
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61147,6 +63694,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61167,6 +63715,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61186,6 +63735,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=CONDUCTA TIPIFICADA COMO DELITO
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61258,6 +63808,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -61277,6 +63828,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61298,6 +63850,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61317,6 +63870,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -61338,6 +63892,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61357,6 +63912,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. Y DESCRIPCI\'ON DE LOS EXPEDIENTES
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61378,6 +63934,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61397,6 +63954,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ESTADO PROCESAL
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61418,6 +63976,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61437,6 +63996,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61458,6 +64018,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field15
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61477,6 +64038,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61549,6 +64111,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61568,6 +64131,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -61589,6 +64153,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -61608,6 +64173,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61629,6 +64195,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61648,6 +64215,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. Y DESCRIPCI\'ON DE EXPEDIENTES
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61669,6 +64237,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61688,6 +64257,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ESTADO PROCESAL
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61709,6 +64279,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61728,6 +64299,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (isMoral)
             FIELD_CODE_NAME_LATEX=field10\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61749,6 +64321,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61768,6 +64341,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (materno)
             FIELD_CODE_NAME_LATEX=field10\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61789,6 +64363,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61809,6 +64384,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61828,6 +64404,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61900,6 +64477,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61919,6 +64497,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -61940,6 +64519,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -61959,6 +64539,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -61980,6 +64561,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -61999,6 +64581,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PROCESADO 0 SENTENCIADO (paterno)
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62020,6 +64603,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62039,6 +64623,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PROCESADO 0 SENTENCIADO (nombre)
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62060,6 +64645,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62079,6 +64665,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA Y HORA DE LA DILIGENCIA
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62100,6 +64687,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62120,6 +64708,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62139,6 +64728,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62211,6 +64801,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62230,6 +64821,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -62251,6 +64843,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -62270,6 +64863,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62291,6 +64885,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62310,6 +64905,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. Y DESCRIPCI\'ON DE DOCUMENTOS
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62331,6 +64927,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62350,6 +64947,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON DEL ARCHIVO JUDICIAL
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62371,6 +64969,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62390,6 +64989,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (paterno)
             FIELD_CODE_NAME_LATEX=field10\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62411,6 +65011,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62430,6 +65031,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (nombre)
             FIELD_CODE_NAME_LATEX=field10\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62451,6 +65053,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62470,6 +65073,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62542,6 +65146,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62561,6 +65166,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -62582,6 +65188,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -62601,6 +65208,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62622,6 +65230,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62641,6 +65250,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL PROCESADO (isMoral)
             FIELD_CODE_NAME_LATEX=field3\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62662,6 +65272,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62681,6 +65292,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL PROCESADO (materno)
             FIELD_CODE_NAME_LATEX=field3\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62702,6 +65314,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62722,6 +65335,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62741,6 +65355,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62813,6 +65428,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62832,6 +65448,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -62853,6 +65470,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -62872,6 +65490,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62893,6 +65512,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62912,6 +65532,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE REMISI\'ON
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62933,6 +65554,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62952,6 +65574,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTENCIADO (paterno)
             FIELD_CODE_NAME_LATEX=field4\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -62973,6 +65596,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -62992,6 +65616,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=SENTENCIADO (nombre)
             FIELD_CODE_NAME_LATEX=field4\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63013,6 +65638,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63032,6 +65658,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FOJAS DEL EXPEDIENTE, TOMOS Y DOCUMENTOS
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63053,6 +65680,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63072,6 +65700,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON DEL ARCHIVO AL JUZGADO
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63144,6 +65773,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63163,6 +65793,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -63184,6 +65815,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -63203,6 +65835,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63224,6 +65857,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63243,6 +65877,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. DE FOJAS
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63264,6 +65899,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63283,6 +65919,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON AL ARCHIVO JUDICIAL
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63304,6 +65941,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63323,6 +65961,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (paterno)
             FIELD_CODE_NAME_LATEX=field7\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63344,6 +65983,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63363,6 +66003,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (nombre)
             FIELD_CODE_NAME_LATEX=field7\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63384,6 +66025,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63403,6 +66045,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63475,6 +66118,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -63494,6 +66138,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63515,6 +66160,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63534,6 +66180,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -63555,6 +66202,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63574,6 +66222,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. Y DESCRIPCI\'ON DE DOCUMENTOS
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63595,6 +66244,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63614,6 +66264,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON DEL ARCHIVO JUDICIAL
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63635,6 +66286,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
             
+            
 
 
         
@@ -63654,6 +66306,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (a. materno)
             FIELD_CODE_NAME_LATEX=field10\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
+            
             
 
 
@@ -63675,6 +66328,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10\_nombre
             FIELD_DBCOMMENT_LATEX=nombre
             
+            
 
 
         
@@ -63694,6 +66348,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (es Moral)
             FIELD_CODE_NAME_LATEX=field10\_isMoral
             FIELD_DBCOMMENT_LATEX=es Moral
+            
             
 
 
@@ -63715,6 +66370,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63734,6 +66390,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (paterno)
             FIELD_CODE_NAME_LATEX=field10\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63755,6 +66412,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63774,6 +66432,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (nombre)
             FIELD_CODE_NAME_LATEX=field10\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63795,6 +66454,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63814,6 +66474,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field16
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63886,6 +66547,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63905,6 +66567,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -63926,6 +66589,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -63945,6 +66609,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -63966,6 +66631,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -63985,6 +66651,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=No. Y DESCRIPCI\'ON DE DOCUMENTOS
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64006,6 +66673,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64025,6 +66693,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON EN EL ARCHIVO JUDICIAL
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64046,6 +66715,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64065,6 +66735,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (paterno)
             FIELD_CODE_NAME_LATEX=field10\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64086,6 +66757,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64105,6 +66777,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (nombre)
             FIELD_CODE_NAME_LATEX=field10\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64126,6 +66799,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64145,6 +66819,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE FOLIO DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64166,6 +66841,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64185,6 +66861,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RECIBI\'O (paterno)
             FIELD_CODE_NAME_LATEX=field14\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64206,6 +66883,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field14\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64225,6 +66903,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RECIBI\'O (nombre)
             FIELD_CODE_NAME_LATEX=field14\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64246,6 +66925,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field15\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64265,6 +66945,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ENTREGO (paterno)
             FIELD_CODE_NAME_LATEX=field15\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64286,6 +66967,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field15\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64305,6 +66987,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ENTREGO (nombre)
             FIELD_CODE_NAME_LATEX=field15\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64326,6 +67009,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field19
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64345,6 +67029,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=HUELLA DE LA PERSONA 1
             FIELD_CODE_NAME_LATEX=field19h
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64366,6 +67051,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field20\_isMoral
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64385,6 +67071,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE2 (paterno)
             FIELD_CODE_NAME_LATEX=field20\_paterno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64406,6 +67093,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field20\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64425,6 +67113,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE2 (nombre)
             FIELD_CODE_NAME_LATEX=field20\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64446,6 +67135,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field21
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64466,6 +67156,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field21h
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64485,6 +67176,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field22
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64557,6 +67249,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64576,6 +67269,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -64597,6 +67291,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -64616,6 +67311,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64637,6 +67333,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64656,6 +67353,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ESTATUS DEL EXPEDIENTE
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64677,6 +67375,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64696,6 +67395,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE PETICI\'ON DEL MINISTERIO P\'UBLICO
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64717,6 +67417,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64736,6 +67437,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL ACUERDO
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64757,6 +67459,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64776,6 +67479,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64848,6 +67552,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64867,6 +67572,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -64888,6 +67594,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -64907,6 +67614,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64928,6 +67636,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64947,6 +67656,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FOJAS
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -64968,6 +67678,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -64987,6 +67698,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ESTADO PROCESAL
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65008,6 +67720,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65027,6 +67740,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (isMoral)
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65048,6 +67762,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65067,6 +67782,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (materno)
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65088,6 +67804,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65107,6 +67824,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RECEPCI\'ON DE SOLICITUD DE DEVOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65128,6 +67846,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65147,6 +67866,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=N\'UMERO DE FOLIO
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65168,6 +67888,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65188,6 +67909,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=exp\_extinto
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65207,6 +67929,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Juzgado de origen
             FIELD_CODE_NAME_LATEX=jorigen
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65279,6 +68002,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65298,6 +68022,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -65319,6 +68044,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -65338,6 +68064,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65359,6 +68086,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65378,6 +68106,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL QUEJOSO (isMoral)
             FIELD_CODE_NAME_LATEX=field2\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65399,6 +68128,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65418,6 +68148,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL QUEJOSO (materno)
             FIELD_CODE_NAME_LATEX=field2\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65439,6 +68170,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field2\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65458,6 +68190,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ORGANO DE PROCEDENCIA (JDO DE DTO O TRIB. COL)
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65479,6 +68212,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65498,6 +68232,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE INGRESO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65519,6 +68254,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65538,6 +68274,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENV\'IO DE INFORME PREVIO
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65559,6 +68296,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65578,6 +68316,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=RESOLUCI\'ON DE AMPARO
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65599,6 +68338,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65619,6 +68359,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65638,6 +68379,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ENV\'IO DE INFORME JUSTIFICADO
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65710,6 +68452,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65730,6 +68473,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
             
+            
 
 
         
@@ -65749,6 +68493,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65821,6 +68566,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -65840,6 +68586,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65861,6 +68608,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65880,6 +68628,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -65901,6 +68650,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65920,6 +68670,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO DE REMISI\'ON PARA AN\'ALISIS DE COTECIAD
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -65941,6 +68692,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -65960,6 +68712,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (a. paterno)
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
+            
             
 
 
@@ -65981,6 +68734,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
+            
 
 
         
@@ -66000,6 +68754,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (nombre)
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=nombre
+            
             
 
 
@@ -66021,6 +68776,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=es Moral
             
+            
 
 
         
@@ -66040,6 +68796,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (isMoral)
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66061,6 +68818,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66080,6 +68838,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (materno)
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66101,6 +68860,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66120,6 +68880,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66192,6 +68953,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66211,6 +68973,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -66232,6 +68995,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -66251,6 +69015,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66272,6 +69037,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66291,6 +69057,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (isMoral)
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66312,6 +69079,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66332,6 +69100,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66351,6 +69120,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (nombre)
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66423,6 +69193,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66442,6 +69213,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -66463,6 +69235,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -66482,6 +69255,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66503,6 +69277,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66522,6 +69297,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL PROCESADO
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66543,6 +69319,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66562,6 +69339,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FIRMA DEL PROCESADO
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66583,6 +69361,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5h
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66602,6 +69381,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66674,6 +69454,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -66693,6 +69474,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66714,6 +69496,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66733,6 +69516,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -66754,6 +69538,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66773,6 +69558,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO DE VISTA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66794,6 +69580,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66814,6 +69601,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66833,6 +69621,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66905,6 +69694,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -66924,6 +69714,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -66945,6 +69736,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -66964,6 +69756,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -66985,6 +69778,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67004,6 +69798,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DEL AUTO DE VISTA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67025,6 +69820,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67045,6 +69841,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67064,6 +69861,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67136,6 +69934,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67155,6 +69954,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -67176,6 +69976,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -67195,6 +69996,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67216,6 +70018,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67235,6 +70038,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL  MP
             FIELD_CODE_NAME_LATEX=field2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67256,6 +70060,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67275,6 +70080,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA EN QUE RECIBE LA CAUSA (MP)
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67296,6 +70102,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67315,6 +70122,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE DEVOLUCI\'ON DE LA CAUSA (MP)
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67336,6 +70144,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67355,6 +70164,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE PRESENTACI\'ON DE CONCLUSIONES (MP)
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67376,6 +70186,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67395,6 +70206,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67467,6 +70279,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -67486,6 +70299,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=\'Organo
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67507,6 +70321,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67526,6 +70341,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -67547,6 +70363,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67566,6 +70383,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE PUBLICACI\'ON DE AUTO QUE ORDENA LA VISTA
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67587,6 +70405,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67606,6 +70425,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL MP (a. paterno)
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=apellido paterno
+            
             
 
 
@@ -67627,6 +70447,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=apellido materno
             
+            
 
 
         
@@ -67646,6 +70467,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL MP (nombre)
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=nombre
+            
             
 
 
@@ -67667,6 +70489,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=es Moral
             
+            
 
 
         
@@ -67686,6 +70509,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL MP (isMoral)
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67707,6 +70531,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67726,6 +70551,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=NOMBRE DEL MP (materno)
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67747,6 +70573,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67766,6 +70593,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=DEL MP
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67787,6 +70615,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9h
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67807,6 +70636,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67826,6 +70656,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67898,6 +70729,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67917,6 +70749,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -67938,6 +70771,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -67957,6 +70791,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -67978,6 +70813,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -67997,6 +70833,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RADICACI\'ON
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68018,6 +70855,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68037,6 +70875,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA  DE LA RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68058,6 +70897,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68078,6 +70918,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68097,6 +70938,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field11
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68169,6 +71011,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68188,6 +71031,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -68209,6 +71053,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -68228,6 +71073,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68249,6 +71095,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68268,6 +71115,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FOJAS
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68289,6 +71137,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68308,6 +71157,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=ESTADO PROCESAL
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68329,6 +71179,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68348,6 +71199,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (isMoral)
             FIELD_CODE_NAME_LATEX=field8\_isMoral
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68369,6 +71221,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_paterno
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68388,6 +71241,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (materno)
             FIELD_CODE_NAME_LATEX=field8\_materno
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68409,6 +71263,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8\_nombre
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68428,6 +71283,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE ARCHIVO
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68449,6 +71305,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68469,6 +71326,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68488,6 +71346,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field12
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68560,6 +71419,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_organo
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68579,6 +71439,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=A\~no j.
             FIELD_CODE_NAME_LATEX=anoj
             FIELD_DBCOMMENT_LATEX=A\~no judicial
+            
             
 
 
@@ -68600,6 +71461,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=id\_expediente
             FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
             
+            
 
 
         
@@ -68619,6 +71481,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=Secretar\'i{}a
             FIELD_CODE_NAME_LATEX=id\_secretaria
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68640,6 +71503,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field4
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68659,6 +71523,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE RADICACI\'ON
             FIELD_CODE_NAME_LATEX=field5
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68680,6 +71545,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field6
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68699,6 +71565,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=FECHA DE LA RESOLUCI\'ON
             FIELD_CODE_NAME_LATEX=field7
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68720,6 +71587,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field8
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68739,6 +71607,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=EJECUCI\'ON Y/O IMPUGNACI\'ON
             FIELD_CODE_NAME_LATEX=field9
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -68760,6 +71629,7 @@ architectcomp=jtca
             FIELD_CODE_NAME_LATEX=field10
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -68779,6 +71649,7 @@ architectcomp=jtca
             FIELD_NAME_LATEX=OBSERVACIONES
             FIELD_CODE_NAME_LATEX=field13
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 

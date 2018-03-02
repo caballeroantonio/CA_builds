@@ -2170,7 +2170,7 @@ CREATE TABLE IF NOT EXISTS `jt_lejemplos` (
   `my_NFempleado` INT(10) DEFAULT NULL COMMENT 'my NFempleado',
   `my_fexterna` INT(10) DEFAULT NULL COMMENT 'my Fexterna',
   `my_hexterna` INT(10) DEFAULT NULL COMMENT 'my Hexterna',
-  `my_parent` INT(10) NOT NULL DEFAULT '0' COMMENT 'my parent',
+  `my_parent` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'my parent',
   `my_person_isMoral` TINYINT(1) NOT NULL DEFAULT '0' COMMENT 'my person isMoral',
   `my_person_paterno` VARCHAR(255) DEFAULT NULL COMMENT 'my person paterno',
   `my_person_materno` VARCHAR(45) DEFAULT NULL COMMENT 'my person materno',

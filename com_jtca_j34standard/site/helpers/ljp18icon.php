@@ -368,5 +368,30 @@ class JHTMLLjp18Icon
 		}
 		return '<a href="#" onclick="window.print();return false;">'.$text.'</a>';
 	}
-
+        
+	/**
+	 * Method to generate a link to versions an ljp18
+	 *
+	 * @param   object		$ljp18  The ljp18 information
+	 * @param   Registry	$params   The item parameters
+	 * @param   array		$attribs  Optional attributes for the link
+	 * @param   boolean		$legacy   True to use legacy images, false to use icomoon based graphic
+	 *
+	 * @return  string  The HTML markup for the popup link
+	 */
+	public static function versions($ljp18, $params, $attribs = array(), $legacy = false)
+	{
+            
+            if ($legacy)
+            {
+                    $text = JHtml::_('image', 'com_jtca/versionsButton.png', JText::_('JTOOLBAR_VERSIONS'), null, true);
+            }
+            else
+            {
+                    $text = '<span class="icon-archive"></span>&#160;' . JText::_('JTOOLBAR_VERSIONS') . '&#160;';
+            }
+            return '<a href="#" data-toggle="modal" data-target="#collapseModal" class2="btn btn-small" data-remote="'.
+			"index.php?option=com_jtca&task=ljp18.showHistory&item_id={$ljp18->id}".
+			'">'.$text.'</a>';
+	}
 }

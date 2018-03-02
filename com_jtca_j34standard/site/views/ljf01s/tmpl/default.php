@@ -113,8 +113,9 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php endif; ?>
 
 		<?php else : ?>
+		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="ljf01s">
-			<?php if ($this->params->get('show_ljf01_headings')) :?>
+			<?php if ($this->params->get('show_ljf01_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -130,6 +131,51 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JHtml::_('grid.sort', 'COM_JTCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_ljf01_id_organo',1)) : ?>
+						<th class="list-id_organo" id="tableOrderingid_organo">
+							<?php echo JTEXT::_('COM_JTCA_LJF01S_HEADING_ID_ORGANO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljf01_anoj',1)) : ?>
+						<th class="list-anoj" id="tableOrderinganoj">
+							<?php echo JTEXT::_('COM_JTCA_LJF01S_HEADING_ANOJ'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljf01_id_expediente',1)) : ?>
+						<th class="list-id_expediente" id="tableOrderingid_expediente">
+							<?php echo JTEXT::_('COM_JTCA_LJF01S_HEADING_ID_EXPEDIENTE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljf01_id_secretaria',1)) : ?>
+						<th class="list-id_secretaria" id="tableOrderingid_secretaria">
+							<?php echo JTEXT::_('COM_JTCA_LJF01S_HEADING_ID_SECRETARIA'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljf01_field5',1)) : ?>
+						<th class="list-field5" id="tableOrderingfield5">
+							<?php echo JTEXT::_('COM_JTCA_LJF01S_HEADING_FIELD5'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljf01_field6',1)) : ?>
+						<th class="list-field6" id="tableOrderingfield6">
+							<?php echo JTEXT::_('COM_JTCA_LJF01S_HEADING_FIELD6'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljf01_field7',1)) : ?>
+						<th class="list-field7" id="tableOrderingfield7">
+							<?php echo JTEXT::_('COM_JTCA_LJF01S_HEADING_FIELD7'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljf01_field8',1)) : ?>
+						<th class="list-field8" id="tableOrderingfield8">
+							<?php echo JTEXT::_('COM_JTCA_LJF01S_HEADING_FIELD8'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljf01_field14',1)) : ?>
+						<th class="list-field14" id="tableOrderingfield14">
+							<?php echo JTEXT::_('COM_JTCA_LJF01S_HEADING_FIELD14'); ?>
+						</th>
+					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_ljf01_ordering',0)) : ?>
 						<th width="10%">
 							<?php echo JHtml::_('grid.sort',  'COM_JTCA_HEADING_ORDERING', 'a.ordering', $list_dirn, $list_order); ?>
@@ -181,7 +227,7 @@ $empty = $component->params->get('default_empty_field', '');
 									if ($this->params->get('link_ljf01_created_by') == 1) :
 										$created_by = JHtml::_('link', JRoute::_('index.php?option=com_users&view=profile&id='.$item->created_by), $created_by); 
 									endif;
-									if ($this->params->get('show_ljf01_headings')) :
+									if ($this->params->get('show_ljf01_headings',1)) :
 										echo $created_by;
 									else :
 										echo JText::sprintf('COM_JTCA_CREATED_BY', $created_by);
@@ -192,7 +238,7 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljf01_id_organo',0)) : ?>
+					<?php if ($this->params->get('list_show_ljf01_id_organo',1)) : ?>
 						<td class="list-id_organo">
 							<?php 
 								if (is_array($item->id_organo)) :
@@ -211,21 +257,21 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljf01_anoj',0)) : ?>
+					<?php if ($this->params->get('list_show_ljf01_anoj',1)) : ?>
 						<td class="list-anoj">
 							<?php 
 								echo $item->anoj != '' ? $item->anoj : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljf01_id_expediente',0)) : ?>
+					<?php if ($this->params->get('list_show_ljf01_id_expediente',1)) : ?>
 						<td class="list-id_expediente">
 							<?php 
 								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljf01_id_secretaria',0)) : ?>
+					<?php if ($this->params->get('list_show_ljf01_id_secretaria',1)) : ?>
 						<td class="list-id_secretaria">
 							<?php 
 								if (is_array($item->id_secretaria)) :
@@ -244,35 +290,35 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljf01_field5',0)) : ?>
+					<?php if ($this->params->get('list_show_ljf01_field5',1)) : ?>
 						<td class="list-field5">
 							<?php 
 								echo ($item->field5 != '' AND $item->field5 != '0000-00-00 00:00:00') ? JHtml::date($item->field5, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljf01_field6',0)) : ?>
+					<?php if ($this->params->get('list_show_ljf01_field6',1)) : ?>
 						<td class="list-field6">
 							<?php 
 								echo $item->field6 != '' ? $item->field6 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljf01_field7',0)) : ?>
+					<?php if ($this->params->get('list_show_ljf01_field7',1)) : ?>
 						<td class="list-field7">
 							<?php 
 								echo ($item->field7 != '' AND $item->field7 != '0000-00-00 00:00:00') ? JHtml::date($item->field7, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljf01_field8',0)) : ?>
+					<?php if ($this->params->get('list_show_ljf01_field8',1)) : ?>
 						<td class="list-field8">
 							<?php 
 								echo $item->field8 != '' ? $item->field8 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljf01_field14',0)) : ?>
+					<?php if ($this->params->get('list_show_ljf01_field14',1)) : ?>
 						<td class="list-field14">
 							<?php 
 								echo $item->field14 != '' ? $item->field14 : $empty;
@@ -287,26 +333,44 @@ $empty = $component->params->get('default_empty_field', '');
 					
 					<?php if ($show_actions) : ?>
 						<td class="list-actions">
-							<?php if ($can_edit OR $can_delete ) : ?>
-								<ul class="actions">
-									<?php if ($can_edit ) : ?>
-										<li class="edit-icon">
-											<?php echo JHtml::_('ljf01icon.edit',$item, $params); ?>
-										</li>
-									<?php endif; ?>					
-									<?php if ($can_delete) : ?>
-										<li class="delete-icon">
-											<?php echo JHtml::_('ljf01icon.delete',$item, $params); ?>
-										</li>
-									<?php endif; ?>					
-								</ul>
+                        	<div class="btn-group pull-right">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
+                                <ul class="dropdown-menu">
+							<?php if ($params->get('show_ljf01_print_icon')) : ?>
+								<li class="print-icon">
+										<?php echo JHtml::_('ljf01icon.print_popup',  $item, $params); ?>
+								</li>
 							<?php endif; ?>
+
+							<?php if ($params->get('show_ljf01_email_icon')) : ?>
+								<li class="email-icon">
+										<?php echo JHtml::_('ljf01icon.email',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+								<?php if ($can_edit ) : ?>
+                                    <li class="edit-icon">
+                                        <?php echo JHtml::_('ljf01icon.edit',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>					
+                                <?php if ($can_delete) : ?>
+                                    <li class="delete-icon">
+                                        <?php echo JHtml::_('ljf01icon.delete',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('ljf01_save_history')) : ?>
+								<li class="version-icon">
+									<?php echo JHtml::_('ljf01icon.versions',$item, $params); ?>
+								</li>	
+							<?php endif; ?>	
+                                </ul>
+                            </div>
 						</td>															
 					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
 			</table>
+		</div>
 			<?php if (($this->params->def('show_ljf01_pagination', 2) == 1  OR ($this->params->get('show_ljf01_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
 			<div class="pagination">
 
@@ -339,3 +403,20 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('ljf01icon.create', $this->params); ?>
 	</form>
 </div>
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('ljf01_save_history')) : ?>
+<script>
+jQuery(document).ready(function($) {
+   $('#collapseModal')
+   .on('hide.bs.modal', function () {
+        $(this).removeData('modal');
+   });
+});
+</script>
+<div id="collapseModal" tabindex="-1" class="modal hide fade">
+	<div class="modal-header">
+			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
+				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>
+	</div>
+	<div class="modal-body"></div>
+</div>
+<?php endif; ?>	

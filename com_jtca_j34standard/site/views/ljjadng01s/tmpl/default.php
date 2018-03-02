@@ -113,8 +113,9 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php endif; ?>
 
 		<?php else : ?>
+		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="ljjadng01s">
-			<?php if ($this->params->get('show_ljjadng01_headings')) :?>
+			<?php if ($this->params->get('show_ljjadng01_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -130,6 +131,221 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JHtml::_('grid.sort', 'COM_JTCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_ljjadng01_id_organo',1)) : ?>
+						<th class="list-id_organo" id="tableOrderingid_organo">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_ID_ORGANO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_anoj',1)) : ?>
+						<th class="list-anoj" id="tableOrderinganoj">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_ANOJ'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_id_expediente',1)) : ?>
+						<th class="list-id_expediente" id="tableOrderingid_expediente">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_ID_EXPEDIENTE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_id_secretaria',1)) : ?>
+						<th class="list-id_secretaria" id="tableOrderingid_secretaria">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_ID_SECRETARIA'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field2',1)) : ?>
+						<th class="list-field2" id="tableOrderingfield2">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD2'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_txt_field2032',1)) : ?>
+						<th class="list-txt_field2032" id="tableOrderingtxt_field2032">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_TXT_FIELD2032'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_id_field2032',1)) : ?>
+						<th class="list-id_field2032" id="tableOrderingid_field2032">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_ID_FIELD2032'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field6',1)) : ?>
+						<th class="list-field6" id="tableOrderingfield6">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD6'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field7',1)) : ?>
+						<th class="list-field7" id="tableOrderingfield7">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD7'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field8',1)) : ?>
+						<th class="list-field8" id="tableOrderingfield8">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD8'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field9',1)) : ?>
+						<th class="list-field9" id="tableOrderingfield9">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD9'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field10',1)) : ?>
+						<th class="list-field10" id="tableOrderingfield10">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD10'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field11',1)) : ?>
+						<th class="list-field11" id="tableOrderingfield11">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD11'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field12',1)) : ?>
+						<th class="list-field12" id="tableOrderingfield12">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD12'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field13',1)) : ?>
+						<th class="list-field13" id="tableOrderingfield13">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD13'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field14',1)) : ?>
+						<th class="list-field14" id="tableOrderingfield14">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD14'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field15',1)) : ?>
+						<th class="list-field15" id="tableOrderingfield15">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD15'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field16',1)) : ?>
+						<th class="list-field16" id="tableOrderingfield16">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD16'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field17',1)) : ?>
+						<th class="list-field17" id="tableOrderingfield17">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD17'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field18',1)) : ?>
+						<th class="list-field18" id="tableOrderingfield18">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD18'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field19',1)) : ?>
+						<th class="list-field19" id="tableOrderingfield19">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD19'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field20',1)) : ?>
+						<th class="list-field20" id="tableOrderingfield20">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD20'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field21',1)) : ?>
+						<th class="list-field21" id="tableOrderingfield21">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD21'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field22',1)) : ?>
+						<th class="list-field22" id="tableOrderingfield22">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD22'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field23',1)) : ?>
+						<th class="list-field23" id="tableOrderingfield23">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD23'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field24',1)) : ?>
+						<th class="list-field24" id="tableOrderingfield24">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD24'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field25',1)) : ?>
+						<th class="list-field25" id="tableOrderingfield25">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD25'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field26',1)) : ?>
+						<th class="list-field26" id="tableOrderingfield26">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD26'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field27',1)) : ?>
+						<th class="list-field27" id="tableOrderingfield27">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD27'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field28',1)) : ?>
+						<th class="list-field28" id="tableOrderingfield28">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD28'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field29',1)) : ?>
+						<th class="list-field29" id="tableOrderingfield29">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD29'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field30',1)) : ?>
+						<th class="list-field30" id="tableOrderingfield30">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD30'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field31',1)) : ?>
+						<th class="list-field31" id="tableOrderingfield31">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD31'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field32',1)) : ?>
+						<th class="list-field32" id="tableOrderingfield32">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD32'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field33',1)) : ?>
+						<th class="list-field33" id="tableOrderingfield33">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD33'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field34',1)) : ?>
+						<th class="list-field34" id="tableOrderingfield34">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD34'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field35',1)) : ?>
+						<th class="list-field35" id="tableOrderingfield35">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD35'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field36',1)) : ?>
+						<th class="list-field36" id="tableOrderingfield36">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD36'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field37',1)) : ?>
+						<th class="list-field37" id="tableOrderingfield37">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD37'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field38',1)) : ?>
+						<th class="list-field38" id="tableOrderingfield38">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD38'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field39',1)) : ?>
+						<th class="list-field39" id="tableOrderingfield39">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD39'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field40',1)) : ?>
+						<th class="list-field40" id="tableOrderingfield40">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD40'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljjadng01_field42',1)) : ?>
+						<th class="list-field42" id="tableOrderingfield42">
+							<?php echo JTEXT::_('COM_JTCA_LJJADNG01S_HEADING_FIELD42'); ?>
+						</th>
+					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_ljjadng01_ordering',0)) : ?>
 						<th width="10%">
 							<?php echo JHtml::_('grid.sort',  'COM_JTCA_HEADING_ORDERING', 'a.ordering', $list_dirn, $list_order); ?>
@@ -181,7 +397,7 @@ $empty = $component->params->get('default_empty_field', '');
 									if ($this->params->get('link_ljjadng01_created_by') == 1) :
 										$created_by = JHtml::_('link', JRoute::_('index.php?option=com_users&view=profile&id='.$item->created_by), $created_by); 
 									endif;
-									if ($this->params->get('show_ljjadng01_headings')) :
+									if ($this->params->get('show_ljjadng01_headings',1)) :
 										echo $created_by;
 									else :
 										echo JText::sprintf('COM_JTCA_CREATED_BY', $created_by);
@@ -192,7 +408,7 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_id_organo',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_id_organo',1)) : ?>
 						<td class="list-id_organo">
 							<?php 
 								if (is_array($item->id_organo)) :
@@ -211,21 +427,21 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_anoj',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_anoj',1)) : ?>
 						<td class="list-anoj">
 							<?php 
 								echo $item->anoj != '' ? $item->anoj : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_id_expediente',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_id_expediente',1)) : ?>
 						<td class="list-id_expediente">
 							<?php 
 								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_id_secretaria',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_id_secretaria',1)) : ?>
 						<td class="list-id_secretaria">
 							<?php 
 								if (is_array($item->id_secretaria)) :
@@ -244,119 +460,119 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field2',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field2',1)) : ?>
 						<td class="list-field2">
 							<?php 
 								echo ($item->field2 != '' AND $item->field2 != '0000-00-00 00:00:00') ? JHtml::date($item->field2, '%Y-%m-%d %H:%M', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_txt_field2032',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_txt_field2032',1)) : ?>
 						<td class="list-txt_field2032">
 							<?php 
 								echo $item->txt_field2032 != '' ? $item->txt_field2032 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_id_field2032',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_id_field2032',1)) : ?>
 						<td class="list-id_field2032">
 							<?php 
 								echo $item->id_field2032 != '' ? $item->id_field2032 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field6',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field6',1)) : ?>
 						<td class="list-field6">
 							<?php 
 								echo $item->field6 != '' ? $item->field6 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field7',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field7',1)) : ?>
 						<td class="list-field7">
 							<?php 
 								echo $item->field7 != '' ? $item->field7 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field8',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field8',1)) : ?>
 						<td class="list-field8">
 							<?php 
 								echo $item->field8 != '' ? $item->field8 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field9',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field9',1)) : ?>
 						<td class="list-field9">
 							<?php 
 								echo ($item->field9 != '' AND $item->field9 != '0000-00-00 00:00:00') ? JHtml::date($item->field9, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field10',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field10',1)) : ?>
 						<td class="list-field10">
 							<?php 
 								echo $item->field10 != '' ? $item->field10 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field11',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field11',1)) : ?>
 						<td class="list-field11">
 							<?php 
 								echo $item->field11 != '' ? $item->field11 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field12',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field12',1)) : ?>
 						<td class="list-field12">
 							<?php 
 								echo $item->field12 != '' ? $item->field12 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field13',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field13',1)) : ?>
 						<td class="list-field13">
 							<?php 
 								echo ($item->field13 != '' AND $item->field13 != '0000-00-00 00:00:00') ? JHtml::date($item->field13, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field14',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field14',1)) : ?>
 						<td class="list-field14">
 							<?php 
 								echo $item->field14 != '' ? $item->field14 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field15',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field15',1)) : ?>
 						<td class="list-field15">
 							<?php 
 								echo $item->field15 != '' ? $item->field15 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field16',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field16',1)) : ?>
 						<td class="list-field16">
 							<?php 
 								echo ($item->field16 != '' AND $item->field16 != '0000-00-00 00:00:00') ? JHtml::date($item->field16, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field17',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field17',1)) : ?>
 						<td class="list-field17">
 							<?php 
 								echo ($item->field17 != '' AND $item->field17 != '0000-00-00 00:00:00') ? JHtml::date($item->field17, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field18',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field18',1)) : ?>
 						<td class="list-field18">
 							<?php 
 								echo ($item->field18 != '' AND $item->field18 != '0000-00-00 00:00:00') ? JHtml::date($item->field18, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field19',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field19',1)) : ?>
 						<td class="list-field19">
 							<?php 
 								switch ($item->field19) :
@@ -373,14 +589,14 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field20',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field20',1)) : ?>
 						<td class="list-field20">
 							<?php 
 								echo $item->field20 != '' ? $item->field20 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field21',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field21',1)) : ?>
 						<td class="list-field21">
 							<?php 
 								switch ($item->field21) :
@@ -397,14 +613,14 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field22',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field22',1)) : ?>
 						<td class="list-field22">
 							<?php 
 								echo $item->field22 != '' ? $item->field22 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field23',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field23',1)) : ?>
 						<td class="list-field23">
 							<?php 
 								switch ($item->field23) :
@@ -421,49 +637,49 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field24',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field24',1)) : ?>
 						<td class="list-field24">
 							<?php 
 								echo $item->field24 != '' ? $item->field24 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field25',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field25',1)) : ?>
 						<td class="list-field25">
 							<?php 
 								echo ($item->field25 != '' AND $item->field25 != '0000-00-00 00:00:00') ? JHtml::date($item->field25, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field26',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field26',1)) : ?>
 						<td class="list-field26">
 							<?php 
 								echo $item->field26 != '' ? $item->field26 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field27',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field27',1)) : ?>
 						<td class="list-field27">
 							<?php 
 								echo $item->field27 != '' ? $item->field27 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field28',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field28',1)) : ?>
 						<td class="list-field28">
 							<?php 
 								echo $item->field28 != '' ? $item->field28 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field29',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field29',1)) : ?>
 						<td class="list-field29">
 							<?php 
 								echo $item->field29 != '' ? $item->field29 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field30',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field30',1)) : ?>
 						<td class="list-field30">
 							<?php 
 								switch ($item->field30) :
@@ -480,56 +696,56 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field31',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field31',1)) : ?>
 						<td class="list-field31">
 							<?php 
 								echo ($item->field31 != '' AND $item->field31 != '0000-00-00 00:00:00') ? JHtml::date($item->field31, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field32',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field32',1)) : ?>
 						<td class="list-field32">
 							<?php 
 								echo $item->field32 != '' ? $item->field32 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field33',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field33',1)) : ?>
 						<td class="list-field33">
 							<?php 
 								echo ($item->field33 != '' AND $item->field33 != '0000-00-00 00:00:00') ? JHtml::date($item->field33, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field34',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field34',1)) : ?>
 						<td class="list-field34">
 							<?php 
 								echo $item->field34 != '' ? $item->field34 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field35',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field35',1)) : ?>
 						<td class="list-field35">
 							<?php 
 								echo $item->field35 != '' ? $item->field35 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field36',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field36',1)) : ?>
 						<td class="list-field36">
 							<?php 
 								echo $item->field36 != '' ? $item->field36 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field37',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field37',1)) : ?>
 						<td class="list-field37">
 							<?php 
 								echo $item->field37 != '' ? $item->field37 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field38',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field38',1)) : ?>
 						<td class="list-field38">
 							<?php 
 								switch ($item->field38) :
@@ -546,21 +762,21 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field39',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field39',1)) : ?>
 						<td class="list-field39">
 							<?php 
 								echo ($item->field39 != '' AND $item->field39 != '0000-00-00 00:00:00') ? JHtml::date($item->field39, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field40',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field40',1)) : ?>
 						<td class="list-field40">
 							<?php 
 								echo ($item->field40 != '' AND $item->field40 != '0000-00-00 00:00:00') ? JHtml::date($item->field40, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljjadng01_field42',0)) : ?>
+					<?php if ($this->params->get('list_show_ljjadng01_field42',1)) : ?>
 						<td class="list-field42">
 							<?php 
 								echo $item->field42 != '' ? $item->field42 : $empty;
@@ -575,26 +791,44 @@ $empty = $component->params->get('default_empty_field', '');
 					
 					<?php if ($show_actions) : ?>
 						<td class="list-actions">
-							<?php if ($can_edit OR $can_delete ) : ?>
-								<ul class="actions">
-									<?php if ($can_edit ) : ?>
-										<li class="edit-icon">
-											<?php echo JHtml::_('ljjadng01icon.edit',$item, $params); ?>
-										</li>
-									<?php endif; ?>					
-									<?php if ($can_delete) : ?>
-										<li class="delete-icon">
-											<?php echo JHtml::_('ljjadng01icon.delete',$item, $params); ?>
-										</li>
-									<?php endif; ?>					
-								</ul>
+                        	<div class="btn-group pull-right">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
+                                <ul class="dropdown-menu">
+							<?php if ($params->get('show_ljjadng01_print_icon')) : ?>
+								<li class="print-icon">
+										<?php echo JHtml::_('ljjadng01icon.print_popup',  $item, $params); ?>
+								</li>
 							<?php endif; ?>
+
+							<?php if ($params->get('show_ljjadng01_email_icon')) : ?>
+								<li class="email-icon">
+										<?php echo JHtml::_('ljjadng01icon.email',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+								<?php if ($can_edit ) : ?>
+                                    <li class="edit-icon">
+                                        <?php echo JHtml::_('ljjadng01icon.edit',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>					
+                                <?php if ($can_delete) : ?>
+                                    <li class="delete-icon">
+                                        <?php echo JHtml::_('ljjadng01icon.delete',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('ljjadng01_save_history')) : ?>
+								<li class="version-icon">
+									<?php echo JHtml::_('ljjadng01icon.versions',$item, $params); ?>
+								</li>	
+							<?php endif; ?>	
+                                </ul>
+                            </div>
 						</td>															
 					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
 			</table>
+		</div>
 			<?php if (($this->params->def('show_ljjadng01_pagination', 2) == 1  OR ($this->params->get('show_ljjadng01_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
 			<div class="pagination">
 
@@ -627,3 +861,20 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('ljjadng01icon.create', $this->params); ?>
 	</form>
 </div>
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('ljjadng01_save_history')) : ?>
+<script>
+jQuery(document).ready(function($) {
+   $('#collapseModal')
+   .on('hide.bs.modal', function () {
+        $(this).removeData('modal');
+   });
+});
+</script>
+<div id="collapseModal" tabindex="-1" class="modal hide fade">
+	<div class="modal-header">
+			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
+				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>
+	</div>
+	<div class="modal-body"></div>
+</div>
+<?php endif; ?>	

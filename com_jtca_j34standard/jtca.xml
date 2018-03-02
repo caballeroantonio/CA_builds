@@ -28,7 +28,7 @@
 <extension type="component" version="3.4" method="upgrade">
     <name>com_jtca</name>
     <author>caballeroantonio</author>
-    <creationDate>February 2018</creationDate>
+    <creationDate>March 2018</creationDate>
     <copyright>
         Copyright (c) 2017 - 2020. All Rights Reserved
     </copyright>

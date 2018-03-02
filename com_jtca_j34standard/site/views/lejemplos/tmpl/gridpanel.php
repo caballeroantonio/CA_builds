@@ -499,7 +499,7 @@ function getFields(){
                 FIELD_INTRO=<p>Hay que hacer una implementación para registrar has\_many</p>
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) NOT NULL DEFAULT '0' my parent
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' my parent
 
                 FIELD_NAME_LATEX=my parent
                 FIELD_CODE_NAME_LATEX=my\_parent

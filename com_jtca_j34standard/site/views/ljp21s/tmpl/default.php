@@ -113,8 +113,9 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php endif; ?>
 
 		<?php else : ?>
+		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="ljp21s">
-			<?php if ($this->params->get('show_ljp21_headings')) :?>
+			<?php if ($this->params->get('show_ljp21_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -130,6 +131,91 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JHtml::_('grid.sort', 'COM_JTCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_ljp21_id_organo',1)) : ?>
+						<th class="list-id_organo" id="tableOrderingid_organo">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_ID_ORGANO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_anoj',1)) : ?>
+						<th class="list-anoj" id="tableOrderinganoj">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_ANOJ'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_id_expediente',1)) : ?>
+						<th class="list-id_expediente" id="tableOrderingid_expediente">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_ID_EXPEDIENTE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_id_secretaria',1)) : ?>
+						<th class="list-id_secretaria" id="tableOrderingid_secretaria">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_ID_SECRETARIA'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_field3',1)) : ?>
+						<th class="list-field3" id="tableOrderingfield3">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_FIELD3'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_field4',1)) : ?>
+						<th class="list-field4" id="tableOrderingfield4">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_FIELD4'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_field5',1)) : ?>
+						<th class="list-field5" id="tableOrderingfield5">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_FIELD5'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_field6',1)) : ?>
+						<th class="list-field6" id="tableOrderingfield6">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_FIELD6'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_field7',1)) : ?>
+						<th class="list-field7" id="tableOrderingfield7">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_FIELD7'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_field8_isMoral',1)) : ?>
+						<th class="list-field8_isMoral" id="tableOrderingfield8_isMoral">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_FIELD8_ISMORAL'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_field8_paterno',1)) : ?>
+						<th class="list-field8_paterno" id="tableOrderingfield8_paterno">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_FIELD8_PATERNO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_field8_materno',1)) : ?>
+						<th class="list-field8_materno" id="tableOrderingfield8_materno">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_FIELD8_MATERNO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_field8_nombre',1)) : ?>
+						<th class="list-field8_nombre" id="tableOrderingfield8_nombre">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_FIELD8_NOMBRE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_field9',1)) : ?>
+						<th class="list-field9" id="tableOrderingfield9">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_FIELD9'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_field10',1)) : ?>
+						<th class="list-field10" id="tableOrderingfield10">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_FIELD10'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_field13',1)) : ?>
+						<th class="list-field13" id="tableOrderingfield13">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_FIELD13'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp21_field12',1)) : ?>
+						<th class="list-field12" id="tableOrderingfield12">
+							<?php echo JTEXT::_('COM_JTCA_LJP21S_HEADING_FIELD12'); ?>
+						</th>
+					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_ljp21_ordering',0)) : ?>
 						<th width="10%">
 							<?php echo JHtml::_('grid.sort',  'COM_JTCA_HEADING_ORDERING', 'a.ordering', $list_dirn, $list_order); ?>
@@ -181,7 +267,7 @@ $empty = $component->params->get('default_empty_field', '');
 									if ($this->params->get('link_ljp21_created_by') == 1) :
 										$created_by = JHtml::_('link', JRoute::_('index.php?option=com_users&view=profile&id='.$item->created_by), $created_by); 
 									endif;
-									if ($this->params->get('show_ljp21_headings')) :
+									if ($this->params->get('show_ljp21_headings',1)) :
 										echo $created_by;
 									else :
 										echo JText::sprintf('COM_JTCA_CREATED_BY', $created_by);
@@ -192,7 +278,7 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_id_organo',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_id_organo',1)) : ?>
 						<td class="list-id_organo">
 							<?php 
 								if (is_array($item->id_organo)) :
@@ -211,21 +297,21 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_anoj',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_anoj',1)) : ?>
 						<td class="list-anoj">
 							<?php 
 								echo $item->anoj != '' ? $item->anoj : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_id_expediente',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_id_expediente',1)) : ?>
 						<td class="list-id_expediente">
 							<?php 
 								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_id_secretaria',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_id_secretaria',1)) : ?>
 						<td class="list-id_secretaria">
 							<?php 
 								if (is_array($item->id_secretaria)) :
@@ -244,91 +330,91 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_field3',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_field3',1)) : ?>
 						<td class="list-field3">
 							<?php 
 								echo $item->field3 != '' ? $item->field3 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_field4',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_field4',1)) : ?>
 						<td class="list-field4">
 							<?php 
 								echo $item->field4 != '' ? $item->field4 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_field5',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_field5',1)) : ?>
 						<td class="list-field5">
 							<?php 
 								echo ($item->field5 != '' AND $item->field5 != '0000-00-00 00:00:00') ? JHtml::date($item->field5, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_field6',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_field6',1)) : ?>
 						<td class="list-field6">
 							<?php 
 								echo $item->field6 != '' ? $item->field6 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_field7',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_field7',1)) : ?>
 						<td class="list-field7">
 							<?php 
 								echo ($item->field7 != '' AND $item->field7 != '0000-00-00 00:00:00') ? JHtml::date($item->field7, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_field8_isMoral',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_field8_isMoral',1)) : ?>
 						<td class="list-field8_isMoral">
 							<?php 
 								echo $item->field8_isMoral != '' ? $item->field8_isMoral : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_field8_paterno',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_field8_paterno',1)) : ?>
 						<td class="list-field8_paterno">
 							<?php 
 								echo $item->field8_paterno != '' ? $item->field8_paterno : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_field8_materno',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_field8_materno',1)) : ?>
 						<td class="list-field8_materno">
 							<?php 
 								echo $item->field8_materno != '' ? $item->field8_materno : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_field8_nombre',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_field8_nombre',1)) : ?>
 						<td class="list-field8_nombre">
 							<?php 
 								echo $item->field8_nombre != '' ? $item->field8_nombre : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_field9',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_field9',1)) : ?>
 						<td class="list-field9">
 							<?php 
 								echo ($item->field9 != '' AND $item->field9 != '0000-00-00 00:00:00') ? JHtml::date($item->field9, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_field10',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_field10',1)) : ?>
 						<td class="list-field10">
 							<?php 
 								echo $item->field10 != '' ? $item->field10 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_field13',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_field13',1)) : ?>
 						<td class="list-field13">
 							<?php 
 								echo ($item->field13 != '' AND $item->field13 != '0000-00-00 00:00:00') ? JHtml::date($item->field13, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp21_field12',0)) : ?>
+					<?php if ($this->params->get('list_show_ljp21_field12',1)) : ?>
 						<td class="list-field12">
 							<?php 
 								echo $item->field12 != '' ? $item->field12 : $empty;
@@ -343,26 +429,44 @@ $empty = $component->params->get('default_empty_field', '');
 					
 					<?php if ($show_actions) : ?>
 						<td class="list-actions">
-							<?php if ($can_edit OR $can_delete ) : ?>
-								<ul class="actions">
-									<?php if ($can_edit ) : ?>
-										<li class="edit-icon">
-											<?php echo JHtml::_('ljp21icon.edit',$item, $params); ?>
-										</li>
-									<?php endif; ?>					
-									<?php if ($can_delete) : ?>
-										<li class="delete-icon">
-											<?php echo JHtml::_('ljp21icon.delete',$item, $params); ?>
-										</li>
-									<?php endif; ?>					
-								</ul>
+                        	<div class="btn-group pull-right">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
+                                <ul class="dropdown-menu">
+							<?php if ($params->get('show_ljp21_print_icon')) : ?>
+								<li class="print-icon">
+										<?php echo JHtml::_('ljp21icon.print_popup',  $item, $params); ?>
+								</li>
 							<?php endif; ?>
+
+							<?php if ($params->get('show_ljp21_email_icon')) : ?>
+								<li class="email-icon">
+										<?php echo JHtml::_('ljp21icon.email',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+								<?php if ($can_edit ) : ?>
+                                    <li class="edit-icon">
+                                        <?php echo JHtml::_('ljp21icon.edit',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>					
+                                <?php if ($can_delete) : ?>
+                                    <li class="delete-icon">
+                                        <?php echo JHtml::_('ljp21icon.delete',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('ljp21_save_history')) : ?>
+								<li class="version-icon">
+									<?php echo JHtml::_('ljp21icon.versions',$item, $params); ?>
+								</li>	
+							<?php endif; ?>	
+                                </ul>
+                            </div>
 						</td>															
 					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
 			</table>
+		</div>
 			<?php if (($this->params->def('show_ljp21_pagination', 2) == 1  OR ($this->params->get('show_ljp21_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
 			<div class="pagination">
 
@@ -395,3 +499,20 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('ljp21icon.create', $this->params); ?>
 	</form>
 </div>
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('ljp21_save_history')) : ?>
+<script>
+jQuery(document).ready(function($) {
+   $('#collapseModal')
+   .on('hide.bs.modal', function () {
+        $(this).removeData('modal');
+   });
+});
+</script>
+<div id="collapseModal" tabindex="-1" class="modal hide fade">
+	<div class="modal-header">
+			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
+				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>
+	</div>
+	<div class="modal-body"></div>
+</div>
+<?php endif; ?>	

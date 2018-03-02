@@ -96,7 +96,7 @@ $empty = $component->params->get('default_empty_field', '');
 				<?php if ($this->params->get('show_lsc08_filter_field') != '' AND $this->params->get('show_lsc08_filter_field') != 'hide') :?>
 					<input type="text" name="filter_search" id="filter_search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_JTCA_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_JTCA_'.$this->params->get('show_lsc08_filter_field').'_FILTER_LABEL'); ?>" />
 				<?php endif; ?>	
-				<?php if ($this->params->get('list_show_lsc08_billete',0)) : ?>
+				<?php if ($this->params->get('list_show_lsc08_billete',1)) : ?>
 					<select name="filter_billete" onchange="this.form.submit()">
 					<option value=""><?php echo JText::_('COM_JTCA_LSC08S_SELECT_BILLETE');?></option>
 					<?php echo JHtml::_('select.options', $this->billete_values, 'value', 'text', $this->state->get('filter.billete'));?>
@@ -119,8 +119,9 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php endif; ?>
 
 		<?php else : ?>
+		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="lsc08s">
-			<?php if ($this->params->get('show_lsc08_headings')) :?>
+			<?php if ($this->params->get('show_lsc08_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -136,7 +137,32 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JHtml::_('grid.sort', 'COM_JTCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc08_billete',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc08_id_organo',1)) : ?>
+						<th class="list-id_organo" id="tableOrderingid_organo">
+							<?php echo JTEXT::_('COM_JTCA_LSC08S_HEADING_ID_ORGANO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc08_id_secretaria',1)) : ?>
+						<th class="list-id_secretaria" id="tableOrderingid_secretaria">
+							<?php echo JTEXT::_('COM_JTCA_LSC08S_HEADING_ID_SECRETARIA'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc08_anoj',1)) : ?>
+						<th class="list-anoj" id="tableOrderinganoj">
+							<?php echo JTEXT::_('COM_JTCA_LSC08S_HEADING_ANOJ'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc08_field177',1)) : ?>
+						<th class="list-field177" id="tableOrderingfield177">
+							<?php echo JTEXT::_('COM_JTCA_LSC08S_HEADING_FIELD177'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc08_id_expediente',1)) : ?>
+						<th class="list-id_expediente" id="tableOrderingid_expediente">
+							<?php echo JTEXT::_('COM_JTCA_LSC08S_HEADING_ID_EXPEDIENTE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc08_billete',1)) : ?>
 						<th class="list-billete" id="tableOrderingbillete">
 							<?php echo JTEXT::_('COM_JTCA_LSC08S_HEADING_BILLETE'); ?>
 						</th>
@@ -192,7 +218,7 @@ $empty = $component->params->get('default_empty_field', '');
 									if ($this->params->get('link_lsc08_created_by') == 1) :
 										$created_by = JHtml::_('link', JRoute::_('index.php?option=com_users&view=profile&id='.$item->created_by), $created_by); 
 									endif;
-									if ($this->params->get('show_lsc08_headings')) :
+									if ($this->params->get('show_lsc08_headings',1)) :
 										echo $created_by;
 									else :
 										echo JText::sprintf('COM_JTCA_CREATED_BY', $created_by);
@@ -203,7 +229,7 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc08_id_organo',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc08_id_organo',1)) : ?>
 						<td class="list-id_organo">
 							<?php 
 								if (is_array($item->id_organo)) :
@@ -222,7 +248,7 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc08_id_secretaria',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc08_id_secretaria',1)) : ?>
 						<td class="list-id_secretaria">
 							<?php 
 								if (is_array($item->id_secretaria)) :
@@ -241,28 +267,28 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc08_anoj',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc08_anoj',1)) : ?>
 						<td class="list-anoj">
 							<?php 
 								echo $item->anoj != '' ? $item->anoj : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc08_field177',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc08_field177',1)) : ?>
 						<td class="list-field177">
 							<?php 
 								echo ($item->field177 != '' AND $item->field177 != '0000-00-00 00:00:00') ? JHtml::date($item->field177, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc08_id_expediente',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc08_id_expediente',1)) : ?>
 						<td class="list-id_expediente">
 							<?php 
 								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc08_billete',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc08_billete',1)) : ?>
 						<td class="list-billete">
 							<?php 
 								echo $item->billete != '' ? $item->billete : $empty;
@@ -277,26 +303,44 @@ $empty = $component->params->get('default_empty_field', '');
 					
 					<?php if ($show_actions) : ?>
 						<td class="list-actions">
-							<?php if ($can_edit OR $can_delete ) : ?>
-								<ul class="actions">
-									<?php if ($can_edit ) : ?>
-										<li class="edit-icon">
-											<?php echo JHtml::_('lsc08icon.edit',$item, $params); ?>
-										</li>
-									<?php endif; ?>					
-									<?php if ($can_delete) : ?>
-										<li class="delete-icon">
-											<?php echo JHtml::_('lsc08icon.delete',$item, $params); ?>
-										</li>
-									<?php endif; ?>					
-								</ul>
+                        	<div class="btn-group pull-right">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
+                                <ul class="dropdown-menu">
+							<?php if ($params->get('show_lsc08_print_icon')) : ?>
+								<li class="print-icon">
+										<?php echo JHtml::_('lsc08icon.print_popup',  $item, $params); ?>
+								</li>
 							<?php endif; ?>
+
+							<?php if ($params->get('show_lsc08_email_icon')) : ?>
+								<li class="email-icon">
+										<?php echo JHtml::_('lsc08icon.email',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+								<?php if ($can_edit ) : ?>
+                                    <li class="edit-icon">
+                                        <?php echo JHtml::_('lsc08icon.edit',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>					
+                                <?php if ($can_delete) : ?>
+                                    <li class="delete-icon">
+                                        <?php echo JHtml::_('lsc08icon.delete',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('lsc08_save_history')) : ?>
+								<li class="version-icon">
+									<?php echo JHtml::_('lsc08icon.versions',$item, $params); ?>
+								</li>	
+							<?php endif; ?>	
+                                </ul>
+                            </div>
 						</td>															
 					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
 			</table>
+		</div>
 			<?php if (($this->params->def('show_lsc08_pagination', 2) == 1  OR ($this->params->get('show_lsc08_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
 			<div class="pagination">
 
@@ -329,3 +373,20 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('lsc08icon.create', $this->params); ?>
 	</form>
 </div>
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('lsc08_save_history')) : ?>
+<script>
+jQuery(document).ready(function($) {
+   $('#collapseModal')
+   .on('hide.bs.modal', function () {
+        $(this).removeData('modal');
+   });
+});
+</script>
+<div id="collapseModal" tabindex="-1" class="modal hide fade">
+	<div class="modal-header">
+			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
+				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>
+	</div>
+	<div class="modal-body"></div>
+</div>
+<?php endif; ?>	

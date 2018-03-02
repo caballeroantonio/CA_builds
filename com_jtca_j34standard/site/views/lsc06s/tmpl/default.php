@@ -113,8 +113,9 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php endif; ?>
 
 		<?php else : ?>
+		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="lsc06s">
-			<?php if ($this->params->get('show_lsc06_headings')) :?>
+			<?php if ($this->params->get('show_lsc06_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -130,6 +131,111 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JHtml::_('grid.sort', 'COM_JTCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsc06_id_organo',1)) : ?>
+						<th class="list-id_organo" id="tableOrderingid_organo">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_ID_ORGANO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_id_expediente',1)) : ?>
+						<th class="list-id_expediente" id="tableOrderingid_expediente">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_ID_EXPEDIENTE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_id_secretaria',1)) : ?>
+						<th class="list-id_secretaria" id="tableOrderingid_secretaria">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_ID_SECRETARIA'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_anoj',1)) : ?>
+						<th class="list-anoj" id="tableOrderinganoj">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_ANOJ'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field149',1)) : ?>
+						<th class="list-field149" id="tableOrderingfield149">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD149'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field150',1)) : ?>
+						<th class="list-field150" id="tableOrderingfield150">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD150'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field151',1)) : ?>
+						<th class="list-field151" id="tableOrderingfield151">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD151'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field152',1)) : ?>
+						<th class="list-field152" id="tableOrderingfield152">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD152'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field153',1)) : ?>
+						<th class="list-field153" id="tableOrderingfield153">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD153'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field154',1)) : ?>
+						<th class="list-field154" id="tableOrderingfield154">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD154'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field155_isMoral',1)) : ?>
+						<th class="list-field155_isMoral" id="tableOrderingfield155_isMoral">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD155_ISMORAL'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field155_paterno',1)) : ?>
+						<th class="list-field155_paterno" id="tableOrderingfield155_paterno">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD155_PATERNO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field155_materno',1)) : ?>
+						<th class="list-field155_materno" id="tableOrderingfield155_materno">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD155_MATERNO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field155_nombre',1)) : ?>
+						<th class="list-field155_nombre" id="tableOrderingfield155_nombre">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD155_NOMBRE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field157',1)) : ?>
+						<th class="list-field157" id="tableOrderingfield157">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD157'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field158_isMoral',1)) : ?>
+						<th class="list-field158_isMoral" id="tableOrderingfield158_isMoral">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD158_ISMORAL'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field158_paterno',1)) : ?>
+						<th class="list-field158_paterno" id="tableOrderingfield158_paterno">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD158_PATERNO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field158_materno',1)) : ?>
+						<th class="list-field158_materno" id="tableOrderingfield158_materno">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD158_MATERNO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field158_nombre',1)) : ?>
+						<th class="list-field158_nombre" id="tableOrderingfield158_nombre">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD158_NOMBRE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field160',1)) : ?>
+						<th class="list-field160" id="tableOrderingfield160">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD160'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc06_field159',1)) : ?>
+						<th class="list-field159" id="tableOrderingfield159">
+							<?php echo JTEXT::_('COM_JTCA_LSC06S_HEADING_FIELD159'); ?>
+						</th>
+					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_lsc06_ordering',0)) : ?>
 						<th width="10%">
 							<?php echo JHtml::_('grid.sort',  'COM_JTCA_HEADING_ORDERING', 'a.ordering', $list_dirn, $list_order); ?>
@@ -181,7 +287,7 @@ $empty = $component->params->get('default_empty_field', '');
 									if ($this->params->get('link_lsc06_created_by') == 1) :
 										$created_by = JHtml::_('link', JRoute::_('index.php?option=com_users&view=profile&id='.$item->created_by), $created_by); 
 									endif;
-									if ($this->params->get('show_lsc06_headings')) :
+									if ($this->params->get('show_lsc06_headings',1)) :
 										echo $created_by;
 									else :
 										echo JText::sprintf('COM_JTCA_CREATED_BY', $created_by);
@@ -192,7 +298,7 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_id_organo',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_id_organo',1)) : ?>
 						<td class="list-id_organo">
 							<?php 
 								if (is_array($item->id_organo)) :
@@ -211,14 +317,14 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_id_expediente',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_id_expediente',1)) : ?>
 						<td class="list-id_expediente">
 							<?php 
 								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_id_secretaria',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_id_secretaria',1)) : ?>
 						<td class="list-id_secretaria">
 							<?php 
 								if (is_array($item->id_secretaria)) :
@@ -237,126 +343,126 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_anoj',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_anoj',1)) : ?>
 						<td class="list-anoj">
 							<?php 
 								echo $item->anoj != '' ? $item->anoj : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field149',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field149',1)) : ?>
 						<td class="list-field149">
 							<?php 
 								echo $item->field149 != '' ? $item->field149 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field150',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field150',1)) : ?>
 						<td class="list-field150">
 							<?php 
 								echo ($item->field150 != '' AND $item->field150 != '0000-00-00 00:00:00') ? JHtml::date($item->field150, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field151',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field151',1)) : ?>
 						<td class="list-field151">
 							<?php 
 								echo $item->field151 != '' ? $item->field151 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field152',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field152',1)) : ?>
 						<td class="list-field152">
 							<?php 
 								echo ($item->field152 != '' AND $item->field152 != '0000-00-00 00:00:00') ? JHtml::date($item->field152, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field153',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field153',1)) : ?>
 						<td class="list-field153">
 							<?php 
 								echo $item->field153 != '' ? $item->field153 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field154',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field154',1)) : ?>
 						<td class="list-field154">
 							<?php 
 								echo $item->field154 != '' ? $item->field154 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field155_isMoral',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field155_isMoral',1)) : ?>
 						<td class="list-field155_isMoral">
 							<?php 
 								echo $item->field155_isMoral != '' ? $item->field155_isMoral : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field155_paterno',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field155_paterno',1)) : ?>
 						<td class="list-field155_paterno">
 							<?php 
 								echo $item->field155_paterno != '' ? $item->field155_paterno : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field155_materno',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field155_materno',1)) : ?>
 						<td class="list-field155_materno">
 							<?php 
 								echo $item->field155_materno != '' ? $item->field155_materno : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field155_nombre',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field155_nombre',1)) : ?>
 						<td class="list-field155_nombre">
 							<?php 
 								echo $item->field155_nombre != '' ? $item->field155_nombre : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field157',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field157',1)) : ?>
 						<td class="list-field157">
 							<?php 
 								echo ($item->field157 != '' AND $item->field157 != '0000-00-00 00:00:00') ? JHtml::date($item->field157, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field158_isMoral',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field158_isMoral',1)) : ?>
 						<td class="list-field158_isMoral">
 							<?php 
 								echo $item->field158_isMoral != '' ? $item->field158_isMoral : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field158_paterno',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field158_paterno',1)) : ?>
 						<td class="list-field158_paterno">
 							<?php 
 								echo $item->field158_paterno != '' ? $item->field158_paterno : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field158_materno',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field158_materno',1)) : ?>
 						<td class="list-field158_materno">
 							<?php 
 								echo $item->field158_materno != '' ? $item->field158_materno : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field158_nombre',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field158_nombre',1)) : ?>
 						<td class="list-field158_nombre">
 							<?php 
 								echo $item->field158_nombre != '' ? $item->field158_nombre : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field160',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field160',1)) : ?>
 						<td class="list-field160">
 							<?php 
 								echo $item->field160 != '' ? $item->field160 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc06_field159',0)) : ?>
+					<?php if ($this->params->get('list_show_lsc06_field159',1)) : ?>
 						<td class="list-field159">
 							<?php 
 								echo $item->field159 != '' ? $item->field159 : $empty;
@@ -371,26 +477,44 @@ $empty = $component->params->get('default_empty_field', '');
 					
 					<?php if ($show_actions) : ?>
 						<td class="list-actions">
-							<?php if ($can_edit OR $can_delete ) : ?>
-								<ul class="actions">
-									<?php if ($can_edit ) : ?>
-										<li class="edit-icon">
-											<?php echo JHtml::_('lsc06icon.edit',$item, $params); ?>
-										</li>
-									<?php endif; ?>					
-									<?php if ($can_delete) : ?>
-										<li class="delete-icon">
-											<?php echo JHtml::_('lsc06icon.delete',$item, $params); ?>
-										</li>
-									<?php endif; ?>					
-								</ul>
+                        	<div class="btn-group pull-right">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
+                                <ul class="dropdown-menu">
+							<?php if ($params->get('show_lsc06_print_icon')) : ?>
+								<li class="print-icon">
+										<?php echo JHtml::_('lsc06icon.print_popup',  $item, $params); ?>
+								</li>
 							<?php endif; ?>
+
+							<?php if ($params->get('show_lsc06_email_icon')) : ?>
+								<li class="email-icon">
+										<?php echo JHtml::_('lsc06icon.email',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+								<?php if ($can_edit ) : ?>
+                                    <li class="edit-icon">
+                                        <?php echo JHtml::_('lsc06icon.edit',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>					
+                                <?php if ($can_delete) : ?>
+                                    <li class="delete-icon">
+                                        <?php echo JHtml::_('lsc06icon.delete',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('lsc06_save_history')) : ?>
+								<li class="version-icon">
+									<?php echo JHtml::_('lsc06icon.versions',$item, $params); ?>
+								</li>	
+							<?php endif; ?>	
+                                </ul>
+                            </div>
 						</td>															
 					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
 			</table>
+		</div>
 			<?php if (($this->params->def('show_lsc06_pagination', 2) == 1  OR ($this->params->get('show_lsc06_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
 			<div class="pagination">
 
@@ -423,3 +547,20 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('lsc06icon.create', $this->params); ?>
 	</form>
 </div>
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('lsc06_save_history')) : ?>
+<script>
+jQuery(document).ready(function($) {
+   $('#collapseModal')
+   .on('hide.bs.modal', function () {
+        $(this).removeData('modal');
+   });
+});
+</script>
+<div id="collapseModal" tabindex="-1" class="modal hide fade">
+	<div class="modal-header">
+			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
+				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>
+	</div>
+	<div class="modal-body"></div>
+</div>
+<?php endif; ?>	

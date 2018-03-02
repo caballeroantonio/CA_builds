@@ -113,8 +113,9 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php endif; ?>
 
 		<?php else : ?>
+		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="lspe01s">
-			<?php if ($this->params->get('show_lspe01_headings')) :?>
+			<?php if ($this->params->get('show_lspe01_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -130,6 +131,116 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JHtml::_('grid.sort', 'COM_JTCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lspe01_id_organo',1)) : ?>
+						<th class="list-id_organo" id="tableOrderingid_organo">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_ID_ORGANO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_anoj',1)) : ?>
+						<th class="list-anoj" id="tableOrderinganoj">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_ANOJ'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_id_expediente',1)) : ?>
+						<th class="list-id_expediente" id="tableOrderingid_expediente">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_ID_EXPEDIENTE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_id_secretaria',1)) : ?>
+						<th class="list-id_secretaria" id="tableOrderingid_secretaria">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_ID_SECRETARIA'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2286',1)) : ?>
+						<th class="list-field2286" id="tableOrderingfield2286">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2286'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2287',1)) : ?>
+						<th class="list-field2287" id="tableOrderingfield2287">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2287'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2288',1)) : ?>
+						<th class="list-field2288" id="tableOrderingfield2288">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2288'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2289',1)) : ?>
+						<th class="list-field2289" id="tableOrderingfield2289">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2289'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2290',1)) : ?>
+						<th class="list-field2290" id="tableOrderingfield2290">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2290'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2291',1)) : ?>
+						<th class="list-field2291" id="tableOrderingfield2291">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2291'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2292',1)) : ?>
+						<th class="list-field2292" id="tableOrderingfield2292">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2292'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2293_isMoral',1)) : ?>
+						<th class="list-field2293_isMoral" id="tableOrderingfield2293_isMoral">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2293_ISMORAL'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2293_paterno',1)) : ?>
+						<th class="list-field2293_paterno" id="tableOrderingfield2293_paterno">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2293_PATERNO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2293_materno',1)) : ?>
+						<th class="list-field2293_materno" id="tableOrderingfield2293_materno">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2293_MATERNO'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2293_nombre',1)) : ?>
+						<th class="list-field2293_nombre" id="tableOrderingfield2293_nombre">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2293_NOMBRE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2294',1)) : ?>
+						<th class="list-field2294" id="tableOrderingfield2294">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2294'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2295',1)) : ?>
+						<th class="list-field2295" id="tableOrderingfield2295">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2295'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2296',1)) : ?>
+						<th class="list-field2296" id="tableOrderingfield2296">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2296'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2297',1)) : ?>
+						<th class="list-field2297" id="tableOrderingfield2297">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2297'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2343',1)) : ?>
+						<th class="list-field2343" id="tableOrderingfield2343">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2343'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2344',1)) : ?>
+						<th class="list-field2344" id="tableOrderingfield2344">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2344'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lspe01_field2298',1)) : ?>
+						<th class="list-field2298" id="tableOrderingfield2298">
+							<?php echo JTEXT::_('COM_JTCA_LSPE01S_HEADING_FIELD2298'); ?>
+						</th>
+					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_lspe01_ordering',0)) : ?>
 						<th width="10%">
 							<?php echo JHtml::_('grid.sort',  'COM_JTCA_HEADING_ORDERING', 'a.ordering', $list_dirn, $list_order); ?>
@@ -181,7 +292,7 @@ $empty = $component->params->get('default_empty_field', '');
 									if ($this->params->get('link_lspe01_created_by') == 1) :
 										$created_by = JHtml::_('link', JRoute::_('index.php?option=com_users&view=profile&id='.$item->created_by), $created_by); 
 									endif;
-									if ($this->params->get('show_lspe01_headings')) :
+									if ($this->params->get('show_lspe01_headings',1)) :
 										echo $created_by;
 									else :
 										echo JText::sprintf('COM_JTCA_CREATED_BY', $created_by);
@@ -192,7 +303,7 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_id_organo',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_id_organo',1)) : ?>
 						<td class="list-id_organo">
 							<?php 
 								if (is_array($item->id_organo)) :
@@ -211,21 +322,21 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_anoj',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_anoj',1)) : ?>
 						<td class="list-anoj">
 							<?php 
 								echo $item->anoj != '' ? $item->anoj : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_id_expediente',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_id_expediente',1)) : ?>
 						<td class="list-id_expediente">
 							<?php 
 								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_id_secretaria',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_id_secretaria',1)) : ?>
 						<td class="list-id_secretaria">
 							<?php 
 								if (is_array($item->id_secretaria)) :
@@ -244,126 +355,126 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2286',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2286',1)) : ?>
 						<td class="list-field2286">
 							<?php 
 								echo ($item->field2286 != '' AND $item->field2286 != '0000-00-00 00:00:00') ? JHtml::date($item->field2286, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2287',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2287',1)) : ?>
 						<td class="list-field2287">
 							<?php 
 								echo $item->field2287 != '' ? $item->field2287 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2288',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2288',1)) : ?>
 						<td class="list-field2288">
 							<?php 
 								echo $item->field2288 != '' ? $item->field2288 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2289',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2289',1)) : ?>
 						<td class="list-field2289">
 							<?php 
 								echo ($item->field2289 != '' AND $item->field2289 != '0000-00-00 00:00:00') ? JHtml::date($item->field2289, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2290',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2290',1)) : ?>
 						<td class="list-field2290">
 							<?php 
 								echo $item->field2290 != '' ? $item->field2290 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2291',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2291',1)) : ?>
 						<td class="list-field2291">
 							<?php 
 								echo $item->field2291 != '' ? $item->field2291 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2292',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2292',1)) : ?>
 						<td class="list-field2292">
 							<?php 
 								echo ($item->field2292 != '' AND $item->field2292 != '0000-00-00 00:00:00') ? JHtml::date($item->field2292, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2293_isMoral',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2293_isMoral',1)) : ?>
 						<td class="list-field2293_isMoral">
 							<?php 
 								echo $item->field2293_isMoral != '' ? $item->field2293_isMoral : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2293_paterno',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2293_paterno',1)) : ?>
 						<td class="list-field2293_paterno">
 							<?php 
 								echo $item->field2293_paterno != '' ? $item->field2293_paterno : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2293_materno',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2293_materno',1)) : ?>
 						<td class="list-field2293_materno">
 							<?php 
 								echo $item->field2293_materno != '' ? $item->field2293_materno : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2293_nombre',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2293_nombre',1)) : ?>
 						<td class="list-field2293_nombre">
 							<?php 
 								echo $item->field2293_nombre != '' ? $item->field2293_nombre : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2294',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2294',1)) : ?>
 						<td class="list-field2294">
 							<?php 
 								echo $item->field2294 != '' ? $item->field2294 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2295',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2295',1)) : ?>
 						<td class="list-field2295">
 							<?php 
 								echo ($item->field2295 != '' AND $item->field2295 != '0000-00-00 00:00:00') ? JHtml::date($item->field2295, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2296',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2296',1)) : ?>
 						<td class="list-field2296">
 							<?php 
 								echo ($item->field2296 != '' AND $item->field2296 != '0000-00-00 00:00:00') ? JHtml::date($item->field2296, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2297',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2297',1)) : ?>
 						<td class="list-field2297">
 							<?php 
 								echo $item->field2297 != '' ? $item->field2297 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2343',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2343',1)) : ?>
 						<td class="list-field2343">
 							<?php 
 								echo $item->field2343 != '' ? $item->field2343 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2344',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2344',1)) : ?>
 						<td class="list-field2344">
 							<?php 
 								echo ($item->field2344 != '' AND $item->field2344 != '0000-00-00 00:00:00') ? JHtml::date($item->field2344, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lspe01_field2298',0)) : ?>
+					<?php if ($this->params->get('list_show_lspe01_field2298',1)) : ?>
 						<td class="list-field2298">
 							<?php 
 								echo $item->field2298 != '' ? $item->field2298 : $empty;
@@ -378,26 +489,44 @@ $empty = $component->params->get('default_empty_field', '');
 					
 					<?php if ($show_actions) : ?>
 						<td class="list-actions">
-							<?php if ($can_edit OR $can_delete ) : ?>
-								<ul class="actions">
-									<?php if ($can_edit ) : ?>
-										<li class="edit-icon">
-											<?php echo JHtml::_('lspe01icon.edit',$item, $params); ?>
-										</li>
-									<?php endif; ?>					
-									<?php if ($can_delete) : ?>
-										<li class="delete-icon">
-											<?php echo JHtml::_('lspe01icon.delete',$item, $params); ?>
-										</li>
-									<?php endif; ?>					
-								</ul>
+                        	<div class="btn-group pull-right">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
+                                <ul class="dropdown-menu">
+							<?php if ($params->get('show_lspe01_print_icon')) : ?>
+								<li class="print-icon">
+										<?php echo JHtml::_('lspe01icon.print_popup',  $item, $params); ?>
+								</li>
 							<?php endif; ?>
+
+							<?php if ($params->get('show_lspe01_email_icon')) : ?>
+								<li class="email-icon">
+										<?php echo JHtml::_('lspe01icon.email',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+								<?php if ($can_edit ) : ?>
+                                    <li class="edit-icon">
+                                        <?php echo JHtml::_('lspe01icon.edit',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>					
+                                <?php if ($can_delete) : ?>
+                                    <li class="delete-icon">
+                                        <?php echo JHtml::_('lspe01icon.delete',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('lspe01_save_history')) : ?>
+								<li class="version-icon">
+									<?php echo JHtml::_('lspe01icon.versions',$item, $params); ?>
+								</li>	
+							<?php endif; ?>	
+                                </ul>
+                            </div>
 						</td>															
 					<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
 			</table>
+		</div>
 			<?php if (($this->params->def('show_lspe01_pagination', 2) == 1  OR ($this->params->get('show_lspe01_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
 			<div class="pagination">
 
@@ -430,3 +559,20 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('lspe01icon.create', $this->params); ?>
 	</form>
 </div>
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('lspe01_save_history')) : ?>
+<script>
+jQuery(document).ready(function($) {
+   $('#collapseModal')
+   .on('hide.bs.modal', function () {
+        $(this).removeData('modal');
+   });
+});
+</script>
+<div id="collapseModal" tabindex="-1" class="modal hide fade">
+	<div class="modal-header">
+			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
+				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>
+	</div>
+	<div class="modal-body"></div>
+</div>
+<?php endif; ?>	
