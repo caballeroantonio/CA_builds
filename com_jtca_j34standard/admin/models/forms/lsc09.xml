@@ -29,11 +29,9 @@
     addrulepath="/administrator/components/com_jtca/models/rules"
 
 >
-    <fieldset
-        name="basic_details"
+    <fieldset name="basic_details"
     >
-        <field
-		    name="id"
+        <field name="id"
 		    type="text"
             label="JGLOBAL_FIELD_ID_LABEL"
             description ="JGLOBAL_FIELD_ID_DESC"
@@ -41,16 +39,14 @@
 			class="readonly"
             default="0"
 		/>
-        <field
-            name="version_note"
+        <field name="version_note"
             type="text"
             label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
 			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
 			class="span12"
 			size="45"
 		/>
-        <field
-		    name="state"
+        <field name="state"
     		type="list"
 			label="JSTATUS"
 			description="COM_JTCA_LSC09S_FIELD_STATUS_DESC"
@@ -63,28 +59,24 @@
             <option value="2">JARCHIVED</option>
             <option value="-2">JTRASH</option>
         </field>
-        <field
-            name="buttonspacer"
+        <field name="buttonspacer"
             type="spacer"
             label="JGLOBAL_ACTION_PERMISSIONS_LABEL"
             description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
         />
 
-        <field
-            name="ordering"
+        <field name="ordering"
 			label="JFIELD_ORDERING_LABEL"
 			description="JFIELD_ORDERING_DESC"
 			type="jtcaordering"
 			table="jt_lsc09s"
 		/>
     </fieldset>
-    <fieldset
-        name="fieldset_lsc09_fs"
+    <fieldset name="fieldset_lsc09_fs"
         label="COM_JTCA_LSC09S_FIELDSET_LSC09_FS_LABEL"
         description="COM_JTCA_LSC09S_FIELDSET_LSC09_FS_DESC"
     >
-        <field
-            name="id_organo"
+        <field name="id_organo"
             type="sql"
             label="COM_JTCA_LSC09S_FIELD_ID_ORGANO_LABEL"
             description="COM_JTCA_LSC09S_FIELD_ID_ORGANO_DESC"
@@ -96,8 +88,7 @@
         >
             <option value="">COM_JTCA_LSC09S_SELECT_ID_ORGANO</option>
         </field>  
-        <field
-            name="id_secretaria"
+        <field name="id_secretaria"
             type="sql"
             label="COM_JTCA_LSC09S_FIELD_ID_SECRETARIA_LABEL"
             description="COM_JTCA_LSC09S_FIELD_ID_SECRETARIA_DESC"
@@ -109,8 +100,7 @@
         >
             <option value="">COM_JTCA_LSC09S_SELECT_ID_SECRETARIA</option>
         </field>  
-        <field
-            name="anoj"
+        <field name="anoj"
             type="text"
             label="COM_JTCA_LSC09S_FIELD_ANOJ_LABEL"
             description="COM_JTCA_LSC09S_FIELD_ANOJ_DESC"
@@ -119,8 +109,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="id_expediente"
+        <field name="id_expediente"
             type="modal_expedientes"
             label="COM_JTCA_LSC09S_FIELD_ID_EXPEDIENTE_LABEL"
             description="COM_JTCA_LSC09S_FIELD_ID_EXPEDIENTE_DESC"
@@ -129,8 +118,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="field187"
+        <field name="field187"
             type="text"
             label="COM_JTCA_LSC09S_FIELD_FIELD187_LABEL"
             description="COM_JTCA_LSC09S_FIELD_FIELD187_DESC"
@@ -139,8 +127,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field191"
+        <field name="field191"
             type="text"
             label="COM_JTCA_LSC09S_FIELD_FIELD191_LABEL"
             description="COM_JTCA_LSC09S_FIELD_FIELD191_DESC"
@@ -149,8 +136,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field192"
+        <field name="field192"
             type="calendar"
             label="COM_JTCA_LSC09S_FIELD_FIELD192_LABEL"
             description="COM_JTCA_LSC09S_FIELD_FIELD192_DESC"
@@ -162,8 +148,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="field193"
+        <field name="field193"
             type="calendar"
             label="COM_JTCA_LSC09S_FIELD_FIELD193_LABEL"
             description="COM_JTCA_LSC09S_FIELD_FIELD193_DESC"
@@ -175,8 +160,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="field194"
+        <field name="field194"
             type="editor"
             label="COM_JTCA_LSC09S_FIELD_FIELD194_LABEL"
             description="COM_JTCA_LSC09S_FIELD_FIELD194_DESC"
@@ -190,18 +174,15 @@
         >
         </field>  
     </fieldset>
-    <fieldset
-        name="publishing"
+    <fieldset name="publishing"
 		label="COM_JTCA_FIELDSET_PUBLISHING_LABEL"
     >
-        <field
-            name="created_by"
+        <field name="created_by"
             type="user"
 			label="COM_JTCA_FIELD_CREATED_BY_LABEL"
 			description="COM_JTCA_LSC09S_FIELD_CREATED_BY_DESC"
 		/>
-        <field
-            name="created"
+        <field name="created"
             type="calendar"
             label="COM_JTCA_FIELD_CREATED_LABEL"
 			description="COM_JTCA_LSC09S_FIELD_CREATED_DESC"
@@ -209,8 +190,7 @@
 			format="%Y-%m-%d %H:%M:%S"
 			filter="user_utc"
 		/>
-        <field
-            name="modified"
+        <field name="modified"
             type="calendar"
 			label="COM_JTCA_FIELD_MODIFIED_LABEL"
 			description="COM_JTCA_LSC09S_FIELD_MODIFIED_DESC"
@@ -220,16 +200,14 @@
 			format="%Y-%m-%d %H:%M:%S"
 			filter="user_utc"
 		/>
-        <field
-            name="modified_by"
+        <field name="modified_by"
             type="user"
 		    label="COM_JTCA_FIELD_MODIFIED_BY_LABEL"
 		    class="readonly"
 		    readonly="true"
 		    filter="unset"
 		/>
-        <field
-            name="version"
+        <field name="version"
             type="text"
 			label="COM_JTCA_FIELD_VERSION_LABEL"
             description="COM_JTCA_LSC09S_FIELD_VERSION_DESC"

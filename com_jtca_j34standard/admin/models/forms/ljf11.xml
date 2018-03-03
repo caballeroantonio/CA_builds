@@ -29,11 +29,9 @@
     addrulepath="/administrator/components/com_jtca/models/rules"
 
 >
-    <fieldset
-        name="basic_details"
+    <fieldset name="basic_details"
     >
-        <field
-		    name="id"
+        <field name="id"
 		    type="text"
             label="JGLOBAL_FIELD_ID_LABEL"
             description ="JGLOBAL_FIELD_ID_DESC"
@@ -41,16 +39,14 @@
 			class="readonly"
             default="0"
 		/>
-        <field
-            name="version_note"
+        <field name="version_note"
             type="text"
             label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
 			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
 			class="span12"
 			size="45"
 		/>
-        <field
-		    name="state"
+        <field name="state"
     		type="list"
 			label="JSTATUS"
 			description="COM_JTCA_LJF11S_FIELD_STATUS_DESC"
@@ -63,28 +59,24 @@
             <option value="2">JARCHIVED</option>
             <option value="-2">JTRASH</option>
         </field>
-        <field
-            name="buttonspacer"
+        <field name="buttonspacer"
             type="spacer"
             label="JGLOBAL_ACTION_PERMISSIONS_LABEL"
             description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
         />
 
-        <field
-            name="ordering"
+        <field name="ordering"
 			label="JFIELD_ORDERING_LABEL"
 			description="JFIELD_ORDERING_DESC"
 			type="jtcaordering"
 			table="jt_ljf11s"
 		/>
     </fieldset>
-    <fieldset
-        name="fieldset_ljf11_fs"
+    <fieldset name="fieldset_ljf11_fs"
         label="COM_JTCA_LJF11S_FIELDSET_LJF11_FS_LABEL"
         description="COM_JTCA_LJF11S_FIELDSET_LJF11_FS_DESC"
     >
-        <field
-            name="id_organo"
+        <field name="id_organo"
             type="sql"
             label="COM_JTCA_LJF11S_FIELD_ID_ORGANO_LABEL"
             description="COM_JTCA_LJF11S_FIELD_ID_ORGANO_DESC"
@@ -96,8 +88,7 @@
         >
             <option value="">COM_JTCA_LJF11S_SELECT_ID_ORGANO</option>
         </field>  
-        <field
-            name="anoj"
+        <field name="anoj"
             type="text"
             label="COM_JTCA_LJF11S_FIELD_ANOJ_LABEL"
             description="COM_JTCA_LJF11S_FIELD_ANOJ_DESC"
@@ -106,8 +97,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="id_expediente"
+        <field name="id_expediente"
             type="modal_expedientes"
             label="COM_JTCA_LJF11S_FIELD_ID_EXPEDIENTE_LABEL"
             description="COM_JTCA_LJF11S_FIELD_ID_EXPEDIENTE_DESC"
@@ -116,8 +106,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="id_secretaria"
+        <field name="id_secretaria"
             type="sql"
             label="COM_JTCA_LJF11S_FIELD_ID_SECRETARIA_LABEL"
             description="COM_JTCA_LJF11S_FIELD_ID_SECRETARIA_DESC"
@@ -129,8 +118,7 @@
         >
             <option value="">COM_JTCA_LJF11S_SELECT_ID_SECRETARIA</option>
         </field>  
-        <field
-            name="field2"
+        <field name="field2"
             type="text"
             label="COM_JTCA_LJF11S_FIELD_FIELD2_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD2_DESC"
@@ -139,8 +127,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field3_isMoral"
+        <field name="field3_isMoral"
             type="person"
             label="COM_JTCA_LJF11S_FIELD_FIELD3_ISMORAL_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD3_ISMORAL_DESC"
@@ -149,8 +136,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field3_paterno"
+        <field name="field3_paterno"
             type="person"
             label="COM_JTCA_LJF11S_FIELD_FIELD3_PATERNO_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD3_PATERNO_DESC"
@@ -159,8 +145,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field3_materno"
+        <field name="field3_materno"
             type="person"
             label="COM_JTCA_LJF11S_FIELD_FIELD3_MATERNO_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD3_MATERNO_DESC"
@@ -169,8 +154,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field3_nombre"
+        <field name="field3_nombre"
             type="person"
             label="COM_JTCA_LJF11S_FIELD_FIELD3_NOMBRE_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD3_NOMBRE_DESC"
@@ -179,8 +163,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field4"
+        <field name="field4"
             type="editor"
             label="COM_JTCA_LJF11S_FIELD_FIELD4_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD4_DESC"
@@ -193,8 +176,7 @@
 			default=""
         >
         </field>  
-        <field
-            name="field8"
+        <field name="field8"
             type="text"
             label="COM_JTCA_LJF11S_FIELD_FIELD8_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD8_DESC"
@@ -203,8 +185,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field9"
+        <field name="field9"
             type="integer"
             label="COM_JTCA_LJF11S_FIELD_FIELD9_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD9_DESC"
@@ -213,8 +194,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="field10"
+        <field name="field10"
             type="editor"
             label="COM_JTCA_LJF11S_FIELD_FIELD10_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD10_DESC"
@@ -227,8 +207,7 @@
 			default=""
         >
         </field>  
-        <field
-            name="field11"
+        <field name="field11"
             type="calendar"
             label="COM_JTCA_LJF11S_FIELD_FIELD11_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD11_DESC"
@@ -240,8 +219,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="field12"
+        <field name="field12"
             type="editor"
             label="COM_JTCA_LJF11S_FIELD_FIELD12_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD12_DESC"
@@ -254,8 +232,7 @@
 			default=""
         >
         </field>  
-        <field
-            name="field13"
+        <field name="field13"
             type="text"
             label="COM_JTCA_LJF11S_FIELD_FIELD13_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD13_DESC"
@@ -264,8 +241,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field14_isMoral"
+        <field name="field14_isMoral"
             type="person"
             label="COM_JTCA_LJF11S_FIELD_FIELD14_ISMORAL_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD14_ISMORAL_DESC"
@@ -274,8 +250,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field14_paterno"
+        <field name="field14_paterno"
             type="person"
             label="COM_JTCA_LJF11S_FIELD_FIELD14_PATERNO_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD14_PATERNO_DESC"
@@ -284,8 +259,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field14_materno"
+        <field name="field14_materno"
             type="person"
             label="COM_JTCA_LJF11S_FIELD_FIELD14_MATERNO_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD14_MATERNO_DESC"
@@ -294,8 +268,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field14_nombre"
+        <field name="field14_nombre"
             type="person"
             label="COM_JTCA_LJF11S_FIELD_FIELD14_NOMBRE_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD14_NOMBRE_DESC"
@@ -304,8 +277,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field15"
+        <field name="field15"
             type="modal_firma"
             label="COM_JTCA_LJF11S_FIELD_FIELD15_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD15_DESC"
@@ -313,8 +285,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="field15h"
+        <field name="field15h"
             type="modal_huella"
             label="COM_JTCA_LJF11S_FIELD_FIELD15H_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD15H_DESC"
@@ -322,8 +293,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="field16"
+        <field name="field16"
             type="modal_firmaempleado"
             label="COM_JTCA_LJF11S_FIELD_FIELD16_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD16_DESC"
@@ -331,8 +301,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="field17"
+        <field name="field17"
             type="calendar"
             label="COM_JTCA_LJF11S_FIELD_FIELD17_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD17_DESC"
@@ -344,8 +313,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="field18"
+        <field name="field18"
             type="modal_firmaempleado"
             label="COM_JTCA_LJF11S_FIELD_FIELD18_LABEL"
             description="COM_JTCA_LJF11S_FIELD_FIELD18_DESC"
@@ -354,18 +322,15 @@
         >
         </field>  
     </fieldset>
-    <fieldset
-        name="publishing"
+    <fieldset name="publishing"
 		label="COM_JTCA_FIELDSET_PUBLISHING_LABEL"
     >
-        <field
-            name="created_by"
+        <field name="created_by"
             type="user"
 			label="COM_JTCA_FIELD_CREATED_BY_LABEL"
 			description="COM_JTCA_LJF11S_FIELD_CREATED_BY_DESC"
 		/>
-        <field
-            name="created"
+        <field name="created"
             type="calendar"
             label="COM_JTCA_FIELD_CREATED_LABEL"
 			description="COM_JTCA_LJF11S_FIELD_CREATED_DESC"
@@ -373,8 +338,7 @@
 			format="%Y-%m-%d %H:%M:%S"
 			filter="user_utc"
 		/>
-        <field
-            name="modified"
+        <field name="modified"
             type="calendar"
 			label="COM_JTCA_FIELD_MODIFIED_LABEL"
 			description="COM_JTCA_LJF11S_FIELD_MODIFIED_DESC"
@@ -384,16 +348,14 @@
 			format="%Y-%m-%d %H:%M:%S"
 			filter="user_utc"
 		/>
-        <field
-            name="modified_by"
+        <field name="modified_by"
             type="user"
 		    label="COM_JTCA_FIELD_MODIFIED_BY_LABEL"
 		    class="readonly"
 		    readonly="true"
 		    filter="unset"
 		/>
-        <field
-            name="version"
+        <field name="version"
             type="text"
 			label="COM_JTCA_FIELD_VERSION_LABEL"
             description="COM_JTCA_LJF11S_FIELD_VERSION_DESC"

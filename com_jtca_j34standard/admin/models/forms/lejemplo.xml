@@ -29,11 +29,9 @@
     addrulepath="/administrator/components/com_jtca/models/rules"
 
 >
-    <fieldset
-        name="basic_details"
+    <fieldset name="basic_details"
     >
-        <field
-		    name="id"
+        <field name="id"
 		    type="text"
             label="JGLOBAL_FIELD_ID_LABEL"
             description ="JGLOBAL_FIELD_ID_DESC"
@@ -41,16 +39,14 @@
 			class="readonly"
             default="0"
 		/>
-        <field
-            name="version_note"
+        <field name="version_note"
             type="text"
             label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
 			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
 			class="span12"
 			size="45"
 		/>
-        <field
-		    name="state"
+        <field name="state"
     		type="list"
 			label="JSTATUS"
 			description="COM_JTCA_LEJEMPLOS_FIELD_STATUS_DESC"
@@ -63,28 +59,24 @@
             <option value="2">JARCHIVED</option>
             <option value="-2">JTRASH</option>
         </field>
-        <field
-            name="buttonspacer"
+        <field name="buttonspacer"
             type="spacer"
             label="JGLOBAL_ACTION_PERMISSIONS_LABEL"
             description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
         />
 
-        <field
-            name="ordering"
+        <field name="ordering"
 			label="JFIELD_ORDERING_LABEL"
 			description="JFIELD_ORDERING_DESC"
 			type="jtcaordering"
 			table="jt_lejemplos"
 		/>
     </fieldset>
-    <fieldset
-        name="fieldset_lejemplo_fs"
+    <fieldset name="fieldset_lejemplo_fs"
         label="COM_JTCA_LEJEMPLOS_FIELDSET_LEJEMPLO_FS_LABEL"
         description="COM_JTCA_LEJEMPLOS_FIELDSET_LEJEMPLO_FS_DESC"
     >
-        <field
-            name="id_expediente"
+        <field name="id_expediente"
             type="modal_expedientes"
             label="COM_JTCA_LEJEMPLOS_FIELD_ID_EXPEDIENTE_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_ID_EXPEDIENTE_DESC"
@@ -93,8 +85,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="id_organo"
+        <field name="id_organo"
             type="sql"
             label="COM_JTCA_LEJEMPLOS_FIELD_ID_ORGANO_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_ID_ORGANO_DESC"
@@ -106,8 +97,7 @@
         >
             <option value="">COM_JTCA_LEJEMPLOS_SELECT_ID_ORGANO</option>
         </field>  
-        <field
-            name="id_secretaria"
+        <field name="id_secretaria"
             type="sql"
             label="COM_JTCA_LEJEMPLOS_FIELD_ID_SECRETARIA_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_ID_SECRETARIA_DESC"
@@ -119,8 +109,7 @@
         >
             <option value="">COM_JTCA_LEJEMPLOS_SELECT_ID_SECRETARIA</option>
         </field>  
-        <field
-            name="anoj"
+        <field name="anoj"
             type="text"
             label="COM_JTCA_LEJEMPLOS_FIELD_ANOJ_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_ANOJ_DESC"
@@ -129,8 +118,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="my_boolean"
+        <field name="my_boolean"
             type="checkbox"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_BOOLEAN_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_BOOLEAN_DESC"
@@ -138,8 +126,7 @@
 			value="1"
         >
         </field>  
-        <field
-            name="my_int"
+        <field name="my_int"
             type="integer"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_INT_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_INT_DESC"
@@ -148,8 +135,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="my_currency"
+        <field name="my_currency"
             type="currency"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_CURRENCY_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_CURRENCY_DESC"
@@ -158,8 +144,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="my_date"
+        <field name="my_date"
             type="calendar"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_DATE_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_DATE_DESC"
@@ -171,8 +156,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="my_datetime"
+        <field name="my_datetime"
             type="calendar"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_DATETIME_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_DATETIME_DESC"
@@ -184,8 +168,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="my_var45"
+        <field name="my_var45"
             type="text"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_VAR45_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_VAR45_DESC"
@@ -194,8 +177,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="txt_expediente"
+        <field name="txt_expediente"
             type="text"
             label="COM_JTCA_LEJEMPLOS_FIELD_TXT_EXPEDIENTE_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_TXT_EXPEDIENTE_DESC"
@@ -204,8 +186,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="my_var255"
+        <field name="my_var255"
             type="text"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_VAR255_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_VAR255_DESC"
@@ -214,15 +195,13 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="txt_my_suggest"
+        <field name="txt_my_suggest"
             type="combo_suggest"
             label="COM_JTCA_LEJEMPLOS_FIELD_TXT_MY_SUGGEST_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_TXT_MY_SUGGEST_DESC"
         >
         </field>  
-        <field
-            name="my_multiline"
+        <field name="my_multiline"
             type="editor"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_MULTILINE_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_MULTILINE_DESC"
@@ -235,29 +214,25 @@
 			default=""
         >
         </field>  
-        <field
-            name="my_ref2"
+        <field name="my_ref2"
             type="combo_sql"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_REF2_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_REF2_DESC"
         >
         </field>  
-        <field
-            name="my_ref"
+        <field name="my_ref"
             type="combo_sql"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_REF_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_REF_DESC"
         >
         </field>  
-        <field
-            name="id_my_suggest"
+        <field name="id_my_suggest"
             type="combo_suggest"
             label="COM_JTCA_LEJEMPLOS_FIELD_ID_MY_SUGGEST_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_ID_MY_SUGGEST_DESC"
         >
         </field>  
-        <field
-            name="my_NFempleado"
+        <field name="my_NFempleado"
             type="modal_firmaempleado"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_NFEMPLEADO_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_NFEMPLEADO_DESC"
@@ -265,8 +240,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="my_fexterna"
+        <field name="my_fexterna"
             type="modal_firma"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_FEXTERNA_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_FEXTERNA_DESC"
@@ -274,8 +248,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="my_hexterna"
+        <field name="my_hexterna"
             type="modal_huella"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_HEXTERNA_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_HEXTERNA_DESC"
@@ -283,8 +256,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="my_parent"
+        <field name="my_parent"
             type="modal_lejemplos"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_PARENT_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_PARENT_DESC"
@@ -292,8 +264,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="my_person_isMoral"
+        <field name="my_person_isMoral"
             type="person"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_ISMORAL_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_ISMORAL_DESC"
@@ -302,8 +273,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="my_person_paterno"
+        <field name="my_person_paterno"
             type="person"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_PATERNO_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_PATERNO_DESC"
@@ -312,8 +282,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="my_person_materno"
+        <field name="my_person_materno"
             type="person"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_MATERNO_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_MATERNO_DESC"
@@ -322,8 +291,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="my_person_nombre"
+        <field name="my_person_nombre"
             type="person"
             label="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_NOMBRE_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_MY_PERSON_NOMBRE_DESC"
@@ -333,18 +301,15 @@
         >
         </field>  
     </fieldset>
-    <fieldset
-        name="publishing"
+    <fieldset name="publishing"
 		label="COM_JTCA_FIELDSET_PUBLISHING_LABEL"
     >
-        <field
-            name="created_by"
+        <field name="created_by"
             type="user"
 			label="COM_JTCA_FIELD_CREATED_BY_LABEL"
 			description="COM_JTCA_LEJEMPLOS_FIELD_CREATED_BY_DESC"
 		/>
-        <field
-            name="created"
+        <field name="created"
             type="calendar"
             label="COM_JTCA_FIELD_CREATED_LABEL"
 			description="COM_JTCA_LEJEMPLOS_FIELD_CREATED_DESC"
@@ -352,8 +317,7 @@
 			format="%Y-%m-%d %H:%M:%S"
 			filter="user_utc"
 		/>
-        <field
-            name="modified"
+        <field name="modified"
             type="calendar"
 			label="COM_JTCA_FIELD_MODIFIED_LABEL"
 			description="COM_JTCA_LEJEMPLOS_FIELD_MODIFIED_DESC"
@@ -363,16 +327,14 @@
 			format="%Y-%m-%d %H:%M:%S"
 			filter="user_utc"
 		/>
-        <field
-            name="modified_by"
+        <field name="modified_by"
             type="user"
 		    label="COM_JTCA_FIELD_MODIFIED_BY_LABEL"
 		    class="readonly"
 		    readonly="true"
 		    filter="unset"
 		/>
-        <field
-            name="version"
+        <field name="version"
             type="text"
 			label="COM_JTCA_FIELD_VERSION_LABEL"
             description="COM_JTCA_LEJEMPLOS_FIELD_VERSION_DESC"

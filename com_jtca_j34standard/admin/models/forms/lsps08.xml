@@ -29,11 +29,9 @@
     addrulepath="/administrator/components/com_jtca/models/rules"
 
 >
-    <fieldset
-        name="basic_details"
+    <fieldset name="basic_details"
     >
-        <field
-		    name="id"
+        <field name="id"
 		    type="text"
             label="JGLOBAL_FIELD_ID_LABEL"
             description ="JGLOBAL_FIELD_ID_DESC"
@@ -41,16 +39,14 @@
 			class="readonly"
             default="0"
 		/>
-        <field
-            name="version_note"
+        <field name="version_note"
             type="text"
             label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
 			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
 			class="span12"
 			size="45"
 		/>
-        <field
-		    name="state"
+        <field name="state"
     		type="list"
 			label="JSTATUS"
 			description="COM_JTCA_LSPS08S_FIELD_STATUS_DESC"
@@ -63,28 +59,24 @@
             <option value="2">JARCHIVED</option>
             <option value="-2">JTRASH</option>
         </field>
-        <field
-            name="buttonspacer"
+        <field name="buttonspacer"
             type="spacer"
             label="JGLOBAL_ACTION_PERMISSIONS_LABEL"
             description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
         />
 
-        <field
-            name="ordering"
+        <field name="ordering"
 			label="JFIELD_ORDERING_LABEL"
 			description="JFIELD_ORDERING_DESC"
 			type="jtcaordering"
 			table="jt_lsps08s"
 		/>
     </fieldset>
-    <fieldset
-        name="fieldset_lsps08_fs"
+    <fieldset name="fieldset_lsps08_fs"
         label="COM_JTCA_LSPS08S_FIELDSET_LSPS08_FS_LABEL"
         description="COM_JTCA_LSPS08S_FIELDSET_LSPS08_FS_DESC"
     >
-        <field
-            name="id_expediente"
+        <field name="id_expediente"
             type="modal_expedientes"
             label="COM_JTCA_LSPS08S_FIELD_ID_EXPEDIENTE_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_ID_EXPEDIENTE_DESC"
@@ -93,8 +85,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="id_organo"
+        <field name="id_organo"
             type="sql"
             label="COM_JTCA_LSPS08S_FIELD_ID_ORGANO_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_ID_ORGANO_DESC"
@@ -106,8 +97,7 @@
         >
             <option value="">COM_JTCA_LSPS08S_SELECT_ID_ORGANO</option>
         </field>  
-        <field
-            name="id_secretaria"
+        <field name="id_secretaria"
             type="sql"
             label="COM_JTCA_LSPS08S_FIELD_ID_SECRETARIA_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_ID_SECRETARIA_DESC"
@@ -119,8 +109,7 @@
         >
             <option value="">COM_JTCA_LSPS08S_SELECT_ID_SECRETARIA</option>
         </field>  
-        <field
-            name="anoj"
+        <field name="anoj"
             type="text"
             label="COM_JTCA_LSPS08S_FIELD_ANOJ_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_ANOJ_DESC"
@@ -129,8 +118,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field2411"
+        <field name="field2411"
             type="calendar"
             label="COM_JTCA_LSPS08S_FIELD_FIELD2411_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_FIELD2411_DESC"
@@ -142,8 +130,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="field2412"
+        <field name="field2412"
             type="text"
             label="COM_JTCA_LSPS08S_FIELD_FIELD2412_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_FIELD2412_DESC"
@@ -152,8 +139,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field2413"
+        <field name="field2413"
             type="calendar"
             label="COM_JTCA_LSPS08S_FIELD_FIELD2413_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_FIELD2413_DESC"
@@ -165,8 +151,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="field2414_isMoral"
+        <field name="field2414_isMoral"
             type="person"
             label="COM_JTCA_LSPS08S_FIELD_FIELD2414_ISMORAL_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_FIELD2414_ISMORAL_DESC"
@@ -175,8 +160,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field2414_paterno"
+        <field name="field2414_paterno"
             type="person"
             label="COM_JTCA_LSPS08S_FIELD_FIELD2414_PATERNO_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_FIELD2414_PATERNO_DESC"
@@ -185,8 +169,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field2414_materno"
+        <field name="field2414_materno"
             type="person"
             label="COM_JTCA_LSPS08S_FIELD_FIELD2414_MATERNO_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_FIELD2414_MATERNO_DESC"
@@ -195,8 +178,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field2414_nombre"
+        <field name="field2414_nombre"
             type="person"
             label="COM_JTCA_LSPS08S_FIELD_FIELD2414_NOMBRE_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_FIELD2414_NOMBRE_DESC"
@@ -205,8 +187,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field2415"
+        <field name="field2415"
             type="calendar"
             label="COM_JTCA_LSPS08S_FIELD_FIELD2415_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_FIELD2415_DESC"
@@ -218,8 +199,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="field2416"
+        <field name="field2416"
             type="calendar"
             label="COM_JTCA_LSPS08S_FIELD_FIELD2416_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_FIELD2416_DESC"
@@ -231,8 +211,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="field2417"
+        <field name="field2417"
             type="text"
             label="COM_JTCA_LSPS08S_FIELD_FIELD2417_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_FIELD2417_DESC"
@@ -241,8 +220,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field2410"
+        <field name="field2410"
             type="text"
             label="COM_JTCA_LSPS08S_FIELD_FIELD2410_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_FIELD2410_DESC"
@@ -252,18 +230,15 @@
         >
         </field>  
     </fieldset>
-    <fieldset
-        name="publishing"
+    <fieldset name="publishing"
 		label="COM_JTCA_FIELDSET_PUBLISHING_LABEL"
     >
-        <field
-            name="created_by"
+        <field name="created_by"
             type="user"
 			label="COM_JTCA_FIELD_CREATED_BY_LABEL"
 			description="COM_JTCA_LSPS08S_FIELD_CREATED_BY_DESC"
 		/>
-        <field
-            name="created"
+        <field name="created"
             type="calendar"
             label="COM_JTCA_FIELD_CREATED_LABEL"
 			description="COM_JTCA_LSPS08S_FIELD_CREATED_DESC"
@@ -271,8 +246,7 @@
 			format="%Y-%m-%d %H:%M:%S"
 			filter="user_utc"
 		/>
-        <field
-            name="modified"
+        <field name="modified"
             type="calendar"
 			label="COM_JTCA_FIELD_MODIFIED_LABEL"
 			description="COM_JTCA_LSPS08S_FIELD_MODIFIED_DESC"
@@ -282,16 +256,14 @@
 			format="%Y-%m-%d %H:%M:%S"
 			filter="user_utc"
 		/>
-        <field
-            name="modified_by"
+        <field name="modified_by"
             type="user"
 		    label="COM_JTCA_FIELD_MODIFIED_BY_LABEL"
 		    class="readonly"
 		    readonly="true"
 		    filter="unset"
 		/>
-        <field
-            name="version"
+        <field name="version"
             type="text"
 			label="COM_JTCA_FIELD_VERSION_LABEL"
             description="COM_JTCA_LSPS08S_FIELD_VERSION_DESC"

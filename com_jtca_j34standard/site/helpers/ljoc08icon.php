@@ -390,8 +390,7 @@ class JHTMLLjoc08Icon
             {
                     $text = '<span class="icon-archive"></span>&#160;' . JText::_('JTOOLBAR_VERSIONS') . '&#160;';
             }
-            return '<a href="#" data-toggle="modal" data-target="#collapseModal" class2="btn btn-small" data-remote="'.
-			"index.php?option=com_jtca&task=ljoc08.showHistory&item_id={$ljoc08->id}".
-			'">'.$text.'</a>';
+//            return "<a href=\"index.php?option=com_jtca&task=ljoc08.showHistory&item_id={$ljoc08->id}\"  target=\"_blank\" onclick=\"window.open(this.href, this.target, 'width=800,height=600'); return false;\">{$text}</a>";
+			return "<a href=\"#\" onclick=\"show_collapsibleModal({$ljoc08->id});return false;\">{$text}</a>";
 	}
 }

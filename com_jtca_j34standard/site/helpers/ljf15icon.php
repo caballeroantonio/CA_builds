@@ -390,8 +390,7 @@ class JHTMLLjf15Icon
             {
                     $text = '<span class="icon-archive"></span>&#160;' . JText::_('JTOOLBAR_VERSIONS') . '&#160;';
             }
-            return '<a href="#" data-toggle="modal" data-target="#collapseModal" class2="btn btn-small" data-remote="'.
-			"index.php?option=com_jtca&task=ljf15.showHistory&item_id={$ljf15->id}".
-			'">'.$text.'</a>';
+//            return "<a href=\"index.php?option=com_jtca&task=ljf15.showHistory&item_id={$ljf15->id}\"  target=\"_blank\" onclick=\"window.open(this.href, this.target, 'width=800,height=600'); return false;\">{$text}</a>";
+			return "<a href=\"#\" onclick=\"show_collapsibleModal({$ljf15->id});return false;\">{$text}</a>";
 	}
 }

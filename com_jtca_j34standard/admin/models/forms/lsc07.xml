@@ -29,11 +29,9 @@
     addrulepath="/administrator/components/com_jtca/models/rules"
 
 >
-    <fieldset
-        name="basic_details"
+    <fieldset name="basic_details"
     >
-        <field
-		    name="id"
+        <field name="id"
 		    type="text"
             label="JGLOBAL_FIELD_ID_LABEL"
             description ="JGLOBAL_FIELD_ID_DESC"
@@ -41,16 +39,14 @@
 			class="readonly"
             default="0"
 		/>
-        <field
-            name="version_note"
+        <field name="version_note"
             type="text"
             label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
 			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
 			class="span12"
 			size="45"
 		/>
-        <field
-		    name="state"
+        <field name="state"
     		type="list"
 			label="JSTATUS"
 			description="COM_JTCA_LSC07S_FIELD_STATUS_DESC"
@@ -63,28 +59,24 @@
             <option value="2">JARCHIVED</option>
             <option value="-2">JTRASH</option>
         </field>
-        <field
-            name="buttonspacer"
+        <field name="buttonspacer"
             type="spacer"
             label="JGLOBAL_ACTION_PERMISSIONS_LABEL"
             description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
         />
 
-        <field
-            name="ordering"
+        <field name="ordering"
 			label="JFIELD_ORDERING_LABEL"
 			description="JFIELD_ORDERING_DESC"
 			type="jtcaordering"
 			table="jt_lsc07s"
 		/>
     </fieldset>
-    <fieldset
-        name="fieldset_lsc07_fs"
+    <fieldset name="fieldset_lsc07_fs"
         label="COM_JTCA_LSC07S_FIELDSET_LSC07_FS_LABEL"
         description="COM_JTCA_LSC07S_FIELDSET_LSC07_FS_DESC"
     >
-        <field
-            name="id_organo"
+        <field name="id_organo"
             type="sql"
             label="COM_JTCA_LSC07S_FIELD_ID_ORGANO_LABEL"
             description="COM_JTCA_LSC07S_FIELD_ID_ORGANO_DESC"
@@ -96,8 +88,7 @@
         >
             <option value="">COM_JTCA_LSC07S_SELECT_ID_ORGANO</option>
         </field>  
-        <field
-            name="id_expediente"
+        <field name="id_expediente"
             type="modal_expedientes"
             label="COM_JTCA_LSC07S_FIELD_ID_EXPEDIENTE_LABEL"
             description="COM_JTCA_LSC07S_FIELD_ID_EXPEDIENTE_DESC"
@@ -106,8 +97,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="id_secretaria"
+        <field name="id_secretaria"
             type="sql"
             label="COM_JTCA_LSC07S_FIELD_ID_SECRETARIA_LABEL"
             description="COM_JTCA_LSC07S_FIELD_ID_SECRETARIA_DESC"
@@ -119,8 +109,7 @@
         >
             <option value="">COM_JTCA_LSC07S_SELECT_ID_SECRETARIA</option>
         </field>  
-        <field
-            name="anoj"
+        <field name="anoj"
             type="text"
             label="COM_JTCA_LSC07S_FIELD_ANOJ_LABEL"
             description="COM_JTCA_LSC07S_FIELD_ANOJ_DESC"
@@ -129,8 +118,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field162"
+        <field name="field162"
             type="text"
             label="COM_JTCA_LSC07S_FIELD_FIELD162_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD162_DESC"
@@ -139,8 +127,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field163"
+        <field name="field163"
             type="text"
             label="COM_JTCA_LSC07S_FIELD_FIELD163_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD163_DESC"
@@ -149,8 +136,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field164_isMoral"
+        <field name="field164_isMoral"
             type="person"
             label="COM_JTCA_LSC07S_FIELD_FIELD164_ISMORAL_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD164_ISMORAL_DESC"
@@ -159,8 +145,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field164_paterno"
+        <field name="field164_paterno"
             type="person"
             label="COM_JTCA_LSC07S_FIELD_FIELD164_PATERNO_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD164_PATERNO_DESC"
@@ -169,8 +154,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field164_materno"
+        <field name="field164_materno"
             type="person"
             label="COM_JTCA_LSC07S_FIELD_FIELD164_MATERNO_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD164_MATERNO_DESC"
@@ -179,8 +163,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field164_nombre"
+        <field name="field164_nombre"
             type="person"
             label="COM_JTCA_LSC07S_FIELD_FIELD164_NOMBRE_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD164_NOMBRE_DESC"
@@ -189,8 +172,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field165"
+        <field name="field165"
             type="text"
             label="COM_JTCA_LSC07S_FIELD_FIELD165_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD165_DESC"
@@ -199,8 +181,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field166"
+        <field name="field166"
             type="text"
             label="COM_JTCA_LSC07S_FIELD_FIELD166_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD166_DESC"
@@ -209,8 +190,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field167_isMoral"
+        <field name="field167_isMoral"
             type="person"
             label="COM_JTCA_LSC07S_FIELD_FIELD167_ISMORAL_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD167_ISMORAL_DESC"
@@ -219,8 +199,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field167_paterno"
+        <field name="field167_paterno"
             type="person"
             label="COM_JTCA_LSC07S_FIELD_FIELD167_PATERNO_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD167_PATERNO_DESC"
@@ -229,8 +208,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field167_materno"
+        <field name="field167_materno"
             type="person"
             label="COM_JTCA_LSC07S_FIELD_FIELD167_MATERNO_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD167_MATERNO_DESC"
@@ -239,8 +217,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field167_nombre"
+        <field name="field167_nombre"
             type="person"
             label="COM_JTCA_LSC07S_FIELD_FIELD167_NOMBRE_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD167_NOMBRE_DESC"
@@ -249,8 +226,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="billete"
+        <field name="billete"
             type="text"
             label="COM_JTCA_LSC07S_FIELD_BILLETE_LABEL"
             description="COM_JTCA_LSC07S_FIELD_BILLETE_DESC"
@@ -259,8 +235,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field169"
+        <field name="field169"
             type="currency"
             label="COM_JTCA_LSC07S_FIELD_FIELD169_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD169_DESC"
@@ -269,8 +244,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="field169b"
+        <field name="field169b"
             type="text"
             label="COM_JTCA_LSC07S_FIELD_FIELD169B_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD169B_DESC"
@@ -279,8 +253,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field170"
+        <field name="field170"
             type="text"
             label="COM_JTCA_LSC07S_FIELD_FIELD170_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD170_DESC"
@@ -289,8 +262,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="field171"
+        <field name="field171"
             type="calendar"
             label="COM_JTCA_LSC07S_FIELD_FIELD171_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD171_DESC"
@@ -302,8 +274,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="field172"
+        <field name="field172"
             type="modal_firma"
             label="COM_JTCA_LSC07S_FIELD_FIELD172_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD172_DESC"
@@ -311,8 +282,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="field173"
+        <field name="field173"
             type="modal_firmaempleado"
             label="COM_JTCA_LSC07S_FIELD_FIELD173_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD173_DESC"
@@ -320,8 +290,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="field174"
+        <field name="field174"
             type="modal_firmaempleado"
             label="COM_JTCA_LSC07S_FIELD_FIELD174_LABEL"
             description="COM_JTCA_LSC07S_FIELD_FIELD174_DESC"
@@ -330,18 +299,15 @@
         >
         </field>  
     </fieldset>
-    <fieldset
-        name="publishing"
+    <fieldset name="publishing"
 		label="COM_JTCA_FIELDSET_PUBLISHING_LABEL"
     >
-        <field
-            name="created_by"
+        <field name="created_by"
             type="user"
 			label="COM_JTCA_FIELD_CREATED_BY_LABEL"
 			description="COM_JTCA_LSC07S_FIELD_CREATED_BY_DESC"
 		/>
-        <field
-            name="created"
+        <field name="created"
             type="calendar"
             label="COM_JTCA_FIELD_CREATED_LABEL"
 			description="COM_JTCA_LSC07S_FIELD_CREATED_DESC"
@@ -349,8 +315,7 @@
 			format="%Y-%m-%d %H:%M:%S"
 			filter="user_utc"
 		/>
-        <field
-            name="modified"
+        <field name="modified"
             type="calendar"
 			label="COM_JTCA_FIELD_MODIFIED_LABEL"
 			description="COM_JTCA_LSC07S_FIELD_MODIFIED_DESC"
@@ -360,16 +325,14 @@
 			format="%Y-%m-%d %H:%M:%S"
 			filter="user_utc"
 		/>
-        <field
-            name="modified_by"
+        <field name="modified_by"
             type="user"
 		    label="COM_JTCA_FIELD_MODIFIED_BY_LABEL"
 		    class="readonly"
 		    readonly="true"
 		    filter="unset"
 		/>
-        <field
-            name="version"
+        <field name="version"
             type="text"
 			label="COM_JTCA_FIELD_VERSION_LABEL"
             description="COM_JTCA_LSC07S_FIELD_VERSION_DESC"

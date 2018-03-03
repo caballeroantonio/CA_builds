@@ -19586,7 +19586,7 @@ architectcomp=jtca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`my_parent` INT(10) UNSIGNED  NOT NULL DEFAULT '0' my parent
+            FIELD_DB=`my_parent` INT(10) UNSIGNED  DEFAULT NULL my parent
             
             FIELD_NAME_LATEX=my parent
             FIELD_CODE_NAME_LATEX=my\_parent

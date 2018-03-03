@@ -463,16 +463,25 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('ljf14icon.create', $this->params); ?>
 	</form>
 </div>
+
 <?php if ($can_edit AND $params->get('save_history') AND $params->get('ljf14_save_history')) : ?>
 <script>
 jQuery(document).ready(function($) {
-   $('#collapseModal')
+   $('#collapsibleModal')
    .on('hide.bs.modal', function () {
         $(this).removeData('modal');
    });
 });
+
+function show_collapsibleModal(item_id){
+	jQuery('#collapsibleModal').modal('show');
+	var modalBody = jQuery(document).find('.modal-body');
+	modalBody.find('iframe').remove();
+	modalBody.prepend('<iframe class="iframe" src="index.php?option=com_jtca&task=ljf14.showHistory&item_id='+item_id+'" name="titulo" height="450"></iframe>');
+	return;
+}
 </script>
-<div id="collapseModal" tabindex="-1" class="modal hide fade">
+<div id="collapsibleModal" tabindex="-1" class="modal hide fade">
 	<div class="modal-header">
 			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
 				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>

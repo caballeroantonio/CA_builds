@@ -647,6 +647,6 @@ class JtCaControllerLcp03 extends JControllerForm
             $token = JSession::getFormToken();
             
             $this->setRedirect('index.php?option=com_contenthistory&view=history&layout=modal&tmpl=component'
-                    . "&item_id={$item_id}&type_id={$typeId}&type_alias={$model->typeAlias}&{$token}=1&wo_scripts=1");
+                    . "&item_id={$item_id}&type_id={$typeId}&type_alias={$model->typeAlias}&{$token}=1");
         }
 }
