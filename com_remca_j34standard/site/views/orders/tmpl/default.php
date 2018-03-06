@@ -114,7 +114,7 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php else : ?>
 		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="orders">
-			<?php if ($this->params->get('show_order_headings')) :?>
+			<?php if ($this->params->get('show_order_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -128,72 +128,72 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
-					<?php if ($this->params->get('list_show_order_fk_user_id',0)) : ?>
+					<?php if ($this->params->get('list_show_order_fk_user_id',1)) : ?>
 						<th class="list-fk_user_id" id="tableOrderingfk_user_id">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_FK_USER_ID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_order_fk_houses_htitle',0)) : ?>
+					<?php if ($this->params->get('list_show_order_fk_houses_htitle',1)) : ?>
 						<th class="list-fk_houses_htitle" id="tableOrderingfk_houses_htitle">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_FK_HOUSES_HTITLE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_order_email',0)) : ?>
+					<?php if ($this->params->get('list_show_order_email',1)) : ?>
 						<th class="list-email" id="tableOrderingemail">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_EMAIL'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_order_status',0)) : ?>
+					<?php if ($this->params->get('list_show_order_status',1)) : ?>
 						<th class="list-status" id="tableOrderingstatus">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_STATUS'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_order_order_date',0)) : ?>
+					<?php if ($this->params->get('list_show_order_order_date',1)) : ?>
 						<th class="list-order_date" id="tableOrderingorder_date">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_ORDER_DATE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_order_fk_house_id',0)) : ?>
+					<?php if ($this->params->get('list_show_order_fk_house_id',1)) : ?>
 						<th class="list-fk_house_id" id="tableOrderingfk_house_id">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_FK_HOUSE_ID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_order_txn_type',0)) : ?>
+					<?php if ($this->params->get('list_show_order_txn_type',1)) : ?>
 						<th class="list-txn_type" id="tableOrderingtxn_type">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_TXN_TYPE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_order_txn_id',0)) : ?>
+					<?php if ($this->params->get('list_show_order_txn_id',1)) : ?>
 						<th class="list-txn_id" id="tableOrderingtxn_id">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_TXN_ID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_order_payer_id',0)) : ?>
+					<?php if ($this->params->get('list_show_order_payer_id',1)) : ?>
 						<th class="list-payer_id" id="tableOrderingpayer_id">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_PAYER_ID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_order_payer_status',0)) : ?>
+					<?php if ($this->params->get('list_show_order_payer_status',1)) : ?>
 						<th class="list-payer_status" id="tableOrderingpayer_status">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_PAYER_STATUS'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_order_order_calculated_price',0)) : ?>
+					<?php if ($this->params->get('list_show_order_order_calculated_price',1)) : ?>
 						<th class="list-order_calculated_price" id="tableOrderingorder_calculated_price">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_ORDER_CALCULATED_PRICE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_order_order_price',0)) : ?>
+					<?php if ($this->params->get('list_show_order_order_price',1)) : ?>
 						<th class="list-order_price" id="tableOrderingorder_price">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_ORDER_PRICE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_order_order_currency_code',0)) : ?>
+					<?php if ($this->params->get('list_show_order_order_currency_code',1)) : ?>
 						<th class="list-order_currency_code" id="tableOrderingorder_currency_code">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_ORDER_CURRENCY_CODE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_order_paypal_paykay',0)) : ?>
+					<?php if ($this->params->get('list_show_order_paypal_paykay',1)) : ?>
 						<th class="list-paypal_paykay" id="tableOrderingpaypal_paykay">
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_HEADING_PAYPAL_PAYKAY'); ?>
 						</th>
@@ -235,7 +235,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</time>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_fk_user_id',0)) : ?>
+					<?php if ($this->params->get('list_show_order_fk_user_id',1)) : ?>
 						<td class="list-fk_user_id">
 							<?php 
 								if ($params->get('list_link_order_fk_user_id')) :
@@ -246,35 +246,35 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_fk_houses_htitle',0)) : ?>
+					<?php if ($this->params->get('list_show_order_fk_houses_htitle',1)) : ?>
 						<td class="list-fk_houses_htitle">
 							<?php 
 								echo $item->fk_houses_htitle != '' ? $item->fk_houses_htitle : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_email',0)) : ?>
+					<?php if ($this->params->get('list_show_order_email',1)) : ?>
 						<td class="list-email">
 							<?php 
 								echo $item->email != '' ? $item->email : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_status',0)) : ?>
+					<?php if ($this->params->get('list_show_order_status',1)) : ?>
 						<td class="list-status">
 							<?php 
 								echo $item->status != '' ? $item->status : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_order_date',0)) : ?>
+					<?php if ($this->params->get('list_show_order_order_date',1)) : ?>
 						<td class="list-order_date">
 							<?php 
 								echo ($item->order_date != '' AND $item->order_date != '0000-00-00 00:00:00') ? JHtml::date($item->order_date, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_fk_house_id',0)) : ?>
+					<?php if ($this->params->get('list_show_order_fk_house_id',1)) : ?>
 						<td class="list-fk_house_id">
 							<?php 
 								if ($params->get('list_link_order_fk_house_id')) :
@@ -285,56 +285,56 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_txn_type',0)) : ?>
+					<?php if ($this->params->get('list_show_order_txn_type',1)) : ?>
 						<td class="list-txn_type">
 							<?php 
 								echo $item->txn_type != '' ? $item->txn_type : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_txn_id',0)) : ?>
+					<?php if ($this->params->get('list_show_order_txn_id',1)) : ?>
 						<td class="list-txn_id">
 							<?php 
 								echo $item->txn_id != '' ? $item->txn_id : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_payer_id',0)) : ?>
+					<?php if ($this->params->get('list_show_order_payer_id',1)) : ?>
 						<td class="list-payer_id">
 							<?php 
 								echo $item->payer_id != '' ? $item->payer_id : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_payer_status',0)) : ?>
+					<?php if ($this->params->get('list_show_order_payer_status',1)) : ?>
 						<td class="list-payer_status">
 							<?php 
 								echo $item->payer_status != '' ? $item->payer_status : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_order_calculated_price',0)) : ?>
+					<?php if ($this->params->get('list_show_order_order_calculated_price',1)) : ?>
 						<td class="list-order_calculated_price">
 							<?php 
 								echo $item->order_calculated_price != '' ? $item->order_calculated_price : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_order_price',0)) : ?>
+					<?php if ($this->params->get('list_show_order_order_price',1)) : ?>
 						<td class="list-order_price">
 							<?php 
 								echo $item->order_price != '' ? $item->order_price : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_order_currency_code',0)) : ?>
+					<?php if ($this->params->get('list_show_order_order_currency_code',1)) : ?>
 						<td class="list-order_currency_code">
 							<?php 
 								echo $item->order_currency_code != '' ? $item->order_currency_code : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_order_paypal_paykay',0)) : ?>
+					<?php if ($this->params->get('list_show_order_paypal_paykay',1)) : ?>
 						<td class="list-paypal_paykay">
 							<?php 
 								echo $item->paypal_paykay != '' ? $item->paypal_paykay : $empty;
@@ -346,20 +346,20 @@ $empty = $component->params->get('default_empty_field', '');
                         	<div class="btn-group pull-right">
                                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
                                 <ul class="dropdown-menu">
-							<?php if ($params->get('show_house_print_icon')) : ?>
+							<?php if ($params->get('show_order_print_icon')) : ?>
 								<li class="print-icon">
-										<?php echo JHtml::_('houseicon.print_popup',  $item, $params); ?>
+										<?php echo JHtml::_('ordericon.print_popup',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
 
-							<?php if ($params->get('show_house_email_icon')) : ?>
+							<?php if ($params->get('show_order_email_icon')) : ?>
 								<li class="email-icon">
-										<?php echo JHtml::_('houseicon.email',  $item, $params); ?>
+										<?php echo JHtml::_('ordericon.email',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
-							<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('order_save_history')) : ?>
 								<li class="version-icon">
-									<?php echo JHtml::_('houseicon.versions',$item, $params); ?>
+									<?php echo JHtml::_('ordericon.versions',$item, $params); ?>
 								</li>	
 							<?php endif; ?>	
                                 </ul>
@@ -401,16 +401,25 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('ordericon.create', $this->params); ?>
 	</form>
 </div>
-<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('order_save_history')) : ?>
 <script>
 jQuery(document).ready(function($) {
-   $('#collapseModal')
+   $('#collapsibleModal')
    .on('hide.bs.modal', function () {
         $(this).removeData('modal');
    });
 });
+
+function show_collapsibleModal(item_id){
+	jQuery('#collapsibleModal').modal('show');
+	var modalBody = jQuery(document).find('.modal-body');
+	modalBody.find('iframe').remove();
+	modalBody.prepend('<iframe class="iframe" src="index.php?option=com_remca&task=order.showHistory&item_id='+item_id+'" name="titulo" height="450"></iframe>');
+	return;
+}
 </script>
-<div id="collapseModal" tabindex="-1" class="modal hide fade">
+<div id="collapsibleModal" tabindex="-1" class="modal hide fade">
 	<div class="modal-header">
 			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
 				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>

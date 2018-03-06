@@ -45,7 +45,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) NOT NULL DEFAULT '0' iditem
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' iditem
 
                 FIELD_NAME_LATEX=iditem
                 FIELD_CODE_NAME_LATEX=iditem
@@ -70,7 +70,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) NOT NULL DEFAULT '0' idcat
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' idcat
 
                 FIELD_NAME_LATEX=idcat
                 FIELD_CODE_NAME_LATEX=idcat

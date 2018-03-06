@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `description` MEDIUMTEXT NOT NULL,
   `houseid` VARCHAR(20) NOT NULL DEFAULT '' COMMENT 'houseid',
   `sid` INT(11) DEFAULT NULL COMMENT 'sid',
-  `fk_rentid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_rentid',
+  `fk_rentid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_rentid',
   `associate_house` VARCHAR(255) DEFAULT NULL COMMENT 'associate_house',
   `link` VARCHAR(250) NOT NULL DEFAULT '' COMMENT 'link',
   `listing_type` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'listing_type',
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `extra9` VARCHAR(250) DEFAULT NULL COMMENT 'extra9',
   `extra10` VARCHAR(250) DEFAULT NULL COMMENT 'extra10',
   `energy_value` DECIMAL(11,2) DEFAULT NULL COMMENT 'energy_value',
-  `owner_id` INT(10) NOT NULL DEFAULT '0' COMMENT 'owner_id',
+  `owner_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'owner_id',
   `climate_value` DECIMAL(11,2) DEFAULT NULL COMMENT 'climate_value',
   `catid` INT(10) UNSIGNED DEFAULT NULL COMMENT 'FK to categories in #__categories', # NOT NULL DEFAULT '0'
   KEY `idx_catid` (`catid`),
@@ -167,12 +167,12 @@ CREATE TABLE IF NOT EXISTS `#__rem_mls_for_delete` (
 CREATE TABLE IF NOT EXISTS `#__rem_orders` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL DEFAULT '',
-  `fk_user_id` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_user_id',
+  `fk_user_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_user_id',
   `fk_houses_htitle` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'fk_houses_htitle',
   `email` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'email',
   `status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'status',
   `order_date` DATETIME DEFAULT NULL COMMENT 'order_date',
-  `fk_house_id` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
+  `fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
   `txn_type` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_type',
   `txn_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_id',
   `payer_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_id',
@@ -193,13 +193,13 @@ CREATE TABLE IF NOT EXISTS `#__rem_orders` (
 CREATE TABLE IF NOT EXISTS `#__rem_orders_details` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL DEFAULT '',
-  `fk_order_id` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_order_id',
-  `fk_user_id` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_user_id',
+  `fk_order_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_order_id',
+  `fk_user_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_user_id',
   `fk_houses_htitle` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'fk_houses_htitle',
   `email` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'email',
   `status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'status',
   `order_date` DATETIME DEFAULT NULL COMMENT 'order_date',
-  `fk_house_id` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
+  `fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
   `txn_type` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_type',
   `txn_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_id',
   `payer_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_id',
@@ -220,7 +220,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_orders_details` (
 #DROP TABLE IF EXISTS `#__rem_photos`;
 CREATE TABLE IF NOT EXISTS `#__rem_photos` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
+  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
   `thumbnail_img` VARCHAR(250) DEFAULT NULL COMMENT 'thumbnail_img',
   `main_img` VARCHAR(250) DEFAULT NULL COMMENT 'main_img',
   `img_ordering` INT(11) DEFAULT NULL COMMENT 'img_ordering',
@@ -236,8 +236,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_photos` (
 CREATE TABLE IF NOT EXISTS `#__rem_rent` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL DEFAULT '',
-  `fk_houseid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
-  `fk_userid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_userid',
+  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
+  `fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_userid',
   `rent_from` DATETIME DEFAULT NULL COMMENT 'rent_from',
   `rent_until` DATETIME DEFAULT NULL COMMENT 'rent_until',
   `rent_return` DATETIME DEFAULT NULL COMMENT 'rent_return',
@@ -258,8 +258,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_rent` (
 #DROP TABLE IF EXISTS `#__rem_rent_request`;
 CREATE TABLE IF NOT EXISTS `#__rem_rent_request` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
-  `fk_userid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_userid',
+  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
+  `fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_userid',
   `rent_from` DATETIME DEFAULT NULL COMMENT 'rent_from',
   `rent_until` DATETIME DEFAULT NULL COMMENT 'rent_until',
   `rent_request` DATETIME DEFAULT NULL COMMENT 'rent_request',
@@ -281,7 +281,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_rent_request` (
 #DROP TABLE IF EXISTS `#__rem_rent_sal`;
 CREATE TABLE IF NOT EXISTS `#__rem_rent_sal` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
+  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
   `monthW` INT(4) DEFAULT NULL COMMENT 'monthW',
   `yearW` INT(4) DEFAULT NULL COMMENT 'yearW',
   `week` VARCHAR(1250) DEFAULT NULL COMMENT 'week',
@@ -303,8 +303,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_rent_sal` (
 #DROP TABLE IF EXISTS `#__rem_review`;
 CREATE TABLE IF NOT EXISTS `#__rem_review` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
-  `fk_userid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_userid',
+  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
+  `fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_userid',
   `user_name` VARCHAR(150) DEFAULT NULL COMMENT 'user_name',
   `user_email` VARCHAR(100) DEFAULT NULL COMMENT 'user_email',
   `date` DATETIME DEFAULT NULL COMMENT 'date',
@@ -324,7 +324,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_review` (
 #DROP TABLE IF EXISTS `#__rem_track_source`;
 CREATE TABLE IF NOT EXISTS `#__rem_track_source` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_house_id` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
+  `fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
   `sequence_number` INT(11) DEFAULT NULL COMMENT 'sequence_number',
   `src` VARCHAR(255) DEFAULT NULL COMMENT 'src',
   `kind` VARCHAR(255) DEFAULT NULL COMMENT 'kind',
@@ -341,8 +341,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_track_source` (
 #DROP TABLE IF EXISTS `#__rem_users_wishlist`;
 CREATE TABLE IF NOT EXISTS `#__rem_users_wishlist` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
-  `fk_userid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_userid',
+  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
+  `fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_userid',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
   
@@ -354,7 +354,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_users_wishlist` (
 #DROP TABLE IF EXISTS `#__rem_video_source`;
 CREATE TABLE IF NOT EXISTS `#__rem_video_source` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_house_id` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
+  `fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
   `sequence_number` INT(11) DEFAULT NULL COMMENT 'sequence_number',
   `src` VARCHAR(255) DEFAULT NULL COMMENT 'src',
   `type` VARCHAR(255) DEFAULT NULL COMMENT 'type',
@@ -371,8 +371,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_video_source` (
 #DROP TABLE IF EXISTS `#__rem_buying_request`;
 CREATE TABLE IF NOT EXISTS `#__rem_buying_request` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
-  `fk_userid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_userid',
+  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
+  `fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_userid',
   `buying_request` DATETIME DEFAULT NULL COMMENT 'buying_request',
   `customer_name` VARCHAR(250) DEFAULT NULL COMMENT 'customer_name',
   `customer_email` VARCHAR(250) DEFAULT NULL COMMENT 'customer_email',
@@ -393,8 +393,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_buying_request` (
 #DROP TABLE IF EXISTS `#__rem_categories`;
 CREATE TABLE IF NOT EXISTS `#__rem_categories` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `iditem` INT(10) NOT NULL DEFAULT '0' COMMENT 'iditem',
-  `idcat` INT(10) NOT NULL DEFAULT '0' COMMENT 'idcat',
+  `iditem` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'iditem',
+  `idcat` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'idcat',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
   
@@ -420,8 +420,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_const` (
 #DROP TABLE IF EXISTS `#__rem_const_language`;
 CREATE TABLE IF NOT EXISTS `#__rem_const_language` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_constid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_constid',
-  `fk_languagesid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_languagesid',
+  `fk_constid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_constid',
+  `fk_languagesid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_languagesid',
   `value_const` VARCHAR(2000) DEFAULT NULL COMMENT 'value_const',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
@@ -450,8 +450,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_feature` (
 #DROP TABLE IF EXISTS `#__rem_feature_houses`;
 CREATE TABLE IF NOT EXISTS `#__rem_feature_houses` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
-  `fk_featureid` INT(10) NOT NULL DEFAULT '0' COMMENT 'fk_featureid',
+  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
+  `fk_featureid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_featureid',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
   
@@ -499,7 +499,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"description","core_hits":"hits","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"language","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"catid","core_xreference":"null","asset_id":"asset_id"}}',
 'remcaHelperRoute::gethouseRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/house.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/house.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -510,7 +510,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"alias","core_created_time":"null","core_modified_time":"null","core_body":"description","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"access","core_params":"params","core_featured":"null","core_metadata":"null","core_language":"language","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"asset_id"}}',
 'remcaHelperRoute::getmain_categoryRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/main_category.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/main_category.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -521,7 +521,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getmime_typeRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/mime_type.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/mime_type.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -532,7 +532,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getmls_for_deleteRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/mls_for_delete.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/mls_for_delete.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -543,7 +543,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getorderRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/order.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/order.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -554,7 +554,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getorders_detailRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/orders_detail.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/orders_detail.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -565,7 +565,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getphotoRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/photo.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/photo.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -576,7 +576,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getrentRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/rent.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/rent.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -587,7 +587,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getrent_requestRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/rent_request.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/rent_request.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -598,7 +598,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getrent_salRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/rent_sal.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/rent_sal.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -609,7 +609,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getreviewRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/review.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/review.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -620,7 +620,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::gettrack_sourceRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/track_source.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/track_source.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -631,7 +631,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getusers_wishlistRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/users_wishlist.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/users_wishlist.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -642,7 +642,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getvideo_sourceRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/video_source.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/video_source.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -653,7 +653,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getbuying_requestRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/buying_request.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/buying_request.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -664,7 +664,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getcategoryRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/category.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/category.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -675,7 +675,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getconstRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/const.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/const.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -686,7 +686,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getconst_languageRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/const_language.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/const_language.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -697,7 +697,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getfeatureRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/feature.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/feature.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -708,7 +708,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getfeature_houseRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/feature_house.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/feature_house.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
@@ -719,7 +719,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getlanguageRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/language.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by","modified","checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/language.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`

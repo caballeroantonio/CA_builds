@@ -45,7 +45,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) NOT NULL DEFAULT '0' fk_houseid
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
 
                 FIELD_NAME_LATEX=fk\_houseid
                 FIELD_CODE_NAME_LATEX=fk\_houseid
@@ -70,7 +70,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) NOT NULL DEFAULT '0' fk_featureid
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_featureid
 
                 FIELD_NAME_LATEX=fk\_featureid
                 FIELD_CODE_NAME_LATEX=fk\_featureid

@@ -45,7 +45,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) NOT NULL DEFAULT '0' fk_house_id
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_house_id
 
                 FIELD_NAME_LATEX=fk\_house\_id
                 FIELD_CODE_NAME_LATEX=fk\_house\_id

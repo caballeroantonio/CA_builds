@@ -357,8 +357,7 @@ class JHTMLOrdersDetailIcon
             {
                     $text = '<span class="icon-archive"></span>&#160;' . JText::_('JTOOLBAR_VERSIONS') . '&#160;';
             }
-            return '<a href="#" data-toggle="modal" data-target="#collapseModal" class2="btn btn-small" data-remote="'.
-			"index.php?option=com_remca&task=ordersdetail.showHistory&item_id={$ordersdetail->id}".
-			'">'.$text.'</a>';
+//            return "<a href=\"index.php?option=com_remca&task=ordersdetail.showHistory&item_id={$ordersdetail->id}\"  target=\"_blank\" onclick=\"window.open(this.href, this.target, 'width=800,height=600'); return false;\">{$text}</a>";
+			return "<a href=\"#\" onclick=\"show_collapsibleModal({$ordersdetail->id});return false;\">{$text}</a>";
 	}
 }

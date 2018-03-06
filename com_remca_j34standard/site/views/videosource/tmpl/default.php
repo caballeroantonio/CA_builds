@@ -114,7 +114,7 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php else : ?>
 		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="video_source">
-			<?php if ($this->params->get('show_videosource_headings')) :?>
+			<?php if ($this->params->get('show_videosource_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -125,32 +125,32 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
-					<?php if ($this->params->get('list_show_videosource_fk_house_id',0)) : ?>
+					<?php if ($this->params->get('list_show_videosource_fk_house_id',1)) : ?>
 						<th class="list-fk_house_id" id="tableOrderingfk_house_id">
 							<?php echo JTEXT::_('COM_REMCA_VIDEO_SOURCE_HEADING_FK_HOUSE_ID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_videosource_sequence_number',0)) : ?>
+					<?php if ($this->params->get('list_show_videosource_sequence_number',1)) : ?>
 						<th class="list-sequence_number" id="tableOrderingsequence_number">
 							<?php echo JTEXT::_('COM_REMCA_VIDEO_SOURCE_HEADING_SEQUENCE_NUMBER'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_videosource_src',0)) : ?>
+					<?php if ($this->params->get('list_show_videosource_src',1)) : ?>
 						<th class="list-src" id="tableOrderingsrc">
 							<?php echo JTEXT::_('COM_REMCA_VIDEO_SOURCE_HEADING_SRC'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_videosource_type',0)) : ?>
+					<?php if ($this->params->get('list_show_videosource_type',1)) : ?>
 						<th class="list-type" id="tableOrderingtype">
 							<?php echo JTEXT::_('COM_REMCA_VIDEO_SOURCE_HEADING_TYPE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_videosource_media',0)) : ?>
+					<?php if ($this->params->get('list_show_videosource_media',1)) : ?>
 						<th class="list-media" id="tableOrderingmedia">
 							<?php echo JTEXT::_('COM_REMCA_VIDEO_SOURCE_HEADING_MEDIA'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_videosource_youtube',0)) : ?>
+					<?php if ($this->params->get('list_show_videosource_youtube',1)) : ?>
 						<th class="list-youtube" id="tableOrderingyoutube">
 							<?php echo JTEXT::_('COM_REMCA_VIDEO_SOURCE_HEADING_YOUTUBE'); ?>
 						</th>
@@ -184,7 +184,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</time>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_videosource_fk_house_id',0)) : ?>
+					<?php if ($this->params->get('list_show_videosource_fk_house_id',1)) : ?>
 						<td class="list-fk_house_id">
 							<?php 
 								if ($params->get('list_link_videosource_fk_house_id')) :
@@ -195,35 +195,35 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_videosource_sequence_number',0)) : ?>
+					<?php if ($this->params->get('list_show_videosource_sequence_number',1)) : ?>
 						<td class="list-sequence_number">
 							<?php 
 								echo $item->sequence_number != '' ? $item->sequence_number : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_videosource_src',0)) : ?>
+					<?php if ($this->params->get('list_show_videosource_src',1)) : ?>
 						<td class="list-src">
 							<?php 
 								echo $item->src != '' ? $item->src : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_videosource_type',0)) : ?>
+					<?php if ($this->params->get('list_show_videosource_type',1)) : ?>
 						<td class="list-type">
 							<?php 
 								echo $item->type != '' ? $item->type : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_videosource_media',0)) : ?>
+					<?php if ($this->params->get('list_show_videosource_media',1)) : ?>
 						<td class="list-media">
 							<?php 
 								echo $item->media != '' ? $item->media : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_videosource_youtube',0)) : ?>
+					<?php if ($this->params->get('list_show_videosource_youtube',1)) : ?>
 						<td class="list-youtube">
 							<?php 
 								echo $item->youtube != '' ? $item->youtube : $empty;
@@ -235,20 +235,20 @@ $empty = $component->params->get('default_empty_field', '');
                         	<div class="btn-group pull-right">
                                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
                                 <ul class="dropdown-menu">
-							<?php if ($params->get('show_house_print_icon')) : ?>
+							<?php if ($params->get('show_videosource_print_icon')) : ?>
 								<li class="print-icon">
-										<?php echo JHtml::_('houseicon.print_popup',  $item, $params); ?>
+										<?php echo JHtml::_('videosourceicon.print_popup',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
 
-							<?php if ($params->get('show_house_email_icon')) : ?>
+							<?php if ($params->get('show_videosource_email_icon')) : ?>
 								<li class="email-icon">
-										<?php echo JHtml::_('houseicon.email',  $item, $params); ?>
+										<?php echo JHtml::_('videosourceicon.email',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
-							<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('videosource_save_history')) : ?>
 								<li class="version-icon">
-									<?php echo JHtml::_('houseicon.versions',$item, $params); ?>
+									<?php echo JHtml::_('videosourceicon.versions',$item, $params); ?>
 								</li>	
 							<?php endif; ?>	
                                 </ul>
@@ -290,16 +290,25 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('videosourceicon.create', $this->params); ?>
 	</form>
 </div>
-<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('videosource_save_history')) : ?>
 <script>
 jQuery(document).ready(function($) {
-   $('#collapseModal')
+   $('#collapsibleModal')
    .on('hide.bs.modal', function () {
         $(this).removeData('modal');
    });
 });
+
+function show_collapsibleModal(item_id){
+	jQuery('#collapsibleModal').modal('show');
+	var modalBody = jQuery(document).find('.modal-body');
+	modalBody.find('iframe').remove();
+	modalBody.prepend('<iframe class="iframe" src="index.php?option=com_remca&task=videosource.showHistory&item_id='+item_id+'" name="titulo" height="450"></iframe>');
+	return;
+}
 </script>
-<div id="collapseModal" tabindex="-1" class="modal hide fade">
+<div id="collapsibleModal" tabindex="-1" class="modal hide fade">
 	<div class="modal-header">
 			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
 				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>

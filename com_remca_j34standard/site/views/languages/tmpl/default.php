@@ -114,7 +114,7 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php else : ?>
 		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="languages">
-			<?php if ($this->params->get('show_language_headings')) :?>
+			<?php if ($this->params->get('show_language_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -128,17 +128,17 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
-					<?php if ($this->params->get('list_show_language_lang_code',0)) : ?>
+					<?php if ($this->params->get('list_show_language_lang_code',1)) : ?>
 						<th class="list-lang_code" id="tableOrderinglang_code">
 							<?php echo JTEXT::_('COM_REMCA_LANGUAGES_HEADING_LANG_CODE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_language_title',0)) : ?>
+					<?php if ($this->params->get('list_show_language_title',1)) : ?>
 						<th class="list-title" id="tableOrderingtitle">
 							<?php echo JTEXT::_('COM_REMCA_LANGUAGES_HEADING_TITLE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_language_sef',0)) : ?>
+					<?php if ($this->params->get('list_show_language_sef',1)) : ?>
 						<th class="list-sef" id="tableOrderingsef">
 							<?php echo JTEXT::_('COM_REMCA_LANGUAGES_HEADING_SEF'); ?>
 						</th>
@@ -180,21 +180,21 @@ $empty = $component->params->get('default_empty_field', '');
 							</time>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_language_lang_code',0)) : ?>
+					<?php if ($this->params->get('list_show_language_lang_code',1)) : ?>
 						<td class="list-lang_code">
 							<?php 
 								echo $item->lang_code != '' ? $item->lang_code : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_language_title',0)) : ?>
+					<?php if ($this->params->get('list_show_language_title',1)) : ?>
 						<td class="list-title">
 							<?php 
 								echo $item->title != '' ? $item->title : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_language_sef',0)) : ?>
+					<?php if ($this->params->get('list_show_language_sef',1)) : ?>
 						<td class="list-sef">
 							<?php 
 								echo $item->sef != '' ? $item->sef : $empty;
@@ -206,20 +206,20 @@ $empty = $component->params->get('default_empty_field', '');
                         	<div class="btn-group pull-right">
                                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
                                 <ul class="dropdown-menu">
-							<?php if ($params->get('show_house_print_icon')) : ?>
+							<?php if ($params->get('show_language_print_icon')) : ?>
 								<li class="print-icon">
-										<?php echo JHtml::_('houseicon.print_popup',  $item, $params); ?>
+										<?php echo JHtml::_('languageicon.print_popup',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
 
-							<?php if ($params->get('show_house_email_icon')) : ?>
+							<?php if ($params->get('show_language_email_icon')) : ?>
 								<li class="email-icon">
-										<?php echo JHtml::_('houseicon.email',  $item, $params); ?>
+										<?php echo JHtml::_('languageicon.email',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
-							<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('language_save_history')) : ?>
 								<li class="version-icon">
-									<?php echo JHtml::_('houseicon.versions',$item, $params); ?>
+									<?php echo JHtml::_('languageicon.versions',$item, $params); ?>
 								</li>	
 							<?php endif; ?>	
                                 </ul>
@@ -261,16 +261,25 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('languageicon.create', $this->params); ?>
 	</form>
 </div>
-<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('language_save_history')) : ?>
 <script>
 jQuery(document).ready(function($) {
-   $('#collapseModal')
+   $('#collapsibleModal')
    .on('hide.bs.modal', function () {
         $(this).removeData('modal');
    });
 });
+
+function show_collapsibleModal(item_id){
+	jQuery('#collapsibleModal').modal('show');
+	var modalBody = jQuery(document).find('.modal-body');
+	modalBody.find('iframe').remove();
+	modalBody.prepend('<iframe class="iframe" src="index.php?option=com_remca&task=language.showHistory&item_id='+item_id+'" name="titulo" height="450"></iframe>');
+	return;
+}
 </script>
-<div id="collapseModal" tabindex="-1" class="modal hide fade">
+<div id="collapsibleModal" tabindex="-1" class="modal hide fade">
 	<div class="modal-header">
 			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
 				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>

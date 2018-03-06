@@ -114,7 +114,7 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php else : ?>
 		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="rent">
-			<?php if ($this->params->get('show_rent_headings')) :?>
+			<?php if ($this->params->get('show_rent_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -128,42 +128,42 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
-					<?php if ($this->params->get('list_show_rent_fk_houseid',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_fk_houseid',1)) : ?>
 						<th class="list-fk_houseid" id="tableOrderingfk_houseid">
 							<?php echo JTEXT::_('COM_REMCA_RENT_HEADING_FK_HOUSEID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_rent_fk_userid',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_fk_userid',1)) : ?>
 						<th class="list-fk_userid" id="tableOrderingfk_userid">
 							<?php echo JTEXT::_('COM_REMCA_RENT_HEADING_FK_USERID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_rent_rent_from',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_rent_from',1)) : ?>
 						<th class="list-rent_from" id="tableOrderingrent_from">
 							<?php echo JTEXT::_('COM_REMCA_RENT_HEADING_RENT_FROM'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_rent_rent_until',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_rent_until',1)) : ?>
 						<th class="list-rent_until" id="tableOrderingrent_until">
 							<?php echo JTEXT::_('COM_REMCA_RENT_HEADING_RENT_UNTIL'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_rent_rent_return',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_rent_return',1)) : ?>
 						<th class="list-rent_return" id="tableOrderingrent_return">
 							<?php echo JTEXT::_('COM_REMCA_RENT_HEADING_RENT_RETURN'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_rent_user_name',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_user_name',1)) : ?>
 						<th class="list-user_name" id="tableOrderinguser_name">
 							<?php echo JTEXT::_('COM_REMCA_RENT_HEADING_USER_NAME'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_rent_user_email',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_user_email',1)) : ?>
 						<th class="list-user_email" id="tableOrderinguser_email">
 							<?php echo JTEXT::_('COM_REMCA_RENT_HEADING_USER_EMAIL'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_rent_user_mailing',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_user_mailing',1)) : ?>
 						<th class="list-user_mailing" id="tableOrderinguser_mailing">
 							<?php echo JTEXT::_('COM_REMCA_RENT_HEADING_USER_MAILING'); ?>
 						</th>
@@ -205,7 +205,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</time>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_rent_fk_houseid',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_fk_houseid',1)) : ?>
 						<td class="list-fk_houseid">
 							<?php 
 								if ($params->get('list_link_rent_fk_houseid')) :
@@ -216,7 +216,7 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_rent_fk_userid',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_fk_userid',1)) : ?>
 						<td class="list-fk_userid">
 							<?php 
 								if ($params->get('list_link_rent_fk_userid')) :
@@ -227,42 +227,42 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_rent_rent_from',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_rent_from',1)) : ?>
 						<td class="list-rent_from">
 							<?php 
 								echo ($item->rent_from != '' AND $item->rent_from != '0000-00-00 00:00:00') ? JHtml::date($item->rent_from, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_rent_rent_until',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_rent_until',1)) : ?>
 						<td class="list-rent_until">
 							<?php 
 								echo ($item->rent_until != '' AND $item->rent_until != '0000-00-00 00:00:00') ? JHtml::date($item->rent_until, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_rent_rent_return',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_rent_return',1)) : ?>
 						<td class="list-rent_return">
 							<?php 
 								echo ($item->rent_return != '' AND $item->rent_return != '0000-00-00 00:00:00') ? JHtml::date($item->rent_return, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_rent_user_name',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_user_name',1)) : ?>
 						<td class="list-user_name">
 							<?php 
 								echo $item->user_name != '' ? $item->user_name : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_rent_user_email',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_user_email',1)) : ?>
 						<td class="list-user_email">
 							<?php 
 								echo $item->user_email != '' ? $item->user_email : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_rent_user_mailing',0)) : ?>
+					<?php if ($this->params->get('list_show_rent_user_mailing',1)) : ?>
 						<td class="list-user_mailing">
 							<?php 
 								echo $item->user_mailing != '' ? $item->user_mailing : $empty;
@@ -274,20 +274,20 @@ $empty = $component->params->get('default_empty_field', '');
                         	<div class="btn-group pull-right">
                                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
                                 <ul class="dropdown-menu">
-							<?php if ($params->get('show_house_print_icon')) : ?>
+							<?php if ($params->get('show_rent_print_icon')) : ?>
 								<li class="print-icon">
-										<?php echo JHtml::_('houseicon.print_popup',  $item, $params); ?>
+										<?php echo JHtml::_('renticon.print_popup',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
 
-							<?php if ($params->get('show_house_email_icon')) : ?>
+							<?php if ($params->get('show_rent_email_icon')) : ?>
 								<li class="email-icon">
-										<?php echo JHtml::_('houseicon.email',  $item, $params); ?>
+										<?php echo JHtml::_('renticon.email',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
-							<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('rent_save_history')) : ?>
 								<li class="version-icon">
-									<?php echo JHtml::_('houseicon.versions',$item, $params); ?>
+									<?php echo JHtml::_('renticon.versions',$item, $params); ?>
 								</li>	
 							<?php endif; ?>	
                                 </ul>
@@ -329,16 +329,25 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('renticon.create', $this->params); ?>
 	</form>
 </div>
-<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('rent_save_history')) : ?>
 <script>
 jQuery(document).ready(function($) {
-   $('#collapseModal')
+   $('#collapsibleModal')
    .on('hide.bs.modal', function () {
         $(this).removeData('modal');
    });
 });
+
+function show_collapsibleModal(item_id){
+	jQuery('#collapsibleModal').modal('show');
+	var modalBody = jQuery(document).find('.modal-body');
+	modalBody.find('iframe').remove();
+	modalBody.prepend('<iframe class="iframe" src="index.php?option=com_remca&task=rent.showHistory&item_id='+item_id+'" name="titulo" height="450"></iframe>');
+	return;
+}
 </script>
-<div id="collapseModal" tabindex="-1" class="modal hide fade">
+<div id="collapsibleModal" tabindex="-1" class="modal hide fade">
 	<div class="modal-header">
 			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
 				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>

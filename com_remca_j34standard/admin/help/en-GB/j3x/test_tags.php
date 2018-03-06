@@ -62,6 +62,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=houseid
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -82,6 +83,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=sid
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -96,7 +98,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_rentid` INT(10) NOT NULL DEFAULT '0' fk_rentid
+            FIELD_DB=`fk_rentid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_rentid
             
             FIELD_NAME_LATEX=fk\_rentid
             FIELD_CODE_NAME_LATEX=fk\_rentid
@@ -105,6 +107,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=R
                 FIELD_FOREIGN_OBJECT_UPPER=RENT
+            
 
 
         
@@ -124,6 +127,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=associate\_house
             FIELD_CODE_NAME_LATEX=associate\_house
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -145,6 +149,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=link
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -164,6 +169,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=listing\_type
             FIELD_CODE_NAME_LATEX=listing\_type
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -185,6 +191,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=price
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -204,6 +211,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=priceunit
             FIELD_CODE_NAME_LATEX=priceunit
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -225,6 +233,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=hcountry
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -244,6 +253,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=hregion
             FIELD_CODE_NAME_LATEX=hregion
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -265,6 +275,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=hcity
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -284,6 +295,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=hzipcode
             FIELD_CODE_NAME_LATEX=hzipcode
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -305,6 +317,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=hlocation
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -324,6 +337,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=hlatitude
             FIELD_CODE_NAME_LATEX=hlatitude
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -345,6 +359,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=hlongitude
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -364,6 +379,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=map\_zoom
             FIELD_CODE_NAME_LATEX=map\_zoom
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -385,6 +401,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=rooms
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -404,6 +421,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=bathrooms
             FIELD_CODE_NAME_LATEX=bathrooms
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -425,6 +443,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=bedrooms
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -444,6 +463,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=contacts
             FIELD_CODE_NAME_LATEX=contacts
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -465,6 +485,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=image\_link
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -484,6 +505,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=listing\_status
             FIELD_CODE_NAME_LATEX=listing\_status
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -505,6 +527,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=property\_type
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -524,6 +547,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=year
             FIELD_CODE_NAME_LATEX=year
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -545,6 +569,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=agent
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -564,6 +589,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=area\_unit
             FIELD_CODE_NAME_LATEX=area\_unit
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -585,6 +611,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=land\_area
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -604,6 +631,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=land\_area\_unit
             FIELD_CODE_NAME_LATEX=land\_area\_unit
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -625,6 +653,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=expiration\_date
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -644,6 +673,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=lot\_size
             FIELD_CODE_NAME_LATEX=lot\_size
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -665,6 +695,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=house\_size
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -684,6 +715,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=garages
             FIELD_CODE_NAME_LATEX=garages
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -705,6 +737,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=date
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -724,6 +757,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=edok\_link
             FIELD_CODE_NAME_LATEX=edok\_link
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -745,6 +779,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=owneremail
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -764,6 +799,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=featured\_clicks
             FIELD_CODE_NAME_LATEX=featured\_clicks
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -785,6 +821,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=featured\_shows
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -804,6 +841,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=pixUpdtedDt
             FIELD_CODE_NAME_LATEX=pixUpdtedDt
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -825,6 +863,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=extra1
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -844,6 +883,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=extra2
             FIELD_CODE_NAME_LATEX=extra2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -865,6 +905,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=extra3
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -884,6 +925,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=extra4
             FIELD_CODE_NAME_LATEX=extra4
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -905,6 +947,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=extra5
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -924,6 +967,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=extra6
             FIELD_CODE_NAME_LATEX=extra6
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -945,6 +989,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=extra7
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -964,6 +1009,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=extra8
             FIELD_CODE_NAME_LATEX=extra8
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -985,6 +1031,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=extra9
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1004,6 +1051,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=extra10
             FIELD_CODE_NAME_LATEX=extra10
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1025,6 +1073,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=energy\_value
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1039,7 +1088,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`owner_id` INT(10) NOT NULL DEFAULT '0' owner_id
+            FIELD_DB=`owner_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' owner_id
             
             FIELD_NAME_LATEX=owner\_id
             FIELD_CODE_NAME_LATEX=owner\_id
@@ -1048,6 +1097,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
                 FIELD_FOREIGN_OBJECT_UPPER=USER
+            
 
 
         
@@ -1067,6 +1117,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=climate\_value
             FIELD_CODE_NAME_LATEX=climate\_value
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1141,6 +1192,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=parent\_id
             FIELD_DBCOMMENT_LATEX=Sirve para modelar en forma de arbol dentro del mismo objeto.
             
+            
 
 
         
@@ -1160,6 +1212,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=associate\_category
             FIELD_CODE_NAME_LATEX=associate\_category
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1181,6 +1234,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=title
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1200,6 +1254,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=image
             FIELD_CODE_NAME_LATEX=image
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1221,6 +1276,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=section
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1240,6 +1296,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=image\_position
             FIELD_CODE_NAME_LATEX=image\_position
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1261,6 +1318,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=editor
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1281,6 +1339,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=count
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1300,6 +1359,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=params2
             FIELD_CODE_NAME_LATEX=params2
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1372,6 +1432,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=mime\_ext
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1391,6 +1452,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=mime\_type
             FIELD_CODE_NAME_LATEX=mime\_type
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1463,6 +1525,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=mls
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1528,7 +1591,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_user_id` INT(10) NOT NULL DEFAULT '0' fk_user_id
+            FIELD_DB=`fk_user_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_user_id
             
             FIELD_NAME_LATEX=fk\_user\_id
             FIELD_CODE_NAME_LATEX=fk\_user\_id
@@ -1537,6 +1600,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
                 FIELD_FOREIGN_OBJECT_UPPER=USER
+            
 
 
         
@@ -1556,6 +1620,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=fk\_houses\_htitle
             FIELD_CODE_NAME_LATEX=fk\_houses\_htitle
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1577,6 +1642,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=email
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1596,6 +1662,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=status
             FIELD_CODE_NAME_LATEX=status
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1617,6 +1684,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=order\_date
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1631,7 +1699,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_house_id` INT(10) NOT NULL DEFAULT '0' fk_house_id
+            FIELD_DB=`fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_house_id
             
             FIELD_NAME_LATEX=fk\_house\_id
             FIELD_CODE_NAME_LATEX=fk\_house\_id
@@ -1640,6 +1708,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
                 FIELD_FOREIGN_OBJECT_UPPER=HOUSE
+            
 
 
         
@@ -1659,6 +1728,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=txn\_type
             FIELD_CODE_NAME_LATEX=txn\_type
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1680,6 +1750,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=txn\_id
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1699,6 +1770,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=payer\_id
             FIELD_CODE_NAME_LATEX=payer\_id
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1720,6 +1792,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=payer\_status
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1739,6 +1812,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=order\_calculated\_price
             FIELD_CODE_NAME_LATEX=order\_calculated\_price
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1760,6 +1834,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=order\_price
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1780,6 +1855,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=order\_currency\_code
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1799,6 +1875,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=paypal\_paykay
             FIELD_CODE_NAME_LATEX=paypal\_paykay
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1865,7 +1942,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_order_id` INT(10) NOT NULL DEFAULT '0' fk_order_id
+            FIELD_DB=`fk_order_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_order_id
             
             FIELD_NAME_LATEX=fk\_order\_id
             FIELD_CODE_NAME_LATEX=fk\_order\_id
@@ -1874,6 +1951,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=O
                 FIELD_FOREIGN_OBJECT_UPPER=ORDER
+            
 
 
         
@@ -1888,7 +1966,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_user_id` INT(10) NOT NULL DEFAULT '0' fk_user_id
+            FIELD_DB=`fk_user_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_user_id
             
             FIELD_NAME_LATEX=fk\_user\_id
             FIELD_CODE_NAME_LATEX=fk\_user\_id
@@ -1897,6 +1975,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
                 FIELD_FOREIGN_OBJECT_UPPER=USER
+            
 
 
         
@@ -1916,6 +1995,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=fk\_houses\_htitle
             FIELD_CODE_NAME_LATEX=fk\_houses\_htitle
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1937,6 +2017,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=email
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1956,6 +2037,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=status
             FIELD_CODE_NAME_LATEX=status
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1977,6 +2059,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=order\_date
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -1991,7 +2074,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_house_id` INT(10) NOT NULL DEFAULT '0' fk_house_id
+            FIELD_DB=`fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_house_id
             
             FIELD_NAME_LATEX=fk\_house\_id
             FIELD_CODE_NAME_LATEX=fk\_house\_id
@@ -2000,6 +2083,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
                 FIELD_FOREIGN_OBJECT_UPPER=HOUSE
+            
 
 
         
@@ -2019,6 +2103,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=txn\_type
             FIELD_CODE_NAME_LATEX=txn\_type
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2040,6 +2125,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=txn\_id
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2059,6 +2145,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=payer\_id
             FIELD_CODE_NAME_LATEX=payer\_id
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2080,6 +2167,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=payer\_status
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2099,6 +2187,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=order\_calculated\_price
             FIELD_CODE_NAME_LATEX=order\_calculated\_price
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2120,6 +2209,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=order\_price
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2139,6 +2229,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=order\_currency\_code
             FIELD_CODE_NAME_LATEX=order\_currency\_code
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2160,6 +2251,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=payment\_details
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2179,6 +2271,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=paypal\_paykay
             FIELD_CODE_NAME_LATEX=paypal\_paykay
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2245,7 +2338,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
             
             FIELD_NAME_LATEX=fk\_houseid
             FIELD_CODE_NAME_LATEX=fk\_houseid
@@ -2254,6 +2347,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
                 FIELD_FOREIGN_OBJECT_UPPER=HOUSE
+            
 
 
         
@@ -2273,6 +2367,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=thumbnail\_img
             FIELD_CODE_NAME_LATEX=thumbnail\_img
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2294,6 +2389,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=main\_img
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2313,6 +2409,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=img\_ordering
             FIELD_CODE_NAME_LATEX=img\_ordering
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2379,7 +2476,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
             
             FIELD_NAME_LATEX=fk\_houseid
             FIELD_CODE_NAME_LATEX=fk\_houseid
@@ -2388,6 +2485,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
                 FIELD_FOREIGN_OBJECT_UPPER=HOUSE
+            
 
 
         
@@ -2402,7 +2500,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_userid` INT(10) NOT NULL DEFAULT '0' fk_userid
+            FIELD_DB=`fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_userid
             
             FIELD_NAME_LATEX=fk\_userid
             FIELD_CODE_NAME_LATEX=fk\_userid
@@ -2411,6 +2509,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
                 FIELD_FOREIGN_OBJECT_UPPER=USER
+            
 
 
         
@@ -2430,6 +2529,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=rent\_from
             FIELD_CODE_NAME_LATEX=rent\_from
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2451,6 +2551,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=rent\_until
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2470,6 +2571,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=rent\_return
             FIELD_CODE_NAME_LATEX=rent\_return
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2491,6 +2593,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=user\_name
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2511,6 +2614,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=user\_email
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2530,6 +2634,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=user\_mailing
             FIELD_CODE_NAME_LATEX=user\_mailing
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2596,7 +2701,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
             
             FIELD_NAME_LATEX=fk\_houseid
             FIELD_CODE_NAME_LATEX=fk\_houseid
@@ -2605,6 +2710,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
                 FIELD_FOREIGN_OBJECT_UPPER=HOUSE
+            
 
 
         
@@ -2619,7 +2725,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_userid` INT(10) NOT NULL DEFAULT '0' fk_userid
+            FIELD_DB=`fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_userid
             
             FIELD_NAME_LATEX=fk\_userid
             FIELD_CODE_NAME_LATEX=fk\_userid
@@ -2628,6 +2734,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
                 FIELD_FOREIGN_OBJECT_UPPER=USER
+            
 
 
         
@@ -2647,6 +2754,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=rent\_from
             FIELD_CODE_NAME_LATEX=rent\_from
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2668,6 +2776,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=rent\_until
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2687,6 +2796,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=rent\_request
             FIELD_CODE_NAME_LATEX=rent\_request
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2708,6 +2818,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=user\_name
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2727,6 +2838,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=user\_email
             FIELD_CODE_NAME_LATEX=user\_email
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2748,6 +2860,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=user\_mailing
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2767,6 +2880,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=status
             FIELD_CODE_NAME_LATEX=status
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2833,7 +2947,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
             
             FIELD_NAME_LATEX=fk\_houseid
             FIELD_CODE_NAME_LATEX=fk\_houseid
@@ -2842,6 +2956,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
                 FIELD_FOREIGN_OBJECT_UPPER=HOUSE
+            
 
 
         
@@ -2861,6 +2976,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=monthW
             FIELD_CODE_NAME_LATEX=monthW
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2882,6 +2998,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=yearW
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2901,6 +3018,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=week
             FIELD_CODE_NAME_LATEX=week
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2922,6 +3040,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=weekend
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2941,6 +3060,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=midweek
             FIELD_CODE_NAME_LATEX=midweek
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -2962,6 +3082,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=price\_from
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -2981,6 +3102,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=price\_to
             FIELD_CODE_NAME_LATEX=price\_to
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3002,6 +3124,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=special\_price
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3022,6 +3145,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=comment\_price
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3041,6 +3165,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=priceunit
             FIELD_CODE_NAME_LATEX=priceunit
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3107,7 +3232,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
             
             FIELD_NAME_LATEX=fk\_houseid
             FIELD_CODE_NAME_LATEX=fk\_houseid
@@ -3116,6 +3241,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
                 FIELD_FOREIGN_OBJECT_UPPER=HOUSE
+            
 
 
         
@@ -3130,7 +3256,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_userid` INT(10) NOT NULL DEFAULT '0' fk_userid
+            FIELD_DB=`fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_userid
             
             FIELD_NAME_LATEX=fk\_userid
             FIELD_CODE_NAME_LATEX=fk\_userid
@@ -3139,6 +3265,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
                 FIELD_FOREIGN_OBJECT_UPPER=USER
+            
 
 
         
@@ -3158,6 +3285,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=user\_name
             FIELD_CODE_NAME_LATEX=user\_name
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3179,6 +3307,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=user\_email
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3198,6 +3327,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=date
             FIELD_CODE_NAME_LATEX=date
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3219,6 +3349,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=rating
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3239,6 +3370,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=title
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3258,6 +3390,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=comment
             FIELD_CODE_NAME_LATEX=comment
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3324,7 +3457,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_house_id` INT(10) NOT NULL DEFAULT '0' fk_house_id
+            FIELD_DB=`fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_house_id
             
             FIELD_NAME_LATEX=fk\_house\_id
             FIELD_CODE_NAME_LATEX=fk\_house\_id
@@ -3333,6 +3466,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
                 FIELD_FOREIGN_OBJECT_UPPER=HOUSE
+            
 
 
         
@@ -3352,6 +3486,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=sequence\_number
             FIELD_CODE_NAME_LATEX=sequence\_number
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3373,6 +3508,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=src
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3392,6 +3528,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=kind
             FIELD_CODE_NAME_LATEX=kind
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3413,6 +3550,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=scrlang
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3432,6 +3570,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=label
             FIELD_CODE_NAME_LATEX=label
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3498,7 +3637,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
             
             FIELD_NAME_LATEX=fk\_houseid
             FIELD_CODE_NAME_LATEX=fk\_houseid
@@ -3507,6 +3646,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
                 FIELD_FOREIGN_OBJECT_UPPER=HOUSE
+            
 
 
         
@@ -3521,7 +3661,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_userid` INT(10) NOT NULL DEFAULT '0' fk_userid
+            FIELD_DB=`fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_userid
             
             FIELD_NAME_LATEX=fk\_userid
             FIELD_CODE_NAME_LATEX=fk\_userid
@@ -3530,6 +3670,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
                 FIELD_FOREIGN_OBJECT_UPPER=USER
+            
 
 
         
@@ -3595,7 +3736,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_house_id` INT(10) NOT NULL DEFAULT '0' fk_house_id
+            FIELD_DB=`fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_house_id
             
             FIELD_NAME_LATEX=fk\_house\_id
             FIELD_CODE_NAME_LATEX=fk\_house\_id
@@ -3604,6 +3745,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
                 FIELD_FOREIGN_OBJECT_UPPER=HOUSE
+            
 
 
         
@@ -3623,6 +3765,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=sequence\_number
             FIELD_CODE_NAME_LATEX=sequence\_number
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3644,6 +3787,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=src
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3663,6 +3807,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=type
             FIELD_CODE_NAME_LATEX=type
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3684,6 +3829,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=media
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3703,6 +3849,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=youtube
             FIELD_CODE_NAME_LATEX=youtube
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3769,7 +3916,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
             
             FIELD_NAME_LATEX=fk\_houseid
             FIELD_CODE_NAME_LATEX=fk\_houseid
@@ -3778,6 +3925,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
                 FIELD_FOREIGN_OBJECT_UPPER=HOUSE
+            
 
 
         
@@ -3792,7 +3940,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_userid` INT(10) NOT NULL DEFAULT '0' fk_userid
+            FIELD_DB=`fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_userid
             
             FIELD_NAME_LATEX=fk\_userid
             FIELD_CODE_NAME_LATEX=fk\_userid
@@ -3801,6 +3949,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
                 FIELD_FOREIGN_OBJECT_UPPER=USER
+            
 
 
         
@@ -3820,6 +3969,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=buying\_request
             FIELD_CODE_NAME_LATEX=buying\_request
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3841,6 +3991,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=customer\_name
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3860,6 +4011,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=customer\_email
             FIELD_CODE_NAME_LATEX=customer\_email
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3881,6 +4033,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=customer\_phone
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3901,6 +4054,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=customer\_comment
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -3920,6 +4074,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=status
             FIELD_CODE_NAME_LATEX=status
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -3986,7 +4141,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`iditem` INT(10) NOT NULL DEFAULT '0' iditem
+            FIELD_DB=`iditem` INT(10) UNSIGNED  NOT NULL DEFAULT '0' iditem
             
             FIELD_NAME_LATEX=iditem
             FIELD_CODE_NAME_LATEX=iditem
@@ -3995,6 +4150,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
                 FIELD_FOREIGN_OBJECT_UPPER=HOUSE
+            
 
 
         
@@ -4009,7 +4165,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`idcat` INT(10) NOT NULL DEFAULT '0' idcat
+            FIELD_DB=`idcat` INT(10) UNSIGNED  NOT NULL DEFAULT '0' idcat
             
             FIELD_NAME_LATEX=idcat
             FIELD_CODE_NAME_LATEX=idcat
@@ -4018,6 +4174,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=M
                 FIELD_FOREIGN_OBJECT_UPPER=MAIN_CATEGORY
+            
 
 
         
@@ -4089,6 +4246,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=const
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4108,6 +4266,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=sys\_type
             FIELD_CODE_NAME_LATEX=sys\_type
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4174,7 +4333,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_constid` INT(10) NOT NULL DEFAULT '0' fk_constid
+            FIELD_DB=`fk_constid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_constid
             
             FIELD_NAME_LATEX=fk\_constid
             FIELD_CODE_NAME_LATEX=fk\_constid
@@ -4183,6 +4342,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=C1
                 FIELD_FOREIGN_OBJECT_UPPER=CONST
+            
 
 
         
@@ -4197,7 +4357,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_languagesid` INT(10) NOT NULL DEFAULT '0' fk_languagesid
+            FIELD_DB=`fk_languagesid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_languagesid
             
             FIELD_NAME_LATEX=fk\_languagesid
             FIELD_CODE_NAME_LATEX=fk\_languagesid
@@ -4206,6 +4366,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=L
                 FIELD_FOREIGN_OBJECT_UPPER=LANGUAGE
+            
 
 
         
@@ -4225,6 +4386,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=value\_const
             FIELD_CODE_NAME_LATEX=value\_const
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4297,6 +4459,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=categories
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4316,6 +4479,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=image\_link
             FIELD_CODE_NAME_LATEX=image\_link
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -4382,7 +4546,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
             
             FIELD_NAME_LATEX=fk\_houseid
             FIELD_CODE_NAME_LATEX=fk\_houseid
@@ -4391,6 +4555,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
                 FIELD_FOREIGN_OBJECT_UPPER=HOUSE
+            
 
 
         
@@ -4405,7 +4570,7 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_featureid` INT(10) NOT NULL DEFAULT '0' fk_featureid
+            FIELD_DB=`fk_featureid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_featureid
             
             FIELD_NAME_LATEX=fk\_featureid
             FIELD_CODE_NAME_LATEX=fk\_featureid
@@ -4414,6 +4579,7 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=F
                 FIELD_FOREIGN_OBJECT_UPPER=FEATURE
+            
 
 
         
@@ -4485,6 +4651,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=lang\_code
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4505,6 +4672,7 @@ architectcomp=remca
             FIELD_CODE_NAME_LATEX=title
             FIELD_DBCOMMENT_LATEX=
             
+            
 
 
         
@@ -4524,6 +4692,7 @@ architectcomp=remca
             FIELD_NAME_LATEX=sef
             FIELD_CODE_NAME_LATEX=sef
             FIELD_DBCOMMENT_LATEX=
+            
             
 
 

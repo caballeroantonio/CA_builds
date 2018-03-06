@@ -34,7 +34,7 @@ id & INT(10) & PK \tabularnewline\hline
 %each field
 	houseid & VARCHAR(20) & houseid: \tabularnewline\hline 
 	sid & INT(11) & sid: \tabularnewline\hline 
-	fk\_rentid & INT(10) & fk\_rentid: \tabularnewline\hline 
+	fk\_rentid & INT(10) UNSIGNED  & fk\_rentid: \tabularnewline\hline 
 	associate\_house & VARCHAR(255) & associate\_house: \tabularnewline\hline 
 	link & VARCHAR(250) & link: \tabularnewline\hline 
 	listing\_type & VARCHAR(45) & listing\_type: \tabularnewline\hline 
@@ -81,5 +81,5 @@ id & INT(10) & PK \tabularnewline\hline
 	extra9 & VARCHAR(250) & extra9: \tabularnewline\hline 
 	extra10 & VARCHAR(250) & extra10: \tabularnewline\hline 
 	energy\_value & DECIMAL(11,2) & energy\_value: \tabularnewline\hline 
-	owner\_id & INT(10) & owner\_id: \tabularnewline\hline 
+	owner\_id & INT(10) UNSIGNED  & owner\_id: \tabularnewline\hline 
 	climate\_value & DECIMAL(11,2) & climate\_value: \tabularnewline\hline 

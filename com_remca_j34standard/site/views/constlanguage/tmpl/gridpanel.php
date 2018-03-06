@@ -45,7 +45,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) NOT NULL DEFAULT '0' fk_constid
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_constid
 
                 FIELD_NAME_LATEX=fk\_constid
                 FIELD_CODE_NAME_LATEX=fk\_constid
@@ -70,7 +70,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) NOT NULL DEFAULT '0' fk_languagesid
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_languagesid
 
                 FIELD_NAME_LATEX=fk\_languagesid
                 FIELD_CODE_NAME_LATEX=fk\_languagesid

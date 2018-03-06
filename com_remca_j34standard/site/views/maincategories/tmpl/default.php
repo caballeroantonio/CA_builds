@@ -114,7 +114,7 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php else : ?>
 		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="main_categories">
-			<?php if ($this->params->get('show_maincategory_headings')) :?>
+			<?php if ($this->params->get('show_maincategory_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -128,47 +128,47 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
-					<?php if ($this->params->get('list_show_maincategory_parent_id',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_parent_id',1)) : ?>
 						<th class="list-parent_id" id="tableOrderingparent_id">
 							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_PARENT_ID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_maincategory_associate_category',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_associate_category',1)) : ?>
 						<th class="list-associate_category" id="tableOrderingassociate_category">
 							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_ASSOCIATE_CATEGORY'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_maincategory_title',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_title',1)) : ?>
 						<th class="list-title" id="tableOrderingtitle">
 							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_TITLE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_maincategory_image',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_image',1)) : ?>
 						<th class="list-image" id="tableOrderingimage">
 							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_IMAGE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_maincategory_section',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_section',1)) : ?>
 						<th class="list-section" id="tableOrderingsection">
 							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_SECTION'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_maincategory_image_position',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_image_position',1)) : ?>
 						<th class="list-image_position" id="tableOrderingimage_position">
 							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_IMAGE_POSITION'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_maincategory_editor',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_editor',1)) : ?>
 						<th class="list-editor" id="tableOrderingeditor">
 							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_EDITOR'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_maincategory_count',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_count',1)) : ?>
 						<th class="list-count" id="tableOrderingcount">
 							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_COUNT'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_maincategory_params2',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_params2',1)) : ?>
 						<th class="list-params2" id="tableOrderingparams2">
 							<?php echo JTEXT::_('COM_REMCA_MAIN_CATEGORIES_HEADING_PARAMS2'); ?>
 						</th>
@@ -221,63 +221,63 @@ $empty = $component->params->get('default_empty_field', '');
 							</time>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_maincategory_parent_id',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_parent_id',1)) : ?>
 						<td class="list-parent_id">
 							<?php 
 								echo $item->parent_id != '' ? $item->parent_id : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_maincategory_associate_category',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_associate_category',1)) : ?>
 						<td class="list-associate_category">
 							<?php 
 								echo $item->associate_category != '' ? $item->associate_category : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_maincategory_title',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_title',1)) : ?>
 						<td class="list-title">
 							<?php 
 								echo $item->title != '' ? $item->title : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_maincategory_image',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_image',1)) : ?>
 						<td class="list-image">
 							<?php 
 								echo $item->image != '' ? $item->image : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_maincategory_section',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_section',1)) : ?>
 						<td class="list-section">
 							<?php 
 								echo $item->section != '' ? $item->section : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_maincategory_image_position',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_image_position',1)) : ?>
 						<td class="list-image_position">
 							<?php 
 								echo $item->image_position != '' ? $item->image_position : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_maincategory_editor',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_editor',1)) : ?>
 						<td class="list-editor">
 							<?php 
 								echo $item->editor != '' ? $item->editor : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_maincategory_count',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_count',1)) : ?>
 						<td class="list-count">
 							<?php 
 								echo $item->count != '' ? $item->count : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_maincategory_params2',0)) : ?>
+					<?php if ($this->params->get('list_show_maincategory_params2',1)) : ?>
 						<td class="list-params2">
 							<?php 
 								echo $item->params2 != '' ? $item->params2 : $empty;
@@ -295,20 +295,20 @@ $empty = $component->params->get('default_empty_field', '');
                         	<div class="btn-group pull-right">
                                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
                                 <ul class="dropdown-menu">
-							<?php if ($params->get('show_house_print_icon')) : ?>
+							<?php if ($params->get('show_maincategory_print_icon')) : ?>
 								<li class="print-icon">
-										<?php echo JHtml::_('houseicon.print_popup',  $item, $params); ?>
+										<?php echo JHtml::_('maincategoryicon.print_popup',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
 
-							<?php if ($params->get('show_house_email_icon')) : ?>
+							<?php if ($params->get('show_maincategory_email_icon')) : ?>
 								<li class="email-icon">
-										<?php echo JHtml::_('houseicon.email',  $item, $params); ?>
+										<?php echo JHtml::_('maincategoryicon.email',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
-							<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('maincategory_save_history')) : ?>
 								<li class="version-icon">
-									<?php echo JHtml::_('houseicon.versions',$item, $params); ?>
+									<?php echo JHtml::_('maincategoryicon.versions',$item, $params); ?>
 								</li>	
 							<?php endif; ?>	
                                 </ul>
@@ -350,16 +350,25 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('maincategoryicon.create', $this->params); ?>
 	</form>
 </div>
-<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('maincategory_save_history')) : ?>
 <script>
 jQuery(document).ready(function($) {
-   $('#collapseModal')
+   $('#collapsibleModal')
    .on('hide.bs.modal', function () {
         $(this).removeData('modal');
    });
 });
+
+function show_collapsibleModal(item_id){
+	jQuery('#collapsibleModal').modal('show');
+	var modalBody = jQuery(document).find('.modal-body');
+	modalBody.find('iframe').remove();
+	modalBody.prepend('<iframe class="iframe" src="index.php?option=com_remca&task=maincategory.showHistory&item_id='+item_id+'" name="titulo" height="450"></iframe>');
+	return;
+}
 </script>
-<div id="collapseModal" tabindex="-1" class="modal hide fade">
+<div id="collapsibleModal" tabindex="-1" class="modal hide fade">
 	<div class="modal-header">
 			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
 				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>

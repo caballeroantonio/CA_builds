@@ -114,7 +114,7 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php else : ?>
 		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="photos">
-			<?php if ($this->params->get('show_photo_headings')) :?>
+			<?php if ($this->params->get('show_photo_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -125,22 +125,22 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
-					<?php if ($this->params->get('list_show_photo_fk_houseid',0)) : ?>
+					<?php if ($this->params->get('list_show_photo_fk_houseid',1)) : ?>
 						<th class="list-fk_houseid" id="tableOrderingfk_houseid">
 							<?php echo JTEXT::_('COM_REMCA_PHOTOS_HEADING_FK_HOUSEID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_photo_thumbnail_img',0)) : ?>
+					<?php if ($this->params->get('list_show_photo_thumbnail_img',1)) : ?>
 						<th class="list-thumbnail_img" id="tableOrderingthumbnail_img">
 							<?php echo JTEXT::_('COM_REMCA_PHOTOS_HEADING_THUMBNAIL_IMG'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_photo_main_img',0)) : ?>
+					<?php if ($this->params->get('list_show_photo_main_img',1)) : ?>
 						<th class="list-main_img" id="tableOrderingmain_img">
 							<?php echo JTEXT::_('COM_REMCA_PHOTOS_HEADING_MAIN_IMG'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_photo_img_ordering',0)) : ?>
+					<?php if ($this->params->get('list_show_photo_img_ordering',1)) : ?>
 						<th class="list-img_ordering" id="tableOrderingimg_ordering">
 							<?php echo JTEXT::_('COM_REMCA_PHOTOS_HEADING_IMG_ORDERING'); ?>
 						</th>
@@ -174,7 +174,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</time>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_photo_fk_houseid',0)) : ?>
+					<?php if ($this->params->get('list_show_photo_fk_houseid',1)) : ?>
 						<td class="list-fk_houseid">
 							<?php 
 								if ($params->get('list_link_photo_fk_houseid')) :
@@ -185,21 +185,21 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_photo_thumbnail_img',0)) : ?>
+					<?php if ($this->params->get('list_show_photo_thumbnail_img',1)) : ?>
 						<td class="list-thumbnail_img">
 							<?php 
 								echo $item->thumbnail_img != '' ? $item->thumbnail_img : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_photo_main_img',0)) : ?>
+					<?php if ($this->params->get('list_show_photo_main_img',1)) : ?>
 						<td class="list-main_img">
 							<?php 
 								echo $item->main_img != '' ? $item->main_img : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_photo_img_ordering',0)) : ?>
+					<?php if ($this->params->get('list_show_photo_img_ordering',1)) : ?>
 						<td class="list-img_ordering">
 							<?php 
 								echo $item->img_ordering != '' ? $item->img_ordering : $empty;
@@ -211,20 +211,20 @@ $empty = $component->params->get('default_empty_field', '');
                         	<div class="btn-group pull-right">
                                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
                                 <ul class="dropdown-menu">
-							<?php if ($params->get('show_house_print_icon')) : ?>
+							<?php if ($params->get('show_photo_print_icon')) : ?>
 								<li class="print-icon">
-										<?php echo JHtml::_('houseicon.print_popup',  $item, $params); ?>
+										<?php echo JHtml::_('photoicon.print_popup',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
 
-							<?php if ($params->get('show_house_email_icon')) : ?>
+							<?php if ($params->get('show_photo_email_icon')) : ?>
 								<li class="email-icon">
-										<?php echo JHtml::_('houseicon.email',  $item, $params); ?>
+										<?php echo JHtml::_('photoicon.email',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
-							<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('photo_save_history')) : ?>
 								<li class="version-icon">
-									<?php echo JHtml::_('houseicon.versions',$item, $params); ?>
+									<?php echo JHtml::_('photoicon.versions',$item, $params); ?>
 								</li>	
 							<?php endif; ?>	
                                 </ul>
@@ -266,16 +266,25 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('photoicon.create', $this->params); ?>
 	</form>
 </div>
-<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('photo_save_history')) : ?>
 <script>
 jQuery(document).ready(function($) {
-   $('#collapseModal')
+   $('#collapsibleModal')
    .on('hide.bs.modal', function () {
         $(this).removeData('modal');
    });
 });
+
+function show_collapsibleModal(item_id){
+	jQuery('#collapsibleModal').modal('show');
+	var modalBody = jQuery(document).find('.modal-body');
+	modalBody.find('iframe').remove();
+	modalBody.prepend('<iframe class="iframe" src="index.php?option=com_remca&task=photo.showHistory&item_id='+item_id+'" name="titulo" height="450"></iframe>');
+	return;
+}
 </script>
-<div id="collapseModal" tabindex="-1" class="modal hide fade">
+<div id="collapsibleModal" tabindex="-1" class="modal hide fade">
 	<div class="modal-header">
 			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
 				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>

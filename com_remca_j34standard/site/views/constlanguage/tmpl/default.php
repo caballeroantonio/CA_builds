@@ -114,7 +114,7 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php else : ?>
 		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="const_language">
-			<?php if ($this->params->get('show_constlanguage_headings')) :?>
+			<?php if ($this->params->get('show_constlanguage_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -125,17 +125,17 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
-					<?php if ($this->params->get('list_show_constlanguage_fk_constid',0)) : ?>
+					<?php if ($this->params->get('list_show_constlanguage_fk_constid',1)) : ?>
 						<th class="list-fk_constid" id="tableOrderingfk_constid">
 							<?php echo JTEXT::_('COM_REMCA_CONST_LANGUAGE_HEADING_FK_CONSTID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_constlanguage_fk_languagesid',0)) : ?>
+					<?php if ($this->params->get('list_show_constlanguage_fk_languagesid',1)) : ?>
 						<th class="list-fk_languagesid" id="tableOrderingfk_languagesid">
 							<?php echo JTEXT::_('COM_REMCA_CONST_LANGUAGE_HEADING_FK_LANGUAGESID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_constlanguage_value_const',0)) : ?>
+					<?php if ($this->params->get('list_show_constlanguage_value_const',1)) : ?>
 						<th class="list-value_const" id="tableOrderingvalue_const">
 							<?php echo JTEXT::_('COM_REMCA_CONST_LANGUAGE_HEADING_VALUE_CONST'); ?>
 						</th>
@@ -169,7 +169,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</time>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_constlanguage_fk_constid',0)) : ?>
+					<?php if ($this->params->get('list_show_constlanguage_fk_constid',1)) : ?>
 						<td class="list-fk_constid">
 							<?php 
 								if ($params->get('list_link_constlanguage_fk_constid')) :
@@ -180,7 +180,7 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_constlanguage_fk_languagesid',0)) : ?>
+					<?php if ($this->params->get('list_show_constlanguage_fk_languagesid',1)) : ?>
 						<td class="list-fk_languagesid">
 							<?php 
 								if ($params->get('list_link_constlanguage_fk_languagesid')) :
@@ -191,7 +191,7 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_constlanguage_value_const',0)) : ?>
+					<?php if ($this->params->get('list_show_constlanguage_value_const',1)) : ?>
 						<td class="list-value_const">
 							<?php 
 								echo $item->value_const != '' ? $item->value_const : $empty;
@@ -203,20 +203,20 @@ $empty = $component->params->get('default_empty_field', '');
                         	<div class="btn-group pull-right">
                                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
                                 <ul class="dropdown-menu">
-							<?php if ($params->get('show_house_print_icon')) : ?>
+							<?php if ($params->get('show_constlanguage_print_icon')) : ?>
 								<li class="print-icon">
-										<?php echo JHtml::_('houseicon.print_popup',  $item, $params); ?>
+										<?php echo JHtml::_('constlanguageicon.print_popup',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
 
-							<?php if ($params->get('show_house_email_icon')) : ?>
+							<?php if ($params->get('show_constlanguage_email_icon')) : ?>
 								<li class="email-icon">
-										<?php echo JHtml::_('houseicon.email',  $item, $params); ?>
+										<?php echo JHtml::_('constlanguageicon.email',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
-							<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('constlanguage_save_history')) : ?>
 								<li class="version-icon">
-									<?php echo JHtml::_('houseicon.versions',$item, $params); ?>
+									<?php echo JHtml::_('constlanguageicon.versions',$item, $params); ?>
 								</li>	
 							<?php endif; ?>	
                                 </ul>
@@ -258,16 +258,25 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('constlanguageicon.create', $this->params); ?>
 	</form>
 </div>
-<?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
+
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('constlanguage_save_history')) : ?>
 <script>
 jQuery(document).ready(function($) {
-   $('#collapseModal')
+   $('#collapsibleModal')
    .on('hide.bs.modal', function () {
         $(this).removeData('modal');
    });
 });
+
+function show_collapsibleModal(item_id){
+	jQuery('#collapsibleModal').modal('show');
+	var modalBody = jQuery(document).find('.modal-body');
+	modalBody.find('iframe').remove();
+	modalBody.prepend('<iframe class="iframe" src="index.php?option=com_remca&task=constlanguage.showHistory&item_id='+item_id+'" name="titulo" height="450"></iframe>');
+	return;
+}
 </script>
-<div id="collapseModal" tabindex="-1" class="modal hide fade">
+<div id="collapsibleModal" tabindex="-1" class="modal hide fade">
 	<div class="modal-header">
 			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
 				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>

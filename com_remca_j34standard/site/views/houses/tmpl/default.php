@@ -100,7 +100,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<option value=""><?php echo JText::_('JOPTION_SELECT_CATEGORY');?></option>
 					<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_remca'), 'value', 'text', $this->state->get('filter.category_id'));?>
 				</select>
-				<?php if ($this->params->get('list_show_house_price',0)) : ?>
+				<?php if ($this->params->get('list_show_house_price',1)) : ?>
 					<select name="filter_price" onchange="this.form.submit()">
 					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_PRICE');?></option>
 					<?php echo JHtml::_('select.options', $this->price_values, 'value', 'text', $this->state->get('filter.price'));?>
@@ -125,7 +125,7 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php else : ?>
 		<div style="overflow-x:auto;">
 			<table class="table table-striped" id="houses">
-			<?php if ($this->params->get('show_house_headings')) :?>
+			<?php if ($this->params->get('show_house_headings',1)) :?>
 			<thead>
 				<tr>
 					<th width="1%" style="display:none;">
@@ -144,257 +144,257 @@ $empty = $component->params->get('default_empty_field', '');
 						<?php echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_HITS', 'a.hits', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_houseid',0)) : ?>
+					<?php if ($this->params->get('list_show_house_houseid',1)) : ?>
 						<th class="list-houseid" id="tableOrderinghouseid">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HOUSEID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_sid',0)) : ?>
+					<?php if ($this->params->get('list_show_house_sid',1)) : ?>
 						<th class="list-sid" id="tableOrderingsid">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_SID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_fk_rentid',0)) : ?>
+					<?php if ($this->params->get('list_show_house_fk_rentid',1)) : ?>
 						<th class="list-fk_rentid" id="tableOrderingfk_rentid">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_FK_RENTID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_associate_house',0)) : ?>
+					<?php if ($this->params->get('list_show_house_associate_house',1)) : ?>
 						<th class="list-associate_house" id="tableOrderingassociate_house">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ASSOCIATE_HOUSE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_link',0)) : ?>
+					<?php if ($this->params->get('list_show_house_link',1)) : ?>
 						<th class="list-link" id="tableOrderinglink">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_LINK'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_listing_type',0)) : ?>
+					<?php if ($this->params->get('list_show_house_listing_type',1)) : ?>
 						<th class="list-listing_type" id="tableOrderinglisting_type">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_LISTING_TYPE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_price',0)) : ?>
+					<?php if ($this->params->get('list_show_house_price',1)) : ?>
 						<th class="list-price" id="tableOrderingprice">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_priceunit',0)) : ?>
+					<?php if ($this->params->get('list_show_house_priceunit',1)) : ?>
 						<th class="list-priceunit" id="tableOrderingpriceunit">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICEUNIT'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_hcountry',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hcountry',1)) : ?>
 						<th class="list-hcountry" id="tableOrderinghcountry">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HCOUNTRY'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_hregion',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hregion',1)) : ?>
 						<th class="list-hregion" id="tableOrderinghregion">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HREGION'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_hcity',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hcity',1)) : ?>
 						<th class="list-hcity" id="tableOrderinghcity">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HCITY'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_hzipcode',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hzipcode',1)) : ?>
 						<th class="list-hzipcode" id="tableOrderinghzipcode">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HZIPCODE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_hlocation',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hlocation',1)) : ?>
 						<th class="list-hlocation" id="tableOrderinghlocation">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HLOCATION'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_hlatitude',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hlatitude',1)) : ?>
 						<th class="list-hlatitude" id="tableOrderinghlatitude">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HLATITUDE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_hlongitude',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hlongitude',1)) : ?>
 						<th class="list-hlongitude" id="tableOrderinghlongitude">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HLONGITUDE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_map_zoom',0)) : ?>
+					<?php if ($this->params->get('list_show_house_map_zoom',1)) : ?>
 						<th class="list-map_zoom" id="tableOrderingmap_zoom">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_MAP_ZOOM'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_rooms',0)) : ?>
+					<?php if ($this->params->get('list_show_house_rooms',1)) : ?>
 						<th class="list-rooms" id="tableOrderingrooms">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ROOMS'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_bathrooms',0)) : ?>
+					<?php if ($this->params->get('list_show_house_bathrooms',1)) : ?>
 						<th class="list-bathrooms" id="tableOrderingbathrooms">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_BATHROOMS'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_bedrooms',0)) : ?>
+					<?php if ($this->params->get('list_show_house_bedrooms',1)) : ?>
 						<th class="list-bedrooms" id="tableOrderingbedrooms">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_BEDROOMS'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_contacts',0)) : ?>
+					<?php if ($this->params->get('list_show_house_contacts',1)) : ?>
 						<th class="list-contacts" id="tableOrderingcontacts">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_CONTACTS'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_image_link',0)) : ?>
+					<?php if ($this->params->get('list_show_house_image_link',1)) : ?>
 						<th class="list-image_link" id="tableOrderingimage_link">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_IMAGE_LINK'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_listing_status',0)) : ?>
+					<?php if ($this->params->get('list_show_house_listing_status',1)) : ?>
 						<th class="list-listing_status" id="tableOrderinglisting_status">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_LISTING_STATUS'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_property_type',0)) : ?>
+					<?php if ($this->params->get('list_show_house_property_type',1)) : ?>
 						<th class="list-property_type" id="tableOrderingproperty_type">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PROPERTY_TYPE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_year',0)) : ?>
+					<?php if ($this->params->get('list_show_house_year',1)) : ?>
 						<th class="list-year" id="tableOrderingyear">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_YEAR'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_agent',0)) : ?>
+					<?php if ($this->params->get('list_show_house_agent',1)) : ?>
 						<th class="list-agent" id="tableOrderingagent">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_AGENT'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_area_unit',0)) : ?>
+					<?php if ($this->params->get('list_show_house_area_unit',1)) : ?>
 						<th class="list-area_unit" id="tableOrderingarea_unit">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_AREA_UNIT'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_land_area',0)) : ?>
+					<?php if ($this->params->get('list_show_house_land_area',1)) : ?>
 						<th class="list-land_area" id="tableOrderingland_area">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_LAND_AREA'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_land_area_unit',0)) : ?>
+					<?php if ($this->params->get('list_show_house_land_area_unit',1)) : ?>
 						<th class="list-land_area_unit" id="tableOrderingland_area_unit">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_LAND_AREA_UNIT'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_expiration_date',0)) : ?>
+					<?php if ($this->params->get('list_show_house_expiration_date',1)) : ?>
 						<th class="list-expiration_date" id="tableOrderingexpiration_date">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_EXPIRATION_DATE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_lot_size',0)) : ?>
+					<?php if ($this->params->get('list_show_house_lot_size',1)) : ?>
 						<th class="list-lot_size" id="tableOrderinglot_size">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_LOT_SIZE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_house_size',0)) : ?>
+					<?php if ($this->params->get('list_show_house_house_size',1)) : ?>
 						<th class="list-house_size" id="tableOrderinghouse_size">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HOUSE_SIZE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_garages',0)) : ?>
+					<?php if ($this->params->get('list_show_house_garages',1)) : ?>
 						<th class="list-garages" id="tableOrderinggarages">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_GARAGES'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_date',0)) : ?>
+					<?php if ($this->params->get('list_show_house_date',1)) : ?>
 						<th class="list-date" id="tableOrderingdate">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_DATE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_edok_link',0)) : ?>
+					<?php if ($this->params->get('list_show_house_edok_link',1)) : ?>
 						<th class="list-edok_link" id="tableOrderingedok_link">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_EDOK_LINK'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_owneremail',0)) : ?>
+					<?php if ($this->params->get('list_show_house_owneremail',1)) : ?>
 						<th class="list-owneremail" id="tableOrderingowneremail">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_OWNEREMAIL'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_featured_clicks',0)) : ?>
+					<?php if ($this->params->get('list_show_house_featured_clicks',1)) : ?>
 						<th class="list-featured_clicks" id="tableOrderingfeatured_clicks">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_FEATURED_CLICKS'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_featured_shows',0)) : ?>
+					<?php if ($this->params->get('list_show_house_featured_shows',1)) : ?>
 						<th class="list-featured_shows" id="tableOrderingfeatured_shows">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_FEATURED_SHOWS'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_pixUpdtedDt',0)) : ?>
+					<?php if ($this->params->get('list_show_house_pixUpdtedDt',1)) : ?>
 						<th class="list-pixUpdtedDt" id="tableOrderingpixUpdtedDt">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PIXUPDTEDDT'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_extra1',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra1',1)) : ?>
 						<th class="list-extra1" id="tableOrderingextra1">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_EXTRA1'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_extra2',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra2',1)) : ?>
 						<th class="list-extra2" id="tableOrderingextra2">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_EXTRA2'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_extra3',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra3',1)) : ?>
 						<th class="list-extra3" id="tableOrderingextra3">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_EXTRA3'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_extra4',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra4',1)) : ?>
 						<th class="list-extra4" id="tableOrderingextra4">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_EXTRA4'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_extra5',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra5',1)) : ?>
 						<th class="list-extra5" id="tableOrderingextra5">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_EXTRA5'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_extra6',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra6',1)) : ?>
 						<th class="list-extra6" id="tableOrderingextra6">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_EXTRA6'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_extra7',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra7',1)) : ?>
 						<th class="list-extra7" id="tableOrderingextra7">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_EXTRA7'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_extra8',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra8',1)) : ?>
 						<th class="list-extra8" id="tableOrderingextra8">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_EXTRA8'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_extra9',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra9',1)) : ?>
 						<th class="list-extra9" id="tableOrderingextra9">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_EXTRA9'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_extra10',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra10',1)) : ?>
 						<th class="list-extra10" id="tableOrderingextra10">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_EXTRA10'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_energy_value',0)) : ?>
+					<?php if ($this->params->get('list_show_house_energy_value',1)) : ?>
 						<th class="list-energy_value" id="tableOrderingenergy_value">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ENERGY_VALUE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_owner_id',0)) : ?>
+					<?php if ($this->params->get('list_show_house_owner_id',1)) : ?>
 						<th class="list-owner_id" id="tableOrderingowner_id">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_OWNER_ID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_climate_value',0)) : ?>
+					<?php if ($this->params->get('list_show_house_climate_value',1)) : ?>
 						<th class="list-climate_value" id="tableOrderingclimate_value">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_CLIMATE_VALUE'); ?>
 						</th>
@@ -467,21 +467,21 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_houseid',0)) : ?>
+					<?php if ($this->params->get('list_show_house_houseid',1)) : ?>
 						<td class="list-houseid">
 							<?php 
 								echo $item->houseid != '' ? $item->houseid : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_sid',0)) : ?>
+					<?php if ($this->params->get('list_show_house_sid',1)) : ?>
 						<td class="list-sid">
 							<?php 
 								echo $item->sid != '' ? $item->sid : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_fk_rentid',0)) : ?>
+					<?php if ($this->params->get('list_show_house_fk_rentid',1)) : ?>
 						<td class="list-fk_rentid">
 							<?php 
 								if ($params->get('list_link_house_fk_rentid')) :
@@ -492,329 +492,329 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_associate_house',0)) : ?>
+					<?php if ($this->params->get('list_show_house_associate_house',1)) : ?>
 						<td class="list-associate_house">
 							<?php 
 								echo $item->associate_house != '' ? $item->associate_house : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_link',0)) : ?>
+					<?php if ($this->params->get('list_show_house_link',1)) : ?>
 						<td class="list-link">
 							<?php 
 								echo $item->link != '' ? $item->link : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_listing_type',0)) : ?>
+					<?php if ($this->params->get('list_show_house_listing_type',1)) : ?>
 						<td class="list-listing_type">
 							<?php 
 								echo $item->listing_type != '' ? $item->listing_type : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_price',0)) : ?>
+					<?php if ($this->params->get('list_show_house_price',1)) : ?>
 						<td class="list-price">
 							<?php 
 								echo $item->price != '' ? $item->price : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_priceunit',0)) : ?>
+					<?php if ($this->params->get('list_show_house_priceunit',1)) : ?>
 						<td class="list-priceunit">
 							<?php 
 								echo $item->priceunit != '' ? $item->priceunit : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_hcountry',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hcountry',1)) : ?>
 						<td class="list-hcountry">
 							<?php 
 								echo $item->hcountry != '' ? $item->hcountry : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_hregion',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hregion',1)) : ?>
 						<td class="list-hregion">
 							<?php 
 								echo $item->hregion != '' ? $item->hregion : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_hcity',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hcity',1)) : ?>
 						<td class="list-hcity">
 							<?php 
 								echo $item->hcity != '' ? $item->hcity : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_hzipcode',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hzipcode',1)) : ?>
 						<td class="list-hzipcode">
 							<?php 
 								echo $item->hzipcode != '' ? $item->hzipcode : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_hlocation',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hlocation',1)) : ?>
 						<td class="list-hlocation">
 							<?php 
 								echo $item->hlocation != '' ? $item->hlocation : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_hlatitude',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hlatitude',1)) : ?>
 						<td class="list-hlatitude">
 							<?php 
 								echo $item->hlatitude != '' ? $item->hlatitude : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_hlongitude',0)) : ?>
+					<?php if ($this->params->get('list_show_house_hlongitude',1)) : ?>
 						<td class="list-hlongitude">
 							<?php 
 								echo $item->hlongitude != '' ? $item->hlongitude : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_map_zoom',0)) : ?>
+					<?php if ($this->params->get('list_show_house_map_zoom',1)) : ?>
 						<td class="list-map_zoom">
 							<?php 
 								echo $item->map_zoom != '' ? $item->map_zoom : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_rooms',0)) : ?>
+					<?php if ($this->params->get('list_show_house_rooms',1)) : ?>
 						<td class="list-rooms">
 							<?php 
 								echo $item->rooms != '' ? $item->rooms : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_bathrooms',0)) : ?>
+					<?php if ($this->params->get('list_show_house_bathrooms',1)) : ?>
 						<td class="list-bathrooms">
 							<?php 
 								echo $item->bathrooms != '' ? $item->bathrooms : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_bedrooms',0)) : ?>
+					<?php if ($this->params->get('list_show_house_bedrooms',1)) : ?>
 						<td class="list-bedrooms">
 							<?php 
 								echo $item->bedrooms != '' ? $item->bedrooms : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_contacts',0)) : ?>
+					<?php if ($this->params->get('list_show_house_contacts',1)) : ?>
 						<td class="list-contacts">
 							<?php 
 								echo $item->contacts != '' ? $item->contacts : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_image_link',0)) : ?>
+					<?php if ($this->params->get('list_show_house_image_link',1)) : ?>
 						<td class="list-image_link">
 							<?php 
 								echo $item->image_link != '' ? $item->image_link : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_listing_status',0)) : ?>
+					<?php if ($this->params->get('list_show_house_listing_status',1)) : ?>
 						<td class="list-listing_status">
 							<?php 
 								echo $item->listing_status != '' ? $item->listing_status : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_property_type',0)) : ?>
+					<?php if ($this->params->get('list_show_house_property_type',1)) : ?>
 						<td class="list-property_type">
 							<?php 
 								echo $item->property_type != '' ? $item->property_type : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_year',0)) : ?>
+					<?php if ($this->params->get('list_show_house_year',1)) : ?>
 						<td class="list-year">
 							<?php 
 								echo $item->year != '' ? $item->year : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_agent',0)) : ?>
+					<?php if ($this->params->get('list_show_house_agent',1)) : ?>
 						<td class="list-agent">
 							<?php 
 								echo $item->agent != '' ? $item->agent : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_area_unit',0)) : ?>
+					<?php if ($this->params->get('list_show_house_area_unit',1)) : ?>
 						<td class="list-area_unit">
 							<?php 
 								echo $item->area_unit != '' ? $item->area_unit : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_land_area',0)) : ?>
+					<?php if ($this->params->get('list_show_house_land_area',1)) : ?>
 						<td class="list-land_area">
 							<?php 
 								echo $item->land_area != '' ? $item->land_area : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_land_area_unit',0)) : ?>
+					<?php if ($this->params->get('list_show_house_land_area_unit',1)) : ?>
 						<td class="list-land_area_unit">
 							<?php 
 								echo $item->land_area_unit != '' ? $item->land_area_unit : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_expiration_date',0)) : ?>
+					<?php if ($this->params->get('list_show_house_expiration_date',1)) : ?>
 						<td class="list-expiration_date">
 							<?php 
 								echo ($item->expiration_date != '' AND $item->expiration_date != '0000-00-00 00:00:00') ? JHtml::date($item->expiration_date, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_lot_size',0)) : ?>
+					<?php if ($this->params->get('list_show_house_lot_size',1)) : ?>
 						<td class="list-lot_size">
 							<?php 
 								echo $item->lot_size != '' ? $item->lot_size : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_house_size',0)) : ?>
+					<?php if ($this->params->get('list_show_house_house_size',1)) : ?>
 						<td class="list-house_size">
 							<?php 
 								echo $item->house_size != '' ? $item->house_size : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_garages',0)) : ?>
+					<?php if ($this->params->get('list_show_house_garages',1)) : ?>
 						<td class="list-garages">
 							<?php 
 								echo $item->garages != '' ? $item->garages : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_date',0)) : ?>
+					<?php if ($this->params->get('list_show_house_date',1)) : ?>
 						<td class="list-date">
 							<?php 
 								echo ($item->date != '' AND $item->date != '0000-00-00 00:00:00') ? JHtml::date($item->date, '%Y-%m-%d', null) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_edok_link',0)) : ?>
+					<?php if ($this->params->get('list_show_house_edok_link',1)) : ?>
 						<td class="list-edok_link">
 							<?php 
 								echo $item->edok_link != '' ? $item->edok_link : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_owneremail',0)) : ?>
+					<?php if ($this->params->get('list_show_house_owneremail',1)) : ?>
 						<td class="list-owneremail">
 							<?php 
 								echo $item->owneremail != '' ? $item->owneremail : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_featured_clicks',0)) : ?>
+					<?php if ($this->params->get('list_show_house_featured_clicks',1)) : ?>
 						<td class="list-featured_clicks">
 							<?php 
 								echo $item->featured_clicks != '' ? $item->featured_clicks : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_featured_shows',0)) : ?>
+					<?php if ($this->params->get('list_show_house_featured_shows',1)) : ?>
 						<td class="list-featured_shows">
 							<?php 
 								echo $item->featured_shows != '' ? $item->featured_shows : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_pixUpdtedDt',0)) : ?>
+					<?php if ($this->params->get('list_show_house_pixUpdtedDt',1)) : ?>
 						<td class="list-pixUpdtedDt">
 							<?php 
 								echo $item->pixUpdtedDt != '' ? $item->pixUpdtedDt : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_extra1',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra1',1)) : ?>
 						<td class="list-extra1">
 							<?php 
 								echo $item->extra1 != '' ? $item->extra1 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_extra2',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra2',1)) : ?>
 						<td class="list-extra2">
 							<?php 
 								echo $item->extra2 != '' ? $item->extra2 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_extra3',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra3',1)) : ?>
 						<td class="list-extra3">
 							<?php 
 								echo $item->extra3 != '' ? $item->extra3 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_extra4',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra4',1)) : ?>
 						<td class="list-extra4">
 							<?php 
 								echo $item->extra4 != '' ? $item->extra4 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_extra5',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra5',1)) : ?>
 						<td class="list-extra5">
 							<?php 
 								echo $item->extra5 != '' ? $item->extra5 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_extra6',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra6',1)) : ?>
 						<td class="list-extra6">
 							<?php 
 								echo $item->extra6 != '' ? $item->extra6 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_extra7',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra7',1)) : ?>
 						<td class="list-extra7">
 							<?php 
 								echo $item->extra7 != '' ? $item->extra7 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_extra8',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra8',1)) : ?>
 						<td class="list-extra8">
 							<?php 
 								echo $item->extra8 != '' ? $item->extra8 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_extra9',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra9',1)) : ?>
 						<td class="list-extra9">
 							<?php 
 								echo $item->extra9 != '' ? $item->extra9 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_extra10',0)) : ?>
+					<?php if ($this->params->get('list_show_house_extra10',1)) : ?>
 						<td class="list-extra10">
 							<?php 
 								echo $item->extra10 != '' ? $item->extra10 : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_energy_value',0)) : ?>
+					<?php if ($this->params->get('list_show_house_energy_value',1)) : ?>
 						<td class="list-energy_value">
 							<?php 
 								echo $item->energy_value != '' ? $item->energy_value : $empty;
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_owner_id',0)) : ?>
+					<?php if ($this->params->get('list_show_house_owner_id',1)) : ?>
 						<td class="list-owner_id">
 							<?php 
 								if ($params->get('list_link_house_owner_id')) :
@@ -825,7 +825,7 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_climate_value',0)) : ?>
+					<?php if ($this->params->get('list_show_house_climate_value',1)) : ?>
 						<td class="list-climate_value">
 							<?php 
 								echo $item->climate_value != '' ? $item->climate_value : $empty;
@@ -910,6 +910,7 @@ $empty = $component->params->get('default_empty_field', '');
                 <?php echo '<button>export</button>'//JHtml::_('houseicon.create', $this->params); ?>
 	</form>
 </div>
+
 <?php if ($can_edit AND $params->get('save_history') AND $params->get('house_save_history')) : ?>
 <script>
 jQuery(document).ready(function($) {
@@ -919,7 +920,7 @@ jQuery(document).ready(function($) {
    });
 });
 
-function show_collapseModal(item_id){
+function show_collapsibleModal(item_id){
 	jQuery('#collapsibleModal').modal('show');
 	var modalBody = jQuery(document).find('.modal-body');
 	modalBody.find('iframe').remove();
