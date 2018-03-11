@@ -68,8 +68,8 @@
 		/>
     </fieldset>
     <fieldset
-        name="fieldset_jos_rem_const_fs"
-        label="COM_REMCA_CONST_FIELDSET_JOS_REM_CONST_FS_LABEL"
+        name="fieldset_const_fs"
+        label="COM_REMCA_CONST_FIELDSET_CONST_FS_LABEL"
     >
 
         <field

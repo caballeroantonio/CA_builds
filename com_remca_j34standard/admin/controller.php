@@ -69,14 +69,14 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'maincategory': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.maincategory', $id))
+			case 'photo': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.photo', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
-					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=main_categories', false));
+					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=photos', false));
 
 					return false;
 				}
@@ -129,14 +129,14 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'photo': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.photo', $id))
+			case 'maincategory': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.maincategory', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
-					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=photos', false));
+					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=main_categories', false));
 
 					return false;
 				}
@@ -305,6 +305,42 @@ class RemcaController extends JControllerLegacy
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
 					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=languages', false));
+
+					return false;
+				}
+				break;				
+			case 'lmunicipality': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.lmunicipality', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=lmunicipalities', false));
+
+					return false;
+				}
+				break;				
+			case 'lstate': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.lstate', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=lstates', false));
+
+					return false;
+				}
+				break;				
+			case 'country': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.country', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=countries', false));
 
 					return false;
 				}

@@ -77,6 +77,7 @@ $input = $app->input;
 						)
                         echo $this->form->renderField('version_note', null, null, array('group_id' => 'field_version_note')); 
 					 ?>
+						<?php echo $this->form->renderField('ordering', null, null, array('group_id' => 'field_ordering')); ?>
 						<?php echo $this->form->renderField('id', null, null, array('group_id' => 'field_id')); ?>
 										
 					</fieldset>
@@ -95,9 +96,9 @@ $input = $app->input;
                         echo $this->form->renderField('version_note', null, null, array('group_id' => 'field_version_note')); 
 					 ?>
 			<?php echo JHtml::_('bootstrap.endTab'); ?>
-			<?php echo JHtml::_('bootstrap.addTab', 'photo-tabs', 'fieldset-jos_rem_photos_fs', JText::_('COM_REMCA_PHOTOS_FIELDSET_JOS_REM_PHOTOS_FS_LABEL', true)); ?>
+			<?php echo JHtml::_('bootstrap.addTab', 'photo-tabs', 'fieldset-photos_fs', JText::_('COM_REMCA_PHOTOS_FIELDSET_PHOTOS_FS_LABEL', true)); ?>
 			<div class="row-fluid form-horizontal-desktop">
-				<?php foreach($this->form->getFieldset('fieldset_jos_rem_photos_fs') as $field): ?>
+				<?php foreach($this->form->getFieldset('fieldset_photos_fs') as $field): ?>
 					<?php if (!$field->hidden) : ?>
 						<?php $fieldname = (string) $field->fieldname; ?>
 						
@@ -111,7 +112,19 @@ $input = $app->input;
 			</div>
 			<?php echo JHtml::_('bootstrap.endTab'); ?>
 
+			<?php echo JHtml::_('bootstrap.addTab', 'photo-tabs', 'images', JText::_('COM_REMCA_FIELDSET_IMAGES_LABEL', true)); ?>
+			<div class="row-fluid form-horizontal-desktop">
+				<div class="span6">
+					<?php foreach ($this->form->getGroup('images') as $field) : ?>
+						<?php if (!$field->hidden) : ?>
+							<?php $fieldname = (string) $field->fieldname; ?>
+							<?php echo $this->form->renderField($fieldname, 'images', null, array('group_id' => 'field_'.$fieldname)); ?>							
+						<?php endif; ?>							
+					<?php endforeach; ?>
+				</div>
 
+			</div>
+			<?php echo JHtml::_('bootstrap.endTab'); ?>
 
 		<?php echo JHtml::_('bootstrap.endTabSet'); ?>
 	</div>

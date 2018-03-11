@@ -40,28 +40,79 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_HOUSES_FS
-        FIELDSET_NAME=jos_rem_houses_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_HOUSES_FS
+    	FIELDSET_CODE_NAME_UPPER=HOUSES_FS
+        FIELDSET_NAME=houses_fs
+        FIELDSET_CODE_NAME_UPPER=HOUSES_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=houseid
-            FIELD_CODE_NAME_UPPER=HOUSEID
+            FIELD_NAME=id_municipality
+            FIELD_CODE_NAME_UPPER=ID_LMUNICIPALITY
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=1
+            FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`houseid` VARCHAR(20) NOT NULL DEFAULT '' houseid
+            FIELD_DB=`id_lmunicipality` INT(10) UNSIGNED  NOT NULL DEFAULT '0' id_municipality
             
-            FIELD_NAME_LATEX=houseid
-            FIELD_CODE_NAME_LATEX=houseid
+            FIELD_NAME_LATEX=id\_municipality
+            FIELD_CODE_NAME_LATEX=id\_lmunicipality
             FIELD_DBCOMMENT_LATEX=
             
+                {FIELD_LINK}
+                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=M
+                FIELD_FOREIGN_OBJECT_UPPER=LMUNICIPALITY
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=State
+            FIELD_CODE_NAME_UPPER=ID_LSTATE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=13
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_lstate` INT(10) UNSIGNED  NOT NULL DEFAULT '0' State
+            
+            FIELD_NAME_LATEX=State
+            FIELD_CODE_NAME_LATEX=id\_lstate
+            FIELD_DBCOMMENT_LATEX=
+            
+                {FIELD_LINK}
+                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=S
+                FIELD_FOREIGN_OBJECT_UPPER=LSTATE
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Country
+            FIELD_CODE_NAME_UPPER=ID_COUNTRY
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=13
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_country` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Country
+            
+            FIELD_NAME_LATEX=Country
+            FIELD_CODE_NAME_LATEX=id\_country
+            FIELD_DBCOMMENT_LATEX=
+            
+                {FIELD_LINK}
+                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=C1
+                FIELD_FOREIGN_OBJECT_UPPER=COUNTRY
             
 
 
@@ -135,6 +186,27 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
+            FIELD_NAME=houseid
+            FIELD_CODE_NAME_UPPER=HOUSEID
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`houseid` VARCHAR(20) NOT NULL DEFAULT '' houseid
+            
+            FIELD_NAME_LATEX=houseid
+            FIELD_CODE_NAME_LATEX=houseid
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
             FIELD_NAME=link
             FIELD_CODE_NAME_UPPER=LINK
             FIELD_INTRO=
@@ -182,10 +254,10 @@ architectcomp=remca
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=22
+            FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`price` INT(11) NOT NULL DEFAULT '0' price
+            FIELD_DB=`price` DECIMAL(11,2) NOT NULL DEFAULT '0' price
             
             FIELD_NAME_LATEX=price
             FIELD_CODE_NAME_LATEX=price
@@ -198,18 +270,18 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=priceunit
-            FIELD_CODE_NAME_UPPER=PRICEUNIT
+            FIELD_NAME=Currency
+            FIELD_CODE_NAME_UPPER=ID_CURRENCY
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=1
+            FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`priceunit` VARCHAR(14) NOT NULL DEFAULT '' priceunit
+            FIELD_DB=`id_currency` INT(10) NOT NULL DEFAULT '0' Currency
             
-            FIELD_NAME_LATEX=priceunit
-            FIELD_CODE_NAME_LATEX=priceunit
+            FIELD_NAME_LATEX=Currency
+            FIELD_CODE_NAME_LATEX=id\_currency
             FIELD_DBCOMMENT_LATEX=
             
             
@@ -374,7 +446,7 @@ architectcomp=remca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`map_zoom` VARCHAR(5) NOT NULL DEFAULT '' map_zoom
+            FIELD_DB=`map_zoom` INT(10) NOT NULL DEFAULT '14' map_zoom
             
             FIELD_NAME_LATEX=map\_zoom
             FIELD_CODE_NAME_LATEX=map\_zoom
@@ -392,10 +464,10 @@ architectcomp=remca
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=22
+            FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`rooms` INT(11) DEFAULT NULL rooms
+            FIELD_DB=`rooms` INT(11) NOT NULL DEFAULT '0' rooms
             
             FIELD_NAME_LATEX=rooms
             FIELD_CODE_NAME_LATEX=rooms
@@ -413,10 +485,10 @@ architectcomp=remca
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=22
+            FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`bathrooms` INT(11) DEFAULT NULL bathrooms
+            FIELD_DB=`bathrooms` INT(11) NOT NULL DEFAULT '0' bathrooms
             
             FIELD_NAME_LATEX=bathrooms
             FIELD_CODE_NAME_LATEX=bathrooms
@@ -434,10 +506,10 @@ architectcomp=remca
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=22
+            FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`bedrooms` INT(11) DEFAULT NULL bedrooms
+            FIELD_DB=`bedrooms` INT(11) NOT NULL DEFAULT '0' bedrooms
             
             FIELD_NAME_LATEX=bedrooms
             FIELD_CODE_NAME_LATEX=bedrooms
@@ -473,9 +545,9 @@ architectcomp=remca
             {OBJECT_FIELD}
             FIELD_NAME=image_link
             FIELD_CODE_NAME_UPPER=IMAGE_LINK
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
+            FIELD_INTRO=<p>@ToDo implementar el uso del campo pre-formado images que es un JSON/ARRAY</p>
+            FIELD_DESCRIPTION_INI=<p>@ToDo implementar el uso del campo pre-formado images que es un JSON/ARRAY</p>
+            FIELD_DESCRIPTION=<p>@ToDo implementar el uso del campo pre-formado images que es un JSON/ARRAY</p> 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
@@ -483,7 +555,7 @@ architectcomp=remca
             
             FIELD_NAME_LATEX=image\_link
             FIELD_CODE_NAME_LATEX=image\_link
-            FIELD_DBCOMMENT_LATEX=
+            FIELD_DBCOMMENT_LATEX=@ToDo implementar el uso del campo pre-formado images que es un JSON/ARRAY
             
             
 
@@ -1059,27 +1131,6 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=energy_value
-            FIELD_CODE_NAME_UPPER=ENERGY_VALUE
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=37
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`energy_value` DECIMAL(11,2) DEFAULT NULL energy_value
-            
-            FIELD_NAME_LATEX=energy\_value
-            FIELD_CODE_NAME_LATEX=energy\_value
-            FIELD_DBCOMMENT_LATEX=
-            
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
             FIELD_NAME=owner_id
             FIELD_CODE_NAME_UPPER=OWNER_ID
             FIELD_INTRO=
@@ -1097,6 +1148,27 @@ architectcomp=remca
                 {FIELD_LINK}
                 FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
                 FIELD_FOREIGN_OBJECT_UPPER=USER
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=energy_value
+            FIELD_CODE_NAME_UPPER=ENERGY_VALUE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=37
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`energy_value` DECIMAL(11,2) DEFAULT NULL energy_value
+            
+            FIELD_NAME_LATEX=energy\_value
+            FIELD_CODE_NAME_LATEX=energy\_value
+            FIELD_DBCOMMENT_LATEX=
+            
             
 
 
@@ -1142,56 +1214,65 @@ architectcomp=remca
 
     
 {1.3}
+        	{FILTER_FIELD} id_lmunicipality
+{1.3}
+        	{FILTER_FIELD} id_lstate
+{1.3}
+        	{FILTER_FIELD} id_country
+{1.3}
         	{FILTER_FIELD} price
 {-1.3}
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Main_category
+    Compobject_name=Photo
     Compobject_description_ini=
 	
-    COMPOBJECT=MAINCATEGORY
-    compobject=maincategory
-    CompObject=MainCategory
+    COMPOBJECT=PHOTO
+    compobject=photo
+    CompObject=Photo
     
-    compobject_name=main_category
-    CompObject_name=Main_category
-    CompObject_short_name=Main_category
-    Compobject_short_name=Main_category
-    compobject_short_name=main_category
+    compobject_name=photo
+    CompObject_name=Photo
+    CompObject_short_name=Photo
+    Compobject_short_name=Photo
+    compobject_short_name=photo
     
-    COMPOBJECTPLURAL=MAIN_CATEGORIES
-    compobjectplural=main_categories
-    CompObjectPlural=MainCategories
-    compobject_plural_name=main_categories
-    CompObject_plural_name=Main_categories
-    compobject_short_plural_name=main_categories
-    CompObject_short_plural_name=Main_categories
+    COMPOBJECTPLURAL=PHOTOS
+    compobjectplural=photos
+    CompObjectPlural=Photos
+    compobject_plural_name=photos
+    CompObject_plural_name=Photos
+    compobject_short_plural_name=photos
+    CompObject_short_plural_name=Photos
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_MAIN_CATEGORIES_FS
-        FIELDSET_NAME=jos_rem_main_categories_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_MAIN_CATEGORIES_FS
+    	FIELDSET_CODE_NAME_UPPER=PHOTOS_FS
+        FIELDSET_NAME=photos_fs
+        FIELDSET_CODE_NAME_UPPER=PHOTOS_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=parent_id
-            FIELD_CODE_NAME_UPPER=PARENT_ID
-            FIELD_INTRO=<p>Sirve para modelar en forma de arbol dentro del mismo objeto.</p>
-            FIELD_DESCRIPTION_INI=<p>Sirve para modelar en forma de arbol dentro del mismo objeto.</p>
-            FIELD_DESCRIPTION=<p>Sirve para modelar en forma de arbol dentro del mismo objeto.</p> 
-            FIELDTYPE_ID=22
+            FIELD_NAME=fk_houseid
+            FIELD_CODE_NAME_UPPER=FK_HOUSEID
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`parent_id` INT(11) NOT NULL DEFAULT '0' parent_id
+            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
             
-            FIELD_NAME_LATEX=parent\_id
-            FIELD_CODE_NAME_LATEX=parent\_id
-            FIELD_DBCOMMENT_LATEX=Sirve para modelar en forma de arbol dentro del mismo objeto.
+            FIELD_NAME_LATEX=fk\_houseid
+            FIELD_CODE_NAME_LATEX=fk\_houseid
+            FIELD_DBCOMMENT_LATEX=
             
+                {FIELD_LINK}
+                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
+                FIELD_FOREIGN_OBJECT_UPPER=HOUSE
             
 
 
@@ -1199,165 +1280,18 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=associate_category
-            FIELD_CODE_NAME_UPPER=ASSOCIATE_CATEGORY
+            FIELD_NAME=thumbnail_img
+            FIELD_CODE_NAME_UPPER=THUMBNAIL_IMG
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`associate_category` VARCHAR(255) DEFAULT NULL associate_category
+            FIELD_DB=`thumbnail_img` VARCHAR(250) DEFAULT NULL thumbnail_img
             
-            FIELD_NAME_LATEX=associate\_category
-            FIELD_CODE_NAME_LATEX=associate\_category
-            FIELD_DBCOMMENT_LATEX=
-            
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=title
-            FIELD_CODE_NAME_UPPER=TITLE
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`title` VARCHAR(255) NOT NULL DEFAULT '' title
-            
-            FIELD_NAME_LATEX=title
-            FIELD_CODE_NAME_LATEX=title
-            FIELD_DBCOMMENT_LATEX=
-            
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=image
-            FIELD_CODE_NAME_UPPER=IMAGE
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`image` VARCHAR(255) NOT NULL DEFAULT '' image
-            
-            FIELD_NAME_LATEX=image
-            FIELD_CODE_NAME_LATEX=image
-            FIELD_DBCOMMENT_LATEX=
-            
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=section
-            FIELD_CODE_NAME_UPPER=SECTION
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`section` VARCHAR(50) NOT NULL DEFAULT '' section
-            
-            FIELD_NAME_LATEX=section
-            FIELD_CODE_NAME_LATEX=section
-            FIELD_DBCOMMENT_LATEX=
-            
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=image_position
-            FIELD_CODE_NAME_UPPER=IMAGE_POSITION
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`image_position` VARCHAR(30) NOT NULL DEFAULT '' image_position
-            
-            FIELD_NAME_LATEX=image\_position
-            FIELD_CODE_NAME_LATEX=image\_position
-            FIELD_DBCOMMENT_LATEX=
-            
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=editor
-            FIELD_CODE_NAME_UPPER=EDITOR
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`editor` VARCHAR(50) DEFAULT NULL editor
-            
-            FIELD_NAME_LATEX=editor
-            FIELD_CODE_NAME_LATEX=editor
-            FIELD_DBCOMMENT_LATEX=
-            
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=count
-            FIELD_CODE_NAME_UPPER=COUNT
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=22
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`count` INT(11) DEFAULT NULL count
-            
-            FIELD_NAME_LATEX=count
-            FIELD_CODE_NAME_LATEX=count
-            FIELD_DBCOMMENT_LATEX=
-            
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=params2
-            FIELD_CODE_NAME_UPPER=PARAMS2
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=4
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`params2` TEXT DEFAULT NULL params2
-            
-            FIELD_NAME_LATEX=params2
-            FIELD_CODE_NAME_LATEX=params2
+            FIELD_NAME_LATEX=thumbnail\_img
+            FIELD_CODE_NAME_LATEX=thumbnail\_img
             FIELD_DBCOMMENT_LATEX=
             
             
@@ -1410,9 +1344,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_MIME_TYPES_FS
-        FIELDSET_NAME=jos_rem_mime_types_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_MIME_TYPES_FS
+    	FIELDSET_CODE_NAME_UPPER=MIME_TYPES_FS
+        FIELDSET_NAME=mime_types_fs
+        FIELDSET_CODE_NAME_UPPER=MIME_TYPES_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -1503,9 +1437,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_MLS_FOR_DELETE_FS
-        FIELDSET_NAME=jos_rem_mls_for_delete_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_MLS_FOR_DELETE_FS
+    	FIELDSET_CODE_NAME_UPPER=MLS_FOR_DELETE_FS
+        FIELDSET_NAME=mls_for_delete_fs
+        FIELDSET_CODE_NAME_UPPER=MLS_FOR_DELETE_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -1575,9 +1509,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_ORDERS_FS
-        FIELDSET_NAME=jos_rem_orders_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_ORDERS_FS
+    	FIELDSET_CODE_NAME_UPPER=ORDERS_FS
+        FIELDSET_NAME=orders_fs
+        FIELDSET_CODE_NAME_UPPER=ORDERS_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -1926,9 +1860,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_ORDERS_DETAILS_FS
-        FIELDSET_NAME=jos_rem_orders_details_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_ORDERS_DETAILS_FS
+    	FIELDSET_CODE_NAME_UPPER=ORDERS_DETAILS_FS
+        FIELDSET_NAME=orders_details_fs
+        FIELDSET_CODE_NAME_UPPER=ORDERS_DETAILS_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -2299,74 +2233,50 @@ architectcomp=remca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Photo
+    Compobject_name=Main_category
     Compobject_description_ini=
 	
-    COMPOBJECT=PHOTO
-    compobject=photo
-    CompObject=Photo
+    COMPOBJECT=MAINCATEGORY
+    compobject=maincategory
+    CompObject=MainCategory
     
-    compobject_name=photo
-    CompObject_name=Photo
-    CompObject_short_name=Photo
-    Compobject_short_name=Photo
-    compobject_short_name=photo
+    compobject_name=main_category
+    CompObject_name=Main_category
+    CompObject_short_name=Main_category
+    Compobject_short_name=Main_category
+    compobject_short_name=main_category
     
-    COMPOBJECTPLURAL=PHOTOS
-    compobjectplural=photos
-    CompObjectPlural=Photos
-    compobject_plural_name=photos
-    CompObject_plural_name=Photos
-    compobject_short_plural_name=photos
-    CompObject_short_plural_name=Photos
+    COMPOBJECTPLURAL=MAIN_CATEGORIES
+    compobjectplural=main_categories
+    CompObjectPlural=MainCategories
+    compobject_plural_name=main_categories
+    CompObject_plural_name=Main_categories
+    compobject_short_plural_name=main_categories
+    CompObject_short_plural_name=Main_categories
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_PHOTOS_FS
-        FIELDSET_NAME=jos_rem_photos_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_PHOTOS_FS
+    	FIELDSET_CODE_NAME_UPPER=MAIN_CATEGORIES_FS
+        FIELDSET_NAME=main_categories_fs
+        FIELDSET_CODE_NAME_UPPER=MAIN_CATEGORIES_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_houseid
-            FIELD_CODE_NAME_UPPER=FK_HOUSEID
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=13
+            FIELD_NAME=parent_id
+            FIELD_CODE_NAME_UPPER=PARENT_ID
+            FIELD_INTRO=<p>Sirve para modelar en forma de arbol dentro del mismo objeto.</p>
+            FIELD_DESCRIPTION_INI=<p>Sirve para modelar en forma de arbol dentro del mismo objeto.</p>
+            FIELD_DESCRIPTION=<p>Sirve para modelar en forma de arbol dentro del mismo objeto.</p> 
+            FIELDTYPE_ID=22
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`parent_id` INT(11) NOT NULL DEFAULT '0' parent_id
             
-            FIELD_NAME_LATEX=fk\_houseid
-            FIELD_CODE_NAME_LATEX=fk\_houseid
-            FIELD_DBCOMMENT_LATEX=
-            
-                {FIELD_LINK}
-                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
-                FIELD_FOREIGN_OBJECT_UPPER=HOUSE
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=thumbnail_img
-            FIELD_CODE_NAME_UPPER=THUMBNAIL_IMG
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=1
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`thumbnail_img` VARCHAR(250) DEFAULT NULL thumbnail_img
-            
-            FIELD_NAME_LATEX=thumbnail\_img
-            FIELD_CODE_NAME_LATEX=thumbnail\_img
-            FIELD_DBCOMMENT_LATEX=
+            FIELD_NAME_LATEX=parent\_id
+            FIELD_CODE_NAME_LATEX=parent\_id
+            FIELD_DBCOMMENT_LATEX=Sirve para modelar en forma de arbol dentro del mismo objeto.
             
             
 
@@ -2375,18 +2285,18 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=main_img
-            FIELD_CODE_NAME_UPPER=MAIN_IMG
+            FIELD_NAME=associate_category
+            FIELD_CODE_NAME_UPPER=ASSOCIATE_CATEGORY
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`main_img` VARCHAR(250) DEFAULT NULL main_img
+            FIELD_DB=`associate_category` VARCHAR(255) DEFAULT NULL associate_category
             
-            FIELD_NAME_LATEX=main\_img
-            FIELD_CODE_NAME_LATEX=main\_img
+            FIELD_NAME_LATEX=associate\_category
+            FIELD_CODE_NAME_LATEX=associate\_category
             FIELD_DBCOMMENT_LATEX=
             
             
@@ -2396,18 +2306,144 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=img_ordering
-            FIELD_CODE_NAME_UPPER=IMG_ORDERING
+            FIELD_NAME=title
+            FIELD_CODE_NAME_UPPER=TITLE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`title` VARCHAR(255) NOT NULL DEFAULT '' title
+            
+            FIELD_NAME_LATEX=title
+            FIELD_CODE_NAME_LATEX=title
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=image
+            FIELD_CODE_NAME_UPPER=IMAGE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`image` VARCHAR(255) NOT NULL DEFAULT '' image
+            
+            FIELD_NAME_LATEX=image
+            FIELD_CODE_NAME_LATEX=image
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=section
+            FIELD_CODE_NAME_UPPER=SECTION
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`section` VARCHAR(50) NOT NULL DEFAULT '' section
+            
+            FIELD_NAME_LATEX=section
+            FIELD_CODE_NAME_LATEX=section
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=image_position
+            FIELD_CODE_NAME_UPPER=IMAGE_POSITION
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`image_position` VARCHAR(30) NOT NULL DEFAULT '' image_position
+            
+            FIELD_NAME_LATEX=image\_position
+            FIELD_CODE_NAME_LATEX=image\_position
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=editor
+            FIELD_CODE_NAME_UPPER=EDITOR
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`editor` VARCHAR(50) DEFAULT NULL editor
+            
+            FIELD_NAME_LATEX=editor
+            FIELD_CODE_NAME_LATEX=editor
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=count
+            FIELD_CODE_NAME_UPPER=COUNT
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=22
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`img_ordering` INT(11) DEFAULT NULL img_ordering
+            FIELD_DB=`count` INT(11) DEFAULT NULL count
             
-            FIELD_NAME_LATEX=img\_ordering
-            FIELD_CODE_NAME_LATEX=img\_ordering
+            FIELD_NAME_LATEX=count
+            FIELD_CODE_NAME_LATEX=count
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=params2
+            FIELD_CODE_NAME_UPPER=PARAMS2
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=4
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`params2` TEXT DEFAULT NULL params2
+            
+            FIELD_NAME_LATEX=params2
+            FIELD_CODE_NAME_LATEX=params2
             FIELD_DBCOMMENT_LATEX=
             
             
@@ -2460,9 +2496,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_RENT_FS
-        FIELDSET_NAME=jos_rem_rent_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_RENT_FS
+    	FIELDSET_CODE_NAME_UPPER=RENT_FS
+        FIELDSET_NAME=rent_fs
+        FIELDSET_CODE_NAME_UPPER=RENT_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -2685,9 +2721,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_RENT_REQUEST_FS
-        FIELDSET_NAME=jos_rem_rent_request_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_RENT_REQUEST_FS
+    	FIELDSET_CODE_NAME_UPPER=RENT_REQUEST_FS
+        FIELDSET_NAME=rent_request_fs
+        FIELDSET_CODE_NAME_UPPER=RENT_REQUEST_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -2931,9 +2967,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_RENT_SAL_FS
-        FIELDSET_NAME=jos_rem_rent_sal_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_RENT_SAL_FS
+    	FIELDSET_CODE_NAME_UPPER=RENT_SAL_FS
+        FIELDSET_NAME=rent_sal_fs
+        FIELDSET_CODE_NAME_UPPER=RENT_SAL_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -3216,9 +3252,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_REVIEW_FS
-        FIELDSET_NAME=jos_rem_review_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_REVIEW_FS
+    	FIELDSET_CODE_NAME_UPPER=REVIEW_FS
+        FIELDSET_NAME=review_fs
+        FIELDSET_CODE_NAME_UPPER=REVIEW_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -3441,9 +3477,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_TRACK_SOURCE_FS
-        FIELDSET_NAME=jos_rem_track_source_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_TRACK_SOURCE_FS
+    	FIELDSET_CODE_NAME_UPPER=TRACK_SOURCE_FS
+        FIELDSET_NAME=track_source_fs
+        FIELDSET_CODE_NAME_UPPER=TRACK_SOURCE_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -3620,63 +3656,6 @@ architectcomp=remca
     CompObject_short_plural_name=Users_wishlists
     
     
-        {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_USERS_WISHLIST_FS
-        FIELDSET_NAME=jos_rem_users_wishlist_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_USERS_WISHLIST_FS
-        FIELDSET_DESCRIPTION=
-
-{1.1}        
-
-            {OBJECT_FIELD}
-            FIELD_NAME=fk_houseid
-            FIELD_CODE_NAME_UPPER=FK_HOUSEID
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=13
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
-            
-            FIELD_NAME_LATEX=fk\_houseid
-            FIELD_CODE_NAME_LATEX=fk\_houseid
-            FIELD_DBCOMMENT_LATEX=
-            
-                {FIELD_LINK}
-                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
-                FIELD_FOREIGN_OBJECT_UPPER=HOUSE
-            
-
-
-        
-{-1.2}
-
-            {OBJECT_FIELD}
-            FIELD_NAME=fk_userid
-            FIELD_CODE_NAME_UPPER=FK_USERID
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=13
-                        
-            FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_userid
-            
-            FIELD_NAME_LATEX=fk\_userid
-            FIELD_CODE_NAME_LATEX=fk\_userid
-            FIELD_DBCOMMENT_LATEX=
-            
-                {FIELD_LINK}
-                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
-                FIELD_FOREIGN_OBJECT_UPPER=USER
-            
-
-
-        
-{-1.2}
-{-1.1}
-        {1.1a}
 
 =======IF'S==========
 	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
@@ -3720,9 +3699,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_VIDEO_SOURCE_FS
-        FIELDSET_NAME=jos_rem_video_source_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_VIDEO_SOURCE_FS
+    	FIELDSET_CODE_NAME_UPPER=VIDEO_SOURCE_FS
+        FIELDSET_NAME=video_source_fs
+        FIELDSET_CODE_NAME_UPPER=VIDEO_SOURCE_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -3900,9 +3879,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_BUYING_REQUEST_FS
-        FIELDSET_NAME=jos_rem_buying_request_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_BUYING_REQUEST_FS
+    	FIELDSET_CODE_NAME_UPPER=BUYING_REQUEST_FS
+        FIELDSET_NAME=buying_request_fs
+        FIELDSET_CODE_NAME_UPPER=BUYING_REQUEST_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -4125,9 +4104,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_CATEGORIES_FS
-        FIELDSET_NAME=jos_rem_categories_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_CATEGORIES_FS
+    	FIELDSET_CODE_NAME_UPPER=CATEGORIES_FS
+        FIELDSET_NAME=categories_fs
+        FIELDSET_CODE_NAME_UPPER=CATEGORIES_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -4224,9 +4203,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_CONST_FS
-        FIELDSET_NAME=jos_rem_const_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_CONST_FS
+    	FIELDSET_CODE_NAME_UPPER=CONST_FS
+        FIELDSET_NAME=const_fs
+        FIELDSET_CODE_NAME_UPPER=CONST_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -4317,9 +4296,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_CONST_LANGUAGES_FS
-        FIELDSET_NAME=jos_rem_const_languages_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_CONST_LANGUAGES_FS
+    	FIELDSET_CODE_NAME_UPPER=CONST_LANGUAGES_FS
+        FIELDSET_NAME=const_languages_fs
+        FIELDSET_CODE_NAME_UPPER=CONST_LANGUAGES_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -4437,9 +4416,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_FEATURE_FS
-        FIELDSET_NAME=jos_rem_feature_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_FEATURE_FS
+    	FIELDSET_CODE_NAME_UPPER=FEATURE_FS
+        FIELDSET_NAME=feature_fs
+        FIELDSET_CODE_NAME_UPPER=FEATURE_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -4530,9 +4509,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_FEATURE_HOUSES_FS
-        FIELDSET_NAME=jos_rem_feature_houses_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_FEATURE_HOUSES_FS
+    	FIELDSET_CODE_NAME_UPPER=FEATURE_HOUSES_FS
+        FIELDSET_NAME=feature_houses_fs
+        FIELDSET_CODE_NAME_UPPER=FEATURE_HOUSES_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -4629,9 +4608,9 @@ architectcomp=remca
     
     
         {OBJECT_FIELDSET}
-    	FIELDSET_CODE_NAME_UPPER=JOS_REM_LANGUAGES_FS
-        FIELDSET_NAME=jos_rem_languages_fs
-        FIELDSET_CODE_NAME_UPPER=JOS_REM_LANGUAGES_FS
+    	FIELDSET_CODE_NAME_UPPER=LANGUAGES_FS
+        FIELDSET_NAME=languages_fs
+        FIELDSET_CODE_NAME_UPPER=LANGUAGES_FS
         FIELDSET_DESCRIPTION=
 
 {1.1}        
@@ -4691,6 +4670,405 @@ architectcomp=remca
             
             FIELD_NAME_LATEX=sef
             FIELD_CODE_NAME_LATEX=sef
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
+    Compobject_name=Municipality
+    Compobject_description_ini=<p>locality-municipality</p>
+	
+    COMPOBJECT=LMUNICIPALITY
+    compobject=lmunicipality
+    CompObject=Lmunicipality
+    
+    compobject_name=municipality
+    CompObject_name=Municipality
+    CompObject_short_name=Municipality
+    Compobject_short_name=Municipality
+    compobject_short_name=municipality
+    
+    COMPOBJECTPLURAL=LMUNICIPALITIES
+    compobjectplural=lmunicipalities
+    CompObjectPlural=Lmunicipalities
+    compobject_plural_name=municipalities
+    CompObject_plural_name=Municipalities
+    compobject_short_plural_name=municipalities
+    CompObject_short_plural_name=Municipalities
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=MUNICIPALITY_FS
+        FIELDSET_NAME=municipality_fs
+        FIELDSET_CODE_NAME_UPPER=MUNICIPALITY_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=State
+            FIELD_CODE_NAME_UPPER=ID_LSTATE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=13
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_lstate` INT(10) UNSIGNED  NOT NULL DEFAULT '0' State
+            
+            FIELD_NAME_LATEX=State
+            FIELD_CODE_NAME_LATEX=id\_lstate
+            FIELD_DBCOMMENT_LATEX=
+            
+                {FIELD_LINK}
+                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=S
+                FIELD_FOREIGN_OBJECT_UPPER=LSTATE
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Country
+            FIELD_CODE_NAME_UPPER=ID_COUNTRY
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=13
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_country` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Country
+            
+            FIELD_NAME_LATEX=Country
+            FIELD_CODE_NAME_LATEX=id\_country
+            FIELD_DBCOMMENT_LATEX=
+            
+                {FIELD_LINK}
+                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=C1
+                FIELD_FOREIGN_OBJECT_UPPER=COUNTRY
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{1.3}
+        	{FILTER_FIELD} id_lstate
+{1.3}
+        	{FILTER_FIELD} id_country
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
+    Compobject_name=State
+    Compobject_description_ini=<p>locality-state</p>
+	
+    COMPOBJECT=LSTATE
+    compobject=lstate
+    CompObject=Lstate
+    
+    compobject_name=state
+    CompObject_name=State
+    CompObject_short_name=State
+    Compobject_short_name=State
+    compobject_short_name=state
+    
+    COMPOBJECTPLURAL=LSTATES
+    compobjectplural=lstates
+    CompObjectPlural=Lstates
+    compobject_plural_name=states
+    CompObject_plural_name=States
+    compobject_short_plural_name=states
+    CompObject_short_plural_name=States
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=STATE_FS
+        FIELDSET_NAME=state_fs
+        FIELDSET_CODE_NAME_UPPER=STATE_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=id_country
+            FIELD_CODE_NAME_UPPER=ID_COUNTRY
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=13
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`id_country` INT(10) UNSIGNED  NOT NULL DEFAULT '0' id_country
+            
+            FIELD_NAME_LATEX=id\_country
+            FIELD_CODE_NAME_LATEX=id\_country
+            FIELD_DBCOMMENT_LATEX=
+            
+                {FIELD_LINK}
+                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=C1
+                FIELD_FOREIGN_OBJECT_UPPER=COUNTRY
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=Frienly Name
+            FIELD_CODE_NAME_UPPER=FRIENDLY_NAME
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`friendly_name` VARCHAR(45) DEFAULT NULL Frienly Name
+            
+            FIELD_NAME_LATEX=Frienly Name
+            FIELD_CODE_NAME_LATEX=friendly\_name
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+{-1.1}
+        {1.1a}
+
+=======IF'S==========
+	INCLUDE_DESCRIPTION OTRA DESCRIPCIÓN !!!
+
+
+=======/IF'S==========
+
+
+
+======/REGISTRY_ENTRY=====
+
+        
+
+    
+
+    
+{1.3}
+        	{FILTER_FIELD} id_country
+{-1.3}
+    
+{1.0}
+	{COMPONENT_OBJECT}
+    Compobject_name=Country
+    Compobject_description_ini=
+	
+    COMPOBJECT=COUNTRY
+    compobject=country
+    CompObject=Country
+    
+    compobject_name=country
+    CompObject_name=Country
+    CompObject_short_name=Country
+    Compobject_short_name=Country
+    compobject_short_name=country
+    
+    COMPOBJECTPLURAL=COUNTRIES
+    compobjectplural=countries
+    CompObjectPlural=Countries
+    compobject_plural_name=countries
+    CompObject_plural_name=Countries
+    compobject_short_plural_name=countries
+    CompObject_short_plural_name=Countries
+    
+    
+        {OBJECT_FIELDSET}
+    	FIELDSET_CODE_NAME_UPPER=COUNTRY_FS
+        FIELDSET_NAME=country_fs
+        FIELDSET_CODE_NAME_UPPER=COUNTRY_FS
+        FIELDSET_DESCRIPTION=
+
+{1.1}        
+
+            {OBJECT_FIELD}
+            FIELD_NAME=ordering_cur
+            FIELD_CODE_NAME_UPPER=ORDERING_CUR
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=22
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`ordering_cur` INT(11) NOT NULL DEFAULT '1' ordering_cur
+            
+            FIELD_NAME_LATEX=ordering\_cur
+            FIELD_CODE_NAME_LATEX=ordering\_cur
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=published_cur
+            FIELD_CODE_NAME_UPPER=PUBLISHED_CUR
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=22
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`published_cur` TINYINT(1) NOT NULL DEFAULT '0' published_cur
+            
+            FIELD_NAME_LATEX=published\_cur
+            FIELD_CODE_NAME_LATEX=published\_cur
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=iso2
+            FIELD_CODE_NAME_UPPER=ISO2
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`iso2` VARCHAR(2) DEFAULT NULL iso2
+            
+            FIELD_NAME_LATEX=iso2
+            FIELD_CODE_NAME_LATEX=iso2
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=iso3
+            FIELD_CODE_NAME_UPPER=ISO3
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`iso3` VARCHAR(3) DEFAULT NULL iso3
+            
+            FIELD_NAME_LATEX=iso3
+            FIELD_CODE_NAME_LATEX=iso3
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=currency
+            FIELD_CODE_NAME_UPPER=CURRENCY
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=1
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`currency` VARCHAR(45) DEFAULT NULL currency
+            
+            FIELD_NAME_LATEX=currency
+            FIELD_CODE_NAME_LATEX=currency
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=conversion
+            FIELD_CODE_NAME_UPPER=CONVERSION
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=37
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`conversion` DECIMAL(11,2) NOT NULL DEFAULT '0' conversion
+            
+            FIELD_NAME_LATEX=conversion
+            FIELD_CODE_NAME_LATEX=conversion
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=conversion_date
+            FIELD_CODE_NAME_UPPER=CONVERSION_DATE
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=5
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`conversion_date` DATETIME DEFAULT NULL conversion_date
+            
+            FIELD_NAME_LATEX=conversion\_date
+            FIELD_CODE_NAME_LATEX=conversion\_date
             FIELD_DBCOMMENT_LATEX=
             
             

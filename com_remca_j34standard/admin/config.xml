@@ -57,12 +57,12 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="maincategory_save_history"
+        <field name="photo_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
-			label="COM_REMCA_MAIN_CATEGORIES_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_REMCA_MAIN_CATEGORIES_FIELD_SAVE_HISTORY_DESC"
+			label="COM_REMCA_PHOTOS_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_REMCA_PHOTOS_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -107,12 +107,12 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="photo_save_history"
+        <field name="maincategory_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
-			label="COM_REMCA_PHOTOS_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_REMCA_PHOTOS_FIELD_SAVE_HISTORY_DESC"
+			label="COM_REMCA_MAIN_CATEGORIES_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_REMCA_MAIN_CATEGORIES_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -400,6 +400,40 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
+        <field name="show_house_image"
+            type="radio"
+            label="COM_REMCA_SHOW_IMAGE_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_IMAGE_DESC"
+            class="btn-group btn-group-yesno"
+        >
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_house_image_float"
+            type="radio"
+            label="COM_REMCA_SHOW_IMAGE_FLOAT_LABEL"
+            description="COM_REMCA_SHOW_IMAGE_FLOAT_DESC"
+			class="btn-group"
+        >
+            <option value="none">COM_REMCA_VALUE_FLOAT_NONE</option>
+            <option value="right">COM_REMCA_VALUE_FLOAT_RIGHT</option>
+            <option value="left">COM_REMCA_VALUE_FLOAT_LEFT</option>
+        </field>
+        <field name="show_house_image_width"
+            type="text"
+            label="COM_REMCA_SHOW_IMAGE_WIDTH_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_IMAGE_WIDTH_DESC"
+            class="validate-numeric"
+            size="5"
+            default="100"
+             />
+        <field name="show_house_image_height"
+            type="text"
+            label="COM_REMCA_SHOW_IMAGE_HEIGHT_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_IMAGE_HEIGHT_DESC"
+            class="validate-numeric"
+            size="5"
+        />
         <field name="show_house_category"
             type="radio"
             label="COM_REMCA_SHOW_CATEGORY_LABEL"
@@ -480,10 +514,30 @@
             <option	value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_house_houseid"
+        <field name="show_house_id_lmunicipality"
             type="radio"
-            label="COM_REMCA_HOUSES_SHOW_FIELD_HOUSEID_LABEL"
-            description="COM_REMCA_HOUSES_SHOW_FIELD_HOUSEID_DESC"
+            label="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option	value="1">JSHOW</option>
+            <option	value="0">JHIDE</option>
+        </field>
+        <field name="show_house_id_lstate"
+            type="radio"
+            label="COM_REMCA_HOUSES_SHOW_FIELD_ID_LSTATE_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_FIELD_ID_LSTATE_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option	value="1">JSHOW</option>
+            <option	value="0">JHIDE</option>
+        </field>
+        <field name="show_house_id_country"
+            type="radio"
+            label="COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -520,6 +574,16 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
+        <field name="show_house_houseid"
+            type="radio"
+            label="COM_REMCA_HOUSES_SHOW_FIELD_HOUSEID_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_FIELD_HOUSEID_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option	value="1">JSHOW</option>
+            <option	value="0">JHIDE</option>
+        </field>
         <field name="show_house_link"
             type="radio"
             label="COM_REMCA_HOUSES_SHOW_FIELD_LINK_LABEL"
@@ -550,10 +614,10 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_house_priceunit"
+        <field name="show_house_id_currency"
             type="radio"
-            label="COM_REMCA_HOUSES_SHOW_FIELD_PRICEUNIT_LABEL"
-            description="COM_REMCA_HOUSES_SHOW_FIELD_PRICEUNIT_DESC"
+            label="COM_REMCA_HOUSES_SHOW_FIELD_ID_CURRENCY_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_FIELD_ID_CURRENCY_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -960,20 +1024,20 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_house_energy_value"
+        <field name="show_house_owner_id"
             type="radio"
-            label="COM_REMCA_HOUSES_SHOW_FIELD_ENERGY_VALUE_LABEL"
-            description="COM_REMCA_HOUSES_SHOW_FIELD_ENERGY_VALUE_DESC"
+            label="COM_REMCA_HOUSES_SHOW_FIELD_OWNER_ID_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_FIELD_OWNER_ID_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_house_owner_id"
+        <field name="show_house_energy_value"
             type="radio"
-            label="COM_REMCA_HOUSES_SHOW_FIELD_OWNER_ID_LABEL"
-            description="COM_REMCA_HOUSES_SHOW_FIELD_OWNER_ID_DESC"
+            label="COM_REMCA_HOUSES_SHOW_FIELD_ENERGY_VALUE_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_FIELD_ENERGY_VALUE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -1211,10 +1275,30 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-            <field name="list_show_house_houseid"
+            <field name="list_show_house_id_lmunicipality"
                 type="radio"
-                label="COM_REMCA_HOUSES_LIST_HOUSEID_LABEL"
-				description="COM_REMCA_HOUSES_LIST_HOUSEID_DESC"
+                label="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_DESC"
+				class="btn-group"
+				default="1"
+			>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="list_show_house_id_lstate"
+                type="radio"
+                label="COM_REMCA_HOUSES_LIST_ID_LSTATE_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ID_LSTATE_DESC"
+				class="btn-group"
+				default="1"
+			>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="list_show_house_id_country"
+                type="radio"
+                label="COM_REMCA_HOUSES_LIST_ID_COUNTRY_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ID_COUNTRY_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -1251,6 +1335,16 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
+            <field name="list_show_house_houseid"
+                type="radio"
+                label="COM_REMCA_HOUSES_LIST_HOUSEID_LABEL"
+				description="COM_REMCA_HOUSES_LIST_HOUSEID_DESC"
+				class="btn-group"
+				default="1"
+			>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
             <field name="list_show_house_link"
                 type="radio"
                 label="COM_REMCA_HOUSES_LIST_LINK_LABEL"
@@ -1281,10 +1375,10 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_house_priceunit"
+            <field name="list_show_house_id_currency"
                 type="radio"
-                label="COM_REMCA_HOUSES_LIST_PRICEUNIT_LABEL"
-				description="COM_REMCA_HOUSES_LIST_PRICEUNIT_DESC"
+                label="COM_REMCA_HOUSES_LIST_ID_CURRENCY_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ID_CURRENCY_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -1691,20 +1785,20 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_house_energy_value"
+            <field name="list_show_house_owner_id"
                 type="radio"
-                label="COM_REMCA_HOUSES_LIST_ENERGY_VALUE_LABEL"
-				description="COM_REMCA_HOUSES_LIST_ENERGY_VALUE_DESC"
+                label="COM_REMCA_HOUSES_LIST_OWNER_ID_LABEL"
+				description="COM_REMCA_HOUSES_LIST_OWNER_ID_DESC"
 				class="btn-group"
 				default="1"
 			>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_house_owner_id"
+            <field name="list_show_house_energy_value"
                 type="radio"
-                label="COM_REMCA_HOUSES_LIST_OWNER_ID_LABEL"
-				description="COM_REMCA_HOUSES_LIST_OWNER_ID_DESC"
+                label="COM_REMCA_HOUSES_LIST_ENERGY_VALUE_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ENERGY_VALUE_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -1722,24 +1816,24 @@
                 <option value="0">JHIDE</option>
             </field>
     </fieldset>
-    <fieldset name="maincategory_display"
-		label="COM_REMCA_MAIN_CATEGORIES_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
-		description="COM_REMCA_MAIN_CATEGORIES_FIELD_CONFIG_SINGLE_ITEM_DESC"
+    <fieldset name="photo_display"
+		label="COM_REMCA_PHOTOS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+		description="COM_REMCA_PHOTOS_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
-        <field name="maincategory_layout"
+        <field name="photo_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
-			description="COM_REMCA_MAIN_CATEGORIES_CHOOSE_LAYOUT_DESC"
+			description="COM_REMCA_PHOTOS_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
-			view="maincategory"
+			view="photo"
             default="_:default"
 		/>
         <field name="spacer0"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_maincategory_icons"
+        <field name="show_photo_icons"
             type="radio"
             label="COM_REMCA_SHOW_ICONS_LABEL"
             description="COM_REMCA_SHOW_ICONS_DESC"
@@ -1750,7 +1844,7 @@
             <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
             <option	value="-1">JHIDE</option>
         </field>
-        <field name="show_maincategory_print_icon"
+        <field name="show_photo_print_icon"
             type="radio"
             label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
             description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -1760,30 +1854,30 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_email_icon"
+        <field name="show_photo_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_EMAIL_ICON_DESC"
+            description="COM_REMCA_PHOTOS_SHOW_EMAIL_ICON_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="keep_maincategory_itemid"
+        <field name="keep_photo_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_KEEP_ITEMID_DESC"
+            description="COM_REMCA_PHOTOS_KEEP_ITEMID_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_maincategory_navigation"
+        <field name="show_photo_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_NAVIGATION_DESC"
+            description="COM_REMCA_PHOTOS_SHOW_NAVIGATION_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -1794,160 +1888,84 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_maincategory_readmore"
+        <field name="show_photo_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_DESC"
+            description="COM_REMCA_PHOTOS_SHOW_READMORE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="maincategory_readmore_limit"
+        <field name="photo_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_LIMIT_DESC"
+            description="COM_REMCA_PHOTOS_SHOW_READMORE_LIMIT_DESC"
             default="100"
 		/>
-        <field name="show_maincategory_readmore_name"
-            type="radio"
-            label="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_NAME_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_NAME_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-		>
-            <option value="1">JSHOW</option>
-            <option value="0">JHIDE</option>
-        </field>
-        <field name="show_maincategory_noauth"
-            type="radio"
-            label="COM_REMCA_SHOW_UNAUTH_LINKS_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_UNAUTH_LINKS_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-		>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
         <field name="spacer2"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_maincategory_name"
+        <field name="show_photo_image"
             type="radio"
-            label="COM_REMCA_SHOW_NAME_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_NAME_DESC"
+            label="COM_REMCA_SHOW_IMAGE_LABEL"
+            description="COM_REMCA_PHOTOS_SHOW_IMAGE_DESC"
             class="btn-group btn-group-yesno"
-            default="1"
-		>
+        >
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="link_maincategory_names"
+        <field name="show_photo_image_float"
             type="radio"
-            label="COM_REMCA_LINKED_NAMES_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_LINKED_NAMES_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-		>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
+            label="COM_REMCA_SHOW_IMAGE_FLOAT_LABEL"
+            description="COM_REMCA_SHOW_IMAGE_FLOAT_DESC"
+			class="btn-group"
+        >
+            <option value="none">COM_REMCA_VALUE_FLOAT_NONE</option>
+            <option value="right">COM_REMCA_VALUE_FLOAT_RIGHT</option>
+            <option value="left">COM_REMCA_VALUE_FLOAT_LEFT</option>
         </field>
-        <field name="show_maincategory_admin"
+        <field name="show_photo_image_width"
+            type="text"
+            label="COM_REMCA_SHOW_IMAGE_WIDTH_LABEL"
+            description="COM_REMCA_PHOTOS_SHOW_IMAGE_WIDTH_DESC"
+            class="validate-numeric"
+            size="5"
+            default="100"
+             />
+        <field name="show_photo_image_height"
+            type="text"
+            label="COM_REMCA_SHOW_IMAGE_HEIGHT_LABEL"
+            description="COM_REMCA_PHOTOS_SHOW_IMAGE_HEIGHT_DESC"
+            class="validate-numeric"
+            size="5"
+        />
+        <field name="show_photo_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_ADMIN_DESC"
+            description="COM_REMCA_PHOTOS_SHOW_ADMIN_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_parent_id"
+        <field name="show_photo_fk_houseid"
             type="radio"
-            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARENT_ID_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARENT_ID_DESC"
+            label="COM_REMCA_PHOTOS_SHOW_FIELD_FK_HOUSEID_LABEL"
+            description="COM_REMCA_PHOTOS_SHOW_FIELD_FK_HOUSEID_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_associate_category"
+        <field name="show_photo_thumbnail_img"
             type="radio"
-            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_ASSOCIATE_CATEGORY_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_ASSOCIATE_CATEGORY_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-        >
-            <option	value="1">JSHOW</option>
-            <option	value="0">JHIDE</option>
-        </field>
-        <field name="show_maincategory_title"
-            type="radio"
-            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_TITLE_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_TITLE_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-        >
-            <option	value="1">JSHOW</option>
-            <option	value="0">JHIDE</option>
-        </field>
-        <field name="show_maincategory_image"
-            type="radio"
-            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-        >
-            <option	value="1">JSHOW</option>
-            <option	value="0">JHIDE</option>
-        </field>
-        <field name="show_maincategory_section"
-            type="radio"
-            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_SECTION_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_SECTION_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-        >
-            <option	value="1">JSHOW</option>
-            <option	value="0">JHIDE</option>
-        </field>
-        <field name="show_maincategory_image_position"
-            type="radio"
-            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_POSITION_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_POSITION_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-        >
-            <option	value="1">JSHOW</option>
-            <option	value="0">JHIDE</option>
-        </field>
-        <field name="show_maincategory_editor"
-            type="radio"
-            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_EDITOR_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_EDITOR_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-        >
-            <option	value="1">JSHOW</option>
-            <option	value="0">JHIDE</option>
-        </field>
-        <field name="show_maincategory_count"
-            type="radio"
-            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_COUNT_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_COUNT_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-        >
-            <option	value="1">JSHOW</option>
-            <option	value="0">JHIDE</option>
-        </field>
-        <field name="show_maincategory_params2"
-            type="radio"
-            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARAMS2_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARAMS2_DESC"
+            label="COM_REMCA_PHOTOS_SHOW_FIELD_THUMBNAIL_IMG_LABEL"
+            description="COM_REMCA_PHOTOS_SHOW_FIELD_THUMBNAIL_IMG_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -1955,40 +1973,38 @@
             <option	value="0">JHIDE</option>
         </field>
     </fieldset>
-    <fieldset name="main_categories_list_display"
-        label="COM_REMCA_MAIN_CATEGORIES_FIELD_CONFIG_BLOG_LIST_LABEL"
-        description="COM_REMCA_MAIN_CATEGORIES_FIELD_CONFIG_BLOG_LIST_DESC"
+    <fieldset name="photos_list_display"
+        label="COM_REMCA_PHOTOS_FIELD_CONFIG_BLOG_LIST_LABEL"
+        description="COM_REMCA_PHOTOS_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
-        <field name="maincategory_initial_sort"
+        <field name="photo_initial_sort"
             type="list"
-            label="COM_REMCA_MAIN_CATEGORIES_ORDER_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_ORDER_DESC"
+            label="COM_REMCA_PHOTOS_ORDER_LABEL"
+            description="COM_REMCA_PHOTOS_ORDER_DESC"
 			class="chzn-color"
 		>
-            <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
-            <option value="ordering">COM_REMCA_MAIN_CATEGORIES_ORDER</option>
+            <option value="ordering">COM_REMCA_PHOTOS_ORDER</option>
         </field>
-        <field name="maincategory_initial_direction"
+        <field name="photo_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_ORDER_DIRECTION_DESC"
+            description="COM_REMCA_PHOTOS_ORDER_DIRECTION_DESC"
 			class="btn-group"
             default="ASC"
 		>
             <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
             <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
         </field>
-        <field name="show_maincategory_filter_field"
+        <field name="show_photo_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_FILTER_FIELD_DESC"
+            description="COM_REMCA_PHOTOS_FILTER_FIELD_DESC"
             class="chzn-color"
-            default="name"
+            default="hide"
    		>
             <option value="hide">JHIDE</option>
-            <option value="name">COM_REMCA_FIELD_VALUE_NAME</option>
         </field>        
-        <field name="show_maincategory_headings"
+        <field name="show_photo_headings"
             type="radio"
             label="JGLOBAL_SHOW_HEADINGS_LABEL"
             description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -1998,7 +2014,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_pagination"
+        <field name="show_photo_pagination"
             type="radio"
             label="JGLOBAL_PAGINATION_LABEL"
             description="JGLOBAL_PAGINATION_DESC"
@@ -2009,7 +2025,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_pagination_results"
+        <field name="show_photo_pagination_results"
             type="radio"
             label="JGLOBAL_PAGINATION_RESULTS_LABEL"
             description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -2019,20 +2035,20 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_pagination_limit"
+        <field name="show_photo_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
-			description="COM_REMCA_MAIN_CATEGORIES_SHOW_PAGINATION_LIMIT_DESC"
+			description="COM_REMCA_PHOTOS_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
 			default="1"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="maincategory_num_per_page"
+        <field name="photo_num_per_page"
             type="list"
-            description="COM_REMCA_MAIN_CATEGORIES_NUM_PER_PAGE_DESC"
-            label="COM_REMCA_MAIN_CATEGORIES_NUM_PER_PAGE_LABEL"
+            description="COM_REMCA_PHOTOS_NUM_PER_PAGE_DESC"
+            label="COM_REMCA_PHOTOS_NUM_PER_PAGE_LABEL"
 			class="chzn-color"
             default="5"
         >
@@ -2046,136 +2062,66 @@
             <option value="100">J100</option>
             <option value="0">JALL</option>
         </field>
-        <field name="show_no_main_categories"
+        <field name="show_no_photos"
             type="radio"
-            label="COM_REMCA_MAIN_CATEGORIES_NO_ITEMS_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_NO_ITEMS_DESC"
+            label="COM_REMCA_PHOTOS_NO_ITEMS_LABEL"
+            description="COM_REMCA_PHOTOS_NO_ITEMS_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 			>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_add_link"
+        <field name="show_photo_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
-			description="COM_REMCA_MAIN_CATEGORIES_SHOW_ADD_LINK_DESC"
+			description="COM_REMCA_PHOTOS_SHOW_ADD_LINK_DESC"
             class="btn-group btn-group-yesno"
 			default="1"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="list_show_maincategory_date"
+        <field name="list_show_photo_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
-			description="COM_REMCA_MAIN_CATEGORIES_SHOW_DATE_DESC"
+			description="COM_REMCA_PHOTOS_SHOW_DATE_DESC"
 			class="btn-group"
             default="0"
 		>
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="maincategory_date_format"
+        <field name="photo_date_format"
             type="text"
             label="JGLOBAL_DATE_FORMAT_LABEL"
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-        <field name="list_show_maincategory_ordering"
+        <field name="list_show_photo_ordering"
             type="radio"
             label="COM_REMCA_LIST_ORDERING_LABEL"
-            description="COM_REMCA_MAIN_CATEGORIES_LIST_ORDERING_DESC"
+            description="COM_REMCA_PHOTOS_LIST_ORDERING_DESC"
             class="btn-group btn-group-yesno"
             default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-            <field name="list_show_maincategory_parent_id"
+            <field name="list_show_photo_fk_houseid"
                 type="radio"
-                label="COM_REMCA_MAIN_CATEGORIES_LIST_PARENT_ID_LABEL"
-				description="COM_REMCA_MAIN_CATEGORIES_LIST_PARENT_ID_DESC"
+                label="COM_REMCA_PHOTOS_LIST_FK_HOUSEID_LABEL"
+				description="COM_REMCA_PHOTOS_LIST_FK_HOUSEID_DESC"
 				class="btn-group"
 				default="1"
 			>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_maincategory_associate_category"
+            <field name="list_show_photo_thumbnail_img"
                 type="radio"
-                label="COM_REMCA_MAIN_CATEGORIES_LIST_ASSOCIATE_CATEGORY_LABEL"
-				description="COM_REMCA_MAIN_CATEGORIES_LIST_ASSOCIATE_CATEGORY_DESC"
-				class="btn-group"
-				default="1"
-			>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field name="list_show_maincategory_title"
-                type="radio"
-                label="COM_REMCA_MAIN_CATEGORIES_LIST_TITLE_LABEL"
-				description="COM_REMCA_MAIN_CATEGORIES_LIST_TITLE_DESC"
-				class="btn-group"
-				default="1"
-			>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field name="list_show_maincategory_image"
-                type="radio"
-                label="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_LABEL"
-				description="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_DESC"
-				class="btn-group"
-				default="1"
-			>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field name="list_show_maincategory_section"
-                type="radio"
-                label="COM_REMCA_MAIN_CATEGORIES_LIST_SECTION_LABEL"
-				description="COM_REMCA_MAIN_CATEGORIES_LIST_SECTION_DESC"
-				class="btn-group"
-				default="1"
-			>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field name="list_show_maincategory_image_position"
-                type="radio"
-                label="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_POSITION_LABEL"
-				description="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_POSITION_DESC"
-				class="btn-group"
-				default="1"
-			>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field name="list_show_maincategory_editor"
-                type="radio"
-                label="COM_REMCA_MAIN_CATEGORIES_LIST_EDITOR_LABEL"
-				description="COM_REMCA_MAIN_CATEGORIES_LIST_EDITOR_DESC"
-				class="btn-group"
-				default="1"
-			>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field name="list_show_maincategory_count"
-                type="radio"
-                label="COM_REMCA_MAIN_CATEGORIES_LIST_COUNT_LABEL"
-				description="COM_REMCA_MAIN_CATEGORIES_LIST_COUNT_DESC"
-				class="btn-group"
-				default="1"
-			>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field name="list_show_maincategory_params2"
-                type="radio"
-                label="COM_REMCA_MAIN_CATEGORIES_LIST_PARAMS2_LABEL"
-				description="COM_REMCA_MAIN_CATEGORIES_LIST_PARAMS2_DESC"
+                label="COM_REMCA_PHOTOS_LIST_THUMBNAIL_IMG_LABEL"
+				description="COM_REMCA_PHOTOS_LIST_THUMBNAIL_IMG_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -3819,24 +3765,24 @@
                 <option value="0">JHIDE</option>
             </field>
     </fieldset>
-    <fieldset name="photo_display"
-		label="COM_REMCA_PHOTOS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
-		description="COM_REMCA_PHOTOS_FIELD_CONFIG_SINGLE_ITEM_DESC"
+    <fieldset name="maincategory_display"
+		label="COM_REMCA_MAIN_CATEGORIES_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+		description="COM_REMCA_MAIN_CATEGORIES_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
-        <field name="photo_layout"
+        <field name="maincategory_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
-			description="COM_REMCA_PHOTOS_CHOOSE_LAYOUT_DESC"
+			description="COM_REMCA_MAIN_CATEGORIES_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
-			view="photo"
+			view="maincategory"
             default="_:default"
 		/>
         <field name="spacer0"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_photo_icons"
+        <field name="show_maincategory_icons"
             type="radio"
             label="COM_REMCA_SHOW_ICONS_LABEL"
             description="COM_REMCA_SHOW_ICONS_DESC"
@@ -3847,7 +3793,7 @@
             <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
             <option	value="-1">JHIDE</option>
         </field>
-        <field name="show_photo_print_icon"
+        <field name="show_maincategory_print_icon"
             type="radio"
             label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
             description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -3857,30 +3803,30 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_photo_email_icon"
+        <field name="show_maincategory_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
-            description="COM_REMCA_PHOTOS_SHOW_EMAIL_ICON_DESC"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_EMAIL_ICON_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="keep_photo_itemid"
+        <field name="keep_maincategory_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
-            description="COM_REMCA_PHOTOS_KEEP_ITEMID_DESC"
+            description="COM_REMCA_MAIN_CATEGORIES_KEEP_ITEMID_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_photo_navigation"
+        <field name="show_maincategory_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
-            description="COM_REMCA_PHOTOS_SHOW_NAVIGATION_DESC"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_NAVIGATION_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -3891,70 +3837,160 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_photo_readmore"
+        <field name="show_maincategory_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
-            description="COM_REMCA_PHOTOS_SHOW_READMORE_DESC"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="photo_readmore_limit"
+        <field name="maincategory_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
-            description="COM_REMCA_PHOTOS_SHOW_READMORE_LIMIT_DESC"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_LIMIT_DESC"
             default="100"
 		/>
+        <field name="show_maincategory_readmore_name"
+            type="radio"
+            label="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_NAME_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_NAME_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_maincategory_noauth"
+            type="radio"
+            label="COM_REMCA_SHOW_UNAUTH_LINKS_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_UNAUTH_LINKS_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
         <field name="spacer2"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_photo_admin"
+        <field name="show_maincategory_name"
             type="radio"
-            label="COM_REMCA_SHOW_ADMIN_LABEL"
-            description="COM_REMCA_PHOTOS_SHOW_ADMIN_DESC"
+            label="COM_REMCA_SHOW_NAME_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_NAME_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_photo_fk_houseid"
+        <field name="link_maincategory_names"
             type="radio"
-            label="COM_REMCA_PHOTOS_SHOW_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_PHOTOS_SHOW_FIELD_FK_HOUSEID_DESC"
+            label="COM_REMCA_LINKED_NAMES_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_LINKED_NAMES_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="show_maincategory_admin"
+            type="radio"
+            label="COM_REMCA_SHOW_ADMIN_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_ADMIN_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_maincategory_parent_id"
+            type="radio"
+            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARENT_ID_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARENT_ID_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_photo_thumbnail_img"
+        <field name="show_maincategory_associate_category"
             type="radio"
-            label="COM_REMCA_PHOTOS_SHOW_FIELD_THUMBNAIL_IMG_LABEL"
-            description="COM_REMCA_PHOTOS_SHOW_FIELD_THUMBNAIL_IMG_DESC"
+            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_ASSOCIATE_CATEGORY_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_ASSOCIATE_CATEGORY_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_photo_main_img"
+        <field name="show_maincategory_title"
             type="radio"
-            label="COM_REMCA_PHOTOS_SHOW_FIELD_MAIN_IMG_LABEL"
-            description="COM_REMCA_PHOTOS_SHOW_FIELD_MAIN_IMG_DESC"
+            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_TITLE_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_TITLE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_photo_img_ordering"
+        <field name="show_maincategory_image"
             type="radio"
-            label="COM_REMCA_PHOTOS_SHOW_FIELD_IMG_ORDERING_LABEL"
-            description="COM_REMCA_PHOTOS_SHOW_FIELD_IMG_ORDERING_DESC"
+            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option	value="1">JSHOW</option>
+            <option	value="0">JHIDE</option>
+        </field>
+        <field name="show_maincategory_section"
+            type="radio"
+            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_SECTION_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_SECTION_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option	value="1">JSHOW</option>
+            <option	value="0">JHIDE</option>
+        </field>
+        <field name="show_maincategory_image_position"
+            type="radio"
+            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_POSITION_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_POSITION_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option	value="1">JSHOW</option>
+            <option	value="0">JHIDE</option>
+        </field>
+        <field name="show_maincategory_editor"
+            type="radio"
+            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_EDITOR_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_EDITOR_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option	value="1">JSHOW</option>
+            <option	value="0">JHIDE</option>
+        </field>
+        <field name="show_maincategory_count"
+            type="radio"
+            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_COUNT_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_COUNT_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option	value="1">JSHOW</option>
+            <option	value="0">JHIDE</option>
+        </field>
+        <field name="show_maincategory_params2"
+            type="radio"
+            label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARAMS2_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARAMS2_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -3962,37 +3998,40 @@
             <option	value="0">JHIDE</option>
         </field>
     </fieldset>
-    <fieldset name="photos_list_display"
-        label="COM_REMCA_PHOTOS_FIELD_CONFIG_BLOG_LIST_LABEL"
-        description="COM_REMCA_PHOTOS_FIELD_CONFIG_BLOG_LIST_DESC"
+    <fieldset name="main_categories_list_display"
+        label="COM_REMCA_MAIN_CATEGORIES_FIELD_CONFIG_BLOG_LIST_LABEL"
+        description="COM_REMCA_MAIN_CATEGORIES_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
-        <field name="photo_initial_sort"
+        <field name="maincategory_initial_sort"
             type="list"
-            label="COM_REMCA_PHOTOS_ORDER_LABEL"
-            description="COM_REMCA_PHOTOS_ORDER_DESC"
+            label="COM_REMCA_MAIN_CATEGORIES_ORDER_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_ORDER_DESC"
 			class="chzn-color"
 		>
+            <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+            <option value="ordering">COM_REMCA_MAIN_CATEGORIES_ORDER</option>
         </field>
-        <field name="photo_initial_direction"
+        <field name="maincategory_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
-            description="COM_REMCA_PHOTOS_ORDER_DIRECTION_DESC"
+            description="COM_REMCA_MAIN_CATEGORIES_ORDER_DIRECTION_DESC"
 			class="btn-group"
             default="ASC"
 		>
             <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
             <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
         </field>
-        <field name="show_photo_filter_field"
+        <field name="show_maincategory_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
-            description="COM_REMCA_PHOTOS_FILTER_FIELD_DESC"
+            description="COM_REMCA_MAIN_CATEGORIES_FILTER_FIELD_DESC"
             class="chzn-color"
-            default="hide"
+            default="name"
    		>
             <option value="hide">JHIDE</option>
+            <option value="name">COM_REMCA_FIELD_VALUE_NAME</option>
         </field>        
-        <field name="show_photo_headings"
+        <field name="show_maincategory_headings"
             type="radio"
             label="JGLOBAL_SHOW_HEADINGS_LABEL"
             description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -4002,7 +4041,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_photo_pagination"
+        <field name="show_maincategory_pagination"
             type="radio"
             label="JGLOBAL_PAGINATION_LABEL"
             description="JGLOBAL_PAGINATION_DESC"
@@ -4013,7 +4052,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_photo_pagination_results"
+        <field name="show_maincategory_pagination_results"
             type="radio"
             label="JGLOBAL_PAGINATION_RESULTS_LABEL"
             description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -4023,20 +4062,20 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_photo_pagination_limit"
+        <field name="show_maincategory_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
-			description="COM_REMCA_PHOTOS_SHOW_PAGINATION_LIMIT_DESC"
+			description="COM_REMCA_MAIN_CATEGORIES_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
 			default="1"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="photo_num_per_page"
+        <field name="maincategory_num_per_page"
             type="list"
-            description="COM_REMCA_PHOTOS_NUM_PER_PAGE_DESC"
-            label="COM_REMCA_PHOTOS_NUM_PER_PAGE_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_NUM_PER_PAGE_DESC"
+            label="COM_REMCA_MAIN_CATEGORIES_NUM_PER_PAGE_LABEL"
 			class="chzn-color"
             default="5"
         >
@@ -4050,76 +4089,136 @@
             <option value="100">J100</option>
             <option value="0">JALL</option>
         </field>
-        <field name="show_no_photos"
+        <field name="show_no_main_categories"
             type="radio"
-            label="COM_REMCA_PHOTOS_NO_ITEMS_LABEL"
-            description="COM_REMCA_PHOTOS_NO_ITEMS_DESC"
+            label="COM_REMCA_MAIN_CATEGORIES_NO_ITEMS_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_NO_ITEMS_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 			>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_photo_add_link"
+        <field name="show_maincategory_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
-			description="COM_REMCA_PHOTOS_SHOW_ADD_LINK_DESC"
+			description="COM_REMCA_MAIN_CATEGORIES_SHOW_ADD_LINK_DESC"
             class="btn-group btn-group-yesno"
 			default="1"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="list_show_photo_date"
+        <field name="list_show_maincategory_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
-			description="COM_REMCA_PHOTOS_SHOW_DATE_DESC"
+			description="COM_REMCA_MAIN_CATEGORIES_SHOW_DATE_DESC"
 			class="btn-group"
             default="0"
 		>
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="photo_date_format"
+        <field name="maincategory_date_format"
             type="text"
             label="JGLOBAL_DATE_FORMAT_LABEL"
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_photo_fk_houseid"
+        <field name="list_show_maincategory_ordering"
+            type="radio"
+            label="COM_REMCA_LIST_ORDERING_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_LIST_ORDERING_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+            <field name="list_show_maincategory_parent_id"
                 type="radio"
-                label="COM_REMCA_PHOTOS_LIST_FK_HOUSEID_LABEL"
-				description="COM_REMCA_PHOTOS_LIST_FK_HOUSEID_DESC"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_PARENT_ID_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_PARENT_ID_DESC"
 				class="btn-group"
 				default="1"
 			>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_photo_thumbnail_img"
+            <field name="list_show_maincategory_associate_category"
                 type="radio"
-                label="COM_REMCA_PHOTOS_LIST_THUMBNAIL_IMG_LABEL"
-				description="COM_REMCA_PHOTOS_LIST_THUMBNAIL_IMG_DESC"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_ASSOCIATE_CATEGORY_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_ASSOCIATE_CATEGORY_DESC"
 				class="btn-group"
 				default="1"
 			>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_photo_main_img"
+            <field name="list_show_maincategory_title"
                 type="radio"
-                label="COM_REMCA_PHOTOS_LIST_MAIN_IMG_LABEL"
-				description="COM_REMCA_PHOTOS_LIST_MAIN_IMG_DESC"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_TITLE_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_TITLE_DESC"
 				class="btn-group"
 				default="1"
 			>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_photo_img_ordering"
+            <field name="list_show_maincategory_image"
                 type="radio"
-                label="COM_REMCA_PHOTOS_LIST_IMG_ORDERING_LABEL"
-				description="COM_REMCA_PHOTOS_LIST_IMG_ORDERING_DESC"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_DESC"
+				class="btn-group"
+				default="1"
+			>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="list_show_maincategory_section"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_SECTION_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_SECTION_DESC"
+				class="btn-group"
+				default="1"
+			>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="list_show_maincategory_image_position"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_POSITION_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_POSITION_DESC"
+				class="btn-group"
+				default="1"
+			>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="list_show_maincategory_editor"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_EDITOR_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_EDITOR_DESC"
+				class="btn-group"
+				default="1"
+			>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="list_show_maincategory_count"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_COUNT_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_COUNT_DESC"
+				class="btn-group"
+				default="1"
+			>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="list_show_maincategory_params2"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_LIST_PARAMS2_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_LIST_PARAMS2_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -6241,26 +6340,6 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_userswishlist_fk_houseid"
-            type="radio"
-            label="COM_REMCA_USERS_WISHLIST_SHOW_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_USERS_WISHLIST_SHOW_FIELD_FK_HOUSEID_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-        >
-            <option	value="1">JSHOW</option>
-            <option	value="0">JHIDE</option>
-        </field>
-        <field name="show_userswishlist_fk_userid"
-            type="radio"
-            label="COM_REMCA_USERS_WISHLIST_SHOW_FIELD_FK_USERID_LABEL"
-            description="COM_REMCA_USERS_WISHLIST_SHOW_FIELD_FK_USERID_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-        >
-            <option	value="1">JSHOW</option>
-            <option	value="0">JHIDE</option>
-        </field>
     </fieldset>
     <fieldset name="users_wishlist_list_display"
         label="COM_REMCA_USERS_WISHLIST_FIELD_CONFIG_BLOG_LIST_LABEL"
@@ -6386,26 +6465,6 @@
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_userswishlist_fk_houseid"
-                type="radio"
-                label="COM_REMCA_USERS_WISHLIST_LIST_FK_HOUSEID_LABEL"
-				description="COM_REMCA_USERS_WISHLIST_LIST_FK_HOUSEID_DESC"
-				class="btn-group"
-				default="1"
-			>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field name="list_show_userswishlist_fk_userid"
-                type="radio"
-                label="COM_REMCA_USERS_WISHLIST_LIST_FK_USERID_LABEL"
-				description="COM_REMCA_USERS_WISHLIST_LIST_FK_USERID_DESC"
-				class="btn-group"
-				default="1"
-			>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
     </fieldset>
     <fieldset name="videosource_display"
 		label="COM_REMCA_VIDEO_SOURCE_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
@@ -9094,358 +9153,22 @@
 		/>
     </fieldset>
     <fieldset
-        name="ordasoft_rem"
-        label="COM_REMCA_FIELDSET_ordasoft_rem_LABEL"
-		description="COM_REMCA_FIELDSET_ordasoft_rem_DESC"
-	>
-<field name="release_version" type="text" default="4.2.16 PRO" label="" description="" />
-<field name="release_date" type="text" default="November 2017" label="" description="" />
-<!-- edit house  -->
-<field name="edithouse_default_lang" type="text" default="" label="" description="" />
-<!-- price settings -->
-<field name="price_string" type="text" default="1" label="" description="" />
-<field name="price_show" type="text" default="1" label="" description="" />
-<field name="price_registrationlevel" type="text" default="-2" label="" description="" />
-<!-- auto increment for houseid, if 1 - can't add random houseid  -->
-<field name="houseid_auto-increment_boolean" type="text" default="0" label="" description="" />
-<!-- review settings -->
-<field name="reviews_show" type="text" default="1" label="" description="" />
-<field name="reviews_registrationlevel" type="text" default="-2" label="" description="" />
-<!-- show contacts -->
-<field name="contacts_show" type="text" default="1" label="" description="" />
-<field name="contacts_registrationlevel" type="text" default="-2" label="" description="" />
-<!-- show cb_myhouse -->
-<field name="cb_myhouse_show" type="text" default="0" label="" description="" />
-<field name="cb_myhouse_registrationlevel" type="text" default="" label="" description="" />
-<!-- show cb_edit -->
-<field name="cb_edit_show" type="text" default="0" label="" description="" />
-<field name="cb_edit_registrationlevel" type="text" default="" label="" description="" />
-<!-- show cb_rent -->
-<field name="cb_rent_show" type="text" default="0" label="" description="" />
-<field name="cb_rent_registrationlevel" type="text" default="" label="" description="" />
-<!-- show cb_buy -->
-<field name="cb_buy_show" type="text" default="0" label="" description="" />
-<field name="cb_buy_registrationlevel" type="text" default="" label="" description="" />
-<!-- show cb_history -->
-<field name="cb_history_show" type="text" default="0" label="" description="" />
-<field name="cb_history_registrationlevel" type="text" default="" label="" description="" />
-<!-- show Location -->
-<field name="location_tab_show" type="text" default="1" label="" description="" />
-<field name="location_tab_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="street_view_show" type="text" default="1" label="" description="" />
-<field name="street_view_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="reviews_tab_show" type="text" default="1" label="" description="" />
-<field name="reviews_tab_registrationlevel" type="text" default="-2" label="" description="" />
-<!-- rent settings -->
-<field name="rentstatus_show" type="text" default="1" label="" description="" />
-<field name="rentrequest_registrationlevel" type="text" default="-2" label="" description="" />
-<!-- status settings -->
-<field name="housestatus_show" type="text" default="1" label="" description="" />
-<field name="houserequest_registrationlevel" type="text" default="-2" label="" description="" />
-<!-- buy settings -->
-<field name="buystatus_show" type="text" default="1" label="" description="" />
-<field name="buyrequest_registrationlevel" type="text" default="-2" label="" description="" />
-<!-- edoc settings -->
-<field name="edocs_allow" type="text" default="1" label="" description="" />
-<field name="edocs_show" type="text" default="1" label="" description="" />
-<field name="edocs_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="edocs_location" type="text" default="/components/com_realestatemanager/edocs/" label="" description="" />
-<!-- video and track -->
-<field name="videos_tracks_show" type="text" default="1" label="" description="" />
-<field name="allowed_exts_video" type="text" default="mp4,ogv,webm" label="" description="" />
-<field name="allowed_exts_track" type="text" default="vtt" label="" description="" />
-<field name="videos_location" type="text" default="/components/com_realestatemanager/media/video/" label="" description="" />
-<field name="tracks_location" type="text" default="/components/com_realestatemanager/media/track/" label="" description="" />
-<!-- debuging -->
-<field name="debug" type="text" default="" label="" description="" />
-<field name="page_items" type="text" default="10" label="" description="" />
-<!-- foto size -->
-<field name="thumb_param_show" type="text" default="1" label="" description="" />
-<field name="foto_high" type="text" default="250" label="" description="" />
-<field name="foto_width" type="text" default="400" label="" description="" />
-<field name="fotomain_high" type="text" default="440" label="" description="" />
-<field name="fotomain_width" type="text" default="808" label="" description="" />
-<field name="fotoupload_high" type="text" default="600" label="" description="" />
-<field name="fotoupload_width" type="text" default="1400" label="" description="" />
-<field name="fotogallery_high" type="text" default="100" label="" description="" />
-<field name="fotogallery_width" type="text" default="100" label="" description="" />
-<field name="fotocategory_high" type="text" default="250" label="" description="" />
-<field name="fotocategory_width" type="text" default="400" label="" description="" />
-<field name="fotogal_high" type="text" default="100" label="" description="" />
-<field name="fotogal_width" type="text" default="100" label="" description="" />
-<field name="license_show" type="text" default="1" label="" description="" />
-<field name="license_text" type="text" default="&lt;p&gt;Untitled document&lt;/p&gt;&lt;p&gt;License Text&lt;/p&gt;" label="" description="" />
-<!-- user manager  -->
-<field name="user_manager_rem_-2_count_homes" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_-2_count_foto" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_29_count_homes" type="text" default="5" label="" description="" />
-<field name="user_manager_rem_29_count_foto" type="text" default="" label="" description="" />
-<field name="user_manager_rem_18_count_homes" type="text" default="5" label="" description="" />
-<field name="user_manager_rem_18_count_foto" type="text" default="" label="" description="" />
-<field name="user_manager_rem_19_count_homes" type="text" default="5" label="" description="" />
-<field name="user_manager_rem_19_count_foto" type="text" default="" label="" description="" />
-<field name="user_manager_rem_20_count_homes" type="text" default="5" label="" description="" />
-<field name="user_manager_rem_20_count_foto" type="text" default="" label="" description="" />
-<field name="user_manager_rem_21_count_homes" type="text" default="5" label="" description="" />
-<field name="user_manager_rem_21_count_foto" type="text" default="" label="" description="" />
-<field name="user_manager_rem_32_count_homes" type="text" default="5" label="" description="" />
-<field name="user_manager_rem_32_count_foto" type="text" default="" label="" description="" />
-<field name="user_manager_rem_30_count_homes" type="text" default="5" label="" description="" />
-<field name="user_manager_rem_30_count_foto" type="text" default="" label="" description="" />
-<field name="user_manager_rem_23_count_homes" type="text" default="5" label="" description="" />
-<field name="user_manager_rem_23_count_foto" type="text" default="" label="" description="" />
-<field name="user_manager_rem_24_count_homes" type="text" default="5" label="" description="" />
-<field name="user_manager_rem_24_count_foto" type="text" default="" label="" description="" />
-<field name="user_manager_rem_25_count_homes" type="text" default="5" label="" description="" />
-<field name="user_manager_rem_25_count_foto" type="text" default="" label="" description="" />
-<field name="user_manager_rem__count_homes" type="text" default="0" label="" description="" />
-<field name="user_manager_rem__count_foto" type="text" default="" label="" description="" />
-<field name="user_manager_rem_1_count_homes" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_1_count_foto" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_6_count_homes" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_6_count_foto" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_7_count_homes" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_7_count_foto" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_2_count_homes" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_2_count_foto" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_3_count_homes" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_3_count_foto" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_4_count_homes" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_4_count_foto" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_5_count_homes" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_5_count_foto" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_8_count_homes" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_8_count_foto" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_10_count_homes" type="text" default="10" label="" description="" />
-<field name="user_manager_rem_10_count_foto" type="text" default="10" label="" description="" />
-<field name="user_manager_rem_12_count_homes" type="text" default="10" label="" description="" />
-<field name="user_manager_rem_12_count_foto" type="text" default="10" label="" description="" />
-<field name="user_manager_rem_9_count_homes" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_9_count_foto" type="text" default="6" label="" description="" />
-<field name="user_manager_rem_11_count_homes" type="text" default="11" label="" description="" />
-<field name="user_manager_rem_11_count_foto" type="text" default="10" label="" description="" />
-<field name="cancel_url" type="text" default="" label="" description="" />
-<field name="success_url" type="text" default="" label="" description="" />
-<field name="paypal_real_or_test_show" type="text" default="0" label="" description="" />
-<!-- paypal buy settings -->
-<field name="special_price_show" type="text" default="0" label="" description="" />
-<field name="paypal_buy_status_show" type="text" default="0" label="" description="" />
-<field name="paypal_buy_registrationlevel" type="text" default="" label="" description="" />
-<field name="paypal_buy_status_sale_show" type="text" default="0" label="" description="" />
-<field name="paypal_buy_sale_registrationlevel" type="text" default="" label="" description="" />
-<!-- 2checkout buy settings -->
-<field name="2checkout_buy_status_show" type="text" default="0" label="" description="" />
-<field name="2checkout_buy_registrationlevel" type="text" default="" label="" description="" />
-<field name="2checkout_buy_status_sale_show" type="text" default="0" label="" description="" />
-<field name="2checkout_buy_sale_registrationlevel" type="text" default="" label="" description="" />
-<!-- button '[ Add a house ]' -->
-<field name="add_house_show" type="text" default="1" label="" description="" />
-<field name="add_house_registrationlevel" type="text" default="-2" label="" description="" />
-<!-- button '[ print PDF ]' -->
-<field name="print_pdf_show" type="text" default="1" label="" description="" />
-<field name="print_pdf_registrationlevel" type="text" default="-2" label="" description="" />
-<!-- button '[ print View ]' -->
-<field name="print_view_show" type="text" default="1" label="" description="" />
-<field name="print_view_registrationlevel" type="text" default="-2" label="" description="" />
-<!-- button '[ mail_to ]' -->
-<field name="mail_to_show" type="text" default="1" label="" description="" />
-<field name="mail_to_registrationlevel" type="text" default="-2" label="" description="" />
-<!-- send email for admin -->
-<field name="add_email_address" type="text" default="" label="" description="" />
-<field name="add_email_show" type="text" default="0" label="" description="" />
-<field name="add_email_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="review_email_address" type="text" default="" label="" description="" />
-<field name="review_added_email_show" type="text" default="0" label="" description="" />
-<field name="review_added_email_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="rentrequest_email_address" type="text" default="admin@gmail.com" label="" description="" />
-<field name="rentrequest_email_show" type="text" default="1" label="" description="" />
-<field name="rentrequest_email_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="buyingrequest_email_address" type="text" default="admin@gmail.com" label="" description="" />
-<field name="buyingrequest_email_show" type="text" default="1" label="" description="" />
-<field name="buyingrequest_email_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="owner_show" type="text" default="1" label="" description="" />
-<field name="owner_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="approve_on_add_show" type="text" default="1" label="" description="" />
-<field name="approve_on_add_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="publish_on_add_show" type="text" default="1" label="" description="" />
-<field name="publish_on_add_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="publish_on_review_show" type="text" default="1" label="" description="" />
-<field name="publish_on_review_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="captcha_option_show" type="text" default="0" label="" description="" />
-<field name="captcha_option_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="captcha_option_booking_show" type="text" default="0" label="" description="" />
-<field name="captcha_option_booking_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="captcha_option_sendmessage_show" type="text" default="0" label="" description="" />
-<field name="captcha_option_sendmessage_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="searchlayout_map_show" type="text" default="1" label="" description="" />
-<field name="searchlayout_map_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="searchlayout_orderby_show" type="text" default="1" label="" description="" />
-<field name="searchlayout_orderby_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="searchlayout_form_show" type="text" default="1" label="" description="" />
-<field name="searchlayout_form_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="option_edit_show" type="text" default="1" label="" description="" />
-<field name="option_edit_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="search_option_show" type="text" default="" label="" description="" />
-<field name="search_option_registrationlevel" type="text" default="" label="" description="" />
-<!-- show in category picture -->
-<field name="cat_pic_show" type="text" default="1" label="" description="" />
-<!-- show subcategory -->
-<field name="subcategory_show" type="text" default="1" label="" description="" />
-<!-- view_house  -->
-<field name="view_house" type="text" default="" label="" description="" />
-<!-- show location map  -->
-<field name="location_map" type="text" default="1" label="" description="" />
-<!-- cat_orderind_default  -->
-<field name="cat_orderind_default" type="text" default="name" label="" description="" />
-<field name="rss_show" type="text" default="1" label="" description="" />
-<field name="rss_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="wishlist_show" type="text" default="1" label="" description="" />
-<field name="wishlist_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="owner_show" type="text" default="1" label="" description="" />
-<field name="owner_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="ownerslist_show" type="text" default="1" label="" description="" />
-<field name="ownerslist_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="calendar_show" type="text" default="1" label="" description="" />
-<field name="calendarlist_show" type="text" default="" label="" description="" />
-<field name="calendarlist_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="rent_answer" type="text" default="1" label="" description="" />
-<field name="rent_form" type="text" default="0" label="" description="" />
-<field name="buy_answer" type="text" default="1" label="" description="" />
-<field name="buy_form" type="text" default="0" label="" description="" />
-<!-- end rent notify  -->
-<field name="rent_before_end_notify" type="text" default="0" label="" description="" />
-<field name="rent_before_end_notify_days" type="text" default="2" label="" description="" />
-<field name="rent_before_end_notify_email" type="text" default="" label="" description="" />
-<field name="calendar_placeholder" type="text" default="" label="" description="" />
-<!-- manager_feature_category  -->
-<field name="manager_feature_category" type="text" default="1" label="" description="" />
-<!-- sale_separator  -->
-<field name="sale_separator" type="text" default="1" label="" description="" />
-<!-- extra1  -->
-<field name="extra1" type="text" default="1" label="" description="" />
-<!-- extra2  -->
-<field name="extra2" type="text" default="1" label="" description="" />
-<!-- extra3  -->
-<field name="extra3" type="text" default="1" label="" description="" />
-<!-- extra4  -->
-<field name="extra4" type="text" default="1" label="" description="" />
-<!-- extra5  -->
-<field name="extra5" type="text" default="1" label="" description="" />
-<!-- extra6  -->
-<field name="extra6" type="text" default="1" label="" description="" />
-<!-- extra7  -->
-<field name="extra7" type="text" default="1" label="" description="" />
-<!-- extra8  -->
-<field name="extra8" type="text" default="1" label="" description="" />
-<!-- extra9  -->
-<field name="extra9" type="text" default="1" label="" description="" />
-<!-- extra10  -->
-<field name="extra10" type="text" default="1" label="" description="" />
-<field name="featuredmanager_placeholder" type="text" default="Interior, Exterior, Specific" label="" description="" />
-<field name="currency" type="text" default="USD=1;EUR=0.89;CAD=1.2;" label="" description="" />
-<field name="allowed_exts" type="text" default="zip,pdf" label="" description="" />
-<field name="allowed_exts_img" type="text" default="jpeg,jpg,png,gif" label="" description="" />
-<field name="price_format" type="text" default="." label="" description="" />
-<!-- 1 - affter 0 - beffore -->
-<field name="price_unit_show" type="text" default="1" label="" description="" />
-<field name="date_format" type="text" default="%Y-%m-%d" label="" description="" />
-<field name="datetime_format" type="text" default="%H:%i:%s" label="" description="" />
-<field name="plugin_name_select" type="text" default="" label="" description="" />
-<field name="toronto_login" type="text" default="" label="" description="" />
-<field name="toronto_password" type="text" default="" label="" description="" />
-<field name="api_key" type="text" default="AIzaSyD4ZY-54e-nzN0-KejXHkUh-D7bbexDMKk" label="" description="" />
-<field name="update_map" type="text" default="/index.php?option=com_realestatemanager&amp;task=update_map" label="" description="" />
-<field name="toronto_link_import" type="text" default="/index.php?option=com_realestatemanager&amp;task=toronto_link_import" label="" description="" />
-<field name="mresdms_login" type="text" default="" label="" description="" />
-<field name="mresdms_password" type="text" default="" label="" description="" />
-<field name="mresdms_link_import" type="text" default="/index.php?option=com_realestatemanager&amp;task=mresdms_link_import" label="" description="" />
-<field name="search_form_on_nothing_found_page_show" type="text" default="1" label="" description="" />
-<field name="search_form_on_result_search_page_show" type="text" default="1" label="" description="" />
-<field name="search_button_show" type="text" default="1" label="" description="" />
-<field name="search_button_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="search_form_search_keyword_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_check_in_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_check_out_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_price_field_show" type="text" default="1" label="" description="" />
-<field name="search_lot_size_field_show" type="text" default="1" label="" description="" />
-<field name="search_house_size_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_category_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_listing_type_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_listing_status_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_property_type_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_propertyid_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_comment_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_title_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_country_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_house_size_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_address_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_region_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_city_field_show" type="text" default="1" label="" description="" />
-<field name="extra6_advanced" type="text" default="1" label="" description="" />
-<field name="extra7_advanced" type="text" default="1" label="" description="" />
-<field name="extra8_advanced" type="text" default="1" label="" description="" />
-<field name="extra9_advanced" type="text" default="1" label="" description="" />
-<field name="extra10_advanced" type="text" default="1" label="" description="" />
-<field name="search_form_zipcode_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_lot_size_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_owner_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_rooms_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_bathrooms_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_bedrooms_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_exactly_to_all_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_garages_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_build_year_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_contacts_field_show" type="text" default="1" label="" description="" />
-<field name="search_form_agent_field_show" type="text" default="1" label="" description="" />
-<field name="extra1_advanced" type="text" default="1" label="" description="" />
-<field name="extra2_advanced" type="text" default="1" label="" description="" />
-<field name="extra3_advanced" type="text" default="1" label="" description="" />
-<field name="extra4_advanced" type="text" default="1" label="" description="" />
-<field name="extra5_advanced" type="text" default="1" label="" description="" />
-<field name="default_search_layout" type="text" default="" label="" description="" />
-<field name="google_captcha_by_default_show" type="text" default="0" label="" description="" />
-<field name="show_country_region_city_as_text_field" type="text" default="0" label="" description="" />
-<field name="rentrequest_user_email_notification" type="text" default="1" label="" description="" />
-<field name="buyingrequest_user_email_notification" type="text" default="1" label="" description="" />
-<field name="input_link_rent" type="text" default="1" label="" description="" />
-<field name="input_link_sale" type="text" default="1" label="" description="" />
-<field name="mandatory_built_year_field" type="text" default="1" label="" description="" />
-<field name="mandatory_address_field" type="text" default="1" label="" description="" />
-<field name="mandatory_price_field" type="text" default="1" label="" description="" />
-<field name="mandatory_photo_field" type="text" default="1" label="" description="" />
-<field name="search_all_houses_show" type="text" default="1" label="" description="" />
-<field name="search_all_houses_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="search_alone_category_show" type="text" default="1" label="" description="" />
-<field name="search_alone_category_registrationlevel" type="text" default="-2" label="" description="" />
-<field name="search_check_in_show" type="text" default="0" label="" description="" />
-<field name="search_check_out_show" type="text" default="0" label="" description="" />
-<field name="search_rooms_num_field_show" type="text" default="1" label="" description="" />
-<field name="search_bathrooms_num_field_show" type="text" default="1" label="" description="" />
-<field name="search_bedrooms_num_field_show" type="text" default="1" label="" description="" />
-<field name="order_by_default" type="text" default="date" label="" description="" />
-<field name="energy_field_show" type="text" default="1" label="" description="" />
-<field name="show_house_slider" type="text" default="1" label="" description="" />
-<field name="initial_year" type="text" default="2016" label="" description="" />
-<field name="final_year" type="text" default="2018" label="" description="" />
-<field name="sale_fraction" type="text" default="1" label="" description="" />
-<field name="rel_data_columns_adv_lg" type="text" default="3" label="" description="" />
-<field name="rel_data_columns_adv_md" type="text" default="3" label="" description="" />
-<field name="rel_data_columns_adv_sm" type="text" default="2" label="" description="" />
-<field name="rel_data_columns_adv_xs" type="text" default="2" label="" description="" />
-<field name="rel_data_columns_map_lg" type="text" default="2" label="" description="" />
-<field name="rel_data_columns_map_md" type="text" default="2" label="" description="" />
-<field name="rel_data_columns_map_sm" type="text" default="1" label="" description="" />
-<field name="rel_data_columns_map_xs" type="text" default="2" label="" description="" />
-<field name="watermark_show" type="text" default="0" label="" description="" />
-<field name="watermark_text" type="text" default="Watermark" label="" description="" />
-<field name="watermark_size" type="text" default="50" label="" description="" />
-<field name="watermark_color" type="text" default="rgba(5, 5, 5, 0.75)" label="" description="" />
-<field name="watermark_angle" type="text" default="0" label="" description="" />
-<field name="watermark_position" type="text" default="center" label="" description="" />
-<field name="watermark_opacity" type="text" default="60" label="" description="" />
-<field name="watermark_min_width" type="text" default="100" label="" description="" />
-<field name="watermark_min_height" type="text" default="100" label="" description="" />
-<field name="slider_height" type="text" default="56" label="" description="" />
-<field name="slider_object_fit" type="text" default="cover" label="" description="" />
+        name="fieldset_config_fs"
+        label="COM_REMCA_CONFIGS_FIELDSET_CONFIG_FS_LABEL"
+    >
+
+        <field
+            id="gmaps_api_key"
+            name="gmaps_api_key"
+            type="text"
+            label="COM_REMCA_CONFIGS_FIELD_GMAPS_API_KEY_LABEL"
+            description="COM_REMCA_CONFIGS_FIELD_GMAPS_API_KEY_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+			required="true"
+			default="AIzaSyD4ZY-54e-nzN0-KejXHkUh-D7bbexDMKk"
+        >
+        </field>  
     </fieldset>
 </config>

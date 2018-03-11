@@ -58,8 +58,8 @@
 		/>
     </fieldset>
     <fieldset
-        name="fieldset_jos_rem_video_source_fs"
-        label="COM_REMCA_VIDEO_SOURCE_FIELDSET_JOS_REM_VIDEO_SOURCE_FS_LABEL"
+        name="fieldset_video_source_fs"
+        label="COM_REMCA_VIDEO_SOURCE_FIELDSET_VIDEO_SOURCE_FS_LABEL"
     >
 
         <field
@@ -69,7 +69,7 @@
             label="COM_REMCA_VIDEO_SOURCE_FIELD_FK_HOUSE_ID_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_FIELD_FK_HOUSE_ID_DESC"
             class="modal"
-			default="0"
+			default="'0'"
         >
         </field>  
         <field

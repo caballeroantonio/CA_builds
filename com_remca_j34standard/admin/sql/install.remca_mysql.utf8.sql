@@ -4,7 +4,7 @@
 -- @package			com_remca
 -- @subpackage		com_remca.admin
 -- @copyright		
--- @license			GNU General Public License version 3 or later - See http://www.gnu.org/copyleft/gpl.html 
+-- @license			GNU General Public License version 3 or later - See http://www.gnu.org/copyleft/gpl.html
 --
 -- The following Component Architect header section must remain in any distribution of this file
 --
@@ -31,14 +31,17 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL DEFAULT '',
   `description` MEDIUMTEXT NOT NULL,
-  `houseid` VARCHAR(20) NOT NULL DEFAULT '' COMMENT 'houseid',
+  `id_lmunicipality` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'id_municipality',
+  `id_lstate` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'State',
+  `id_country` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Country',
   `sid` INT(11) DEFAULT NULL COMMENT 'sid',
   `fk_rentid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_rentid',
   `associate_house` VARCHAR(255) DEFAULT NULL COMMENT 'associate_house',
+  `houseid` VARCHAR(20) NOT NULL DEFAULT '' COMMENT 'houseid',
   `link` VARCHAR(250) NOT NULL DEFAULT '' COMMENT 'link',
   `listing_type` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'listing_type',
-  `price` INT(11) NOT NULL DEFAULT '0' COMMENT 'price',
-  `priceunit` VARCHAR(14) NOT NULL DEFAULT '' COMMENT 'priceunit',
+  `price` DECIMAL(11,2) NOT NULL DEFAULT '0' COMMENT 'price',
+  `id_currency` INT(10) NOT NULL DEFAULT '0' COMMENT 'Currency',
   `hcountry` VARCHAR(50) NOT NULL DEFAULT '' COMMENT 'hcountry',
   `hregion` VARCHAR(50) NOT NULL DEFAULT '' COMMENT 'hregion',
   `hcity` VARCHAR(50) NOT NULL DEFAULT '' COMMENT 'hcity',
@@ -46,10 +49,10 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `hlocation` VARCHAR(100) NOT NULL DEFAULT '' COMMENT 'hlocation',
   `hlatitude` VARCHAR(20) NOT NULL DEFAULT '' COMMENT 'hlatitude',
   `hlongitude` VARCHAR(20) NOT NULL DEFAULT '' COMMENT 'hlongitude',
-  `map_zoom` VARCHAR(5) NOT NULL DEFAULT '' COMMENT 'map_zoom',
-  `rooms` INT(11) DEFAULT NULL COMMENT 'rooms',
-  `bathrooms` INT(11) DEFAULT NULL COMMENT 'bathrooms',
-  `bedrooms` INT(11) DEFAULT NULL COMMENT 'bedrooms',
+  `map_zoom` INT(10) NOT NULL DEFAULT '14' COMMENT 'map_zoom',
+  `rooms` INT(11) NOT NULL DEFAULT '0' COMMENT 'rooms',
+  `bathrooms` INT(11) NOT NULL DEFAULT '0' COMMENT 'bathrooms',
+  `bedrooms` INT(11) NOT NULL DEFAULT '0' COMMENT 'bedrooms',
   `contacts` VARCHAR(250) DEFAULT NULL COMMENT 'contacts',
   `image_link` VARCHAR(200) DEFAULT NULL COMMENT 'image_link',
   `listing_status` VARCHAR(45) DEFAULT NULL COMMENT 'listing_status',
@@ -79,9 +82,10 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `extra8` VARCHAR(250) DEFAULT NULL COMMENT 'extra8',
   `extra9` VARCHAR(250) DEFAULT NULL COMMENT 'extra9',
   `extra10` VARCHAR(250) DEFAULT NULL COMMENT 'extra10',
-  `energy_value` DECIMAL(11,2) DEFAULT NULL COMMENT 'energy_value',
   `owner_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'owner_id',
+  `energy_value` DECIMAL(11,2) DEFAULT NULL COMMENT 'energy_value',
   `climate_value` DECIMAL(11,2) DEFAULT NULL COMMENT 'climate_value',
+  `images` TEXT NOT NULL,
   `catid` INT(10) UNSIGNED DEFAULT NULL COMMENT 'FK to categories in #__categories', # NOT NULL DEFAULT '0'
   KEY `idx_catid` (`catid`),
   CONSTRAINT `remca_house_catid` FOREIGN KEY (`catid`) REFERENCES `#__categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -95,10 +99,108 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `asset_id` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table',
   KEY `idx_checkout` (`checked_out`),
   KEY `idx_state` (`state`),
-  KEY `idx_price` (`price`) COMMENT 'FILTER_FIELD price',
+  KEY `idx_id_lmunicipality` (`id_lmunicipality`),
+  KEY `idx_id_lstate` (`id_lstate`),
+  KEY `idx_id_country` (`id_country`),
+  KEY `idx_price` (`price`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
-  
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__rem_photos`
+--
+
+#DROP TABLE IF EXISTS `#__rem_photos`;
+CREATE TABLE IF NOT EXISTS `#__rem_photos` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
+  `thumbnail_img` VARCHAR(250) DEFAULT NULL COMMENT 'thumbnail_img',
+  `images` TEXT NOT NULL,
+  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
+  `ordering` INT(11) NOT NULL DEFAULT '0',
+  KEY `idx_ordering` (`ordering`),
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__rem_mime_types`
+--
+
+#DROP TABLE IF EXISTS `#__rem_mime_types`;
+CREATE TABLE IF NOT EXISTS `#__rem_mime_types` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `mime_ext` TEXT DEFAULT NULL COMMENT 'mime_ext',
+  `mime_type` TEXT DEFAULT NULL COMMENT 'mime_type',
+  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__rem_mls_for_delete`
+--
+
+#DROP TABLE IF EXISTS `#__rem_mls_for_delete`;
+CREATE TABLE IF NOT EXISTS `#__rem_mls_for_delete` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `mls` VARCHAR(255) DEFAULT NULL COMMENT 'mls',
+  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__rem_orders`
+--
+
+#DROP TABLE IF EXISTS `#__rem_orders`;
+CREATE TABLE IF NOT EXISTS `#__rem_orders` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL DEFAULT '',
+  `fk_user_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_user_id',
+  `fk_houses_htitle` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'fk_houses_htitle',
+  `email` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'email',
+  `status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'status',
+  `order_date` DATETIME DEFAULT NULL COMMENT 'order_date',
+  `fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
+  `txn_type` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_type',
+  `txn_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_id',
+  `payer_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_id',
+  `payer_status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_status',
+  `order_calculated_price` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'order_calculated_price',
+  `order_price` INT(11) DEFAULT NULL COMMENT 'order_price',
+  `order_currency_code` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'order_currency_code',
+  `paypal_paykay` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'paypal_paykay',
+  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__rem_orders_details`
+--
+
+#DROP TABLE IF EXISTS `#__rem_orders_details`;
+CREATE TABLE IF NOT EXISTS `#__rem_orders_details` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL DEFAULT '',
+  `fk_order_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_order_id',
+  `fk_user_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_user_id',
+  `fk_houses_htitle` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'fk_houses_htitle',
+  `email` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'email',
+  `status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'status',
+  `order_date` DATETIME DEFAULT NULL COMMENT 'order_date',
+  `fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
+  `txn_type` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_type',
+  `txn_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_id',
+  `payer_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_id',
+  `payer_status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_status',
+  `order_calculated_price` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'order_calculated_price',
+  `order_price` INT(11) DEFAULT NULL COMMENT 'order_price',
+  `order_currency_code` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'order_currency_code',
+  `payment_details` TEXT DEFAULT NULL COMMENT 'payment_details',
+  `paypal_paykay` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'paypal_paykay',
+  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
+  PRIMARY KEY (`id`)
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_main_categories`
@@ -132,101 +234,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_main_categories` (
   KEY `idx_state` (`state`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `#__rem_mime_types`
---
 
-#DROP TABLE IF EXISTS `#__rem_mime_types`;
-CREATE TABLE IF NOT EXISTS `#__rem_mime_types` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `mime_ext` TEXT DEFAULT NULL COMMENT 'mime_ext',
-  `mime_type` TEXT DEFAULT NULL COMMENT 'mime_type',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `#__rem_mls_for_delete`
---
-
-#DROP TABLE IF EXISTS `#__rem_mls_for_delete`;
-CREATE TABLE IF NOT EXISTS `#__rem_mls_for_delete` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `mls` VARCHAR(255) DEFAULT NULL COMMENT 'mls',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `#__rem_orders`
---
-
-#DROP TABLE IF EXISTS `#__rem_orders`;
-CREATE TABLE IF NOT EXISTS `#__rem_orders` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(255) NOT NULL DEFAULT '',
-  `fk_user_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_user_id',
-  `fk_houses_htitle` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'fk_houses_htitle',
-  `email` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'email',
-  `status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'status',
-  `order_date` DATETIME DEFAULT NULL COMMENT 'order_date',
-  `fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
-  `txn_type` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_type',
-  `txn_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_id',
-  `payer_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_id',
-  `payer_status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_status',
-  `order_calculated_price` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'order_calculated_price',
-  `order_price` INT(11) DEFAULT NULL COMMENT 'order_price',
-  `order_currency_code` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'order_currency_code',
-  `paypal_paykay` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'paypal_paykay',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `#__rem_orders_details`
---
-
-#DROP TABLE IF EXISTS `#__rem_orders_details`;
-CREATE TABLE IF NOT EXISTS `#__rem_orders_details` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(255) NOT NULL DEFAULT '',
-  `fk_order_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_order_id',
-  `fk_user_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_user_id',
-  `fk_houses_htitle` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'fk_houses_htitle',
-  `email` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'email',
-  `status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'status',
-  `order_date` DATETIME DEFAULT NULL COMMENT 'order_date',
-  `fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
-  `txn_type` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_type',
-  `txn_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_id',
-  `payer_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_id',
-  `payer_status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_status',
-  `order_calculated_price` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'order_calculated_price',
-  `order_price` INT(11) DEFAULT NULL COMMENT 'order_price',
-  `order_currency_code` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'order_currency_code',
-  `payment_details` TEXT DEFAULT NULL COMMENT 'payment_details',
-  `paypal_paykay` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'paypal_paykay',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  PRIMARY KEY (`id`)
-  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
---
--- Table structure for table `#__rem_photos`
---
-
-#DROP TABLE IF EXISTS `#__rem_photos`;
-CREATE TABLE IF NOT EXISTS `#__rem_photos` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
-  `thumbnail_img` VARCHAR(250) DEFAULT NULL COMMENT 'thumbnail_img',
-  `main_img` VARCHAR(250) DEFAULT NULL COMMENT 'main_img',
-  `img_ordering` INT(11) DEFAULT NULL COMMENT 'img_ordering',
-  `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
-  PRIMARY KEY (`id`)
-  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_rent`
@@ -249,7 +257,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_rent` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   KEY `idx_checkout` (`checked_out`),
   PRIMARY KEY (`id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_rent_request`
@@ -272,7 +280,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_rent_request` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   KEY `idx_checkout` (`checked_out`),
   PRIMARY KEY (`id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_rent_sal`
@@ -294,7 +302,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_rent_sal` (
   `priceunit` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'priceunit',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_review`
@@ -315,7 +323,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_review` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   KEY `idx_state` (`state`),
   PRIMARY KEY (`id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_track_source`
@@ -332,7 +340,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_track_source` (
   `label` VARCHAR(255) DEFAULT NULL COMMENT 'label',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_users_wishlist`
@@ -341,11 +349,9 @@ CREATE TABLE IF NOT EXISTS `#__rem_track_source` (
 #DROP TABLE IF EXISTS `#__rem_users_wishlist`;
 CREATE TABLE IF NOT EXISTS `#__rem_users_wishlist` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
-  `fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_userid',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_video_source`
@@ -362,7 +368,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_video_source` (
   `youtube` VARCHAR(255) DEFAULT NULL COMMENT 'youtube',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_buying_request`
@@ -384,7 +390,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_buying_request` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   KEY `idx_checkout` (`checked_out`),
   PRIMARY KEY (`id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_categories`
@@ -397,7 +403,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_categories` (
   `idcat` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'idcat',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_const`
@@ -411,7 +417,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_const` (
   `sys_type` VARCHAR(250) DEFAULT NULL COMMENT 'sys_type',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_const_language`
@@ -425,7 +431,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_const_language` (
   `value_const` VARCHAR(2000) DEFAULT NULL COMMENT 'value_const',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_feature`
@@ -441,7 +447,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_feature` (
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   KEY `idx_state` (`state`),
   PRIMARY KEY (`id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_feature_houses`
@@ -454,7 +460,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_feature_houses` (
   `fk_featureid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_featureid',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- Table structure for table `#__rem_languages`
@@ -469,7 +475,66 @@ CREATE TABLE IF NOT EXISTS `#__rem_languages` (
   `sef` VARCHAR(7) DEFAULT NULL COMMENT 'sef',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
-  
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__rem_lmunicipalities`
+--
+
+#DROP TABLE IF EXISTS `#__rem_lmunicipalities`;
+CREATE TABLE IF NOT EXISTS `#__rem_lmunicipalities` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL DEFAULT '',
+  `id_lstate` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'State',
+  `id_country` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Country',
+  `state` TINYINT(1) NOT NULL DEFAULT '0',
+  `ordering` INT(11) NOT NULL DEFAULT '0',
+  KEY `idx_state` (`state`),
+  KEY `idx_id_lstate` (`id_lstate`),
+  KEY `idx_id_country` (`id_country`),
+  KEY `idx_ordering` (`ordering`),
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__rem_lstates`
+--
+
+#DROP TABLE IF EXISTS `#__rem_lstates`;
+CREATE TABLE IF NOT EXISTS `#__rem_lstates` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL DEFAULT '',
+  `id_country` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'id_country',
+  `friendly_name` VARCHAR(45) DEFAULT NULL COMMENT 'Frienly Name',
+  `state` TINYINT(1) NOT NULL DEFAULT '0',
+  `ordering` INT(11) NOT NULL DEFAULT '0',
+  KEY `idx_state` (`state`),
+  KEY `idx_id_country` (`id_country`),
+  KEY `idx_ordering` (`ordering`),
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__rem_countries`
+--
+
+#DROP TABLE IF EXISTS `#__rem_countries`;
+CREATE TABLE IF NOT EXISTS `#__rem_countries` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL DEFAULT '',
+  `ordering_cur` INT(11) NOT NULL DEFAULT '1' COMMENT 'ordering_cur',
+  `published_cur` TINYINT(1) NOT NULL DEFAULT '0' COMMENT 'published_cur',
+  `iso2` VARCHAR(2) DEFAULT NULL COMMENT 'iso2',
+  `iso3` VARCHAR(3) DEFAULT NULL COMMENT 'iso3',
+  `currency` VARCHAR(45) DEFAULT NULL COMMENT 'currency',
+  `conversion` DECIMAL(11,2) NOT NULL DEFAULT '0' COMMENT 'conversion',
+  `conversion_date` DATETIME DEFAULT NULL COMMENT 'conversion_date',
+  `state` TINYINT(1) NOT NULL DEFAULT '0',
+  `ordering` INT(11) NOT NULL DEFAULT '0',
+  KEY `idx_state` (`state`),
+  KEY `idx_ordering` (`ordering`),
+  PRIMARY KEY (`id`)
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
@@ -485,35 +550,35 @@ CREATE TABLE IF NOT EXISTS `#__rem_rating` (
   `lastip` VARCHAR(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `content_type_id` (`content_type`,`content_id`)
-  
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `field_mappings`,`router`) VALUES
 ('RealEstateManagerCA Category', 'com_remca.category', '{"special":{"dbtable":"#__categories","key":"id","type":"Category","prefix":"JTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}', '', '{"common":[{"core_content_item_id":"id","core_title":"title","core_state":"published","core_alias":"alias","core_created_time":"created_time","core_modified_time":"modified_time","core_body":"description", "core_hits":"hits","core_publish_up":"null","core_publish_down":"null","core_access":"access", "core_params":"params", "core_featured":"null", "core_metadata":"metadata", "core_language":"language", "core_images":"null", "core_urls":"null", "core_version":"version", "core_ordering":"null", "core_metakey":"metakey", "core_metadesc":"metadesc", "core_catid":"parent_id", "core_xreference":"null", "asset_id":"asset_id"}], "special": [{"parent_id":"parent_id","lft":"lft","rgt":"rgt","level":"level","path":"path","extension":"extension","note":"note"}]}','RemcaHelperRoute::getCategoryRoute');
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('house',
 'com_remca.house',
 '{"special":{"dbtable":"remca_houses","key":"id","type":"houses","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 '',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"description","core_hits":"hits","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"language","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"catid","core_xreference":"null","asset_id":"asset_id"}}',
+'{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"description","core_hits":"hits","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"language","core_images":"images","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"catid","core_xreference":"null","asset_id":"asset_id"}}',
 'remcaHelperRoute::gethouseRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/house.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/house.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_currency","targetTable":"#__rem_countries","targetColumn":"id","displayColumn":"currency"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('main_category',
-'com_remca.main_category',
-'{"special":{"dbtable":"remca_main_categories","key":"id","type":"main_categories","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('photo',
+'com_remca.photo',
+'{"special":{"dbtable":"remca_photos","key":"id","type":"photos","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 '',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"alias","core_created_time":"null","core_modified_time":"null","core_body":"description","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"access","core_params":"params","core_featured":"null","core_metadata":"null","core_language":"language","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"asset_id"}}',
-'remcaHelperRoute::getmain_categoryRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/main_category.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"images","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
+'remcaHelperRoute::getphotoRoute',
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/photo.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('mime_type',
 'com_remca.mime_type',
@@ -524,7 +589,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/mime_type.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('mls_for_delete',
 'com_remca.mls_for_delete',
@@ -535,7 +600,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/mls_for_delete.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('order',
 'com_remca.order',
@@ -546,7 +611,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/order.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('orders_detail',
 'com_remca.orders_detail',
@@ -557,18 +622,18 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/orders_detail.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('photo',
-'com_remca.photo',
-'{"special":{"dbtable":"remca_photos","key":"id","type":"photos","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('main_category',
+'com_remca.main_category',
+'{"special":{"dbtable":"remca_main_categories","key":"id","type":"main_categories","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 '',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'remcaHelperRoute::getphotoRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/photo.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"alias","core_created_time":"null","core_modified_time":"null","core_body":"description","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"access","core_params":"params","core_featured":"null","core_metadata":"null","core_language":"language","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"asset_id"}}',
+'remcaHelperRoute::getmain_categoryRoute',
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/main_category.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('rent',
 'com_remca.rent',
@@ -579,7 +644,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/rent.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('rent_request',
 'com_remca.rent_request',
@@ -590,7 +655,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/rent_request.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('rent_sal',
 'com_remca.rent_sal',
@@ -601,7 +666,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/rent_sal.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('review',
 'com_remca.review',
@@ -612,7 +677,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/review.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('track_source',
 'com_remca.track_source',
@@ -623,7 +688,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/track_source.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('users_wishlist',
 'com_remca.users_wishlist',
@@ -634,7 +699,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/users_wishlist.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('video_source',
 'com_remca.video_source',
@@ -645,7 +710,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/video_source.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('buying_request',
 'com_remca.buying_request',
@@ -656,7 +721,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/buying_request.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('category',
 'com_remca.category',
@@ -667,7 +732,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/category.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('const',
 'com_remca.const',
@@ -678,7 +743,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/const.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('const_language',
 'com_remca.const_language',
@@ -689,7 +754,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/const_language.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('feature',
 'com_remca.feature',
@@ -700,7 +765,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/feature.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('feature_house',
 'com_remca.feature_house',
@@ -711,7 +776,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/feature_house.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('language',
 'com_remca.language',
@@ -722,7 +787,51 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/language.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_languages`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+--
+INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Municipality',
+'com_remca.lmunicipality',
+'{"special":{"dbtable":"remca_lmunicipalities","key":"id","type":"lmunicipalities","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+'',
+'{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"null","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
+'remcaHelperRoute::getlmunicipalityRoute',
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/lmunicipality.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+);
+--
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+--
+INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('State',
+'com_remca.lstate',
+'{"special":{"dbtable":"remca_lstates","key":"id","type":"lstates","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+'',
+'{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"null","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
+'remcaHelperRoute::getlstateRoute',
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/lstate.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+);
+--
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+--
+INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('country',
+'com_remca.country',
+'{"special":{"dbtable":"remca_countries","key":"id","type":"countries","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+'',
+'{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"null","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
+'remcaHelperRoute::getcountryRoute',
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/country.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+);
+--
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+--
+INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('config',
+'com_remca.config',
+'{"special":{"dbtable":"remca_configs","key":"id","type":"configs","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+'',
+'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"null","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
+'remcaHelperRoute::getconfigRoute',
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/config.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+);
+--
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
 INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('RealEstateManagerCA Category',
 'com_remca.category',

@@ -60,7 +60,7 @@ class JFormFieldPhoto extends JFormFieldList
 
 		$query->select($db->quoteName('id').' AS value, '.$db->quoteName('name').' AS text');
 		$query->from($db->quoteName('#__rem_photos').' AS a');
-		$query->order($db->quoteName('a.id'));
+		$query->order('a.ordering');
 		
 		// Get the options.
 		$db->setQuery($query);

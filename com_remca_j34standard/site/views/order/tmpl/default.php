@@ -146,7 +146,7 @@ $empty = $component->params->get('default_empty_field', '');
 			?>
 			<?php if ($display_fieldset) : ?>				
 				<fieldset>	
-					<legend><?php echo JText::_('COM_REMCA_ORDERS_FIELDSET_JOS_REM_ORDERS_FS_LABEL'); ?></legend>
+					<legend><?php echo JText::_('COM_REMCA_ORDERS_FIELDSET_ORDERS_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
 						<?php if ($params->get('show_order_fk_user_id')) : ?>

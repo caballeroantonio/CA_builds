@@ -118,7 +118,7 @@ $params = $this->state->get('params');
 <?php */?>
         			<!-- end fields basic-details-->
                     <!-- begin fields fieldset-[%%FIELDSET_CODE_NAME%%]-->
-					<?php foreach($this->form->getFieldset('fieldset_jos_rem_mime_types_fs') as $field): ?>
+					<?php foreach($this->form->getFieldset('fieldset_mime_types_fs') as $field): ?>
 						<?php if (!$field->hidden) : ?>
 							<?php $fieldname = (string) $field->fieldname; ?>
 							
@@ -152,7 +152,7 @@ $params = $this->state->get('params');
 		<fieldset>
 <?php /*?>			<ul class="nav nav-tabs">
 				<li class="active"><a href="#basic-details" data-toggle="tab"><?php echo JText::_('COM_REMCA_MIME_TYPES_FIELDSET_DETAILS_LABEL');?></a></li>
-				<li><a href="#fieldset-jos_rem_mime_types_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_MIME_TYPES_FIELDSET_JOS_REM_MIME_TYPES_FS_LABEL');?></a></li>
+				<li><a href="#fieldset-mime_types_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_MIME_TYPES_FIELDSET_MIME_TYPES_FS_LABEL');?></a></li>
 				<li><a href="#publishing" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_PUBLISHING_LABEL');?></a></li>
 			</ul>		<?php */?>
 		

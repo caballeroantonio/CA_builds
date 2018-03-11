@@ -91,6 +91,21 @@ $empty = $component->params->get('default_empty_field', '');
 								<?php echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_HITS', 'a.hits', $list_dirn, $list_order); ?>
 							</th>
 						<?php endif; ?>
+						<?php if ($this->params->get('list_show_house_id_lmunicipality',0)) : ?>
+							<th class="list-id_lmunicipality" id="tableOrderingid_lmunicipality">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LMUNICIPALITY'); ?>
+							</th>
+						<?php endif; ?>	
+						<?php if ($this->params->get('list_show_house_id_lstate',0)) : ?>
+							<th class="list-id_lstate" id="tableOrderingid_lstate">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LSTATE'); ?>
+							</th>
+						<?php endif; ?>	
+						<?php if ($this->params->get('list_show_house_id_country',0)) : ?>
+							<th class="list-id_country" id="tableOrderingid_country">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_COUNTRY'); ?>
+							</th>
+						<?php endif; ?>	
 						<?php if ($this->params->get('list_show_house_price',0)) : ?>
 							<th class="list-price" id="tableOrderingprice">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>
@@ -150,6 +165,27 @@ $empty = $component->params->get('default_empty_field', '');
 								<?php echo JText::sprintf('JGLOBAL_HITS_COUNT', $item->hits); ?>
 							</span>
 						</td>
+						<?php endif; ?>
+						<?php if ($this->params->get('list_show_house_id_lmunicipality',0)) : ?>
+							<td class="list-id_lmunicipality">
+								<?php 
+									echo JString::trim($item->m_lmunicipality_name); 
+								?>
+							</td>
+						<?php endif; ?>
+						<?php if ($this->params->get('list_show_house_id_lstate',0)) : ?>
+							<td class="list-id_lstate">
+								<?php 
+									echo JString::trim($item->s_lstate_name); 
+								?>
+							</td>
+						<?php endif; ?>
+						<?php if ($this->params->get('list_show_house_id_country',0)) : ?>
+							<td class="list-id_country">
+								<?php 
+									echo JString::trim($item->c1_country_name); 
+								?>
+							</td>
 						<?php endif; ?>
 						<?php if ($this->params->get('list_show_house_price',0)) : ?>
 							<td class="list-price">

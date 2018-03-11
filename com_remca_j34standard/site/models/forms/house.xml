@@ -121,20 +121,68 @@
 			size="45"
 		/>
     </fieldset>
+    <fields
+        name="images"
+        label="COM_REMCA_HOUSES_IMAGE_OPTIONS"
+    >
+        <field
+            id="image_url"
+            name="image_url"
+            type="media"
+            label="COM_REMCA_FIELD_IMAGE_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_IMAGE_DESC"
+        />
+        <field
+            id="image_alt_text"
+            name="image_alt_text"
+            type="text"
+            label="COM_REMCA_FIELD_IMAGE_ALTTEXT_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_IMAGE_ALTTEXT_DESC"
+            class="inputbox"
+            size="20"
+        />
+        <field
+            name="image_caption"
+            type="text"
+            label="COM_REMCA_FIELD_IMAGE_CAPTION_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_IMAGE_CAPTION_DESC"
+            class="inputbox"
+            size="20"
+        />
+    </fields>
     <fieldset
-        name="fieldset_jos_rem_houses_fs"
-        label="COM_REMCA_HOUSES_FIELDSET_JOS_REM_HOUSES_FS_LABEL"
+        name="fieldset_houses_fs"
+        label="COM_REMCA_HOUSES_FIELDSET_HOUSES_FS_LABEL"
     >
 
         <field
-            id="houseid"
-            name="houseid"
-            type="text"
-            label="COM_REMCA_HOUSES_FIELD_HOUSEID_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_HOUSEID_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
+            id="id_lmunicipality"
+            name="id_lmunicipality"
+            type="modal_lmunicipalities"
+            label="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_DESC"
+            class="modal"
+			default="'0'"
+        >
+        </field>  
+        <field
+            id="id_lstate"
+            name="id_lstate"
+            type="modal_lstates"
+            label="COM_REMCA_HOUSES_FIELD_ID_LSTATE_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_ID_LSTATE_DESC"
+            class="modal"
+			default="'0'"
+        >
+        </field>  
+        <field
+            id="id_country"
+            name="id_country"
+            type="modal_countries"
+            label="COM_REMCA_HOUSES_FIELD_ID_COUNTRY_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_ID_COUNTRY_DESC"
+            class="modal"
+			default="'0'"
         >
         </field>  
         <field
@@ -155,7 +203,7 @@
             label="COM_REMCA_HOUSES_FIELD_FK_RENTID_LABEL"
             description="COM_REMCA_HOUSES_FIELD_FK_RENTID_DESC"
             class="modal"
-			default="0"
+			default="'0'"
         >
         </field>  
         <field
@@ -164,6 +212,17 @@
             type="text"
             label="COM_REMCA_HOUSES_FIELD_ASSOCIATE_HOUSE_LABEL"
             description="COM_REMCA_HOUSES_FIELD_ASSOCIATE_HOUSE_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="houseid"
+            name="houseid"
+            type="text"
+            label="COM_REMCA_HOUSES_FIELD_HOUSEID_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_HOUSEID_DESC"
             class="inputbox"
 			size="50"
 			maxlength="255"
@@ -194,24 +253,27 @@
         <field
             id="price"
             name="price"
-            type="integer"
+            type="text"
             label="COM_REMCA_HOUSES_FIELD_PRICE_LABEL"
             description="COM_REMCA_HOUSES_FIELD_PRICE_DESC"
-            class="inputbox"
-			size="1"
-			default="0"
-        >
-        </field>  
-        <field
-            id="priceunit"
-            name="priceunit"
-            type="text"
-            label="COM_REMCA_HOUSES_FIELD_PRICEUNIT_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_PRICEUNIT_DESC"
-            class="inputbox"
+            class="inputbox validate-numeric"
 			size="50"
 			maxlength="255"
         >
+        </field>  
+        <field
+            id="id_currency"
+            name="id_currency"
+            type="sql"
+            label="COM_REMCA_HOUSES_FIELD_ID_CURRENCY_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_ID_CURRENCY_DESC"
+            class="inputbox validate-numeric"
+			size="1"
+			query="SELECT id, CONCAT_WS(' - ', iso2, currency) 'currency' FROM #__rem_countries WHERE published_cur"
+			key_field="id"
+			value_field="currency"
+        >
+            <option value="">COM_REMCA_HOUSES_SELECT_ID_CURRENCY</option>
         </field>  
         <field
             id="hcountry"
@@ -296,41 +358,45 @@
             type="text"
             label="COM_REMCA_HOUSES_FIELD_MAP_ZOOM_LABEL"
             description="COM_REMCA_HOUSES_FIELD_MAP_ZOOM_DESC"
-            class="inputbox"
+            class="inputbox validate-numeric"
 			size="50"
 			maxlength="255"
+			default="14"
         >
         </field>  
         <field
             id="rooms"
             name="rooms"
-            type="integer"
+            type="text"
             label="COM_REMCA_HOUSES_FIELD_ROOMS_LABEL"
             description="COM_REMCA_HOUSES_FIELD_ROOMS_DESC"
-            class="inputbox"
+            class="inputbox validate-numeric"
 			size="1"
+			maxlength="255"
 			default="0"
         >
         </field>  
         <field
             id="bathrooms"
             name="bathrooms"
-            type="integer"
+            type="text"
             label="COM_REMCA_HOUSES_FIELD_BATHROOMS_LABEL"
             description="COM_REMCA_HOUSES_FIELD_BATHROOMS_DESC"
-            class="inputbox"
+            class="inputbox validate-numeric"
 			size="1"
+			maxlength="255"
 			default="0"
         >
         </field>  
         <field
             id="bedrooms"
             name="bedrooms"
-            type="integer"
+            type="text"
             label="COM_REMCA_HOUSES_FIELD_BEDROOMS_LABEL"
             description="COM_REMCA_HOUSES_FIELD_BEDROOMS_DESC"
-            class="inputbox"
+            class="inputbox validate-numeric"
 			size="1"
+			maxlength="255"
 			default="0"
         >
         </field>  
@@ -660,6 +726,16 @@
         >
         </field>  
         <field
+            id="owner_id"
+            name="owner_id"
+            type="modal_jusers"
+            label="COM_REMCA_HOUSES_FIELD_OWNER_ID_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_OWNER_ID_DESC"
+            class="modal"
+			default="0"
+        >
+        </field>  
+        <field
             id="energy_value"
             name="energy_value"
             type="currency"
@@ -667,16 +743,6 @@
             description="COM_REMCA_HOUSES_FIELD_ENERGY_VALUE_DESC"
             class="inputbox"
 			size="1"
-			default="0"
-        >
-        </field>  
-        <field
-            id="owner_id"
-            name="owner_id"
-            type="modal_jusers"
-            label="COM_REMCA_HOUSES_FIELD_OWNER_ID_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_OWNER_ID_DESC"
-            class="modal"
 			default="0"
         >
         </field>  

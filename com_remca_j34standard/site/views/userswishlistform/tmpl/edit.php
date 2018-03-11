@@ -118,17 +118,6 @@ $params = $this->state->get('params');
 <?php */?>
         			<!-- end fields basic-details-->
                     <!-- begin fields fieldset-[%%FIELDSET_CODE_NAME%%]-->
-					<?php foreach($this->form->getFieldset('fieldset_jos_rem_users_wishlist_fs') as $field): ?>
-						<?php if (!$field->hidden) : ?>
-							<?php $fieldname = (string) $field->fieldname; ?>
-							
-							<?php if (strtolower($field->type) == 'file' AND trim($this->item->$fieldname) != '') : ?>
-								<?php echo $this->form->renderField($fieldname, null, null, array('group_id' => 'field_'.$fieldname, 'file' => JRoute::_(JUri::root().trim($this->item->$fieldname), false))); ?>
-							<?php else: ?>	
-								<?php echo $this->form->renderField($fieldname, null, null, array('group_id' => 'field_'.$fieldname)); ?>
-							<?php endif; ?>	
-						<?php endif; ?>	
-					<?php endforeach; ?>
                     <!-- end fields fieldset-[%%FIELDSET_CODE_NAME%%]-->
                     <!-- begin fields [%%FIELD_CODE_NAME%%]-->
                     <!-- end fields [%%FIELD_CODE_NAME%%]-->
@@ -152,7 +141,6 @@ $params = $this->state->get('params');
 		<fieldset>
 <?php /*?>			<ul class="nav nav-tabs">
 				<li class="active"><a href="#basic-details" data-toggle="tab"><?php echo JText::_('COM_REMCA_USERS_WISHLIST_FIELDSET_DETAILS_LABEL');?></a></li>
-				<li><a href="#fieldset-jos_rem_users_wishlist_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_USERS_WISHLIST_FIELDSET_JOS_REM_USERS_WISHLIST_FS_LABEL');?></a></li>
 				<li><a href="#publishing" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_PUBLISHING_LABEL');?></a></li>
 			</ul>		<?php */?>
 		

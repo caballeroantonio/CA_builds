@@ -98,12 +98,12 @@ edité el menú login para que hiciera redirect a este componente
 			'limitstart'=>'uINT','showall'=>'INT','return'=>'BASE64',
 			'filter'=>'STRING','filter_order'=>'CMD','filter_order_Dir'=>'CMD','filter-search'=>'STRING',
 			'filter_house_order'=>'CMD','filter_house_order_Dir'=>'CMD','house-filter-search'=>'STRING',
-			'filter_maincategory_order'=>'CMD','filter_maincategory_order_Dir'=>'CMD','maincategory-filter-search'=>'STRING',
+			'filter_photo_order'=>'CMD','filter_photo_order_Dir'=>'CMD','photo-filter-search'=>'STRING',
 			'filter_mimetype_order'=>'CMD','filter_mimetype_order_Dir'=>'CMD','mimetype-filter-search'=>'STRING',
 			'filter_mlsfordelete_order'=>'CMD','filter_mlsfordelete_order_Dir'=>'CMD','mlsfordelete-filter-search'=>'STRING',
 			'filter_order_order'=>'CMD','filter_order_order_Dir'=>'CMD','order-filter-search'=>'STRING',
 			'filter_ordersdetail_order'=>'CMD','filter_ordersdetail_order_Dir'=>'CMD','ordersdetail-filter-search'=>'STRING',
-			'filter_photo_order'=>'CMD','filter_photo_order_Dir'=>'CMD','photo-filter-search'=>'STRING',
+			'filter_maincategory_order'=>'CMD','filter_maincategory_order_Dir'=>'CMD','maincategory-filter-search'=>'STRING',
 			'filter_rent_order'=>'CMD','filter_rent_order_Dir'=>'CMD','rent-filter-search'=>'STRING',
 			'filter_rentrequest_order'=>'CMD','filter_rentrequest_order_Dir'=>'CMD','rentrequest-filter-search'=>'STRING',
 			'filter_rentsal_order'=>'CMD','filter_rentsal_order_Dir'=>'CMD','rentsal-filter-search'=>'STRING',
@@ -118,6 +118,10 @@ edité el menú login para que hiciera redirect a este componente
 			'filter_feature_order'=>'CMD','filter_feature_order_Dir'=>'CMD','feature-filter-search'=>'STRING',
 			'filter_featurehouse_order'=>'CMD','filter_featurehouse_order_Dir'=>'CMD','featurehouse-filter-search'=>'STRING',
 			'filter_language_order'=>'CMD','filter_language_order_Dir'=>'CMD','language-filter-search'=>'STRING',
+			'filter_lmunicipality_order'=>'CMD','filter_lmunicipality_order_Dir'=>'CMD','lmunicipality-filter-search'=>'STRING',
+			'filter_lstate_order'=>'CMD','filter_lstate_order_Dir'=>'CMD','lstate-filter-search'=>'STRING',
+			'filter_country_order'=>'CMD','filter_country_order_Dir'=>'CMD','country-filter-search'=>'STRING',
+			'filter_config_order'=>'CMD','filter_config_order_Dir'=>'CMD','config-filter-search'=>'STRING',
 			'print'=>'BOOLEAN','lang'=>'CMD', 'Itemid'=>'INT');
 
 		parent::display($cachable,$safe_url_params);

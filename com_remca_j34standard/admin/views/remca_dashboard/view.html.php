@@ -83,10 +83,10 @@ class RemcaViewRemca_Dashboard extends JViewLegacy
 			'text'=>'Houses',//JText::_('REMCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_REMCA_HOUSE_DESCRIPTION')
 			);
-		$buttons[] = array('link'=>'index.php?option=com_remca&view=main_categories',
-			'object'=>'main_categories',
-			'text'=>'Main_categories',//JText::_('REMCA_COMPONENT_WIZARD'),
-			'desc'=>JText::_('COM_REMCA_MAINCATEGORY_DESCRIPTION')
+		$buttons[] = array('link'=>'index.php?option=com_remca&view=photos',
+			'object'=>'photos',
+			'text'=>'Photos',//JText::_('REMCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_REMCA_PHOTO_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_remca&view=mime_types',
 			'object'=>'mime_types',
@@ -108,10 +108,10 @@ class RemcaViewRemca_Dashboard extends JViewLegacy
 			'text'=>'Orders_details',//JText::_('REMCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_REMCA_ORDERSDETAIL_DESCRIPTION')
 			);
-		$buttons[] = array('link'=>'index.php?option=com_remca&view=photos',
-			'object'=>'photos',
-			'text'=>'Photos',//JText::_('REMCA_COMPONENT_WIZARD'),
-			'desc'=>JText::_('COM_REMCA_PHOTO_DESCRIPTION')
+		$buttons[] = array('link'=>'index.php?option=com_remca&view=main_categories',
+			'object'=>'main_categories',
+			'text'=>'Main_categories',//JText::_('REMCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_REMCA_MAINCATEGORY_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_remca&view=rent',
 			'object'=>'rent',
@@ -182,6 +182,21 @@ class RemcaViewRemca_Dashboard extends JViewLegacy
 			'object'=>'languages',
 			'text'=>'Languages',//JText::_('REMCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_REMCA_LANGUAGE_DESCRIPTION')
+			);
+		$buttons[] = array('link'=>'index.php?option=com_remca&view=lmunicipalities',
+			'object'=>'lmunicipalities',
+			'text'=>'Municipalities',//JText::_('REMCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_REMCA_LMUNICIPALITY_DESCRIPTION')
+			);
+		$buttons[] = array('link'=>'index.php?option=com_remca&view=lstates',
+			'object'=>'lstates',
+			'text'=>'States',//JText::_('REMCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_REMCA_LSTATE_DESCRIPTION')
+			);
+		$buttons[] = array('link'=>'index.php?option=com_remca&view=countries',
+			'object'=>'countries',
+			'text'=>'Countries',//JText::_('REMCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_REMCA_COUNTRY_DESCRIPTION')
 			);
 
 		return $buttons;

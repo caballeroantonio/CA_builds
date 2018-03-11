@@ -57,30 +57,4 @@
 			size="45"
 		/>
     </fieldset>
-    <fieldset
-        name="fieldset_jos_rem_users_wishlist_fs"
-        label="COM_REMCA_USERS_WISHLIST_FIELDSET_JOS_REM_USERS_WISHLIST_FS_LABEL"
-    >
-
-        <field
-            id="fk_houseid"
-            name="fk_houseid"
-            type="modal_houses"
-            label="COM_REMCA_USERS_WISHLIST_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_USERS_WISHLIST_FIELD_FK_HOUSEID_DESC"
-            class="modal"
-			default="0"
-        >
-        </field>  
-        <field
-            id="fk_userid"
-            name="fk_userid"
-            type="modal_jusers"
-            label="COM_REMCA_USERS_WISHLIST_FIELD_FK_USERID_LABEL"
-            description="COM_REMCA_USERS_WISHLIST_FIELD_FK_USERID_DESC"
-            class="modal"
-			default="0"
-        >
-        </field>  
-    </fieldset>
 </form>

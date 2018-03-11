@@ -58,8 +58,8 @@
 		/>
     </fieldset>
     <fieldset
-        name="fieldset_jos_rem_buying_request_fs"
-        label="COM_REMCA_BUYING_REQUEST_FIELDSET_JOS_REM_BUYING_REQUEST_FS_LABEL"
+        name="fieldset_buying_request_fs"
+        label="COM_REMCA_BUYING_REQUEST_FIELDSET_BUYING_REQUEST_FS_LABEL"
     >
 
         <field
@@ -69,7 +69,7 @@
             label="COM_REMCA_BUYING_REQUEST_FIELD_FK_HOUSEID_LABEL"
             description="COM_REMCA_BUYING_REQUEST_FIELD_FK_HOUSEID_DESC"
             class="modal"
-			default="0"
+			default="'0'"
         >
         </field>  
         <field

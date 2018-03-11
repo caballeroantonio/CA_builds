@@ -29,11 +29,9 @@
     addrulepath="/administrator/components/com_remca/models/rules"
 
 >
-    <fieldset
-        name="basic_details"
+    <fieldset name="basic_details"
     >
-        <field
-		    name="id"
+        <field name="id"
 		    type="text"
             label="JGLOBAL_FIELD_ID_LABEL"
             description ="JGLOBAL_FIELD_ID_DESC"
@@ -41,29 +39,25 @@
 			class="readonly"
             default="0"
 		/>
-        <field
-            name="version_note"
+        <field name="version_note"
             type="text"
             label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
 			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
 			class="span12"
 			size="45"
 		/>
-        <field
-            name="buttonspacer"
+        <field name="buttonspacer"
             type="spacer"
             label="JGLOBAL_ACTION_PERMISSIONS_LABEL"
             description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
         />
 
     </fieldset>
-    <fieldset
-        name="fieldset_jos_rem_mls_for_delete_fs"
-        label="COM_REMCA_MLS_FOR_DELETE_FIELDSET_JOS_REM_MLS_FOR_DELETE_FS_LABEL"
-        description="COM_REMCA_MLS_FOR_DELETE_FIELDSET_JOS_REM_MLS_FOR_DELETE_FS_DESC"
+    <fieldset name="fieldset_mls_for_delete_fs"
+        label="COM_REMCA_MLS_FOR_DELETE_FIELDSET_MLS_FOR_DELETE_FS_LABEL"
+        description="COM_REMCA_MLS_FOR_DELETE_FIELDSET_MLS_FOR_DELETE_FS_DESC"
     >
-        <field
-            name="mls"
+        <field name="mls"
             type="text"
             label="COM_REMCA_MLS_FOR_DELETE_FIELD_MLS_LABEL"
             description="COM_REMCA_MLS_FOR_DELETE_FIELD_MLS_DESC"
@@ -73,12 +67,10 @@
         >
         </field>  
     </fieldset>
-    <fieldset
-        name="publishing"
+    <fieldset name="publishing"
 		label="COM_REMCA_FIELDSET_PUBLISHING_LABEL"
     >
-        <field
-            name="version"
+        <field name="version"
             type="text"
 			label="COM_REMCA_FIELD_VERSION_LABEL"
             description="COM_REMCA_MLS_FOR_DELETE_FIELD_VERSION_DESC"

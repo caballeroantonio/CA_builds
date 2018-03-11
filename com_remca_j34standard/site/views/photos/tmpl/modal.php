@@ -43,6 +43,7 @@ if ($lang->isRTL())
 }
 
 // Add Javscript functions for field display
+JHtml::_('behavior.caption');
 JHtml::_('bootstrap.tooltip');
 JHtml::_('behavior.multiselect');
 JHtml::_('dropdown.init');

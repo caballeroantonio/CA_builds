@@ -55,6 +55,7 @@ class RemcaModelPhotos extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
+				'ordering', 'a.ordering',				
 			);
 
 			$assoc = JLanguageAssociations::isEnabled();
@@ -196,6 +197,12 @@ class RemcaModelPhotos extends JModelList
 		
 
 
+		if ($this->getState('list.ordering') == 'a.ordering' OR $this->getState('list.ordering') == 'ordering')
+		{
+			$order_col	= '';
+			$order_col	.= $db->quoteName('a.ordering').' '.$order_dirn;		
+			
+		}
 		
 		if ($order_col == '' AND $this->getState('list.ordering') != '')
 		{
@@ -230,6 +237,11 @@ class RemcaModelPhotos extends JModelList
 			{
 				$query->clear();
 							
+				// Convert the images field to an array.
+				$registry = new Registry;
+				$registry->loadString($item->images);
+				$item->images = $registry->toArray();
+				$registry = null; //release memory	
 
 							
 			}

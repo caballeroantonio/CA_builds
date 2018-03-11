@@ -125,16 +125,6 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
-					<?php if ($this->params->get('list_show_userswishlist_fk_houseid',1)) : ?>
-						<th class="list-fk_houseid" id="tableOrderingfk_houseid">
-							<?php echo JTEXT::_('COM_REMCA_USERS_WISHLIST_HEADING_FK_HOUSEID'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_userswishlist_fk_userid',1)) : ?>
-						<th class="list-fk_userid" id="tableOrderingfk_userid">
-							<?php echo JTEXT::_('COM_REMCA_USERS_WISHLIST_HEADING_FK_USERID'); ?>
-						</th>
-					<?php endif; ?>	
 					<?php if ($show_actions) : ?>
 						<th width="12%" class="list-actions">
 							<?php echo JText::_('COM_REMCA_HEADING_ACTIONS'); ?>						
@@ -162,28 +152,6 @@ $empty = $component->params->get('default_empty_field', '');
 							<time datetime="<?php echo JHtml::_('date', $item->display_date, 'c'); ?>">
 								<?php echo JHtml::_('date',$item->display_date, $this->escape($this->params->get('userswishlist_date_format', JText::_('DATE_FORMAT_LC3')))); ?>
 							</time>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_userswishlist_fk_houseid',1)) : ?>
-						<td class="list-fk_houseid">
-							<?php 
-								if ($params->get('list_link_userswishlist_fk_houseid')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->fk_houseid, 0)).'">'.JString::trim($item->h_house_name).'</a>';
-								else :
-									echo JString::trim($item->h_house_name);
-								endif; 
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_userswishlist_fk_userid',1)) : ?>
-						<td class="list-fk_userid">
-							<?php 
-								if ($params->get('list_link_userswishlist_fk_userid')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getUserRoute($item->fk_userid, 0)).'">'.JString::trim($item->u_user_name).'</a>';
-								else :
-									echo JString::trim($item->u_user_name);
-								endif; 
-							?>
 						</td>
 					<?php endif; ?>
 					<?php if ($show_actions) : ?>

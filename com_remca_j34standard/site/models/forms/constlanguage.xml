@@ -58,8 +58,8 @@
 		/>
     </fieldset>
     <fieldset
-        name="fieldset_jos_rem_const_languages_fs"
-        label="COM_REMCA_CONST_LANGUAGE_FIELDSET_JOS_REM_CONST_LANGUAGES_FS_LABEL"
+        name="fieldset_const_languages_fs"
+        label="COM_REMCA_CONST_LANGUAGE_FIELDSET_CONST_LANGUAGES_FS_LABEL"
     >
 
         <field
@@ -69,7 +69,7 @@
             label="COM_REMCA_CONST_LANGUAGE_FIELD_FK_CONSTID_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_FIELD_FK_CONSTID_DESC"
             class="modal"
-			default="0"
+			default="'0'"
         >
         </field>  
         <field
@@ -79,7 +79,7 @@
             label="COM_REMCA_CONST_LANGUAGE_FIELD_FK_LANGUAGESID_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_FIELD_FK_LANGUAGESID_DESC"
             class="modal"
-			default="0"
+			default="'0'"
         >
         </field>  
         <field

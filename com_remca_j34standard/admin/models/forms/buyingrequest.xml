@@ -29,11 +29,9 @@
     addrulepath="/administrator/components/com_remca/models/rules"
 
 >
-    <fieldset
-        name="basic_details"
+    <fieldset name="basic_details"
     >
-        <field
-		    name="id"
+        <field name="id"
 		    type="text"
             label="JGLOBAL_FIELD_ID_LABEL"
             description ="JGLOBAL_FIELD_ID_DESC"
@@ -41,38 +39,33 @@
 			class="readonly"
             default="0"
 		/>
-        <field
-            name="version_note"
+        <field name="version_note"
             type="text"
             label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
 			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
 			class="span12"
 			size="45"
 		/>
-        <field
-            name="buttonspacer"
+        <field name="buttonspacer"
             type="spacer"
             label="JGLOBAL_ACTION_PERMISSIONS_LABEL"
             description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
         />
 
     </fieldset>
-    <fieldset
-        name="fieldset_jos_rem_buying_request_fs"
-        label="COM_REMCA_BUYING_REQUEST_FIELDSET_JOS_REM_BUYING_REQUEST_FS_LABEL"
-        description="COM_REMCA_BUYING_REQUEST_FIELDSET_JOS_REM_BUYING_REQUEST_FS_DESC"
+    <fieldset name="fieldset_buying_request_fs"
+        label="COM_REMCA_BUYING_REQUEST_FIELDSET_BUYING_REQUEST_FS_LABEL"
+        description="COM_REMCA_BUYING_REQUEST_FIELDSET_BUYING_REQUEST_FS_DESC"
     >
-        <field
-            name="fk_houseid"
+        <field name="fk_houseid"
             type="modal_houses"
             label="COM_REMCA_BUYING_REQUEST_FIELD_FK_HOUSEID_LABEL"
             description="COM_REMCA_BUYING_REQUEST_FIELD_FK_HOUSEID_DESC"
             class="modal"
-			default="0"
+			default="'0'"
         >
         </field>  
-        <field
-            name="fk_userid"
+        <field name="fk_userid"
             type="modal_jusers"
             label="COM_REMCA_BUYING_REQUEST_FIELD_FK_USERID_LABEL"
             description="COM_REMCA_BUYING_REQUEST_FIELD_FK_USERID_DESC"
@@ -80,8 +73,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="buying_request"
+        <field name="buying_request"
             type="calendar"
             label="COM_REMCA_BUYING_REQUEST_FIELD_BUYING_REQUEST_LABEL"
             description="COM_REMCA_BUYING_REQUEST_FIELD_BUYING_REQUEST_DESC"
@@ -93,8 +85,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="customer_name"
+        <field name="customer_name"
             type="text"
             label="COM_REMCA_BUYING_REQUEST_FIELD_CUSTOMER_NAME_LABEL"
             description="COM_REMCA_BUYING_REQUEST_FIELD_CUSTOMER_NAME_DESC"
@@ -103,8 +94,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="customer_email"
+        <field name="customer_email"
             type="text"
             label="COM_REMCA_BUYING_REQUEST_FIELD_CUSTOMER_EMAIL_LABEL"
             description="COM_REMCA_BUYING_REQUEST_FIELD_CUSTOMER_EMAIL_DESC"
@@ -113,8 +103,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="customer_phone"
+        <field name="customer_phone"
             type="editor"
             label="COM_REMCA_BUYING_REQUEST_FIELD_CUSTOMER_PHONE_LABEL"
             description="COM_REMCA_BUYING_REQUEST_FIELD_CUSTOMER_PHONE_DESC"
@@ -127,8 +116,7 @@
 			default=""
         >
         </field>  
-        <field
-            name="customer_comment"
+        <field name="customer_comment"
             type="editor"
             label="COM_REMCA_BUYING_REQUEST_FIELD_CUSTOMER_COMMENT_LABEL"
             description="COM_REMCA_BUYING_REQUEST_FIELD_CUSTOMER_COMMENT_DESC"
@@ -141,8 +129,7 @@
 			default=""
         >
         </field>  
-        <field
-            name="status"
+        <field name="status"
             type="integer"
             label="COM_REMCA_BUYING_REQUEST_FIELD_STATUS_LABEL"
             description="COM_REMCA_BUYING_REQUEST_FIELD_STATUS_DESC"
@@ -152,12 +139,10 @@
         >
         </field>  
     </fieldset>
-    <fieldset
-        name="publishing"
+    <fieldset name="publishing"
 		label="COM_REMCA_FIELDSET_PUBLISHING_LABEL"
     >
-        <field
-            name="version"
+        <field name="version"
             type="text"
 			label="COM_REMCA_FIELD_VERSION_LABEL"
             description="COM_REMCA_BUYING_REQUEST_FIELD_VERSION_DESC"
@@ -166,13 +151,11 @@
 			readonly="true"
 			filter="unset"
 		/>
-        <field
-            name="checked_out"
+        <field name="checked_out"
 			type="hidden"
 			filter="unset"
 		/>
-        <field
-            name="checked_out_time"
+        <field name="checked_out_time"
 			type="hidden"
 			filter="unset"
 		 />

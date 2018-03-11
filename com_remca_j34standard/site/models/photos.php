@@ -53,6 +53,7 @@ class RemcaModelPhotos extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
+				'ordering', 'a.ordering',
 				);
 		}
 
@@ -104,10 +105,10 @@ class RemcaModelPhotos extends JModelList
 		$this->setState('filter.search', $search);
 		
 
-		$order_col = $app->getUserStateFromRequest($this->context. '.filter_order', 'filter_order', $params->get('photo_initial_sort','a.id'), 'string');
+		$order_col = $app->getUserStateFromRequest($this->context. '.filter_order', 'filter_order', $params->get('photo_initial_sort','a.ordering'), 'string');
 		if (!in_array($order_col, $this->filter_fields))
 		{
-			$order_col = $params->get('photo_initial_sort','a.id');
+			$order_col = $params->get('photo_initial_sort','a.ordering');
 		}
 
 		$this->setState('list.ordering', $order_col);
@@ -254,9 +255,15 @@ class RemcaModelPhotos extends JModelList
 		
 
 
+			if ($this->getState('list.ordering') == 'a.ordering' OR $this->getState('list.ordering') == 'ordering')
+			{
+				$order_col	= '';
+				$order_col	.= $db->quoteName('a.ordering').' '.$order_dirn;		
+			}
+
 			if ($order_col == '')
 			{
-				$order_col = is_string($this->getState('list.ordering')) ? $db->quoteName($this->getState('list.ordering')) : $db->quoteName('a.id');
+				$order_col = is_string($this->getState('list.ordering')) ? $db->quoteName($this->getState('list.ordering')) : $db->quoteName('a.ordering');
 				$order_col .= ' '.$order_dirn;
 			}
 			$query->order($db->escape($order_col));			
@@ -299,9 +306,12 @@ class RemcaModelPhotos extends JModelList
 
 				$photo_params = new Registry;
 
+				// Convert the images field to an array.
+				$registry = new Registry;
+				$registry->loadString($item->images);
+				$item->images = $registry->toArray();
+				$registry = null; //release memory	
 
-				
-				
 				
 				
 				

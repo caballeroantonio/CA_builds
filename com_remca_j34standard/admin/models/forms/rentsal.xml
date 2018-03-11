@@ -29,11 +29,9 @@
     addrulepath="/administrator/components/com_remca/models/rules"
 
 >
-    <fieldset
-        name="basic_details"
+    <fieldset name="basic_details"
     >
-        <field
-		    name="id"
+        <field name="id"
 		    type="text"
             label="JGLOBAL_FIELD_ID_LABEL"
             description ="JGLOBAL_FIELD_ID_DESC"
@@ -41,38 +39,33 @@
 			class="readonly"
             default="0"
 		/>
-        <field
-            name="version_note"
+        <field name="version_note"
             type="text"
             label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
 			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
 			class="span12"
 			size="45"
 		/>
-        <field
-            name="buttonspacer"
+        <field name="buttonspacer"
             type="spacer"
             label="JGLOBAL_ACTION_PERMISSIONS_LABEL"
             description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
         />
 
     </fieldset>
-    <fieldset
-        name="fieldset_jos_rem_rent_sal_fs"
-        label="COM_REMCA_RENT_SAL_FIELDSET_JOS_REM_RENT_SAL_FS_LABEL"
-        description="COM_REMCA_RENT_SAL_FIELDSET_JOS_REM_RENT_SAL_FS_DESC"
+    <fieldset name="fieldset_rent_sal_fs"
+        label="COM_REMCA_RENT_SAL_FIELDSET_RENT_SAL_FS_LABEL"
+        description="COM_REMCA_RENT_SAL_FIELDSET_RENT_SAL_FS_DESC"
     >
-        <field
-            name="fk_houseid"
+        <field name="fk_houseid"
             type="modal_houses"
             label="COM_REMCA_RENT_SAL_FIELD_FK_HOUSEID_LABEL"
             description="COM_REMCA_RENT_SAL_FIELD_FK_HOUSEID_DESC"
             class="modal"
-			default="0"
+			default="'0'"
         >
         </field>  
-        <field
-            name="monthW"
+        <field name="monthW"
             type="integer"
             label="COM_REMCA_RENT_SAL_FIELD_MONTHW_LABEL"
             description="COM_REMCA_RENT_SAL_FIELD_MONTHW_DESC"
@@ -81,8 +74,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="yearW"
+        <field name="yearW"
             type="integer"
             label="COM_REMCA_RENT_SAL_FIELD_YEARW_LABEL"
             description="COM_REMCA_RENT_SAL_FIELD_YEARW_DESC"
@@ -91,8 +83,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="week"
+        <field name="week"
             type="text"
             label="COM_REMCA_RENT_SAL_FIELD_WEEK_LABEL"
             description="COM_REMCA_RENT_SAL_FIELD_WEEK_DESC"
@@ -101,8 +92,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="weekend"
+        <field name="weekend"
             type="text"
             label="COM_REMCA_RENT_SAL_FIELD_WEEKEND_LABEL"
             description="COM_REMCA_RENT_SAL_FIELD_WEEKEND_DESC"
@@ -111,8 +101,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="midweek"
+        <field name="midweek"
             type="text"
             label="COM_REMCA_RENT_SAL_FIELD_MIDWEEK_LABEL"
             description="COM_REMCA_RENT_SAL_FIELD_MIDWEEK_DESC"
@@ -121,8 +110,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="price_from"
+        <field name="price_from"
             type="calendar"
             label="COM_REMCA_RENT_SAL_FIELD_PRICE_FROM_LABEL"
             description="COM_REMCA_RENT_SAL_FIELD_PRICE_FROM_DESC"
@@ -134,8 +122,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="price_to"
+        <field name="price_to"
             type="calendar"
             label="COM_REMCA_RENT_SAL_FIELD_PRICE_TO_LABEL"
             description="COM_REMCA_RENT_SAL_FIELD_PRICE_TO_DESC"
@@ -147,8 +134,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="special_price"
+        <field name="special_price"
             type="currency"
             label="COM_REMCA_RENT_SAL_FIELD_SPECIAL_PRICE_LABEL"
             description="COM_REMCA_RENT_SAL_FIELD_SPECIAL_PRICE_DESC"
@@ -157,8 +143,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="comment_price"
+        <field name="comment_price"
             type="text"
             label="COM_REMCA_RENT_SAL_FIELD_COMMENT_PRICE_LABEL"
             description="COM_REMCA_RENT_SAL_FIELD_COMMENT_PRICE_DESC"
@@ -167,8 +152,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="priceunit"
+        <field name="priceunit"
             type="text"
             label="COM_REMCA_RENT_SAL_FIELD_PRICEUNIT_LABEL"
             description="COM_REMCA_RENT_SAL_FIELD_PRICEUNIT_DESC"
@@ -178,12 +162,10 @@
         >
         </field>  
     </fieldset>
-    <fieldset
-        name="publishing"
+    <fieldset name="publishing"
 		label="COM_REMCA_FIELDSET_PUBLISHING_LABEL"
     >
-        <field
-            name="version"
+        <field name="version"
             type="text"
 			label="COM_REMCA_FIELD_VERSION_LABEL"
             description="COM_REMCA_RENT_SAL_FIELD_VERSION_DESC"

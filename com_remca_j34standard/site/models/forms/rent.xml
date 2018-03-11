@@ -68,8 +68,8 @@
 		/>
     </fieldset>
     <fieldset
-        name="fieldset_jos_rem_rent_fs"
-        label="COM_REMCA_RENT_FIELDSET_JOS_REM_RENT_FS_LABEL"
+        name="fieldset_rent_fs"
+        label="COM_REMCA_RENT_FIELDSET_RENT_FS_LABEL"
     >
 
         <field
@@ -79,7 +79,7 @@
             label="COM_REMCA_RENT_FIELD_FK_HOUSEID_LABEL"
             description="COM_REMCA_RENT_FIELD_FK_HOUSEID_DESC"
             class="modal"
-			default="0"
+			default="'0'"
         >
         </field>  
         <field

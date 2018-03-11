@@ -29,11 +29,9 @@
     addrulepath="/administrator/components/com_remca/models/rules"
 
 >
-    <fieldset
-        name="basic_details"
+    <fieldset name="basic_details"
     >
-        <field
-		    name="id"
+        <field name="id"
 		    type="text"
             label="JGLOBAL_FIELD_ID_LABEL"
             description ="JGLOBAL_FIELD_ID_DESC"
@@ -41,37 +39,32 @@
 			class="readonly"
             default="0"
 		/>
-        <field
-		    name="name"
+        <field name="name"
 		    type="text"
 			label="COM_REMCA_FIELD_NAME_LABEL"
 			description="COM_REMCA_ORDERS_FIELD_NAME_DESC"
 			size="50"
 			required="true"
 		/>
-        <field
-            name="version_note"
+        <field name="version_note"
             type="text"
             label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
 			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
 			class="span12"
 			size="45"
 		/>
-        <field
-            name="buttonspacer"
+        <field name="buttonspacer"
             type="spacer"
             label="JGLOBAL_ACTION_PERMISSIONS_LABEL"
             description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
         />
 
     </fieldset>
-    <fieldset
-        name="fieldset_jos_rem_orders_fs"
-        label="COM_REMCA_ORDERS_FIELDSET_JOS_REM_ORDERS_FS_LABEL"
-        description="COM_REMCA_ORDERS_FIELDSET_JOS_REM_ORDERS_FS_DESC"
+    <fieldset name="fieldset_orders_fs"
+        label="COM_REMCA_ORDERS_FIELDSET_ORDERS_FS_LABEL"
+        description="COM_REMCA_ORDERS_FIELDSET_ORDERS_FS_DESC"
     >
-        <field
-            name="fk_user_id"
+        <field name="fk_user_id"
             type="modal_jusers"
             label="COM_REMCA_ORDERS_FIELD_FK_USER_ID_LABEL"
             description="COM_REMCA_ORDERS_FIELD_FK_USER_ID_DESC"
@@ -79,8 +72,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="fk_houses_htitle"
+        <field name="fk_houses_htitle"
             type="text"
             label="COM_REMCA_ORDERS_FIELD_FK_HOUSES_HTITLE_LABEL"
             description="COM_REMCA_ORDERS_FIELD_FK_HOUSES_HTITLE_DESC"
@@ -89,8 +81,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="email"
+        <field name="email"
             type="text"
             label="COM_REMCA_ORDERS_FIELD_EMAIL_LABEL"
             description="COM_REMCA_ORDERS_FIELD_EMAIL_DESC"
@@ -99,8 +90,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="status"
+        <field name="status"
             type="text"
             label="COM_REMCA_ORDERS_FIELD_STATUS_LABEL"
             description="COM_REMCA_ORDERS_FIELD_STATUS_DESC"
@@ -109,8 +99,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="order_date"
+        <field name="order_date"
             type="calendar"
             label="COM_REMCA_ORDERS_FIELD_ORDER_DATE_LABEL"
             description="COM_REMCA_ORDERS_FIELD_ORDER_DATE_DESC"
@@ -122,17 +111,15 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="fk_house_id"
+        <field name="fk_house_id"
             type="modal_houses"
             label="COM_REMCA_ORDERS_FIELD_FK_HOUSE_ID_LABEL"
             description="COM_REMCA_ORDERS_FIELD_FK_HOUSE_ID_DESC"
             class="modal"
-			default="0"
+			default="'0'"
         >
         </field>  
-        <field
-            name="txn_type"
+        <field name="txn_type"
             type="text"
             label="COM_REMCA_ORDERS_FIELD_TXN_TYPE_LABEL"
             description="COM_REMCA_ORDERS_FIELD_TXN_TYPE_DESC"
@@ -141,8 +128,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="txn_id"
+        <field name="txn_id"
             type="text"
             label="COM_REMCA_ORDERS_FIELD_TXN_ID_LABEL"
             description="COM_REMCA_ORDERS_FIELD_TXN_ID_DESC"
@@ -151,8 +137,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="payer_id"
+        <field name="payer_id"
             type="text"
             label="COM_REMCA_ORDERS_FIELD_PAYER_ID_LABEL"
             description="COM_REMCA_ORDERS_FIELD_PAYER_ID_DESC"
@@ -161,8 +146,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="payer_status"
+        <field name="payer_status"
             type="text"
             label="COM_REMCA_ORDERS_FIELD_PAYER_STATUS_LABEL"
             description="COM_REMCA_ORDERS_FIELD_PAYER_STATUS_DESC"
@@ -171,8 +155,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="order_calculated_price"
+        <field name="order_calculated_price"
             type="text"
             label="COM_REMCA_ORDERS_FIELD_ORDER_CALCULATED_PRICE_LABEL"
             description="COM_REMCA_ORDERS_FIELD_ORDER_CALCULATED_PRICE_DESC"
@@ -181,8 +164,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="order_price"
+        <field name="order_price"
             type="integer"
             label="COM_REMCA_ORDERS_FIELD_ORDER_PRICE_LABEL"
             description="COM_REMCA_ORDERS_FIELD_ORDER_PRICE_DESC"
@@ -191,8 +173,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="order_currency_code"
+        <field name="order_currency_code"
             type="text"
             label="COM_REMCA_ORDERS_FIELD_ORDER_CURRENCY_CODE_LABEL"
             description="COM_REMCA_ORDERS_FIELD_ORDER_CURRENCY_CODE_DESC"
@@ -201,8 +182,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="paypal_paykay"
+        <field name="paypal_paykay"
             type="text"
             label="COM_REMCA_ORDERS_FIELD_PAYPAL_PAYKAY_LABEL"
             description="COM_REMCA_ORDERS_FIELD_PAYPAL_PAYKAY_DESC"
@@ -212,12 +192,10 @@
         >
         </field>  
     </fieldset>
-    <fieldset
-        name="publishing"
+    <fieldset name="publishing"
 		label="COM_REMCA_FIELDSET_PUBLISHING_LABEL"
     >
-        <field
-            name="version"
+        <field name="version"
             type="text"
 			label="COM_REMCA_FIELD_VERSION_LABEL"
             description="COM_REMCA_ORDERS_FIELD_VERSION_DESC"

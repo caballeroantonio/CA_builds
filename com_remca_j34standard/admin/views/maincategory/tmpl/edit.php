@@ -108,9 +108,9 @@ $input = $app->input;
                         echo $this->form->renderField('version_note', null, null, array('group_id' => 'field_version_note')); 
 					 ?>
 			<?php echo JHtml::_('bootstrap.endTab'); ?>
-			<?php echo JHtml::_('bootstrap.addTab', 'maincategory-tabs', 'fieldset-jos_rem_main_categories_fs', JText::_('COM_REMCA_MAIN_CATEGORIES_FIELDSET_JOS_REM_MAIN_CATEGORIES_FS_LABEL', true)); ?>
+			<?php echo JHtml::_('bootstrap.addTab', 'maincategory-tabs', 'fieldset-main_categories_fs', JText::_('COM_REMCA_MAIN_CATEGORIES_FIELDSET_MAIN_CATEGORIES_FS_LABEL', true)); ?>
 			<div class="row-fluid form-horizontal-desktop">
-				<?php foreach($this->form->getFieldset('fieldset_jos_rem_main_categories_fs') as $field): ?>
+				<?php foreach($this->form->getFieldset('fieldset_main_categories_fs') as $field): ?>
 					<?php if (!$field->hidden) : ?>
 						<?php $fieldname = (string) $field->fieldname; ?>
 						

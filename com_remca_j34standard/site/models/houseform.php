@@ -166,9 +166,18 @@ class RemcaModelHouseForm extends RemcaModelHouse
 		// Include any manipulation of the data on the record e.g. expand out Registry fields
 		// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
 		
+		// Convert the images field to an array.
+		$registry = new Registry;
+		$registry->loadString($item->images);
+		$item->images = $registry->toArray();
+		$registry = null; //release memory	
 	
 				
 
+		if (isset($item->id_currency) AND $item->id_currency !='')
+		{
+			$item->id_currency = explode(',',JString::trim($item->id_currency, ','));
+		}	
 
 			
 		// Compute selected asset permissions.
@@ -447,6 +456,9 @@ class RemcaModelHouseForm extends RemcaModelHouse
 		
 		$condition = array();
 		$condition[] = $db->quoteName('catid').' = '.(int) $table->catid;	
+		$condition[] = $db->quoteName('id_lmunicipality').' = '.(int) $table->id_lmunicipality;	
+		$condition[] = $db->quoteName('id_lstate').' = '.(int) $table->id_lstate;	
+		$condition[] = $db->quoteName('id_country').' = '.(int) $table->id_country;	
 		$condition[] = $db->quoteName('price').' = '. $db->quote($table->price);	
 		$condition[] = $db->quoteName('state').' >= 0';
 		return $condition;

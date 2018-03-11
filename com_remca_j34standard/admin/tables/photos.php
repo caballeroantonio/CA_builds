@@ -107,6 +107,13 @@ class RemcaTablePhotos extends JTable
 
 
 
+		if (isset($this->images) AND is_array($this->images))
+		{
+			$registry = new Registry;
+			$registry->loadArray($this->images);
+			$this->images = (string)$registry;
+			$registry = null; //release memory	
+		}		
 
 
 										

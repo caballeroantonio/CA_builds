@@ -68,8 +68,8 @@
 		/>
     </fieldset>
     <fieldset
-        name="fieldset_jos_rem_languages_fs"
-        label="COM_REMCA_LANGUAGES_FIELDSET_JOS_REM_LANGUAGES_FS_LABEL"
+        name="fieldset_languages_fs"
+        label="COM_REMCA_LANGUAGES_FIELDSET_LANGUAGES_FS_LABEL"
     >
 
         <field

@@ -32,56 +32,6 @@ JHtml::_('behavior.keepalive');
 
 function getFields(){
     $fields = array();
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'fk_houseid',
-        'FIELD_CODE_NAME' => 'fk_houseid',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 13,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FK_HOUSEID
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
-
-                FIELD_NAME_LATEX=fk\_houseid
-                FIELD_CODE_NAME_LATEX=fk\_houseid
-                FIELD_DBCOMMENT_LATEX=
-
-                    {FIELD_LINK}
-                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
-                    FIELD_FOREIGN_OBJECT_UPPER=HOUSE
-
-    */
-    $fields['fk_houseid'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'fk_userid',
-        'FIELD_CODE_NAME' => 'fk_userid',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 13,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FK_USERID
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_userid
-
-                FIELD_NAME_LATEX=fk\_userid
-                FIELD_CODE_NAME_LATEX=fk\_userid
-                FIELD_DBCOMMENT_LATEX=
-
-                    {FIELD_LINK}
-                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
-                    FIELD_FOREIGN_OBJECT_UPPER=USER
-
-    */
-    $fields['fk_userid'] = $field;
     return $fields;
 }
 

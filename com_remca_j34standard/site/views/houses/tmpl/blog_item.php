@@ -44,6 +44,7 @@ $can_delete = $params->get('access-delete');
 // Get from global settings the text to use for an empty field
 $component = JComponentHelper::getComponent( 'com_remca' );
 $empty = $component->params->get('default_empty_field', '');
+$images = $this->item->images;
 
 /*
  *	Layout HTML
@@ -103,6 +104,38 @@ $empty = $component->params->get('default_empty_field', '');
 <?php  echo $this->item->event->afterDisplayHouseName;
 ?>
 <?php echo $this->item->event->beforeDisplayHouse; ?>
+<?php if (($params->get('show_house_image', '0') == '1' AND isset($images['image_url'])  AND $images['image_url'] <> "")): ?>	
+ <div style="float: right;">
+		<?php 
+					$image = $images['image_url'];
+					
+					list($img_width, $img_height) = getimagesize($image);
+					
+					$display_width = (int) $params->get('show_house_intro_image_width','100');
+					$display_height = (int) $params->get('show_house_intro_image_height','0');
+					
+					if ($display_width > $img_width) :
+						if ($display_height < $img_height AND $display_height > 0) :
+							$display_width = 0;
+						endif;
+					else :
+						$display_height = 0;
+					endif;
+		?>
+		<img src="<?php echo $image; ?>"
+			<?php if ($display_width > 0) : ?>
+				<?php echo 'width="'.$display_width.'"'; ?>"
+			<?php endif; ?>	
+			<?php if ($display_height > 0) : ?>
+				<?php echo 'height="'.$display_height.'"'; ?>
+			<?php endif; ?>	
+			<?php if ($images['image_caption']): ?>
+				<?php echo 'class="caption"'.' title="' .htmlspecialchars($images['image_caption']) . '"'; ?>
+			<?php endif; ?>				
+			<?php echo  $images['image_alt_text'] != '' ?'alt="'.$this->escape($images['image_alt_text']).'"':'alt="'.$this->escape($this->item->name).'"';?>
+		/>
+	</div>
+<?php endif; ?>	
 <?php // to do not that elegant would be nice to group the params ?>
 
 <?php 

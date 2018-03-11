@@ -137,21 +137,21 @@ input.order-input
 {
       background-image: url(../images/icon-48-houses.png);
 }
-.icon-16-maincategory
+.icon-16-photo
 {
-      background-image: url(../images/icon-16-main_categories.png);
+      background-image: url(../images/icon-16-photos.png);
 }
-.icon-16-main_categories
+.icon-16-photos
 {
-      background-image: url(../images/icon-16-main_categories.png);
+      background-image: url(../images/icon-16-photos.png);
 }
-.icon-48-maincategory
+.icon-48-photo
 {
-      background-image: url(../images/icon-48-main_categories.png);
+      background-image: url(../images/icon-48-photos.png);
 }
-.icon-48-main_categories
+.icon-48-photos
 {
-      background-image: url(../images/icon-48-main_categories.png);
+      background-image: url(../images/icon-48-photos.png);
 }
 .icon-16-mimetype
 {
@@ -217,21 +217,21 @@ input.order-input
 {
       background-image: url(../images/icon-48-orders_details.png);
 }
-.icon-16-photo
+.icon-16-maincategory
 {
-      background-image: url(../images/icon-16-photos.png);
+      background-image: url(../images/icon-16-main_categories.png);
 }
-.icon-16-photos
+.icon-16-main_categories
 {
-      background-image: url(../images/icon-16-photos.png);
+      background-image: url(../images/icon-16-main_categories.png);
 }
-.icon-48-photo
+.icon-48-maincategory
 {
-      background-image: url(../images/icon-48-photos.png);
+      background-image: url(../images/icon-48-main_categories.png);
 }
-.icon-48-photos
+.icon-48-main_categories
 {
-      background-image: url(../images/icon-48-photos.png);
+      background-image: url(../images/icon-48-main_categories.png);
 }
 .icon-16-rent
 {
@@ -456,4 +456,68 @@ input.order-input
 .icon-48-languages
 {
       background-image: url(../images/icon-48-languages.png);
+}
+.icon-16-lmunicipality
+{
+      background-image: url(../images/icon-16-lmunicipalities.png);
+}
+.icon-16-lmunicipalities
+{
+      background-image: url(../images/icon-16-lmunicipalities.png);
+}
+.icon-48-lmunicipality
+{
+      background-image: url(../images/icon-48-lmunicipalities.png);
+}
+.icon-48-lmunicipalities
+{
+      background-image: url(../images/icon-48-lmunicipalities.png);
+}
+.icon-16-lstate
+{
+      background-image: url(../images/icon-16-lstates.png);
+}
+.icon-16-lstates
+{
+      background-image: url(../images/icon-16-lstates.png);
+}
+.icon-48-lstate
+{
+      background-image: url(../images/icon-48-lstates.png);
+}
+.icon-48-lstates
+{
+      background-image: url(../images/icon-48-lstates.png);
+}
+.icon-16-country
+{
+      background-image: url(../images/icon-16-countries.png);
+}
+.icon-16-countries
+{
+      background-image: url(../images/icon-16-countries.png);
+}
+.icon-48-country
+{
+      background-image: url(../images/icon-48-countries.png);
+}
+.icon-48-countries
+{
+      background-image: url(../images/icon-48-countries.png);
+}
+.icon-16-config
+{
+      background-image: url(../images/icon-16-configs.png);
+}
+.icon-16-configs
+{
+      background-image: url(../images/icon-16-configs.png);
+}
+.icon-48-config
+{
+      background-image: url(../images/icon-48-configs.png);
+}
+.icon-48-configs
+{
+      background-image: url(../images/icon-48-configs.png);
 }

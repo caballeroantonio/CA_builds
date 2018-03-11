@@ -121,7 +121,7 @@ $empty = $component->params->get('default_empty_field', '');
 			?>
 			<?php if ($display_fieldset) : ?>				
 				<fieldset>	
-					<legend><?php echo JText::_('COM_REMCA_FEATURE_HOUSES_FIELDSET_JOS_REM_FEATURE_HOUSES_FS_LABEL'); ?></legend>
+					<legend><?php echo JText::_('COM_REMCA_FEATURE_HOUSES_FIELDSET_FEATURE_HOUSES_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
 						<?php if ($params->get('show_featurehouse_fk_houseid')) : ?>

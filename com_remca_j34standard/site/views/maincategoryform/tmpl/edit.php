@@ -135,7 +135,7 @@ $params = $this->state->get('params');
 					<?php echo $this->form->renderField('description', null, null, array('group_id' => 'description')); ?>
         			<!-- end fields basic-details-->
                     <!-- begin fields fieldset-[%%FIELDSET_CODE_NAME%%]-->
-					<?php foreach($this->form->getFieldset('fieldset_jos_rem_main_categories_fs') as $field): ?>
+					<?php foreach($this->form->getFieldset('fieldset_main_categories_fs') as $field): ?>
 						<?php if (!$field->hidden) : ?>
 							<?php $fieldname = (string) $field->fieldname; ?>
 							
@@ -178,7 +178,7 @@ $params = $this->state->get('params');
 		<fieldset>
 <?php /*?>			<ul class="nav nav-tabs">
 				<li class="active"><a href="#basic-details" data-toggle="tab"><?php echo JText::_('COM_REMCA_MAIN_CATEGORIES_FIELDSET_DETAILS_LABEL');?></a></li>
-				<li><a href="#fieldset-jos_rem_main_categories_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_MAIN_CATEGORIES_FIELDSET_JOS_REM_MAIN_CATEGORIES_FS_LABEL');?></a></li>
+				<li><a href="#fieldset-main_categories_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_MAIN_CATEGORIES_FIELDSET_MAIN_CATEGORIES_FS_LABEL');?></a></li>
 				<li><a href="#publishing" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_PUBLISHING_LABEL');?></a></li>
 				<li><a href="#language" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_LANGUAGE_LABEL');?></a></li>
 			</ul>		<?php */?>

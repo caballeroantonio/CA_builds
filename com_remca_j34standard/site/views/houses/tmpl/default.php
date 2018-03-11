@@ -43,6 +43,7 @@ if ($lang->isRTL())
 }
 
 // Add Javscript functions for field display
+JHtml::_('behavior.caption');
 JHtml::_('bootstrap.tooltip');
 JHtml::_('behavior.multiselect');
 JHtml::_('dropdown.init');
@@ -80,6 +81,7 @@ $empty = $component->params->get('default_empty_field', '');
 	<?php endif; ?>
 
 	<?php
+		$can_edit = 0;$can_delete = 0;
 		$show_actions = false;
 		if ($this->params->get('show_house_icons',1) >= 0) :
 			foreach ($this->items as $i => $item) :
@@ -100,6 +102,24 @@ $empty = $component->params->get('default_empty_field', '');
 					<option value=""><?php echo JText::_('JOPTION_SELECT_CATEGORY');?></option>
 					<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_remca'), 'value', 'text', $this->state->get('filter.category_id'));?>
 				</select>
+				<?php if ($this->params->get('list_show_house_id_lmunicipality',1)) : ?>
+					<select name="filter_id_lmunicipality" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_M_LMUNICIPALITY');?></option>
+					<?php echo JHtml::_('select.options', $this->lmunicipalities, 'value', 'text', $this->state->get('filter.id_lmunicipality'));?>
+					</select>
+				<?php endif; ?>	
+				<?php if ($this->params->get('list_show_house_id_lstate',1)) : ?>
+					<select name="filter_id_lstate" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_S_LSTATE');?></option>
+					<?php echo JHtml::_('select.options', $this->lstates, 'value', 'text', $this->state->get('filter.id_lstate'));?>
+					</select>
+				<?php endif; ?>	
+				<?php if ($this->params->get('list_show_house_id_country',1)) : ?>
+					<select name="filter_id_country" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_C1_COUNTRY');?></option>
+					<?php echo JHtml::_('select.options', $this->countries, 'value', 'text', $this->state->get('filter.id_country'));?>
+					</select>
+				<?php endif; ?>	
 				<?php if ($this->params->get('list_show_house_price',1)) : ?>
 					<select name="filter_price" onchange="this.form.submit()">
 					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_PRICE');?></option>
@@ -144,9 +164,19 @@ $empty = $component->params->get('default_empty_field', '');
 						<?php echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_HITS', 'a.hits', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_houseid',1)) : ?>
-						<th class="list-houseid" id="tableOrderinghouseid">
-							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HOUSEID'); ?>
+					<?php if ($this->params->get('list_show_house_id_lmunicipality',1)) : ?>
+						<th class="list-id_lmunicipality" id="tableOrderingid_lmunicipality">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LMUNICIPALITY'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_house_id_lstate',1)) : ?>
+						<th class="list-id_lstate" id="tableOrderingid_lstate">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LSTATE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_house_id_country',1)) : ?>
+						<th class="list-id_country" id="tableOrderingid_country">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_COUNTRY'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_sid',1)) : ?>
@@ -164,6 +194,11 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ASSOCIATE_HOUSE'); ?>
 						</th>
 					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_house_houseid',1)) : ?>
+						<th class="list-houseid" id="tableOrderinghouseid">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HOUSEID'); ?>
+						</th>
+					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_link',1)) : ?>
 						<th class="list-link" id="tableOrderinglink">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_LINK'); ?>
@@ -179,9 +214,9 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_priceunit',1)) : ?>
-						<th class="list-priceunit" id="tableOrderingpriceunit">
-							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICEUNIT'); ?>
+					<?php if ($this->params->get('list_show_house_id_currency',1)) : ?>
+						<th class="list-id_currency" id="tableOrderingid_currency">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_CURRENCY'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_hcountry',1)) : ?>
@@ -384,14 +419,14 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_EXTRA10'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_energy_value',1)) : ?>
-						<th class="list-energy_value" id="tableOrderingenergy_value">
-							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ENERGY_VALUE'); ?>
-						</th>
-					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_owner_id',1)) : ?>
 						<th class="list-owner_id" id="tableOrderingowner_id">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_OWNER_ID'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_house_energy_value',1)) : ?>
+						<th class="list-energy_value" id="tableOrderingenergy_value">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ENERGY_VALUE'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_climate_value',1)) : ?>
@@ -467,10 +502,36 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_houseid',1)) : ?>
-						<td class="list-houseid">
+					<?php if ($this->params->get('list_show_house_id_lmunicipality',1)) : ?>
+						<td class="list-id_lmunicipality">
 							<?php 
-								echo $item->houseid != '' ? $item->houseid : $empty;
+								if ($params->get('list_link_house_id_lmunicipality')) :
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getLmunicipalityRoute($item->id_lmunicipality, 0, $item->language)).'">'.JString::trim($item->m_lmunicipality_name).'</a>';
+								else :
+									echo JString::trim($item->m_lmunicipality_name);
+								endif; 
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_house_id_lstate',1)) : ?>
+						<td class="list-id_lstate">
+							<?php 
+								if ($params->get('list_link_house_id_lstate')) :
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getLstateRoute($item->id_lstate, 0, $item->language)).'">'.JString::trim($item->s_lstate_name).'</a>';
+								else :
+									echo JString::trim($item->s_lstate_name);
+								endif; 
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_house_id_country',1)) : ?>
+						<td class="list-id_country">
+							<?php 
+								if ($params->get('list_link_house_id_country')) :
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getCountryRoute($item->id_country, 0, $item->language)).'">'.JString::trim($item->c1_country_name).'</a>';
+								else :
+									echo JString::trim($item->c1_country_name);
+								endif; 
 							?>
 						</td>
 					<?php endif; ?>
@@ -499,6 +560,13 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_house_houseid',1)) : ?>
+						<td class="list-houseid">
+							<?php 
+								echo $item->houseid != '' ? $item->houseid : $empty;
+							?>
+						</td>
+					<?php endif; ?>
 					<?php if ($this->params->get('list_show_house_link',1)) : ?>
 						<td class="list-link">
 							<?php 
@@ -520,10 +588,22 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_priceunit',1)) : ?>
-						<td class="list-priceunit">
+					<?php if ($this->params->get('list_show_house_id_currency',1)) : ?>
+						<td class="list-id_currency">
 							<?php 
-								echo $item->priceunit != '' ? $item->priceunit : $empty;
+								if (is_array($item->id_currency)) :
+									if (count($item->id_currency) > 0) : 
+										echo '<div class="sql">';
+										foreach ($item->id_currency as $id_currency) :
+											echo '<p>'.$id_currency['value'].'</p>';
+										endforeach;
+										echo '</div>';
+									else :
+										echo $empty;
+									endif;
+								else :;
+									echo $item->id_currency != '' ? $item->id_currency : $empty;
+								endif;
 							?>
 						</td>
 					<?php endif; ?>
@@ -807,13 +887,6 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_energy_value',1)) : ?>
-						<td class="list-energy_value">
-							<?php 
-								echo $item->energy_value != '' ? $item->energy_value : $empty;
-							?>
-						</td>
-					<?php endif; ?>
 					<?php if ($this->params->get('list_show_house_owner_id',1)) : ?>
 						<td class="list-owner_id">
 							<?php 
@@ -822,6 +895,13 @@ $empty = $component->params->get('default_empty_field', '');
 								else :
 									echo JString::trim($item->u_user_name);
 								endif; 
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_house_energy_value',1)) : ?>
+						<td class="list-energy_value">
+							<?php 
+								echo $item->energy_value != '' ? $item->energy_value : $empty;
 							?>
 						</td>
 					<?php endif; ?>

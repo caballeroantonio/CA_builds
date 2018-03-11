@@ -157,6 +157,45 @@
 	        label="COM_REMCA_PHOTOS_FIELDSET_FIELDS"
 	    >
             <field
+                name="show_photo_image"
+                type="radio"
+                label="COM_REMCA_SHOW_IMAGE_LABEL"
+                description="COM_REMCA_PHOTOS_SHOW_IMAGE_DESC"
+                class="btn-group"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_photo_image_float"
+                type="radio"
+                label="COM_REMCA_SHOW_IMAGE_FLOAT_LABEL"
+                description="COM_REMCA_SHOW_IMAGE_FLOAT_DESC"
+                class="btn-group"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="right">COM_REMCA_VALUE_FLOAT_RIGHT</option>
+                <option value="left">COM_REMCA_VALUE_FLOAT_LEFT</option>
+                <option value="none">COM_REMCA_VALUE_FLOAT_NONE</option>
+            </field>
+            <field
+                name="show_photo_image_width"
+                type="text"
+                label="COM_REMCA_SHOW_IMAGE_WIDTH_LABEL"
+                description="COM_REMCA_PHOTOS_SHOW_IMAGE_WIDTH_DESC"
+                class="validate-numeric"
+                size="5"
+             />
+            <field
+                name="show_photo_image_height"
+                type="text"
+                label="COM_REMCA_SHOW_IMAGE_HEIGHT_LABEL"
+                description="COM_REMCA_PHOTOS_SHOW_IMAGE_HEIGHT_DESC"
+                class="validate-numeric"
+                size="5"
+             />
+            <field
                 name="spacer3"
                 type="spacer"
                 hr="true"
@@ -188,28 +227,6 @@
                 type="radio"
                 label="COM_REMCA_PHOTOS_SHOW_FIELD_THUMBNAIL_IMG_LABEL"
                 description="COM_REMCA_PHOTOS_SHOW_FIELD_THUMBNAIL_IMG_DESC"
-                class="btn-group"
-           >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option	value="1">JSHOW</option>
-                <option	value="0">JHIDE</option>
-            </field>
-            <field
-                name="show_photo_main_img"
-                type="radio"
-                label="COM_REMCA_PHOTOS_SHOW_FIELD_MAIN_IMG_LABEL"
-                description="COM_REMCA_PHOTOS_SHOW_FIELD_MAIN_IMG_DESC"
-                class="btn-group"
-           >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option	value="1">JSHOW</option>
-                <option	value="0">JHIDE</option>
-            </field>
-            <field
-                name="show_photo_img_ordering"
-                type="radio"
-                label="COM_REMCA_PHOTOS_SHOW_FIELD_IMG_ORDERING_LABEL"
-                description="COM_REMCA_PHOTOS_SHOW_FIELD_IMG_ORDERING_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>

@@ -5,6 +5,7 @@ id & INT(10) & PK \tabularnewline\hline
 	description & MEDIUMTEXT & no description \tabularnewline\hline 
 
 
+  images & TEXT & no description \tabularnewline\hline
 
 
   catid & INT(10) & no description \tabularnewline\hline
@@ -32,14 +33,17 @@ id & INT(10) & PK \tabularnewline\hline
 
 
 %each field
-	houseid & VARCHAR(20) & houseid: \tabularnewline\hline 
+	id\_lmunicipality & INT(10) UNSIGNED  & id\_municipality: \tabularnewline\hline 
+	id\_lstate & INT(10) UNSIGNED  & State: \tabularnewline\hline 
+	id\_country & INT(10) UNSIGNED  & Country: \tabularnewline\hline 
 	sid & INT(11) & sid: \tabularnewline\hline 
 	fk\_rentid & INT(10) UNSIGNED  & fk\_rentid: \tabularnewline\hline 
 	associate\_house & VARCHAR(255) & associate\_house: \tabularnewline\hline 
+	houseid & VARCHAR(20) & houseid: \tabularnewline\hline 
 	link & VARCHAR(250) & link: \tabularnewline\hline 
 	listing\_type & VARCHAR(45) & listing\_type: \tabularnewline\hline 
-	price & INT(11) & price: \tabularnewline\hline 
-	priceunit & VARCHAR(14) & priceunit: \tabularnewline\hline 
+	price & DECIMAL(11,2) & price: \tabularnewline\hline 
+	id\_currency & INT(10) & Currency: \tabularnewline\hline 
 	hcountry & VARCHAR(50) & hcountry: \tabularnewline\hline 
 	hregion & VARCHAR(50) & hregion: \tabularnewline\hline 
 	hcity & VARCHAR(50) & hcity: \tabularnewline\hline 
@@ -47,12 +51,12 @@ id & INT(10) & PK \tabularnewline\hline
 	hlocation & VARCHAR(100) & hlocation: \tabularnewline\hline 
 	hlatitude & VARCHAR(20) & hlatitude: \tabularnewline\hline 
 	hlongitude & VARCHAR(20) & hlongitude: \tabularnewline\hline 
-	map\_zoom & VARCHAR(5) & map\_zoom: \tabularnewline\hline 
+	map\_zoom & INT(10) & map\_zoom: \tabularnewline\hline 
 	rooms & INT(11) & rooms: \tabularnewline\hline 
 	bathrooms & INT(11) & bathrooms: \tabularnewline\hline 
 	bedrooms & INT(11) & bedrooms: \tabularnewline\hline 
 	contacts & VARCHAR(250) & contacts: \tabularnewline\hline 
-	image\_link & VARCHAR(200) & image\_link: \tabularnewline\hline 
+	image\_link & VARCHAR(200) & image\_link:@ToDo implementar el uso del campo pre-formado images que es un JSON/ARRAY \tabularnewline\hline 
 	listing\_status & VARCHAR(45) & listing\_status: \tabularnewline\hline 
 	property\_type & VARCHAR(45) & property\_type: \tabularnewline\hline 
 	year & VARCHAR(4) & year: \tabularnewline\hline 
@@ -80,6 +84,6 @@ id & INT(10) & PK \tabularnewline\hline
 	extra8 & VARCHAR(250) & extra8: \tabularnewline\hline 
 	extra9 & VARCHAR(250) & extra9: \tabularnewline\hline 
 	extra10 & VARCHAR(250) & extra10: \tabularnewline\hline 
-	energy\_value & DECIMAL(11,2) & energy\_value: \tabularnewline\hline 
 	owner\_id & INT(10) UNSIGNED  & owner\_id: \tabularnewline\hline 
+	energy\_value & DECIMAL(11,2) & energy\_value: \tabularnewline\hline 
 	climate\_value & DECIMAL(11,2) & climate\_value: \tabularnewline\hline 

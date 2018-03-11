@@ -118,7 +118,7 @@ $params = $this->state->get('params');
 <?php */?>
         			<!-- end fields basic-details-->
                     <!-- begin fields fieldset-[%%FIELDSET_CODE_NAME%%]-->
-					<?php foreach($this->form->getFieldset('fieldset_jos_rem_const_languages_fs') as $field): ?>
+					<?php foreach($this->form->getFieldset('fieldset_const_languages_fs') as $field): ?>
 						<?php if (!$field->hidden) : ?>
 							<?php $fieldname = (string) $field->fieldname; ?>
 							
@@ -152,7 +152,7 @@ $params = $this->state->get('params');
 		<fieldset>
 <?php /*?>			<ul class="nav nav-tabs">
 				<li class="active"><a href="#basic-details" data-toggle="tab"><?php echo JText::_('COM_REMCA_CONST_LANGUAGE_FIELDSET_DETAILS_LABEL');?></a></li>
-				<li><a href="#fieldset-jos_rem_const_languages_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_CONST_LANGUAGE_FIELDSET_JOS_REM_CONST_LANGUAGES_FS_LABEL');?></a></li>
+				<li><a href="#fieldset-const_languages_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_CONST_LANGUAGE_FIELDSET_CONST_LANGUAGES_FS_LABEL');?></a></li>
 				<li><a href="#publishing" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_PUBLISHING_LABEL');?></a></li>
 			</ul>		<?php */?>
 		

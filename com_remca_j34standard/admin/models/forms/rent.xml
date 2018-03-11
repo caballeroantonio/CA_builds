@@ -29,11 +29,9 @@
     addrulepath="/administrator/components/com_remca/models/rules"
 
 >
-    <fieldset
-        name="basic_details"
+    <fieldset name="basic_details"
     >
-        <field
-		    name="id"
+        <field name="id"
 		    type="text"
             label="JGLOBAL_FIELD_ID_LABEL"
             description ="JGLOBAL_FIELD_ID_DESC"
@@ -41,46 +39,40 @@
 			class="readonly"
             default="0"
 		/>
-        <field
-		    name="name"
+        <field name="name"
 		    type="text"
 			label="COM_REMCA_FIELD_NAME_LABEL"
 			description="COM_REMCA_RENT_FIELD_NAME_DESC"
 			size="50"
 			required="true"
 		/>
-        <field
-            name="version_note"
+        <field name="version_note"
             type="text"
             label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
 			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
 			class="span12"
 			size="45"
 		/>
-        <field
-            name="buttonspacer"
+        <field name="buttonspacer"
             type="spacer"
             label="JGLOBAL_ACTION_PERMISSIONS_LABEL"
             description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
         />
 
     </fieldset>
-    <fieldset
-        name="fieldset_jos_rem_rent_fs"
-        label="COM_REMCA_RENT_FIELDSET_JOS_REM_RENT_FS_LABEL"
-        description="COM_REMCA_RENT_FIELDSET_JOS_REM_RENT_FS_DESC"
+    <fieldset name="fieldset_rent_fs"
+        label="COM_REMCA_RENT_FIELDSET_RENT_FS_LABEL"
+        description="COM_REMCA_RENT_FIELDSET_RENT_FS_DESC"
     >
-        <field
-            name="fk_houseid"
+        <field name="fk_houseid"
             type="modal_houses"
             label="COM_REMCA_RENT_FIELD_FK_HOUSEID_LABEL"
             description="COM_REMCA_RENT_FIELD_FK_HOUSEID_DESC"
             class="modal"
-			default="0"
+			default="'0'"
         >
         </field>  
-        <field
-            name="fk_userid"
+        <field name="fk_userid"
             type="modal_jusers"
             label="COM_REMCA_RENT_FIELD_FK_USERID_LABEL"
             description="COM_REMCA_RENT_FIELD_FK_USERID_DESC"
@@ -88,8 +80,7 @@
 			default="0"
         >
         </field>  
-        <field
-            name="rent_from"
+        <field name="rent_from"
             type="calendar"
             label="COM_REMCA_RENT_FIELD_RENT_FROM_LABEL"
             description="COM_REMCA_RENT_FIELD_RENT_FROM_DESC"
@@ -101,8 +92,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="rent_until"
+        <field name="rent_until"
             type="calendar"
             label="COM_REMCA_RENT_FIELD_RENT_UNTIL_LABEL"
             description="COM_REMCA_RENT_FIELD_RENT_UNTIL_DESC"
@@ -114,8 +104,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="rent_return"
+        <field name="rent_return"
             type="calendar"
             label="COM_REMCA_RENT_FIELD_RENT_RETURN_LABEL"
             description="COM_REMCA_RENT_FIELD_RENT_RETURN_DESC"
@@ -127,8 +116,7 @@
 			validate="date"
         >
         </field>  
-        <field
-            name="user_name"
+        <field name="user_name"
             type="text"
             label="COM_REMCA_RENT_FIELD_USER_NAME_LABEL"
             description="COM_REMCA_RENT_FIELD_USER_NAME_DESC"
@@ -137,8 +125,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="user_email"
+        <field name="user_email"
             type="text"
             label="COM_REMCA_RENT_FIELD_USER_EMAIL_LABEL"
             description="COM_REMCA_RENT_FIELD_USER_EMAIL_DESC"
@@ -147,8 +134,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="user_mailing"
+        <field name="user_mailing"
             type="editor"
             label="COM_REMCA_RENT_FIELD_USER_MAILING_LABEL"
             description="COM_REMCA_RENT_FIELD_USER_MAILING_DESC"
@@ -162,12 +148,10 @@
         >
         </field>  
     </fieldset>
-    <fieldset
-        name="publishing"
+    <fieldset name="publishing"
 		label="COM_REMCA_FIELDSET_PUBLISHING_LABEL"
     >
-        <field
-            name="version"
+        <field name="version"
             type="text"
 			label="COM_REMCA_FIELD_VERSION_LABEL"
             description="COM_REMCA_RENT_FIELD_VERSION_DESC"
@@ -176,13 +160,11 @@
 			readonly="true"
 			filter="unset"
 		/>
-        <field
-            name="checked_out"
+        <field name="checked_out"
 			type="hidden"
 			filter="unset"
 		/>
-        <field
-            name="checked_out_time"
+        <field name="checked_out_time"
 			type="hidden"
 			filter="unset"
 		 />

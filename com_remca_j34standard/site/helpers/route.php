@@ -86,12 +86,12 @@ abstract class RemcaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the Main_category
+	 * @param	integer	The route of the Photo
 	 */
-	public static function getMainCategoryRoute($id, $language = 0, $layout = 'default', $keep_item_id = false)
+	public static function getPhotoRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'maincategory'  => array((int) $id)
+			'photo'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -99,20 +99,15 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=maincategory&id='. $id;
+			$link = 'index.php?option=com_remca&view=photo&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=maincategory&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=photo&layout='.$layout.'&id='. $id;
 		}
 
 		
-		if ($language AND $language != "*" AND JLanguageMultilang::isEnabled())
-		{
-				$link .= '&lang=' . $language;
-				$needles['language'] = $language;
-		}
 		if ($item = self::findItem($needles, $keep_item_id, $layout))
 		{
 			$link .= '&Itemid='.$item;
@@ -241,12 +236,12 @@ abstract class RemcaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the Photo
+	 * @param	integer	The route of the Main_category
 	 */
-	public static function getPhotoRoute($id, $layout = 'default', $keep_item_id = false)
+	public static function getMainCategoryRoute($id, $language = 0, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'photo'  => array((int) $id)
+			'maincategory'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -254,15 +249,20 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=photo&id='. $id;
+			$link = 'index.php?option=com_remca&view=maincategory&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=photo&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=maincategory&layout='.$layout.'&id='. $id;
 		}
 
 		
+		if ($language AND $language != "*" AND JLanguageMultilang::isEnabled())
+		{
+				$link .= '&lang=' . $language;
+				$needles['language'] = $language;
+		}
 		if ($item = self::findItem($needles, $keep_item_id, $layout))
 		{
 			$link .= '&Itemid='.$item;
@@ -680,6 +680,126 @@ abstract class RemcaHelperRoute
 		{
 			//Create the link with a layout
 			$link = 'index.php?option=com_remca&view=language&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Municipality
+	 */
+	public static function getLmunicipalityRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'lmunicipality'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_remca&view=lmunicipality&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_remca&view=lmunicipality&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the State
+	 */
+	public static function getLstateRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'lstate'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_remca&view=lstate&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_remca&view=lstate&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Country
+	 */
+	public static function getCountryRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'country'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_remca&view=country&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_remca&view=country&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Config
+	 */
+	public static function getConfigRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'config'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_remca&view=config&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_remca&view=config&layout='.$layout.'&id='. $id;
 		}
 
 		

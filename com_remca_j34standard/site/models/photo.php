@@ -57,8 +57,7 @@ class RemcaModelPhoto extends JModelItem
 				'id', 'a.id',
 				'fk_houseid','a.fk_houseid',
 				'thumbnail_img','a.thumbnail_img',
-				'main_img','a.main_img',
-				'img_ordering','a.img_ordering',
+				'ordering', 'a.ordering',
 				);
 		}
 
@@ -169,10 +168,13 @@ class RemcaModelPhoto extends JModelItem
 				}
 				// Include any manipulation of the data on the record e.g. expand out Registry fields
 				// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
+				// Convert the images field to an array.
+				$registry = new Registry;
+				$registry->loadString($item->images);
+				$item->images = $registry->toArray();
+				$registry = null; //release memory	
 			
 
-				
-				
 				
 				
 		
@@ -241,6 +243,147 @@ class RemcaModelPhoto extends JModelItem
 		return $this->_item[$pk];
 	}
 
+	/**
+	* A protected method to get a set of ordering conditions.
+	*
+	* @param	object	A record object.
+	* @return	array	An array of conditions to add to add to ordering queries.
+	*/
+	protected function getReorderConditions($table = null)
+	{
+		$db = JFactory::getDbo();
+		
+		$condition = array();
+		return $condition;
+	}
+	/**
+	 * Method to adjust the ordering of a row.
+	 *
+	 * Returns NULL if the user did not have edit
+	 * privileges for any of the selected primary keys.
+	 *
+	 * @param	integer  $pks    The ID of the primary key to move.
+	 * @param	integer  $delta  Increment, usually +1 or -1
+	 *
+	 * @return  mixed  False on failure or error, true on success, null if the $pk is empty (no items selected).
+	 *
+	 */
+	public function reorder($pks, $delta = 0)
+	{
+		
+		$table = $this->getTable();
+		$pks = (array) $pks;
+		$result = true;
+
+		$allowed = true;
+
+		foreach ($pks as $i => $pk)
+		{
+			$table->reset();
+
+			if ($table->load($pk))
+			{
+				
+				$where = array();
+				$where = $this->getReorderConditions($table);
+
+				if (!$table->move($delta, $where))
+				{
+					$this->setError($table->getError());
+					unset($pks[$i]);
+					$result = false;
+				}
+
+			}
+			else
+			{
+				$this->setError($table->getError());
+				unset($pks[$i]);
+				$result = false;
+			}
+		}
+
+		if ($allowed === false AND empty($pks))
+		{
+			$result = null;
+		}
+
+		// Clear the component's cache
+		if ($result == true)
+		{
+			$this->cleanCache();
+		}
+
+		return $result;
+	}
+	/**
+	 * Saves the manually set order of records.
+	 *
+	 * @param   array    $pks    An array of primary key ids.
+	 * @param   integer  $order  +1 or -1
+	 *
+	 * @return  mixed
+	 *
+	 */
+	public function saveorder($pks = null, $order = null)
+	{
+		
+		$table = $this->getTable();
+		$conditions = array();
+
+		if (empty($pks))
+		{
+			return JError::raiseWarning(500, JText::_($this->text_prefix . '_ERROR_NO_ITEMS_SELECTED'));
+		}
+
+		// update ordering values
+		foreach ($pks as $i => $pk)
+		{
+			$table->load((int) $pk);
+
+			if ($table->ordering != $order[$i])
+			{
+				$table->ordering = $order[$i];
+
+				if (!$table->store())
+				{
+					$this->setError($table->getError());
+					return false;
+				}
+
+				// Remember to reorder within order fields
+				$condition = $this->getReorderConditions($table);
+				$found = false;
+
+				foreach ($conditions as $cond)
+				{
+					if ($cond[1] == $condition)
+					{
+						$found = true;
+						break;
+					}
+				}
+
+				if (!$found)
+				{
+					$key = $table->getKeyName();
+					$conditions[] = array($table->$key, $condition);
+				}
+			}
+		}
+
+		// Execute reorder for each category.
+		foreach ($conditions as $cond)
+		{
+			$table->load($cond[0]);
+			$table->reorder($cond[1]);
+		}
+
+		// Clear the component's cache
+		$this->cleanCache();
+
+		return true;
+	}	   	
 		
 	/**
 	 * Method to delete one or more records.

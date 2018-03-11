@@ -43,6 +43,7 @@ if ($lang->isRTL())
 }
 				
 // Add Javascript behaviors
+JHtml::_('behavior.caption');
 
 /*
  *	Initialise values for the layout 
@@ -132,10 +133,44 @@ $empty = $component->params->get('default_empty_field', '');
 	<?php  echo $this->item->event->afterDisplayHouseName;	?>
 	
 	<?php echo $this->item->event->beforeDisplayHouse; ?>
-	<?php if ($params->get('show_house_hits') != '0') : ?>		
-		 <div style="float: right;">
+	<?php $images = $this->item->images; ?>
+	
+	<?php if ($params->get('show_house_hits') != '0' OR 
+		($params->get('show_house_image', '0') == '1' AND isset($images['image_url']) AND $images['image_url'] != '')): ?>	
+			<div class="pull-<?php echo htmlspecialchars($params->get('show_house_image_float','right')); ?>">
+			<?php if ($params->get('show_house_image') == '1' AND isset($images['image_url']) AND $images['image_url'] != '') : ?>
+			
+					<?php 
+						$image = $images['image_url'];
+						
+						list($img_width, $img_height) = getimagesize($image);
+						
+						$display_width = (int) $params->get('show_house_intro_image_width','100');
+						$display_height = (int) $params->get('show_house_intro_image_height','0');
+						
+						if ($display_width > $img_width) :
+							if ($display_height < $img_height AND $display_height > 0) :
+								$display_width = 0;
+							endif;
+						else :
+							$display_height = 0;
+						endif;	
+					?>
+					<img src="<?php echo $image; ?>"
+						<?php if ($display_width > 0) : ?>
+							<?php echo 'width="'.$display_width.'"'; ?>"
+						<?php endif; ?>	
+						<?php if ($display_height > 0) : ?>
+							<?php echo 'height="'.$display_height.'"'; ?>
+						<?php endif; ?>	
+						<?php if ($images['image_caption']): ?>
+							<?php echo 'class="caption"'.' title="' .htmlspecialchars($images['image_caption']) . '"'; ?>
+						<?php endif; ?>							
+						<?php echo  $images['image_alt_text'] != '' ?'alt="'.$this->escape($images['image_alt_text']).'"':'alt="'.$this->escape($this->item->name).'"';?>
+					/>
+			<?php endif; ?>			 
 			<?php if ($params->get('show_house_hits')) : ?>
-				<?php echo '<br /><span class="badge badge-info">'.JText::sprintf('COM_REMCA_HITS', $this->item->hits).'</span>'; ?>
+				<?php echo '<br />'.JText::sprintf('COM_REMCA_HITS', $this->item->hits); ?>
 			<?php endif; ?>	
 		</div>
 	<?php endif; ?>	
@@ -165,14 +200,17 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="houseForm" id="houseForm">
 			<?php $dummy = false;
 					$display_fieldset = (
-								($params->get('show_house_houseid')) OR 
+								($params->get('show_house_id_lmunicipality')) OR 
+								($params->get('show_house_id_lstate')) OR 
+								($params->get('show_house_id_country')) OR 
 								($params->get('show_house_sid')) OR 
 								($params->get('show_house_fk_rentid')) OR 
 								($params->get('show_house_associate_house')) OR 
+								($params->get('show_house_houseid')) OR 
 								($params->get('show_house_link')) OR 
 								($params->get('show_house_listing_type')) OR 
 								($params->get('show_house_price')) OR 
-								($params->get('show_house_priceunit')) OR 
+								($params->get('show_house_id_currency')) OR 
 								($params->get('show_house_hcountry')) OR 
 								($params->get('show_house_hregion')) OR 
 								($params->get('show_house_hcity')) OR 
@@ -213,25 +251,49 @@ $empty = $component->params->get('default_empty_field', '');
 								($params->get('show_house_extra8')) OR 
 								($params->get('show_house_extra9')) OR 
 								($params->get('show_house_extra10')) OR 
-								($params->get('show_house_energy_value')) OR 
 								($params->get('show_house_owner_id')) OR 
+								($params->get('show_house_energy_value')) OR 
 								($params->get('show_house_climate_value')) OR 
 								$dummy
 								);
 			?>
 			<?php if ($display_fieldset) : ?>				
 				<fieldset>	
-					<legend><?php echo JText::_('COM_REMCA_HOUSES_FIELDSET_JOS_REM_HOUSES_FS_LABEL'); ?></legend>
+					<legend><?php echo JText::_('COM_REMCA_HOUSES_FIELDSET_HOUSES_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
-						<?php if ($params->get('show_house_houseid')) : ?>
+						<?php if ($params->get('show_house_id_lmunicipality')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_HOUSEID_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->houseid != '' ? $this->item->houseid : $empty;
+									echo JString::trim($this->item->m_lmunicipality_name);
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_house_id_lstate')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_LSTATE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo JString::trim($this->item->s_lstate_name);
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_house_id_country')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_COUNTRY_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo JString::trim($this->item->c1_country_name);
 								?>
 							</span>
 						</div>	
@@ -272,6 +334,18 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
+						<?php if ($params->get('show_house_houseid')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_HOUSEID_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->houseid != '' ? $this->item->houseid : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
 						<?php if ($params->get('show_house_link')) : ?>
 						<div class="formelm">
 							<label>
@@ -308,14 +382,26 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_house_priceunit')) : ?>
+						<?php if ($params->get('show_house_id_currency')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_PRICEUNIT_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_CURRENCY_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->priceunit != '' ? $this->item->priceunit : $empty;
+									if (is_array($this->item->id_currency)) :
+									if (count($this->item->id_currency) > 0) : 
+										echo '<div class="sql">';
+										foreach ($this->item->id_currency as $id_currency) :
+											echo '<p>'.$id_currency['value'].'</p>';
+										endforeach;
+										echo '</div>';
+									else :
+										echo $empty;
+									endif;
+								else :;
+									echo $this->item->id_currency != '' ? $this->item->id_currency : $empty;
+								endif;
 								?>
 							</span>
 						</div>	
@@ -800,18 +886,6 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_house_energy_value')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ENERGY_VALUE_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->energy_value != '' ? $this->item->energy_value : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
 						<?php if ($params->get('show_house_owner_id')) : ?>
 						<div class="formelm">
 							<label>
@@ -820,6 +894,18 @@ $empty = $component->params->get('default_empty_field', '');
 							<span>
 								<?php
 									echo JString::trim($this->item->u_user_name);
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_house_energy_value')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ENERGY_VALUE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->energy_value != '' ? $this->item->energy_value : $empty;
 								?>
 							</span>
 						</div>	

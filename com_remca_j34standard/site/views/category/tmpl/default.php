@@ -121,7 +121,7 @@ $empty = $component->params->get('default_empty_field', '');
 			?>
 			<?php if ($display_fieldset) : ?>				
 				<fieldset>	
-					<legend><?php echo JText::_('COM_REMCA_CATEGORIES_FIELDSET_JOS_REM_CATEGORIES_FS_LABEL'); ?></legend>
+					<legend><?php echo JText::_('COM_REMCA_CATEGORIES_FIELDSET_CATEGORIES_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
 						<?php if ($params->get('show_category_iditem')) : ?>

@@ -95,9 +95,9 @@ $input = $app->input;
                         echo $this->form->renderField('version_note', null, null, array('group_id' => 'field_version_note')); 
 					 ?>
 			<?php echo JHtml::_('bootstrap.endTab'); ?>
-			<?php echo JHtml::_('bootstrap.addTab', 'tracksource-tabs', 'fieldset-jos_rem_track_source_fs', JText::_('COM_REMCA_TRACK_SOURCE_FIELDSET_JOS_REM_TRACK_SOURCE_FS_LABEL', true)); ?>
+			<?php echo JHtml::_('bootstrap.addTab', 'tracksource-tabs', 'fieldset-track_source_fs', JText::_('COM_REMCA_TRACK_SOURCE_FIELDSET_TRACK_SOURCE_FS_LABEL', true)); ?>
 			<div class="row-fluid form-horizontal-desktop">
-				<?php foreach($this->form->getFieldset('fieldset_jos_rem_track_source_fs') as $field): ?>
+				<?php foreach($this->form->getFieldset('fieldset_track_source_fs') as $field): ?>
 					<?php if (!$field->hidden) : ?>
 						<?php $fieldname = (string) $field->fieldname; ?>
 						

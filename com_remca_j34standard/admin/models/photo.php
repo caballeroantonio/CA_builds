@@ -94,6 +94,11 @@ class RemcaModelPhoto extends JModelAdmin
 			
 
 			
+			// Convert the images field to an array.
+			$registry = new Registry;
+			$registry->loadString($item->images);
+			$item->images = $registry->toArray();
+			$registry = null; //release memory	
 
 			
 			
@@ -166,6 +171,18 @@ class RemcaModelPhoto extends JModelAdmin
 		
 		// Increment the photo version number.
 		$table->version++;
+		
+		if (empty($table->id) OR $table->id == 0)
+		{
+			// Set ordering to the last item if not set
+			if (empty($table->ordering) OR $table->ordering == 0)
+			{
+				$conditions_array = $this->getReorderConditions($table);
+				
+				$conditions = implode(' AND ', $conditions_array);				
+				$table->reorder($conditions);
+			}
+		}
 	}
 	/**
 	 * Method to save the form data.
@@ -184,6 +201,13 @@ class RemcaModelPhoto extends JModelAdmin
 		$filter  = JFilterInput::getInstance();
 		
 
+		if (isset($data['images']) AND is_array($data['images']))
+		{
+			$registry = new Registry;
+			$registry->loadArray($data['images']);
+			$data['images'] = (string) $registry;
+			$registry = null; //release memory	
+		}
 
 
 
@@ -212,6 +236,19 @@ class RemcaModelPhoto extends JModelAdmin
 		return parent::delete($pks);	
 	}		
 
+	/**
+	 * A protected method to get a set of ordering conditions.
+	 *
+	 * @param	object	A record object.
+	 * @return	array	An array of conditions to add to add to ordering queries.
+	 */
+	protected function getReorderConditions($table)
+	{
+		$db = JFactory::getDbo();
+	
+		$condition = array();
+		return $condition;
+	}
 
 
 	/**

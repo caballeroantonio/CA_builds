@@ -83,8 +83,8 @@
 		/>
     </fieldset>
     <fieldset
-        name="fieldset_jos_rem_feature_fs"
-        label="COM_REMCA_FEATURE_FIELDSET_JOS_REM_FEATURE_FS_LABEL"
+        name="fieldset_feature_fs"
+        label="COM_REMCA_FEATURE_FIELDSET_FEATURE_FS_LABEL"
     >
 
         <field

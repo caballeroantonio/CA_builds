@@ -25,69 +25,81 @@
 --
 -- Uninstall of `#__remca` tables
 --
+
+SET FOREIGN_KEY_CHECKS=0;
+
 DROP TABLE IF EXISTS `#__rem_houses`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.house';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.house';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_HOUSES' AND `type`='component';
-DROP TABLE IF EXISTS `#__rem_main_categories`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.maincategory';
-DELETE FROM `#__menu` WHERE `title`='COM_REMCA_MAIN_CATEGORIES' AND `type`='component';
+DROP TABLE IF EXISTS `#__rem_photos`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.photo';
+DELETE FROM `#__menu` WHERE `title`='COM_REMCA_PHOTOS' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_mime_types`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.mimetype';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.mimetype';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_MIME_TYPES' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_mls_for_delete`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.mlsfordelete';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.mlsfordelete';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_MLS_FOR_DELETE' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_orders`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.order';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.order';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_ORDERS' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_orders_details`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.ordersdetail';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.ordersdetail';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_ORDERS_DETAILS' AND `type`='component';
-DROP TABLE IF EXISTS `#__rem_photos`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.photo';
-DELETE FROM `#__menu` WHERE `title`='COM_REMCA_PHOTOS' AND `type`='component';
+DROP TABLE IF EXISTS `#__rem_main_categories`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.maincategory';
+DELETE FROM `#__menu` WHERE `title`='COM_REMCA_MAIN_CATEGORIES' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_rent`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.rent';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.rent';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_RENT' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_rent_request`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.rentrequest';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.rentrequest';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_RENT_REQUEST' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_rent_sal`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.rentsal';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.rentsal';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_RENT_SAL' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_review`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.review';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.review';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_REVIEW' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_track_source`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.tracksource';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.tracksource';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_TRACK_SOURCE' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_users_wishlist`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.userswishlist';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.userswishlist';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_USERS_WISHLIST' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_video_source`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.videosource';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.videosource';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_VIDEO_SOURCE' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_buying_request`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.buyingrequest';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.buyingrequest';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_BUYING_REQUEST' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_categories`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.category';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.category';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_CATEGORIES' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_const`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.const';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.const';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_CONST' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_const_language`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.constlanguage';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.constlanguage';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_CONST_LANGUAGE' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_feature`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.feature';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.feature';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_FEATURE' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_feature_houses`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.featurehouse';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.featurehouse';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_FEATURE_HOUSES' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_languages`;
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.language';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.language';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_LANGUAGES' AND `type`='component';
+DROP TABLE IF EXISTS `#__rem_lmunicipalities`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.lmunicipality';
+DELETE FROM `#__menu` WHERE `title`='COM_REMCA_LMUNICIPALITIES' AND `type`='component';
+DROP TABLE IF EXISTS `#__rem_lstates`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.lstate';
+DELETE FROM `#__menu` WHERE `title`='COM_REMCA_LSTATES' AND `type`='component';
+DROP TABLE IF EXISTS `#__rem_countries`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.country';
+DELETE FROM `#__menu` WHERE `title`='COM_REMCA_COUNTRIES' AND `type`='component';
 
 DROP TABLE IF EXISTS `#__rem_rating`;
 
@@ -97,6 +109,8 @@ DELETE FROM `#__menu` WHERE `title`='COM_REMCA' AND `type`='component';
 
 #[ %%IF GENERATE_CATEGORIES%%] 
 DELETE FROM `#__categories` WHERE `extension`='com_remca';
-DELETE FROM #__content_types WHERE `type_alias` = 'com_remca.category';
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.category';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_CATEGORIES' AND `type`='component';
 #[ %%ENDIF GENERATE_CATEGORIES%%]
+
+SET FOREIGN_KEY_CHECKS=1;

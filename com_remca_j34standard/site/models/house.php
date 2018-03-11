@@ -56,15 +56,24 @@ class RemcaModelHouse extends JModelItem
 			$config['house_filter_fields'] = array(
 				'id', 'a.id',
 				'name', 'a.name',
+				'id_lmunicipality', 'a.id_lmunicipality',
+				'm_lmunicipality_name', 'm.lmunicipality_name',
+				'id_lstate', 'a.id_lstate',
+				's_lstate_name', 's.lstate_name',
+				'id_country', 'a.id_country',
+				'c1_country_name', 'c1.country_name',
 				'price', 'a.price',
-				'houseid','a.houseid',
+				'id_lmunicipality','a.id_lmunicipality',
+				'id_lstate','a.id_lstate',
+				'id_country','a.id_country',
 				'sid','a.sid',
 				'fk_rentid','a.fk_rentid',
 				'associate_house','a.associate_house',
+				'houseid','a.houseid',
 				'link','a.link',
 				'listing_type','a.listing_type',
 				'price','a.price',
-				'priceunit','a.priceunit',
+				'id_currency','a.id_currency',
 				'hcountry','a.hcountry',
 				'hregion','a.hregion',
 				'hcity','a.hcity',
@@ -105,8 +114,8 @@ class RemcaModelHouse extends JModelItem
 				'extra8','a.extra8',
 				'extra9','a.extra9',
 				'extra10','a.extra10',
-				'energy_value','a.energy_value',
 				'owner_id','a.owner_id',
+				'energy_value','a.energy_value',
 				'climate_value','a.climate_value',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
@@ -322,6 +331,15 @@ class RemcaModelHouse extends JModelItem
 				}
 				
 					
+				// Filter by and return name for id_lmunicipality level.
+				$query->select($db->quoteName('m.name').' AS m_lmunicipality_name');
+				$query->join('LEFT', $db->quoteName('#__rem_lmunicipalities').' AS m ON '.$db->quoteName('m.id').' = '.$db->quoteName('a.id_lmunicipality'));	
+				// Filter by and return name for id_lstate level.
+				$query->select($db->quoteName('s.name').' AS s_lstate_name');
+				$query->join('LEFT', $db->quoteName('#__rem_lstates').' AS s ON '.$db->quoteName('s.id').' = '.$db->quoteName('a.id_lstate'));	
+				// Filter by and return name for id_country level.
+				$query->select($db->quoteName('c1.name').' AS c1_country_name');
+				$query->join('LEFT', $db->quoteName('#__rem_countries').' AS c1 ON '.$db->quoteName('c1.id').' = '.$db->quoteName('a.id_country'));	
 				// Filter by and return name for fk_rentid level.
 				$query->select($db->quoteName('r.name').' AS r_rent_name');
 				$query->join('LEFT', $db->quoteName('#__rem_rent').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.fk_rentid'));	
@@ -339,6 +357,11 @@ class RemcaModelHouse extends JModelItem
 				}
 				// Include any manipulation of the data on the record e.g. expand out Registry fields
 				// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
+				// Convert the images field to an array.
+				$registry = new Registry;
+				$registry->loadString($item->images);
+				$item->images = $registry->toArray();
+				$registry = null; //release memory	
 			
 
 				
@@ -348,6 +371,28 @@ class RemcaModelHouse extends JModelItem
 				
 				
 				
+				
+				
+				
+				if (isset($item->id_currency) AND $item->id_currency !='')
+				{
+					$sql = 'SELECT '.$db->quoteName('list.id').' AS id, '.$db->quoteName('list.currency').' AS value FROM (SELECT id, CONCAT_WS(\' - \', iso2, currency) \'currency\' FROM #__rem_countries WHERE published_cur) AS list';
+					$sql .= ' WHERE '.$db->quoteName('list.id').' IN ('.JString::trim($item->id_currency, ',').');';
+
+					$db->setQuery($sql);
+					
+					$rows = $db->loadAssocList();
+					$result_array = array();
+					foreach ($rows as $row)
+					{
+						$result_array[] = $row;
+					}					
+					$item->id_currency = $result_array;
+				}
+				else
+				{
+					$item->id_currency = array();
+				}
 				
 				
 				

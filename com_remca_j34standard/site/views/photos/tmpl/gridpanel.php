@@ -79,50 +79,6 @@ function getFields(){
 
     */
     $fields['thumbnail_img'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'main_img',
-        'FIELD_CODE_NAME' => 'main_img',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=MAIN_IMG
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(250) DEFAULT NULL main_img
-
-                FIELD_NAME_LATEX=main\_img
-                FIELD_CODE_NAME_LATEX=main\_img
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['main_img'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'img_ordering',
-        'FIELD_CODE_NAME' => 'img_ordering',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 22,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=IMG_ORDERING
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(11) DEFAULT NULL img_ordering
-
-                FIELD_NAME_LATEX=img\_ordering
-                FIELD_CODE_NAME_LATEX=img\_ordering
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['img_ordering'] = $field;
     return $fields;
 }
 

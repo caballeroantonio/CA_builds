@@ -58,8 +58,8 @@
 		/>
     </fieldset>
     <fieldset
-        name="fieldset_jos_rem_mime_types_fs"
-        label="COM_REMCA_MIME_TYPES_FIELDSET_JOS_REM_MIME_TYPES_FS_LABEL"
+        name="fieldset_mime_types_fs"
+        label="COM_REMCA_MIME_TYPES_FIELDSET_MIME_TYPES_FS_LABEL"
     >
 
         <field

@@ -110,9 +110,9 @@ $input = $app->input;
                         echo $this->form->renderField('version_note', null, null, array('group_id' => 'field_version_note')); 
 					 ?>
 			<?php echo JHtml::_('bootstrap.endTab'); ?>
-			<?php echo JHtml::_('bootstrap.addTab', 'house-tabs', 'fieldset-jos_rem_houses_fs', JText::_('COM_REMCA_HOUSES_FIELDSET_JOS_REM_HOUSES_FS_LABEL', true)); ?>
+			<?php echo JHtml::_('bootstrap.addTab', 'house-tabs', 'fieldset-houses_fs', JText::_('COM_REMCA_HOUSES_FIELDSET_HOUSES_FS_LABEL', true)); ?>
 			<div class="row-fluid form-horizontal-desktop">
-				<?php foreach($this->form->getFieldset('fieldset_jos_rem_houses_fs') as $field): ?>
+				<?php foreach($this->form->getFieldset('fieldset_houses_fs') as $field): ?>
 					<?php if (!$field->hidden) : ?>
 						<?php $fieldname = (string) $field->fieldname; ?>
 						
@@ -126,7 +126,19 @@ $input = $app->input;
 			</div>
 			<?php echo JHtml::_('bootstrap.endTab'); ?>
 
+			<?php echo JHtml::_('bootstrap.addTab', 'house-tabs', 'images', JText::_('COM_REMCA_FIELDSET_IMAGES_LABEL', true)); ?>
+			<div class="row-fluid form-horizontal-desktop">
+				<div class="span6">
+					<?php foreach ($this->form->getGroup('images') as $field) : ?>
+						<?php if (!$field->hidden) : ?>
+							<?php $fieldname = (string) $field->fieldname; ?>
+							<?php echo $this->form->renderField($fieldname, 'images', null, array('group_id' => 'field_'.$fieldname)); ?>							
+						<?php endif; ?>							
+					<?php endforeach; ?>
+				</div>
 
+			</div>
+			<?php echo JHtml::_('bootstrap.endTab'); ?>
 
 			<?php if (isset($app->item_associations) AND JLanguageAssociations::isEnabled()) : ?>
 				<?php echo JHtml::_('bootstrap.addTab', 'house-tabs', 'associations', JText::_('COM_REMCA_FIELDSET_ASSOCIATIONS_LABEL', true)); ?>

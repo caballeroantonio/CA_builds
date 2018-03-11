@@ -95,9 +95,9 @@ $input = $app->input;
                         echo $this->form->renderField('version_note', null, null, array('group_id' => 'field_version_note')); 
 					 ?>
 			<?php echo JHtml::_('bootstrap.endTab'); ?>
-			<?php echo JHtml::_('bootstrap.addTab', 'buyingrequest-tabs', 'fieldset-jos_rem_buying_request_fs', JText::_('COM_REMCA_BUYING_REQUEST_FIELDSET_JOS_REM_BUYING_REQUEST_FS_LABEL', true)); ?>
+			<?php echo JHtml::_('bootstrap.addTab', 'buyingrequest-tabs', 'fieldset-buying_request_fs', JText::_('COM_REMCA_BUYING_REQUEST_FIELDSET_BUYING_REQUEST_FS_LABEL', true)); ?>
 			<div class="row-fluid form-horizontal-desktop">
-				<?php foreach($this->form->getFieldset('fieldset_jos_rem_buying_request_fs') as $field): ?>
+				<?php foreach($this->form->getFieldset('fieldset_buying_request_fs') as $field): ?>
 					<?php if (!$field->hidden) : ?>
 						<?php $fieldname = (string) $field->fieldname; ?>
 						

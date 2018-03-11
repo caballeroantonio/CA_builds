@@ -58,8 +58,8 @@
 		/>
     </fieldset>
     <fieldset
-        name="fieldset_jos_rem_mls_for_delete_fs"
-        label="COM_REMCA_MLS_FOR_DELETE_FIELDSET_JOS_REM_MLS_FOR_DELETE_FS_LABEL"
+        name="fieldset_mls_for_delete_fs"
+        label="COM_REMCA_MLS_FOR_DELETE_FIELDSET_MLS_FOR_DELETE_FS_LABEL"
     >
 
         <field

@@ -45,6 +45,10 @@
     display: inline;
 }
 /*#################### photos list grid settings ############################ */
+.photos-list td.list-order
+{
+	    text-align: center;
+}
 .photos-list a.jgrid:hover
 {
     text-decoration: none;

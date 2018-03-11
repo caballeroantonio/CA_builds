@@ -105,11 +105,11 @@ class RemcaHelper extends JHelperContent
 			$active
 		);
 	
-		$active = $view_name == 'main_categories'? true : false;
+		$active = $view_name == 'photos'? true : false;
 		JHtmlSidebar::addEntry(
-			JText::_('COM_REMCA_MAIN_CATEGORIES_SUBMENU'),
-			'index.php?option=com_remca&view=main_categories',
-			$view_name == 'main_categories',
+			JText::_('COM_REMCA_PHOTOS_SUBMENU'),
+			'index.php?option=com_remca&view=photos',
+			$view_name == 'photos',
 			$active
 		);
 	
@@ -145,11 +145,11 @@ class RemcaHelper extends JHelperContent
 			$active
 		);
 	
-		$active = $view_name == 'photos'? true : false;
+		$active = $view_name == 'main_categories'? true : false;
 		JHtmlSidebar::addEntry(
-			JText::_('COM_REMCA_PHOTOS_SUBMENU'),
-			'index.php?option=com_remca&view=photos',
-			$view_name == 'photos',
+			JText::_('COM_REMCA_MAIN_CATEGORIES_SUBMENU'),
+			'index.php?option=com_remca&view=main_categories',
+			$view_name == 'main_categories',
 			$active
 		);
 	
@@ -262,6 +262,30 @@ class RemcaHelper extends JHelperContent
 			JText::_('COM_REMCA_LANGUAGES_SUBMENU'),
 			'index.php?option=com_remca&view=languages',
 			$view_name == 'languages',
+			$active
+		);
+	
+		$active = $view_name == 'lmunicipalities'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_REMCA_LMUNICIPALITIES_SUBMENU'),
+			'index.php?option=com_remca&view=lmunicipalities',
+			$view_name == 'lmunicipalities',
+			$active
+		);
+	
+		$active = $view_name == 'lstates'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_REMCA_LSTATES_SUBMENU'),
+			'index.php?option=com_remca&view=lstates',
+			$view_name == 'lstates',
+			$active
+		);
+	
+		$active = $view_name == 'countries'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_REMCA_COUNTRIES_SUBMENU'),
+			'index.php?option=com_remca&view=countries',
+			$view_name == 'countries',
 			$active
 		);
 	

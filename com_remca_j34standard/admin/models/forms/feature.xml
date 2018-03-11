@@ -29,11 +29,9 @@
     addrulepath="/administrator/components/com_remca/models/rules"
 
 >
-    <fieldset
-        name="basic_details"
+    <fieldset name="basic_details"
     >
-        <field
-		    name="id"
+        <field name="id"
 		    type="text"
             label="JGLOBAL_FIELD_ID_LABEL"
             description ="JGLOBAL_FIELD_ID_DESC"
@@ -41,24 +39,21 @@
 			class="readonly"
             default="0"
 		/>
-        <field
-		    name="name"
+        <field name="name"
 		    type="text"
 			label="COM_REMCA_FIELD_NAME_LABEL"
 			description="COM_REMCA_FEATURE_FIELD_NAME_DESC"
 			size="50"
 			required="true"
 		/>
-        <field
-            name="version_note"
+        <field name="version_note"
             type="text"
             label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
 			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
 			class="span12"
 			size="45"
 		/>
-        <field
-		    name="state"
+        <field name="state"
     		type="list"
 			label="JSTATUS"
 			description="COM_REMCA_FEATURE_FIELD_STATUS_DESC"
@@ -71,21 +66,18 @@
             <option value="2">JARCHIVED</option>
             <option value="-2">JTRASH</option>
         </field>
-        <field
-            name="buttonspacer"
+        <field name="buttonspacer"
             type="spacer"
             label="JGLOBAL_ACTION_PERMISSIONS_LABEL"
             description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
         />
 
     </fieldset>
-    <fieldset
-        name="fieldset_jos_rem_feature_fs"
-        label="COM_REMCA_FEATURE_FIELDSET_JOS_REM_FEATURE_FS_LABEL"
-        description="COM_REMCA_FEATURE_FIELDSET_JOS_REM_FEATURE_FS_DESC"
+    <fieldset name="fieldset_feature_fs"
+        label="COM_REMCA_FEATURE_FIELDSET_FEATURE_FS_LABEL"
+        description="COM_REMCA_FEATURE_FIELDSET_FEATURE_FS_DESC"
     >
-        <field
-            name="categories"
+        <field name="categories"
             type="text"
             label="COM_REMCA_FEATURE_FIELD_CATEGORIES_LABEL"
             description="COM_REMCA_FEATURE_FIELD_CATEGORIES_DESC"
@@ -94,8 +86,7 @@
 			maxlength="255"
         >
         </field>  
-        <field
-            name="image_link"
+        <field name="image_link"
             type="text"
             label="COM_REMCA_FEATURE_FIELD_IMAGE_LINK_LABEL"
             description="COM_REMCA_FEATURE_FIELD_IMAGE_LINK_DESC"
@@ -105,12 +96,10 @@
         >
         </field>  
     </fieldset>
-    <fieldset
-        name="publishing"
+    <fieldset name="publishing"
 		label="COM_REMCA_FIELDSET_PUBLISHING_LABEL"
     >
-        <field
-            name="version"
+        <field name="version"
             type="text"
 			label="COM_REMCA_FIELD_VERSION_LABEL"
             description="COM_REMCA_FEATURE_FIELD_VERSION_DESC"

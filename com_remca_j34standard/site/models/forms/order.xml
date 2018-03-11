@@ -68,8 +68,8 @@
 		/>
     </fieldset>
     <fieldset
-        name="fieldset_jos_rem_orders_fs"
-        label="COM_REMCA_ORDERS_FIELDSET_JOS_REM_ORDERS_FS_LABEL"
+        name="fieldset_orders_fs"
+        label="COM_REMCA_ORDERS_FIELDSET_ORDERS_FS_LABEL"
     >
 
         <field
@@ -136,7 +136,7 @@
             label="COM_REMCA_ORDERS_FIELD_FK_HOUSE_ID_LABEL"
             description="COM_REMCA_ORDERS_FIELD_FK_HOUSE_ID_DESC"
             class="modal"
-			default="0"
+			default="'0'"
         >
         </field>  
         <field

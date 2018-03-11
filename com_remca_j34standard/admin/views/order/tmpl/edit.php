@@ -98,9 +98,9 @@ $input = $app->input;
                         echo $this->form->renderField('version_note', null, null, array('group_id' => 'field_version_note')); 
 					 ?>
 			<?php echo JHtml::_('bootstrap.endTab'); ?>
-			<?php echo JHtml::_('bootstrap.addTab', 'order-tabs', 'fieldset-jos_rem_orders_fs', JText::_('COM_REMCA_ORDERS_FIELDSET_JOS_REM_ORDERS_FS_LABEL', true)); ?>
+			<?php echo JHtml::_('bootstrap.addTab', 'order-tabs', 'fieldset-orders_fs', JText::_('COM_REMCA_ORDERS_FIELDSET_ORDERS_FS_LABEL', true)); ?>
 			<div class="row-fluid form-horizontal-desktop">
-				<?php foreach($this->form->getFieldset('fieldset_jos_rem_orders_fs') as $field): ?>
+				<?php foreach($this->form->getFieldset('fieldset_orders_fs') as $field): ?>
 					<?php if (!$field->hidden) : ?>
 						<?php $fieldname = (string) $field->fieldname; ?>
 						

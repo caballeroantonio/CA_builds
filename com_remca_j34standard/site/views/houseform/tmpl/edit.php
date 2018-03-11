@@ -135,7 +135,7 @@ $params = $this->state->get('params');
 					<?php echo $this->form->renderField('description', null, null, array('group_id' => 'description')); ?>
         			<!-- end fields basic-details-->
                     <!-- begin fields fieldset-[%%FIELDSET_CODE_NAME%%]-->
-					<?php foreach($this->form->getFieldset('fieldset_jos_rem_houses_fs') as $field): ?>
+					<?php foreach($this->form->getFieldset('fieldset_houses_fs') as $field): ?>
 						<?php if (!$field->hidden) : ?>
 							<?php $fieldname = (string) $field->fieldname; ?>
 							
@@ -177,7 +177,8 @@ $params = $this->state->get('params');
 		<fieldset>
 <?php /*?>			<ul class="nav nav-tabs">
 				<li class="active"><a href="#basic-details" data-toggle="tab"><?php echo JText::_('COM_REMCA_HOUSES_FIELDSET_DETAILS_LABEL');?></a></li>
-				<li><a href="#fieldset-jos_rem_houses_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_HOUSES_FIELDSET_JOS_REM_HOUSES_FS_LABEL');?></a></li>
+				<li><a href="#fieldset-houses_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_HOUSES_FIELDSET_HOUSES_FS_LABEL');?></a></li>
+				<li><a href="#images" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_IMAGES_LABEL');?></a></li>
 				<?php if ($this->item->params->get('access-change')): ?>
 				<li><a href="#publishing" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_PUBLISHING_LABEL');?></a></li>
 				<li><a href="#language" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_LANGUAGE_LABEL');?></a></li>
@@ -190,7 +191,17 @@ $params = $this->state->get('params');
 
 
 
+				<div class="tab-pane" id="images">
+					<div class="span6">
+						<?php foreach ($this->form->getGroup('images') as $field) : ?>
+							<?php if (!$field->hidden) : ?>
+								<?php $fieldname = (string) $field->fieldname; ?>
+								<?php echo $this->form->renderField($fieldname, 'images', null, array('group_id' => 'field_'.$fieldname)); ?>							
+							<?php endif; ?>
+						<?php endforeach; ?>
+					</div>
 
+				</div>
 				
 				<?php if ($this->item->params->get('access-change')): ?>
 						

@@ -43,6 +43,7 @@ if ($lang->isRTL())
 }
 
 // Add Javscript functions for field display
+JHtml::_('behavior.caption');
 JHtml::_('bootstrap.tooltip');
 JHtml::_('behavior.multiselect');
 JHtml::_('dropdown.init');
@@ -135,14 +136,9 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_REMCA_PHOTOS_HEADING_THUMBNAIL_IMG'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_photo_main_img',1)) : ?>
-						<th class="list-main_img" id="tableOrderingmain_img">
-							<?php echo JTEXT::_('COM_REMCA_PHOTOS_HEADING_MAIN_IMG'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_photo_img_ordering',1)) : ?>
-						<th class="list-img_ordering" id="tableOrderingimg_ordering">
-							<?php echo JTEXT::_('COM_REMCA_PHOTOS_HEADING_IMG_ORDERING'); ?>
+					<?php if ($this->params->get('list_show_photo_ordering',0)) : ?>
+						<th width="10%">
+							<?php echo JHtml::_('grid.sort',  'COM_REMCA_HEADING_ORDERING', 'a.ordering', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($show_actions) : ?>
@@ -192,20 +188,12 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_photo_main_img',1)) : ?>
-						<td class="list-main_img">
-							<?php 
-								echo $item->main_img != '' ? $item->main_img : $empty;
-							?>
+					<?php if ($this->params->get('list_show_photo_ordering',0)) : ?>
+						<td class="list-order">
+							<?php echo $item->ordering; ?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_photo_img_ordering',1)) : ?>
-						<td class="list-img_ordering">
-							<?php 
-								echo $item->img_ordering != '' ? $item->img_ordering : $empty;
-							?>
-						</td>
-					<?php endif; ?>
+					
 					<?php if ($show_actions) : ?>
 						<td class="list-actions">
                         	<div class="btn-group pull-right">

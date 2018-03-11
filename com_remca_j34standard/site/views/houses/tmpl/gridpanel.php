@@ -34,26 +34,79 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'houseid',
-        'FIELD_CODE_NAME' => 'houseid',
+        'FIELD_NAME' => 'id_municipality',
+        'FIELD_CODE_NAME' => 'id_lmunicipality',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
+        'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=HOUSEID
+                FIELD_CODE_NAME_UPPER=ID_LMUNICIPALITY
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(20) NOT NULL DEFAULT '' houseid
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' id_municipality
 
-                FIELD_NAME_LATEX=houseid
-                FIELD_CODE_NAME_LATEX=houseid
+                FIELD_NAME_LATEX=id\_municipality
+                FIELD_CODE_NAME_LATEX=id\_lmunicipality
                 FIELD_DBCOMMENT_LATEX=
 
+                    {FIELD_LINK}
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=M
+                    FIELD_FOREIGN_OBJECT_UPPER=LMUNICIPALITY
 
     */
-    $fields['houseid'] = $field;
+    $fields['id_lmunicipality'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'State',
+        'FIELD_CODE_NAME' => 'id_lstate',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 13,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_LSTATE
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' State
+
+                FIELD_NAME_LATEX=State
+                FIELD_CODE_NAME_LATEX=id\_lstate
+                FIELD_DBCOMMENT_LATEX=
+
+                    {FIELD_LINK}
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=S
+                    FIELD_FOREIGN_OBJECT_UPPER=LSTATE
+
+    */
+    $fields['id_lstate'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'Country',
+        'FIELD_CODE_NAME' => 'id_country',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 13,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_COUNTRY
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Country
+
+                FIELD_NAME_LATEX=Country
+                FIELD_CODE_NAME_LATEX=id\_country
+                FIELD_DBCOMMENT_LATEX=
+
+                    {FIELD_LINK}
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=C1
+                    FIELD_FOREIGN_OBJECT_UPPER=COUNTRY
+
+    */
+    $fields['id_country'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'sid',
@@ -125,6 +178,28 @@ function getFields(){
     $fields['associate_house'] = $field;
     //{OBJECT_FIELD}
     $field = array(
+        'FIELD_NAME' => 'houseid',
+        'FIELD_CODE_NAME' => 'houseid',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 1,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=HOUSEID
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(20) NOT NULL DEFAULT '' houseid
+
+                FIELD_NAME_LATEX=houseid
+                FIELD_CODE_NAME_LATEX=houseid
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['houseid'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
         'FIELD_NAME' => 'link',
         'FIELD_CODE_NAME' => 'link',
         'FIELD_DESCRIPTION' => '',//
@@ -172,7 +247,7 @@ function getFields(){
         'FIELD_NAME' => 'price',
         'FIELD_CODE_NAME' => 'price',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 22,
+        'FIELDTYPE_ID' => 1,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
@@ -180,7 +255,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' price
+                FIELD_DB=`` DECIMAL(11,2) NOT NULL DEFAULT '0' price
 
                 FIELD_NAME_LATEX=price
                 FIELD_CODE_NAME_LATEX=price
@@ -191,26 +266,26 @@ function getFields(){
     $fields['price'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'priceunit',
-        'FIELD_CODE_NAME' => 'priceunit',
+        'FIELD_NAME' => 'Currency',
+        'FIELD_CODE_NAME' => 'id_currency',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
+        'FIELDTYPE_ID' => 18,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=PRICEUNIT
+                FIELD_CODE_NAME_UPPER=ID_CURRENCY
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(14) NOT NULL DEFAULT '' priceunit
+                FIELD_DB=`` INT(10) NOT NULL DEFAULT '0' Currency
 
-                FIELD_NAME_LATEX=priceunit
-                FIELD_CODE_NAME_LATEX=priceunit
+                FIELD_NAME_LATEX=Currency
+                FIELD_CODE_NAME_LATEX=id\_currency
                 FIELD_DBCOMMENT_LATEX=
 
 
     */
-    $fields['priceunit'] = $field;
+    $fields['id_currency'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'hcountry',
@@ -378,7 +453,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(5) NOT NULL DEFAULT '' map_zoom
+                FIELD_DB=`` INT(10) NOT NULL DEFAULT '14' map_zoom
 
                 FIELD_NAME_LATEX=map\_zoom
                 FIELD_CODE_NAME_LATEX=map\_zoom
@@ -392,7 +467,7 @@ function getFields(){
         'FIELD_NAME' => 'rooms',
         'FIELD_CODE_NAME' => 'rooms',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 22,
+        'FIELDTYPE_ID' => 1,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
@@ -400,7 +475,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(11) DEFAULT NULL rooms
+                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' rooms
 
                 FIELD_NAME_LATEX=rooms
                 FIELD_CODE_NAME_LATEX=rooms
@@ -414,7 +489,7 @@ function getFields(){
         'FIELD_NAME' => 'bathrooms',
         'FIELD_CODE_NAME' => 'bathrooms',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 22,
+        'FIELDTYPE_ID' => 1,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
@@ -422,7 +497,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(11) DEFAULT NULL bathrooms
+                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' bathrooms
 
                 FIELD_NAME_LATEX=bathrooms
                 FIELD_CODE_NAME_LATEX=bathrooms
@@ -436,7 +511,7 @@ function getFields(){
         'FIELD_NAME' => 'bedrooms',
         'FIELD_CODE_NAME' => 'bedrooms',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 22,
+        'FIELDTYPE_ID' => 1,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
@@ -444,7 +519,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(11) DEFAULT NULL bedrooms
+                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' bedrooms
 
                 FIELD_NAME_LATEX=bedrooms
                 FIELD_CODE_NAME_LATEX=bedrooms
@@ -479,20 +554,20 @@ function getFields(){
     $field = array(
         'FIELD_NAME' => 'image_link',
         'FIELD_CODE_NAME' => 'image_link',
-        'FIELD_DESCRIPTION' => '',//
+        'FIELD_DESCRIPTION' => '<p>@ToDo implementar el uso del campo pre-formado images que es un JSON/ARRAY</p>',//<p>@ToDo implementar el uso del campo pre-formado images que es un JSON/ARRAY</p>
         'FIELDTYPE_ID' => 1,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
                 FIELD_CODE_NAME_UPPER=IMAGE_LINK
-                FIELD_INTRO=
+                FIELD_INTRO=<p>@ToDo implementar el uso del campo pre-formado images que es un JSON/ARRAY</p>
                 FIELD_DESCRIPTION_INI=
 
                 FIELD_DB=`` VARCHAR(200) DEFAULT NULL image_link
 
                 FIELD_NAME_LATEX=image\_link
                 FIELD_CODE_NAME_LATEX=image\_link
-                FIELD_DBCOMMENT_LATEX=
+                FIELD_DBCOMMENT_LATEX=@ToDo implementar el uso del campo pre-formado images que es un JSON/ARRAY
 
 
     */
@@ -1093,28 +1168,6 @@ function getFields(){
     $fields['extra10'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'energy_value',
-        'FIELD_CODE_NAME' => 'energy_value',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 37,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ENERGY_VALUE
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` DECIMAL(11,2) DEFAULT NULL energy_value
-
-                FIELD_NAME_LATEX=energy\_value
-                FIELD_CODE_NAME_LATEX=energy\_value
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['energy_value'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
         'FIELD_NAME' => 'owner_id',
         'FIELD_CODE_NAME' => 'owner_id',
         'FIELD_DESCRIPTION' => '',//
@@ -1138,6 +1191,28 @@ function getFields(){
 
     */
     $fields['owner_id'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'energy_value',
+        'FIELD_CODE_NAME' => 'energy_value',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 37,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ENERGY_VALUE
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` DECIMAL(11,2) DEFAULT NULL energy_value
+
+                FIELD_NAME_LATEX=energy\_value
+                FIELD_CODE_NAME_LATEX=energy\_value
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['energy_value'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'climate_value',

@@ -85,6 +85,9 @@ class RemcaTableHouses extends JTable
 				// Set ordering to last if ordering was 0
 				
 				$additional_order = '';	
+				$additional_order .= $this->_db->quoteName('id_lmunicipality').'=' . $this->_db->Quote($this->id_lmunicipality).' AND ';
+				$additional_order .= $this->_db->quoteName('id_lstate').'=' . $this->_db->Quote($this->id_lstate).' AND ';
+				$additional_order .= $this->_db->quoteName('id_country').'=' . $this->_db->Quote($this->id_country).' AND ';
 				$additional_order .= $this->_db->quoteName('price').'=' . $this->_db->Quote($this->price).' AND ';
 				$this->ordering = self::getNextOrder($additional_order.' state>=0');
 			}
@@ -206,6 +209,13 @@ class RemcaTableHouses extends JTable
 
 
 
+		if (isset($this->images) AND is_array($this->images))
+		{
+			$registry = new Registry;
+			$registry->loadArray($this->images);
+			$this->images = (string)$registry;
+			$registry = null; //release memory	
+		}		
 
 
 										
