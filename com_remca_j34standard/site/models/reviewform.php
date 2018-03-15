@@ -91,7 +91,7 @@ class RemcaModelReviewForm extends RemcaModelReview
 	 * 
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Review', $prefix = 'RemcaTable', $config = array())
+	public function getTable($type = 'Reviews', $prefix = 'RemcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}

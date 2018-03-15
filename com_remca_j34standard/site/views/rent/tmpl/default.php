@@ -79,6 +79,7 @@ $empty = $component->params->get('default_empty_field', '');
 	<?php endif; ?>
 
 	<?php
+		$can_edit = 0;$can_delete = 0;
 		$show_actions = false;
 		if ($this->params->get('show_rent_icons',1) >= 0) :
 			foreach ($this->items as $i => $item) :
@@ -128,14 +129,14 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
-					<?php if ($this->params->get('list_show_rent_fk_houseid',1)) : ?>
-						<th class="list-fk_houseid" id="tableOrderingfk_houseid">
-							<?php echo JTEXT::_('COM_REMCA_RENT_HEADING_FK_HOUSEID'); ?>
+					<?php if ($this->params->get('list_show_rent_id_house',1)) : ?>
+						<th class="list-id_house" id="tableOrderingid_house">
+							<?php echo JTEXT::_('COM_REMCA_RENT_HEADING_ID_HOUSE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_rent_fk_userid',1)) : ?>
-						<th class="list-fk_userid" id="tableOrderingfk_userid">
-							<?php echo JTEXT::_('COM_REMCA_RENT_HEADING_FK_USERID'); ?>
+					<?php if ($this->params->get('list_show_rent_id_user',1)) : ?>
+						<th class="list-id_user" id="tableOrderingid_user">
+							<?php echo JTEXT::_('COM_REMCA_RENT_HEADING_ID_USER'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_rent_rent_from',1)) : ?>
@@ -205,22 +206,22 @@ $empty = $component->params->get('default_empty_field', '');
 							</time>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_rent_fk_houseid',1)) : ?>
-						<td class="list-fk_houseid">
+					<?php if ($this->params->get('list_show_rent_id_house',1)) : ?>
+						<td class="list-id_house">
 							<?php 
-								if ($params->get('list_link_rent_fk_houseid')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->fk_houseid, 0)).'">'.JString::trim($item->h_house_name).'</a>';
+								if ($params->get('list_link_rent_id_house')) :
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->id_house, 0)).'">'.JString::trim($item->h_house_name).'</a>';
 								else :
 									echo JString::trim($item->h_house_name);
 								endif; 
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_rent_fk_userid',1)) : ?>
-						<td class="list-fk_userid">
+					<?php if ($this->params->get('list_show_rent_id_user',1)) : ?>
+						<td class="list-id_user">
 							<?php 
-								if ($params->get('list_link_rent_fk_userid')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getUserRoute($item->fk_userid, 0)).'">'.JString::trim($item->u_user_name).'</a>';
+								if ($params->get('list_link_rent_id_user')) :
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getUserRoute($item->id_user, 0)).'">'.JString::trim($item->u_user_name).'</a>';
 								else :
 									echo JString::trim($item->u_user_name);
 								endif; 

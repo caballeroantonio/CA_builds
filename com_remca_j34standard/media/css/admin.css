@@ -283,19 +283,19 @@ input.order-input
 }
 .icon-16-review
 {
-      background-image: url(../images/icon-16-review.png);
+      background-image: url(../images/icon-16-reviews.png);
 }
-.icon-16-review
+.icon-16-reviews
 {
-      background-image: url(../images/icon-16-review.png);
-}
-.icon-48-review
-{
-      background-image: url(../images/icon-48-review.png);
+      background-image: url(../images/icon-16-reviews.png);
 }
 .icon-48-review
 {
-      background-image: url(../images/icon-48-review.png);
+      background-image: url(../images/icon-48-reviews.png);
+}
+.icon-48-reviews
+{
+      background-image: url(../images/icon-48-reviews.png);
 }
 .icon-16-tracksource
 {
@@ -347,19 +347,19 @@ input.order-input
 }
 .icon-16-buyingrequest
 {
-      background-image: url(../images/icon-16-buying_request.png);
+      background-image: url(../images/icon-16-buying_requests.png);
 }
-.icon-16-buying_request
+.icon-16-buying_requests
 {
-      background-image: url(../images/icon-16-buying_request.png);
+      background-image: url(../images/icon-16-buying_requests.png);
 }
 .icon-48-buyingrequest
 {
-      background-image: url(../images/icon-48-buying_request.png);
+      background-image: url(../images/icon-48-buying_requests.png);
 }
-.icon-48-buying_request
+.icon-48-buying_requests
 {
-      background-image: url(../images/icon-48-buying_request.png);
+      background-image: url(../images/icon-48-buying_requests.png);
 }
 .icon-16-category
 {

@@ -190,21 +190,21 @@ class RemcaModelOrdersDetails extends JModelList
 		
 		
 
-		// Filter by and return name for fk_order_id level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
+		// Filter by and return name for id_order level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
 		$query->select($db->quoteName('o.name').' AS o_order_name');
 		$query->select($db->quoteName('o.id').' AS o_order_id');
 
-		$query->join('LEFT', $db->quoteName('#__rem_orders').' AS o ON '.$db->quoteName('o.id').' = '.$db->quoteName('a.fk_order_id'));	
-		// Filter by and return name for fk_user_id level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
+		$query->join('LEFT', $db->quoteName('#__rem_orders').' AS o ON '.$db->quoteName('o.id').' = '.$db->quoteName('a.id_order'));	
+		// Filter by and return name for id_user level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
 		$query->select($db->quoteName('u.name').' AS u_user_name');
 		$query->select($db->quoteName('u.id').' AS u_user_id');
 
-		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.fk_user_id'));	
-		// Filter by and return name for fk_house_id level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
+		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.id_user'));	
+		// Filter by and return name for id_house level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
 		$query->select($db->quoteName('h.name').' AS h_house_name');
 		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
 
-		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_house_id'));	
+		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
 		
 				
 		// Add the list ordering clause.

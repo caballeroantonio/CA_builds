@@ -10,7 +10,7 @@
  * 
  * The following Component Architect header section must remain in any distribution of this file
  *
- * @CAversion		Id: compobjectplural.php 571 2016-01-04 15:03:02Z BrianWade $
+ * @CAversion		Id: compobject.php 595 2016-01-13 17:55:47Z BrianWade $
  * @CAauthor		Component Architect (www.componentarchitect.com)
  * @CApackage		architectcomp
  * @CAsubpackage	architectcomp.site
@@ -25,23 +25,28 @@
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
  */
- 
+
 defined('_JEXEC') or die;
 
 /**
- * Review list controller class.
- *
+ * Review controller class.
+ * 
  */
-class RemcaControllerReview extends JControllerLegacy
+class RemcaControllerReview extends JControllerForm
 {
 	/**
-	 * @var		string	The prefix to use with controller messages.
+	 * @var    string	$view_item	The URL view item variable.
 	 */
-	protected $text_prefix = 'COM_REMCA_REVIEW';
+	protected $view_item = 'reviewform';
 	/**
-	 * @var		string	The name of the list view.
-	 */	
-	protected $view_list = 'review';
+	 * @var    string	$view_list	The URL view list variable.
+	 */
+	protected $view_list = 'reviews';
+	/**
+	 * 
+	 * @var    string	$url_var	The URL edit variable
+	 */
+	protected $url_var = 'a.id';
 	/**
 	 * Constructor
 	 *
@@ -50,39 +55,439 @@ class RemcaControllerReview extends JControllerLegacy
 	{
 		parent::__construct($config);
 
-	}	
+		$this->registerTask('apply',		'save');
+		$this->registerTask('save2new',		'save');
+	}
+
 	/**
 	 * Method to get a model object, loading it if required.
 	 *
-	 * @param   string  $name    The model name. Optional.
-	 * @param   string  $prefix  The class prefix. Optional.
-	 * @param   array   $config  Configuration array for model. Optional.
+	 * @param	string	$name	The model name. Optional.
+	 * @param	string	$prefix	The class prefix. Optional.
+	 * @param	array	$config	Configuration array for model. Optional.
 	 *
-	 * @return  object  The model.
+	 * @return	object	The model.
 	 * 
 	 */
-	public function getModel($name = 'Review', $prefix = 'RemcaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'reviewform', $prefix = '',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
+
 		return $model;
 	}
-                
-        /*
-         * Function that allows download database information
-         * @ToDo implementar generación de código
+	/**
+	 * Method to get the return page saved in session data.
+	 *
+	 * @param	string	$context	The context string used to store the return data
+	 *
+	 * @return	string	The url string for the return page
+	 * 
+	 */
+	protected function getReturnPage($context)
+	{
+		$app		= JFactory::getApplication();
+
+		if (!($return = $app->getUserState($context.'.return'))) 
+		{
+			return JUri::base();
+		}
+
+		$return = base64_decode($return);
+
+		if (!JUri::isInternal($return)) 
+		{
+			$return = JUri::base();
+		}
+
+		return $return;
+	}
+	/**
+	 * Method to set the return page as a saved entry in session data.
+	 *
+	 * @param	string	$context	The context string used to store the return data
+	 *
+	 * @return	void
+	 * 
+	 */
+	protected function setReturnPage($context)
+	{
+		$app		= JFactory::getApplication();
+
+		$return = $this->input->get('return', null, 'base64');
+		
+		if (empty($return) OR !JUri::isInternal(base64_decode($return)))
+		{
+			$return = base64_encode(JUri::base());
+		}
+		
+		$app->setUserState($context.'.return', $return);
+	}
+	/**
+	 * Method to clear the return page in session data.
+	 *
+	 * @param	string	$context	The context string used to store the return data
+	 *
+	 * @return	void
+	 * 
+	 */	
+	protected function clearReturnPage($context)
+	{
+		$app		= JFactory::getApplication();
+
+		$app->setUserState($context.'.return', null);
+	}
+	/**
+	 * Method to add a new record.
+	 *
+	 * @return  mixed  True if the Review can be added, a error object if not.
+	 *
+	 */
+	public function add()
+	{
+		$app		= JFactory::getApplication();
+		$context	= $this->option.'.edit.'.$this->context;
+
+
+		// Clear the record edit information from the session.
+		$app->setUserState($context.'.data',	null);
+
+		// Set the return page.
+		$this->setReturnPage($context);
+
+		$url = 'index.php?option='.$this->option.'&view='.$this->view_item.'&layout=edit'.$this->getRedirectToItemAppend();
+		$tmpl = JFactory::getApplication()->input->get('tmpl');
+		if($tmpl)
+			$url = "{$url}&tmpl={$tmpl}";
+
+		$redirect = JRoute::_($url, false);
+
+		$this->setRedirect($redirect);
+
+		return true;
+	}
+
+	/**
+	 * Method to edit a object
+	 *
+	 * Sets object ID in the session from the request, checks the item out, and then redirects to the edit page.
+	 * 
+	 * @param   string  $key     The name of the primary key of the URL variable.
+	 * @param   string  $url_var  The name of the URL variable if different from the primary key
+	 * (sometimes required to avoid router collisions).
+	 *
+	 * @return  boolean  True if access level check and checkout passes, false otherwise.
+	 *
+	 */
+	public function edit($key = 'id', $url_var = null)
+	{
+		
+		$app		= JFactory::getApplication();
+		$context	= $this->option.'.edit.'.$this->context;
+		$ids		= $this->input->get('cid', array(), 'array');
+
+		// Get the id of the group to edit.
+		$record_id =  (int) (empty($ids) ? $this->input->getInt('id') : array_pop($ids));
+
+
+		// Get the menu item model.
+		$model = $this->getModel('reviewform');
+		// Set the return url
+		$this->setReturnPage($context);
+
+		// Check that this is not a new item.
+
+		if ($record_id > 0) 
+		{
+			$item = $model->getItem($record_id);
+
+		}
+
+		// Check-out succeeded, register the ID for editing.
+		$this->holdEditId($context, $record_id);
+		$app->setUserState($context.'.data',	null);
+
+		$redirect = JRoute::_('index.php?option='.$this->option.'&view='.$this->view_item
+							.$this->getRedirectToItemAppend($record_id, $key), false);
+
+		$this->setRedirect($redirect);
+
+		return true;
+	}
+
+	/**
+	 * Method to cancel an edit
+	 *
+	 * Checks the item in, sets item ID in the session to null, and then redirects to the list page.
+	 * 
+	 * @param   string  $key  The name of the primary key of the URL variable.
+	 *
+	 * @return  boolean  True if access level checks pass, false otherwise.
+	 */
+	public function cancel($key = 'id')
+	{
+		// Check for request forgeries.
+		$this->checkToken();
+		
+		
+		$app		= JFactory::getApplication();
+		$model		= $this->getModel('reviewform');
+		$context	= $this->option.'.edit.'.$this->context;
+		$record_id	= $this->input->getInt('id');
+
+		if ($record_id) 
+		{
+			// Check we are holding the id in the edit list.
+			if (!$this->checkEditId($context, $record_id)) 
+			{
+				// Somehow the person just went to the form - we don't allow that.
+				$this->setMessage(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $record_id), 'error');
+				$this->setRedirect($this->getReturnPage($context));
+				
+				// Make sure return url is cleared
+				$this->clearReturnPage($context);	
+				return false;
+			}
+
+		}
+
+		// Clear the menu item edit information from the session.
+		$this->releaseEditId($context, $record_id);
+		$app->setUserState($context.'.data',	null);
+
+		// Redirect to the list screen.
+		$this->setRedirect($this->getReturnPage($context));
+		
+		// Make sure return url is cleared
+		$this->clearReturnPage($context);			
+		return true;
+	}
+	/**
+	 * Method to save the record
+	 *
+	 * @param   string  $key     The name of the primary key of the URL variable.
+	 * @param   string  $url_var  The name of the URL variable if different from the primary key (sometimes required to avoid router collisions).
+	 *
+	 * @return  boolean  True if successful, false otherwise.* 
+	 */
+	public function save($key = 'id', $url_var = null)
+	{
+		// Check for request forgeries.
+		$this->checkToken();
+		
+		
+		$app		= JFactory::getApplication();
+		// Think I need to leave this as JRequest for now as the App input only returns a copy of the post data so any changes will be lost
+		// Replace with direct POST variable after some checking
+		$data		= JRequest::getVar('jform', array(), 'post', 'array');
+		$model		= $this->getModel('reviewform');
+		$task		= $this->getTask();
+		$context	= $this->option.'.edit.'.$this->context;
+		$record_id = $this->input->getInt('id',0);	
+		if (!$this->checkEditId($context, $record_id)) 
+		{
+			// Somehow the person just went to the form and saved it - we don't allow that.
+			$this->setMessage(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $record_id), 'error');
+			$this->setRedirect($this->getReturnPage($context));
+			
+			// Make sure return url is cleared
+			$this->clearReturnPage($context);	
+			return false;
+		}
+
+		// Populate the row id from the session.
+		$data['id'] = $record_id;
+
+		// Validate the posted data.
+		$form	= $model->getForm();
+		if (!$form) 
+		{
+			JError::raiseError(500, $model->getError());
+
+			return false;
+		}
+		$datastore = $data;		
+		$data	= $model->validate($form, $data);
+
+		// Check for validation errors.
+		if ($data === false) 
+		{
+			// Get the validation messages.
+			$errors	= $model->getErrors();
+
+			// Push up to three validation messages out to the user.
+			for ($i = 0, $n = count($errors); $i < $n AND $i < 3; $i++)
+			{
+				if (JError::isError($errors[$i])) 
+				{
+					$app->enqueueMessage($errors[$i]->getMessage(), 'warning');
+				}
+				else 
+				{
+					$app->enqueueMessage($errors[$i], 'warning');
+				}
+			}
+
+			// Save the data in the session.
+			$app->setUserState($context.'.data', $datastore);
+
+			// Redirect back to the edit screen.
+			$this->setRedirect(JRoute::_(
+				'index.php?option='.$this->option.'&view='.$this->view_item
+				. $this->getRedirectToItemAppend($record_id, $key), false
+				)
+			);
+			return false;
+		}
+
+		// Attempt to save the data.
+		if (!$model->save($data)) 
+		{
+			// Save the data in the session.
+			$app->setUserState($context.'.data', $data);
+
+			// Redirect back to the edit screen.
+			$this->setMessage(JText::sprintf('JLIB_APPLICATION_ERROR_SAVE_FAILED', $model->getError()), 'warning');
+			$this->setRedirect(JRoute::_(
+				'index.php?option='.$this->option.'&view='.$this->view_item
+				. $this->getRedirectToItemAppend($record_id, $key), false
+				)
+			);
+			return false;
+		}
+
+
+		if ($record_id == 0) 
+		{
+			$this->setMessage(JText::_('COM_REMCA_REVIEWS_SUBMIT_SAVE_SUCCESS'));
+		} 
+		else 
+		{
+			$this->setMessage(JText::_('COM_REMCA_REVIEWS_SAVE_SUCCESS'));
+		}
+
+		// Redirect the user and adjust session state based on the chosen task.
+		switch ($task)
+		{
+			case 'apply':
+				// Set the row data in the session.
+				$record_id = $model->getState('review.id');
+				$this->holdEditId($context, $record_id);
+				$app->setUserState($context.'.data',	null);
+
+				// Redirect back to the edit screen.
+				$this->setRedirect(JRoute::_(
+					'index.php?option='.$this->option.'&view='.$this->view_item
+					. $this->getRedirectToItemAppend($record_id, $key), false
+					)
+				);				
+				break;
+
+			case 'save2new':
+				// Clear the row id and data in the session.
+				$this->releaseEditId($context, $record_id);
+				$app->setUserState($context.'.data',	null);
+
+				// Redirect back to the edit screen.
+				$this->setRedirect(JRoute::_(
+					'index.php?option='.$this->option.'&view='.$this->view_item
+					.'&layout=edit', false
+					)
+				);
+			break;
+
+			default:
+				// Clear the row id and data in the session.
+				$this->releaseEditId($context, $record_id);
+				$app->setUserState($context.'.data',	null);
+
+				// Redirect to the list screen.
+				$this->setRedirect($this->getReturnPage($context));
+				
+				// Make sure return url is cleared
+				$this->clearReturnPage($context);					
+				break;
+		}
+		// Invoke the postSave method to allow for the child class to access the model.
+		$this->postSaveHook($model, $data);
+
+		return true;		
+	}
+
+	/**
+	 * Method to delete a object
+	 *
+	 * Sets object ID in the session from the request and then deletes the object.
+	 *
+	 * @return	boolean	True if the record can be edited, false if not.
+	 */
+	public function delete()
+	{
+		// Check for request forgeries
+		$this->checkToken();
+		
+		$app		= JFactory::getApplication();
+		$context	= "$this->option.delete.$this->context";
+		$ids		= $this->input->get('cid', array(), 'array');
+
+		// Get the id of the group to edit.
+		$id =  (int) (empty($ids) ? $this->input->getInt('id') : array_pop($ids));
+
+
+		// Get the menu item model.
+		$model = $this->getModel('review');
+
+		// Check that this is not a new item.
+
+		if ($id > 0) 
+		{
+			
+			$trash_state = -2;
+			if($model->publish($id, $trash_state))
+			{
+				$this->setMessage(JText::_('COM_REMCA_REVIEWS_DELETE_SUCCESS'));
+				
+			}
+			else
+			{
+				$this->setMessage(JText::_('COM_REMCA_REVIEWS_DELETE_FAILED'));
+			}
+		}
+
+		$this->setReturnPage($context);
+
+		$this->setRedirect($this->getReturnPage($context));
+		
+		// Make sure return url is cleared
+		$this->clearReturnPage($context);	
+		
+		return true;
+	}	
+	/**
+	 * Function that allows child controller access to model data after the data has been saved.
+	 *
+	 * @param   JModelLegacy  $model  The data model object.
+	 * @param   array         $validData   The validated data.
+	 *
+	 * @return  void
+	 *
+	 */
+	protected function postSaveHook(JModelLegacy $model, $valid_data = array())
+	{
+		return;
+	}	
+	
+	
+        /**
+         * Redirect to History view
+         * Jform->getInput('contenthistory') no es re-utilizable en vista plural
          */
-        public function export(){
-			//from outside:
-			//$model = JModelLegacy::getInstance('ReviewForm','RemcaModel', array('ignore_request' => FALSE));
-			
-            $model = $this->getModel('Review','RemcaModel',array('ignore_request' => FALSE));
-			
-			//states
-//			$model->setState('list.ordering', 'a.ordering');//override
-//			$model->setState('list.direction', 'ASC');//override
-//			$model->setState('list.select', 'a.*');//override
-			$model->setState('filter.state', 1);
-            $query = $model->getListQuery4Export();
-            echo($query);
+        public function showHistory(){
+            $item_id = $this->input->getInt('item_id');
+            $model = $this->getModel();
+            $typeId = JTable::getInstance('Contenttype')->getTypeId($model->typeAlias);
+            $token = JSession::getFormToken();
+            
+            $this->setRedirect('index.php?option=com_contenthistory&view=history&layout=modal&tmpl=component'
+                    . "&item_id={$item_id}&type_id={$typeId}&type_alias={$model->typeAlias}&{$token}=1");
         }
 }

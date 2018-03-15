@@ -56,18 +56,18 @@ class RemcaModelHouse extends JModelItem
 			$config['house_filter_fields'] = array(
 				'id', 'a.id',
 				'name', 'a.name',
-				'id_lmunicipality', 'a.id_lmunicipality',
-				'm_lmunicipality_name', 'm.lmunicipality_name',
-				'id_lstate', 'a.id_lstate',
-				's_lstate_name', 's.lstate_name',
 				'id_country', 'a.id_country',
 				'c1_country_name', 'c1.country_name',
+				'id_lstate', 'a.id_lstate',
+				's_lstate_name', 's.lstate_name',
+				'id_lmunicipality', 'a.id_lmunicipality',
+				'm_lmunicipality_name', 'm.lmunicipality_name',
 				'price', 'a.price',
-				'id_lmunicipality','a.id_lmunicipality',
-				'id_lstate','a.id_lstate',
 				'id_country','a.id_country',
+				'id_lstate','a.id_lstate',
+				'id_lmunicipality','a.id_lmunicipality',
 				'sid','a.sid',
-				'fk_rentid','a.fk_rentid',
+				'id_rent','a.id_rent',
 				'associate_house','a.associate_house',
 				'houseid','a.houseid',
 				'link','a.link',
@@ -331,18 +331,18 @@ class RemcaModelHouse extends JModelItem
 				}
 				
 					
-				// Filter by and return name for id_lmunicipality level.
-				$query->select($db->quoteName('m.name').' AS m_lmunicipality_name');
-				$query->join('LEFT', $db->quoteName('#__rem_lmunicipalities').' AS m ON '.$db->quoteName('m.id').' = '.$db->quoteName('a.id_lmunicipality'));	
-				// Filter by and return name for id_lstate level.
-				$query->select($db->quoteName('s.name').' AS s_lstate_name');
-				$query->join('LEFT', $db->quoteName('#__rem_lstates').' AS s ON '.$db->quoteName('s.id').' = '.$db->quoteName('a.id_lstate'));	
 				// Filter by and return name for id_country level.
 				$query->select($db->quoteName('c1.name').' AS c1_country_name');
 				$query->join('LEFT', $db->quoteName('#__rem_countries').' AS c1 ON '.$db->quoteName('c1.id').' = '.$db->quoteName('a.id_country'));	
-				// Filter by and return name for fk_rentid level.
+				// Filter by and return name for id_lstate level.
+				$query->select($db->quoteName('s.name').' AS s_lstate_name');
+				$query->join('LEFT', $db->quoteName('#__rem_lstates').' AS s ON '.$db->quoteName('s.id').' = '.$db->quoteName('a.id_lstate'));	
+				// Filter by and return name for id_lmunicipality level.
+				$query->select($db->quoteName('m.name').' AS m_lmunicipality_name');
+				$query->join('LEFT', $db->quoteName('#__rem_lmunicipalities').' AS m ON '.$db->quoteName('m.id').' = '.$db->quoteName('a.id_lmunicipality'));	
+				// Filter by and return name for id_rent level.
 				$query->select($db->quoteName('r.name').' AS r_rent_name');
-				$query->join('LEFT', $db->quoteName('#__rem_rent').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.fk_rentid'));	
+				$query->join('LEFT', $db->quoteName('#__rem_rent').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.id_rent'));	
 				// Filter by and return name for owner_id level.
 				$query->select($db->quoteName('u.name').' AS u_user_name');
 				$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.owner_id'));	

@@ -177,11 +177,11 @@ class RemcaHelper extends JHelperContent
 			$active
 		);
 	
-		$active = $view_name == 'review'? true : false;
+		$active = $view_name == 'reviews'? true : false;
 		JHtmlSidebar::addEntry(
-			JText::_('COM_REMCA_REVIEW_SUBMENU'),
-			'index.php?option=com_remca&view=review',
-			$view_name == 'review',
+			JText::_('COM_REMCA_REVIEWS_SUBMENU'),
+			'index.php?option=com_remca&view=reviews',
+			$view_name == 'reviews',
 			$active
 		);
 	
@@ -209,11 +209,11 @@ class RemcaHelper extends JHelperContent
 			$active
 		);
 	
-		$active = $view_name == 'buying_request'? true : false;
+		$active = $view_name == 'buying_requests'? true : false;
 		JHtmlSidebar::addEntry(
-			JText::_('COM_REMCA_BUYING_REQUEST_SUBMENU'),
-			'index.php?option=com_remca&view=buying_request',
-			$view_name == 'buying_request',
+			JText::_('COM_REMCA_BUYING_REQUESTS_SUBMENU'),
+			'index.php?option=com_remca&view=buying_requests',
+			$view_name == 'buying_requests',
 			$active
 		);
 	

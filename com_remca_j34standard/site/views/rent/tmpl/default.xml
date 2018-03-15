@@ -187,10 +187,10 @@
 				size="15"
 			/>
             <field
-                name="list_show_rent_fk_houseid"
+                name="list_show_rent_id_house"
                 type="radio"
-                label="COM_REMCA_RENT_LIST_FK_HOUSEID_LABEL"
-				description="COM_REMCA_RENT_LIST_FK_HOUSEID_DESC"
+                label="COM_REMCA_RENT_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_RENT_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -198,10 +198,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="list_show_rent_fk_userid"
+                name="list_show_rent_id_user"
                 type="radio"
-                label="COM_REMCA_RENT_LIST_FK_USERID_LABEL"
-				description="COM_REMCA_RENT_LIST_FK_USERID_DESC"
+                label="COM_REMCA_RENT_LIST_ID_USER_LABEL"
+				description="COM_REMCA_RENT_LIST_ID_USER_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -439,10 +439,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="show_rent_fk_houseid"
+                name="show_rent_id_house"
                 type="radio"
-                label="COM_REMCA_RENT_SHOW_FIELD_FK_HOUSEID_LABEL"
-                description="COM_REMCA_RENT_SHOW_FIELD_FK_HOUSEID_DESC"
+                label="COM_REMCA_RENT_SHOW_FIELD_ID_HOUSE_LABEL"
+                description="COM_REMCA_RENT_SHOW_FIELD_ID_HOUSE_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -450,10 +450,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_rent_fk_userid"
+                name="show_rent_id_user"
                 type="radio"
-                label="COM_REMCA_RENT_SHOW_FIELD_FK_USERID_LABEL"
-                description="COM_REMCA_RENT_SHOW_FIELD_FK_USERID_DESC"
+                label="COM_REMCA_RENT_SHOW_FIELD_ID_USER_LABEL"
+                description="COM_REMCA_RENT_SHOW_FIELD_ID_USER_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>

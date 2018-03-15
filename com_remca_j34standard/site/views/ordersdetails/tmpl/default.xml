@@ -187,10 +187,10 @@
 				size="15"
 			/>
             <field
-                name="list_show_ordersdetail_fk_order_id"
+                name="list_show_ordersdetail_id_order"
                 type="radio"
-                label="COM_REMCA_ORDERS_DETAILS_LIST_FK_ORDER_ID_LABEL"
-				description="COM_REMCA_ORDERS_DETAILS_LIST_FK_ORDER_ID_DESC"
+                label="COM_REMCA_ORDERS_DETAILS_LIST_ID_ORDER_LABEL"
+				description="COM_REMCA_ORDERS_DETAILS_LIST_ID_ORDER_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -198,10 +198,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="list_show_ordersdetail_fk_user_id"
+                name="list_show_ordersdetail_id_user"
                 type="radio"
-                label="COM_REMCA_ORDERS_DETAILS_LIST_FK_USER_ID_LABEL"
-				description="COM_REMCA_ORDERS_DETAILS_LIST_FK_USER_ID_DESC"
+                label="COM_REMCA_ORDERS_DETAILS_LIST_ID_USER_LABEL"
+				description="COM_REMCA_ORDERS_DETAILS_LIST_ID_USER_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -253,10 +253,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="list_show_ordersdetail_fk_house_id"
+                name="list_show_ordersdetail_id_house"
                 type="radio"
-                label="COM_REMCA_ORDERS_DETAILS_LIST_FK_HOUSE_ID_LABEL"
-				description="COM_REMCA_ORDERS_DETAILS_LIST_FK_HOUSE_ID_DESC"
+                label="COM_REMCA_ORDERS_DETAILS_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_ORDERS_DETAILS_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -527,10 +527,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="show_ordersdetail_fk_order_id"
+                name="show_ordersdetail_id_order"
                 type="radio"
-                label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_ORDER_ID_LABEL"
-                description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_ORDER_ID_DESC"
+                label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_ORDER_LABEL"
+                description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_ORDER_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -538,10 +538,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_ordersdetail_fk_user_id"
+                name="show_ordersdetail_id_user"
                 type="radio"
-                label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_USER_ID_LABEL"
-                description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_USER_ID_DESC"
+                label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_USER_LABEL"
+                description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_USER_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -593,10 +593,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_ordersdetail_fk_house_id"
+                name="show_ordersdetail_id_house"
                 type="radio"
-                label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_HOUSE_ID_LABEL"
-                description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_HOUSE_ID_DESC"
+                label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_HOUSE_LABEL"
+                description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_HOUSE_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>

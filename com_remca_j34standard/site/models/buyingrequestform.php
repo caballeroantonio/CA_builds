@@ -91,7 +91,7 @@ class RemcaModelBuyingRequestForm extends RemcaModelBuyingRequest
 	 * 
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'BuyingRequest', $prefix = 'RemcaTable', $config = array())
+	public function getTable($type = 'BuyingRequests', $prefix = 'RemcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -119,11 +119,11 @@ class RemcaModelBuyingRequestForm extends RemcaModelBuyingRequest
 	}
 
 	/**
-	 * Method to get buying_request data.
+	 * Method to get buying requests data.
 	 *
-	 * @param	integer	$item_id	The id of the buying_request.
+	 * @param	integer	$item_id	The id of the buying requests.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Buying_request item data object on success, false on failure.
+	 * @return	mixed	Buying Requests item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

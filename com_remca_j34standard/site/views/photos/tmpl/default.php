@@ -80,6 +80,7 @@ $empty = $component->params->get('default_empty_field', '');
 	<?php endif; ?>
 
 	<?php
+		$can_edit = 0;$can_delete = 0;
 		$show_actions = false;
 		if ($this->params->get('show_photo_icons',1) >= 0) :
 			foreach ($this->items as $i => $item) :
@@ -126,9 +127,9 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
-					<?php if ($this->params->get('list_show_photo_fk_houseid',1)) : ?>
-						<th class="list-fk_houseid" id="tableOrderingfk_houseid">
-							<?php echo JTEXT::_('COM_REMCA_PHOTOS_HEADING_FK_HOUSEID'); ?>
+					<?php if ($this->params->get('list_show_photo_id_house',1)) : ?>
+						<th class="list-id_house" id="tableOrderingid_house">
+							<?php echo JTEXT::_('COM_REMCA_PHOTOS_HEADING_ID_HOUSE'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_photo_thumbnail_img',1)) : ?>
@@ -170,11 +171,11 @@ $empty = $component->params->get('default_empty_field', '');
 							</time>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_photo_fk_houseid',1)) : ?>
-						<td class="list-fk_houseid">
+					<?php if ($this->params->get('list_show_photo_id_house',1)) : ?>
+						<td class="list-id_house">
 							<?php 
-								if ($params->get('list_link_photo_fk_houseid')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->fk_houseid, 0)).'">'.JString::trim($item->h_house_name).'</a>';
+								if ($params->get('list_link_photo_id_house')) :
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->id_house, 0)).'">'.JString::trim($item->h_house_name).'</a>';
 								else :
 									echo JString::trim($item->h_house_name);
 								endif; 

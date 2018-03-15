@@ -63,11 +63,11 @@
     >
 
         <field
-            id="fk_houseid"
-            name="fk_houseid"
+            id="id_house"
+            name="id_house"
             type="modal_houses"
-            label="COM_REMCA_RENT_SAL_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_RENT_SAL_FIELD_FK_HOUSEID_DESC"
+            label="COM_REMCA_RENT_SAL_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_RENT_SAL_FIELD_ID_HOUSE_DESC"
             class="modal"
 			default="'0'"
         >

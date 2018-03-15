@@ -30,7 +30,7 @@ defined('_JEXEC') or die;
 
 JLoader::register('ContentHelper', JPATH_ADMINISTRATOR . '/components/com_remca/helpers/remca.php');
 /**
- * Buying_request component helper.
+ * Buying Requests component helper.
  *
  */
 abstract class JHtmlBuyingRequestAdministrator

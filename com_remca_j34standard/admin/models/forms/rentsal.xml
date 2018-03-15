@@ -57,10 +57,10 @@
         label="COM_REMCA_RENT_SAL_FIELDSET_RENT_SAL_FS_LABEL"
         description="COM_REMCA_RENT_SAL_FIELDSET_RENT_SAL_FS_DESC"
     >
-        <field name="fk_houseid"
+        <field name="id_house"
             type="modal_houses"
-            label="COM_REMCA_RENT_SAL_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_RENT_SAL_FIELD_FK_HOUSEID_DESC"
+            label="COM_REMCA_RENT_SAL_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_RENT_SAL_FIELD_ID_HOUSE_DESC"
             class="modal"
 			default="'0'"
         >

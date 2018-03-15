@@ -64,17 +64,17 @@ $empty = $component->params->get('default_empty_field', '');
 		</div>
 		<hr class="hr-condensed">
 		<div class="filters pull-left">
-			<select name="filter_id_lmunicipality" class="input-medium" onchange="this.form.submit()">
-				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_M_LMUNICIPALITY');?></option>
-				<?php echo JHtml::_('select.options', $this->lmunicipalities, 'value', 'text', $this->state->get('filter.id_lmunicipality'));?>
+			<select name="filter_id_country" class="input-medium" onchange="this.form.submit()">
+				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_C1_COUNTRY');?></option>
+				<?php echo JHtml::_('select.options', $this->countries, 'value', 'text', $this->state->get('filter.id_country'));?>
 			</select>
 			<select name="filter_id_lstate" class="input-medium" onchange="this.form.submit()">
 				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_S_LSTATE');?></option>
 				<?php echo JHtml::_('select.options', $this->lstates, 'value', 'text', $this->state->get('filter.id_lstate'));?>
 			</select>
-			<select name="filter_id_country" class="input-medium" onchange="this.form.submit()">
-				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_C1_COUNTRY');?></option>
-				<?php echo JHtml::_('select.options', $this->countries, 'value', 'text', $this->state->get('filter.id_country'));?>
+			<select name="filter_id_lmunicipality" class="input-medium" onchange="this.form.submit()">
+				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_M_LMUNICIPALITY');?></option>
+				<?php echo JHtml::_('select.options', $this->lmunicipalities, 'value', 'text', $this->state->get('filter.id_lmunicipality'));?>
 			</select>
 			<select name="filter_price" class="input-medium js-stools-field-order" onchange="this.form.submit()">
 				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_PRICE');?></option>
@@ -113,13 +113,13 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php echo JHtml::_('grid.sort',  'COM_REMCA_HEADING_NAME', 'a.name', $list_dirn, $list_order); ?>
 				</th>
 				<th width="10%" class="center nowrap">
-					<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LMUNICIPALITY'); ?>						
+					<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_COUNTRY'); ?>						
 				</th>	
 				<th width="10%" class="center nowrap">
 					<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LSTATE'); ?>						
 				</th>	
 				<th width="10%" class="center nowrap">
-					<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_COUNTRY'); ?>						
+					<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LMUNICIPALITY'); ?>						
 				</th>	
 				<th width="10%" class="center nowrap">
 					<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>						
@@ -164,7 +164,7 @@ $empty = $component->params->get('default_empty_field', '');
 				<td class="center">
 					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
 						<?php 
-							echo JString::trim($item->m_lmunicipality_name); 
+							echo JString::trim($item->c1_country_name); 
 						?>					
 					</a>		
 				</td>	
@@ -178,7 +178,7 @@ $empty = $component->params->get('default_empty_field', '');
 				<td class="center">
 					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
 						<?php 
-							echo JString::trim($item->c1_country_name); 
+							echo JString::trim($item->m_lmunicipality_name); 
 						?>					
 					</a>		
 				</td>	

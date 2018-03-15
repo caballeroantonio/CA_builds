@@ -104,7 +104,7 @@ if ( $this->params->get('location_map',1)){
             if ($this->params->get('show_houserequest',0)) {
                 $data1 = JFactory::getDBO();
                 $query = "SELECT  b.rent_from , b.rent_until  FROM #__rem_rent AS b "
-                 . " LEFT JOIN #__rem_houses AS c ON b.fk_houseid = c.id "
+                 . " LEFT JOIN #__rem_houses AS c ON b.id_house = c.id "
                   . " WHERE c.id=" . $row->id
                    . " AND c.state='1' AND c.approved='1' AND b.rent_return IS NULL";
                 $data1->setQuery($query);
@@ -179,7 +179,7 @@ if ( $this->params->get('location_map',1)){
                         <?php
         if ($this->params->get('show_pricerequest',0)) {
 ?>
-        <?php if(!incorrect_price($row->price)){ ?> 
+        <?php if(!RemcaHelper::incorrect_price($row->price)){ ?> 
                         <div class="price">
                         <?php
             if ($this->params->get('price_unit_show',1) == '1') {

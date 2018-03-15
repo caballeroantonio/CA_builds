@@ -38,9 +38,21 @@ INSERT INTO `#__categories` (`asset_id`,`parent_id`,`lft`,`rgt`,`level`,`path`,`
 SET FOREIGN_KEY_CHECKS=0;
 SET SESSION sql_mode='NO_AUTO_VALUE_ON_ZERO';
 
+--					
+-- CUSTOM CODE es necesario modificar ca.fields.mysql_size para que acepte INT UNSIGNED porque de otro modo no se pueden los constraints					
+--
+
 #[%%START_CUSTOM_CODE%%]
 INSERT IGNORE INTO `#__users` (`id`, `name`, `username`, `email`) VALUES ('0', 'undefined', 'undefined', 'undefined');
 #[%%END_CUSTOM_CODE%%]
+
+SET FOREIGN_KEY_CHECKS=1;
+SET SESSION sql_mode='';
+
+
+
+SET FOREIGN_KEY_CHECKS=0;
+SET SESSION sql_mode='NO_AUTO_VALUE_ON_ZERO';
 
 INSERT IGNORE INTO `#__rem_houses` (`id`, `name`, `description`, `ordering`, `state`) VALUES (0, "undefined", "undefined default option", 0, 0);
 
@@ -89,17 +101,13 @@ INSERT IGNORE INTO `#__rem_lstates` (`id`, `name`, `ordering`, `state`) VALUES (
 INSERT IGNORE INTO `#__rem_countries` (`id`, `name`, `ordering`, `state`) VALUES (0, "undefined", 0, 0);
 
 INSERT IGNORE INTO `#__rem_countries` (`id`, `name`, `ordering`, `state`) VALUES (0, "undefined", 0, 0);
-
---					
--- CUSTOM CODE es necesario modificar ca.fields.mysql_size para que acepte INT UNSIGNED porque de otro modo no se pueden los constraints					
---
-
-ALTER TABLE `#__rem_buying_request` ADD CONSTRAINT `fk2919_fk_houseid`
-FOREIGN KEY (`fk_houseid`) REFERENCES `#__rem_houses` (`id`)
+					
+ALTER TABLE `#__rem_buying_requests` ADD CONSTRAINT `fk2919_id_house`
+FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_buying_request` ADD CONSTRAINT `fk2920_fk_userid`
-FOREIGN KEY (`fk_userid`) REFERENCES `#__users` (`id`)
+ALTER TABLE `#__rem_buying_requests` ADD CONSTRAINT `fk2920_id_user`
+FOREIGN KEY (`id_user`) REFERENCES `#__users` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
 ALTER TABLE `#__rem_categories` ADD CONSTRAINT `fk2927_iditem`
@@ -118,80 +126,80 @@ ALTER TABLE `#__rem_const_language` ADD CONSTRAINT `fk2932_fk_languagesid`
 FOREIGN KEY (`fk_languagesid`) REFERENCES `#__rem_languages` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_feature_houses` ADD CONSTRAINT `fk2937_fk_houseid`
-FOREIGN KEY (`fk_houseid`) REFERENCES `#__rem_houses` (`id`)
+ALTER TABLE `#__rem_feature_houses` ADD CONSTRAINT `fk2937_id_house`
+FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_feature_houses` ADD CONSTRAINT `fk2938_fk_featureid`
-FOREIGN KEY (`fk_featureid`) REFERENCES `#__rem_feature` (`id`)
+ALTER TABLE `#__rem_feature_houses` ADD CONSTRAINT `fk2938_id_featured`
+FOREIGN KEY (`id_featured`) REFERENCES `#__rem_feature` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_houses` ADD CONSTRAINT `fk2941_fk_rentid`
-FOREIGN KEY (`fk_rentid`) REFERENCES `#__rem_rent` (`id`)
+ALTER TABLE `#__rem_houses` ADD CONSTRAINT `fk2941_id_rent`
+FOREIGN KEY (`id_rent`) REFERENCES `#__rem_rent` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
 ALTER TABLE `#__rem_houses` ADD CONSTRAINT `fk2990_owner_id`
 FOREIGN KEY (`owner_id`) REFERENCES `#__users` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_orders` ADD CONSTRAINT `fk3010_fk_user_id`
-FOREIGN KEY (`fk_user_id`) REFERENCES `#__users` (`id`)
+ALTER TABLE `#__rem_orders` ADD CONSTRAINT `fk3010_id_user`
+FOREIGN KEY (`id_user`) REFERENCES `#__users` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_orders` ADD CONSTRAINT `fk3015_fk_house_id`
-FOREIGN KEY (`fk_house_id`) REFERENCES `#__rem_houses` (`id`)
+ALTER TABLE `#__rem_orders` ADD CONSTRAINT `fk3015_id_house`
+FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_orders_details` ADD CONSTRAINT `fk3024_fk_order_id`
-FOREIGN KEY (`fk_order_id`) REFERENCES `#__rem_orders` (`id`)
+ALTER TABLE `#__rem_orders_details` ADD CONSTRAINT `fk3024_id_order`
+FOREIGN KEY (`id_order`) REFERENCES `#__rem_orders` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_orders_details` ADD CONSTRAINT `fk3025_fk_user_id`
-FOREIGN KEY (`fk_user_id`) REFERENCES `#__users` (`id`)
+ALTER TABLE `#__rem_orders_details` ADD CONSTRAINT `fk3025_id_user`
+FOREIGN KEY (`id_user`) REFERENCES `#__users` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_orders_details` ADD CONSTRAINT `fk3030_fk_house_id`
-FOREIGN KEY (`fk_house_id`) REFERENCES `#__rem_houses` (`id`)
+ALTER TABLE `#__rem_orders_details` ADD CONSTRAINT `fk3030_id_house`
+FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_photos` ADD CONSTRAINT `fk3040_fk_houseid`
-FOREIGN KEY (`fk_houseid`) REFERENCES `#__rem_houses` (`id`)
+ALTER TABLE `#__rem_photos` ADD CONSTRAINT `fk3040_id_house`
+FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_rent` ADD CONSTRAINT `fk3044_fk_houseid`
-FOREIGN KEY (`fk_houseid`) REFERENCES `#__rem_houses` (`id`)
+ALTER TABLE `#__rem_rent` ADD CONSTRAINT `fk3044_id_house`
+FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_rent` ADD CONSTRAINT `fk3045_fk_userid`
-FOREIGN KEY (`fk_userid`) REFERENCES `#__users` (`id`)
+ALTER TABLE `#__rem_rent` ADD CONSTRAINT `fk3045_id_user`
+FOREIGN KEY (`id_user`) REFERENCES `#__users` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_rent_request` ADD CONSTRAINT `fk3052_fk_houseid`
-FOREIGN KEY (`fk_houseid`) REFERENCES `#__rem_houses` (`id`)
+ALTER TABLE `#__rem_rent_request` ADD CONSTRAINT `fk3052_id_house`
+FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_rent_request` ADD CONSTRAINT `fk3053_fk_userid`
-FOREIGN KEY (`fk_userid`) REFERENCES `#__users` (`id`)
+ALTER TABLE `#__rem_rent_request` ADD CONSTRAINT `fk3053_id_user`
+FOREIGN KEY (`id_user`) REFERENCES `#__users` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_rent_sal` ADD CONSTRAINT `fk3061_fk_houseid`
-FOREIGN KEY (`fk_houseid`) REFERENCES `#__rem_houses` (`id`)
+ALTER TABLE `#__rem_rent_sal` ADD CONSTRAINT `fk3061_id_house`
+FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_review` ADD CONSTRAINT `fk3072_fk_houseid`
-FOREIGN KEY (`fk_houseid`) REFERENCES `#__rem_houses` (`id`)
+ALTER TABLE `#__rem_reviews` ADD CONSTRAINT `fk3072_id_house`
+FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_review` ADD CONSTRAINT `fk3073_fk_userid`
-FOREIGN KEY (`fk_userid`) REFERENCES `#__users` (`id`)
+ALTER TABLE `#__rem_reviews` ADD CONSTRAINT `fk3073_id_user`
+FOREIGN KEY (`id_user`) REFERENCES `#__users` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_track_source` ADD CONSTRAINT `fk3081_fk_house_id`
-FOREIGN KEY (`fk_house_id`) REFERENCES `#__rem_houses` (`id`)
+ALTER TABLE `#__rem_track_source` ADD CONSTRAINT `fk3081_id_house`
+FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_video_source` ADD CONSTRAINT `fk3091_fk_house_id`
-FOREIGN KEY (`fk_house_id`) REFERENCES `#__rem_houses` (`id`)
+ALTER TABLE `#__rem_video_source` ADD CONSTRAINT `fk3091_id_house`
+FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
 ALTER TABLE `#__rem_lmunicipalities` ADD CONSTRAINT `fk3447_id_lstate`
@@ -218,9 +226,5 @@ ALTER TABLE `#__rem_lmunicipalities` ADD CONSTRAINT `fk3463_id_country`
 FOREIGN KEY (`id_country`) REFERENCES `#__rem_countries` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 					
---
--- CUSTOM CODE
---				
-
 SET FOREIGN_KEY_CHECKS=1;
 SET SESSION sql_mode='';

@@ -29,19 +29,18 @@
 defined('_JEXEC') or die;
 
 /**
- * Frontpage View class
+ * HTML Review View class for the RealEstateManagerCA component
  *
  */
 class RemcaViewReview extends JViewLegacy
 {
-	protected $items;
-	protected $pagination;
-	protected $state;
 	protected $item;
-
-	protected $lead_items = array();
-	protected $intro_items = array();
-	protected $link_items = array();
+	protected $params;
+	protected $print;
+	protected $state;
+	protected $user;
+	protected $return_page;
+	protected $form;
 
 	/**
 	 * Execute and display a template script.
@@ -49,61 +48,121 @@ class RemcaViewReview extends JViewLegacy
 	 * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
 	 *
 	 * @return  mixed  A string if successful, otherwise a Error object.
-	 */
+	 */	
 	public function display($tpl = null)
 	{
 		
-		$app = JFactory::getApplication();
-		$state		= $this->get('State');
-		$params		= $state->params;
-		$items 		= $this->get('Items');
-		$pagination	= $this->get('Pagination');
-			
-		$dispatcher	= JEventDispatcher::getInstance();		
+		$app		= JFactory::getApplication();
+		$user		= JFactory::getUser();
+		$user_id	= $user->get('id');
+		$dispatcher = JEventDispatcher::getInstance();
+
+		$this->state	= $this->get('State');
+		$this->item		= $this->get('Item');
+		$this->print	= $app->input->getBool('print');
+		$this->user		= $user;
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
 		{
 			JError::raiseWarning(500, implode("\n", $errors));
+
 			return false;
 		}
 
-		// PREPARE THE DATA
-		// Compute the review slugs and set the trigger events.
-		foreach ($items as $i => &$item)
+		// Create a shortcut for $item.
+		$item = $this->item;
+			
+		// Add router helpers.
+		$item->slug = $item->id;
+		
+		
+		// Merge review params. If this is single-review view, menu params override review params
+		// Otherwise, review params override menu item params
+		$this->params	= $this->state->get('params');
+		$active	= $app->getMenu()->getActive();
+		$temp	= clone ($this->params);
+
+
+		// Check to see which parameters should take priority
+		if ($active)
 		{
-			// Add router helpers.
-			$item->slug = $item->id;
-			
-			//
-			// Process the remca plugins.
-			//
-			
-			JPluginHelper::importPlugin('remca');
-			$dispatcher->trigger('onReviewPrepare', array ('com_remca.review', &$item, &$item->params,$i));
+			$current_link = $active->link;
+			// If the current view is the active item and an review view for this review, then the menu item params take priority
+			if (JString::strpos($current_link, 'view=review') AND (JString::strpos($current_link, '&id='.(string) $item->id)))
+			{
+				// $item->params are the review params, $temp are the menu item params
+				// Merge so that the menu item params take priority
+				$item->params->merge($temp);
+				// Load layout from active query (in case it is an alternative menu item)
+				if (isset($active->query['layout']))
+				{
+					$this->setLayout($active->query['layout']);
+				}
+				// Check for alternative layout of review
+				else
+					{
+					if ($layout = $item->params->get('review_layout'))
+					{
+						$this->setLayout($layout);
+					}
+				}
 
-			$item->event = new stdClass;
-
-
-			$results = $dispatcher->trigger('onReviewBeforeDisplay', array('com_remca.review', &$item, &$item->params, $i));
-			$item->event->beforeDisplayReview = JString::trim(implode("\n", $results));
-
-			$results = $dispatcher->trigger('onReviewAfterDisplay', array('com_remca.review', &$item, &$item->params,$i));
-			$item->event->afterDisplayReview = JString::trim(implode("\n", $results));
-
-			$dispatcher = JEventDispatcher::getInstance();
-
+				// $item->params are the article params, $temp are the menu item params
+				// Merge so that the menu item params take priority
+				$item->params->merge($temp);				
+			}
+			else
+			{
+				// Current view is not a single review, so the review params take priority here
+				// Merge the menu item params with the review params so that the review params take priority
+				$temp->merge($item->params);
+				$item->params = $temp;
+				
+			}
+		}
+		else
+		{
+			// Merge so that review params take priority
+			$temp->merge($item->params);
+			$item->params = $temp;
+			// Check for alternative layouts (since we are not in a single-review menu item)
+			// Single-review menu item layout takes priority over alt layout for an review
+			if ($layout = $item->params->get('review_layout'))
+			{
+				$this->setLayout($layout);
+			}
 		}
 		
-		//Escape strings for HTML output
-		$this->pageclass_sfx = htmlspecialchars($params->get('pageclass_sfx'));
+		$item->readmore_link = JRoute::_(RemcaHelperRoute::getReviewRoute($item->slug,
+										$this->getLayout(), 
+										$this->params->get('keep_review_itemid')));
+
+
+				
+		$offset = $this->state->get('list.offset');
+
+	
+
+		//
+		// Process the remca plugins.
+		//
+		JPluginHelper::importPlugin('remca');
+		$results = $dispatcher->trigger('onReviewPrepare', array ('com_remca.review', &$item, &$this->params, $offset));
+
+		$item->event = new stdClass;
 		
-		$this->params     = &$params;
-		$this->state      = &$state;
-		$this->items      = &$items;
-		$this->pagination = &$pagination;				
+		$results = $dispatcher->trigger('onReviewBeforeDisplay', array('com_remca.review', &$item, &$this->params, $offset));
+		$item->event->beforeDisplayReview = JString::trim(implode("\n", $results));
+
+		$results = $dispatcher->trigger('onReviewAfterDisplay', array('com_remca.review', &$item, &$this->params, $offset));
+		$item->event->afterDisplayReview = JString::trim(implode("\n", $results));
+		
 
 		$this->prepareDocument();
+
+		//Escape strings for HTML output
+		$this->pageclass_sfx = htmlspecialchars($this->params->get('pageclass_sfx'));
 
 		parent::display($tpl);
 	}
@@ -113,11 +172,12 @@ class RemcaViewReview extends JViewLegacy
 	 */
 	protected function prepareDocument()
 	{
-		$app		= JFactory::getApplication();
-		$menus		= $app->getMenu();
-		$lang		= JFactory::getLanguage();		
-		$title 		= null;
-		
+		$app	= JFactory::getApplication();
+		$menus	= $app->getMenu();
+		$lang	= JFactory::getLanguage();		
+		$pathway = $app->getPathway();
+		$title = null;
+
 		// Because the application sets a default page title,
 		// we need to get it from the menu item itself
 		$menu = $menus->getActive();
@@ -127,24 +187,35 @@ class RemcaViewReview extends JViewLegacy
 		}
 		else
 		{
-			$this->params->def('page_heading', JText::_('COM_REMCA_REVIEW'));
+			$this->params->def('page_heading', JText::sprintf('COM_REMCA_REVIEW_ID_TITLE', $this->item->id));
 		}
 
 		$title = $this->params->get('page_title', '');
+
+		$id = (int) @$menu->query['id'];
+
+		// if the menu item does not concern this review
+		if ($menu AND ($menu->query['option'] != 'com_remca' OR $menu->query['view'] != 'review' OR $id != $this->item->id))
+		{
+			$path = array(array('title' => $this->item->id, 'link' => ''));
+			$path = array_reverse($path);
+			foreach($path as $item)
+			{
+				$pathway->addItem($item['title'], $item['link']);
+			}
+		}
+
+		// Check for empty title and add site name if param is set
 		if (empty($title))
 		{
 			$title = htmlspecialchars_decode($app->get('sitename'));
 		}
-		else
+		elseif ($app->get('sitename_pagetitles', 0))
 		{
-			if ($app->get('sitename_pagetitles', 0))
-			{
-				$title = JText::sprintf('JPAGETITLE', htmlspecialchars_decode($app->get('sitename')), $title);
-			}
+			$title = JText::sprintf('JPAGETITLE', htmlspecialchars_decode($app->get('sitename')), $title);
 		}
 		$this->document->setTitle($title);
-		// Get Menu Item meta description, Keywords and robots instruction to insert in page header
-		
+
 		if ($this->params->get('menu-meta_description'))
 		{
 			$this->document->setDescription($this->params->get('menu-meta_description'));
@@ -159,17 +230,14 @@ class RemcaViewReview extends JViewLegacy
 		{
 			$this->document->setMetadata('robots', $this->params->get('robots'));
 		}	
-		
-		// Add feed links
-		if ($this->params->get('show_feed_link', 1))
+
+		// If there is a pagebreak heading or title, add it to the page title
+		if (!empty($this->item->page_title))
 		{
-			$link = '&format=feed&limitstart=';
-			$attribs = array('type' => 'application/rss+xml', 'title' => 'RSS 2.0');
-			$this->document->addHeadLink(JRoute::_($link . '&type=rss'), 'alternate', 'rel', $attribs);
-			$attribs = array('type' => 'application/atom+xml', 'title' => 'Atom 1.0');
-			$this->document->addHeadLink(JRoute::_($link . '&type=atom'), 'alternate', 'rel', $attribs);
+			$this->document->setTitle($this->item->page_title . ' - ' . JText::sprintf('COM_REMCA_PAGEBREAK_PAGE_NUM', $this->state->get('list.offset') + 1));
 		}
 
+		
 		// Include Helpers
 		JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');	
 	}

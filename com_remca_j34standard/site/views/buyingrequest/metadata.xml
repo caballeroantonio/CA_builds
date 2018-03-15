@@ -26,7 +26,7 @@
 
 <metadata>
 	<view
-		title="Buying_request">
-		<message><![CDATA[COM_REMCA_BUYING_REQUEST_LAYOUT_DESC]]></message>
+		title="Buying Requests">
+		<message><![CDATA[COM_REMCA_BUYINGREQUEST_LAYOUT_DESC]]></message>
 	</view>
 </metadata>

@@ -33,20 +33,20 @@
 			hint="JSEARCH_FILTER"
 		/>
         <field
-			name="id_lmunicipality"
+			name="id_country"
 			type="sql"
-			label="COM_REMCA_FILTER_ID_LMUNICIPALITY_LABEL"
-			description="COM_REMCA_FILTER_ID_LMUNICIPALITY_DESC"
+			label="COM_REMCA_FILTER_ID_COUNTRY_LABEL"
+			description="COM_REMCA_FILTER_ID_COUNTRY_DESC"
 			onchange="this.form.submit();"
-			query="SELECT `m`.`id` AS `value`, `m`.`name` AS `text`
-		            FROM `#__rem_lmunicipalities` AS `m`
-		            INNER JOIN `#__rem_houses` AS `a` ON `a`.`id_lmunicipality`  =  `m`.`id`
-		            GROUP BY `m`.`id`, `m`.`name`
-		            ORDER BY `m`.`name`"
+			query="SELECT `c1`.`id` AS `value`, `c1`.`name` AS `text`
+		            FROM `#__rem_countries` AS `c1`
+		            INNER JOIN `#__rem_houses` AS `a` ON `a`.`id_country`  =  `c1`.`id`
+		            GROUP BY `c1`.`id`, `c1`.`name`
+		            ORDER BY `c1`.`name`"
 			key_field="value"
 			value_field="text"
 		>
-            <option value="">COM_REMCA_HOUSES_SELECT_M_LMUNICIPALITY</option>
+            <option value="">COM_REMCA_HOUSES_SELECT_C1_COUNTRY</option>
         </field>
         <field
 			name="id_lstate"
@@ -65,20 +65,20 @@
             <option value="">COM_REMCA_HOUSES_SELECT_S_LSTATE</option>
         </field>
         <field
-			name="id_country"
+			name="id_lmunicipality"
 			type="sql"
-			label="COM_REMCA_FILTER_ID_COUNTRY_LABEL"
-			description="COM_REMCA_FILTER_ID_COUNTRY_DESC"
+			label="COM_REMCA_FILTER_ID_LMUNICIPALITY_LABEL"
+			description="COM_REMCA_FILTER_ID_LMUNICIPALITY_DESC"
 			onchange="this.form.submit();"
-			query="SELECT `c1`.`id` AS `value`, `c1`.`name` AS `text`
-		            FROM `#__rem_countries` AS `c1`
-		            INNER JOIN `#__rem_houses` AS `a` ON `a`.`id_country`  =  `c1`.`id`
-		            GROUP BY `c1`.`id`, `c1`.`name`
-		            ORDER BY `c1`.`name`"
+			query="SELECT `m`.`id` AS `value`, `m`.`name` AS `text`
+		            FROM `#__rem_lmunicipalities` AS `m`
+		            INNER JOIN `#__rem_houses` AS `a` ON `a`.`id_lmunicipality`  =  `m`.`id`
+		            GROUP BY `m`.`id`, `m`.`name`
+		            ORDER BY `m`.`name`"
 			key_field="value"
 			value_field="text"
 		>
-            <option value="">COM_REMCA_HOUSES_SELECT_C1_COUNTRY</option>
+            <option value="">COM_REMCA_HOUSES_SELECT_M_LMUNICIPALITY</option>
         </field>
         <field
 			name="price"
@@ -137,12 +137,12 @@
 			<option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
             <option value="a.name ASC">COM_REMCA_FIELD_NAME_SORT_ASC_LABEL</option>
             <option value="a.name DESC">COM_REMCA_FIELD_NAME_SORT_DESC_LABEL</option>
-            <option value="m_lmunicipality_name ASC">COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_SORT_ASC_LABEL</option>
-            <option value="m_lmunicipality_name DESC">COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_SORT_DESC_LABEL</option>
-            <option value="s_lstate_name ASC">COM_REMCA_HOUSES_FIELD_ID_LSTATE_SORT_ASC_LABEL</option>
-            <option value="s_lstate_name DESC">COM_REMCA_HOUSES_FIELD_ID_LSTATE_SORT_DESC_LABEL</option>
             <option value="c1_country_name ASC">COM_REMCA_HOUSES_FIELD_ID_COUNTRY_SORT_ASC_LABEL</option>
             <option value="c1_country_name DESC">COM_REMCA_HOUSES_FIELD_ID_COUNTRY_SORT_DESC_LABEL</option>
+            <option value="s_lstate_name ASC">COM_REMCA_HOUSES_FIELD_ID_LSTATE_SORT_ASC_LABEL</option>
+            <option value="s_lstate_name DESC">COM_REMCA_HOUSES_FIELD_ID_LSTATE_SORT_DESC_LABEL</option>
+            <option value="m_lmunicipality_name ASC">COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_SORT_ASC_LABEL</option>
+            <option value="m_lmunicipality_name DESC">COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_SORT_DESC_LABEL</option>
             <option value="a.price ASC">COM_REMCA_HOUSES_FIELD_PRICE_SORT_ASC_LABEL</option>
             <option value="a.price DESC">COM_REMCA_HOUSES_FIELD_PRICE_SORT_DESC_LABEL</option>
 			<option value="a.state ASC">JSTATUS_ASC</option>

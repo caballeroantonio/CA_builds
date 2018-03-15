@@ -29,14 +29,15 @@
 defined('_JEXEC') or die;
 
 /**
- * View class for a list of review.
+ * View to edit a review.
  *
  */
 class RemcaViewReview extends JViewLegacy
 {
-	protected $items;
-	protected $pagination;
+	protected $form;
+	protected $item;
 	protected $state;
+	protected $can_do;
 
 	/**
 	 * Execute and display a template script.
@@ -47,14 +48,11 @@ class RemcaViewReview extends JViewLegacy
 	 */
 	public function display($tpl = null)
 	{
-		
-		$this->items		= $this->get('Items');
-		$this->pagination	= $this->get('Pagination');
-		$this->state		= $this->get('State');
-		$this->filterForm    = $this->get('FilterForm');
-		$this->activeFilters = $this->get('ActiveFilters');
-		
 				
+		$this->form		= $this->get('Form');
+		$this->item		= $this->get('Item');
+		$this->state	= $this->get('State');
+
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
 		{
@@ -62,11 +60,11 @@ class RemcaViewReview extends JViewLegacy
 			return false;
 		}
 
-		if ($this->getLayout() !== 'modal')
+		if ($this->getLayout() == 'modal')
 		{
-			$this->addSidebar();
-			$this->addToolbar();
 		}
+		JToolbarHelper::help('JHELP_COMPONENTS_COM_REMCA_REVIEW_EDIT', true, null, 'com_remca');
+		$this->addToolbar();
 		$this->prepareDocument();		
 		parent::display($tpl);
 	}
@@ -77,65 +75,41 @@ class RemcaViewReview extends JViewLegacy
 	 */
 	protected function addToolbar()
 	{
-		$user  = JFactory::getUser();	
-		// Get the toolbar object instance
-		$bar = JToolbar::getInstance('toolbar');
-			
-		JToolbarHelper::title(JText::_('COM_REMCA_REVIEW_LIST_HEADER'), 'stack review');
-
-		JToolbarHelper::addNew('review.add','JTOOLBAR_NEW');
-		
-		JToolbarHelper::editList('review.edit','JTOOLBAR_EDIT');
-
-			if ($this->state->get('filter.state') != 2)
-			{
-				JToolbarHelper::custom('review.publish', 'publish.png', 'publish_f2.png','JTOOLBAR_PUBLISH', true);
-				JToolbarHelper::custom('review.unpublish', 'unpublish.png', 'unpublish_f2.png', 'JTOOLBAR_UNPUBLISH', true);
-			}
-
-			if ($this->state->get('filter.state') != -1 ) 
-			{
-				if ($this->state->get('filter.state') != 2) 
-				{
-					JToolbarHelper::archiveList('review.archive','JTOOLBAR_ARCHIVE');
-				}
-				else 
-				{
-					if ($this->state->get('filter.state') == 2) 
-					{
-						JToolbarHelper::unarchiveList('review.publish', 'JTOOLBAR_UNARCHIVE');
-					}
-				}
-			}
-		
-
+		JFactory::getApplication()->input->set('hidemainmenu', true);
 	
-		if ($this->state->get('filter.state') == -2)
-		{
-			JToolbarHelper::deleteList('', 'review.delete','JTOOLBAR_EMPTY_TRASH');
-		}
-		else 
-		{
-			JToolbarHelper::trash('review.trash','JTOOLBAR_TRASH');
-		}
-                        
-                JToolbarHelper::custom('review.export', 'download','download', 'JTOOLBAR_EXPORT', FALSE);
+		$user		= JFactory::getUser();
+		$user_id		= $user->get('id');
+		$is_new		= ($this->item->id == 0);
 
+		JToolbarHelper::title(
+				JText::_('COM_REMCA_REVIEWS_' . (isset($checkedOut) && $checkedOut ? 'VIEW_HEADER' : ($is_new ? 'NEW_HEADER' : 'EDIT_HEADER'))), 
+				'reviews.png'
+		);
+
+
+		JToolbarHelper::apply('review.apply', 'JTOOLBAR_APPLY');
+		JToolbarHelper::save('review.save', 'JTOOLBAR_SAVE');
+
+		JToolbarHelper::custom('review.save2new', 'save-new.png', 'save-new_f2.png', 'JTOOLBAR_SAVE_AND_NEW', false);
+
+		if ($this->state->params->get('save_history', 1) AND $this->state->params->get('review_save_history', 1)
+			AND !$is_new  
+			)
+		{
+			$item_id = $this->item->id;
+			$type_alias = 'com_remca.review';
+			JToolbarHelper::versions($type_alias, $item_id);
+		}
 				
-		JToolbarHelper::preferences('com_remca');
-		JToolbarHelper::help('JHELP_COMPONENTS_COM_REMCA_REVIEW', true, null, 'com_remca');
+		if (empty($this->item->id))
+		{
+			JToolbarHelper::cancel('review.cancel','JTOOLBAR_CANCEL');
+		}
+		else
+		{
+			JToolbarHelper::cancel('review.cancel', 'JTOOLBAR_CLOSE');
+		}
 	}
-	/**
-	 * Add the page sidebar.
-	 *
-	 */
-	protected function addSidebar()
-	{	
-		JHtmlSidebar::setAction('index.php?option=com_remca&view=review');
-				
-		$this->sidebar = JHtmlSidebar::render();			
-	}	
-	
 	/**
 	 * Prepares the document
 	 */

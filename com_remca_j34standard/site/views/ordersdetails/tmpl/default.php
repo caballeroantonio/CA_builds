@@ -79,6 +79,7 @@ $empty = $component->params->get('default_empty_field', '');
 	<?php endif; ?>
 
 	<?php
+		$can_edit = 0;$can_delete = 0;
 		$show_actions = false;
 		if ($this->params->get('show_ordersdetail_icons',1) >= 0) :
 			foreach ($this->items as $i => $item) :
@@ -128,14 +129,14 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
-					<?php if ($this->params->get('list_show_ordersdetail_fk_order_id',1)) : ?>
-						<th class="list-fk_order_id" id="tableOrderingfk_order_id">
-							<?php echo JTEXT::_('COM_REMCA_ORDERS_DETAILS_HEADING_FK_ORDER_ID'); ?>
+					<?php if ($this->params->get('list_show_ordersdetail_id_order',1)) : ?>
+						<th class="list-id_order" id="tableOrderingid_order">
+							<?php echo JTEXT::_('COM_REMCA_ORDERS_DETAILS_HEADING_ID_ORDER'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_ordersdetail_fk_user_id',1)) : ?>
-						<th class="list-fk_user_id" id="tableOrderingfk_user_id">
-							<?php echo JTEXT::_('COM_REMCA_ORDERS_DETAILS_HEADING_FK_USER_ID'); ?>
+					<?php if ($this->params->get('list_show_ordersdetail_id_user',1)) : ?>
+						<th class="list-id_user" id="tableOrderingid_user">
+							<?php echo JTEXT::_('COM_REMCA_ORDERS_DETAILS_HEADING_ID_USER'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_ordersdetail_fk_houses_htitle',1)) : ?>
@@ -158,9 +159,9 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_REMCA_ORDERS_DETAILS_HEADING_ORDER_DATE'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_ordersdetail_fk_house_id',1)) : ?>
-						<th class="list-fk_house_id" id="tableOrderingfk_house_id">
-							<?php echo JTEXT::_('COM_REMCA_ORDERS_DETAILS_HEADING_FK_HOUSE_ID'); ?>
+					<?php if ($this->params->get('list_show_ordersdetail_id_house',1)) : ?>
+						<th class="list-id_house" id="tableOrderingid_house">
+							<?php echo JTEXT::_('COM_REMCA_ORDERS_DETAILS_HEADING_ID_HOUSE'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_ordersdetail_txn_type',1)) : ?>
@@ -245,22 +246,22 @@ $empty = $component->params->get('default_empty_field', '');
 							</time>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ordersdetail_fk_order_id',1)) : ?>
-						<td class="list-fk_order_id">
+					<?php if ($this->params->get('list_show_ordersdetail_id_order',1)) : ?>
+						<td class="list-id_order">
 							<?php 
-								if ($params->get('list_link_ordersdetail_fk_order_id')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getOrderRoute($item->fk_order_id, 0)).'">'.JString::trim($item->o_order_name).'</a>';
+								if ($params->get('list_link_ordersdetail_id_order')) :
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getOrderRoute($item->id_order, 0)).'">'.JString::trim($item->o_order_name).'</a>';
 								else :
 									echo JString::trim($item->o_order_name);
 								endif; 
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ordersdetail_fk_user_id',1)) : ?>
-						<td class="list-fk_user_id">
+					<?php if ($this->params->get('list_show_ordersdetail_id_user',1)) : ?>
+						<td class="list-id_user">
 							<?php 
-								if ($params->get('list_link_ordersdetail_fk_user_id')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getUserRoute($item->fk_user_id, 0)).'">'.JString::trim($item->u_user_name).'</a>';
+								if ($params->get('list_link_ordersdetail_id_user')) :
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getUserRoute($item->id_user, 0)).'">'.JString::trim($item->u_user_name).'</a>';
 								else :
 									echo JString::trim($item->u_user_name);
 								endif; 
@@ -295,11 +296,11 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ordersdetail_fk_house_id',1)) : ?>
-						<td class="list-fk_house_id">
+					<?php if ($this->params->get('list_show_ordersdetail_id_house',1)) : ?>
+						<td class="list-id_house">
 							<?php 
-								if ($params->get('list_link_ordersdetail_fk_house_id')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->fk_house_id, 0)).'">'.JString::trim($item->h_house_name).'</a>';
+								if ($params->get('list_link_ordersdetail_id_house')) :
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->id_house, 0)).'">'.JString::trim($item->h_house_name).'</a>';
 								else :
 									echo JString::trim($item->h_house_name);
 								endif; 

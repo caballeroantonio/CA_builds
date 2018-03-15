@@ -443,13 +443,31 @@ class RemcaModelLmunicipalities extends JModelList
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
 
+		$group_filter = false;
+		
 		// Construct the query
-		$query->select($db->quoteName('s.id').' AS value, '.$db->quoteName('s.name').' AS text');
+		$query->select($db->quoteName('s.id').' AS value');
+		
+		if(!$group_filter)
+			$query->select($db->quoteName('s.name').' AS text');
+		else
+			$query->select('CONCAT('.$db->quoteName('s.name').', " (", count(*), ")")  AS text');
+			
 		$query->from($db->quoteName('#__rem_lstates').' AS s');
-		$query->join('INNER', $db->quoteName('#__rem_lmunicipalities').' AS a ON '.$db->quoteName('a.id_lstate').' = '.$db->quoteName('s.id'));
-		$query->where($db->quoteName('a.id_lstate').' != 0 AND '.$db->quoteName('s.name').' != \'\'');
-		$query->group($db->quoteName('s.id').', '.$db->quoteName('s.name'));
+		$query->where($db->quoteName('s.name').' != \'\'');
+		
+		#only if FO have state
+		$query->where('s.state = 1');
+									   
 		$query->order($db->quoteName('s.name'));
+
+		if($group_filter){
+			$query->where($db->quoteName('a.id_lstate').' != 0');
+			$query->join('INNER', $db->quoteName('#__rem_lmunicipalities').' AS a ON '.$db->quoteName('a.id_lstate').' = '.$db->quoteName('s.id'));
+			$query->group($db->quoteName('s.id').', '.
+				$db->quoteName('s.name'));
+		}
+
 
 		// Setup the query
 		$db->setQuery($query);
@@ -468,13 +486,31 @@ class RemcaModelLmunicipalities extends JModelList
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
 
+		$group_filter = false;
+		
 		// Construct the query
-		$query->select($db->quoteName('c1.id').' AS value, '.$db->quoteName('c1.name').' AS text');
+		$query->select($db->quoteName('c1.id').' AS value');
+		
+		if(!$group_filter)
+			$query->select($db->quoteName('c1.name').' AS text');
+		else
+			$query->select('CONCAT('.$db->quoteName('c1.name').', " (", count(*), ")")  AS text');
+			
 		$query->from($db->quoteName('#__rem_countries').' AS c1');
-		$query->join('INNER', $db->quoteName('#__rem_lmunicipalities').' AS a ON '.$db->quoteName('a.id_country').' = '.$db->quoteName('c1.id'));
-		$query->where($db->quoteName('a.id_country').' != 0 AND '.$db->quoteName('c1.name').' != \'\'');
-		$query->group($db->quoteName('c1.id').', '.$db->quoteName('c1.name'));
+		$query->where($db->quoteName('c1.name').' != \'\'');
+		
+		#only if FO have state
+		$query->where('c1.state = 1');
+									   
 		$query->order($db->quoteName('c1.name'));
+
+		if($group_filter){
+			$query->where($db->quoteName('a.id_country').' != 0');
+			$query->join('INNER', $db->quoteName('#__rem_lmunicipalities').' AS a ON '.$db->quoteName('a.id_country').' = '.$db->quoteName('c1.id'));
+			$query->group($db->quoteName('c1.id').', '.
+				$db->quoteName('c1.name'));
+		}
+
 
 		// Setup the query
 		$db->setQuery($query);
@@ -485,7 +521,7 @@ class RemcaModelLmunicipalities extends JModelList
 	
         /*
          * Function that allows download database information
-         * @ToDo implementar generación de código
+         * @ToDo implementar generaciÃ³n de cÃ³digo
          */
         public function getListQuery4Export(){
             $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));

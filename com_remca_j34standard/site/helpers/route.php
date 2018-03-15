@@ -481,7 +481,7 @@ abstract class RemcaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the Buying_request
+	 * @param	integer	The route of the Buying Requests
 	 */
 	public static function getBuyingRequestRoute($id, $layout = 'default', $keep_item_id = false)
 	{

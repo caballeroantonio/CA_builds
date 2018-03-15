@@ -57,18 +57,18 @@
         label="COM_REMCA_FEATURE_HOUSES_FIELDSET_FEATURE_HOUSES_FS_LABEL"
         description="COM_REMCA_FEATURE_HOUSES_FIELDSET_FEATURE_HOUSES_FS_DESC"
     >
-        <field name="fk_houseid"
+        <field name="id_house"
             type="modal_houses"
-            label="COM_REMCA_FEATURE_HOUSES_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_FEATURE_HOUSES_FIELD_FK_HOUSEID_DESC"
+            label="COM_REMCA_FEATURE_HOUSES_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_FEATURE_HOUSES_FIELD_ID_HOUSE_DESC"
             class="modal"
 			default="'0'"
         >
         </field>  
-        <field name="fk_featureid"
+        <field name="id_featured"
             type="modal_feature"
-            label="COM_REMCA_FEATURE_HOUSES_FIELD_FK_FEATUREID_LABEL"
-            description="COM_REMCA_FEATURE_HOUSES_FIELD_FK_FEATUREID_DESC"
+            label="COM_REMCA_FEATURE_HOUSES_FIELD_ID_FEATURED_LABEL"
+            description="COM_REMCA_FEATURE_HOUSES_FIELD_ID_FEATURED_DESC"
             class="modal"
 			default="'0'"
         >

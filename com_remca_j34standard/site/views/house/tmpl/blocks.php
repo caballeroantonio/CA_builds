@@ -339,29 +339,14 @@ function isValidEmail(str){
 <?php
 
         $is_edit_all_houses = false ;
-        if (checkAccess_REM($this->params->get('option_edit_registrationlevel'), 'RECURSE', userGID_REM($my->id), $acl)) {
-            $is_edit_all_houses = true ;
-        }
+//        if (RemcaHelper::checkAccess_REM($this->params->get('option_edit_registrationlevel'), 'RECURSE', RemcaHelper::userGID_REM($my->id), $acl)) {
+//            $is_edit_all_houses = true ;
+//        }
 
 $user = JFactory::getUser();
 $isroot = $user->authorise('core.admin');
 
-if ($my->id == $this->item->owner_id && $my->id != '' || $isroot):
-
-    global $option;
-
-    if ($option != 'com_realestatemanager') {
-        $form_action = "index.php?option=" . $option .
-         "&task=edit_house&Itemid=" . $Itemid ;
-
-    }
-
-    else
-
-      $form_action = "index.php?option=com_realestatemanager&task=edit_house&Itemid=" . $Itemid;
-    ?>
-
-<?php endif;?>
+?>
 <!-- ************************* end  add for show/hiden button "Edit house"***************** -->
 <div class="componentheading<?php echo $this->params->get('pageclass_sfx'); ?> ">
     
@@ -373,7 +358,7 @@ if ($my->id == $this->item->owner_id && $my->id != '' || $isroot):
 <?php
 
 
-if(!incorrect_price($this->item->price)){
+if(!RemcaHelper::incorrect_price($this->item->price)){
 
     if ($this->params->get('price_unit_show') == '1') {
         if ($this->params->get('show_sale_separator')) {
@@ -416,7 +401,7 @@ if(!incorrect_price($this->item->price)){
 
         if($currentCurrency){
             foreach ($currencyArr as $key=>$value) {
-                if(!incorrect_price( $this->item->price)){
+                if(!RemcaHelper::incorrect_price( $this->item->price)){
                     $currencys_price[$key] = round($value / $currentCurrency *  $this->item->price, 2);
                 }
             }
@@ -498,8 +483,8 @@ $imageURL = ($this->item->image_link);
 if ($imageURL == '') $imageURL = JText::_('_REALESTATE_MANAGER_NO_PICTURE_BIG');
 
      $file_name = RemcaHelper::rem_picture_thumbnail($imageURL,
-        $this->params->get('fotomain_width'),
-        $this->params->get('fotomain_high'));
+        $this->params->get('fotomain_width',440),
+        $this->params->get('fotomain_high',808));
 
      $file_name = $imageURL;
     $file = $mosConfig_live_site . '/components/com_realestatemanager/photos/' . $file_name;
@@ -508,7 +493,7 @@ if($this->params->get('show_house_slider')=='1') {
   $stdClassImage = new stdClass();
   $stdClassImage->main_img = $file_name;
   // $house_photos[] = $stdClassImage;
-        $query = "select main_img from #__rem_photos WHERE fk_houseid='{$this->item->id}' order by img_ordering,id";
+        $query = "select main_img from #__rem_photos WHERE id_house='{$this->item->id}' order by img_ordering,id";
         $database->setQuery($query);
         $house_photos = $database->loadObjectList();
   array_unshift($house_photos, $stdClassImage);
@@ -549,12 +534,12 @@ if($this->params->get('show_house_slider')=='1') {
             <a href="./components/com_realestatemanager/photos/<?php 
                echo RemcaHelper::rem_picture_thumbnail($house_photos[$i]->main_img,
                $this->params->get('fotomain_width'),
-               $this->params->get('fotomain_high'), $watermark); ?>" data-fancybox="slider" title="photo">
+               $this->params->get('fotomain_high',808), $watermark); ?>" data-fancybox="slider" title="photo">
               <img alt="<?php echo $this->item->name; ?>" title="<?php echo $this->item->name; ?>" 
               src="./components/com_realestatemanager/photos/<?php 
                echo RemcaHelper::rem_picture_thumbnail($house_photos[$i]->main_img,
                $this->params->get('fotomain_width'),
-               $this->params->get('fotomain_high'), $watermark); ?>"
+               $this->params->get('fotomain_high',808), $watermark); ?>"
  />
             </a>
     
@@ -591,7 +576,7 @@ else {
     <div class="gallery_img">
     <?php for ($i = 0;$i < count($house_photos);$i++) { ?>
         <div class="thumbnail viewHouses" 
-              style="width: <?php echo $this->params->get('fotogal_width');?>px; height: <?php 
+              style="width: <?php echo $this->params->get('fotomain_width',440);?>px; height: <?php 
               echo $this->params->get('fotogal_high');?>px;" >
 
          <?php $house_photos[$i]->main_img = str_ireplace('watermark/', '', $house_photos[$i]->main_img) ?>
@@ -599,11 +584,11 @@ else {
               <a href="./components/com_realestatemanager/photos/<?php 
                echo RemcaHelper::rem_picture_thumbnail($house_photos[$i]->main_img,
                $this->params->get('fotomain_width'),
-               $this->params->get('fotomain_high'), $watermark); ?>" data-fancybox="gallery" title="photo" >
+               $this->params->get('fotomain_high',808), $watermark); ?>" data-fancybox="gallery" title="photo" >
                <img alt="<?php echo $this->item->name; ?>" title="<?php echo $this->item->name; ?>" 
                src="./components/com_realestatemanager/photos/<?php 
                echo RemcaHelper::rem_picture_thumbnail($house_photos[$i]->main_img,
-               $this->params->get('fotogal_width'),
+               $this->params->get('fotomain_width',440),
                $this->params->get('fotogal_high'), $watermark); ?>" style = "vertical-align:middle;" />
               </a>
           </div>
@@ -1000,7 +985,7 @@ if ($this->params->get('extra9') == 1 && $this->item->extra9 > 0) {
     }else{
         $switchTranslateDayNight = JText::_('_REALESTATE_MANAGER_RENT_SPECIAL_PRICE_PER_NIGHT');    
     }
-    $query = "select * from #__rem_rent_sal WHERE fk_houseid='{$this->item->id}'";
+    $query = "select * from #__rem_rent_sal WHERE id_house='{$this->item->id}'";
     $database->setQuery($query);
     $rentTerm = $database->loadObjectList();
         if(isset($rentTerm[0]->special_price)) { ?>

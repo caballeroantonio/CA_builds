@@ -54,12 +54,12 @@ class RemcaModelHouses extends JModelList
 			$config['filter_fields'] = array(
 				'id', 'a.id',
 				'name', 'a.name',
-				'id_lmunicipality','a.id_lmunicipality',
-				'm_lmunicipality_name', 'm.name',				
-				'id_lstate','a.id_lstate',
-				's_lstate_name', 's.name',				
 				'id_country','a.id_country',
 				'c1_country_name', 'c1.name',				
+				'id_lstate','a.id_lstate',
+				's_lstate_name', 's.name',				
+				'id_lmunicipality','a.id_lmunicipality',
+				'm_lmunicipality_name', 'm.name',				
 				'price','a.price',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
@@ -143,12 +143,12 @@ class RemcaModelHouses extends JModelList
 		}
 		$this->setState('list.direction', $list_order);
 		
-		$id_lmunicipality = $app->getUserStateFromRequest($this->context.'.filter.id_lmunicipality', 'filter_id_lmunicipality', 0, 'int');
-		$this->setState('filter.id_lmunicipality', $id_lmunicipality);
-		$id_lstate = $app->getUserStateFromRequest($this->context.'.filter.id_lstate', 'filter_id_lstate', 0, 'int');
-		$this->setState('filter.id_lstate', $id_lstate);
 		$id_country = $app->getUserStateFromRequest($this->context.'.filter.id_country', 'filter_id_country', 0, 'int');
 		$this->setState('filter.id_country', $id_country);
+		$id_lstate = $app->getUserStateFromRequest($this->context.'.filter.id_lstate', 'filter_id_lstate', 0, 'int');
+		$this->setState('filter.id_lstate', $id_lstate);
+		$id_lmunicipality = $app->getUserStateFromRequest($this->context.'.filter.id_lmunicipality', 'filter_id_lmunicipality', 0, 'int');
+		$this->setState('filter.id_lmunicipality', $id_lmunicipality);
 		$price = $app->getUserStateFromRequest($this->context.'.filter.price', 'filter_price', '', 'float');
 		$this->setState('filter.price', $price);
 				
@@ -198,9 +198,9 @@ class RemcaModelHouses extends JModelList
 		$id .= ':'.$this->getState('filter.archived');			
 		$id .= ':'.serialize($this->getState('filter.category_id'));
 		$id .= ':'.serialize($this->getState('filter.category_id.include'));
-		$id	.= ':'.$this->getState('filter.id_lmunicipality');	
-		$id	.= ':'.$this->getState('filter.id_lstate');	
 		$id	.= ':'.$this->getState('filter.id_country');	
+		$id	.= ':'.$this->getState('filter.id_lstate');	
+		$id	.= ':'.$this->getState('filter.id_lmunicipality');	
 		$id	.= ':'.$this->getState('filter.price');	
 		$id .= ':'.serialize($this->getState('filter.house_id'));
 		$id .= ':'.$this->getState('filter.house_id.include');				
@@ -294,48 +294,48 @@ class RemcaModelHouses extends JModelList
 		}
 
 		
-		// Filter by and return name for id_lmunicipality level.
-		$query->select($db->quoteName('m.name').' AS m_lmunicipality_name');
-		$query->select($db->quoteName('m.ordering').' AS m_lmunicipality_ordering');
-
-		$query->join('LEFT', $db->quoteName('#__rem_lmunicipalities').' AS m ON '.$db->quoteName('m.id').' = '.$db->quoteName('a.id_lmunicipality'));	
-		// Filter by and return name for id_lstate level.
-		$query->select($db->quoteName('s.name').' AS s_lstate_name');
-		$query->select($db->quoteName('s.ordering').' AS s_lstate_ordering');
-
-		$query->join('LEFT', $db->quoteName('#__rem_lstates').' AS s ON '.$db->quoteName('s.id').' = '.$db->quoteName('a.id_lstate'));	
 		// Filter by and return name for id_country level.
 		$query->select($db->quoteName('c1.name').' AS c1_country_name');
 		$query->select($db->quoteName('c1.ordering').' AS c1_country_ordering');
 
 		$query->join('LEFT', $db->quoteName('#__rem_countries').' AS c1 ON '.$db->quoteName('c1.id').' = '.$db->quoteName('a.id_country'));	
-		// Filter by and return name for fk_rentid level.
+		// Filter by and return name for id_lstate level.
+		$query->select($db->quoteName('s.name').' AS s_lstate_name');
+		$query->select($db->quoteName('s.ordering').' AS s_lstate_ordering');
+
+		$query->join('LEFT', $db->quoteName('#__rem_lstates').' AS s ON '.$db->quoteName('s.id').' = '.$db->quoteName('a.id_lstate'));	
+		// Filter by and return name for id_lmunicipality level.
+		$query->select($db->quoteName('m.name').' AS m_lmunicipality_name');
+		$query->select($db->quoteName('m.ordering').' AS m_lmunicipality_ordering');
+
+		$query->join('LEFT', $db->quoteName('#__rem_lmunicipalities').' AS m ON '.$db->quoteName('m.id').' = '.$db->quoteName('a.id_lmunicipality'));	
+		// Filter by and return name for id_rent level.
 		$query->select($db->quoteName('r.name').' AS r_rent_name');
 		$query->select($db->quoteName('r.id').' AS r_rent_id');
 
-		$query->join('LEFT', $db->quoteName('#__rem_rent').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.fk_rentid'));	
+		$query->join('LEFT', $db->quoteName('#__rem_rent').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.id_rent'));	
 		// Filter by and return name for owner_id level.
 		$query->select($db->quoteName('u.name').' AS u_user_name');
 		$query->select($db->quoteName('u.id').' AS u_user_id');
 
 		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.owner_id'));	
 					
-		if ($id_lmunicipality = $this->getState('filter.id_lmunicipality'))
+		if ($id_country = $this->getState('filter.id_country'))
 		{
-			$query->where($db->quoteName('a.id_lmunicipality').' = ' . (int) $id_lmunicipality);
+			$query->where($db->quoteName('a.id_country').' = ' . (int) $id_country);
 		}	
 		if ($id_lstate = $this->getState('filter.id_lstate'))
 		{
 			$query->where($db->quoteName('a.id_lstate').' = ' . (int) $id_lstate);
 		}	
-		if ($id_country = $this->getState('filter.id_country'))
+		if ($id_lmunicipality = $this->getState('filter.id_lmunicipality'))
 		{
-			$query->where($db->quoteName('a.id_country').' = ' . (int) $id_country);
+			$query->where($db->quoteName('a.id_lmunicipality').' = ' . (int) $id_lmunicipality);
 		}	
 		if ($price = $this->getState('filter.price'))
 		{
 			$price = $db->escape(JString::strtolower($price), true);			
-			$query->where('LOWER('.$db->quoteName('a.price').') = ' . $db->quote($price));
+			$query->where($db->quoteName('a.price').' = ' . $db->quote($price));
 		}	
 
 		// Filter by a single or group of houses.
@@ -674,28 +674,46 @@ class RemcaModelHouses extends JModelList
 		return $items;
 	}
 	/**
-	 * Build a list of lmunicipalities
+	 * Build a list of countries
 	 *
 	 * @return	JDatabaseQuery
 	 */
-	public function getLmunicipalities()
+	public function getCountries()
 	{
 		// Create a new query object.
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
 
+		$group_filter = false;
+		
 		// Construct the query
-		$query->select($db->quoteName('m.id').' AS value, '.$db->quoteName('m.name').' AS text');
-		$query->from($db->quoteName('#__rem_lmunicipalities').' AS m');
-		$query->join('INNER', $db->quoteName('#__rem_houses').' AS a ON '.$db->quoteName('a.id_lmunicipality').' = '.$db->quoteName('m.id'));
-		$query->where($db->quoteName('a.id_lmunicipality').' != 0 AND '.$db->quoteName('m.name').' != \'\'');
-		// Filter by language
-		if ($this->getState('filter.language'))
-		{
-			$query->where($db->quoteName('a.language').' IN ('.$db->quote(JFactory::getLanguage()->getTag()).','.$db->quote('*').')');
+		$query->select($db->quoteName('c1.id').' AS value');
+		
+		if(!$group_filter)
+			$query->select($db->quoteName('c1.name').' AS text');
+		else
+			$query->select('CONCAT('.$db->quoteName('c1.name').', " (", count(*), ")")  AS text');
+			
+		$query->from($db->quoteName('#__rem_countries').' AS c1');
+		$query->where($db->quoteName('c1.name').' != \'\'');
+		
+		#only if FO have state
+		$query->where('c1.state = 1');
+									   
+		$query->order($db->quoteName('c1.name'));
+
+		if($group_filter){
+			$query->where($db->quoteName('a.id_country').' != 0');
+			// Filter by language
+			if ($this->getState('filter.language'))
+			{
+				$query->where($db->quoteName('a.language').' IN ('.$db->quote(JFactory::getLanguage()->getTag()).','.$db->quote('*').')');
+			}
+			$query->join('INNER', $db->quoteName('#__rem_houses').' AS a ON '.$db->quoteName('a.id_country').' = '.$db->quoteName('c1.id'));
+			$query->group($db->quoteName('c1.id').', '.
+				$db->quoteName('c1.name'));
 		}
-		$query->group($db->quoteName('m.id').', '.$db->quoteName('m.name'));
-		$query->order($db->quoteName('m.name'));
+
 
 		// Setup the query
 		$db->setQuery($query);
@@ -714,18 +732,36 @@ class RemcaModelHouses extends JModelList
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
 
+		$group_filter = false;
+		
 		// Construct the query
-		$query->select($db->quoteName('s.id').' AS value, '.$db->quoteName('s.name').' AS text');
+		$query->select($db->quoteName('s.id').' AS value');
+		
+		if(!$group_filter)
+			$query->select($db->quoteName('s.name').' AS text');
+		else
+			$query->select('CONCAT('.$db->quoteName('s.name').', " (", count(*), ")")  AS text');
+			
 		$query->from($db->quoteName('#__rem_lstates').' AS s');
-		$query->join('INNER', $db->quoteName('#__rem_houses').' AS a ON '.$db->quoteName('a.id_lstate').' = '.$db->quoteName('s.id'));
-		$query->where($db->quoteName('a.id_lstate').' != 0 AND '.$db->quoteName('s.name').' != \'\'');
-		// Filter by language
-		if ($this->getState('filter.language'))
-		{
-			$query->where($db->quoteName('a.language').' IN ('.$db->quote(JFactory::getLanguage()->getTag()).','.$db->quote('*').')');
-		}
-		$query->group($db->quoteName('s.id').', '.$db->quoteName('s.name'));
+		$query->where($db->quoteName('s.name').' != \'\'');
+		
+		#only if FO have state
+		$query->where('s.state = 1');
+									   
 		$query->order($db->quoteName('s.name'));
+
+		if($group_filter){
+			$query->where($db->quoteName('a.id_lstate').' != 0');
+			// Filter by language
+			if ($this->getState('filter.language'))
+			{
+				$query->where($db->quoteName('a.language').' IN ('.$db->quote(JFactory::getLanguage()->getTag()).','.$db->quote('*').')');
+			}
+			$query->join('INNER', $db->quoteName('#__rem_houses').' AS a ON '.$db->quoteName('a.id_lstate').' = '.$db->quoteName('s.id'));
+			$query->group($db->quoteName('s.id').', '.
+				$db->quoteName('s.name'));
+		}
+
 
 		// Setup the query
 		$db->setQuery($query);
@@ -734,28 +770,46 @@ class RemcaModelHouses extends JModelList
 		return $db->loadObjectList();
 	}
 	/**
-	 * Build a list of countries
+	 * Build a list of lmunicipalities
 	 *
 	 * @return	JDatabaseQuery
 	 */
-	public function getCountries()
+	public function getLmunicipalities()
 	{
 		// Create a new query object.
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
 
+		$group_filter = false;
+		
 		// Construct the query
-		$query->select($db->quoteName('c1.id').' AS value, '.$db->quoteName('c1.name').' AS text');
-		$query->from($db->quoteName('#__rem_countries').' AS c1');
-		$query->join('INNER', $db->quoteName('#__rem_houses').' AS a ON '.$db->quoteName('a.id_country').' = '.$db->quoteName('c1.id'));
-		$query->where($db->quoteName('a.id_country').' != 0 AND '.$db->quoteName('c1.name').' != \'\'');
-		// Filter by language
-		if ($this->getState('filter.language'))
-		{
-			$query->where($db->quoteName('a.language').' IN ('.$db->quote(JFactory::getLanguage()->getTag()).','.$db->quote('*').')');
+		$query->select($db->quoteName('m.id').' AS value');
+		
+		if(!$group_filter)
+			$query->select($db->quoteName('m.name').' AS text');
+		else
+			$query->select('CONCAT('.$db->quoteName('m.name').', " (", count(*), ")")  AS text');
+			
+		$query->from($db->quoteName('#__rem_lmunicipalities').' AS m');
+		$query->where($db->quoteName('m.name').' != \'\'');
+		
+		#only if FO have state
+		$query->where('m.state = 1');
+									   
+		$query->order($db->quoteName('m.name'));
+
+		if($group_filter){
+			$query->where($db->quoteName('a.id_lmunicipality').' != 0');
+			// Filter by language
+			if ($this->getState('filter.language'))
+			{
+				$query->where($db->quoteName('a.language').' IN ('.$db->quote(JFactory::getLanguage()->getTag()).','.$db->quote('*').')');
+			}
+			$query->join('INNER', $db->quoteName('#__rem_houses').' AS a ON '.$db->quoteName('a.id_lmunicipality').' = '.$db->quoteName('m.id'));
+			$query->group($db->quoteName('m.id').', '.
+				$db->quoteName('m.name'));
 		}
-		$query->group($db->quoteName('c1.id').', '.$db->quoteName('c1.name'));
-		$query->order($db->quoteName('c1.name'));
+
 
 		// Setup the query
 		$db->setQuery($query);
@@ -791,7 +845,7 @@ class RemcaModelHouses extends JModelList
 	
         /*
          * Function that allows download database information
-         * @ToDo implementar generación de código
+         * @ToDo implementar generaciÃ³n de cÃ³digo
          */
         public function getListQuery4Export(){
             $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));

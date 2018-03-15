@@ -103,20 +103,20 @@ class RemcaViewReviewForm extends JViewLegacy
 		}
 		else
 		{
-			$this->params->def('page_heading', JText::_('COM_REMCA_REVIEW_EDIT_ITEM'));
+			$this->params->def('page_heading', JText::_('COM_REMCA_REVIEWS_EDIT_ITEM'));
 		}
 
 		if (!is_null($this->item->id))
 		{
-			$title = $this->params->def('page_title', JText::_('COM_REMCA_REVIEW_EDIT_ITEM'));
+			$title = $this->params->def('page_title', JText::_('COM_REMCA_REVIEWS_EDIT_ITEM'));
 			
-			$pathway->addItem(JText::sprintf('COM_REMCA_EDIT_ITEM', JText::sprintf('COM_REMCA_REVIEW_ID_TITLE', $this->item->id)),''); 
+			$pathway->addItem(JText::sprintf('COM_REMCA_EDIT_ITEM', JText::sprintf('COM_REMCA_REVIEWS_ID_TITLE', $this->item->id)),''); 
 		}
 		else
 		{
-			$title = $this->params->def('page_title', JText::_('COM_REMCA_REVIEW_CREATE_ITEM'));
+			$title = $this->params->def('page_title', JText::_('COM_REMCA_REVIEWS_CREATE_ITEM'));
 			
-			$pathway->addItem(JText::_('COM_REMCA_REVIEW_CREATE_ITEM'),'');
+			$pathway->addItem(JText::_('COM_REMCA_REVIEWS_CREATE_ITEM'),'');
 		}
 
 		

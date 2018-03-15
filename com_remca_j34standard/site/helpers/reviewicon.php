@@ -54,11 +54,11 @@ class JHTMLReviewIcon
 		{
 			if ($legacy)
 			{
-				$text = JHtml::_('image', 'com_remca/new.png', JText::_('COM_REMCA_REVIEW_CREATE_ITEM'), NULL, true);
+				$text = JHtml::_('image', 'com_remca/new.png', JText::_('COM_REMCA_REVIEWS_CREATE_ITEM'), NULL, true);
 			}
 			else
 			{
-				$text = '<span class="icon-plus"></span>' . JText::_('COM_REMCA_REVIEW_CREATE_ITEM');
+				$text = '<span class="icon-plus"></span>' . JText::_('COM_REMCA_REVIEWS_CREATE_ITEM');
 			}		
 		}
 		else
@@ -78,7 +78,7 @@ class JHTMLReviewIcon
 		
 		$button =  JHtml::_('link', JRoute::_($url), $text, $attribs);
 
-		$output = '<span class="hasTooltip tip" title="'.JHtml::tooltipText('COM_REMCA_REVIEW_CREATE_ITEM').'">'.$button.'</span>';
+		$output = '<span class="hasTooltip tip" title="'.JHtml::tooltipText('COM_REMCA_REVIEWS_CREATE_ITEM').'">'.$button.'</span>';
 		return $output;
 	}
 	/**
@@ -136,18 +136,18 @@ class JHTMLReviewIcon
 			if ($legacy)
 			{
 				$icon	= $review->state ? 'com_remca/edit.png' : 'com_remca/edit_unpublished.png';
-				$text	= JHtml::_('image','system/' .$icon, JText::_('COM_REMCA_REVIEW_EDIT_ITEM'), NULL, true);
+				$text	= JHtml::_('image','system/' .$icon, JText::_('COM_REMCA_REVIEWS_EDIT_ITEM'), NULL, true);
 			}
 			else
 			{
 				$icon = $review->state ? 'edit' : 'eye-close';
-				$text = '<span class="hasTooltip icon-' . $icon . ' tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_REVIEW_EDIT_ITEM'), $overlib, 0) 
+				$text = '<span class="hasTooltip icon-' . $icon . ' tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_REVIEWS_EDIT_ITEM'), $overlib, 0) 
 				. '"></span>' . JText::_('JGLOBAL_EDIT');
 			}			
 		}
 		else
 		{
-			$text = '<span class="hasTooltip tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_REVIEW_EDIT_ITEM'), $overlib, 0) . '"></span>' . JText::_('JGLOBAL_EDIT') . '</span>';
+			$text = '<span class="hasTooltip tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_REVIEWS_EDIT_ITEM'), $overlib, 0) . '"></span>' . JText::_('JGLOBAL_EDIT') . '</span>';
 		}
 				
 		$output = JHtml::_('link', JRoute::_($url), $text, $attribs);
@@ -194,7 +194,7 @@ class JHTMLReviewIcon
 
 		$overlib = '';
 
-		$attribs['onclick'] = "if(confirm('".JText::_('COM_REMCA_REVIEW_DELETE_ITEM_CONFIRM')."'))
+		$attribs['onclick'] = "if(confirm('".JText::_('COM_REMCA_REVIEWS_DELETE_ITEM_CONFIRM')."'))
 								this.href='".JRoute::_($url)."';
 								else this.href='#';";
 
@@ -204,16 +204,16 @@ class JHTMLReviewIcon
 			if ($legacy)
 			{
 				$icon	= 'com_remca/delete.png';
-				$text = JHtml::_('image', 'system/' . $icon, JText::_('COM_REMCA_REVIEW_DELETE_ITEM'), null, true);
+				$text = JHtml::_('image', 'system/' . $icon, JText::_('COM_REMCA_REVIEWS_DELETE_ITEM'), null, true);
 			}
 			else
 			{
-				$text = '<span class="hasTooltip icon-delete tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_REVIEW_DELETE_ITEM'), $overlib, 0) . '"></span>&#160;' . JText::_('JACTION_DELETE') . '&#160;';
+				$text = '<span class="hasTooltip icon-delete tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_REVIEWS_DELETE_ITEM'), $overlib, 0) . '"></span>&#160;' . JText::_('JACTION_DELETE') . '&#160;';
 			}
 		}
 		else
 		{
-			$text = '<span class="hasTooltip tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_REVIEW_DELETE_ITEM'), $overlib, 0) . '">' . JText::_('JACTION_DELETE') . '</span>';
+			$text = '<span class="hasTooltip tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_REVIEWS_DELETE_ITEM'), $overlib, 0) . '">' . JText::_('JACTION_DELETE') . '</span>';
 		}		
 		
 		$output = JHtml::_('link', JRoute::_($url), $text, $attribs);

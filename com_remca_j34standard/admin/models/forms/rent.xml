@@ -64,18 +64,18 @@
         label="COM_REMCA_RENT_FIELDSET_RENT_FS_LABEL"
         description="COM_REMCA_RENT_FIELDSET_RENT_FS_DESC"
     >
-        <field name="fk_houseid"
+        <field name="id_house"
             type="modal_houses"
-            label="COM_REMCA_RENT_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_RENT_FIELD_FK_HOUSEID_DESC"
+            label="COM_REMCA_RENT_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_RENT_FIELD_ID_HOUSE_DESC"
             class="modal"
 			default="'0'"
         >
         </field>  
-        <field name="fk_userid"
+        <field name="id_user"
             type="modal_jusers"
-            label="COM_REMCA_RENT_FIELD_FK_USERID_LABEL"
-            description="COM_REMCA_RENT_FIELD_FK_USERID_DESC"
+            label="COM_REMCA_RENT_FIELD_ID_USER_LABEL"
+            description="COM_REMCA_RENT_FIELD_ID_USER_DESC"
             class="modal"
 			default="0"
         >

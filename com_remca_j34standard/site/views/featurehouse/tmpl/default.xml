@@ -173,10 +173,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="show_featurehouse_fk_houseid"
+                name="show_featurehouse_id_house"
                 type="radio"
-                label="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_FK_HOUSEID_LABEL"
-                description="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_FK_HOUSEID_DESC"
+                label="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_ID_HOUSE_LABEL"
+                description="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_ID_HOUSE_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -184,10 +184,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_featurehouse_fk_featureid"
+                name="show_featurehouse_id_featured"
                 type="radio"
-                label="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_FK_FEATUREID_LABEL"
-                description="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_FK_FEATUREID_DESC"
+                label="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_ID_FEATURED_LABEL"
+                description="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_ID_FEATURED_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>

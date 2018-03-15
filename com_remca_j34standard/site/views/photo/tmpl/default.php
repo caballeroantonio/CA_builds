@@ -151,7 +151,7 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="photoForm" id="photoForm">
 			<?php $dummy = false;
 					$display_fieldset = (
-								($params->get('show_photo_fk_houseid')) OR 
+								($params->get('show_photo_id_house')) OR 
 								($params->get('show_photo_thumbnail_img')) OR 
 								$dummy
 								);
@@ -161,10 +161,10 @@ $empty = $component->params->get('default_empty_field', '');
 					<legend><?php echo JText::_('COM_REMCA_PHOTOS_FIELDSET_PHOTOS_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
-						<?php if ($params->get('show_photo_fk_houseid')) : ?>
+						<?php if ($params->get('show_photo_id_house')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_PHOTOS_FIELD_FK_HOUSEID_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_PHOTOS_FIELD_ID_HOUSE_LABEL'); ?>
 							</label>
 							<span>
 								<?php

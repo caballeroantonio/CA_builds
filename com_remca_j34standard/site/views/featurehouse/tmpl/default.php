@@ -114,8 +114,8 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="featurehouseForm" id="featurehouseForm">
 			<?php $dummy = false;
 					$display_fieldset = (
-								($params->get('show_featurehouse_fk_houseid')) OR 
-								($params->get('show_featurehouse_fk_featureid')) OR 
+								($params->get('show_featurehouse_id_house')) OR 
+								($params->get('show_featurehouse_id_featured')) OR 
 								$dummy
 								);
 			?>
@@ -124,10 +124,10 @@ $empty = $component->params->get('default_empty_field', '');
 					<legend><?php echo JText::_('COM_REMCA_FEATURE_HOUSES_FIELDSET_FEATURE_HOUSES_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
-						<?php if ($params->get('show_featurehouse_fk_houseid')) : ?>
+						<?php if ($params->get('show_featurehouse_id_house')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_FEATURE_HOUSES_FIELD_FK_HOUSEID_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_FEATURE_HOUSES_FIELD_ID_HOUSE_LABEL'); ?>
 							</label>
 							<span>
 								<?php
@@ -136,10 +136,10 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_featurehouse_fk_featureid')) : ?>
+						<?php if ($params->get('show_featurehouse_id_featured')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_FEATURE_HOUSES_FIELD_FK_FEATUREID_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_FEATURE_HOUSES_FIELD_ID_FEATURED_LABEL'); ?>
 							</label>
 							<span>
 								<?php

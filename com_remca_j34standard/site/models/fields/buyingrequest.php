@@ -59,7 +59,7 @@ class JFormFieldBuyingRequest extends JFormFieldList
 		$query	= $db->getQuery(true);
 
 		$query->select($db->quoteName('id').' AS value, '.$db->quoteName('name').' AS text');
-		$query->from($db->quoteName('#__rem_buying_request').' AS a');
+		$query->from($db->quoteName('#__rem_buying_requests').' AS a');
 		$query->order($db->quoteName('a.id'));
 		
 		// Get the options.

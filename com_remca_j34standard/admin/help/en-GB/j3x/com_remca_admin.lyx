@@ -234,6 +234,12 @@ Descripción
 
 \begin_layout Standard
 \begin_layout Standard
+En vivanuncios las categorías se pueden obtener de https://www.vivanuncios.com.mx/api/metadata/dropdown/allcategories
+\end_layout
+\begin_layout Standard
+ 
+\end_layout
+\begin_layout Standard
 @ToDo revisar <a href="http://fancyapps.com/fancybox/#license:">http://fancyapps.com/fancybox/#license:</a>
 \end_layout
 \begin_layout Standard
@@ -2360,7 +2366,7 @@ Configuraciones del despliegue de Video_source en listas/Blog
 \end_layout
 
 \begin_layout Subsection
-Configuración de Buying_request
+Configuración de Buying Requests
 \end_layout
 
 \begin_layout Standard
@@ -2385,7 +2391,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Configuraciones del despliegue de Buying_request
+Configuraciones del despliegue de Buying Requests
 \end_layout
 
 \end_inset
@@ -2420,7 +2426,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Configuraciones del despliegue de Buying_request en listas/Blog
+Configuraciones del despliegue de Buying Requests en listas/Blog
 \end_layout
 
 \end_inset
@@ -5047,7 +5053,7 @@ Diagrama entidad relación
 \end_layout
 
 \begin_layout Subsection
-#__rem_review
+#__rem_reviews
 \end_layout
 
 \begin_layout Subparagraph
@@ -5055,7 +5061,7 @@ Descripción
 \end_layout
 
 \begin_layout Standard
-Es la tabla para almacenar Review
+Es la tabla para almacenar Reviews
 \end_layout
 
 \begin_layout Standard
@@ -5219,7 +5225,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename der_review.svg
+	filename der_reviews.svg
 	lyxscale 30
 	width 80text%
 
@@ -5855,7 +5861,7 @@ Diagrama entidad relación
 \end_layout
 
 \begin_layout Subsection
-#__rem_buying_request
+#__rem_buying_requests
 \end_layout
 
 \begin_layout Subparagraph
@@ -5863,7 +5869,7 @@ Descripción
 \end_layout
 
 \begin_layout Standard
-Es la tabla para almacenar Buying_request
+Es la tabla para almacenar Buying Requests
 \end_layout
 
 \begin_layout Standard
@@ -6027,7 +6033,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename der_buying_request.svg
+	filename der_buying_requests.svg
 	lyxscale 30
 	width 80text%
 
@@ -7281,9 +7287,11 @@ Es la tabla para almacenar Municipalities
 \end_layout
 
 \begin_layout Standard
-\begin_layout Standard
-locality-municipality
-\end_layout
+<ul>
+<li>El nombre de la tabla no me encanta, lo llamé lmunicipality por la contracción de las palabras locality-municipality. </li>
+<li>El catálogo se obtiene de <a href="http://www.inegi.org.mx/geo/contenidos/geoestadistica/CatalogoClaves.aspx">http://www.inegi.org.mx/geo/contenidos/geoestadistica/CatalogoClaves.aspx</a></li>
+<li>id = id_entidad_federativa * 1000 + ordering ; donde ordering = CLAVE DE AGEM; en la fórmula no estoy contemplando el id_country</li>
+</ul>
 \end_layout
 
 \begin_layout Subsubsection
@@ -12130,7 +12138,7 @@ status collapsed
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Review - Grid Panel Layout"
+name "Reviews - Grid Panel Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=gridpanel"
 
 \end_inset
@@ -12147,7 +12155,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_review.jpg
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_reviews.jpg
 	lyxscale 30
 	width 80col%
 
@@ -12176,7 +12184,7 @@ Grid Panel Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Review - Default List Layout"
+name "Reviews - Default List Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]"
 
 \end_inset
@@ -12222,7 +12230,7 @@ Default List Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Review - Blog Layout"
+name "Reviews - Blog Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=blog"
 
 \end_inset
@@ -12268,7 +12276,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Review - Single Review Layout"
+name "Reviews - Single Review Layout"
 target "SERVER?option=com_remca&view=review&id=1"
 
 \end_inset
@@ -12314,7 +12322,7 @@ Single Review Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Review - Single Review Article Layout"
+name "Reviews - Single Review Article Layout"
 target "SERVER?option=com_remca&view=review&layout=article&id=1"
 
 \end_inset
@@ -12360,7 +12368,7 @@ Single Review Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Review - Create Review"
+name "Reviews - Create Review"
 target "SERVER?option=com_remca&view=reviewform&layout=edit&id=1"
 
 \end_inset
@@ -13631,7 +13639,7 @@ Create Video_source
 \end_layout
 
 \begin_layout Subsubsection
-Buying_request
+Buying requests
 \end_layout
 
 \begin_layout Subparagraph
@@ -13710,7 +13718,7 @@ status collapsed
 
 
 \backslash
-caption{Lista de campos en Buying_request}
+caption{Lista de campos en Buying requests}
 \backslash
 
 \backslash
@@ -13754,7 +13762,7 @@ status collapsed
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Buying_request - Grid Panel Layout"
+name "Buying Requests - Grid Panel Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=gridpanel"
 
 \end_inset
@@ -13771,7 +13779,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_buying_request.jpg
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_buying_requests.jpg
 	lyxscale 30
 	width 80col%
 
@@ -13800,7 +13808,7 @@ Grid Panel Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Buying_request - Default List Layout"
+name "Buying Requests - Default List Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]"
 
 \end_inset
@@ -13846,7 +13854,7 @@ Default List Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Buying_request - Blog Layout"
+name "Buying Requests - Blog Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=blog"
 
 \end_inset
@@ -13892,7 +13900,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Buying_request - Single Buying_request Layout"
+name "Buying Requests - Single Buying Requests Layout"
 target "SERVER?option=com_remca&view=buyingrequest&id=1"
 
 \end_inset
@@ -13922,7 +13930,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single Buying_request Layout
+Single Buying Requests Layout
 \end_layout
 
 \end_inset
@@ -13938,7 +13946,7 @@ Single Buying_request Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Buying_request - Single Buying_request Article Layout"
+name "Buying Requests - Single Buying Requests Article Layout"
 target "SERVER?option=com_remca&view=buyingrequest&layout=article&id=1"
 
 \end_inset
@@ -13968,7 +13976,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single Buying_request Article Layout
+Single Buying Requests Article Layout
 \end_layout
 
 \end_inset
@@ -13984,7 +13992,7 @@ Single Buying_request Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Buying_request - Create Buying_request"
+name "Buying Requests - Create Buying Requests"
 target "SERVER?option=com_remca&view=buyingrequestform&layout=edit&id=1"
 
 \end_inset
@@ -14014,7 +14022,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Create Buying_request
+Create Buying Requests
 \end_layout
 
 \end_inset
@@ -16481,9 +16489,11 @@ Descripción
 \end_layout
 
 \begin_layout Standard
-\begin_layout Standard
-locality-municipality
-\end_layout
+<ul>
+<li>El nombre de la tabla no me encanta, lo llamé lmunicipality por la contracción de las palabras locality-municipality. </li>
+<li>El catálogo se obtiene de <a href="http://www.inegi.org.mx/geo/contenidos/geoestadistica/CatalogoClaves.aspx">http://www.inegi.org.mx/geo/contenidos/geoestadistica/CatalogoClaves.aspx</a></li>
+<li>id = id_entidad_federativa * 1000 + ordering ; donde ordering = CLAVE DE AGEM; en la fórmula no estoy contemplando el id_country</li>
+</ul>
 \end_layout
 
 \begin_layout Standard

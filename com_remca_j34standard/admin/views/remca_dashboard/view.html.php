@@ -128,9 +128,9 @@ class RemcaViewRemca_Dashboard extends JViewLegacy
 			'text'=>'Rent_sal',//JText::_('REMCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_REMCA_RENTSAL_DESCRIPTION')
 			);
-		$buttons[] = array('link'=>'index.php?option=com_remca&view=review',
-			'object'=>'review',
-			'text'=>'Review',//JText::_('REMCA_COMPONENT_WIZARD'),
+		$buttons[] = array('link'=>'index.php?option=com_remca&view=reviews',
+			'object'=>'reviews',
+			'text'=>'Reviews',//JText::_('REMCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_REMCA_REVIEW_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_remca&view=track_source',
@@ -148,9 +148,9 @@ class RemcaViewRemca_Dashboard extends JViewLegacy
 			'text'=>'Video_source',//JText::_('REMCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_REMCA_VIDEOSOURCE_DESCRIPTION')
 			);
-		$buttons[] = array('link'=>'index.php?option=com_remca&view=buying_request',
-			'object'=>'buying_request',
-			'text'=>'Buying_request',//JText::_('REMCA_COMPONENT_WIZARD'),
+		$buttons[] = array('link'=>'index.php?option=com_remca&view=buying_requests',
+			'object'=>'buying_requests',
+			'text'=>'Buying Requests',//JText::_('REMCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_REMCA_BUYINGREQUEST_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_remca&view=categories',

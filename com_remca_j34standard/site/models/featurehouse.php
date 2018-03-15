@@ -55,8 +55,8 @@ class RemcaModelFeatureHouse extends JModelItem
 		{
 			$config['featurehouse_filter_fields'] = array(
 				'id', 'a.id',
-				'fk_houseid','a.fk_houseid',
-				'fk_featureid','a.fk_featureid',
+				'id_house','a.id_house',
+				'id_featured','a.id_featured',
 				);
 		}
 
@@ -153,12 +153,12 @@ class RemcaModelFeatureHouse extends JModelItem
 				//  Do not show unless today's date is within the publish up and down dates (or they are empty)
 				
 					
-				// Filter by and return name for fk_houseid level.
+				// Filter by and return name for id_house level.
 				$query->select($db->quoteName('h.name').' AS h_house_name');
-				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_houseid'));	
-				// Filter by and return name for fk_featureid level.
+				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
+				// Filter by and return name for id_featured level.
 				$query->select($db->quoteName('f.name').' AS f_feature_name');
-				$query->join('LEFT', $db->quoteName('#__rem_feature').' AS f ON '.$db->quoteName('f.id').' = '.$db->quoteName('a.fk_featureid'));	
+				$query->join('LEFT', $db->quoteName('#__rem_feature').' AS f ON '.$db->quoteName('f.id').' = '.$db->quoteName('a.id_featured'));	
 																				
 				$db->setQuery($query);
 

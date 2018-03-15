@@ -34,21 +34,21 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'fk_houseid',
-        'FIELD_CODE_NAME' => 'fk_houseid',
+        'FIELD_NAME' => 'House',
+        'FIELD_CODE_NAME' => 'id_house',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FK_HOUSEID
+                FIELD_CODE_NAME_UPPER=ID_HOUSE
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
 
-                FIELD_NAME_LATEX=fk\_houseid
-                FIELD_CODE_NAME_LATEX=fk\_houseid
+                FIELD_NAME_LATEX=House
+                FIELD_CODE_NAME_LATEX=id\_house
                 FIELD_DBCOMMENT_LATEX=
 
                     {FIELD_LINK}
@@ -56,24 +56,24 @@ function getFields(){
                     FIELD_FOREIGN_OBJECT_UPPER=HOUSE
 
     */
-    $fields['fk_houseid'] = $field;
+    $fields['id_house'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'fk_featureid',
-        'FIELD_CODE_NAME' => 'fk_featureid',
+        'FIELD_NAME' => 'Featured',
+        'FIELD_CODE_NAME' => 'id_featured',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FK_FEATUREID
+                FIELD_CODE_NAME_UPPER=ID_FEATURED
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_featureid
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Featured
 
-                FIELD_NAME_LATEX=fk\_featureid
-                FIELD_CODE_NAME_LATEX=fk\_featureid
+                FIELD_NAME_LATEX=Featured
+                FIELD_CODE_NAME_LATEX=id\_featured
                 FIELD_DBCOMMENT_LATEX=
 
                     {FIELD_LINK}
@@ -81,7 +81,7 @@ function getFields(){
                     FIELD_FOREIGN_OBJECT_UPPER=FEATURE
 
     */
-    $fields['fk_featureid'] = $field;
+    $fields['id_featured'] = $field;
     return $fields;
 }
 

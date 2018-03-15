@@ -185,16 +185,16 @@ class RemcaModelFeatureHouses extends JModelList
 
 
 		
-		// Filter by and return name for fk_houseid level.
+		// Filter by and return name for id_house level.
 		$query->select($db->quoteName('h.name').' AS h_house_name');
 		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
 
-		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_houseid'));	
-		// Filter by and return name for fk_featureid level.
+		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
+		// Filter by and return name for id_featured level.
 		$query->select($db->quoteName('f.name').' AS f_feature_name');
 		$query->select($db->quoteName('f.id').' AS f_feature_id');
 
-		$query->join('LEFT', $db->quoteName('#__rem_feature').' AS f ON '.$db->quoteName('f.id').' = '.$db->quoteName('a.fk_featureid'));	
+		$query->join('LEFT', $db->quoteName('#__rem_feature').' AS f ON '.$db->quoteName('f.id').' = '.$db->quoteName('a.id_featured'));	
 					
 
 		// Filter by a single or group of feature_houses.
@@ -373,7 +373,7 @@ class RemcaModelFeatureHouses extends JModelList
 	
         /*
          * Function that allows download database information
-         * @ToDo implementar generación de código
+         * @ToDo implementar generaciÃ³n de cÃ³digo
          */
         public function getListQuery4Export(){
             $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));

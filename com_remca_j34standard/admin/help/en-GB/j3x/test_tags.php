@@ -1,7 +1,7 @@
 #one [%%IF per line
 Titulo=RealEstateManagerCA
 Nombre del paquete com_architectcomp=com_remca
-Descripción <p>@ToDo revisar <a href=&quot;http://fancyapps.com/fancybox/#license:&quot;>http://fancyapps.com/fancybox/#license:</a></p><br/><p>You are <b>free</b> to use fancyBox for your personal or non-profit website projects. <br /> You can get the author's permission to use fancyBox for commercial websites by <a href=&quot;http://fancyapps.com/store/&quot;>paying a fee</a>.</p><br/><ul><br/><li>De momento plural_name va a conservar los nombres del código fuente original</li><br/><li>Cambiar los campos published por JoomlaFeatured.Status (state), ya comprobé que son compatibles.</li><br/><li>Tiene implementado acceso a registros por grupos definidos en jos_rem_main_categories.params que es del tipo text y resulta muy costoso computacionalmente</li><br/><li></li><br/></ul><br/><p>CHANGELOG</p><br/><ul><br/><li>20180123 Se modificó el ENGINE de las tablas para soportar CONSTRAINTS, se agregó la tabla vivanuncios_items que contiene los datos del scraping, se agregó indices a las columnas published para acelerar las búsquedas</li><br/><li>20180125 cambié published por state para generarlo desde joomla_features</li><br/><li>20180125 deshabilite #__rem_houses.approved, considero que no se debería utilizar porque existe published indexado, y approved es costoso.</li><br/><li>20180129 renombre house.htitle por house.name. Los objetos modales requieren la columna name, la agregué en const, language, rent.</li><br/></ul> <p>@ToDo revisar <a href=&quot;http://fancyapps.com/fancybox/#license:&quot;>http://fancyapps.com/fancybox/#license:</a></p><br/><p>You are <b>free</b> to use fancyBox for your personal or non-profit website projects. <br /> You can get the author's permission to use fancyBox for commercial websites by <a href=&quot;http://fancyapps.com/store/&quot;>paying a fee</a>.</p><br/><ul><br/><li>De momento plural_name va a conservar los nombres del código fuente original</li><br/><li>Cambiar los campos published por JoomlaFeatured.Status (state), ya comprobé que son compatibles.</li><br/><li>Tiene implementado acceso a registros por grupos definidos en jos_rem_main_categories.params que es del tipo text y resulta muy costoso computacionalmente</li><br/><li></li><br/></ul><br/><p>CHANGELOG</p><br/><ul><br/><li>20180123 Se modificó el ENGINE de las tablas para soportar CONSTRAINTS, se agregó la tabla vivanuncios_items que contiene los datos del scraping, se agregó indices a las columnas published para acelerar las búsquedas</li><br/><li>20180125 cambié published por state para generarlo desde joomla_features</li><br/><li>20180125 deshabilite #__rem_houses.approved, considero que no se debería utilizar porque existe published indexado, y approved es costoso.</li><br/><li>20180129 renombre house.htitle por house.name. Los objetos modales requieren la columna name, la agregué en const, language, rent.</li><br/></ul>
+Descripción <p>En vivanuncios las categorías se pueden obtener de https://www.vivanuncios.com.mx/api/metadata/dropdown/allcategories</p><br/><p> </p><br/><p>@ToDo revisar <a href=&quot;http://fancyapps.com/fancybox/#license:&quot;>http://fancyapps.com/fancybox/#license:</a></p><br/><p>You are <b>free</b> to use fancyBox for your personal or non-profit website projects. <br /> You can get the author's permission to use fancyBox for commercial websites by <a href=&quot;http://fancyapps.com/store/&quot;>paying a fee</a>.</p><br/><ul><br/><li>De momento plural_name va a conservar los nombres del código fuente original</li><br/><li>Cambiar los campos published por JoomlaFeatured.Status (state), ya comprobé que son compatibles.</li><br/><li>Tiene implementado acceso a registros por grupos definidos en jos_rem_main_categories.params que es del tipo text y resulta muy costoso computacionalmente</li><br/><li></li><br/></ul><br/><p>CHANGELOG</p><br/><ul><br/><li>20180123 Se modificó el ENGINE de las tablas para soportar CONSTRAINTS, se agregó la tabla vivanuncios_items que contiene los datos del scraping, se agregó indices a las columnas published para acelerar las búsquedas</li><br/><li>20180125 cambié published por state para generarlo desde joomla_features</li><br/><li>20180125 deshabilite #__rem_houses.approved, considero que no se debería utilizar porque existe published indexado, y approved es costoso.</li><br/><li>20180129 renombre house.htitle por house.name. Los objetos modales requieren la columna name, la agregué en const, language, rent.</li><br/></ul> <p>En vivanuncios las categorías se pueden obtener de https://www.vivanuncios.com.mx/api/metadata/dropdown/allcategories</p><br/><p> </p><br/><p>@ToDo revisar <a href=&quot;http://fancyapps.com/fancybox/#license:&quot;>http://fancyapps.com/fancybox/#license:</a></p><br/><p>You are <b>free</b> to use fancyBox for your personal or non-profit website projects. <br /> You can get the author's permission to use fancyBox for commercial websites by <a href=&quot;http://fancyapps.com/store/&quot;>paying a fee</a>.</p><br/><ul><br/><li>De momento plural_name va a conservar los nombres del código fuente original</li><br/><li>Cambiar los campos published por JoomlaFeatured.Status (state), ya comprobé que son compatibles.</li><br/><li>Tiene implementado acceso a registros por grupos definidos en jos_rem_main_categories.params que es del tipo text y resulta muy costoso computacionalmente</li><br/><li></li><br/></ul><br/><p>CHANGELOG</p><br/><ul><br/><li>20180123 Se modificó el ENGINE de las tablas para soportar CONSTRAINTS, se agregó la tabla vivanuncios_items que contiene los datos del scraping, se agregó indices a las columnas published para acelerar las búsquedas</li><br/><li>20180125 cambié published por state para generarlo desde joomla_features</li><br/><li>20180125 deshabilite #__rem_houses.approved, considero que no se debería utilizar porque existe published indexado, y approved es costoso.</li><br/><li>20180129 renombre house.htitle por house.name. Los objetos modales requieren la columna name, la agregué en const, language, rent.</li><br/></ul>
 Release 1.0.0
 Copyright 
 COMPONENTSTARTVERSION=1.0.0
@@ -48,23 +48,23 @@ architectcomp=remca
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=id_municipality
-            FIELD_CODE_NAME_UPPER=ID_LMUNICIPALITY
+            FIELD_NAME=Country
+            FIELD_CODE_NAME_UPPER=ID_COUNTRY
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_lmunicipality` INT(10) UNSIGNED  NOT NULL DEFAULT '0' id_municipality
+            FIELD_DB=`id_country` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Country
             
-            FIELD_NAME_LATEX=id\_municipality
-            FIELD_CODE_NAME_LATEX=id\_lmunicipality
+            FIELD_NAME_LATEX=Country
+            FIELD_CODE_NAME_LATEX=id\_country
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
-                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=M
-                FIELD_FOREIGN_OBJECT_UPPER=LMUNICIPALITY
+                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=C1
+                FIELD_FOREIGN_OBJECT_UPPER=COUNTRY
             
 
 
@@ -96,23 +96,23 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Country
-            FIELD_CODE_NAME_UPPER=ID_COUNTRY
+            FIELD_NAME=id_municipality
+            FIELD_CODE_NAME_UPPER=ID_LMUNICIPALITY
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_country` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Country
+            FIELD_DB=`id_lmunicipality` INT(10) UNSIGNED  NOT NULL DEFAULT '0' id_municipality
             
-            FIELD_NAME_LATEX=Country
-            FIELD_CODE_NAME_LATEX=id\_country
+            FIELD_NAME_LATEX=id\_municipality
+            FIELD_CODE_NAME_LATEX=id\_lmunicipality
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
-                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=C1
-                FIELD_FOREIGN_OBJECT_UPPER=COUNTRY
+                FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=M
+                FIELD_FOREIGN_OBJECT_UPPER=LMUNICIPALITY
             
 
 
@@ -141,18 +141,18 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_rentid
-            FIELD_CODE_NAME_UPPER=FK_RENTID
+            FIELD_NAME=Rent
+            FIELD_CODE_NAME_UPPER=ID_RENT
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_rentid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_rentid
+            FIELD_DB=`id_rent` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Rent
             
-            FIELD_NAME_LATEX=fk\_rentid
-            FIELD_CODE_NAME_LATEX=fk\_rentid
+            FIELD_NAME_LATEX=Rent
+            FIELD_CODE_NAME_LATEX=id\_rent
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -1214,11 +1214,11 @@ architectcomp=remca
 
     
 {1.3}
-        	{FILTER_FIELD} id_lmunicipality
+        	{FILTER_FIELD} id_country
 {1.3}
         	{FILTER_FIELD} id_lstate
 {1.3}
-        	{FILTER_FIELD} id_country
+        	{FILTER_FIELD} id_lmunicipality
 {1.3}
         	{FILTER_FIELD} price
 {-1.3}
@@ -1256,18 +1256,18 @@ architectcomp=remca
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_houseid
-            FIELD_CODE_NAME_UPPER=FK_HOUSEID
+            FIELD_NAME=House
+            FIELD_CODE_NAME_UPPER=ID_HOUSE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
             
-            FIELD_NAME_LATEX=fk\_houseid
-            FIELD_CODE_NAME_LATEX=fk\_houseid
+            FIELD_NAME_LATEX=House
+            FIELD_CODE_NAME_LATEX=id\_house
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -1517,18 +1517,18 @@ architectcomp=remca
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_user_id
-            FIELD_CODE_NAME_UPPER=FK_USER_ID
+            FIELD_NAME=User
+            FIELD_CODE_NAME_UPPER=ID_USER
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_user_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_user_id
+            FIELD_DB=`id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' User
             
-            FIELD_NAME_LATEX=fk\_user\_id
-            FIELD_CODE_NAME_LATEX=fk\_user\_id
+            FIELD_NAME_LATEX=User
+            FIELD_CODE_NAME_LATEX=id\_user
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -1625,18 +1625,18 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_house_id
-            FIELD_CODE_NAME_UPPER=FK_HOUSE_ID
+            FIELD_NAME=House
+            FIELD_CODE_NAME_UPPER=ID_HOUSE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_house_id
+            FIELD_DB=`id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
             
-            FIELD_NAME_LATEX=fk\_house\_id
-            FIELD_CODE_NAME_LATEX=fk\_house\_id
+            FIELD_NAME_LATEX=House
+            FIELD_CODE_NAME_LATEX=id\_house
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -1868,18 +1868,18 @@ architectcomp=remca
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_order_id
-            FIELD_CODE_NAME_UPPER=FK_ORDER_ID
+            FIELD_NAME=Order
+            FIELD_CODE_NAME_UPPER=ID_ORDER
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_order_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_order_id
+            FIELD_DB=`id_order` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Order
             
-            FIELD_NAME_LATEX=fk\_order\_id
-            FIELD_CODE_NAME_LATEX=fk\_order\_id
+            FIELD_NAME_LATEX=Order
+            FIELD_CODE_NAME_LATEX=id\_order
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -1892,18 +1892,18 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_user_id
-            FIELD_CODE_NAME_UPPER=FK_USER_ID
+            FIELD_NAME=User
+            FIELD_CODE_NAME_UPPER=ID_USER
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_user_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_user_id
+            FIELD_DB=`id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' User
             
-            FIELD_NAME_LATEX=fk\_user\_id
-            FIELD_CODE_NAME_LATEX=fk\_user\_id
+            FIELD_NAME_LATEX=User
+            FIELD_CODE_NAME_LATEX=id\_user
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -2000,18 +2000,18 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_house_id
-            FIELD_CODE_NAME_UPPER=FK_HOUSE_ID
+            FIELD_NAME=House
+            FIELD_CODE_NAME_UPPER=ID_HOUSE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_house_id
+            FIELD_DB=`id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
             
-            FIELD_NAME_LATEX=fk\_house\_id
-            FIELD_CODE_NAME_LATEX=fk\_house\_id
+            FIELD_NAME_LATEX=House
+            FIELD_CODE_NAME_LATEX=id\_house
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -2504,18 +2504,18 @@ architectcomp=remca
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_houseid
-            FIELD_CODE_NAME_UPPER=FK_HOUSEID
+            FIELD_NAME=House
+            FIELD_CODE_NAME_UPPER=ID_HOUSE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
             
-            FIELD_NAME_LATEX=fk\_houseid
-            FIELD_CODE_NAME_LATEX=fk\_houseid
+            FIELD_NAME_LATEX=House
+            FIELD_CODE_NAME_LATEX=id\_house
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -2528,18 +2528,18 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_userid
-            FIELD_CODE_NAME_UPPER=FK_USERID
+            FIELD_NAME=User
+            FIELD_CODE_NAME_UPPER=ID_USER
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_userid
+            FIELD_DB=`id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' User
             
-            FIELD_NAME_LATEX=fk\_userid
-            FIELD_CODE_NAME_LATEX=fk\_userid
+            FIELD_NAME_LATEX=User
+            FIELD_CODE_NAME_LATEX=id\_user
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -2729,18 +2729,18 @@ architectcomp=remca
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_houseid
-            FIELD_CODE_NAME_UPPER=FK_HOUSEID
+            FIELD_NAME=House
+            FIELD_CODE_NAME_UPPER=ID_HOUSE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
             
-            FIELD_NAME_LATEX=fk\_houseid
-            FIELD_CODE_NAME_LATEX=fk\_houseid
+            FIELD_NAME_LATEX=House
+            FIELD_CODE_NAME_LATEX=id\_house
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -2753,18 +2753,18 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_userid
-            FIELD_CODE_NAME_UPPER=FK_USERID
+            FIELD_NAME=User
+            FIELD_CODE_NAME_UPPER=ID_USER
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_userid
+            FIELD_DB=`id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' User
             
-            FIELD_NAME_LATEX=fk\_userid
-            FIELD_CODE_NAME_LATEX=fk\_userid
+            FIELD_NAME_LATEX=User
+            FIELD_CODE_NAME_LATEX=id\_user
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -2975,18 +2975,18 @@ architectcomp=remca
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_houseid
-            FIELD_CODE_NAME_UPPER=FK_HOUSEID
+            FIELD_NAME=House
+            FIELD_CODE_NAME_UPPER=ID_HOUSE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
             
-            FIELD_NAME_LATEX=fk\_houseid
-            FIELD_CODE_NAME_LATEX=fk\_houseid
+            FIELD_NAME_LATEX=House
+            FIELD_CODE_NAME_LATEX=id\_house
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -3242,11 +3242,11 @@ architectcomp=remca
     Compobject_short_name=Review
     compobject_short_name=review
     
-    COMPOBJECTPLURAL=REVIEW
-    compobjectplural=review
-    CompObjectPlural=Review
-    compobject_plural_name=review
-    CompObject_plural_name=Review
+    COMPOBJECTPLURAL=REVIEWS
+    compobjectplural=reviews
+    CompObjectPlural=Reviews
+    compobject_plural_name=reviews
+    CompObject_plural_name=Reviews
     compobject_short_plural_name=reviews
     CompObject_short_plural_name=Reviews
     
@@ -3260,18 +3260,18 @@ architectcomp=remca
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_houseid
-            FIELD_CODE_NAME_UPPER=FK_HOUSEID
+            FIELD_NAME=House
+            FIELD_CODE_NAME_UPPER=ID_HOUSE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
             
-            FIELD_NAME_LATEX=fk\_houseid
-            FIELD_CODE_NAME_LATEX=fk\_houseid
+            FIELD_NAME_LATEX=House
+            FIELD_CODE_NAME_LATEX=id\_house
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -3284,18 +3284,18 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_userid
-            FIELD_CODE_NAME_UPPER=FK_USERID
+            FIELD_NAME=User
+            FIELD_CODE_NAME_UPPER=ID_USER
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_userid
+            FIELD_DB=`id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' User
             
-            FIELD_NAME_LATEX=fk\_userid
-            FIELD_CODE_NAME_LATEX=fk\_userid
+            FIELD_NAME_LATEX=User
+            FIELD_CODE_NAME_LATEX=id\_user
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -3485,18 +3485,18 @@ architectcomp=remca
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_house_id
-            FIELD_CODE_NAME_UPPER=FK_HOUSE_ID
+            FIELD_NAME=House
+            FIELD_CODE_NAME_UPPER=ID_HOUSE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_house_id
+            FIELD_DB=`id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
             
-            FIELD_NAME_LATEX=fk\_house\_id
-            FIELD_CODE_NAME_LATEX=fk\_house\_id
+            FIELD_NAME_LATEX=House
+            FIELD_CODE_NAME_LATEX=id\_house
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -3707,18 +3707,18 @@ architectcomp=remca
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_house_id
-            FIELD_CODE_NAME_UPPER=FK_HOUSE_ID
+            FIELD_NAME=House
+            FIELD_CODE_NAME_UPPER=ID_HOUSE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_house_id
+            FIELD_DB=`id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
             
-            FIELD_NAME_LATEX=fk\_house\_id
-            FIELD_CODE_NAME_LATEX=fk\_house\_id
+            FIELD_NAME_LATEX=House
+            FIELD_CODE_NAME_LATEX=id\_house
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -3856,26 +3856,26 @@ architectcomp=remca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Buying_request
+    Compobject_name=Buying requests
     Compobject_description_ini=
 	
     COMPOBJECT=BUYINGREQUEST
     compobject=buyingrequest
     CompObject=BuyingRequest
     
-    compobject_name=buying_request
-    CompObject_name=Buying_request
-    CompObject_short_name=Buying_request
-    Compobject_short_name=Buying_request
-    compobject_short_name=buying_request
+    compobject_name=buying requests
+    CompObject_name=Buying Requests
+    CompObject_short_name=Buying Request
+    Compobject_short_name=Buying request
+    compobject_short_name=buying request
     
-    COMPOBJECTPLURAL=BUYING_REQUEST
-    compobjectplural=buying_request
-    CompObjectPlural=BuyingRequest
-    compobject_plural_name=buying_request
-    CompObject_plural_name=Buying_request
-    compobject_short_plural_name=buying_requests
-    CompObject_short_plural_name=Buying_requests
+    COMPOBJECTPLURAL=BUYING_REQUESTS
+    compobjectplural=buying_requests
+    CompObjectPlural=BuyingRequests
+    compobject_plural_name=buying requests
+    CompObject_plural_name=Buying Requests
+    compobject_short_plural_name=buying requests
+    CompObject_short_plural_name=Buying Requests
     
     
         {OBJECT_FIELDSET}
@@ -3887,18 +3887,18 @@ architectcomp=remca
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_houseid
-            FIELD_CODE_NAME_UPPER=FK_HOUSEID
+            FIELD_NAME=House
+            FIELD_CODE_NAME_UPPER=ID_HOUSE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
             
-            FIELD_NAME_LATEX=fk\_houseid
-            FIELD_CODE_NAME_LATEX=fk\_houseid
+            FIELD_NAME_LATEX=House
+            FIELD_CODE_NAME_LATEX=id\_house
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -3911,18 +3911,18 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_userid
-            FIELD_CODE_NAME_UPPER=FK_USERID
+            FIELD_NAME=User
+            FIELD_CODE_NAME_UPPER=ID_USER
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_userid
+            FIELD_DB=`id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' User
             
-            FIELD_NAME_LATEX=fk\_userid
-            FIELD_CODE_NAME_LATEX=fk\_userid
+            FIELD_NAME_LATEX=User
+            FIELD_CODE_NAME_LATEX=id\_user
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -3985,7 +3985,7 @@ architectcomp=remca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`customer_email` VARCHAR(250) DEFAULT NULL customer_email
+            FIELD_DB=`customer_email` VARCHAR(100) DEFAULT NULL customer_email
             
             FIELD_NAME_LATEX=customer\_email
             FIELD_CODE_NAME_LATEX=customer\_email
@@ -4003,10 +4003,10 @@ architectcomp=remca
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
-            FIELDTYPE_ID=4
+            FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`customer_phone` TEXT DEFAULT NULL customer_phone
+            FIELD_DB=`customer_phone` VARCHAR(15) NOT NULL DEFAULT '' customer_phone
             
             FIELD_NAME_LATEX=customer\_phone
             FIELD_CODE_NAME_LATEX=customer\_phone
@@ -4517,18 +4517,18 @@ architectcomp=remca
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_houseid
-            FIELD_CODE_NAME_UPPER=FK_HOUSEID
+            FIELD_NAME=House
+            FIELD_CODE_NAME_UPPER=ID_HOUSE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
+            FIELD_DB=`id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
             
-            FIELD_NAME_LATEX=fk\_houseid
-            FIELD_CODE_NAME_LATEX=fk\_houseid
+            FIELD_NAME_LATEX=House
+            FIELD_CODE_NAME_LATEX=id\_house
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -4541,18 +4541,18 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=fk_featureid
-            FIELD_CODE_NAME_UPPER=FK_FEATUREID
+            FIELD_NAME=Featured
+            FIELD_CODE_NAME_UPPER=ID_FEATURED
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
             FIELD_DESCRIPTION= 
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`fk_featureid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_featureid
+            FIELD_DB=`id_featured` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Featured
             
-            FIELD_NAME_LATEX=fk\_featureid
-            FIELD_CODE_NAME_LATEX=fk\_featureid
+            FIELD_NAME_LATEX=Featured
+            FIELD_CODE_NAME_LATEX=id\_featured
             FIELD_DBCOMMENT_LATEX=
             
                 {FIELD_LINK}
@@ -4700,7 +4700,7 @@ architectcomp=remca
 {1.0}
 	{COMPONENT_OBJECT}
     Compobject_name=Municipality
-    Compobject_description_ini=<p>locality-municipality</p>
+    Compobject_description_ini=<ul><br/><li>El nombre de la tabla no me encanta, lo llamé lmunicipality por la contracción de las palabras locality-municipality. </li><br/><li>El catálogo se obtiene de <a href=&quot;http://www.inegi.org.mx/geo/contenidos/geoestadistica/CatalogoClaves.aspx&quot;>http://www.inegi.org.mx/geo/contenidos/geoestadistica/CatalogoClaves.aspx</a></li><br/><li>id = id_entidad_federativa * 1000 + ordering ; donde ordering = CLAVE DE AGEM; en la fórmula no estoy contemplando el id_country</li><br/></ul>
 	
     COMPOBJECT=LMUNICIPALITY
     compobject=lmunicipality

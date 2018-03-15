@@ -10,7 +10,7 @@
  * 
  * The following Component Architect header section must remain in any distribution of this file
  *
- * @CAversion		Id: compobjectplural.php 571 2016-01-04 15:03:02Z BrianWade $
+ * @CAversion		Id: compobject.php 571 2016-01-04 15:03:02Z BrianWade $
  * @CAauthor		Component Architect (www.componentarchitect.com)
  * @CApackage		architectcomp
  * @CAsubpackage	architectcomp.site
@@ -31,15 +31,17 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * This models supports retrieving lists of buying_request.
+ * RealEstateManagerCA Component Buying Requests Model
  *
  */
-class RemcaModelBuyingRequest extends JModelList
+class RemcaModelBuyingRequest extends JModelItem
 {
 	/**
-	 * @var    string	$context	Context string for the model type.  This is used to handle uniqueness within sessions data.
+	 * Model context string.  Used in setting the store id for the session
+	 *
+	 * @var		string
 	 */
-	protected $context = 'com_remca.buying_request';
+	protected $context = 'com_remca.buyingrequest';
 
 	/**
 	 * Constructor.
@@ -49,10 +51,18 @@ class RemcaModelBuyingRequest extends JModelList
 	 */
 	public function __construct($config = array())
 	{
-		if (empty($config['filter_fields']))
+		if (empty($config['buyingrequest_filter_fields']))
 		{
-			$config['filter_fields'] = array(
+			$config['buyingrequest_filter_fields'] = array(
 				'id', 'a.id',
+				'id_house','a.id_house',
+				'id_user','a.id_user',
+				'buying_request','a.buying_request',
+				'customer_name','a.customer_name',
+				'customer_email','a.customer_email',
+				'customer_phone','a.customer_phone',
+				'customer_comment','a.customer_comment',
+				'status','a.status',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				);
@@ -65,15 +75,21 @@ class RemcaModelBuyingRequest extends JModelList
 	 *
 	 * Note. Calling getState in this method will result in recursion.
 	 *
-	 * @return	void
-	 * 
 	 */
-	protected function populateState($ordering = null, $direction = null)
+	protected function populateState()
 	{
-		$app = JFactory::getApplication();
+		$app = JFactory::getApplication('site');
+
+		// Load state from the request.
+		$pk = $app->input->getInt('id');
+		$this->setState('buyingrequest.id', $pk);
+
+		$offset = $app->input->getInt('limitstart');
+		$this->setState('list.offset', $offset);
+
 		// Load the parameters. Merge Global and Menu Item params into new object
 		$params = $app->getParams();
-		$menu_params = new JRegistry;
+		$menu_params = new Registry;
 
 		if ($menu = $app->getMenu()->getActive())
 		{
@@ -85,229 +101,85 @@ class RemcaModelBuyingRequest extends JModelList
 
 		$this->setState('params', $merged_params);
 
-		$params = $this->state->params;	
-		
+		// TODO: Tune these values based on other permissions.
 		$user		= JFactory::getUser();
-		
-		$item_id = $app->input->getInt('id', 0) . ':' .$app->input->getInt('Itemid', 0);
-
-		// Check to see if a single buying_request has been specified either as a parameter or in the url Request
-		$pk = $params->get('buying_request_id', '') == '' ? $app->input->getInt('id', '') : $params->get('buying_request_id');
-		$this->setState('filter.buying_request_id', $pk);
-		
-		// List state information
-			$limit = $app->getUserStateFromRequest($this->context.'.list.' . $item_id . '.limit', 'limit', $params->get('buyingrequest_num_per_page'),'integer');
-		$this->setState('list.limit', $limit);
-
-		$value = $app->input->get('limitstart', 0, 'uint');
-		$this->setState('list.start', $value);
-
-		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
-		$this->setState('filter.search', $search);
-		
-
-		$order_col = $app->getUserStateFromRequest($this->context. '.filter_order', 'filter_order', $params->get('buyingrequest_initial_sort','a.id'), 'string');
-		if (!in_array($order_col, $this->filter_fields))
-		{
-			$order_col = $params->get('buyingrequest_initial_sort','a.id');
-		}
-
-		$this->setState('list.ordering', $order_col);
-
-		$list_order = $app->getUserStateFromRequest($this->context. '.filter_order_Dir', 'filter_order_Dir',  $params->get('buyingrequest_initial_direction','ASC'), 'cmd');
-		if (!in_array(JString::strtoupper($list_order), array('ASC', 'DESC', '')))
-		{
-			$list_order =  $params->get('buyingrequest_initial_direction','ASC');
-		}
-		$this->setState('list.direction', $list_order);
-		
-				
-
-		
-		$this->setState('layout', $app->input->getString('layout'));
-	}
-
-	/**
-	 * Method to get a store id based on model configuration state.
-	 *
-	 * This is necessary because the model is used by the component and
-	 * different modules that might need different sets of data or different
-	 * ordering requirements.
-	 *
-	 * @param	string		$id	A prefix for the store id.
-	 *
-	 * @return	string		A store id.
-	 * 
-	 */
-	protected function getStoreId($id = '')
-	{
-		// Compile the store id.
-		$id .= ':'.$this->getState('filter.search');				
-		$id .= ':'.serialize($this->getState('filter.buying_request_id'));
-		$id .= ':'.$this->getState('filter.buying_request_id.include');				
-		
-
-		return parent::getStoreId($id);
-	}
-
-	/**
-	 * Get the main query for retrieving a list of buying_request subject to the model state.
-	 *
-	 * @return	JDatabaseQuery
-	 * 
-	 */
-	protected function getListQuery()
-	{
-		// Get the current user for authorisation checks
-		$user	= JFactory::getUser();
-		// Create a new query object.
-		$db = $this->getDbo();
-		$query = $db->getQuery(true);
-		// Set date values
-		$null_date = $db->quote($db->getNullDate());
-		$now_date = $db->quote(JFactory::getDate()->toSQL());
-		
-		// Select the required fields from the table.
-		$query->select(
-			$this->getState(
-					'list.select',
-					'a.*'
-					)
-				);
-
-
-		$query->from($db->quoteName('#__rem_buying_request').' AS a');
-
-
-
-		
-		
-
-
-
-
-		
-		// Filter by and return name for fk_houseid level.
-		$query->select($db->quoteName('h.name').' AS h_house_name');
-		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
-
-		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_houseid'));	
-		// Filter by and return name for fk_userid level.
-		$query->select($db->quoteName('u.name').' AS u_user_name');
-		$query->select($db->quoteName('u.id').' AS u_user_id');
-
-		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.fk_userid'));	
-					
-
-		// Filter by a single or group of buying_request.
-		$buying_request_id = $this->getState('filter.buying_request_id');
-		if ($buying_request_id != '')
-		{
-			if (is_numeric($buying_request_id))
-			{
-				$type = $this->getState('filter.buying_request_id.include', true) ? '= ' : '<> ';
-				$query->where($db->quoteName('a.id').' '.$type.(int) $buying_request_id);
-			}
-			else
-			{
-				if (is_array($buying_request_id))
-				{
-					JArrayHelper::toInteger($buying_request_id);
-					$buying_request_id = implode(',', $buying_request_id);
-					$type = $this->getState('filter.buying_request_id.include', true) ? 'IN' : 'NOT IN';
-					$query->where($db->quoteName('a.id').' '.$type.' ('.$buying_request_id.')');
-				}
-			}
-		}
-		
-
-		// process the filter for list views with user-entered filters
-		$params = $this->getState('params');
-
-		if ((is_object($params)) AND ($params->get('show_buyingrequest_filter_field') != 'hide') AND ($filter = $this->getState('filter.search')))
-		{
-			// clean filter variable
-			$filter = JString::strtolower($filter);
-			$filter = $db->quote('%'.$db->escape($filter, true).'%', false);
-
-			switch ($params->get('show_buyingrequest_filter_field'))
-			{
-				default:
-					break;
-				
-			}
-		}
-
-		// Add the list ordering clause.
-		if (is_object($params))
-		{
-			$initial_sort = $params->get('field_initial_sort');
-		}
-		else
-		{
-			$initial_sort = '';
-		}
-		// Fall back to old style if the parameter hasn't been set yet.
-		if (empty($initial_sort) OR $this->getState('list.ordering') != '')
-		{
-			$order_col	= '';
-			$order_dirn	= $this->getState('list.direction');
-
-			// Allow for multi field order (routines defining these must cater for quotes on field names	
-			if (strpos($this->getState('list.ordering'),',') !== False)
-			{
-				$order_col = trim($this->getState('list.ordering'));
-			}			
-		
-
-
-			if ($order_col == '')
-			{
-				$order_col = is_string($this->getState('list.ordering')) ? $db->quoteName($this->getState('list.ordering')) : $db->quoteName('a.id');
-				$order_col .= ' '.$order_dirn;
-			}
-			$query->order($db->escape($order_col));			
-					
-		}
-		else
-		{
-			$query->order($db->quoteName('a.'.$initial_sort).' '.$db->escape($this->getState('list.direction', 'ASC')));
 			
-		}	
-		return $query;
 	}
-
 	/**
-	 * Method to get a list of buying_request.
+	 * Returns a Table object, always creating it
 	 *
-	 * Overriden to inject convert the params fields into an object.
-	 *
-	 * @return	mixed	An array of objects on success, false on failure.
-	 * 
-	 */
-	public function getItems()
+	 * @param	type	The table type to instantiate
+	 * @param	string	A prefix for the table class name. Optional.
+	 * @param	array	Configuration array for model. Optional.
+	 * @return	JTable	A database object
+	*/
+	public function getTable($type = 'BuyingRequests', $prefix = 'RemcaTable', $config = array())
 	{
-		$db = $this->getDbo();
-  		$query = $db->getQuery(true);
-		
+		return JTable::getInstance($type, $prefix, $config);
+	}
+	/**
+	 * Method to get Buying Requests data.
+	 *
+	 * @param	integer	$pk	The id of the buying requests.
+	 *
+	 * @return	mixed	Menu item data object on success, false on failure.
+	 */
+	public function getItem($pk = null)
+	{
+		// Get current user for authorisation checks
 		$user	= JFactory::getUser();
-		$user_id	= $user->get('id');
-		$guest	= $user->get('guest');
-
+		
+		$pk = (!empty($pk)) ? $pk : (int) $this->getState('buyingrequest.id');
 		// Get the global params
 		$global_params = JComponentHelper::getParams('com_remca', true);
-		
-		if ($items = parent::getItems())
+
+		if ($this->_item === null)
 		{
-			// Convert the parameter fields into objects.
-			foreach ($items as &$item)
+			$this->_item = array();
+		}
+
+		if (!isset($this->_item[$pk]))
+		{
+			try
 			{
-				$query->clear();
+				$db = $this->getDbo();
+				$query = $db->getQuery(true);
 
-				$buying_request_params = new Registry;
+				$query->select($this->getState(
+					'item.select',
+					'a.*'
 
-
+					)
+				);
+				$query->from($db->quoteName('#__rem_buying_requests').' AS a');
 				
+				
+				$query->where($db->quoteName('a.id').' = ' . (int) $pk);
+				
+					
+
+				//  Do not show unless today's date is within the publish up and down dates (or they are empty)
+				
+					
+				// Filter by and return name for id_house level.
+				$query->select($db->quoteName('h.name').' AS h_house_name');
+				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
+				// Filter by and return name for id_user level.
+				$query->select($db->quoteName('u.name').' AS u_user_name');
+				$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.id_user'));	
+																				
+				$db->setQuery($query);
+
+				$item = $db->loadObject();
+
+				if (empty($item))
+				{
+					return JError::raiseError(404, JText::_('COM_REMCA_BUYING_REQUESTS_ERROR_ITEM_NOT_FOUND'));
+				}
+				// Include any manipulation of the data on the record e.g. expand out Registry fields
+				// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
+			
+
 				
 				
 				
@@ -317,74 +189,122 @@ class RemcaModelBuyingRequest extends JModelList
 				
 				
 		
+
 							
 
+				// Convert parameter fields to objects.
+				$buying_request_params = new Registry;
 				
-							
-				if (!is_object($this->getState('params')))
+				$item->params = clone $this->getState('params');				
+								
+				// BuyingRequest params override menu item params only if menu param = 'use_buyingrequest'
+				// Otherwise, menu item params control the layout
+				// If menu item is 'use_buyingrequest' and there is no buyingrequest param, use global
+
+				// create an array of just the params set to 'use_buyingrequest'
+				$menu_params_array = $this->getState('params')->toArray();
+				$buying_request_array = array();
+
+				foreach ($menu_params_array as $key => $value)
 				{
-					$item->params = $buying_request_params;
+					if ($value === 'use_buyingrequest')
+					{
+						// if the buyingrequest has a value, use it
+						if ($buying_request_params->get($key) != '')
+						{
+							// get the value from the buyingrequest
+							$buying_request_array[$key] = $buying_request_params->get($key);
+						}
+						else
+						{
+							// otherwise, use the global value
+							$buying_request_array[$key] = $global_params->get($key);
+						}
+					}
+				}
+
+				// merge the selected buyingrequest params
+				if (count($buying_request_array) > 0)
+				{
+					$buying_request_params = new Registry;
+					$buying_request_params->loadArray($buying_request_array);
+					$item->params->merge($buying_request_params);
+				}
+
+
+
+
+				$this->_item[$pk] = $item;
+			}
+			catch (Exception $e)
+			{
+				if ($e->getCode() == 404)
+				{
+					// Need to go thru the error handler to allow Redirect to work.
+					JError::raiseError(404, $e->getMessage());
 				}
 				else
 				{
-					$item->params = clone $this->getState('params');
-
-					// BuyingRequest params override menu item params only if menu param = 'use_buyingrequest'
-					// Otherwise, menu item params control the layout
-					// If menu item is 'use_buyingrequest' and there is no buyingrequest param, use global
-
-					// create an array of just the params set to 'use_buyingrequest'
-					$menu_params_array = $this->getState('params')->toArray();
-					$buying_request_array = array();
-
-					foreach ($menu_params_array as $key => $value)
-					{
-						if ($value === 'use_buyingrequest')
-						{
-							// if the buyingrequest has a value, use it
-							if ($buying_request_params->get($key) != '')
-							{
-								// get the value from the buyingrequest
-								$buying_request_array[$key] = $buying_request_params->get($key);
-							}
-							else
-							{
-								// otherwise, use the global value
-								$buying_request_array[$key] = $global_params->get($key);
-							}
-						}
-					}
-
-					// merge the selected buyingrequest params
-					if (count($buying_request_array) > 0)
-					{
-						$buying_request_params = new Registry;
-						$buying_request_params->loadArray($buying_request_array);
-						$item->params->merge($buying_request_params);
-					}
-
-
-					// get display date
-					switch ($item->params->get('list_show_buyingrequest_date'))
-					{
-						default:
-							$item->display_date = 0;
-							break;
-					}
-				}
-
-
+					$this->setError($e);
+					$this->_item[$pk] = false;
+				}			
 			}
 		}
-		return $items;
+
+		return $this->_item[$pk];
 	}
-	
-        /*
-         * Function that allows download database information
-         * @ToDo implementar generación de código
-         */
-        public function getListQuery4Export(){
-            $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));
-            return $this->getDbo()->getQuery();
-        }
+
+		
+	/**
+	 * Method to delete one or more records.
+	 *
+	 * @param   array    $pks  An array of record primary keys.
+	 *
+	 * @return  boolean  True if successful, false if an error occurs.
+	 * 
+	 */
+	public function delete(&$pks)
+	{
+		
+		$dispatcher	= JEventDispatcher::getInstance();
+		$pks		= (array) $pks;
+		$table		= $this->getTable();
+
+		// Include the remca plugins for the on delete events.
+		JPluginHelper::importPlugin('remca');
+
+		// Iterate the items to delete each one.
+		foreach ($pks as $i => $pk)
+		{
+
+			if ($table->load($pk))
+			{
+					// Trigger the BeforeDelete event.
+					$result = $dispatcher->trigger('onBuyingRequestBeforeDelete', array('com_remca.buyingrequest', &$table));
+					if (in_array(false, $result, true))
+					{
+						$this->setError($table->getError());
+						return false;
+					}
+					if (!$table->delete($pk))
+					{
+						$this->setError($table->getError());
+						return false;
+					}
+
+					// Trigger the AfterDelete event.
+					$dispatcher->trigger('onBuyingRequestAfterDelete', array('com_remca.buyingrequest', &$table));
+			}
+			else
+			{
+				$this->setError($table->getError());
+				return false;
+			}
+		}
+
+		// Clear the component's cache
+		$this->cleanCache();
+
+		return true;
+	}
 }

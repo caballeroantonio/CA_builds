@@ -214,11 +214,11 @@ $use_def_list = (
 		<?php
 			$dummy = false;
 			$use_fields_list = (
-						($params->get('show_house_id_lmunicipality')) OR 
-						($params->get('show_house_id_lstate')) OR 
 						($params->get('show_house_id_country')) OR 
+						($params->get('show_house_id_lstate')) OR 
+						($params->get('show_house_id_lmunicipality')) OR 
 						($params->get('show_house_sid')) OR 
-						($params->get('show_house_fk_rentid')) OR 
+						($params->get('show_house_id_rent')) OR 
 						($params->get('show_house_associate_house')) OR 
 						($params->get('show_house_houseid')) OR 
 						($params->get('show_house_link')) OR 
@@ -276,11 +276,11 @@ $use_def_list = (
 			<dt class="info-title"><?php  echo JText::_('COM_REMCA_HOUSES_INFO'); ?></dt>
 		<?php endif; ?>		
 		
-			<?php if ($params->get('show_house_id_lmunicipality')) : ?>
+			<?php if ($params->get('show_house_id_country')) : ?>
 				<dd class="field">
-					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL'); ?></strong>
+					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_COUNTRY_LABEL'); ?></strong>
 					<?php
-						echo JString::trim($this->item->m_lmunicipality_name);
+						echo JString::trim($this->item->c1_country_name);
 					?>
 				</dd>
 			<?php endif; ?>
@@ -292,11 +292,11 @@ $use_def_list = (
 					?>
 				</dd>
 			<?php endif; ?>
-			<?php if ($params->get('show_house_id_country')) : ?>
+			<?php if ($params->get('show_house_id_lmunicipality')) : ?>
 				<dd class="field">
-					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_COUNTRY_LABEL'); ?></strong>
+					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL'); ?></strong>
 					<?php
-						echo JString::trim($this->item->c1_country_name);
+						echo JString::trim($this->item->m_lmunicipality_name);
 					?>
 				</dd>
 			<?php endif; ?>
@@ -308,9 +308,9 @@ $use_def_list = (
 					?>
 				</dd>
 			<?php endif; ?>
-			<?php if ($params->get('show_house_fk_rentid')) : ?>
+			<?php if ($params->get('show_house_id_rent')) : ?>
 				<dd class="field">
-					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_FK_RENTID_LABEL'); ?></strong>
+					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_RENT_LABEL'); ?></strong>
 					<?php
 						echo JString::trim($this->item->r_rent_name);
 					?>

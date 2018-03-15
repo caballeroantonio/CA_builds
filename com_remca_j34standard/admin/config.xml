@@ -151,8 +151,8 @@
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
-			label="COM_REMCA_REVIEW_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_REMCA_REVIEW_FIELD_SAVE_HISTORY_DESC"
+			label="COM_REMCA_REVIEWS_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_REMCA_REVIEWS_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -191,8 +191,8 @@
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
-			label="COM_REMCA_BUYING_REQUEST_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_REMCA_BUYING_REQUEST_FIELD_SAVE_HISTORY_DESC"
+			label="COM_REMCA_BUYING_REQUESTS_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_REMCA_BUYING_REQUESTS_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -514,10 +514,10 @@
             <option	value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_house_id_lmunicipality"
+        <field name="show_house_id_country"
             type="radio"
-            label="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_LABEL"
-            description="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_DESC"
+            label="COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -534,10 +534,10 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_house_id_country"
+        <field name="show_house_id_lmunicipality"
             type="radio"
-            label="COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_LABEL"
-            description="COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_DESC"
+            label="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -554,10 +554,10 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_house_fk_rentid"
+        <field name="show_house_id_rent"
             type="radio"
-            label="COM_REMCA_HOUSES_SHOW_FIELD_FK_RENTID_LABEL"
-            description="COM_REMCA_HOUSES_SHOW_FIELD_FK_RENTID_DESC"
+            label="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -1275,10 +1275,10 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-            <field name="list_show_house_id_lmunicipality"
+            <field name="list_show_house_id_country"
                 type="radio"
-                label="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_LABEL"
-				description="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_DESC"
+                label="COM_REMCA_HOUSES_LIST_ID_COUNTRY_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ID_COUNTRY_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -1295,10 +1295,10 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_house_id_country"
+            <field name="list_show_house_id_lmunicipality"
                 type="radio"
-                label="COM_REMCA_HOUSES_LIST_ID_COUNTRY_LABEL"
-				description="COM_REMCA_HOUSES_LIST_ID_COUNTRY_DESC"
+                label="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -1315,10 +1315,10 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_house_fk_rentid"
+            <field name="list_show_house_id_rent"
                 type="radio"
-                label="COM_REMCA_HOUSES_LIST_FK_RENTID_LABEL"
-				description="COM_REMCA_HOUSES_LIST_FK_RENTID_DESC"
+                label="COM_REMCA_HOUSES_LIST_ID_RENT_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ID_RENT_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -1952,10 +1952,10 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_photo_fk_houseid"
+        <field name="show_photo_id_house"
             type="radio"
-            label="COM_REMCA_PHOTOS_SHOW_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_PHOTOS_SHOW_FIELD_FK_HOUSEID_DESC"
+            label="COM_REMCA_PHOTOS_SHOW_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_PHOTOS_SHOW_FIELD_ID_HOUSE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -2108,10 +2108,10 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-            <field name="list_show_photo_fk_houseid"
+            <field name="list_show_photo_id_house"
                 type="radio"
-                label="COM_REMCA_PHOTOS_LIST_FK_HOUSEID_LABEL"
-				description="COM_REMCA_PHOTOS_LIST_FK_HOUSEID_DESC"
+                label="COM_REMCA_PHOTOS_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_PHOTOS_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -2777,10 +2777,10 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_order_fk_user_id"
+        <field name="show_order_id_user"
             type="radio"
-            label="COM_REMCA_ORDERS_SHOW_FIELD_FK_USER_ID_LABEL"
-            description="COM_REMCA_ORDERS_SHOW_FIELD_FK_USER_ID_DESC"
+            label="COM_REMCA_ORDERS_SHOW_FIELD_ID_USER_LABEL"
+            description="COM_REMCA_ORDERS_SHOW_FIELD_ID_USER_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -2827,10 +2827,10 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_order_fk_house_id"
+        <field name="show_order_id_house"
             type="radio"
-            label="COM_REMCA_ORDERS_SHOW_FIELD_FK_HOUSE_ID_LABEL"
-            description="COM_REMCA_ORDERS_SHOW_FIELD_FK_HOUSE_ID_DESC"
+            label="COM_REMCA_ORDERS_SHOW_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_ORDERS_SHOW_FIELD_ID_HOUSE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -3044,10 +3044,10 @@
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_order_fk_user_id"
+            <field name="list_show_order_id_user"
                 type="radio"
-                label="COM_REMCA_ORDERS_LIST_FK_USER_ID_LABEL"
-				description="COM_REMCA_ORDERS_LIST_FK_USER_ID_DESC"
+                label="COM_REMCA_ORDERS_LIST_ID_USER_LABEL"
+				description="COM_REMCA_ORDERS_LIST_ID_USER_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -3094,10 +3094,10 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_order_fk_house_id"
+            <field name="list_show_order_id_house"
                 type="radio"
-                label="COM_REMCA_ORDERS_LIST_FK_HOUSE_ID_LABEL"
-				description="COM_REMCA_ORDERS_LIST_FK_HOUSE_ID_DESC"
+                label="COM_REMCA_ORDERS_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_ORDERS_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -3317,20 +3317,20 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_fk_order_id"
+        <field name="show_ordersdetail_id_order"
             type="radio"
-            label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_ORDER_ID_LABEL"
-            description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_ORDER_ID_DESC"
+            label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_ORDER_LABEL"
+            description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_ORDER_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_fk_user_id"
+        <field name="show_ordersdetail_id_user"
             type="radio"
-            label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_USER_ID_LABEL"
-            description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_USER_ID_DESC"
+            label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_USER_LABEL"
+            description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_USER_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -3377,10 +3377,10 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_fk_house_id"
+        <field name="show_ordersdetail_id_house"
             type="radio"
-            label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_HOUSE_ID_LABEL"
-            description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_HOUSE_ID_DESC"
+            label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_HOUSE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -3604,20 +3604,20 @@
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_ordersdetail_fk_order_id"
+            <field name="list_show_ordersdetail_id_order"
                 type="radio"
-                label="COM_REMCA_ORDERS_DETAILS_LIST_FK_ORDER_ID_LABEL"
-				description="COM_REMCA_ORDERS_DETAILS_LIST_FK_ORDER_ID_DESC"
+                label="COM_REMCA_ORDERS_DETAILS_LIST_ID_ORDER_LABEL"
+				description="COM_REMCA_ORDERS_DETAILS_LIST_ID_ORDER_DESC"
 				class="btn-group"
 				default="1"
 			>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_fk_user_id"
+            <field name="list_show_ordersdetail_id_user"
                 type="radio"
-                label="COM_REMCA_ORDERS_DETAILS_LIST_FK_USER_ID_LABEL"
-				description="COM_REMCA_ORDERS_DETAILS_LIST_FK_USER_ID_DESC"
+                label="COM_REMCA_ORDERS_DETAILS_LIST_ID_USER_LABEL"
+				description="COM_REMCA_ORDERS_DETAILS_LIST_ID_USER_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -3664,10 +3664,10 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_fk_house_id"
+            <field name="list_show_ordersdetail_id_house"
                 type="radio"
-                label="COM_REMCA_ORDERS_DETAILS_LIST_FK_HOUSE_ID_LABEL"
-				description="COM_REMCA_ORDERS_DETAILS_LIST_FK_HOUSE_ID_DESC"
+                label="COM_REMCA_ORDERS_DETAILS_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_ORDERS_DETAILS_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -4358,20 +4358,20 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rent_fk_houseid"
+        <field name="show_rent_id_house"
             type="radio"
-            label="COM_REMCA_RENT_SHOW_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_RENT_SHOW_FIELD_FK_HOUSEID_DESC"
+            label="COM_REMCA_RENT_SHOW_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_RENT_SHOW_FIELD_ID_HOUSE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rent_fk_userid"
+        <field name="show_rent_id_user"
             type="radio"
-            label="COM_REMCA_RENT_SHOW_FIELD_FK_USERID_LABEL"
-            description="COM_REMCA_RENT_SHOW_FIELD_FK_USERID_DESC"
+            label="COM_REMCA_RENT_SHOW_FIELD_ID_USER_LABEL"
+            description="COM_REMCA_RENT_SHOW_FIELD_ID_USER_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4565,20 +4565,20 @@
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_rent_fk_houseid"
+            <field name="list_show_rent_id_house"
                 type="radio"
-                label="COM_REMCA_RENT_LIST_FK_HOUSEID_LABEL"
-				description="COM_REMCA_RENT_LIST_FK_HOUSEID_DESC"
+                label="COM_REMCA_RENT_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_RENT_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 				default="1"
 			>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rent_fk_userid"
+            <field name="list_show_rent_id_user"
                 type="radio"
-                label="COM_REMCA_RENT_LIST_FK_USERID_LABEL"
-				description="COM_REMCA_RENT_LIST_FK_USERID_DESC"
+                label="COM_REMCA_RENT_LIST_ID_USER_LABEL"
+				description="COM_REMCA_RENT_LIST_ID_USER_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -4748,20 +4748,20 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_fk_houseid"
+        <field name="show_rentrequest_id_house"
             type="radio"
-            label="COM_REMCA_RENT_REQUEST_SHOW_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_FIELD_FK_HOUSEID_DESC"
+            label="COM_REMCA_RENT_REQUEST_SHOW_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_RENT_REQUEST_SHOW_FIELD_ID_HOUSE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_fk_userid"
+        <field name="show_rentrequest_id_user"
             type="radio"
-            label="COM_REMCA_RENT_REQUEST_SHOW_FIELD_FK_USERID_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_FIELD_FK_USERID_DESC"
+            label="COM_REMCA_RENT_REQUEST_SHOW_FIELD_ID_USER_LABEL"
+            description="COM_REMCA_RENT_REQUEST_SHOW_FIELD_ID_USER_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4963,20 +4963,20 @@
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_rentrequest_fk_houseid"
+            <field name="list_show_rentrequest_id_house"
                 type="radio"
-                label="COM_REMCA_RENT_REQUEST_LIST_FK_HOUSEID_LABEL"
-				description="COM_REMCA_RENT_REQUEST_LIST_FK_HOUSEID_DESC"
+                label="COM_REMCA_RENT_REQUEST_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_RENT_REQUEST_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 				default="1"
 			>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentrequest_fk_userid"
+            <field name="list_show_rentrequest_id_user"
                 type="radio"
-                label="COM_REMCA_RENT_REQUEST_LIST_FK_USERID_LABEL"
-				description="COM_REMCA_RENT_REQUEST_LIST_FK_USERID_DESC"
+                label="COM_REMCA_RENT_REQUEST_LIST_ID_USER_LABEL"
+				description="COM_REMCA_RENT_REQUEST_LIST_ID_USER_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5156,10 +5156,10 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_fk_houseid"
+        <field name="show_rentsal_id_house"
             type="radio"
-            label="COM_REMCA_RENT_SAL_SHOW_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_RENT_SAL_SHOW_FIELD_FK_HOUSEID_DESC"
+            label="COM_REMCA_RENT_SAL_SHOW_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_RENT_SAL_SHOW_FIELD_ID_HOUSE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -5391,10 +5391,10 @@
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_rentsal_fk_houseid"
+            <field name="list_show_rentsal_id_house"
                 type="radio"
-                label="COM_REMCA_RENT_SAL_LIST_FK_HOUSEID_LABEL"
-				description="COM_REMCA_RENT_SAL_LIST_FK_HOUSEID_DESC"
+                label="COM_REMCA_RENT_SAL_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_RENT_SAL_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5503,13 +5503,13 @@
             </field>
     </fieldset>
     <fieldset name="review_display"
-		label="COM_REMCA_REVIEW_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
-		description="COM_REMCA_REVIEW_FIELD_CONFIG_SINGLE_ITEM_DESC"
+		label="COM_REMCA_REVIEWS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+		description="COM_REMCA_REVIEWS_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
         <field name="review_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
-			description="COM_REMCA_REVIEW_CHOOSE_LAYOUT_DESC"
+			description="COM_REMCA_REVIEWS_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
 			view="review"
@@ -5543,7 +5543,7 @@
         <field name="show_review_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
-            description="COM_REMCA_REVIEW_SHOW_EMAIL_ICON_DESC"
+            description="COM_REMCA_REVIEWS_SHOW_EMAIL_ICON_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -5553,7 +5553,7 @@
         <field name="keep_review_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
-            description="COM_REMCA_REVIEW_KEEP_ITEMID_DESC"
+            description="COM_REMCA_REVIEWS_KEEP_ITEMID_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -5563,7 +5563,7 @@
         <field name="show_review_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
-            description="COM_REMCA_REVIEW_SHOW_NAVIGATION_DESC"
+            description="COM_REMCA_REVIEWS_SHOW_NAVIGATION_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -5577,7 +5577,7 @@
         <field name="show_review_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
-            description="COM_REMCA_REVIEW_SHOW_READMORE_DESC"
+            description="COM_REMCA_REVIEWS_SHOW_READMORE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -5587,7 +5587,7 @@
         <field name="review_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
-            description="COM_REMCA_REVIEW_SHOW_READMORE_LIMIT_DESC"
+            description="COM_REMCA_REVIEWS_SHOW_READMORE_LIMIT_DESC"
             default="100"
 		/>
         <field name="spacer2"
@@ -5597,27 +5597,27 @@
         <field name="show_review_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
-            description="COM_REMCA_REVIEW_SHOW_ADMIN_DESC"
+            description="COM_REMCA_REVIEWS_SHOW_ADMIN_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_review_fk_houseid"
+        <field name="show_review_id_house"
             type="radio"
-            label="COM_REMCA_REVIEW_SHOW_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_REVIEW_SHOW_FIELD_FK_HOUSEID_DESC"
+            label="COM_REMCA_REVIEWS_SHOW_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_REVIEWS_SHOW_FIELD_ID_HOUSE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_review_fk_userid"
+        <field name="show_review_id_user"
             type="radio"
-            label="COM_REMCA_REVIEW_SHOW_FIELD_FK_USERID_LABEL"
-            description="COM_REMCA_REVIEW_SHOW_FIELD_FK_USERID_DESC"
+            label="COM_REMCA_REVIEWS_SHOW_FIELD_ID_USER_LABEL"
+            description="COM_REMCA_REVIEWS_SHOW_FIELD_ID_USER_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -5626,8 +5626,8 @@
         </field>
         <field name="show_review_user_name"
             type="radio"
-            label="COM_REMCA_REVIEW_SHOW_FIELD_USER_NAME_LABEL"
-            description="COM_REMCA_REVIEW_SHOW_FIELD_USER_NAME_DESC"
+            label="COM_REMCA_REVIEWS_SHOW_FIELD_USER_NAME_LABEL"
+            description="COM_REMCA_REVIEWS_SHOW_FIELD_USER_NAME_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -5636,8 +5636,8 @@
         </field>
         <field name="show_review_user_email"
             type="radio"
-            label="COM_REMCA_REVIEW_SHOW_FIELD_USER_EMAIL_LABEL"
-            description="COM_REMCA_REVIEW_SHOW_FIELD_USER_EMAIL_DESC"
+            label="COM_REMCA_REVIEWS_SHOW_FIELD_USER_EMAIL_LABEL"
+            description="COM_REMCA_REVIEWS_SHOW_FIELD_USER_EMAIL_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -5646,8 +5646,8 @@
         </field>
         <field name="show_review_date"
             type="radio"
-            label="COM_REMCA_REVIEW_SHOW_FIELD_DATE_LABEL"
-            description="COM_REMCA_REVIEW_SHOW_FIELD_DATE_DESC"
+            label="COM_REMCA_REVIEWS_SHOW_FIELD_DATE_LABEL"
+            description="COM_REMCA_REVIEWS_SHOW_FIELD_DATE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -5656,8 +5656,8 @@
         </field>
         <field name="show_review_rating"
             type="radio"
-            label="COM_REMCA_REVIEW_SHOW_FIELD_RATING_LABEL"
-            description="COM_REMCA_REVIEW_SHOW_FIELD_RATING_DESC"
+            label="COM_REMCA_REVIEWS_SHOW_FIELD_RATING_LABEL"
+            description="COM_REMCA_REVIEWS_SHOW_FIELD_RATING_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -5666,8 +5666,8 @@
         </field>
         <field name="show_review_title"
             type="radio"
-            label="COM_REMCA_REVIEW_SHOW_FIELD_TITLE_LABEL"
-            description="COM_REMCA_REVIEW_SHOW_FIELD_TITLE_DESC"
+            label="COM_REMCA_REVIEWS_SHOW_FIELD_TITLE_LABEL"
+            description="COM_REMCA_REVIEWS_SHOW_FIELD_TITLE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -5676,8 +5676,8 @@
         </field>
         <field name="show_review_comment"
             type="radio"
-            label="COM_REMCA_REVIEW_SHOW_FIELD_COMMENT_LABEL"
-            description="COM_REMCA_REVIEW_SHOW_FIELD_COMMENT_DESC"
+            label="COM_REMCA_REVIEWS_SHOW_FIELD_COMMENT_LABEL"
+            description="COM_REMCA_REVIEWS_SHOW_FIELD_COMMENT_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -5685,21 +5685,21 @@
             <option	value="0">JHIDE</option>
         </field>
     </fieldset>
-    <fieldset name="review_list_display"
-        label="COM_REMCA_REVIEW_FIELD_CONFIG_BLOG_LIST_LABEL"
-        description="COM_REMCA_REVIEW_FIELD_CONFIG_BLOG_LIST_DESC"
+    <fieldset name="reviews_list_display"
+        label="COM_REMCA_REVIEWS_FIELD_CONFIG_BLOG_LIST_LABEL"
+        description="COM_REMCA_REVIEWS_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
         <field name="review_initial_sort"
             type="list"
-            label="COM_REMCA_REVIEW_ORDER_LABEL"
-            description="COM_REMCA_REVIEW_ORDER_DESC"
+            label="COM_REMCA_REVIEWS_ORDER_LABEL"
+            description="COM_REMCA_REVIEWS_ORDER_DESC"
 			class="chzn-color"
 		>
         </field>
         <field name="review_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
-            description="COM_REMCA_REVIEW_ORDER_DIRECTION_DESC"
+            description="COM_REMCA_REVIEWS_ORDER_DIRECTION_DESC"
 			class="btn-group"
             default="ASC"
 		>
@@ -5709,7 +5709,7 @@
         <field name="show_review_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
-            description="COM_REMCA_REVIEW_FILTER_FIELD_DESC"
+            description="COM_REMCA_REVIEWS_FILTER_FIELD_DESC"
             class="chzn-color"
             default="hide"
    		>
@@ -5749,7 +5749,7 @@
         <field name="show_review_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
-			description="COM_REMCA_REVIEW_SHOW_PAGINATION_LIMIT_DESC"
+			description="COM_REMCA_REVIEWS_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
 			default="1"
 		>
@@ -5758,8 +5758,8 @@
         </field>
         <field name="review_num_per_page"
             type="list"
-            description="COM_REMCA_REVIEW_NUM_PER_PAGE_DESC"
-            label="COM_REMCA_REVIEW_NUM_PER_PAGE_LABEL"
+            description="COM_REMCA_REVIEWS_NUM_PER_PAGE_DESC"
+            label="COM_REMCA_REVIEWS_NUM_PER_PAGE_LABEL"
 			class="chzn-color"
             default="5"
         >
@@ -5773,10 +5773,10 @@
             <option value="100">J100</option>
             <option value="0">JALL</option>
         </field>
-        <field name="show_no_review"
+        <field name="show_no_reviews"
             type="radio"
-            label="COM_REMCA_REVIEW_NO_ITEMS_LABEL"
-            description="COM_REMCA_REVIEW_NO_ITEMS_DESC"
+            label="COM_REMCA_REVIEWS_NO_ITEMS_LABEL"
+            description="COM_REMCA_REVIEWS_NO_ITEMS_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 			>
@@ -5786,7 +5786,7 @@
         <field name="show_review_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
-			description="COM_REMCA_REVIEW_SHOW_ADD_LINK_DESC"
+			description="COM_REMCA_REVIEWS_SHOW_ADD_LINK_DESC"
             class="btn-group btn-group-yesno"
 			default="1"
 		>
@@ -5796,7 +5796,7 @@
         <field name="list_show_review_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
-			description="COM_REMCA_REVIEW_SHOW_DATE_DESC"
+			description="COM_REMCA_REVIEWS_SHOW_DATE_DESC"
 			class="btn-group"
             default="0"
 		>
@@ -5809,20 +5809,20 @@
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_review_fk_houseid"
+            <field name="list_show_review_id_house"
                 type="radio"
-                label="COM_REMCA_REVIEW_LIST_FK_HOUSEID_LABEL"
-				description="COM_REMCA_REVIEW_LIST_FK_HOUSEID_DESC"
+                label="COM_REMCA_REVIEWS_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_REVIEWS_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 				default="1"
 			>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_review_fk_userid"
+            <field name="list_show_review_id_user"
                 type="radio"
-                label="COM_REMCA_REVIEW_LIST_FK_USERID_LABEL"
-				description="COM_REMCA_REVIEW_LIST_FK_USERID_DESC"
+                label="COM_REMCA_REVIEWS_LIST_ID_USER_LABEL"
+				description="COM_REMCA_REVIEWS_LIST_ID_USER_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5831,8 +5831,8 @@
             </field>
             <field name="list_show_review_user_name"
                 type="radio"
-                label="COM_REMCA_REVIEW_LIST_USER_NAME_LABEL"
-				description="COM_REMCA_REVIEW_LIST_USER_NAME_DESC"
+                label="COM_REMCA_REVIEWS_LIST_USER_NAME_LABEL"
+				description="COM_REMCA_REVIEWS_LIST_USER_NAME_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5841,8 +5841,8 @@
             </field>
             <field name="list_show_review_user_email"
                 type="radio"
-                label="COM_REMCA_REVIEW_LIST_USER_EMAIL_LABEL"
-				description="COM_REMCA_REVIEW_LIST_USER_EMAIL_DESC"
+                label="COM_REMCA_REVIEWS_LIST_USER_EMAIL_LABEL"
+				description="COM_REMCA_REVIEWS_LIST_USER_EMAIL_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5851,8 +5851,8 @@
             </field>
             <field name="list_show_review_date"
                 type="radio"
-                label="COM_REMCA_REVIEW_LIST_DATE_LABEL"
-				description="COM_REMCA_REVIEW_LIST_DATE_DESC"
+                label="COM_REMCA_REVIEWS_LIST_DATE_LABEL"
+				description="COM_REMCA_REVIEWS_LIST_DATE_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5861,8 +5861,8 @@
             </field>
             <field name="list_show_review_rating"
                 type="radio"
-                label="COM_REMCA_REVIEW_LIST_RATING_LABEL"
-				description="COM_REMCA_REVIEW_LIST_RATING_DESC"
+                label="COM_REMCA_REVIEWS_LIST_RATING_LABEL"
+				description="COM_REMCA_REVIEWS_LIST_RATING_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5871,8 +5871,8 @@
             </field>
             <field name="list_show_review_title"
                 type="radio"
-                label="COM_REMCA_REVIEW_LIST_TITLE_LABEL"
-				description="COM_REMCA_REVIEW_LIST_TITLE_DESC"
+                label="COM_REMCA_REVIEWS_LIST_TITLE_LABEL"
+				description="COM_REMCA_REVIEWS_LIST_TITLE_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5881,8 +5881,8 @@
             </field>
             <field name="list_show_review_comment"
                 type="radio"
-                label="COM_REMCA_REVIEW_LIST_COMMENT_LABEL"
-				description="COM_REMCA_REVIEW_LIST_COMMENT_DESC"
+                label="COM_REMCA_REVIEWS_LIST_COMMENT_LABEL"
+				description="COM_REMCA_REVIEWS_LIST_COMMENT_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5992,10 +5992,10 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_tracksource_fk_house_id"
+        <field name="show_tracksource_id_house"
             type="radio"
-            label="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_FK_HOUSE_ID_LABEL"
-            description="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_FK_HOUSE_ID_DESC"
+            label="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_ID_HOUSE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -6177,10 +6177,10 @@
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_tracksource_fk_house_id"
+            <field name="list_show_tracksource_id_house"
                 type="radio"
-                label="COM_REMCA_TRACK_SOURCE_LIST_FK_HOUSE_ID_LABEL"
-				description="COM_REMCA_TRACK_SOURCE_LIST_FK_HOUSE_ID_DESC"
+                label="COM_REMCA_TRACK_SOURCE_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_TRACK_SOURCE_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -6568,10 +6568,10 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_videosource_fk_house_id"
+        <field name="show_videosource_id_house"
             type="radio"
-            label="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_FK_HOUSE_ID_LABEL"
-            description="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_FK_HOUSE_ID_DESC"
+            label="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_ID_HOUSE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -6753,10 +6753,10 @@
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_videosource_fk_house_id"
+            <field name="list_show_videosource_id_house"
                 type="radio"
-                label="COM_REMCA_VIDEO_SOURCE_LIST_FK_HOUSE_ID_LABEL"
-				description="COM_REMCA_VIDEO_SOURCE_LIST_FK_HOUSE_ID_DESC"
+                label="COM_REMCA_VIDEO_SOURCE_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_VIDEO_SOURCE_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -6815,13 +6815,13 @@
             </field>
     </fieldset>
     <fieldset name="buyingrequest_display"
-		label="COM_REMCA_BUYING_REQUEST_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
-		description="COM_REMCA_BUYING_REQUEST_FIELD_CONFIG_SINGLE_ITEM_DESC"
+		label="COM_REMCA_BUYING_REQUESTS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+		description="COM_REMCA_BUYING_REQUESTS_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
         <field name="buyingrequest_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
-			description="COM_REMCA_BUYING_REQUEST_CHOOSE_LAYOUT_DESC"
+			description="COM_REMCA_BUYING_REQUESTS_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
 			view="buyingrequest"
@@ -6855,7 +6855,7 @@
         <field name="show_buyingrequest_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_SHOW_EMAIL_ICON_DESC"
+            description="COM_REMCA_BUYING_REQUESTS_SHOW_EMAIL_ICON_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -6865,7 +6865,7 @@
         <field name="keep_buyingrequest_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_KEEP_ITEMID_DESC"
+            description="COM_REMCA_BUYING_REQUESTS_KEEP_ITEMID_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -6875,7 +6875,7 @@
         <field name="show_buyingrequest_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_SHOW_NAVIGATION_DESC"
+            description="COM_REMCA_BUYING_REQUESTS_SHOW_NAVIGATION_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -6889,7 +6889,7 @@
         <field name="show_buyingrequest_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_SHOW_READMORE_DESC"
+            description="COM_REMCA_BUYING_REQUESTS_SHOW_READMORE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -6899,7 +6899,7 @@
         <field name="buyingrequest_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_SHOW_READMORE_LIMIT_DESC"
+            description="COM_REMCA_BUYING_REQUESTS_SHOW_READMORE_LIMIT_DESC"
             default="100"
 		/>
         <field name="spacer2"
@@ -6909,27 +6909,27 @@
         <field name="show_buyingrequest_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_SHOW_ADMIN_DESC"
+            description="COM_REMCA_BUYING_REQUESTS_SHOW_ADMIN_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_fk_houseid"
+        <field name="show_buyingrequest_id_house"
             type="radio"
-            label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_FK_HOUSEID_DESC"
+            label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_ID_HOUSE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_fk_userid"
+        <field name="show_buyingrequest_id_user"
             type="radio"
-            label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_FK_USERID_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_FK_USERID_DESC"
+            label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_ID_USER_LABEL"
+            description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_ID_USER_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -6938,8 +6938,8 @@
         </field>
         <field name="show_buyingrequest_buying_request"
             type="radio"
-            label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_BUYING_REQUEST_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_BUYING_REQUEST_DESC"
+            label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_BUYING_REQUEST_LABEL"
+            description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_BUYING_REQUEST_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -6948,8 +6948,8 @@
         </field>
         <field name="show_buyingrequest_customer_name"
             type="radio"
-            label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_NAME_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_NAME_DESC"
+            label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_NAME_LABEL"
+            description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_NAME_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -6958,8 +6958,8 @@
         </field>
         <field name="show_buyingrequest_customer_email"
             type="radio"
-            label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_EMAIL_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_EMAIL_DESC"
+            label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_EMAIL_LABEL"
+            description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_EMAIL_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -6968,8 +6968,8 @@
         </field>
         <field name="show_buyingrequest_customer_phone"
             type="radio"
-            label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_PHONE_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_PHONE_DESC"
+            label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_PHONE_LABEL"
+            description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_PHONE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -6978,8 +6978,8 @@
         </field>
         <field name="show_buyingrequest_customer_comment"
             type="radio"
-            label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_COMMENT_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_COMMENT_DESC"
+            label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_COMMENT_LABEL"
+            description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_COMMENT_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -6988,8 +6988,8 @@
         </field>
         <field name="show_buyingrequest_status"
             type="radio"
-            label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_STATUS_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_STATUS_DESC"
+            label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_STATUS_LABEL"
+            description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_STATUS_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -6997,21 +6997,21 @@
             <option	value="0">JHIDE</option>
         </field>
     </fieldset>
-    <fieldset name="buying_request_list_display"
-        label="COM_REMCA_BUYING_REQUEST_FIELD_CONFIG_BLOG_LIST_LABEL"
-        description="COM_REMCA_BUYING_REQUEST_FIELD_CONFIG_BLOG_LIST_DESC"
+    <fieldset name="buying_requests_list_display"
+        label="COM_REMCA_BUYING_REQUESTS_FIELD_CONFIG_BLOG_LIST_LABEL"
+        description="COM_REMCA_BUYING_REQUESTS_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
         <field name="buyingrequest_initial_sort"
             type="list"
-            label="COM_REMCA_BUYING_REQUEST_ORDER_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_ORDER_DESC"
+            label="COM_REMCA_BUYING_REQUESTS_ORDER_LABEL"
+            description="COM_REMCA_BUYING_REQUESTS_ORDER_DESC"
 			class="chzn-color"
 		>
         </field>
         <field name="buyingrequest_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_ORDER_DIRECTION_DESC"
+            description="COM_REMCA_BUYING_REQUESTS_ORDER_DIRECTION_DESC"
 			class="btn-group"
             default="ASC"
 		>
@@ -7021,7 +7021,7 @@
         <field name="show_buyingrequest_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_FILTER_FIELD_DESC"
+            description="COM_REMCA_BUYING_REQUESTS_FILTER_FIELD_DESC"
             class="chzn-color"
             default="hide"
    		>
@@ -7061,7 +7061,7 @@
         <field name="show_buyingrequest_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
-			description="COM_REMCA_BUYING_REQUEST_SHOW_PAGINATION_LIMIT_DESC"
+			description="COM_REMCA_BUYING_REQUESTS_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
 			default="1"
 		>
@@ -7070,8 +7070,8 @@
         </field>
         <field name="buyingrequest_num_per_page"
             type="list"
-            description="COM_REMCA_BUYING_REQUEST_NUM_PER_PAGE_DESC"
-            label="COM_REMCA_BUYING_REQUEST_NUM_PER_PAGE_LABEL"
+            description="COM_REMCA_BUYING_REQUESTS_NUM_PER_PAGE_DESC"
+            label="COM_REMCA_BUYING_REQUESTS_NUM_PER_PAGE_LABEL"
 			class="chzn-color"
             default="5"
         >
@@ -7085,10 +7085,10 @@
             <option value="100">J100</option>
             <option value="0">JALL</option>
         </field>
-        <field name="show_no_buying_request"
+        <field name="show_no_buying_requests"
             type="radio"
-            label="COM_REMCA_BUYING_REQUEST_NO_ITEMS_LABEL"
-            description="COM_REMCA_BUYING_REQUEST_NO_ITEMS_DESC"
+            label="COM_REMCA_BUYING_REQUESTS_NO_ITEMS_LABEL"
+            description="COM_REMCA_BUYING_REQUESTS_NO_ITEMS_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 			>
@@ -7098,7 +7098,7 @@
         <field name="show_buyingrequest_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
-			description="COM_REMCA_BUYING_REQUEST_SHOW_ADD_LINK_DESC"
+			description="COM_REMCA_BUYING_REQUESTS_SHOW_ADD_LINK_DESC"
             class="btn-group btn-group-yesno"
 			default="1"
 		>
@@ -7108,7 +7108,7 @@
         <field name="list_show_buyingrequest_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
-			description="COM_REMCA_BUYING_REQUEST_SHOW_DATE_DESC"
+			description="COM_REMCA_BUYING_REQUESTS_SHOW_DATE_DESC"
 			class="btn-group"
             default="0"
 		>
@@ -7121,20 +7121,20 @@
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_buyingrequest_fk_houseid"
+            <field name="list_show_buyingrequest_id_house"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_FK_HOUSEID_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_FK_HOUSEID_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_BUYING_REQUESTS_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 				default="1"
 			>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_buyingrequest_fk_userid"
+            <field name="list_show_buyingrequest_id_user"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_FK_USERID_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_FK_USERID_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_LIST_ID_USER_LABEL"
+				description="COM_REMCA_BUYING_REQUESTS_LIST_ID_USER_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -7143,8 +7143,8 @@
             </field>
             <field name="list_show_buyingrequest_buying_request"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_BUYING_REQUEST_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_BUYING_REQUEST_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_LIST_BUYING_REQUEST_LABEL"
+				description="COM_REMCA_BUYING_REQUESTS_LIST_BUYING_REQUEST_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -7153,8 +7153,8 @@
             </field>
             <field name="list_show_buyingrequest_customer_name"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_NAME_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_NAME_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_NAME_LABEL"
+				description="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_NAME_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -7163,8 +7163,8 @@
             </field>
             <field name="list_show_buyingrequest_customer_email"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_EMAIL_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_EMAIL_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_EMAIL_LABEL"
+				description="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_EMAIL_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -7173,8 +7173,8 @@
             </field>
             <field name="list_show_buyingrequest_customer_phone"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_PHONE_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_PHONE_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_PHONE_LABEL"
+				description="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_PHONE_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -7183,8 +7183,8 @@
             </field>
             <field name="list_show_buyingrequest_customer_comment"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_COMMENT_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_COMMENT_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_COMMENT_LABEL"
+				description="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_COMMENT_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -7193,8 +7193,8 @@
             </field>
             <field name="list_show_buyingrequest_status"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_STATUS_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_STATUS_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_LIST_STATUS_LABEL"
+				description="COM_REMCA_BUYING_REQUESTS_LIST_STATUS_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -8460,20 +8460,20 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_featurehouse_fk_houseid"
+        <field name="show_featurehouse_id_house"
             type="radio"
-            label="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_FK_HOUSEID_LABEL"
-            description="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_FK_HOUSEID_DESC"
+            label="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_ID_HOUSE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_featurehouse_fk_featureid"
+        <field name="show_featurehouse_id_featured"
             type="radio"
-            label="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_FK_FEATUREID_LABEL"
-            description="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_FK_FEATUREID_DESC"
+            label="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_ID_FEATURED_LABEL"
+            description="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_ID_FEATURED_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -8605,20 +8605,20 @@
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_featurehouse_fk_houseid"
+            <field name="list_show_featurehouse_id_house"
                 type="radio"
-                label="COM_REMCA_FEATURE_HOUSES_LIST_FK_HOUSEID_LABEL"
-				description="COM_REMCA_FEATURE_HOUSES_LIST_FK_HOUSEID_DESC"
+                label="COM_REMCA_FEATURE_HOUSES_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_FEATURE_HOUSES_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 				default="1"
 			>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_featurehouse_fk_featureid"
+            <field name="list_show_featurehouse_id_featured"
                 type="radio"
-                label="COM_REMCA_FEATURE_HOUSES_LIST_FK_FEATUREID_LABEL"
-				description="COM_REMCA_FEATURE_HOUSES_LIST_FK_FEATUREID_DESC"
+                label="COM_REMCA_FEATURE_HOUSES_LIST_ID_FEATURED_LABEL"
+				description="COM_REMCA_FEATURE_HOUSES_LIST_ID_FEATURED_DESC"
 				class="btn-group"
 				default="1"
 			>

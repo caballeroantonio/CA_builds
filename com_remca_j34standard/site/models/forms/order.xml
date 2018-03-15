@@ -73,11 +73,11 @@
     >
 
         <field
-            id="fk_user_id"
-            name="fk_user_id"
+            id="id_user"
+            name="id_user"
             type="modal_jusers"
-            label="COM_REMCA_ORDERS_FIELD_FK_USER_ID_LABEL"
-            description="COM_REMCA_ORDERS_FIELD_FK_USER_ID_DESC"
+            label="COM_REMCA_ORDERS_FIELD_ID_USER_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_ID_USER_DESC"
             class="modal"
 			default="0"
         >
@@ -130,11 +130,11 @@
         >
         </field>  
         <field
-            id="fk_house_id"
-            name="fk_house_id"
+            id="id_house"
+            name="id_house"
             type="modal_houses"
-            label="COM_REMCA_ORDERS_FIELD_FK_HOUSE_ID_LABEL"
-            description="COM_REMCA_ORDERS_FIELD_FK_HOUSE_ID_DESC"
+            label="COM_REMCA_ORDERS_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_ORDERS_FIELD_ID_HOUSE_DESC"
             class="modal"
 			default="'0'"
         >

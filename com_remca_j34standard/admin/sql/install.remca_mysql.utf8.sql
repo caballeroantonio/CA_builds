@@ -31,11 +31,11 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL DEFAULT '',
   `description` MEDIUMTEXT NOT NULL,
-  `id_lmunicipality` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'id_municipality',
-  `id_lstate` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'State',
   `id_country` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Country',
+  `id_lstate` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'State',
+  `id_lmunicipality` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'id_municipality',
   `sid` INT(11) DEFAULT NULL COMMENT 'sid',
-  `fk_rentid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_rentid',
+  `id_rent` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Rent',
   `associate_house` VARCHAR(255) DEFAULT NULL COMMENT 'associate_house',
   `houseid` VARCHAR(20) NOT NULL DEFAULT '' COMMENT 'houseid',
   `link` VARCHAR(250) NOT NULL DEFAULT '' COMMENT 'link',
@@ -99,9 +99,9 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `asset_id` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table',
   KEY `idx_checkout` (`checked_out`),
   KEY `idx_state` (`state`),
-  KEY `idx_id_lmunicipality` (`id_lmunicipality`),
-  KEY `idx_id_lstate` (`id_lstate`),
   KEY `idx_id_country` (`id_country`),
+  KEY `idx_id_lstate` (`id_lstate`),
+  KEY `idx_id_lmunicipality` (`id_lmunicipality`),
   KEY `idx_price` (`price`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
 #DROP TABLE IF EXISTS `#__rem_photos`;
 CREATE TABLE IF NOT EXISTS `#__rem_photos` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
   `thumbnail_img` VARCHAR(250) DEFAULT NULL COMMENT 'thumbnail_img',
   `images` TEXT NOT NULL,
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
@@ -156,12 +156,12 @@ CREATE TABLE IF NOT EXISTS `#__rem_mls_for_delete` (
 CREATE TABLE IF NOT EXISTS `#__rem_orders` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL DEFAULT '',
-  `fk_user_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_user_id',
+  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
   `fk_houses_htitle` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'fk_houses_htitle',
   `email` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'email',
   `status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'status',
   `order_date` DATETIME DEFAULT NULL COMMENT 'order_date',
-  `fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
   `txn_type` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_type',
   `txn_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_id',
   `payer_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_id',
@@ -182,13 +182,13 @@ CREATE TABLE IF NOT EXISTS `#__rem_orders` (
 CREATE TABLE IF NOT EXISTS `#__rem_orders_details` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL DEFAULT '',
-  `fk_order_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_order_id',
-  `fk_user_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_user_id',
+  `id_order` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Order',
+  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
   `fk_houses_htitle` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'fk_houses_htitle',
   `email` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'email',
   `status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'status',
   `order_date` DATETIME DEFAULT NULL COMMENT 'order_date',
-  `fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
   `txn_type` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_type',
   `txn_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_id',
   `payer_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_id',
@@ -244,8 +244,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_main_categories` (
 CREATE TABLE IF NOT EXISTS `#__rem_rent` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL DEFAULT '',
-  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
-  `fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_userid',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
+  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
   `rent_from` DATETIME DEFAULT NULL COMMENT 'rent_from',
   `rent_until` DATETIME DEFAULT NULL COMMENT 'rent_until',
   `rent_return` DATETIME DEFAULT NULL COMMENT 'rent_return',
@@ -266,8 +266,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_rent` (
 #DROP TABLE IF EXISTS `#__rem_rent_request`;
 CREATE TABLE IF NOT EXISTS `#__rem_rent_request` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
-  `fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_userid',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
+  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
   `rent_from` DATETIME DEFAULT NULL COMMENT 'rent_from',
   `rent_until` DATETIME DEFAULT NULL COMMENT 'rent_until',
   `rent_request` DATETIME DEFAULT NULL COMMENT 'rent_request',
@@ -289,7 +289,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_rent_request` (
 #DROP TABLE IF EXISTS `#__rem_rent_sal`;
 CREATE TABLE IF NOT EXISTS `#__rem_rent_sal` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
   `monthW` INT(4) DEFAULT NULL COMMENT 'monthW',
   `yearW` INT(4) DEFAULT NULL COMMENT 'yearW',
   `week` VARCHAR(1250) DEFAULT NULL COMMENT 'week',
@@ -305,14 +305,14 @@ CREATE TABLE IF NOT EXISTS `#__rem_rent_sal` (
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `#__rem_review`
+-- Table structure for table `#__rem_reviews`
 --
 
-#DROP TABLE IF EXISTS `#__rem_review`;
-CREATE TABLE IF NOT EXISTS `#__rem_review` (
+#DROP TABLE IF EXISTS `#__rem_reviews`;
+CREATE TABLE IF NOT EXISTS `#__rem_reviews` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
-  `fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_userid',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
+  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
   `user_name` VARCHAR(150) DEFAULT NULL COMMENT 'user_name',
   `user_email` VARCHAR(100) DEFAULT NULL COMMENT 'user_email',
   `date` DATETIME DEFAULT NULL COMMENT 'date',
@@ -332,7 +332,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_review` (
 #DROP TABLE IF EXISTS `#__rem_track_source`;
 CREATE TABLE IF NOT EXISTS `#__rem_track_source` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
   `sequence_number` INT(11) DEFAULT NULL COMMENT 'sequence_number',
   `src` VARCHAR(255) DEFAULT NULL COMMENT 'src',
   `kind` VARCHAR(255) DEFAULT NULL COMMENT 'kind',
@@ -360,7 +360,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_users_wishlist` (
 #DROP TABLE IF EXISTS `#__rem_video_source`;
 CREATE TABLE IF NOT EXISTS `#__rem_video_source` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_house_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_house_id',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
   `sequence_number` INT(11) DEFAULT NULL COMMENT 'sequence_number',
   `src` VARCHAR(255) DEFAULT NULL COMMENT 'src',
   `type` VARCHAR(255) DEFAULT NULL COMMENT 'type',
@@ -371,18 +371,18 @@ CREATE TABLE IF NOT EXISTS `#__rem_video_source` (
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `#__rem_buying_request`
+-- Table structure for table `#__rem_buying_requests`
 --
 
-#DROP TABLE IF EXISTS `#__rem_buying_request`;
-CREATE TABLE IF NOT EXISTS `#__rem_buying_request` (
+#DROP TABLE IF EXISTS `#__rem_buying_requests`;
+CREATE TABLE IF NOT EXISTS `#__rem_buying_requests` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
-  `fk_userid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_userid',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
+  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
   `buying_request` DATETIME DEFAULT NULL COMMENT 'buying_request',
   `customer_name` VARCHAR(250) DEFAULT NULL COMMENT 'customer_name',
-  `customer_email` VARCHAR(250) DEFAULT NULL COMMENT 'customer_email',
-  `customer_phone` TEXT DEFAULT NULL COMMENT 'customer_phone',
+  `customer_email` VARCHAR(100) DEFAULT NULL COMMENT 'customer_email',
+  `customer_phone` VARCHAR(15) NOT NULL DEFAULT '' COMMENT 'customer_phone',
   `customer_comment` TEXT DEFAULT NULL COMMENT 'customer_comment',
   `status` INT(1) DEFAULT NULL COMMENT 'status',
   `checked_out` INT(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -456,8 +456,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_feature` (
 #DROP TABLE IF EXISTS `#__rem_feature_houses`;
 CREATE TABLE IF NOT EXISTS `#__rem_feature_houses` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fk_houseid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_houseid',
-  `fk_featureid` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'fk_featureid',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
+  `id_featured` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Featured',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
 
@@ -668,9 +668,9 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('review',
+INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Review',
 'com_remca.review',
-'{"special":{"dbtable":"remca_review","key":"id","type":"review","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+'{"special":{"dbtable":"remca_reviews","key":"id","type":"reviews","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getreviewRoute',
@@ -712,9 +712,9 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('buying_request',
+INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Buying requests',
 'com_remca.buying_request',
-'{"special":{"dbtable":"remca_buying_request","key":"id","type":"buying_request","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+'{"special":{"dbtable":"remca_buying_requests","key":"id","type":"buying_requests","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getbuying_requestRoute',
@@ -811,7 +811,7 @@ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
-INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('country',
+INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Country',
 'com_remca.country',
 '{"special":{"dbtable":"remca_countries","key":"id","type":"countries","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 '',

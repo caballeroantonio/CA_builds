@@ -400,7 +400,7 @@ class RemcaModelFeature extends JModelList
 	
         /*
          * Function that allows download database information
-         * @ToDo implementar generación de código
+         * @ToDo implementar generaciÃ³n de cÃ³digo
          */
         public function getListQuery4Export(){
             $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));

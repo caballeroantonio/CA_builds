@@ -56,12 +56,12 @@ class RemcaModelHouses extends JModelList
 			$config['filter_fields'] = array(
 				'id', 'a.id',
 				'name', 'a.name',
-				'id_lmunicipality', 'a.id_lmunicipality',
-				'm_lmunicipality_name', 'm.name',				
-				'id_lstate', 'a.id_lstate',
-				's_lstate_name', 's.name',				
 				'id_country', 'a.id_country',
 				'c1_country_name', 'c1.name',				
+				'id_lstate', 'a.id_lstate',
+				's_lstate_name', 's.name',				
+				'id_lmunicipality', 'a.id_lmunicipality',
+				'm_lmunicipality_name', 'm.name',				
 				'price', 'a.price',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
@@ -119,12 +119,12 @@ class RemcaModelHouses extends JModelList
 		// Load the filter state.
 		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
 		$this->setState('filter.search', $search);
-		$id_lmunicipality = $app->getUserStateFromRequest($this->context.'.filter.id_lmunicipality', 'filter_id_lmunicipality', 0, 'int');
-		$this->setState('filter.id_lmunicipality', $id_lmunicipality);
-		$id_lstate = $app->getUserStateFromRequest($this->context.'.filter.id_lstate', 'filter_id_lstate', 0, 'int');
-		$this->setState('filter.id_lstate', $id_lstate);
 		$id_country = $app->getUserStateFromRequest($this->context.'.filter.id_country', 'filter_id_country', 0, 'int');
 		$this->setState('filter.id_country', $id_country);
+		$id_lstate = $app->getUserStateFromRequest($this->context.'.filter.id_lstate', 'filter_id_lstate', 0, 'int');
+		$this->setState('filter.id_lstate', $id_lstate);
+		$id_lmunicipality = $app->getUserStateFromRequest($this->context.'.filter.id_lmunicipality', 'filter_id_lmunicipality', 0, 'int');
+		$this->setState('filter.id_lmunicipality', $id_lmunicipality);
 		$price = $app->getUserStateFromRequest($this->context.'.filter.price', 'filter_price', '', 'float');
 		$this->setState('filter.price', $price);
 		$category_id = $app->getUserStateFromRequest($this->context.'.filter.category_id', 'filter_category_id');
@@ -173,9 +173,9 @@ class RemcaModelHouses extends JModelList
 		$id	.= ':'.$this->getState('filter.category_id');
 		$id	.= ':'.$this->getState('filter.state');
 		$id	.= ':'.$this->getState('filter.language');
-		$id	.= ':'.$this->getState('filter.id_lmunicipality');	
-		$id	.= ':'.$this->getState('filter.id_lstate');	
 		$id	.= ':'.$this->getState('filter.id_country');	
+		$id	.= ':'.$this->getState('filter.id_lstate');	
+		$id	.= ':'.$this->getState('filter.id_lmunicipality');	
 		$id	.= ':'.$this->getState('filter.price');	
 		return parent::getStoreId($id);
 	}	
@@ -264,43 +264,43 @@ class RemcaModelHouses extends JModelList
 		
 		
 
-		// Filter by and return name for id_lmunicipality level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
-		$query->select($db->quoteName('m.name').' AS m_lmunicipality_name');
-		$query->select($db->quoteName('m.ordering').' AS m_lmunicipality_ordering');
-
-		$query->join('LEFT', $db->quoteName('#__rem_lmunicipalities').' AS m ON '.$db->quoteName('m.id').' = '.$db->quoteName('a.id_lmunicipality'));	
-		// Filter by and return name for id_lstate level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
-		$query->select($db->quoteName('s.name').' AS s_lstate_name');
-		$query->select($db->quoteName('s.ordering').' AS s_lstate_ordering');
-
-		$query->join('LEFT', $db->quoteName('#__rem_lstates').' AS s ON '.$db->quoteName('s.id').' = '.$db->quoteName('a.id_lstate'));	
 		// Filter by and return name for id_country level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
 		$query->select($db->quoteName('c1.name').' AS c1_country_name');
 		$query->select($db->quoteName('c1.ordering').' AS c1_country_ordering');
 
 		$query->join('LEFT', $db->quoteName('#__rem_countries').' AS c1 ON '.$db->quoteName('c1.id').' = '.$db->quoteName('a.id_country'));	
-		// Filter by and return name for fk_rentid level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
+		// Filter by and return name for id_lstate level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
+		$query->select($db->quoteName('s.name').' AS s_lstate_name');
+		$query->select($db->quoteName('s.ordering').' AS s_lstate_ordering');
+
+		$query->join('LEFT', $db->quoteName('#__rem_lstates').' AS s ON '.$db->quoteName('s.id').' = '.$db->quoteName('a.id_lstate'));	
+		// Filter by and return name for id_lmunicipality level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
+		$query->select($db->quoteName('m.name').' AS m_lmunicipality_name');
+		$query->select($db->quoteName('m.ordering').' AS m_lmunicipality_ordering');
+
+		$query->join('LEFT', $db->quoteName('#__rem_lmunicipalities').' AS m ON '.$db->quoteName('m.id').' = '.$db->quoteName('a.id_lmunicipality'));	
+		// Filter by and return name for id_rent level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
 		$query->select($db->quoteName('r.name').' AS r_rent_name');
 		$query->select($db->quoteName('r.id').' AS r_rent_id');
 
-		$query->join('LEFT', $db->quoteName('#__rem_rent').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.fk_rentid'));	
+		$query->join('LEFT', $db->quoteName('#__rem_rent').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.id_rent'));	
 		// Filter by and return name for owner_id level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
 		$query->select($db->quoteName('u.name').' AS u_user_name');
 		$query->select($db->quoteName('u.id').' AS u_user_id');
 
 		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.owner_id'));	
 		
-		if ($id_lmunicipality = $this->getState('filter.id_lmunicipality'))
+		if ($id_country = $this->getState('filter.id_country'))
 		{
-			$query->where($db->quoteName('a.id_lmunicipality').' = ' . (int) $id_lmunicipality);
+			$query->where($db->quoteName('a.id_country').' = ' . (int) $id_country);
 		}
 		if ($id_lstate = $this->getState('filter.id_lstate'))
 		{
 			$query->where($db->quoteName('a.id_lstate').' = ' . (int) $id_lstate);
 		}
-		if ($id_country = $this->getState('filter.id_country'))
+		if ($id_lmunicipality = $this->getState('filter.id_lmunicipality'))
 		{
-			$query->where($db->quoteName('a.id_country').' = ' . (int) $id_country);
+			$query->where($db->quoteName('a.id_lmunicipality').' = ' . (int) $id_lmunicipality);
 		}
 		if ($price = $this->getState('filter.price'))
 		{

@@ -10,7 +10,7 @@
  * 
  * The following Component Architect header section must remain in any distribution of this file
  *
- * @CAversion		Id: compobjectplural.php 571 2016-01-04 15:03:02Z BrianWade $
+ * @CAversion		Id: compobject.php 571 2016-01-04 15:03:02Z BrianWade $
  * @CAauthor		Component Architect (www.componentarchitect.com)
  * @CApackage		architectcomp
  * @CAsubpackage	architectcomp.site
@@ -31,13 +31,15 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * This models supports retrieving lists of review.
+ * RealEstateManagerCA Component Review Model
  *
  */
-class RemcaModelReview extends JModelList
+class RemcaModelReview extends JModelItem
 {
 	/**
-	 * @var    string	$context	Context string for the model type.  This is used to handle uniqueness within sessions data.
+	 * Model context string.  Used in setting the store id for the session
+	 *
+	 * @var		string
 	 */
 	protected $context = 'com_remca.review';
 
@@ -49,10 +51,19 @@ class RemcaModelReview extends JModelList
 	 */
 	public function __construct($config = array())
 	{
-		if (empty($config['filter_fields']))
+		if (empty($config['review_filter_fields']))
 		{
-			$config['filter_fields'] = array(
+			$config['review_filter_fields'] = array(
 				'id', 'a.id',
+				'id_house','a.id_house',
+				'id_user','a.id_user',
+				'user_name','a.user_name',
+				'user_email','a.user_email',
+				'date','a.date',
+				'rating','a.rating',
+				'title','a.title',
+				'comment','a.comment',
+				'state', 'a.state',
 				);
 		}
 
@@ -63,15 +74,21 @@ class RemcaModelReview extends JModelList
 	 *
 	 * Note. Calling getState in this method will result in recursion.
 	 *
-	 * @return	void
-	 * 
 	 */
-	protected function populateState($ordering = null, $direction = null)
+	protected function populateState()
 	{
-		$app = JFactory::getApplication();
+		$app = JFactory::getApplication('site');
+
+		// Load state from the request.
+		$pk = $app->input->getInt('id');
+		$this->setState('review.id', $pk);
+
+		$offset = $app->input->getInt('limitstart');
+		$this->setState('list.offset', $offset);
+
 		// Load the parameters. Merge Global and Menu Item params into new object
 		$params = $app->getParams();
-		$menu_params = new JRegistry;
+		$menu_params = new Registry;
 
 		if ($menu = $app->getMenu()->getActive())
 		{
@@ -83,263 +100,101 @@ class RemcaModelReview extends JModelList
 
 		$this->setState('params', $merged_params);
 
-		$params = $this->state->params;	
-		
+		// TODO: Tune these values based on other permissions.
 		$user		= JFactory::getUser();
-		
-		$item_id = $app->input->getInt('id', 0) . ':' .$app->input->getInt('Itemid', 0);
+			
+		$this->setState('filter.published', 1);			
 
-		// Check to see if a single review has been specified either as a parameter or in the url Request
-		$pk = $params->get('review_id', '') == '' ? $app->input->getInt('id', '') : $params->get('review_id');
-		$this->setState('filter.review_id', $pk);
-		
-		// List state information
-			$limit = $app->getUserStateFromRequest($this->context.'.list.' . $item_id . '.limit', 'limit', $params->get('review_num_per_page'),'integer');
-		$this->setState('list.limit', $limit);
-
-		$value = $app->input->get('limitstart', 0, 'uint');
-		$this->setState('list.start', $value);
-
-		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
-		$this->setState('filter.search', $search);
-		
-
-		$order_col = $app->getUserStateFromRequest($this->context. '.filter_order', 'filter_order', $params->get('review_initial_sort','a.id'), 'string');
-		if (!in_array($order_col, $this->filter_fields))
-		{
-			$order_col = $params->get('review_initial_sort','a.id');
-		}
-
-		$this->setState('list.ordering', $order_col);
-
-		$list_order = $app->getUserStateFromRequest($this->context. '.filter_order_Dir', 'filter_order_Dir',  $params->get('review_initial_direction','ASC'), 'cmd');
-		if (!in_array(JString::strtoupper($list_order), array('ASC', 'DESC', '')))
-		{
-			$list_order =  $params->get('review_initial_direction','ASC');
-		}
-		$this->setState('list.direction', $list_order);
-		
-				
-		$this->setState('filter.published', 1);		
-
-		
 		if ($params->get('filter_review_archived'))
 		{
 			$this->setState('filter.archived', $params->get('filter_review_archived'));
 			
 		}
-		$this->setState('layout', $app->input->getString('layout'));
 	}
-
 	/**
-	 * Method to get a store id based on model configuration state.
+	 * Returns a Table object, always creating it
 	 *
-	 * This is necessary because the model is used by the component and
-	 * different modules that might need different sets of data or different
-	 * ordering requirements.
-	 *
-	 * @param	string		$id	A prefix for the store id.
-	 *
-	 * @return	string		A store id.
-	 * 
-	 */
-	protected function getStoreId($id = '')
+	 * @param	type	The table type to instantiate
+	 * @param	string	A prefix for the table class name. Optional.
+	 * @param	array	Configuration array for model. Optional.
+	 * @return	JTable	A database object
+	*/
+	public function getTable($type = 'Reviews', $prefix = 'RemcaTable', $config = array())
 	{
-		// Compile the store id.
-		$id .= ':'.$this->getState('filter.search');				
-		$id .= ':'.serialize($this->getState('filter.published'));
-		$id .= ':'.$this->getState('filter.archived');			
-		$id .= ':'.serialize($this->getState('filter.review_id'));
-		$id .= ':'.$this->getState('filter.review_id.include');				
-		
-
-		return parent::getStoreId($id);
+		return JTable::getInstance($type, $prefix, $config);
 	}
-
 	/**
-	 * Get the main query for retrieving a list of review subject to the model state.
+	 * Method to get Review data.
 	 *
-	 * @return	JDatabaseQuery
-	 * 
+	 * @param	integer	$pk	The id of the review.
+	 *
+	 * @return	mixed	Menu item data object on success, false on failure.
 	 */
-	protected function getListQuery()
+	public function getItem($pk = null)
 	{
-		// Get the current user for authorisation checks
+		// Get current user for authorisation checks
 		$user	= JFactory::getUser();
-		// Create a new query object.
-		$db = $this->getDbo();
-		$query = $db->getQuery(true);
-		// Set date values
-		$null_date = $db->quote($db->getNullDate());
-		$now_date = $db->quote(JFactory::getDate()->toSQL());
 		
-		// Select the required fields from the table.
-		$query->select(
-			$this->getState(
-					'list.select',
-					'a.*'
-					)
-				);
-
-
-		$query->from($db->quoteName('#__rem_review').' AS a');
-
-
-
-		
-		
-
-
-
-		// Filter by published status
-		$published = $this->getState('filter.published');
-		$archived = $this->getState('filter.archived');		
-		if (is_numeric($archived))
-		{
-			$query->where($db->quoteName('a.state').' = '. (int) $archived);
-			
-		}
-		else
-		{
-			if (is_numeric($published))
-			{
-				$query->where($db->quoteName('a.state').' = '. (int) $published);
-				
-			}
-			else 
-			{
-				if (is_array($published))
-				{
-					JArrayHelper::toInteger($published);
-					$published = implode(',', $published);
-					// Use review state 
-					$query->where($db->quoteName('a.state').' IN ('.$published.')');
-				}
-			}
-		}
-
-		
-		// Filter by and return name for fk_houseid level.
-		$query->select($db->quoteName('h.name').' AS h_house_name');
-		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
-
-		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_houseid'));	
-		// Filter by and return name for fk_userid level.
-		$query->select($db->quoteName('u.name').' AS u_user_name');
-		$query->select($db->quoteName('u.id').' AS u_user_id');
-
-		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.fk_userid'));	
-					
-
-		// Filter by a single or group of review.
-		$review_id = $this->getState('filter.review_id');
-		if ($review_id != '')
-		{
-			if (is_numeric($review_id))
-			{
-				$type = $this->getState('filter.review_id.include', true) ? '= ' : '<> ';
-				$query->where($db->quoteName('a.id').' '.$type.(int) $review_id);
-			}
-			else
-			{
-				if (is_array($review_id))
-				{
-					JArrayHelper::toInteger($review_id);
-					$review_id = implode(',', $review_id);
-					$type = $this->getState('filter.review_id.include', true) ? 'IN' : 'NOT IN';
-					$query->where($db->quoteName('a.id').' '.$type.' ('.$review_id.')');
-				}
-			}
-		}
-		
-
-		// process the filter for list views with user-entered filters
-		$params = $this->getState('params');
-
-		if ((is_object($params)) AND ($params->get('show_review_filter_field') != 'hide') AND ($filter = $this->getState('filter.search')))
-		{
-			// clean filter variable
-			$filter = JString::strtolower($filter);
-			$filter = $db->quote('%'.$db->escape($filter, true).'%', false);
-
-			switch ($params->get('show_review_filter_field'))
-			{
-				default:
-					break;
-				
-			}
-		}
-
-		// Add the list ordering clause.
-		if (is_object($params))
-		{
-			$initial_sort = $params->get('field_initial_sort');
-		}
-		else
-		{
-			$initial_sort = '';
-		}
-		// Fall back to old style if the parameter hasn't been set yet.
-		if (empty($initial_sort) OR $this->getState('list.ordering') != '')
-		{
-			$order_col	= '';
-			$order_dirn	= $this->getState('list.direction');
-
-			// Allow for multi field order (routines defining these must cater for quotes on field names	
-			if (strpos($this->getState('list.ordering'),',') !== False)
-			{
-				$order_col = trim($this->getState('list.ordering'));
-			}			
-		
-
-
-			if ($order_col == '')
-			{
-				$order_col = is_string($this->getState('list.ordering')) ? $db->quoteName($this->getState('list.ordering')) : $db->quoteName('a.id');
-				$order_col .= ' '.$order_dirn;
-			}
-			$query->order($db->escape($order_col));			
-					
-		}
-		else
-		{
-			$query->order($db->quoteName('a.'.$initial_sort).' '.$db->escape($this->getState('list.direction', 'ASC')));
-			
-		}	
-		return $query;
-	}
-
-	/**
-	 * Method to get a list of review.
-	 *
-	 * Overriden to inject convert the params fields into an object.
-	 *
-	 * @return	mixed	An array of objects on success, false on failure.
-	 * 
-	 */
-	public function getItems()
-	{
-		$db = $this->getDbo();
-  		$query = $db->getQuery(true);
-		
-		$user	= JFactory::getUser();
-		$user_id	= $user->get('id');
-		$guest	= $user->get('guest');
-
+		$pk = (!empty($pk)) ? $pk : (int) $this->getState('review.id');
 		// Get the global params
 		$global_params = JComponentHelper::getParams('com_remca', true);
-		
-		if ($items = parent::getItems())
+
+		if ($this->_item === null)
 		{
-			// Convert the parameter fields into objects.
-			foreach ($items as &$item)
+			$this->_item = array();
+		}
+
+		if (!isset($this->_item[$pk]))
+		{
+			try
 			{
-				$query->clear();
+				$db = $this->getDbo();
+				$query = $db->getQuery(true);
 
-				$review_params = new Registry;
+				$query->select($this->getState(
+					'item.select',
+					'a.*'
 
-
+					)
+				);
+				$query->from($db->quoteName('#__rem_reviews').' AS a');
 				
+				
+				$query->where($db->quoteName('a.id').' = ' . (int) $pk);
+				
+					
+
+				//  Do not show unless today's date is within the publish up and down dates (or they are empty)
+				// Filter by published status.
+				$published = $this->getState('filter.published');
+				$archived = $this->getState('filter.archived');
+				if (is_numeric($published) 
+					)
+				{
+					$query->where('('.$db->quoteName('a.state').' = ' . (int) $published . ' OR '.$db->quoteName('a.state').' = ' . (int) $archived . ')');
+				
+				}
+				
+					
+				// Filter by and return name for id_house level.
+				$query->select($db->quoteName('h.name').' AS h_house_name');
+				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
+				// Filter by and return name for id_user level.
+				$query->select($db->quoteName('u.name').' AS u_user_name');
+				$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.id_user'));	
+																				
+				$db->setQuery($query);
+
+				$item = $db->loadObject();
+
+				if (empty($item))
+				{
+					return JError::raiseError(404, JText::_('COM_REMCA_REVIEWS_ERROR_ITEM_NOT_FOUND'));
+				}
+				// Include any manipulation of the data on the record e.g. expand out Registry fields
+				// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
+			
+
 				
 				
 				
@@ -349,74 +204,170 @@ class RemcaModelReview extends JModelList
 				
 				
 		
-							
 
-				
 							
-				if (!is_object($this->getState('params')))
+				// Check for published state if filter set.
+				if (((is_numeric($published)) OR (is_numeric($archived))) AND (($item->state != $published) AND ($item->state != $archived)))
 				{
-					$item->params = $review_params;
+					return JError::raiseError(404, JText::_('COM_REMCA_REVIEWS_ERROR_ITEM_NOT_FOUND'));
+				}
+
+				// Convert parameter fields to objects.
+				$review_params = new Registry;
+				
+				$item->params = clone $this->getState('params');				
+								
+				// Review params override menu item params only if menu param = 'use_review'
+				// Otherwise, menu item params control the layout
+				// If menu item is 'use_review' and there is no review param, use global
+
+				// create an array of just the params set to 'use_review'
+				$menu_params_array = $this->getState('params')->toArray();
+				$review_array = array();
+
+				foreach ($menu_params_array as $key => $value)
+				{
+					if ($value === 'use_review')
+					{
+						// if the review has a value, use it
+						if ($review_params->get($key) != '')
+						{
+							// get the value from the review
+							$review_array[$key] = $review_params->get($key);
+						}
+						else
+						{
+							// otherwise, use the global value
+							$review_array[$key] = $global_params->get($key);
+						}
+					}
+				}
+
+				// merge the selected review params
+				if (count($review_array) > 0)
+				{
+					$review_params = new Registry;
+					$review_params->loadArray($review_array);
+					$item->params->merge($review_params);
+				}
+
+
+
+
+				$this->_item[$pk] = $item;
+			}
+			catch (Exception $e)
+			{
+				if ($e->getCode() == 404)
+				{
+					// Need to go thru the error handler to allow Redirect to work.
+					JError::raiseError(404, $e->getMessage());
 				}
 				else
 				{
-					$item->params = clone $this->getState('params');
-
-					// Review params override menu item params only if menu param = 'use_review'
-					// Otherwise, menu item params control the layout
-					// If menu item is 'use_review' and there is no review param, use global
-
-					// create an array of just the params set to 'use_review'
-					$menu_params_array = $this->getState('params')->toArray();
-					$review_array = array();
-
-					foreach ($menu_params_array as $key => $value)
-					{
-						if ($value === 'use_review')
-						{
-							// if the review has a value, use it
-							if ($review_params->get($key) != '')
-							{
-								// get the value from the review
-								$review_array[$key] = $review_params->get($key);
-							}
-							else
-							{
-								// otherwise, use the global value
-								$review_array[$key] = $global_params->get($key);
-							}
-						}
-					}
-
-					// merge the selected review params
-					if (count($review_array) > 0)
-					{
-						$review_params = new Registry;
-						$review_params->loadArray($review_array);
-						$item->params->merge($review_params);
-					}
-
-
-					// get display date
-					switch ($item->params->get('list_show_review_date'))
-					{
-						default:
-							$item->display_date = 0;
-							break;
-					}
-				}
-
-
+					$this->setError($e);
+					$this->_item[$pk] = false;
+				}			
 			}
 		}
-		return $items;
+
+		return $this->_item[$pk];
 	}
+	/**
+	 * Method to change the published state of one or more records.
+	 *
+	 * @param   array    &$pks   A list of the primary keys to change.
+	 * @param	integer  $value  The value of the published state.
+	 *
+	 * @return  boolean  True on success.
+	 *
+	 */
+	public function publish(&$pks, $value = 1)
+	{
+		
+		$dispatcher = JEventDispatcher::getInstance();
+		$table = $this->getTable();
+		$user	= JFactory::getUser();
 	
-        /*
-         * Function that allows download database information
-         * @ToDo implementar generación de código
-         */
-        public function getListQuery4Export(){
-            $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));
-            return $this->getDbo()->getQuery();
-        }
+		$pks = (array) $pks;
+
+		// Include the remca plugins for the change of state event.
+		JPluginHelper::importPlugin('remca');
+
+
+		// Attempt to change the state of the records.
+		if (!$table->publish($pks, $value, $user->get('id')))
+		{
+			$this->setError($table->getError());
+			return false;
+		}
+
+		// Trigger the ChangeState event.
+		$result = $dispatcher->trigger('onReviewChangeState', array('com_remca.review', $pks, $value));
+
+		if (in_array(false, $result, true))
+		{
+			$this->setError($table->getError());
+			return false;
+		}
+
+		// Clear the component's cache
+		$this->cleanCache();
+
+		return true;
+	}
+
+		
+	/**
+	 * Method to delete one or more records.
+	 *
+	 * @param   array    $pks  An array of record primary keys.
+	 *
+	 * @return  boolean  True if successful, false if an error occurs.
+	 * 
+	 */
+	public function delete(&$pks)
+	{
+		
+		$dispatcher	= JEventDispatcher::getInstance();
+		$pks		= (array) $pks;
+		$table		= $this->getTable();
+
+		// Include the remca plugins for the on delete events.
+		JPluginHelper::importPlugin('remca');
+
+		// Iterate the items to delete each one.
+		foreach ($pks as $i => $pk)
+		{
+
+			if ($table->load($pk))
+			{
+					// Trigger the BeforeDelete event.
+					$result = $dispatcher->trigger('onReviewBeforeDelete', array('com_remca.review', &$table));
+					if (in_array(false, $result, true))
+					{
+						$this->setError($table->getError());
+						return false;
+					}
+					if (!$table->delete($pk))
+					{
+						$this->setError($table->getError());
+						return false;
+					}
+
+					// Trigger the AfterDelete event.
+					$dispatcher->trigger('onReviewAfterDelete', array('com_remca.review', &$table));
+			}
+			else
+			{
+				$this->setError($table->getError());
+				return false;
+			}
+		}
+
+		// Clear the component's cache
+		$this->cleanCache();
+
+		return true;
+	}
 }

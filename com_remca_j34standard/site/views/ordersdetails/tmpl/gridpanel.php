@@ -34,21 +34,21 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'fk_order_id',
-        'FIELD_CODE_NAME' => 'fk_order_id',
+        'FIELD_NAME' => 'Order',
+        'FIELD_CODE_NAME' => 'id_order',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FK_ORDER_ID
+                FIELD_CODE_NAME_UPPER=ID_ORDER
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_order_id
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Order
 
-                FIELD_NAME_LATEX=fk\_order\_id
-                FIELD_CODE_NAME_LATEX=fk\_order\_id
+                FIELD_NAME_LATEX=Order
+                FIELD_CODE_NAME_LATEX=id\_order
                 FIELD_DBCOMMENT_LATEX=
 
                     {FIELD_LINK}
@@ -56,24 +56,24 @@ function getFields(){
                     FIELD_FOREIGN_OBJECT_UPPER=ORDER
 
     */
-    $fields['fk_order_id'] = $field;
+    $fields['id_order'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'fk_user_id',
-        'FIELD_CODE_NAME' => 'fk_user_id',
+        'FIELD_NAME' => 'User',
+        'FIELD_CODE_NAME' => 'id_user',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FK_USER_ID
+                FIELD_CODE_NAME_UPPER=ID_USER
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_user_id
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' User
 
-                FIELD_NAME_LATEX=fk\_user\_id
-                FIELD_CODE_NAME_LATEX=fk\_user\_id
+                FIELD_NAME_LATEX=User
+                FIELD_CODE_NAME_LATEX=id\_user
                 FIELD_DBCOMMENT_LATEX=
 
                     {FIELD_LINK}
@@ -81,7 +81,7 @@ function getFields(){
                     FIELD_FOREIGN_OBJECT_UPPER=USER
 
     */
-    $fields['fk_user_id'] = $field;
+    $fields['id_user'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'fk_houses_htitle',
@@ -172,21 +172,21 @@ function getFields(){
     $fields['order_date'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'fk_house_id',
-        'FIELD_CODE_NAME' => 'fk_house_id',
+        'FIELD_NAME' => 'House',
+        'FIELD_CODE_NAME' => 'id_house',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FK_HOUSE_ID
+                FIELD_CODE_NAME_UPPER=ID_HOUSE
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_house_id
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
 
-                FIELD_NAME_LATEX=fk\_house\_id
-                FIELD_CODE_NAME_LATEX=fk\_house\_id
+                FIELD_NAME_LATEX=House
+                FIELD_CODE_NAME_LATEX=id\_house
                 FIELD_DBCOMMENT_LATEX=
 
                     {FIELD_LINK}
@@ -194,7 +194,7 @@ function getFields(){
                     FIELD_FOREIGN_OBJECT_UPPER=HOUSE
 
     */
-    $fields['fk_house_id'] = $field;
+    $fields['id_house'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'txn_type',

@@ -200,11 +200,11 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="houseForm" id="houseForm">
 			<?php $dummy = false;
 					$display_fieldset = (
-								($params->get('show_house_id_lmunicipality')) OR 
-								($params->get('show_house_id_lstate')) OR 
 								($params->get('show_house_id_country')) OR 
+								($params->get('show_house_id_lstate')) OR 
+								($params->get('show_house_id_lmunicipality')) OR 
 								($params->get('show_house_sid')) OR 
-								($params->get('show_house_fk_rentid')) OR 
+								($params->get('show_house_id_rent')) OR 
 								($params->get('show_house_associate_house')) OR 
 								($params->get('show_house_houseid')) OR 
 								($params->get('show_house_link')) OR 
@@ -262,14 +262,14 @@ $empty = $component->params->get('default_empty_field', '');
 					<legend><?php echo JText::_('COM_REMCA_HOUSES_FIELDSET_HOUSES_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
-						<?php if ($params->get('show_house_id_lmunicipality')) : ?>
+						<?php if ($params->get('show_house_id_country')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_COUNTRY_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo JString::trim($this->item->m_lmunicipality_name);
+									echo JString::trim($this->item->c1_country_name);
 								?>
 							</span>
 						</div>	
@@ -286,14 +286,14 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_house_id_country')) : ?>
+						<?php if ($params->get('show_house_id_lmunicipality')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_COUNTRY_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo JString::trim($this->item->c1_country_name);
+									echo JString::trim($this->item->m_lmunicipality_name);
 								?>
 							</span>
 						</div>	
@@ -310,10 +310,10 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_house_fk_rentid')) : ?>
+						<?php if ($params->get('show_house_id_rent')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_FK_RENTID_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_RENT_LABEL'); ?>
 							</label>
 							<span>
 								<?php

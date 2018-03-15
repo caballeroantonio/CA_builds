@@ -34,12 +34,12 @@ defined('_JEXEC') or die;
 	
 // Add css files for the remca component and categories if they exist
 $this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_remca.css');
-$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_buying_request.css');
+$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_buying_requests.css');
 
 if ($lang->isRTL())
 {
 	$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_remca-rtl.css');
-	$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_buying_request-rtl.css');
+	$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_buying_requests-rtl.css');
 }
 
 // Add Javscript functions for field display
@@ -151,8 +151,8 @@ $params = $this->state->get('params');
         <!--end all fields-->
 		<fieldset>
 <?php /*?>			<ul class="nav nav-tabs">
-				<li class="active"><a href="#basic-details" data-toggle="tab"><?php echo JText::_('COM_REMCA_BUYING_REQUEST_FIELDSET_DETAILS_LABEL');?></a></li>
-				<li><a href="#fieldset-buying_request_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_BUYING_REQUEST_FIELDSET_BUYING_REQUEST_FS_LABEL');?></a></li>
+				<li class="active"><a href="#basic-details" data-toggle="tab"><?php echo JText::_('COM_REMCA_BUYING_REQUESTS_FIELDSET_DETAILS_LABEL');?></a></li>
+				<li><a href="#fieldset-buying_request_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_BUYING_REQUESTS_FIELDSET_BUYING_REQUEST_FS_LABEL');?></a></li>
 				<li><a href="#publishing" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_PUBLISHING_LABEL');?></a></li>
 			</ul>		<?php */?>
 		

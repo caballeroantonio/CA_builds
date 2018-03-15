@@ -71,9 +71,9 @@ class RemcaViewHouses extends JViewLegacy
 		// PREPARE THE DATA
 		if ($app->input->getString('layout', 'default') != 'blog')
 		{			
-			$this->lmunicipalities	= $this->get('Lmunicipalities');
-			$this->lstates	= $this->get('Lstates');
 			$this->countries	= $this->get('Countries');
+			$this->lstates	= $this->get('Lstates');
+			$this->lmunicipalities	= $this->get('Lmunicipalities');
 			$this->price_values	= $this->get('Pricevalues');
 		}	
 		// Compute the house slugs and set the trigger events.

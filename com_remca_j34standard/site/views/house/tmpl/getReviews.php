@@ -139,7 +139,7 @@ if ($this->params->get('show_reviews')) {
 
         </div>
 
-        <input type="hidden" name="fk_houseid" value="<?php echo $this->item->id; ?>" />
+        <input type="hidden" name="id_house" value="<?php echo $this->item->id; ?>" />
         <input type="hidden" name="catid" value="<?php $temp = $this->item->catid;
         echo $temp[0]; ?>" />
             </form>

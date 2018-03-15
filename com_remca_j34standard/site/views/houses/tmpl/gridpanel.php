@@ -34,29 +34,29 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'id_municipality',
-        'FIELD_CODE_NAME' => 'id_lmunicipality',
+        'FIELD_NAME' => 'Country',
+        'FIELD_CODE_NAME' => 'id_country',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_LMUNICIPALITY
+                FIELD_CODE_NAME_UPPER=ID_COUNTRY
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' id_municipality
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Country
 
-                FIELD_NAME_LATEX=id\_municipality
-                FIELD_CODE_NAME_LATEX=id\_lmunicipality
+                FIELD_NAME_LATEX=Country
+                FIELD_CODE_NAME_LATEX=id\_country
                 FIELD_DBCOMMENT_LATEX=
 
                     {FIELD_LINK}
-                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=M
-                    FIELD_FOREIGN_OBJECT_UPPER=LMUNICIPALITY
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=C1
+                    FIELD_FOREIGN_OBJECT_UPPER=COUNTRY
 
     */
-    $fields['id_lmunicipality'] = $field;
+    $fields['id_country'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'State',
@@ -84,29 +84,29 @@ function getFields(){
     $fields['id_lstate'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'Country',
-        'FIELD_CODE_NAME' => 'id_country',
+        'FIELD_NAME' => 'id_municipality',
+        'FIELD_CODE_NAME' => 'id_lmunicipality',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_COUNTRY
+                FIELD_CODE_NAME_UPPER=ID_LMUNICIPALITY
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Country
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' id_municipality
 
-                FIELD_NAME_LATEX=Country
-                FIELD_CODE_NAME_LATEX=id\_country
+                FIELD_NAME_LATEX=id\_municipality
+                FIELD_CODE_NAME_LATEX=id\_lmunicipality
                 FIELD_DBCOMMENT_LATEX=
 
                     {FIELD_LINK}
-                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=C1
-                    FIELD_FOREIGN_OBJECT_UPPER=COUNTRY
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=M
+                    FIELD_FOREIGN_OBJECT_UPPER=LMUNICIPALITY
 
     */
-    $fields['id_country'] = $field;
+    $fields['id_lmunicipality'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'sid',
@@ -131,21 +131,21 @@ function getFields(){
     $fields['sid'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'fk_rentid',
-        'FIELD_CODE_NAME' => 'fk_rentid',
+        'FIELD_NAME' => 'Rent',
+        'FIELD_CODE_NAME' => 'id_rent',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FK_RENTID
+                FIELD_CODE_NAME_UPPER=ID_RENT
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_rentid
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Rent
 
-                FIELD_NAME_LATEX=fk\_rentid
-                FIELD_CODE_NAME_LATEX=fk\_rentid
+                FIELD_NAME_LATEX=Rent
+                FIELD_CODE_NAME_LATEX=id\_rent
                 FIELD_DBCOMMENT_LATEX=
 
                     {FIELD_LINK}
@@ -153,7 +153,7 @@ function getFields(){
                     FIELD_FOREIGN_OBJECT_UPPER=RENT
 
     */
-    $fields['fk_rentid'] = $field;
+    $fields['id_rent'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'associate_house',

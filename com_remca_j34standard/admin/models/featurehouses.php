@@ -182,16 +182,16 @@ class RemcaModelFeatureHouses extends JModelList
 		
 		
 
-		// Filter by and return name for fk_houseid level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
+		// Filter by and return name for id_house level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
 		$query->select($db->quoteName('h.name').' AS h_house_name');
 		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
 
-		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_houseid'));	
-		// Filter by and return name for fk_featureid level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
+		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
+		// Filter by and return name for id_featured level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
 		$query->select($db->quoteName('f.name').' AS f_feature_name');
 		$query->select($db->quoteName('f.id').' AS f_feature_id');
 
-		$query->join('LEFT', $db->quoteName('#__rem_feature').' AS f ON '.$db->quoteName('f.id').' = '.$db->quoteName('a.fk_featureid'));	
+		$query->join('LEFT', $db->quoteName('#__rem_feature').' AS f ON '.$db->quoteName('f.id').' = '.$db->quoteName('a.id_featured'));	
 		
 				
 		// Add the list ordering clause.

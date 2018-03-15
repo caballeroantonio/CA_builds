@@ -156,11 +156,11 @@
     >
 
         <field
-            id="id_lmunicipality"
-            name="id_lmunicipality"
-            type="modal_lmunicipalities"
-            label="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_DESC"
+            id="id_country"
+            name="id_country"
+            type="modal_countries"
+            label="COM_REMCA_HOUSES_FIELD_ID_COUNTRY_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_ID_COUNTRY_DESC"
             class="modal"
 			default="'0'"
         >
@@ -176,11 +176,11 @@
         >
         </field>  
         <field
-            id="id_country"
-            name="id_country"
-            type="modal_countries"
-            label="COM_REMCA_HOUSES_FIELD_ID_COUNTRY_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_ID_COUNTRY_DESC"
+            id="id_lmunicipality"
+            name="id_lmunicipality"
+            type="modal_lmunicipalities"
+            label="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_DESC"
             class="modal"
 			default="'0'"
         >
@@ -197,11 +197,11 @@
         >
         </field>  
         <field
-            id="fk_rentid"
-            name="fk_rentid"
+            id="id_rent"
+            name="id_rent"
             type="modal_rent"
-            label="COM_REMCA_HOUSES_FIELD_FK_RENTID_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_FK_RENTID_DESC"
+            label="COM_REMCA_HOUSES_FIELD_ID_RENT_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_ID_RENT_DESC"
             class="modal"
 			default="'0'"
         >

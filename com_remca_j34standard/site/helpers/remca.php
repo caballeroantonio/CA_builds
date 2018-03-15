@@ -482,7 +482,7 @@ class RemcaHelper extends JHelperContent
                 
                     $house = $row->id;
                     $data = JFactory::getDBO();
-                    $query = "SELECT * FROM #__rem_rent WHERE fk_houseid=" . $house . " ORDER BY rent_return ";
+                    $query = "SELECT * FROM #__rem_rent WHERE id_house=" . $house . " ORDER BY rent_return ";
                     $data->setQuery($query);
                     $allrent = $data->loadObjectList();
                     
@@ -975,7 +975,7 @@ class RemcaHelper extends JHelperContent
                 <td align = "center">
             <?php
             $data = JFactory::getDBO();
-            $query = "SELECT houseid FROM #__rem_houses where id = " . $row->fk_houseid . " ";
+            $query = "SELECT houseid FROM #__rem_houses where id = " . $row->id_house . " ";
             $data->setQuery($query);
             $houseid = $data->loadObjectList();
             echo $houseid[0]->houseid;
@@ -1174,8 +1174,8 @@ class RemcaHelper extends JHelperContent
                     copy ( JPATH_SITE."/components/com_realestatemanager/images/folder.png" ,
                         JPATH_SITE . '/components/com_realestatemanager/photos/folder.png');
                 $file_name = self::rem_picture_thumbnail( 'folder.png',
-                  self::$params->get('fotogallery_high'),
-                  self::$params->get('fotogallery_width'));
+                  self::$params->get('fotogallery_high',100),
+                  self::$params->get('fotogallery_width',100));
                 $file='components/com_realestatemanager/photos/'. $file_name;
                 echo '<img alt="picture for subcategory" title="'.$cat_all[$i]->title.'" src="' .$file. '">';
                 ?>
@@ -1241,7 +1241,7 @@ class RemcaHelper extends JHelperContent
                         </div>
                     </td>
                     <td align = "center"><?php echo $row->id; ?></td>
-                    <td align = "center"><?php echo $row->fk_houseid; ?></td>
+                    <td align = "center"><?php echo $row->id_house; ?></td>
                     <td align = "center"><?php echo $row->hlocation; ?></td>
                     <td align = "center"><?php echo $row->customer_name; ?></td>
                     <td align = "center" width="20%"><?php echo $row->customer_comment; ?></td>
@@ -1373,14 +1373,14 @@ class RemcaHelper extends JHelperContent
                   $watermark_path = (self::$params->get('watermark_show') == 1) ? 'watermark/' : '';
                   $watermark = (self::$params->get('watermark_show') == 1) ? true : false;  
                       $file_name = self::rem_picture_thumbnail($imageURL,
-                        self::$params->get('fotogal_width'),
-                        self::$params->get('fotogal_high'), $watermark);
+                        self::$params->get('fotogal_width',100),
+                        self::$params->get('fotogal_high',100), $watermark);
                       
                       $file = 'components/com_realestatemanager/photos/' . $file_name;
                 ?>
                 var imgUrl =  "<?php echo $file; ?>";
                       
-                <?php if(!self::REMincorrect_price($rows[$i]->price)):?>
+                <?php if(!self::incorrect_price($rows[$i]->price)):?>
                   var price =  "<?php echo $rows[$i]->price; ?>";
                   var priceunit =  "<?php echo $rows[$i]->priceunit; ?>";
                 <?php else:?>
@@ -1402,7 +1402,7 @@ class RemcaHelper extends JHelperContent
               '</div>';
 
                    infowindow.setContent(contentStr);
-                   infowindow.setOptions( { maxWidth: <?php echo self::$params->get('fotogal_width') ; ?> });
+                   infowindow.setOptions( { maxWidth: <?php echo self::$params->get('fotogal_width',100) ; ?> });
                    infowindow.open(map,marker[<?php echo $j; ?>]);
               });
 
@@ -1447,8 +1447,8 @@ class RemcaHelper extends JHelperContent
     //    }
     //
     //}
-//    if (!function_exists('self::REMincorrect_price')) {
-      private static function REMincorrect_price($price){
+//    if (!function_exists('self::incorrect_price')) {
+      static function incorrect_price($price){
         if(preg_match('/\D/i',$price) == 1){
           return true;
         }else{
@@ -2154,33 +2154,8 @@ class RemcaHelper extends JHelperContent
     // usersgroupid - groupId of the user
     // For anonymous user Uid = 0 and Gid = 0
 //    if (!function_exists('checkAccess_REM')) {
-      function REMcheckAccess_REM($accessgroupid, $recurse, $usersgroupid, $acl) {
-          if (!is_array($usersgroupid)) {
-              $usersgroupid = explode(',', $usersgroupid);
-          }
-          //parse usergroups
-          $tempArr = array();
-          $tempArr = explode(',', $accessgroupid);
-          for ($i = 0; $i < count($tempArr); $i++) {
-              if (((!is_array($usersgroupid) && $tempArr[$i] == $usersgroupid) OR
-                     (is_array($usersgroupid) && in_array($tempArr[$i], $usersgroupid))) || $tempArr[$i] == - 2) {
-                  //allow access
-                  return true;
-              } else {
-                  if ($recurse == 'RECURSE') {
-                      if (is_array($usersgroupid)) {
-                          foreach ($usersgroupid as $j)
-                              if (in_array($j, $tempArr))
-                                  return 1;
-                      } else {
-                          if (in_array($usersgroupid, $tempArr))
-                              return 1;
-                      }
-                  }
-              }
-          } // end for
-          //deny access
-          return 0;
+      function checkAccess_REM($accessgroupid, $recurse, $usersgroupid, $acl) {
+          return true;
       }
 
 //    }
@@ -2472,7 +2447,7 @@ class RemcaHelper extends JHelperContent
               return;
           }
 
-          $query = "SELECT * FROM #__rem_rent_sal where fk_houseid = " . $bid;
+          $query = "SELECT * FROM #__rem_rent_sal where id_house = " . $bid;
           self::$db->setQuery($query);
           $rentTerm = self::$db->loadObjectList();    
 
@@ -2500,7 +2475,7 @@ class RemcaHelper extends JHelperContent
               }   
           }                                        
 
-          $sql = "INSERT INTO #__rem_rent_sal (fk_houseid, price_from, price_to,
+          $sql = "INSERT INTO #__rem_rent_sal (id_house, price_from, price_to,
              special_price, priceunit, comment_price) VALUES (" . $bid . ", '" .
               $rent_from_transf . "', '" . $rent_until_transf . "', '" .
                $special_price . "','" . $currency_spacial_price . "','" . 
@@ -2508,7 +2483,7 @@ class RemcaHelper extends JHelperContent
           self::$db->setQuery($sql);
           self::$db->query(); 
 
-          $query = "SELECT * FROM #__rem_rent_sal where fk_houseid = " . $bid;
+          $query = "SELECT * FROM #__rem_rent_sal where id_house = " . $bid;
           self::$db->setQuery($query);
           $rentTerm = self::$db->loadObjectList();
 
@@ -2527,10 +2502,10 @@ class RemcaHelper extends JHelperContent
               echo '0';exit;
           }
           if(self::$params->get('special_price_show')){
-              $query = "SELECT * FROM #__rem_rent_sal WHERE fk_houseid = ".$hid .
+              $query = "SELECT * FROM #__rem_rent_sal WHERE id_house = ".$hid .
                   " AND (price_from <= ('" .$rent_until. "') AND price_to >= ('" .$rent_from. "'))";   
           }else{
-              $query = "SELECT * FROM #__rem_rent_sal WHERE fk_houseid = ".$hid .
+              $query = "SELECT * FROM #__rem_rent_sal WHERE id_house = ".$hid .
                   " AND (price_from < ('" .$rent_until. "') AND price_to > ('" .$rent_from. "'))";         
           }
           self::$db->setQuery($query);
@@ -2582,7 +2557,7 @@ class RemcaHelper extends JHelperContent
           }
 
 
-          if(!self::REMincorrect_price($item_rem[0]->price)){
+          if(!self::incorrect_price($item_rem[0]->price)){
             $count_day_not_sp_price = $count_day - $count_day_spashal_price;
             $sum_price_not_sp_price =  $count_day_not_sp_price * $item_rem[0]->price;
             $sum_price = $sum_price_not_sp_price + $count_spashal_price;
@@ -3005,7 +2980,7 @@ class RemcaHelper extends JHelperContent
             //--ids of new houses  where we set new values for column associate_house
                 $idToChange = implode(',' , $assocHouseId); 
                 if(count($idToChange) && !empty($idToChange)){  
-                  $query = "select * from #__rem_rent where `fk_houseid` in (".$idToChange.
+                  $query = "select * from #__rem_rent where `id_house` in (".$idToChange.
                     ") and `rent_return` is NULL";
                   self::$db->setQuery($query);
                   $CheckAssociate = self::$db->loadObjectList(); 
@@ -3035,7 +3010,7 @@ class RemcaHelper extends JHelperContent
       function REMavailable_dates($house_id){
         
         $date_NA = array();
-        $query = "SELECT rent_from, rent_until FROM #__rem_rent WHERE fk_houseid='".$house_id.
+        $query = "SELECT rent_from, rent_until FROM #__rem_rent WHERE id_house='".$house_id.
           "' AND rent_return is null";
         self::$db->setQuery($query);
         $calenDate = self::$db->loadObjectList();
@@ -3798,7 +3773,7 @@ class RemcaHelper extends JHelperContent
             self::$db->setQuery($query);
             $items = self::$db->loadObjectList();
             foreach ($items as $r => $cat_item) {
-                if (!checkAccess_REM($cat_item->access, 'NORECURSE', userGID_REM($my->id), $acl)) {
+                if (!self::checkAccess_REM($cat_item->access, 'NORECURSE', userGID_REM($my->id), $acl)) {
                 //if have not access then remove item from search
                     unset($items[$r]);
                 }
@@ -3933,7 +3908,7 @@ class RemcaHelper extends JHelperContent
     }
 
     function getReviews() {
-        $this->_db->setQuery("SELECT id FROM #__rem_review WHERE fk_houseid='$this->id' ORDER BY id");
+        $this->_db->setQuery("SELECT id FROM #__rem_review WHERE id_house='$this->id' ORDER BY id");
         if (version_compare(JVERSION, "3.0.0", "lt"))
             $tmp = $this->_db->loadResultArray();
         else
@@ -3958,7 +3933,7 @@ class RemcaHelper extends JHelperContent
     }
 
     function getAllRents($exclusion = "") {
-        $this->_db->setQuery("SELECT id FROM #__rem_rent WHERE fk_houseid='$this->id' " . $exclusion . " ORDER BY fk_houseid");
+        $this->_db->setQuery("SELECT id FROM #__rem_rent WHERE id_house='$this->id' " . $exclusion . " ORDER BY id_house");
         if (version_compare(JVERSION, "3.0.0", "lt"))
             $tmp = $this->_db->loadResultArray();
         else
@@ -3973,7 +3948,7 @@ class RemcaHelper extends JHelperContent
     }
 
     function getAllRentRequests($exclusion = "") {
-        $this->_db->setQuery("SELECT id FROM #__rem_rent_request WHERE fk_houseid='$this->id'" . $exclusion . " ORDER BY id");
+        $this->_db->setQuery("SELECT id FROM #__rem_rent_request WHERE id_house='$this->id'" . $exclusion . " ORDER BY id");
         if (version_compare(JVERSION, "3.0.0", "lt"))
             $tmp = $this->_db->loadResultArray();
         else
@@ -3988,7 +3963,7 @@ class RemcaHelper extends JHelperContent
     }
 
     function getAllBuyingRequests($exclusion = "") {
-        $this->_db->setQuery("SELECT id FROM #__rem_buying_request WHERE fk_houseid='$this->id'" . $exclusion . " ORDER BY id");
+        $this->_db->setQuery("SELECT id FROM #__rem_buying_request WHERE id_house='$this->id'" . $exclusion . " ORDER BY id");
         if (version_compare(JVERSION, "3.0.0", "lt"))
             $tmp = $this->_db->loadResultArray();
         else {
@@ -4004,7 +3979,7 @@ class RemcaHelper extends JHelperContent
     }
 
     function getAllImages($exclusion = "") {
-        $this->_db->setQuery("SELECT thumbnail_img, main_img FROM #__rem_photos WHERE fk_houseid='$this->id'" . $exclusion . " ORDER BY id");
+        $this->_db->setQuery("SELECT thumbnail_img, main_img FROM #__rem_photos WHERE id_house='$this->id'" . $exclusion . " ORDER BY id");
         $retVal = $this->_db->loadObjectList();
         return $retVal;
     }
@@ -4026,13 +4001,13 @@ class RemcaHelper extends JHelperContent
     }
 
     function getAllHouseFeatures($exclusion = "") {
-        $this->_db->setQuery("SELECT * FROM #__rem_feature_houses WHERE fk_houseid='$this->id' " . $exclusion . " ORDER BY id");
+        $this->_db->setQuery("SELECT * FROM #__rem_feature_houses WHERE id_house='$this->id' " . $exclusion . " ORDER BY id");
         $retVal = $this->_db->loadObjectList();
         return $retVal;
     }
     
     function getAllRentSal($exclusion = "") {
-        $this->_db->setQuery("SELECT * FROM #__rem_rent_sal WHERE fk_houseid='$this->id' " . $exclusion . " ORDER BY id");
+        $this->_db->setQuery("SELECT * FROM #__rem_rent_sal WHERE id_house='$this->id' " . $exclusion . " ORDER BY id");
         $retVal = $this->_db->loadObjectList();
         return $retVal;
     }
@@ -4516,11 +4491,11 @@ class RemcaHelper extends JHelperContent
 	//if (!function_exists('catOrderDownIcon')) {
 	
 		function catOrderDownIcon($i, $n, $index, $task = 'orderdown', $alt = 'Move Down') {
-			global $templateDir, $mosConfig_live_site;
+			global $templateDir;
 			if ($i < $n - 1) {
 				if (version_compare(JVERSION, "1.6.0", "lt")) {
 					return '<a href="#reorder" onclick="return listItemTask(\'cb' . $index . '\',\'' . $task . '\')" title="' . $alt . '">
-					<img src="' . $mosConfig_live_site . '/administrator/images/downarrow-1.png" width="12" height="12" border="0" alt="' . $alt . '" />
+					<img src="' . JPATH_BASE . '/administrator/images/downarrow-1.png" width="12" height="12" border="0" alt="' . $alt . '" />
 					</a>';
 				} else {
 					return '<a href="#reorder" onclick="return listItemTask(\'cb' . $index . '\',\'' . $task . '\')" title="' . $alt . '">
@@ -4535,7 +4510,7 @@ class RemcaHelper extends JHelperContent
 	//if (!function_exists('catOrderUpIcon')) {
 	
 		function catOrderUpIcon($i, $index, $task = 'orderup', $alt = 'Move Up') {
-			global $templateDir, $mosConfig_live_site;
+			global $templateDir;
 			if ($i > 0) {
 				if (version_compare(JVERSION, "1.6.0", "lt")) {
 					return '<a href="#reorder" onclick="return listItemTask(\'cb' . $index . '\',\'' . $task . '\')" title="' . $alt . '">

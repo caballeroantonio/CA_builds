@@ -56,12 +56,12 @@ class RemcaModelOrder extends JModelItem
 			$config['order_filter_fields'] = array(
 				'id', 'a.id',
 				'name', 'a.name',
-				'fk_user_id','a.fk_user_id',
+				'id_user','a.id_user',
 				'fk_houses_htitle','a.fk_houses_htitle',
 				'email','a.email',
 				'status','a.status',
 				'order_date','a.order_date',
-				'fk_house_id','a.fk_house_id',
+				'id_house','a.id_house',
 				'txn_type','a.txn_type',
 				'txn_id','a.txn_id',
 				'payer_id','a.payer_id',
@@ -166,12 +166,12 @@ class RemcaModelOrder extends JModelItem
 				//  Do not show unless today's date is within the publish up and down dates (or they are empty)
 				
 					
-				// Filter by and return name for fk_user_id level.
+				// Filter by and return name for id_user level.
 				$query->select($db->quoteName('u.name').' AS u_user_name');
-				$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.fk_user_id'));	
-				// Filter by and return name for fk_house_id level.
+				$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.id_user'));	
+				// Filter by and return name for id_house level.
 				$query->select($db->quoteName('h.name').' AS h_house_name');
-				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_house_id'));	
+				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
 																				
 				$db->setQuery($query);
 

@@ -186,16 +186,16 @@ class RemcaModelOrders extends JModelList
 
 
 		
-		// Filter by and return name for fk_user_id level.
+		// Filter by and return name for id_user level.
 		$query->select($db->quoteName('u.name').' AS u_user_name');
 		$query->select($db->quoteName('u.id').' AS u_user_id');
 
-		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.fk_user_id'));	
-		// Filter by and return name for fk_house_id level.
+		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.id_user'));	
+		// Filter by and return name for id_house level.
 		$query->select($db->quoteName('h.name').' AS h_house_name');
 		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
 
-		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_house_id'));	
+		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
 					
 
 		// Filter by a single or group of orders.
@@ -388,7 +388,7 @@ class RemcaModelOrders extends JModelList
 	
         /*
          * Function that allows download database information
-         * @ToDo implementar generación de código
+         * @ToDo implementar generaciÃ³n de cÃ³digo
          */
         public function getListQuery4Export(){
             $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));

@@ -483,10 +483,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="show_house_id_lmunicipality"
+                name="show_house_id_country"
                 type="radio"
-                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_LABEL"
-                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_DESC"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -505,10 +505,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_house_id_country"
+                name="show_house_id_lmunicipality"
                 type="radio"
-                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_LABEL"
-                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_DESC"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -527,10 +527,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_house_fk_rentid"
+                name="show_house_id_rent"
                 type="radio"
-                label="COM_REMCA_HOUSES_SHOW_FIELD_FK_RENTID_LABEL"
-                description="COM_REMCA_HOUSES_SHOW_FIELD_FK_RENTID_DESC"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>

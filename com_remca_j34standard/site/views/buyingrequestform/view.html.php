@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Buying_request View class for the RealEstateManagerCA component
+ * HTML Buying Requests View class for the RealEstateManagerCA component
  *
  */
 class RemcaViewBuyingRequestForm extends JViewLegacy
@@ -103,20 +103,20 @@ class RemcaViewBuyingRequestForm extends JViewLegacy
 		}
 		else
 		{
-			$this->params->def('page_heading', JText::_('COM_REMCA_BUYING_REQUEST_EDIT_ITEM'));
+			$this->params->def('page_heading', JText::_('COM_REMCA_BUYING_REQUESTS_EDIT_ITEM'));
 		}
 
 		if (!is_null($this->item->id))
 		{
-			$title = $this->params->def('page_title', JText::_('COM_REMCA_BUYING_REQUEST_EDIT_ITEM'));
+			$title = $this->params->def('page_title', JText::_('COM_REMCA_BUYING_REQUESTS_EDIT_ITEM'));
 			
-			$pathway->addItem(JText::sprintf('COM_REMCA_EDIT_ITEM', JText::sprintf('COM_REMCA_BUYING_REQUEST_ID_TITLE', $this->item->id)),''); 
+			$pathway->addItem(JText::sprintf('COM_REMCA_EDIT_ITEM', JText::sprintf('COM_REMCA_BUYING_REQUESTS_ID_TITLE', $this->item->id)),''); 
 		}
 		else
 		{
-			$title = $this->params->def('page_title', JText::_('COM_REMCA_BUYING_REQUEST_CREATE_ITEM'));
+			$title = $this->params->def('page_title', JText::_('COM_REMCA_BUYING_REQUESTS_CREATE_ITEM'));
 			
-			$pathway->addItem(JText::_('COM_REMCA_BUYING_REQUEST_CREATE_ITEM'),'');
+			$pathway->addItem(JText::_('COM_REMCA_BUYING_REQUESTS_CREATE_ITEM'),'');
 		}
 
 		

@@ -55,7 +55,7 @@ class RemcaModelPhoto extends JModelItem
 		{
 			$config['photo_filter_fields'] = array(
 				'id', 'a.id',
-				'fk_houseid','a.fk_houseid',
+				'id_house','a.id_house',
 				'thumbnail_img','a.thumbnail_img',
 				'ordering', 'a.ordering',
 				);
@@ -154,9 +154,9 @@ class RemcaModelPhoto extends JModelItem
 				//  Do not show unless today's date is within the publish up and down dates (or they are empty)
 				
 					
-				// Filter by and return name for fk_houseid level.
+				// Filter by and return name for id_house level.
 				$query->select($db->quoteName('h.name').' AS h_house_name');
-				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_houseid'));	
+				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
 																				
 				$db->setQuery($query);
 

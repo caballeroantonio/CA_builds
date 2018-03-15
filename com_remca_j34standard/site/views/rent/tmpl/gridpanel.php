@@ -34,21 +34,21 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'fk_houseid',
-        'FIELD_CODE_NAME' => 'fk_houseid',
+        'FIELD_NAME' => 'House',
+        'FIELD_CODE_NAME' => 'id_house',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FK_HOUSEID
+                FIELD_CODE_NAME_UPPER=ID_HOUSE
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_houseid
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
 
-                FIELD_NAME_LATEX=fk\_houseid
-                FIELD_CODE_NAME_LATEX=fk\_houseid
+                FIELD_NAME_LATEX=House
+                FIELD_CODE_NAME_LATEX=id\_house
                 FIELD_DBCOMMENT_LATEX=
 
                     {FIELD_LINK}
@@ -56,24 +56,24 @@ function getFields(){
                     FIELD_FOREIGN_OBJECT_UPPER=HOUSE
 
     */
-    $fields['fk_houseid'] = $field;
+    $fields['id_house'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'fk_userid',
-        'FIELD_CODE_NAME' => 'fk_userid',
+        'FIELD_NAME' => 'User',
+        'FIELD_CODE_NAME' => 'id_user',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FK_USERID
+                FIELD_CODE_NAME_UPPER=ID_USER
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_userid
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' User
 
-                FIELD_NAME_LATEX=fk\_userid
-                FIELD_CODE_NAME_LATEX=fk\_userid
+                FIELD_NAME_LATEX=User
+                FIELD_CODE_NAME_LATEX=id\_user
                 FIELD_DBCOMMENT_LATEX=
 
                     {FIELD_LINK}
@@ -81,7 +81,7 @@ function getFields(){
                     FIELD_FOREIGN_OBJECT_UPPER=USER
 
     */
-    $fields['fk_userid'] = $field;
+    $fields['id_user'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'rent_from',

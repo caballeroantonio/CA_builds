@@ -58,9 +58,9 @@ DELETE FROM `#__menu` WHERE `title`='COM_REMCA_RENT_REQUEST' AND `type`='compone
 DROP TABLE IF EXISTS `#__rem_rent_sal`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.rentsal';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_RENT_SAL' AND `type`='component';
-DROP TABLE IF EXISTS `#__rem_review`;
+DROP TABLE IF EXISTS `#__rem_reviews`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.review';
-DELETE FROM `#__menu` WHERE `title`='COM_REMCA_REVIEW' AND `type`='component';
+DELETE FROM `#__menu` WHERE `title`='COM_REMCA_REVIEWS' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_track_source`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.tracksource';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_TRACK_SOURCE' AND `type`='component';
@@ -70,9 +70,9 @@ DELETE FROM `#__menu` WHERE `title`='COM_REMCA_USERS_WISHLIST' AND `type`='compo
 DROP TABLE IF EXISTS `#__rem_video_source`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.videosource';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_VIDEO_SOURCE' AND `type`='component';
-DROP TABLE IF EXISTS `#__rem_buying_request`;
+DROP TABLE IF EXISTS `#__rem_buying_requests`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.buyingrequest';
-DELETE FROM `#__menu` WHERE `title`='COM_REMCA_BUYING_REQUEST' AND `type`='component';
+DELETE FROM `#__menu` WHERE `title`='COM_REMCA_BUYING_REQUESTS' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_categories`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.category';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_CATEGORIES' AND `type`='component';

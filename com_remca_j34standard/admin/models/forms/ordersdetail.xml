@@ -64,18 +64,18 @@
         label="COM_REMCA_ORDERS_DETAILS_FIELDSET_ORDERS_DETAILS_FS_LABEL"
         description="COM_REMCA_ORDERS_DETAILS_FIELDSET_ORDERS_DETAILS_FS_DESC"
     >
-        <field name="fk_order_id"
+        <field name="id_order"
             type="modal_orders"
-            label="COM_REMCA_ORDERS_DETAILS_FIELD_FK_ORDER_ID_LABEL"
-            description="COM_REMCA_ORDERS_DETAILS_FIELD_FK_ORDER_ID_DESC"
+            label="COM_REMCA_ORDERS_DETAILS_FIELD_ID_ORDER_LABEL"
+            description="COM_REMCA_ORDERS_DETAILS_FIELD_ID_ORDER_DESC"
             class="modal"
 			default="'0'"
         >
         </field>  
-        <field name="fk_user_id"
+        <field name="id_user"
             type="modal_jusers"
-            label="COM_REMCA_ORDERS_DETAILS_FIELD_FK_USER_ID_LABEL"
-            description="COM_REMCA_ORDERS_DETAILS_FIELD_FK_USER_ID_DESC"
+            label="COM_REMCA_ORDERS_DETAILS_FIELD_ID_USER_LABEL"
+            description="COM_REMCA_ORDERS_DETAILS_FIELD_ID_USER_DESC"
             class="modal"
 			default="0"
         >
@@ -119,10 +119,10 @@
 			validate="date"
         >
         </field>  
-        <field name="fk_house_id"
+        <field name="id_house"
             type="modal_houses"
-            label="COM_REMCA_ORDERS_DETAILS_FIELD_FK_HOUSE_ID_LABEL"
-            description="COM_REMCA_ORDERS_DETAILS_FIELD_FK_HOUSE_ID_DESC"
+            label="COM_REMCA_ORDERS_DETAILS_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_ORDERS_DETAILS_FIELD_ID_HOUSE_DESC"
             class="modal"
 			default="'0'"
         >

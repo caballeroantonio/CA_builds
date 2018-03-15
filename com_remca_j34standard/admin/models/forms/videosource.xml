@@ -57,10 +57,10 @@
         label="COM_REMCA_VIDEO_SOURCE_FIELDSET_VIDEO_SOURCE_FS_LABEL"
         description="COM_REMCA_VIDEO_SOURCE_FIELDSET_VIDEO_SOURCE_FS_DESC"
     >
-        <field name="fk_house_id"
+        <field name="id_house"
             type="modal_houses"
-            label="COM_REMCA_VIDEO_SOURCE_FIELD_FK_HOUSE_ID_LABEL"
-            description="COM_REMCA_VIDEO_SOURCE_FIELD_FK_HOUSE_ID_DESC"
+            label="COM_REMCA_VIDEO_SOURCE_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_VIDEO_SOURCE_FIELD_ID_HOUSE_DESC"
             class="modal"
 			default="'0'"
         >

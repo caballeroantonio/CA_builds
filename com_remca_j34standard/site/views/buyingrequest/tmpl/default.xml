@@ -26,272 +26,41 @@
 
 <metadata>
 	<layout
-	    title="COM_REMCA_BUYING_REQUEST_VIEW_LIST_TITLE"
-	    option="COM_REMCA_BUYING_REQUEST_VIEW_LIST_OPTION"
+	    title="COM_REMCA_BUYING_REQUESTS_VIEW_ITEM_DEFAULT_TITLE"
+	    option="COM_REMCA_BUYING_REQUESTS_VIEW_ITEM_DEFAULT_OPTION"
 	>
         <message>
-			<![CDATA[COM_REMCA_BUYING_REQUEST_VIEW_LIST_DESC]]>
+			<![CDATA[COM_REMCA_BUYING_REQUESTS_VIEW_ITEM_DEFAULT_DESC]]>
 		</message>
 	</layout>
+	<!-- Add fields to the request variables for the layout. -->
+	<fields
+	    name="request"
+	>
+		<fieldset
+		    name="request"
+			addfieldpath="/administrator/components/com_remca/models/fields"
+		>
+			<field
+			    name="id"
+			    type="modal_buying_requests"
+				label="COM_REMCA_BUYING_REQUESTS_SELECT_ITEM_LABEL"
+				description="COM_REMCA_BUYING_REQUESTS_SELECT_ITEM_DESC"
+				required="true"
+				edit="true"
+				clear="false"				
+			/>
+		</fieldset>
+	</fields>
     <!-- Add fields to the parameters object for the layout. -->
     <fields
-        name="params"
-    >
+	    name="params"
+	>
+        <!-- Basic options. -->
         <fieldset
-            name="buying_request_filter_settings"
-            label="COM_REMCA_BUYING_REQUEST_FIELDSET_FILTERS"
+            name="buyingrequest_basic_settings"
+            label="COM_REMCA_BUYING_REQUESTS_FIELDSET_LAYOUT"
         >
-        </fieldset>
-        <fieldset
-            name="buying_request_list_settings"
-            label="COM_REMCA_BUYING_REQUEST_LIST_LAYOUT_OPTIONS"
-        >
-            <field
-                name="buyingrequest_initial_sort"
-                type="list"
-				label="COM_REMCA_BUYING_REQUEST_ORDER_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_ORDER_DESC"
-			    class="chzn-color"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-            </field>
-            <field
-                name="buyingrequest_initial_direction"
-                type="radio"
-                label="COM_REMCA_ORDER_DIRECTION_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_ORDER_DIRECTION_DESC"
-				class="btn-group"
-                default="ASC"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
-                <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
-            </field>
-            <field
-                name="show_buyingrequest_filter_field"
-                type="list"
-				label="JGLOBAL_FILTER_FIELD_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_FILTER_FIELD_DESC"
-			    class="chzn-color"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="hide">JHIDE</option>
-            </field>
-            <field
-                name="show_buyingrequest_headings"
-                type="radio"
-                label="JGLOBAL_SHOW_HEADINGS_LABEL"
-				description="JGLOBAL_SHOW_HEADINGS_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="show_buyingrequest_pagination"
-                type="radio"
-			    label="JGLOBAL_PAGINATION_LABEL"
-			    description="JGLOBAL_PAGINATION_DESC"
-				class="btn-group"
-		    >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-                <option value="2">JGLOBAL_AUTO</option>
-            </field>
-            <field
-                name="show_buyingrequest_pagination_results"
-			    type="radio"
-			    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
-			    description="JGLOBAL_PAGINATION_RESULTS_DESC"
-				class="btn-group"
-		    >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="show_buyingrequest_pagination_limit"
-                type="radio"
-                label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_SHOW_PAGINATION_LIMIT_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="buyingrequest_num_per_page"
-                type="list"
-                label="COM_REMCA_BUYING_REQUEST_NUM_PER_PAGE_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_NUM_PER_PAGE_DESC"
-			    class="chzn-color"
-            >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="5">J5</option>
-                <option value="10">J10</option>
-                <option value="15">J15</option>
-                <option value="20">J20</option>
-                <option value="25">J25</option>
-                <option value="30">J30</option>
-                <option value="50">J50</option>
-                <option value="100">J100</option>
-                <option value="0">JALL</option>
-            </field>
-            <field
-		        name="show_no_buying_request"
-		        type="radio"
-		        label="COM_REMCA_BUYING_REQUEST_NO_ITEMS_LABEL"
-		        description="COM_REMCA_BUYING_REQUEST_NO_ITEMS_DESC"
-				class="btn-group"
-	        >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>            
-            <field
-		        name="show_buyingrequest_add_link"
-		        type="radio"
-		        label="COM_REMCA_SHOW_ADD_LINK_LABEL"
-		        description="COM_REMCA_BUYING_REQUEST_SHOW_ADD_LINK_DESC"
-				class="btn-group"
-	        >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-        </fieldset>
-        <fieldset
-            name="buyingrequest_list_field_settings"
-            label="COM_REMCA_BUYING_REQUEST_LIST_FIELD_OPTIONS"
-        >            
-            <field
-		        name="list_show_buyingrequest_date"
-		        type="list"
-		        label="COM_REMCA_SHOW_DATE_LABEL"
-		        description="COM_REMCA_BUYING_REQUEST_SHOW_DATE_DESC"
-			    class="chzn-color"
-	        >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="buyingrequest_date_format"
-                type="text"
-				label="JGLOBAL_DATE_FORMAT_LABEL"
-				description="JGLOBAL_DATE_FORMAT_DESC"
-				size="15"
-			/>
-            <field
-                name="list_show_buyingrequest_fk_houseid"
-                type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_FK_HOUSEID_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_FK_HOUSEID_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="list_show_buyingrequest_fk_userid"
-                type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_FK_USERID_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_FK_USERID_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="list_show_buyingrequest_buying_request"
-                type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_BUYING_REQUEST_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_BUYING_REQUEST_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="list_show_buyingrequest_customer_name"
-                type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_NAME_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_NAME_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="list_show_buyingrequest_customer_email"
-                type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_EMAIL_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_EMAIL_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="list_show_buyingrequest_customer_phone"
-                type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_PHONE_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_PHONE_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="list_show_buyingrequest_customer_comment"
-                type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_COMMENT_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_CUSTOMER_COMMENT_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="list_show_buyingrequest_status"
-                type="radio"
-                label="COM_REMCA_BUYING_REQUEST_LIST_STATUS_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_LIST_STATUS_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-        </fieldset>
-        <fieldset
-            name="buyingrequest_layout_settings"
-            label="COM_REMCA_BUYING_REQUEST_FIELDSET_LAYOUT"
-        >
-            <field
-                name="buyingrequest_layout"
-                type="componentlayout"
-                label="JGLOBAL_FIELD_LAYOUT_LABEL"
-				description="COM_REMCA_BUYING_REQUEST_CHOOSE_LAYOUT_DESC"
-                menuitems="true"
-                extension="com_remca"
-                view="buyingrequest"
-                default="_:default"
-		    />
-            <field
-                name="spacer1"
-                type="spacer"
-                hr="true"
-			/>
             <field
                 name="show_buyingrequest_icons"
                 type="radio"
@@ -319,7 +88,7 @@
                 name="show_buyingrequest_email_icon"
                 type="radio"
                 label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_SHOW_EMAIL_ICON_DESC"
+                description="COM_REMCA_BUYING_REQUESTS_SHOW_EMAIL_ICON_DESC"
                 class="btn-group"            
 		    >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -329,8 +98,8 @@
             <field
 		        name="buyingrequest_info_block_position"
 		        type="radio"
-		        label="COM_REMCA_BUYING_REQUEST_INFOBLOCK_POSITION_LABEL"
-		        description="COM_REMCA_BUYING_REQUEST_INFOBLOCK_POSITION_DESC"
+		        label="COM_REMCA_BUYING_REQUESTS_INFOBLOCK_POSITION_LABEL"
+		        description="COM_REMCA_BUYING_REQUESTS_INFOBLOCK_POSITION_DESC"
                 class="btn-group"            
 	        >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -341,7 +110,7 @@
                 name="keep_buyingrequest_itemid"
                 type="radio"
                 label="COM_REMCA_KEEP_ITEMID_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_KEEP_ITEMID_DESC"
+                description="COM_REMCA_BUYING_REQUESTS_KEEP_ITEMID_DESC"
                 class="btn-group"            
 		    >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -352,7 +121,7 @@
                 name="show_buyingrequest_navigation"
                 type="radio"
                 label="COM_REMCA_SHOW_NAVIGATION_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_SHOW_NAVIGATION_DESC"
+                description="COM_REMCA_BUYING_REQUESTS_SHOW_NAVIGATION_DESC"
                 class="btn-group"            
             >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -368,7 +137,7 @@
                 name="show_buyingrequest_readmore"
                 type="radio"
                 label="COM_REMCA_SHOW_READMORE_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_SHOW_READMORE_DESC"
+                description="COM_REMCA_BUYING_REQUESTS_SHOW_READMORE_DESC"
                 class="btn-group"            
 		    >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -379,13 +148,13 @@
                 name="buyingrequest_readmore_limit"
                 type="text"
                 label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_SHOW_READMORE_LIMIT_DESC"
+                description="COM_REMCA_BUYING_REQUESTS_SHOW_READMORE_LIMIT_DESC"
                 default="100"
 	        />
         </fieldset>
         <fieldset
             name="buyingrequest_field_settings"
-	        label="COM_REMCA_BUYING_REQUEST_FIELDSET_FIELDS"
+	        label="COM_REMCA_BUYING_REQUESTS_FIELDSET_FIELDS"
 	    >
             <field
                 name="spacer3"
@@ -396,7 +165,7 @@
                 name="show_buyingrequest_admin"
                 type="radio"
                 label="COM_REMCA_SHOW_ADMIN_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_SHOW_ADMIN_DESC"
+                description="COM_REMCA_BUYING_REQUESTS_SHOW_ADMIN_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -404,10 +173,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="show_buyingrequest_fk_houseid"
+                name="show_buyingrequest_id_house"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_FK_HOUSEID_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_FK_HOUSEID_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_ID_HOUSE_LABEL"
+                description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_ID_HOUSE_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -415,10 +184,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_buyingrequest_fk_userid"
+                name="show_buyingrequest_id_user"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_FK_USERID_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_FK_USERID_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_ID_USER_LABEL"
+                description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_ID_USER_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -428,8 +197,8 @@
             <field
                 name="show_buyingrequest_buying_request"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_BUYING_REQUEST_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_BUYING_REQUEST_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_BUYING_REQUEST_LABEL"
+                description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_BUYING_REQUEST_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -439,8 +208,8 @@
             <field
                 name="show_buyingrequest_customer_name"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_NAME_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_NAME_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_NAME_LABEL"
+                description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_NAME_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -450,8 +219,8 @@
             <field
                 name="show_buyingrequest_customer_email"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_EMAIL_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_EMAIL_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_EMAIL_LABEL"
+                description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_EMAIL_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -461,8 +230,8 @@
             <field
                 name="show_buyingrequest_customer_phone"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_PHONE_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_PHONE_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_PHONE_LABEL"
+                description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_PHONE_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -472,8 +241,8 @@
             <field
                 name="show_buyingrequest_customer_comment"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_COMMENT_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_CUSTOMER_COMMENT_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_COMMENT_LABEL"
+                description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_COMMENT_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -483,29 +252,13 @@
             <field
                 name="show_buyingrequest_status"
                 type="radio"
-                label="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_STATUS_LABEL"
-                description="COM_REMCA_BUYING_REQUEST_SHOW_FIELD_STATUS_DESC"
+                label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_STATUS_LABEL"
+                description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_STATUS_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option	value="1">JSHOW</option>
                 <option	value="0">JHIDE</option>
-            </field>
-        </fieldset>
-        <fieldset
-	        name="integration"
-            label="JGLOBAL_INTEGRATION_LABEL"
-	    >
-            <field
-		        name="show_feed_link"
-		        type="radio"
-			    label="COM_REMCA_SHOW_FEED_LINK_LABEL"
-			    description="COM_REMCA_SHOW_FEED_LINK_DESC"
-                class="btn-group"
-			    default="1"
-		    >
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
             </field>
         </fieldset>
     </fields>

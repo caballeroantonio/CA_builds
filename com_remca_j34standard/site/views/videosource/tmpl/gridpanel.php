@@ -34,21 +34,21 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'fk_house_id',
-        'FIELD_CODE_NAME' => 'fk_house_id',
+        'FIELD_NAME' => 'House',
+        'FIELD_CODE_NAME' => 'id_house',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FK_HOUSE_ID
+                FIELD_CODE_NAME_UPPER=ID_HOUSE
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' fk_house_id
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
 
-                FIELD_NAME_LATEX=fk\_house\_id
-                FIELD_CODE_NAME_LATEX=fk\_house\_id
+                FIELD_NAME_LATEX=House
+                FIELD_CODE_NAME_LATEX=id\_house
                 FIELD_DBCOMMENT_LATEX=
 
                     {FIELD_LINK}
@@ -56,7 +56,7 @@ function getFields(){
                     FIELD_FOREIGN_OBJECT_UPPER=HOUSE
 
     */
-    $fields['fk_house_id'] = $field;
+    $fields['id_house'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'sequence_number',

@@ -124,13 +124,13 @@ $assoc	= JLanguageAssociations::isEnabled();
 						<?php echo JHtml::_('searchtools.sort',  'COM_REMCA_HEADING_NAME', 'a.name', $list_dirn, $list_order); ?>
 					</th>
 					<th width="10%" class="nowrap center hidden-phone">
-						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LMUNICIPALITY'); ?>						
+						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_COUNTRY'); ?>						
 					</th>	
 					<th width="10%" class="nowrap center hidden-phone">
 						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LSTATE'); ?>						
 					</th>	
 					<th width="10%" class="nowrap center hidden-phone">
-						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_COUNTRY'); ?>						
+						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LMUNICIPALITY'); ?>						
 					</th>	
 					<th width="10%" class="nowrap center hidden-phone">
 						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>						
@@ -233,7 +233,7 @@ $assoc	= JLanguageAssociations::isEnabled();
 					</td>
 					<td class="nowrap small center hidden-phone">
 						<?php 
-							echo JString::trim($item->m_lmunicipality_name); 
+							echo JString::trim($item->c1_country_name); 
 						?>				
 					</td>	
 					<td class="nowrap small center hidden-phone">
@@ -243,7 +243,7 @@ $assoc	= JLanguageAssociations::isEnabled();
 					</td>	
 					<td class="nowrap small center hidden-phone">
 						<?php 
-							echo JString::trim($item->c1_country_name); 
+							echo JString::trim($item->m_lmunicipality_name); 
 						?>				
 					</td>	
 					<td class="nowrap small center hidden-phone">

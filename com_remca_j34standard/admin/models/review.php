@@ -10,7 +10,7 @@
  * 
  * The following Component Architect header section must remain in any distribution of this file
  *
- * @CAversion		Id: compobjectplural.php 571 2016-01-04 15:03:02Z BrianWade $
+ * @CAversion		Id: compobject.php 571 2016-01-04 15:03:02Z BrianWade $
  * @CAauthor		Component Architect (www.componentarchitect.com)
  * @CApackage		architectcomp
  * @CAsubpackage	architectcomp.admin
@@ -29,244 +29,217 @@
 defined('_JEXEC') or die;
 
 use Joomla\Registry\Registry;
-
 /**
- * Methods supporting a list of review records.
+ * Review model.
  *
  */
-class RemcaModelReview extends JModelList
+class RemcaModelReview extends JModelAdmin
 {
 	/**
-	 * Context string for the model type.  This is used to handle uniqueness
-	 * within sessions data.
-	 *
-	 * @var		string
+	 * @var		string	The prefix to use with controller messages.
 	 */
-	protected $context = 'com_remca.review';
+	protected $text_prefix = 'COM_REMCA_REVIEWS';
 	/**
-	 * Constructor.
-	 *
-	 * @param	array	$config	An optional associative array of configuration settings.
-	 * 
+	 * @var      string	The type alias for this object (for example, 'com_remca.review')
 	 */
-	public function __construct($config = array())
-	{
-		if (empty($config['filter_fields']))
-		{
-			$config['filter_fields'] = array(
-				'id', 'a.id',
-				'state', 'a.state',
-			);
-
-			$assoc = JLanguageAssociations::isEnabled();
-			if ($assoc)
-			{
-				$config['filter_fields'][] = 'association';
-			}			
-		}
-
-
-		parent::__construct($config);
-	}
+	public $typeAlias = 'com_remca.review';	
 	/**
-	 * Returns a reference to a Table object, always creating it.
+	 * @var		string	The context for the app call.
+	 */
+	protected $context = 'com_remca.reviews';	
+	/**
+	 * @var		string	The event to trigger after before the data.
+	 */
+	protected $event_before_save = 'onReviewBeforeSave';
+	/**
+	 * @var		string	The event to trigger after saving the data.
+	 */
+	protected $event_after_save = 'onReviewAfterSave';
+
+	/**
+	 * @var    string	The event to trigger before deleting the data.
+	 */
+	protected $event_before_delete = 'onReviewBeforeDelete';	
+	/**
+	 * @var    string	The event to trigger after deleting the data.
+	 */
+	protected $event_after_delete = 'onReviewAfterDelete';	
+	/**
+	 * @var    string	The event to trigger after changing the data's state field.
+	 */
+	protected $event_change_state = 'onReviewChangeState';	
+
+	/**
+	 * Returns a reference to the a Table object, always creating it.
 	 *
 	 * @param	type	The table type to instantiate
 	 * @param	string	A prefix for the table class name. Optional.
 	 * @param	array	Configuration array for model. Optional.
-	 * 
 	 * @return	JTable	A database object
 	 */
-	public function getTable($type = 'Review', $prefix = 'RemcaTable', $config = array())
+	public function getTable($type = 'Reviews', $prefix = 'RemcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}	
-	
 	/**
-	 * Method to auto-populate the model state.
+	 * Method to get a single record.
 	 *
-	 * @param   string  $ordering   An optional ordering field.
-	 * @param   string  $direction  An optional direction (asc|desc).
+	 * @param	integer	The id of the primary key.
+	 * @param	boolean		Get recursively item children - true or false
 	 *
-	 * @return  void
-	 * Note. Calling getState in this method will result in recursion.
-	 *
+	 * @return	mixed	Object on success, false on failure.
 	 */
-	protected function populateState($ordering = null, $direction = null)
+	public function getItem($pk = null, $recursive = false)
 	{
-		
-		$app = JFactory::getApplication('administrator');
-		// Adjust the context to support modal layouts.
-		if ($layout = $app->input->getString('layout'))
+		if ($item = parent::getItem($pk))
 		{
-			$this->context .= '.'.$layout;
-		}
+			// Include any manipulation of the data on the record e.g. expand out Registry fields
+			// NB The params registry field - if used - is done automatically in the JAdminModel parent class
+			
 
-		// Load the filter state.
-		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
-		$this->setState('filter.search', $search);
-		
-		$state = $app->getUserStateFromRequest($this->context.'.filter.state', 'filter_state', '', 'string');
-		$this->setState('filter.state', $state);
-	
+			
+
+			
+			
+		}
 		
 				
-		
-		
-		// Load the parameters.
-		$params = JComponentHelper::getParams('com_remca');
-		$this->setState('params', $params);
-		
-		// List state information.
-		parent::populateState('a.id', 'DESC');
-		
-		// force a language
-		$forcedLanguage = $app->input->get('forcedLanguage');
-		if (!empty($forcedLanguage))
-		{
-			$this->setState('filter.language', $forcedLanguage);
-			$this->setState('filter.forcedLanguage', $forcedLanguage);
-		}		
-
+		return $item;
 	}
 	/**
-	 * Method to get a store id based on model configuration state.
+	 * Method to get the record form.
 	 *
-	 * This is necessary because the model is used by the component and
-	 * different modules that might need different sets of data or different
-	 * ordering requirements.
-	 *
-	 * @param	string		$id	A prefix for the store id.
-	 * 
-	 * @return	string		A store id.
+	 * @param	array	$data		Data for the form.
+	 * @param	boolean	$load_data	True if the form is to load its own data (default case), false if not.
+	 * @return	mixed	A JForm object on success, false on failure
 	 */
-	protected function getStoreId($id = '')
+	public function getForm($data = array(), $load_data = true)
 	{
-		// Compile the store id.
-		$id	.= ':'.$this->getState('filter.search');
-		$id	.= ':'.$this->getState('filter.state');
-		return parent::getStoreId($id);
-	}	
-	/**
-	 * Build an SQL query to load the list data.
-	 * 
-	 * @return	JDatabaseQuery
-	 */
-	protected function getListQuery()
-	{
-		
-		$db		= $this->getDbo();
-		$query	= $db->getQuery(true);
-		$app	= JFactory::getApplication();
-
-		// Select the required reviews from the table.
-		$query->select(
-			$this->getState(
-					'list.select',
-					'a.*'
-			)
-		);
-		$query->from($db->quoteName('#__rem_review').' AS a');
-
-		
-		
-		
-		// Filter by search in name
-		$search = $this->getState('filter.search');
-		if (!empty($search))
+		$form = $this->loadForm('com_remca.edit.review', 'review', array('control' => 'jform', 'load_data' => $load_data));
+		if (empty($form))
 		{
-			if (stripos($search, 'id:') === 0)
-			{
-				$query->where($db->quoteName('a.id').' = '.(int) JString::substr($search, 3));
-			}
+			return false;
 		}
+		$jinput = JFactory::getApplication()->input;
 
-
-		
-		// Filter by state e.g. published
-		$state = $this->getState('filter.state');
-		if (is_numeric($state))
+		// The front end calls this model and uses a_id to avoid id clashes so we need to check for that first.
+		if ($jinput->get('a_id'))
 		{
-			$query->where($db->quoteName('a.state').' = '.(int) $state);
+			$id =  $jinput->get('a_id', 0);
 		}
+		// The back end uses id so we use that the rest of the time and set it to 0 by default.
 		else
 		{
-			if ($state === '')
-			{
-				$query->where('('.$db->quoteName('a.state').' IN (0, 1))');
-			}
-		}
-			
-		
-		
-
-		// Filter by and return name for fk_houseid level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
-		$query->select($db->quoteName('h.name').' AS h_house_name');
-		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
-
-		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.fk_houseid'));	
-		// Filter by and return name for fk_userid level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
-		$query->select($db->quoteName('u.name').' AS u_user_name');
-		$query->select($db->quoteName('u.id').' AS u_user_id');
-
-		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.fk_userid'));	
-		
-				
-		// Add the list ordering clause.
-		$order_col	= '';
-		$order_dirn	= $this->getState('list.direction');
+			$id =  $jinput->get('id', 0);
+		}		
 
 		
+		return $form;
+	}
 
+	/**
+	 * Method to get the data that should be injected in the form.
+	 *
+	 * @return	mixed	The data for the form.
+	 */
+	protected function loadFormData()
+	{
+		$app = JFactory::getApplication();
+		// Check the session for previously entered form data.
+		$data = $app->getUserState('com_remca.edit.review.data', array());
 
-		
-		if ($order_col == '' AND $this->getState('list.ordering') != '')
+		if (empty($data))
 		{
-			$order_col	=  $db->quoteName($this->getState('list.ordering')).' '.$order_dirn;
-		}
-		// If order column still blank then set it to default order
-
-		if ($order_col == '')
-		{
-			$order_col =  $db->quoteName('a.id').' '.$order_dirn;
+			$data = $this->getItem();
 		}
 
-			
-		$query->order($db->escape($order_col));
-
-		return $query;
+		return $data;
 	}
 	/**
-	 * Method to get a set of records.
+	 * Prepare and sanitise the table prior to saving.
 	 *
-	 * @return	mixed	Objects on success, false on failure.
+	 * @param	JTable	$table
+	 *
+	 * @return	void
 	 */
-	public function getItems()
+	protected function prepareTable($table)
 	{
-		if ($items = parent::getItems())
-		{
-			$db = $this->getDbo();
-			$query = $db->getQuery(true);
-			// Include any manipulation of the data on the record e.g. expand out Registry fields
-			// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
-			foreach ($items as $item)
-			{
-				$query->clear();
-							
+		$db = $this->getDbo();		
+		$date = JFactory::getDate();
+		$user = JFactory::getUser();
+		
+		// Increment the review version number.
+		$table->version++;
+	}
+	/**
+	 * Method to save the form data.
+	 *
+	 * @param   array  $data  The form data.
+	 *
+	 * @return  boolean  True on success, False on error.
+	 *
+	 */
+	public function save($data)
+	{
+		// Include the realestatemanagerca plugins for the onSave events.
+		JPluginHelper::importPlugin('remca');	
+		
+		$input = JFactory::getApplication()->input;
+		$filter  = JFilterInput::getInstance();
+		
 
-							
-			}
+
+
+
+		if (parent::save($data))
+		{
+
+
+			return true;
 		}
 
-		return $items;
+		return false;
+	}	
+	/**
+	 * Method to change the published state of one or more records.
+	 *
+	 * @param   array    &$pks   A list of the primary keys to change.
+	 * @param	integer  $value  The value of the published state.
+	 *
+	 * @return  boolean  True on success.
+	 */
+	public function publish(&$pks, $value = 1)
+	{	
+		// Include the remca plugins for the change of state event.
+		JPluginHelper::importPlugin('remca');	
+		
+		return parent::publish($pks, $value);
 	}
-        
-        /*
-         * Function that allows download database information
-         * @ToDo implementar generación de código
-         */
-        public function getListQuery4Export(){
-            $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));
-            return $this->getDbo()->getQuery();
-        }
+	/**
+	 * Method to delete one or more records.
+	 *
+	 * @param   array  &$pks  An array of record primary keys.
+	 *
+	 * @return  boolean  True if successful, false if an error occurs.
+	 *
+	 */
+	public function delete(&$pks)
+	{
+		// Include the remca plugins for the delete events.
+		JPluginHelper::importPlugin('remca');	
+		
+		return parent::delete($pks);	
+	}		
+
+
+
+	/**
+	 * Custom clean the cache of com_remca and remca modules
+	 *
+	 */
+	protected function cleanCache($group = null, $client_id = 0)
+	{
+		parent::cleanCache('com_remca');
+
+	}
 }

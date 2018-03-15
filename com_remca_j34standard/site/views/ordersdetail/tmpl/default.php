@@ -127,13 +127,13 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="ordersdetailForm" id="ordersdetailForm">
 			<?php $dummy = false;
 					$display_fieldset = (
-								($params->get('show_ordersdetail_fk_order_id')) OR 
-								($params->get('show_ordersdetail_fk_user_id')) OR 
+								($params->get('show_ordersdetail_id_order')) OR 
+								($params->get('show_ordersdetail_id_user')) OR 
 								($params->get('show_ordersdetail_fk_houses_htitle')) OR 
 								($params->get('show_ordersdetail_email')) OR 
 								($params->get('show_ordersdetail_status')) OR 
 								($params->get('show_ordersdetail_order_date')) OR 
-								($params->get('show_ordersdetail_fk_house_id')) OR 
+								($params->get('show_ordersdetail_id_house')) OR 
 								($params->get('show_ordersdetail_txn_type')) OR 
 								($params->get('show_ordersdetail_txn_id')) OR 
 								($params->get('show_ordersdetail_payer_id')) OR 
@@ -151,10 +151,10 @@ $empty = $component->params->get('default_empty_field', '');
 					<legend><?php echo JText::_('COM_REMCA_ORDERS_DETAILS_FIELDSET_ORDERS_DETAILS_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
-						<?php if ($params->get('show_ordersdetail_fk_order_id')) : ?>
+						<?php if ($params->get('show_ordersdetail_id_order')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_ORDERS_DETAILS_FIELD_FK_ORDER_ID_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_ORDERS_DETAILS_FIELD_ID_ORDER_LABEL'); ?>
 							</label>
 							<span>
 								<?php
@@ -163,10 +163,10 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_ordersdetail_fk_user_id')) : ?>
+						<?php if ($params->get('show_ordersdetail_id_user')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_ORDERS_DETAILS_FIELD_FK_USER_ID_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_ORDERS_DETAILS_FIELD_ID_USER_LABEL'); ?>
 							</label>
 							<span>
 								<?php
@@ -223,10 +223,10 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_ordersdetail_fk_house_id')) : ?>
+						<?php if ($params->get('show_ordersdetail_id_house')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_ORDERS_DETAILS_FIELD_FK_HOUSE_ID_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_ORDERS_DETAILS_FIELD_ID_HOUSE_LABEL'); ?>
 							</label>
 							<span>
 								<?php

@@ -34,12 +34,12 @@ defined('_JEXEC') or die;
 	
 // Add css files for the remca component and categories if they exist
 $this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_remca.css');
-$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_review.css');
+$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_reviews.css');
 
 if ($lang->isRTL())
 {
 	$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_remca-rtl.css');
-	$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_review-rtl.css');
+	$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_reviews-rtl.css');
 }
 
 // Add Javscript functions for field display
@@ -152,8 +152,8 @@ $params = $this->state->get('params');
         <!--end all fields-->
 		<fieldset>
 <?php /*?>			<ul class="nav nav-tabs">
-				<li class="active"><a href="#basic-details" data-toggle="tab"><?php echo JText::_('COM_REMCA_REVIEW_FIELDSET_DETAILS_LABEL');?></a></li>
-				<li><a href="#fieldset-review_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_REVIEW_FIELDSET_REVIEW_FS_LABEL');?></a></li>
+				<li class="active"><a href="#basic-details" data-toggle="tab"><?php echo JText::_('COM_REMCA_REVIEWS_FIELDSET_DETAILS_LABEL');?></a></li>
+				<li><a href="#fieldset-review_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_REVIEWS_FIELDSET_REVIEW_FS_LABEL');?></a></li>
 				<li><a href="#publishing" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_PUBLISHING_LABEL');?></a></li>
 			</ul>		<?php */?>
 		

@@ -112,8 +112,8 @@ WHERE `type_alias`='com_remca.rent_sal';
 -- Unified Content Model (UCM) Content History Options (CHO) Updates to table `#__rem_configs`
 --
 UPDATE `#__content_types` SET 
-`type_title`='review',
-`table`='{"special":{"dbtable":"remca_review","key":"id","type":"review","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`type_title`='Review',
+`table`='{"special":{"dbtable":"remca_reviews","key":"id","type":"reviews","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='remcaHelperRoute::getreviewRoute',
@@ -156,8 +156,8 @@ WHERE `type_alias`='com_remca.video_source';
 -- Unified Content Model (UCM) Content History Options (CHO) Updates to table `#__rem_configs`
 --
 UPDATE `#__content_types` SET 
-`type_title`='buying_request',
-`table`='{"special":{"dbtable":"remca_buying_request","key":"id","type":"buying_request","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`type_title`='Buying requests',
+`table`='{"special":{"dbtable":"remca_buying_requests","key":"id","type":"buying_requests","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='remcaHelperRoute::getbuying_requestRoute',
@@ -255,7 +255,7 @@ WHERE `type_alias`='com_remca.lstate';
 -- Unified Content Model (UCM) Content History Options (CHO) Updates to table `#__rem_configs`
 --
 UPDATE `#__content_types` SET 
-`type_title`='country',
+`type_title`='Country',
 `table`='{"special":{"dbtable":"remca_countries","key":"id","type":"countries","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"null","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',

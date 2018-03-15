@@ -29,19 +29,18 @@
 defined('_JEXEC') or die;
 
 /**
- * Frontpage View class
+ * HTML Buying Requests View class for the RealEstateManagerCA component
  *
  */
 class RemcaViewBuyingRequest extends JViewLegacy
 {
-	protected $items;
-	protected $pagination;
-	protected $state;
 	protected $item;
-
-	protected $lead_items = array();
-	protected $intro_items = array();
-	protected $link_items = array();
+	protected $params;
+	protected $print;
+	protected $state;
+	protected $user;
+	protected $return_page;
+	protected $form;
 
 	/**
 	 * Execute and display a template script.
@@ -49,61 +48,121 @@ class RemcaViewBuyingRequest extends JViewLegacy
 	 * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
 	 *
 	 * @return  mixed  A string if successful, otherwise a Error object.
-	 */
+	 */	
 	public function display($tpl = null)
 	{
 		
-		$app = JFactory::getApplication();
-		$state		= $this->get('State');
-		$params		= $state->params;
-		$items 		= $this->get('Items');
-		$pagination	= $this->get('Pagination');
-			
-		$dispatcher	= JEventDispatcher::getInstance();		
+		$app		= JFactory::getApplication();
+		$user		= JFactory::getUser();
+		$user_id	= $user->get('id');
+		$dispatcher = JEventDispatcher::getInstance();
+
+		$this->state	= $this->get('State');
+		$this->item		= $this->get('Item');
+		$this->print	= $app->input->getBool('print');
+		$this->user		= $user;
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
 		{
 			JError::raiseWarning(500, implode("\n", $errors));
+
 			return false;
 		}
 
-		// PREPARE THE DATA
-		// Compute the buyingrequest slugs and set the trigger events.
-		foreach ($items as $i => &$item)
+		// Create a shortcut for $item.
+		$item = $this->item;
+			
+		// Add router helpers.
+		$item->slug = $item->id;
+		
+		
+		// Merge buyingrequest params. If this is single-buyingrequest view, menu params override buyingrequest params
+		// Otherwise, buyingrequest params override menu item params
+		$this->params	= $this->state->get('params');
+		$active	= $app->getMenu()->getActive();
+		$temp	= clone ($this->params);
+
+
+		// Check to see which parameters should take priority
+		if ($active)
 		{
-			// Add router helpers.
-			$item->slug = $item->id;
-			
-			//
-			// Process the remca plugins.
-			//
-			
-			JPluginHelper::importPlugin('remca');
-			$dispatcher->trigger('onBuyingRequestPrepare', array ('com_remca.buyingrequest', &$item, &$item->params,$i));
+			$current_link = $active->link;
+			// If the current view is the active item and an buyingrequest view for this buyingrequest, then the menu item params take priority
+			if (JString::strpos($current_link, 'view=buyingrequest') AND (JString::strpos($current_link, '&id='.(string) $item->id)))
+			{
+				// $item->params are the buyingrequest params, $temp are the menu item params
+				// Merge so that the menu item params take priority
+				$item->params->merge($temp);
+				// Load layout from active query (in case it is an alternative menu item)
+				if (isset($active->query['layout']))
+				{
+					$this->setLayout($active->query['layout']);
+				}
+				// Check for alternative layout of buyingrequest
+				else
+					{
+					if ($layout = $item->params->get('buyingrequest_layout'))
+					{
+						$this->setLayout($layout);
+					}
+				}
 
-			$item->event = new stdClass;
-
-
-			$results = $dispatcher->trigger('onBuyingRequestBeforeDisplay', array('com_remca.buyingrequest', &$item, &$item->params, $i));
-			$item->event->beforeDisplayBuyingRequest = JString::trim(implode("\n", $results));
-
-			$results = $dispatcher->trigger('onBuyingRequestAfterDisplay', array('com_remca.buyingrequest', &$item, &$item->params,$i));
-			$item->event->afterDisplayBuyingRequest = JString::trim(implode("\n", $results));
-
-			$dispatcher = JEventDispatcher::getInstance();
-
+				// $item->params are the article params, $temp are the menu item params
+				// Merge so that the menu item params take priority
+				$item->params->merge($temp);				
+			}
+			else
+			{
+				// Current view is not a single buyingrequest, so the buyingrequest params take priority here
+				// Merge the menu item params with the buyingrequest params so that the buyingrequest params take priority
+				$temp->merge($item->params);
+				$item->params = $temp;
+				
+			}
+		}
+		else
+		{
+			// Merge so that buyingrequest params take priority
+			$temp->merge($item->params);
+			$item->params = $temp;
+			// Check for alternative layouts (since we are not in a single-buyingrequest menu item)
+			// Single-buyingrequest menu item layout takes priority over alt layout for an buyingrequest
+			if ($layout = $item->params->get('buyingrequest_layout'))
+			{
+				$this->setLayout($layout);
+			}
 		}
 		
-		//Escape strings for HTML output
-		$this->pageclass_sfx = htmlspecialchars($params->get('pageclass_sfx'));
+		$item->readmore_link = JRoute::_(RemcaHelperRoute::getBuyingRequestRoute($item->slug,
+										$this->getLayout(), 
+										$this->params->get('keep_buyingrequest_itemid')));
+
+
+				
+		$offset = $this->state->get('list.offset');
+
+	
+
+		//
+		// Process the remca plugins.
+		//
+		JPluginHelper::importPlugin('remca');
+		$results = $dispatcher->trigger('onBuyingRequestPrepare', array ('com_remca.buyingrequest', &$item, &$this->params, $offset));
+
+		$item->event = new stdClass;
 		
-		$this->params     = &$params;
-		$this->state      = &$state;
-		$this->items      = &$items;
-		$this->pagination = &$pagination;				
+		$results = $dispatcher->trigger('onBuyingRequestBeforeDisplay', array('com_remca.buyingrequest', &$item, &$this->params, $offset));
+		$item->event->beforeDisplayBuyingRequest = JString::trim(implode("\n", $results));
+
+		$results = $dispatcher->trigger('onBuyingRequestAfterDisplay', array('com_remca.buyingrequest', &$item, &$this->params, $offset));
+		$item->event->afterDisplayBuyingRequest = JString::trim(implode("\n", $results));
+		
 
 		$this->prepareDocument();
+
+		//Escape strings for HTML output
+		$this->pageclass_sfx = htmlspecialchars($this->params->get('pageclass_sfx'));
 
 		parent::display($tpl);
 	}
@@ -113,11 +172,12 @@ class RemcaViewBuyingRequest extends JViewLegacy
 	 */
 	protected function prepareDocument()
 	{
-		$app		= JFactory::getApplication();
-		$menus		= $app->getMenu();
-		$lang		= JFactory::getLanguage();		
-		$title 		= null;
-		
+		$app	= JFactory::getApplication();
+		$menus	= $app->getMenu();
+		$lang	= JFactory::getLanguage();		
+		$pathway = $app->getPathway();
+		$title = null;
+
 		// Because the application sets a default page title,
 		// we need to get it from the menu item itself
 		$menu = $menus->getActive();
@@ -127,24 +187,35 @@ class RemcaViewBuyingRequest extends JViewLegacy
 		}
 		else
 		{
-			$this->params->def('page_heading', JText::_('COM_REMCA_BUYING_REQUEST'));
+			$this->params->def('page_heading', JText::sprintf('COM_REMCA_BUYINGREQUEST_ID_TITLE', $this->item->id));
 		}
 
 		$title = $this->params->get('page_title', '');
+
+		$id = (int) @$menu->query['id'];
+
+		// if the menu item does not concern this buyingrequest
+		if ($menu AND ($menu->query['option'] != 'com_remca' OR $menu->query['view'] != 'buyingrequest' OR $id != $this->item->id))
+		{
+			$path = array(array('title' => $this->item->id, 'link' => ''));
+			$path = array_reverse($path);
+			foreach($path as $item)
+			{
+				$pathway->addItem($item['title'], $item['link']);
+			}
+		}
+
+		// Check for empty title and add site name if param is set
 		if (empty($title))
 		{
 			$title = htmlspecialchars_decode($app->get('sitename'));
 		}
-		else
+		elseif ($app->get('sitename_pagetitles', 0))
 		{
-			if ($app->get('sitename_pagetitles', 0))
-			{
-				$title = JText::sprintf('JPAGETITLE', htmlspecialchars_decode($app->get('sitename')), $title);
-			}
+			$title = JText::sprintf('JPAGETITLE', htmlspecialchars_decode($app->get('sitename')), $title);
 		}
 		$this->document->setTitle($title);
-		// Get Menu Item meta description, Keywords and robots instruction to insert in page header
-		
+
 		if ($this->params->get('menu-meta_description'))
 		{
 			$this->document->setDescription($this->params->get('menu-meta_description'));
@@ -159,17 +230,14 @@ class RemcaViewBuyingRequest extends JViewLegacy
 		{
 			$this->document->setMetadata('robots', $this->params->get('robots'));
 		}	
-		
-		// Add feed links
-		if ($this->params->get('show_feed_link', 1))
+
+		// If there is a pagebreak heading or title, add it to the page title
+		if (!empty($this->item->page_title))
 		{
-			$link = '&format=feed&limitstart=';
-			$attribs = array('type' => 'application/rss+xml', 'title' => 'RSS 2.0');
-			$this->document->addHeadLink(JRoute::_($link . '&type=rss'), 'alternate', 'rel', $attribs);
-			$attribs = array('type' => 'application/atom+xml', 'title' => 'Atom 1.0');
-			$this->document->addHeadLink(JRoute::_($link . '&type=atom'), 'alternate', 'rel', $attribs);
+			$this->document->setTitle($this->item->page_title . ' - ' . JText::sprintf('COM_REMCA_PAGEBREAK_PAGE_NUM', $this->state->get('list.offset') + 1));
 		}
 
+		
 		// Include Helpers
 		JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');	
 	}
