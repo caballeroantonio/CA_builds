@@ -81,7 +81,7 @@
             label="COM_REMCA_LMUNICIPALITIES_FIELD_ID_LSTATE_LABEL"
             description="COM_REMCA_LMUNICIPALITIES_FIELD_ID_LSTATE_DESC"
             class="modal"
-			default="'0'"
+			default="0"
         >
         </field>  
         <field name="id_country"
@@ -89,7 +89,7 @@
             label="COM_REMCA_LMUNICIPALITIES_FIELD_ID_COUNTRY_LABEL"
             description="COM_REMCA_LMUNICIPALITIES_FIELD_ID_COUNTRY_DESC"
             class="modal"
-			default="'0'"
+			default="0"
         >
         </field>  
     </fieldset>

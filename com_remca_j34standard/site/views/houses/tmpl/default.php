@@ -120,12 +120,6 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php echo JHtml::_('select.options', $this->lmunicipalities, 'value', 'text', $this->state->get('filter.id_lmunicipality'));?>
 					</select>
 				<?php endif; ?>	
-				<?php if ($this->params->get('list_show_house_price',1)) : ?>
-					<select name="filter_price" onchange="this.form.submit()">
-					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_PRICE');?></option>
-					<?php echo JHtml::_('select.options', $this->price_values, 'value', 'text', $this->state->get('filter.price'));?>
-					</select>
-				<?php endif; ?>	
 			</div>
 		<?php endif; ?>
 
@@ -506,7 +500,7 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-id_country">
 							<?php 
 								if ($params->get('list_link_house_id_country')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getCountryRoute($item->id_country, 0, $item->language)).'">'.JString::trim($item->c1_country_name).'</a>';
+									echo JString::trim($item->c1_country_name);
 								else :
 									echo JString::trim($item->c1_country_name);
 								endif; 
@@ -517,7 +511,7 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-id_lstate">
 							<?php 
 								if ($params->get('list_link_house_id_lstate')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getLstateRoute($item->id_lstate, 0, $item->language)).'">'.JString::trim($item->s_lstate_name).'</a>';
+									echo JString::trim($item->s_lstate_name);
 								else :
 									echo JString::trim($item->s_lstate_name);
 								endif; 
@@ -528,7 +522,7 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-id_lmunicipality">
 							<?php 
 								if ($params->get('list_link_house_id_lmunicipality')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getLmunicipalityRoute($item->id_lmunicipality, 0, $item->language)).'">'.JString::trim($item->m_lmunicipality_name).'</a>';
+									echo JString::trim($item->m_lmunicipality_name);
 								else :
 									echo JString::trim($item->m_lmunicipality_name);
 								endif; 

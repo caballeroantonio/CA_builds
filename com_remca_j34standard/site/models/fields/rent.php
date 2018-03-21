@@ -59,7 +59,7 @@ class JFormFieldRent extends JFormFieldList
 		$query	= $db->getQuery(true);
 
 		$query->select($db->quoteName('id').' AS value, '.$db->quoteName('name').' AS text');
-		$query->from($db->quoteName('#__rem_rent').' AS a');
+		$query->from($db->quoteName('#__rem_rents').' AS a');
 		$query->order($db->quoteName('a.name'));
 		
 		// Get the options.

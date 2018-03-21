@@ -153,19 +153,19 @@ class RemcaHelper extends JHelperContent
 			$active
 		);
 	
-		$active = $view_name == 'rent'? true : false;
+		$active = $view_name == 'rents'? true : false;
 		JHtmlSidebar::addEntry(
-			JText::_('COM_REMCA_RENT_SUBMENU'),
-			'index.php?option=com_remca&view=rent',
-			$view_name == 'rent',
+			JText::_('COM_REMCA_RENTS_SUBMENU'),
+			'index.php?option=com_remca&view=rents',
+			$view_name == 'rents',
 			$active
 		);
 	
-		$active = $view_name == 'rent_request'? true : false;
+		$active = $view_name == 'rent_requests'? true : false;
 		JHtmlSidebar::addEntry(
-			JText::_('COM_REMCA_RENT_REQUEST_SUBMENU'),
-			'index.php?option=com_remca&view=rent_request',
-			$view_name == 'rent_request',
+			JText::_('COM_REMCA_RENT_REQUESTS_SUBMENU'),
+			'index.php?option=com_remca&view=rent_requests',
+			$view_name == 'rent_requests',
 			$active
 		);
 	

@@ -29,19 +29,18 @@
 defined('_JEXEC') or die;
 
 /**
- * Frontpage View class
+ * HTML Rent View class for the RealEstateManagerCA component
  *
  */
 class RemcaViewRent extends JViewLegacy
 {
-	protected $items;
-	protected $pagination;
-	protected $state;
 	protected $item;
-
-	protected $lead_items = array();
-	protected $intro_items = array();
-	protected $link_items = array();
+	protected $params;
+	protected $print;
+	protected $state;
+	protected $user;
+	protected $return_page;
+	protected $form;
 
 	/**
 	 * Execute and display a template script.
@@ -49,63 +48,123 @@ class RemcaViewRent extends JViewLegacy
 	 * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
 	 *
 	 * @return  mixed  A string if successful, otherwise a Error object.
-	 */
+	 */	
 	public function display($tpl = null)
 	{
 		
-		$app = JFactory::getApplication();
-		$state		= $this->get('State');
-		$params		= $state->params;
-		$items 		= $this->get('Items');
-		$pagination	= $this->get('Pagination');
-			
-		$dispatcher	= JEventDispatcher::getInstance();		
+		$app		= JFactory::getApplication();
+		$user		= JFactory::getUser();
+		$user_id	= $user->get('id');
+		$dispatcher = JEventDispatcher::getInstance();
+
+		$this->state	= $this->get('State');
+		$this->item		= $this->get('Item');
+		$this->print	= $app->input->getBool('print');
+		$this->user		= $user;
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
 		{
 			JError::raiseWarning(500, implode("\n", $errors));
+
 			return false;
 		}
 
-		// PREPARE THE DATA
-		// Compute the rent slugs and set the trigger events.
-		foreach ($items as $i => &$item)
+		// Create a shortcut for $item.
+		$item = $this->item;
+			
+		// Add router helpers.
+		$item->slug = $item->id;
+		
+		
+		// Merge rent params. If this is single-rent view, menu params override rent params
+		// Otherwise, rent params override menu item params
+		$this->params	= $this->state->get('params');
+		$active	= $app->getMenu()->getActive();
+		$temp	= clone ($this->params);
+
+
+		// Check to see which parameters should take priority
+		if ($active)
 		{
-			// Add router helpers.
-			$item->slug = $item->id;
-			
-			//
-			// Process the remca plugins.
-			//
-			
-			JPluginHelper::importPlugin('remca');
-			$dispatcher->trigger('onRentPrepare', array ('com_remca.rent', &$item, &$item->params,$i));
+			$current_link = $active->link;
+			// If the current view is the active item and an rent view for this rent, then the menu item params take priority
+			if (JString::strpos($current_link, 'view=rent') AND (JString::strpos($current_link, '&id='.(string) $item->id)))
+			{
+				// $item->params are the rent params, $temp are the menu item params
+				// Merge so that the menu item params take priority
+				$item->params->merge($temp);
+				// Load layout from active query (in case it is an alternative menu item)
+				if (isset($active->query['layout']))
+				{
+					$this->setLayout($active->query['layout']);
+				}
+				// Check for alternative layout of rent
+				else
+					{
+					if ($layout = $item->params->get('rent_layout'))
+					{
+						$this->setLayout($layout);
+					}
+				}
 
-			$item->event = new stdClass;
-
-			$results = $dispatcher->trigger('onRentAfterName', array('com_remca.rent', &$item, &$item->params, $i));
-			$item->event->afterDisplayRentName = JString::trim(implode("\n", $results));
-
-			$results = $dispatcher->trigger('onRentBeforeDisplay', array('com_remca.rent', &$item, &$item->params, $i));
-			$item->event->beforeDisplayRent = JString::trim(implode("\n", $results));
-
-			$results = $dispatcher->trigger('onRentAfterDisplay', array('com_remca.rent', &$item, &$item->params,$i));
-			$item->event->afterDisplayRent = JString::trim(implode("\n", $results));
-
-			$dispatcher = JEventDispatcher::getInstance();
-
+				// $item->params are the article params, $temp are the menu item params
+				// Merge so that the menu item params take priority
+				$item->params->merge($temp);				
+			}
+			else
+			{
+				// Current view is not a single rent, so the rent params take priority here
+				// Merge the menu item params with the rent params so that the rent params take priority
+				$temp->merge($item->params);
+				$item->params = $temp;
+				
+			}
+		}
+		else
+		{
+			// Merge so that rent params take priority
+			$temp->merge($item->params);
+			$item->params = $temp;
+			// Check for alternative layouts (since we are not in a single-rent menu item)
+			// Single-rent menu item layout takes priority over alt layout for an rent
+			if ($layout = $item->params->get('rent_layout'))
+			{
+				$this->setLayout($layout);
+			}
 		}
 		
-		//Escape strings for HTML output
-		$this->pageclass_sfx = htmlspecialchars($params->get('pageclass_sfx'));
+		$item->readmore_link = JRoute::_(RemcaHelperRoute::getRentRoute($item->slug,
+										$this->getLayout(), 
+										$this->params->get('keep_rent_itemid')));
+
+
+				
+		$offset = $this->state->get('list.offset');
+
+	
+
+		//
+		// Process the remca plugins.
+		//
+		JPluginHelper::importPlugin('remca');
+		$results = $dispatcher->trigger('onRentPrepare', array ('com_remca.rent', &$item, &$this->params, $offset));
+
+		$item->event = new stdClass;
+		$results = $dispatcher->trigger('onRentAfterName', array('com_remca.rent', &$item, &$this->params, $offset));
+		$item->event->afterDisplayRentName = JString::trim(implode("\n", $results));
 		
-		$this->params     = &$params;
-		$this->state      = &$state;
-		$this->items      = &$items;
-		$this->pagination = &$pagination;				
+		$results = $dispatcher->trigger('onRentBeforeDisplay', array('com_remca.rent', &$item, &$this->params, $offset));
+		$item->event->beforeDisplayRent = JString::trim(implode("\n", $results));
+
+		$results = $dispatcher->trigger('onRentAfterDisplay', array('com_remca.rent', &$item, &$this->params, $offset));
+		$item->event->afterDisplayRent = JString::trim(implode("\n", $results));
+		
 
 		$this->prepareDocument();
+
+		//Escape strings for HTML output
+		$this->pageclass_sfx = htmlspecialchars($this->params->get('pageclass_sfx'));
 
 		parent::display($tpl);
 	}
@@ -115,11 +174,12 @@ class RemcaViewRent extends JViewLegacy
 	 */
 	protected function prepareDocument()
 	{
-		$app		= JFactory::getApplication();
-		$menus		= $app->getMenu();
-		$lang		= JFactory::getLanguage();		
-		$title 		= null;
-		
+		$app	= JFactory::getApplication();
+		$menus	= $app->getMenu();
+		$lang	= JFactory::getLanguage();		
+		$pathway = $app->getPathway();
+		$title = null;
+
 		// Because the application sets a default page title,
 		// we need to get it from the menu item itself
 		$menu = $menus->getActive();
@@ -129,24 +189,44 @@ class RemcaViewRent extends JViewLegacy
 		}
 		else
 		{
-			$this->params->def('page_heading', JText::_('COM_REMCA_RENT'));
+			$this->params->def('page_heading', $this->item->name);
 		}
 
 		$title = $this->params->get('page_title', '');
+
+		$id = (int) @$menu->query['id'];
+
+		// if the menu item does not concern this rent
+		if ($menu AND ($menu->query['option'] != 'com_remca' OR $menu->query['view'] != 'rent' OR $id != $this->item->id))
+		{
+			// If this is not a single rent menu item, set the page title to the rent name
+			if ($this->item->name)
+			{
+				$title = $this->item->name;
+			}
+			$path = array(array('title' => $this->item->name, 'link' => ''));
+			$path = array_reverse($path);
+			foreach($path as $item)
+			{
+				$pathway->addItem($item['title'], $item['link']);
+			}
+		}
+
+		// Check for empty title and add site name if param is set
 		if (empty($title))
 		{
 			$title = htmlspecialchars_decode($app->get('sitename'));
 		}
-		else
+		elseif ($app->get('sitename_pagetitles', 0))
 		{
-			if ($app->get('sitename_pagetitles', 0))
-			{
-				$title = JText::sprintf('JPAGETITLE', htmlspecialchars_decode($app->get('sitename')), $title);
-			}
+			$title = JText::sprintf('JPAGETITLE', htmlspecialchars_decode($app->get('sitename')), $title);
+		}
+		if (empty($title))
+		{
+			$title = $this->item->name;
 		}
 		$this->document->setTitle($title);
-		// Get Menu Item meta description, Keywords and robots instruction to insert in page header
-		
+
 		if ($this->params->get('menu-meta_description'))
 		{
 			$this->document->setDescription($this->params->get('menu-meta_description'));
@@ -161,17 +241,15 @@ class RemcaViewRent extends JViewLegacy
 		{
 			$this->document->setMetadata('robots', $this->params->get('robots'));
 		}	
-		
-		// Add feed links
-		if ($this->params->get('show_feed_link', 1))
+
+		// If there is a pagebreak heading or title, add it to the page title
+		if (!empty($this->item->page_title))
 		{
-			$link = '&format=feed&limitstart=';
-			$attribs = array('type' => 'application/rss+xml', 'title' => 'RSS 2.0');
-			$this->document->addHeadLink(JRoute::_($link . '&type=rss'), 'alternate', 'rel', $attribs);
-			$attribs = array('type' => 'application/atom+xml', 'title' => 'Atom 1.0');
-			$this->document->addHeadLink(JRoute::_($link . '&type=atom'), 'alternate', 'rel', $attribs);
+			$this->item->name = $this->item->name . ' - ' . $this->item->page_title;
+			$this->document->setTitle($this->item->page_title . ' - ' . JText::sprintf('COM_REMCA_PAGEBREAK_PAGE_NUM', $this->state->get('list.offset') + 1));
 		}
 
+		
 		// Include Helpers
 		JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');	
 	}

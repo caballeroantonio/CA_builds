@@ -26,11 +26,11 @@
 
 <metadata>
 	<layout
-	    title="COM_REMCA_RENT_VIEW_FORM_TITLE"
-	    option="COM_REMCA_RENT_VIEW_FORM_OPTION"
+	    title="COM_REMCA_RENTS_VIEW_FORM_TITLE"
+	    option="COM_REMCA_RENTS_VIEW_FORM_OPTION"
 	>
         <message>
-			<![CDATA[COM_REMCA_RENT_VIEW_FORM_DESC]]>
+			<![CDATA[COM_REMCA_RENTS_VIEW_FORM_DESC]]>
 		</message>
 	</layout>
     <!-- Add fields to the request variables for the layout. -->
@@ -45,7 +45,7 @@
                 name="show_rent_name"
                 type="radio"
                 label="COM_REMCA_SHOW_NAME_LABEL"
-                description="COM_REMCA_RENT_SHOW_NAME_DESC"
+                description="COM_REMCA_RENTS_SHOW_NAME_DESC"
 			    class="btn-group"
 		    >
                 <option value="">JGLOBAL_USE_GLOBAL</option>

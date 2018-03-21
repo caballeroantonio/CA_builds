@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Rent_request View class for the RealEstateManagerCA component
+ * HTML Rent Request View class for the RealEstateManagerCA component
  *
  */
 class RemcaViewRentRequestForm extends JViewLegacy
@@ -103,20 +103,20 @@ class RemcaViewRentRequestForm extends JViewLegacy
 		}
 		else
 		{
-			$this->params->def('page_heading', JText::_('COM_REMCA_RENT_REQUEST_EDIT_ITEM'));
+			$this->params->def('page_heading', JText::_('COM_REMCA_RENT_REQUESTS_EDIT_ITEM'));
 		}
 
 		if (!is_null($this->item->id))
 		{
-			$title = $this->params->def('page_title', JText::_('COM_REMCA_RENT_REQUEST_EDIT_ITEM'));
+			$title = $this->params->def('page_title', JText::_('COM_REMCA_RENT_REQUESTS_EDIT_ITEM'));
 			
-			$pathway->addItem(JText::sprintf('COM_REMCA_EDIT_ITEM', JText::sprintf('COM_REMCA_RENT_REQUEST_ID_TITLE', $this->item->id)),''); 
+			$pathway->addItem(JText::sprintf('COM_REMCA_EDIT_ITEM', JText::sprintf('COM_REMCA_RENT_REQUESTS_ID_TITLE', $this->item->id)),''); 
 		}
 		else
 		{
-			$title = $this->params->def('page_title', JText::_('COM_REMCA_RENT_REQUEST_CREATE_ITEM'));
+			$title = $this->params->def('page_title', JText::_('COM_REMCA_RENT_REQUESTS_CREATE_ITEM'));
 			
-			$pathway->addItem(JText::_('COM_REMCA_RENT_REQUEST_CREATE_ITEM'),'');
+			$pathway->addItem(JText::_('COM_REMCA_RENT_REQUESTS_CREATE_ITEM'),'');
 		}
 
 		

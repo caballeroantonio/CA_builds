@@ -62,7 +62,8 @@
             label="COM_REMCA_CONST_LANGUAGE_FIELD_FK_CONSTID_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_FIELD_FK_CONSTID_DESC"
             class="modal"
-			default="'0'"
+			default="0"
+			type_alias="com_remca.const" 
         >
         </field>  
         <field name="fk_languagesid"
@@ -70,7 +71,8 @@
             label="COM_REMCA_CONST_LANGUAGE_FIELD_FK_LANGUAGESID_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_FIELD_FK_LANGUAGESID_DESC"
             class="modal"
-			default="'0'"
+			default="0"
+			type_alias="com_remca.language" 
         >
         </field>  
         <field name="value_const"

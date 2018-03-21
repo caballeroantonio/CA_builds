@@ -103,20 +103,20 @@ class RemcaViewRentForm extends JViewLegacy
 		}
 		else
 		{
-			$this->params->def('page_heading', JText::_('COM_REMCA_RENT_EDIT_ITEM'));
+			$this->params->def('page_heading', JText::_('COM_REMCA_RENTS_EDIT_ITEM'));
 		}
 
 		if (!is_null($this->item->id))
 		{
-			$title = $this->params->def('page_title', JText::_('COM_REMCA_RENT_EDIT_ITEM'));
+			$title = $this->params->def('page_title', JText::_('COM_REMCA_RENTS_EDIT_ITEM'));
 			
 			$pathway->addItem(JText::sprintf('COM_REMCA_EDIT_ITEM', $this->escape($this->item->name)),''); 
 		}
 		else
 		{
-			$title = $this->params->def('page_title', JText::_('COM_REMCA_RENT_CREATE_ITEM'));
+			$title = $this->params->def('page_title', JText::_('COM_REMCA_RENTS_CREATE_ITEM'));
 			
-			$pathway->addItem(JText::_('COM_REMCA_RENT_CREATE_ITEM'),'');
+			$pathway->addItem(JText::_('COM_REMCA_RENTS_CREATE_ITEM'),'');
 		}
 
 		

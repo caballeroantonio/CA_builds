@@ -10,7 +10,7 @@
  * 
  * The following Component Architect header section must remain in any distribution of this file
  *
- * @CAversion		Id: compobjectplural.php 571 2016-01-04 15:03:02Z BrianWade $
+ * @CAversion		Id: compobject.php 571 2016-01-04 15:03:02Z BrianWade $
  * @CAauthor		Component Architect (www.componentarchitect.com)
  * @CApackage		architectcomp
  * @CAsubpackage	architectcomp.admin
@@ -29,231 +29,198 @@
 defined('_JEXEC') or die;
 
 use Joomla\Registry\Registry;
-
 /**
- * Methods supporting a list of rentrequest records.
+ * RentRequest model.
  *
  */
-class RemcaModelRentRequest extends JModelList
+class RemcaModelRentRequest extends JModelAdmin
 {
 	/**
-	 * Context string for the model type.  This is used to handle uniqueness
-	 * within sessions data.
-	 *
-	 * @var		string
+	 * @var		string	The prefix to use with controller messages.
 	 */
-	protected $context = 'com_remca.rent_request';
+	protected $text_prefix = 'COM_REMCA_RENT_REQUESTS';
 	/**
-	 * Constructor.
-	 *
-	 * @param	array	$config	An optional associative array of configuration settings.
-	 * 
+	 * @var      string	The type alias for this object (for example, 'com_remca.rentrequest')
 	 */
-	public function __construct($config = array())
-	{
-		if (empty($config['filter_fields']))
-		{
-			$config['filter_fields'] = array(
-				'id', 'a.id',
-				'checked_out', 'a.checked_out',
-				'checked_out_time', 'a.checked_out_time',
-			);
-
-			$assoc = JLanguageAssociations::isEnabled();
-			if ($assoc)
-			{
-				$config['filter_fields'][] = 'association';
-			}			
-		}
-
-
-		parent::__construct($config);
-	}
+	public $typeAlias = 'com_remca.rentrequest';	
 	/**
-	 * Returns a reference to a Table object, always creating it.
+	 * @var		string	The context for the app call.
+	 */
+	protected $context = 'com_remca.rent_requests';	
+	/**
+	 * @var		string	The event to trigger after before the data.
+	 */
+	protected $event_before_save = 'onRentRequestBeforeSave';
+	/**
+	 * @var		string	The event to trigger after saving the data.
+	 */
+	protected $event_after_save = 'onRentRequestAfterSave';
+
+	/**
+	 * @var    string	The event to trigger before deleting the data.
+	 */
+	protected $event_before_delete = 'onRentRequestBeforeDelete';	
+	/**
+	 * @var    string	The event to trigger after deleting the data.
+	 */
+	protected $event_after_delete = 'onRentRequestAfterDelete';	
+
+	/**
+	 * Returns a reference to the a Table object, always creating it.
 	 *
 	 * @param	type	The table type to instantiate
 	 * @param	string	A prefix for the table class name. Optional.
 	 * @param	array	Configuration array for model. Optional.
-	 * 
 	 * @return	JTable	A database object
 	 */
-	public function getTable($type = 'RentRequest', $prefix = 'RemcaTable', $config = array())
+	public function getTable($type = 'RentRequests', $prefix = 'RemcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}	
-	
 	/**
-	 * Method to auto-populate the model state.
+	 * Method to get a single record.
 	 *
-	 * @param   string  $ordering   An optional ordering field.
-	 * @param   string  $direction  An optional direction (asc|desc).
+	 * @param	integer	The id of the primary key.
+	 * @param	boolean		Get recursively item children - true or false
 	 *
-	 * @return  void
-	 * Note. Calling getState in this method will result in recursion.
-	 *
+	 * @return	mixed	Object on success, false on failure.
 	 */
-	protected function populateState($ordering = null, $direction = null)
+	public function getItem($pk = null, $recursive = false)
 	{
-		
-		$app = JFactory::getApplication('administrator');
-		// Adjust the context to support modal layouts.
-		if ($layout = $app->input->getString('layout'))
+		if ($item = parent::getItem($pk))
 		{
-			$this->context .= '.'.$layout;
-		}
-
-		// Load the filter state.
-		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
-		$this->setState('filter.search', $search);
-		
-	
-		
-				
-		
-		
-		// Load the parameters.
-		$params = JComponentHelper::getParams('com_remca');
-		$this->setState('params', $params);
-		
-		// List state information.
-		parent::populateState('a.id', 'DESC');
-		
-		// force a language
-		$forcedLanguage = $app->input->get('forcedLanguage');
-		if (!empty($forcedLanguage))
-		{
-			$this->setState('filter.language', $forcedLanguage);
-			$this->setState('filter.forcedLanguage', $forcedLanguage);
-		}		
-
-	}
-	/**
-	 * Method to get a store id based on model configuration state.
-	 *
-	 * This is necessary because the model is used by the component and
-	 * different modules that might need different sets of data or different
-	 * ordering requirements.
-	 *
-	 * @param	string		$id	A prefix for the store id.
-	 * 
-	 * @return	string		A store id.
-	 */
-	protected function getStoreId($id = '')
-	{
-		// Compile the store id.
-		$id	.= ':'.$this->getState('filter.search');
-		return parent::getStoreId($id);
-	}	
-	/**
-	 * Build an SQL query to load the list data.
-	 * 
-	 * @return	JDatabaseQuery
-	 */
-	protected function getListQuery()
-	{
-		
-		$db		= $this->getDbo();
-		$query	= $db->getQuery(true);
-		$app	= JFactory::getApplication();
-
-		// Select the required rent_requests from the table.
-		$query->select(
-			$this->getState(
-					'list.select',
-					'a.*'
-			)
-		);
-		$query->from($db->quoteName('#__rem_rent_request').' AS a');
-
-		
-		// Join over the users for the checked out user.
-		$query->select($db->quoteName('uc.name').' AS editor');
-		$query->join('LEFT', $db->quoteName('#__users').' AS uc ON '.$db->quoteName('uc.id').' = '.$db->quoteName('a.checked_out'));
-		
-		
-		// Filter by search in name
-		$search = $this->getState('filter.search');
-		if (!empty($search))
-		{
-			if (stripos($search, 'id:') === 0)
-			{
-				$query->where($db->quoteName('a.id').' = '.(int) JString::substr($search, 3));
-			}
-		}
-
-
-		
-		
-		
-
-		// Filter by and return name for id_house level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
-		$query->select($db->quoteName('h.name').' AS h_house_name');
-		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
-
-		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
-		// Filter by and return name for id_user level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
-		$query->select($db->quoteName('u.name').' AS u_user_name');
-		$query->select($db->quoteName('u.id').' AS u_user_id');
-
-		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.id_user'));	
-		
-				
-		// Add the list ordering clause.
-		$order_col	= '';
-		$order_dirn	= $this->getState('list.direction');
-
-		
-
-
-		
-		if ($order_col == '' AND $this->getState('list.ordering') != '')
-		{
-			$order_col	=  $db->quoteName($this->getState('list.ordering')).' '.$order_dirn;
-		}
-		// If order column still blank then set it to default order
-
-		if ($order_col == '')
-		{
-			$order_col =  $db->quoteName('a.id').' '.$order_dirn;
-		}
+			// Include any manipulation of the data on the record e.g. expand out Registry fields
+			// NB The params registry field - if used - is done automatically in the JAdminModel parent class
+			
 
 			
-		$query->order($db->escape($order_col));
 
-		return $query;
+			
+			
+		}
+		
+				
+		return $item;
 	}
 	/**
-	 * Method to get a set of records.
+	 * Method to get the record form.
 	 *
-	 * @return	mixed	Objects on success, false on failure.
+	 * @param	array	$data		Data for the form.
+	 * @param	boolean	$load_data	True if the form is to load its own data (default case), false if not.
+	 * @return	mixed	A JForm object on success, false on failure
 	 */
-	public function getItems()
+	public function getForm($data = array(), $load_data = true)
 	{
-		if ($items = parent::getItems())
+		$form = $this->loadForm('com_remca.edit.rentrequest', 'rentrequest', array('control' => 'jform', 'load_data' => $load_data));
+		if (empty($form))
 		{
-			$db = $this->getDbo();
-			$query = $db->getQuery(true);
-			// Include any manipulation of the data on the record e.g. expand out Registry fields
-			// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
-			foreach ($items as $item)
-			{
-				$query->clear();
-							
+			return false;
+		}
+		$jinput = JFactory::getApplication()->input;
 
-							
-			}
+		// The front end calls this model and uses a_id to avoid id clashes so we need to check for that first.
+		if ($jinput->get('a_id'))
+		{
+			$id =  $jinput->get('a_id', 0);
+		}
+		// The back end uses id so we use that the rest of the time and set it to 0 by default.
+		else
+		{
+			$id =  $jinput->get('id', 0);
+		}		
+
+		
+		return $form;
+	}
+
+	/**
+	 * Method to get the data that should be injected in the form.
+	 *
+	 * @return	mixed	The data for the form.
+	 */
+	protected function loadFormData()
+	{
+		$app = JFactory::getApplication();
+		// Check the session for previously entered form data.
+		$data = $app->getUserState('com_remca.edit.rentrequest.data', array());
+
+		if (empty($data))
+		{
+			$data = $this->getItem();
 		}
 
-		return $items;
+		return $data;
 	}
-        
-        /*
-         * Function that allows download database information
-         * @ToDo implementar generación de código
-         */
-        public function getListQuery4Export(){
-            $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));
-            return $this->getDbo()->getQuery();
-        }
+	/**
+	 * Prepare and sanitise the table prior to saving.
+	 *
+	 * @param	JTable	$table
+	 *
+	 * @return	void
+	 */
+	protected function prepareTable($table)
+	{
+		$db = $this->getDbo();		
+		$date = JFactory::getDate();
+		$user = JFactory::getUser();
+		
+		// Increment the rent request version number.
+		$table->version++;
+	}
+	/**
+	 * Method to save the form data.
+	 *
+	 * @param   array  $data  The form data.
+	 *
+	 * @return  boolean  True on success, False on error.
+	 *
+	 */
+	public function save($data)
+	{
+		// Include the realestatemanagerca plugins for the onSave events.
+		JPluginHelper::importPlugin('remca');	
+		
+		$input = JFactory::getApplication()->input;
+		$filter  = JFilterInput::getInstance();
+		
+
+
+
+
+		if (parent::save($data))
+		{
+
+
+			return true;
+		}
+
+		return false;
+	}	
+	/**
+	 * Method to delete one or more records.
+	 *
+	 * @param   array  &$pks  An array of record primary keys.
+	 *
+	 * @return  boolean  True if successful, false if an error occurs.
+	 *
+	 */
+	public function delete(&$pks)
+	{
+		// Include the remca plugins for the delete events.
+		JPluginHelper::importPlugin('remca');	
+		
+		return parent::delete($pks);	
+	}		
+
+
+
+	/**
+	 * Custom clean the cache of com_remca and remca modules
+	 *
+	 */
+	protected function cleanCache($group = null, $client_id = 0)
+	{
+		parent::cleanCache('com_remca');
+
+	}
 }

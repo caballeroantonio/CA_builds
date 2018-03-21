@@ -49,12 +49,12 @@ DELETE FROM `#__menu` WHERE `title`='COM_REMCA_ORDERS_DETAILS' AND `type`='compo
 DROP TABLE IF EXISTS `#__rem_main_categories`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.maincategory';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_MAIN_CATEGORIES' AND `type`='component';
-DROP TABLE IF EXISTS `#__rem_rent`;
+DROP TABLE IF EXISTS `#__rem_rents`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.rent';
-DELETE FROM `#__menu` WHERE `title`='COM_REMCA_RENT' AND `type`='component';
-DROP TABLE IF EXISTS `#__rem_rent_request`;
+DELETE FROM `#__menu` WHERE `title`='COM_REMCA_RENTS' AND `type`='component';
+DROP TABLE IF EXISTS `#__rem_rent_requests`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.rentrequest';
-DELETE FROM `#__menu` WHERE `title`='COM_REMCA_RENT_REQUEST' AND `type`='component';
+DELETE FROM `#__menu` WHERE `title`='COM_REMCA_RENT_REQUESTS' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_rent_sal`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.rentsal';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_RENT_SAL' AND `type`='component';

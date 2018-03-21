@@ -301,7 +301,7 @@ abstract class RemcaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the Rent_request
+	 * @param	integer	The route of the Rent Request
 	 */
 	public static function getRentRequestRoute($id, $layout = 'default', $keep_item_id = false)
 	{

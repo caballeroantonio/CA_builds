@@ -54,11 +54,11 @@ class JHTMLRentRequestIcon
 		{
 			if ($legacy)
 			{
-				$text = JHtml::_('image', 'com_remca/new.png', JText::_('COM_REMCA_RENT_REQUEST_CREATE_ITEM'), NULL, true);
+				$text = JHtml::_('image', 'com_remca/new.png', JText::_('COM_REMCA_RENT_REQUESTS_CREATE_ITEM'), NULL, true);
 			}
 			else
 			{
-				$text = '<span class="icon-plus"></span>' . JText::_('COM_REMCA_RENT_REQUEST_CREATE_ITEM');
+				$text = '<span class="icon-plus"></span>' . JText::_('COM_REMCA_RENT_REQUESTS_CREATE_ITEM');
 			}		
 		}
 		else
@@ -78,13 +78,13 @@ class JHTMLRentRequestIcon
 		
 		$button =  JHtml::_('link', JRoute::_($url), $text, $attribs);
 
-		$output = '<span class="hasTooltip tip" title="'.JHtml::tooltipText('COM_REMCA_RENT_REQUEST_CREATE_ITEM').'">'.$button.'</span>';
+		$output = '<span class="hasTooltip tip" title="'.JHtml::tooltipText('COM_REMCA_RENT_REQUESTS_CREATE_ITEM').'">'.$button.'</span>';
 		return $output;
 	}
 	/**
 	 * Display an edit icon for the rentrequest.
 	 *
-	 * This icon will not display in a popup window, nor if the rent_request is trashed.
+	 * This icon will not display in a popup window, nor if the rent request is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$rent_request	The rentrequest in question.
@@ -111,7 +111,7 @@ class JHTMLRentRequestIcon
 
 		JHtml::_('bootstrap.tooltip');
 
-		// Show checked_out icon if the rent_request is checked out by a different user
+		// Show checked_out icon if the rent request is checked out by a different user
 		if (property_exists($rent_request, 'checked_out') AND 
 			property_exists($rent_request, 'checked_out_time') AND 
 			$rent_request->checked_out > 0 AND 
@@ -135,18 +135,18 @@ class JHTMLRentRequestIcon
 			if ($legacy)
 			{
 				$icon	=  'com_remca/edit.png';
-				$text	= JHtml::_('image','system/' .$icon, JText::_('COM_REMCA_RENT_REQUEST_EDIT_ITEM'), NULL, true);
+				$text	= JHtml::_('image','system/' .$icon, JText::_('COM_REMCA_RENT_REQUESTS_EDIT_ITEM'), NULL, true);
 			}
 			else
 			{
 				$icon	=  'edit';
-				$text = '<span class="hasTooltip icon-' . $icon . ' tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_RENT_REQUEST_EDIT_ITEM'), $overlib, 0) 
+				$text = '<span class="hasTooltip icon-' . $icon . ' tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_RENT_REQUESTS_EDIT_ITEM'), $overlib, 0) 
 				. '"></span>' . JText::_('JGLOBAL_EDIT');
 			}			
 		}
 		else
 		{
-			$text = '<span class="hasTooltip tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_RENT_REQUEST_EDIT_ITEM'), $overlib, 0) . '"></span>' . JText::_('JGLOBAL_EDIT') . '</span>';
+			$text = '<span class="hasTooltip tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_RENT_REQUESTS_EDIT_ITEM'), $overlib, 0) . '"></span>' . JText::_('JGLOBAL_EDIT') . '</span>';
 		}
 				
 		$output = JHtml::_('link', JRoute::_($url), $text, $attribs);
@@ -156,7 +156,7 @@ class JHTMLRentRequestIcon
 	/**
 	 * Display an delete icon for the rentrequest.
 	 *
-	 * This icon will not display in a popup window, nor if the rent_request is trashed.
+	 * This icon will not display in a popup window, nor if the rent request is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$rent_request	The rentrequest in question.
@@ -183,7 +183,7 @@ class JHTMLRentRequestIcon
 
 		JHtml::_('behavior.tooltip');
 
-		// Show checked_out icon if the rent_request is checked out by a different user
+		// Show checked_out icon if the rent request is checked out by a different user
 		if (property_exists($rent_request, 'checked_out') AND 
 			property_exists($rent_request, 'checked_out_time') AND 
 			$rent_request->checked_out > 0 AND 
@@ -200,7 +200,7 @@ class JHTMLRentRequestIcon
 
 		$overlib = '';
 
-		$attribs['onclick'] = "if(confirm('".JText::_('COM_REMCA_RENT_REQUEST_DELETE_ITEM_CONFIRM')."'))
+		$attribs['onclick'] = "if(confirm('".JText::_('COM_REMCA_RENT_REQUESTS_DELETE_ITEM_CONFIRM')."'))
 								this.href='".JRoute::_($url)."';
 								else this.href='#';";
 
@@ -210,16 +210,16 @@ class JHTMLRentRequestIcon
 			if ($legacy)
 			{
 				$icon	= 'com_remca/delete.png';
-				$text = JHtml::_('image', 'system/' . $icon, JText::_('COM_REMCA_RENT_REQUEST_DELETE_ITEM'), null, true);
+				$text = JHtml::_('image', 'system/' . $icon, JText::_('COM_REMCA_RENT_REQUESTS_DELETE_ITEM'), null, true);
 			}
 			else
 			{
-				$text = '<span class="hasTooltip icon-delete tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_RENT_REQUEST_DELETE_ITEM'), $overlib, 0) . '"></span>&#160;' . JText::_('JACTION_DELETE') . '&#160;';
+				$text = '<span class="hasTooltip icon-delete tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_RENT_REQUESTS_DELETE_ITEM'), $overlib, 0) . '"></span>&#160;' . JText::_('JACTION_DELETE') . '&#160;';
 			}
 		}
 		else
 		{
-			$text = '<span class="hasTooltip tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_RENT_REQUEST_DELETE_ITEM'), $overlib, 0) . '">' . JText::_('JACTION_DELETE') . '</span>';
+			$text = '<span class="hasTooltip tip" title="' . JHtml::tooltipText(JText::_('COM_REMCA_RENT_REQUESTS_DELETE_ITEM'), $overlib, 0) . '">' . JText::_('JACTION_DELETE') . '</span>';
 		}		
 		
 		$output = JHtml::_('link', JRoute::_($url), $text, $attribs);

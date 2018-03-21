@@ -62,7 +62,8 @@
             label="COM_REMCA_RENT_SAL_FIELD_ID_HOUSE_LABEL"
             description="COM_REMCA_RENT_SAL_FIELD_ID_HOUSE_DESC"
             class="modal"
-			default="'0'"
+			default="0"
+			type_alias="com_remca.house" 
         >
         </field>  
         <field name="monthW"

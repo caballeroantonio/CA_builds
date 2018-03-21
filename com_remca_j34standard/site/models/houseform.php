@@ -459,7 +459,6 @@ class RemcaModelHouseForm extends RemcaModelHouse
 		$condition[] = $db->quoteName('id_country').' = '.(int) $table->id_country;	
 		$condition[] = $db->quoteName('id_lstate').' = '.(int) $table->id_lstate;	
 		$condition[] = $db->quoteName('id_lmunicipality').' = '.(int) $table->id_lmunicipality;	
-		$condition[] = $db->quoteName('price').' = '. $db->quote($table->price);	
 		$condition[] = $db->quoteName('state').' >= 0';
 		return $condition;
 	}	

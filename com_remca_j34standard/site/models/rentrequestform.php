@@ -91,7 +91,7 @@ class RemcaModelRentRequestForm extends RemcaModelRentRequest
 	 * 
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'RentRequest', $prefix = 'RemcaTable', $config = array())
+	public function getTable($type = 'RentRequests', $prefix = 'RemcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -119,11 +119,11 @@ class RemcaModelRentRequestForm extends RemcaModelRentRequest
 	}
 
 	/**
-	 * Method to get rent_request data.
+	 * Method to get rent request data.
 	 *
-	 * @param	integer	$item_id	The id of the rent_request.
+	 * @param	integer	$item_id	The id of the rent request.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Rent_request item data object on success, false on failure.
+	 * @return	mixed	Rent Request item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

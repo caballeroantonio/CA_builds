@@ -121,8 +121,8 @@
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
-			label="COM_REMCA_RENT_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_REMCA_RENT_FIELD_SAVE_HISTORY_DESC"
+			label="COM_REMCA_RENTS_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_REMCA_RENTS_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -131,8 +131,8 @@
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
-			label="COM_REMCA_RENT_REQUEST_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_REMCA_RENT_REQUEST_FIELD_SAVE_HISTORY_DESC"
+			label="COM_REMCA_RENT_REQUESTS_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_REMCA_RENT_REQUESTS_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
@@ -4227,13 +4227,13 @@
             </field>
     </fieldset>
     <fieldset name="rent_display"
-		label="COM_REMCA_RENT_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
-		description="COM_REMCA_RENT_FIELD_CONFIG_SINGLE_ITEM_DESC"
+		label="COM_REMCA_RENTS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+		description="COM_REMCA_RENTS_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
         <field name="rent_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
-			description="COM_REMCA_RENT_CHOOSE_LAYOUT_DESC"
+			description="COM_REMCA_RENTS_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
 			view="rent"
@@ -4267,7 +4267,7 @@
         <field name="show_rent_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
-            description="COM_REMCA_RENT_SHOW_EMAIL_ICON_DESC"
+            description="COM_REMCA_RENTS_SHOW_EMAIL_ICON_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -4277,7 +4277,7 @@
         <field name="keep_rent_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
-            description="COM_REMCA_RENT_KEEP_ITEMID_DESC"
+            description="COM_REMCA_RENTS_KEEP_ITEMID_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -4287,7 +4287,7 @@
         <field name="show_rent_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
-            description="COM_REMCA_RENT_SHOW_NAVIGATION_DESC"
+            description="COM_REMCA_RENTS_SHOW_NAVIGATION_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4301,7 +4301,7 @@
         <field name="show_rent_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
-            description="COM_REMCA_RENT_SHOW_READMORE_DESC"
+            description="COM_REMCA_RENTS_SHOW_READMORE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -4311,13 +4311,13 @@
         <field name="rent_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
-            description="COM_REMCA_RENT_SHOW_READMORE_LIMIT_DESC"
+            description="COM_REMCA_RENTS_SHOW_READMORE_LIMIT_DESC"
             default="100"
 		/>
         <field name="show_rent_readmore_name"
             type="radio"
-            label="COM_REMCA_RENT_SHOW_READMORE_NAME_LABEL"
-            description="COM_REMCA_RENT_SHOW_READMORE_NAME_DESC"
+            label="COM_REMCA_RENTS_SHOW_READMORE_NAME_LABEL"
+            description="COM_REMCA_RENTS_SHOW_READMORE_NAME_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -4331,7 +4331,7 @@
         <field name="show_rent_name"
             type="radio"
             label="COM_REMCA_SHOW_NAME_LABEL"
-            description="COM_REMCA_RENT_SHOW_NAME_DESC"
+            description="COM_REMCA_RENTS_SHOW_NAME_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -4341,7 +4341,7 @@
         <field name="link_rent_names"
             type="radio"
             label="COM_REMCA_LINKED_NAMES_LABEL"
-            description="COM_REMCA_RENT_LINKED_NAMES_DESC"
+            description="COM_REMCA_RENTS_LINKED_NAMES_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -4351,7 +4351,7 @@
         <field name="show_rent_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
-            description="COM_REMCA_RENT_SHOW_ADMIN_DESC"
+            description="COM_REMCA_RENTS_SHOW_ADMIN_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -4360,8 +4360,8 @@
         </field>
         <field name="show_rent_id_house"
             type="radio"
-            label="COM_REMCA_RENT_SHOW_FIELD_ID_HOUSE_LABEL"
-            description="COM_REMCA_RENT_SHOW_FIELD_ID_HOUSE_DESC"
+            label="COM_REMCA_RENTS_SHOW_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_RENTS_SHOW_FIELD_ID_HOUSE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4370,8 +4370,8 @@
         </field>
         <field name="show_rent_id_user"
             type="radio"
-            label="COM_REMCA_RENT_SHOW_FIELD_ID_USER_LABEL"
-            description="COM_REMCA_RENT_SHOW_FIELD_ID_USER_DESC"
+            label="COM_REMCA_RENTS_SHOW_FIELD_ID_USER_LABEL"
+            description="COM_REMCA_RENTS_SHOW_FIELD_ID_USER_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4380,8 +4380,8 @@
         </field>
         <field name="show_rent_rent_from"
             type="radio"
-            label="COM_REMCA_RENT_SHOW_FIELD_RENT_FROM_LABEL"
-            description="COM_REMCA_RENT_SHOW_FIELD_RENT_FROM_DESC"
+            label="COM_REMCA_RENTS_SHOW_FIELD_RENT_FROM_LABEL"
+            description="COM_REMCA_RENTS_SHOW_FIELD_RENT_FROM_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4390,8 +4390,8 @@
         </field>
         <field name="show_rent_rent_until"
             type="radio"
-            label="COM_REMCA_RENT_SHOW_FIELD_RENT_UNTIL_LABEL"
-            description="COM_REMCA_RENT_SHOW_FIELD_RENT_UNTIL_DESC"
+            label="COM_REMCA_RENTS_SHOW_FIELD_RENT_UNTIL_LABEL"
+            description="COM_REMCA_RENTS_SHOW_FIELD_RENT_UNTIL_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4400,8 +4400,8 @@
         </field>
         <field name="show_rent_rent_return"
             type="radio"
-            label="COM_REMCA_RENT_SHOW_FIELD_RENT_RETURN_LABEL"
-            description="COM_REMCA_RENT_SHOW_FIELD_RENT_RETURN_DESC"
+            label="COM_REMCA_RENTS_SHOW_FIELD_RENT_RETURN_LABEL"
+            description="COM_REMCA_RENTS_SHOW_FIELD_RENT_RETURN_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4410,8 +4410,8 @@
         </field>
         <field name="show_rent_user_name"
             type="radio"
-            label="COM_REMCA_RENT_SHOW_FIELD_USER_NAME_LABEL"
-            description="COM_REMCA_RENT_SHOW_FIELD_USER_NAME_DESC"
+            label="COM_REMCA_RENTS_SHOW_FIELD_USER_NAME_LABEL"
+            description="COM_REMCA_RENTS_SHOW_FIELD_USER_NAME_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4420,8 +4420,8 @@
         </field>
         <field name="show_rent_user_email"
             type="radio"
-            label="COM_REMCA_RENT_SHOW_FIELD_USER_EMAIL_LABEL"
-            description="COM_REMCA_RENT_SHOW_FIELD_USER_EMAIL_DESC"
+            label="COM_REMCA_RENTS_SHOW_FIELD_USER_EMAIL_LABEL"
+            description="COM_REMCA_RENTS_SHOW_FIELD_USER_EMAIL_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4430,8 +4430,8 @@
         </field>
         <field name="show_rent_user_mailing"
             type="radio"
-            label="COM_REMCA_RENT_SHOW_FIELD_USER_MAILING_LABEL"
-            description="COM_REMCA_RENT_SHOW_FIELD_USER_MAILING_DESC"
+            label="COM_REMCA_RENTS_SHOW_FIELD_USER_MAILING_LABEL"
+            description="COM_REMCA_RENTS_SHOW_FIELD_USER_MAILING_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4439,14 +4439,14 @@
             <option	value="0">JHIDE</option>
         </field>
     </fieldset>
-    <fieldset name="rent_list_display"
-        label="COM_REMCA_RENT_FIELD_CONFIG_BLOG_LIST_LABEL"
-        description="COM_REMCA_RENT_FIELD_CONFIG_BLOG_LIST_DESC"
+    <fieldset name="rents_list_display"
+        label="COM_REMCA_RENTS_FIELD_CONFIG_BLOG_LIST_LABEL"
+        description="COM_REMCA_RENTS_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
         <field name="rent_initial_sort"
             type="list"
-            label="COM_REMCA_RENT_ORDER_LABEL"
-            description="COM_REMCA_RENT_ORDER_DESC"
+            label="COM_REMCA_RENTS_ORDER_LABEL"
+            description="COM_REMCA_RENTS_ORDER_DESC"
 			class="chzn-color"
 		>
             <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
@@ -4454,7 +4454,7 @@
         <field name="rent_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
-            description="COM_REMCA_RENT_ORDER_DIRECTION_DESC"
+            description="COM_REMCA_RENTS_ORDER_DIRECTION_DESC"
 			class="btn-group"
             default="ASC"
 		>
@@ -4464,7 +4464,7 @@
         <field name="show_rent_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
-            description="COM_REMCA_RENT_FILTER_FIELD_DESC"
+            description="COM_REMCA_RENTS_FILTER_FIELD_DESC"
             class="chzn-color"
             default="name"
    		>
@@ -4505,7 +4505,7 @@
         <field name="show_rent_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
-			description="COM_REMCA_RENT_SHOW_PAGINATION_LIMIT_DESC"
+			description="COM_REMCA_RENTS_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
 			default="1"
 		>
@@ -4514,8 +4514,8 @@
         </field>
         <field name="rent_num_per_page"
             type="list"
-            description="COM_REMCA_RENT_NUM_PER_PAGE_DESC"
-            label="COM_REMCA_RENT_NUM_PER_PAGE_LABEL"
+            description="COM_REMCA_RENTS_NUM_PER_PAGE_DESC"
+            label="COM_REMCA_RENTS_NUM_PER_PAGE_LABEL"
 			class="chzn-color"
             default="5"
         >
@@ -4529,10 +4529,10 @@
             <option value="100">J100</option>
             <option value="0">JALL</option>
         </field>
-        <field name="show_no_rent"
+        <field name="show_no_rents"
             type="radio"
-            label="COM_REMCA_RENT_NO_ITEMS_LABEL"
-            description="COM_REMCA_RENT_NO_ITEMS_DESC"
+            label="COM_REMCA_RENTS_NO_ITEMS_LABEL"
+            description="COM_REMCA_RENTS_NO_ITEMS_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 			>
@@ -4542,7 +4542,7 @@
         <field name="show_rent_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
-			description="COM_REMCA_RENT_SHOW_ADD_LINK_DESC"
+			description="COM_REMCA_RENTS_SHOW_ADD_LINK_DESC"
             class="btn-group btn-group-yesno"
 			default="1"
 		>
@@ -4552,7 +4552,7 @@
         <field name="list_show_rent_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
-			description="COM_REMCA_RENT_SHOW_DATE_DESC"
+			description="COM_REMCA_RENTS_SHOW_DATE_DESC"
 			class="btn-group"
             default="0"
 		>
@@ -4567,8 +4567,8 @@
 		/>
             <field name="list_show_rent_id_house"
                 type="radio"
-                label="COM_REMCA_RENT_LIST_ID_HOUSE_LABEL"
-				description="COM_REMCA_RENT_LIST_ID_HOUSE_DESC"
+                label="COM_REMCA_RENTS_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_RENTS_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -4577,8 +4577,8 @@
             </field>
             <field name="list_show_rent_id_user"
                 type="radio"
-                label="COM_REMCA_RENT_LIST_ID_USER_LABEL"
-				description="COM_REMCA_RENT_LIST_ID_USER_DESC"
+                label="COM_REMCA_RENTS_LIST_ID_USER_LABEL"
+				description="COM_REMCA_RENTS_LIST_ID_USER_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -4587,8 +4587,8 @@
             </field>
             <field name="list_show_rent_rent_from"
                 type="radio"
-                label="COM_REMCA_RENT_LIST_RENT_FROM_LABEL"
-				description="COM_REMCA_RENT_LIST_RENT_FROM_DESC"
+                label="COM_REMCA_RENTS_LIST_RENT_FROM_LABEL"
+				description="COM_REMCA_RENTS_LIST_RENT_FROM_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -4597,8 +4597,8 @@
             </field>
             <field name="list_show_rent_rent_until"
                 type="radio"
-                label="COM_REMCA_RENT_LIST_RENT_UNTIL_LABEL"
-				description="COM_REMCA_RENT_LIST_RENT_UNTIL_DESC"
+                label="COM_REMCA_RENTS_LIST_RENT_UNTIL_LABEL"
+				description="COM_REMCA_RENTS_LIST_RENT_UNTIL_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -4607,8 +4607,8 @@
             </field>
             <field name="list_show_rent_rent_return"
                 type="radio"
-                label="COM_REMCA_RENT_LIST_RENT_RETURN_LABEL"
-				description="COM_REMCA_RENT_LIST_RENT_RETURN_DESC"
+                label="COM_REMCA_RENTS_LIST_RENT_RETURN_LABEL"
+				description="COM_REMCA_RENTS_LIST_RENT_RETURN_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -4617,8 +4617,8 @@
             </field>
             <field name="list_show_rent_user_name"
                 type="radio"
-                label="COM_REMCA_RENT_LIST_USER_NAME_LABEL"
-				description="COM_REMCA_RENT_LIST_USER_NAME_DESC"
+                label="COM_REMCA_RENTS_LIST_USER_NAME_LABEL"
+				description="COM_REMCA_RENTS_LIST_USER_NAME_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -4627,8 +4627,8 @@
             </field>
             <field name="list_show_rent_user_email"
                 type="radio"
-                label="COM_REMCA_RENT_LIST_USER_EMAIL_LABEL"
-				description="COM_REMCA_RENT_LIST_USER_EMAIL_DESC"
+                label="COM_REMCA_RENTS_LIST_USER_EMAIL_LABEL"
+				description="COM_REMCA_RENTS_LIST_USER_EMAIL_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -4637,8 +4637,8 @@
             </field>
             <field name="list_show_rent_user_mailing"
                 type="radio"
-                label="COM_REMCA_RENT_LIST_USER_MAILING_LABEL"
-				description="COM_REMCA_RENT_LIST_USER_MAILING_DESC"
+                label="COM_REMCA_RENTS_LIST_USER_MAILING_LABEL"
+				description="COM_REMCA_RENTS_LIST_USER_MAILING_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -4647,13 +4647,13 @@
             </field>
     </fieldset>
     <fieldset name="rentrequest_display"
-		label="COM_REMCA_RENT_REQUEST_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
-		description="COM_REMCA_RENT_REQUEST_FIELD_CONFIG_SINGLE_ITEM_DESC"
+		label="COM_REMCA_RENT_REQUESTS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+		description="COM_REMCA_RENT_REQUESTS_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
         <field name="rentrequest_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
-			description="COM_REMCA_RENT_REQUEST_CHOOSE_LAYOUT_DESC"
+			description="COM_REMCA_RENT_REQUESTS_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
 			view="rentrequest"
@@ -4687,7 +4687,7 @@
         <field name="show_rentrequest_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_EMAIL_ICON_DESC"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_EMAIL_ICON_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -4697,7 +4697,7 @@
         <field name="keep_rentrequest_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
-            description="COM_REMCA_RENT_REQUEST_KEEP_ITEMID_DESC"
+            description="COM_REMCA_RENT_REQUESTS_KEEP_ITEMID_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -4707,7 +4707,7 @@
         <field name="show_rentrequest_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_NAVIGATION_DESC"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_NAVIGATION_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4721,7 +4721,7 @@
         <field name="show_rentrequest_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_READMORE_DESC"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_READMORE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -4731,7 +4731,7 @@
         <field name="rentrequest_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_READMORE_LIMIT_DESC"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_READMORE_LIMIT_DESC"
             default="100"
 		/>
         <field name="spacer2"
@@ -4741,7 +4741,7 @@
         <field name="show_rentrequest_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_ADMIN_DESC"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_ADMIN_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -4750,8 +4750,8 @@
         </field>
         <field name="show_rentrequest_id_house"
             type="radio"
-            label="COM_REMCA_RENT_REQUEST_SHOW_FIELD_ID_HOUSE_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_FIELD_ID_HOUSE_DESC"
+            label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_ID_HOUSE_LABEL"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_ID_HOUSE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4760,8 +4760,8 @@
         </field>
         <field name="show_rentrequest_id_user"
             type="radio"
-            label="COM_REMCA_RENT_REQUEST_SHOW_FIELD_ID_USER_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_FIELD_ID_USER_DESC"
+            label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_ID_USER_LABEL"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_ID_USER_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4770,8 +4770,8 @@
         </field>
         <field name="show_rentrequest_rent_from"
             type="radio"
-            label="COM_REMCA_RENT_REQUEST_SHOW_FIELD_RENT_FROM_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_FIELD_RENT_FROM_DESC"
+            label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_RENT_FROM_LABEL"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_RENT_FROM_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4780,8 +4780,8 @@
         </field>
         <field name="show_rentrequest_rent_until"
             type="radio"
-            label="COM_REMCA_RENT_REQUEST_SHOW_FIELD_RENT_UNTIL_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_FIELD_RENT_UNTIL_DESC"
+            label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_RENT_UNTIL_LABEL"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_RENT_UNTIL_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4790,8 +4790,8 @@
         </field>
         <field name="show_rentrequest_rent_request"
             type="radio"
-            label="COM_REMCA_RENT_REQUEST_SHOW_FIELD_RENT_REQUEST_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_FIELD_RENT_REQUEST_DESC"
+            label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_RENT_REQUEST_LABEL"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_RENT_REQUEST_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4800,8 +4800,8 @@
         </field>
         <field name="show_rentrequest_user_name"
             type="radio"
-            label="COM_REMCA_RENT_REQUEST_SHOW_FIELD_USER_NAME_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_FIELD_USER_NAME_DESC"
+            label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_USER_NAME_LABEL"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_USER_NAME_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4810,8 +4810,8 @@
         </field>
         <field name="show_rentrequest_user_email"
             type="radio"
-            label="COM_REMCA_RENT_REQUEST_SHOW_FIELD_USER_EMAIL_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_FIELD_USER_EMAIL_DESC"
+            label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_USER_EMAIL_LABEL"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_USER_EMAIL_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4820,8 +4820,8 @@
         </field>
         <field name="show_rentrequest_user_mailing"
             type="radio"
-            label="COM_REMCA_RENT_REQUEST_SHOW_FIELD_USER_MAILING_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_FIELD_USER_MAILING_DESC"
+            label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_USER_MAILING_LABEL"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_USER_MAILING_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4830,8 +4830,8 @@
         </field>
         <field name="show_rentrequest_status"
             type="radio"
-            label="COM_REMCA_RENT_REQUEST_SHOW_FIELD_STATUS_LABEL"
-            description="COM_REMCA_RENT_REQUEST_SHOW_FIELD_STATUS_DESC"
+            label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_STATUS_LABEL"
+            description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_STATUS_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -4839,21 +4839,21 @@
             <option	value="0">JHIDE</option>
         </field>
     </fieldset>
-    <fieldset name="rent_request_list_display"
-        label="COM_REMCA_RENT_REQUEST_FIELD_CONFIG_BLOG_LIST_LABEL"
-        description="COM_REMCA_RENT_REQUEST_FIELD_CONFIG_BLOG_LIST_DESC"
+    <fieldset name="rent_requests_list_display"
+        label="COM_REMCA_RENT_REQUESTS_FIELD_CONFIG_BLOG_LIST_LABEL"
+        description="COM_REMCA_RENT_REQUESTS_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
         <field name="rentrequest_initial_sort"
             type="list"
-            label="COM_REMCA_RENT_REQUEST_ORDER_LABEL"
-            description="COM_REMCA_RENT_REQUEST_ORDER_DESC"
+            label="COM_REMCA_RENT_REQUESTS_ORDER_LABEL"
+            description="COM_REMCA_RENT_REQUESTS_ORDER_DESC"
 			class="chzn-color"
 		>
         </field>
         <field name="rentrequest_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
-            description="COM_REMCA_RENT_REQUEST_ORDER_DIRECTION_DESC"
+            description="COM_REMCA_RENT_REQUESTS_ORDER_DIRECTION_DESC"
 			class="btn-group"
             default="ASC"
 		>
@@ -4863,7 +4863,7 @@
         <field name="show_rentrequest_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
-            description="COM_REMCA_RENT_REQUEST_FILTER_FIELD_DESC"
+            description="COM_REMCA_RENT_REQUESTS_FILTER_FIELD_DESC"
             class="chzn-color"
             default="hide"
    		>
@@ -4903,7 +4903,7 @@
         <field name="show_rentrequest_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
-			description="COM_REMCA_RENT_REQUEST_SHOW_PAGINATION_LIMIT_DESC"
+			description="COM_REMCA_RENT_REQUESTS_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
 			default="1"
 		>
@@ -4912,8 +4912,8 @@
         </field>
         <field name="rentrequest_num_per_page"
             type="list"
-            description="COM_REMCA_RENT_REQUEST_NUM_PER_PAGE_DESC"
-            label="COM_REMCA_RENT_REQUEST_NUM_PER_PAGE_LABEL"
+            description="COM_REMCA_RENT_REQUESTS_NUM_PER_PAGE_DESC"
+            label="COM_REMCA_RENT_REQUESTS_NUM_PER_PAGE_LABEL"
 			class="chzn-color"
             default="5"
         >
@@ -4927,10 +4927,10 @@
             <option value="100">J100</option>
             <option value="0">JALL</option>
         </field>
-        <field name="show_no_rent_request"
+        <field name="show_no_rent_requests"
             type="radio"
-            label="COM_REMCA_RENT_REQUEST_NO_ITEMS_LABEL"
-            description="COM_REMCA_RENT_REQUEST_NO_ITEMS_DESC"
+            label="COM_REMCA_RENT_REQUESTS_NO_ITEMS_LABEL"
+            description="COM_REMCA_RENT_REQUESTS_NO_ITEMS_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 			>
@@ -4940,7 +4940,7 @@
         <field name="show_rentrequest_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
-			description="COM_REMCA_RENT_REQUEST_SHOW_ADD_LINK_DESC"
+			description="COM_REMCA_RENT_REQUESTS_SHOW_ADD_LINK_DESC"
             class="btn-group btn-group-yesno"
 			default="1"
 		>
@@ -4950,7 +4950,7 @@
         <field name="list_show_rentrequest_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
-			description="COM_REMCA_RENT_REQUEST_SHOW_DATE_DESC"
+			description="COM_REMCA_RENT_REQUESTS_SHOW_DATE_DESC"
 			class="btn-group"
             default="0"
 		>
@@ -4965,8 +4965,8 @@
 		/>
             <field name="list_show_rentrequest_id_house"
                 type="radio"
-                label="COM_REMCA_RENT_REQUEST_LIST_ID_HOUSE_LABEL"
-				description="COM_REMCA_RENT_REQUEST_LIST_ID_HOUSE_DESC"
+                label="COM_REMCA_RENT_REQUESTS_LIST_ID_HOUSE_LABEL"
+				description="COM_REMCA_RENT_REQUESTS_LIST_ID_HOUSE_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -4975,8 +4975,8 @@
             </field>
             <field name="list_show_rentrequest_id_user"
                 type="radio"
-                label="COM_REMCA_RENT_REQUEST_LIST_ID_USER_LABEL"
-				description="COM_REMCA_RENT_REQUEST_LIST_ID_USER_DESC"
+                label="COM_REMCA_RENT_REQUESTS_LIST_ID_USER_LABEL"
+				description="COM_REMCA_RENT_REQUESTS_LIST_ID_USER_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -4985,8 +4985,8 @@
             </field>
             <field name="list_show_rentrequest_rent_from"
                 type="radio"
-                label="COM_REMCA_RENT_REQUEST_LIST_RENT_FROM_LABEL"
-				description="COM_REMCA_RENT_REQUEST_LIST_RENT_FROM_DESC"
+                label="COM_REMCA_RENT_REQUESTS_LIST_RENT_FROM_LABEL"
+				description="COM_REMCA_RENT_REQUESTS_LIST_RENT_FROM_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -4995,8 +4995,8 @@
             </field>
             <field name="list_show_rentrequest_rent_until"
                 type="radio"
-                label="COM_REMCA_RENT_REQUEST_LIST_RENT_UNTIL_LABEL"
-				description="COM_REMCA_RENT_REQUEST_LIST_RENT_UNTIL_DESC"
+                label="COM_REMCA_RENT_REQUESTS_LIST_RENT_UNTIL_LABEL"
+				description="COM_REMCA_RENT_REQUESTS_LIST_RENT_UNTIL_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5005,8 +5005,8 @@
             </field>
             <field name="list_show_rentrequest_rent_request"
                 type="radio"
-                label="COM_REMCA_RENT_REQUEST_LIST_RENT_REQUEST_LABEL"
-				description="COM_REMCA_RENT_REQUEST_LIST_RENT_REQUEST_DESC"
+                label="COM_REMCA_RENT_REQUESTS_LIST_RENT_REQUEST_LABEL"
+				description="COM_REMCA_RENT_REQUESTS_LIST_RENT_REQUEST_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5015,8 +5015,8 @@
             </field>
             <field name="list_show_rentrequest_user_name"
                 type="radio"
-                label="COM_REMCA_RENT_REQUEST_LIST_USER_NAME_LABEL"
-				description="COM_REMCA_RENT_REQUEST_LIST_USER_NAME_DESC"
+                label="COM_REMCA_RENT_REQUESTS_LIST_USER_NAME_LABEL"
+				description="COM_REMCA_RENT_REQUESTS_LIST_USER_NAME_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5025,8 +5025,8 @@
             </field>
             <field name="list_show_rentrequest_user_email"
                 type="radio"
-                label="COM_REMCA_RENT_REQUEST_LIST_USER_EMAIL_LABEL"
-				description="COM_REMCA_RENT_REQUEST_LIST_USER_EMAIL_DESC"
+                label="COM_REMCA_RENT_REQUESTS_LIST_USER_EMAIL_LABEL"
+				description="COM_REMCA_RENT_REQUESTS_LIST_USER_EMAIL_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5035,8 +5035,8 @@
             </field>
             <field name="list_show_rentrequest_user_mailing"
                 type="radio"
-                label="COM_REMCA_RENT_REQUEST_LIST_USER_MAILING_LABEL"
-				description="COM_REMCA_RENT_REQUEST_LIST_USER_MAILING_DESC"
+                label="COM_REMCA_RENT_REQUESTS_LIST_USER_MAILING_LABEL"
+				description="COM_REMCA_RENT_REQUESTS_LIST_USER_MAILING_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -5045,8 +5045,8 @@
             </field>
             <field name="list_show_rentrequest_status"
                 type="radio"
-                label="COM_REMCA_RENT_REQUEST_LIST_STATUS_LABEL"
-				description="COM_REMCA_RENT_REQUEST_LIST_STATUS_DESC"
+                label="COM_REMCA_RENT_REQUESTS_LIST_STATUS_LABEL"
+				description="COM_REMCA_RENT_REQUESTS_LIST_STATUS_DESC"
 				class="btn-group"
 				default="1"
 			>

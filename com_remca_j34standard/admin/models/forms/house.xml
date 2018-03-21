@@ -152,12 +152,27 @@
         label="COM_REMCA_HOUSES_FIELDSET_HOUSES_FS_LABEL"
         description="COM_REMCA_HOUSES_FIELDSET_HOUSES_FS_DESC"
     >
+<field name="photos" type="subform" multiple="true" max="2" layout="joomla.form.field.subform.repeatable-table" groupByFieldset="false" component_="com_remca" client_="admin"
+    formsource="administrator/components/com_remca/models/forms/photo.xml"
+    label="Subform Field" description="Subform Field Description" 
+    default="[
+    {
+        &quot;id&quot;: 1,
+        &quot;thumbnail_img&quot;: &quot;thumbnail_img&quot;
+    },{
+        &quot;id&quot;: 2,
+        &quot;thumbnail_img&quot;: &quot;thumbnail_img&quot;
+    }
+]"
+    type_alias="com_remca.photo"
+/>
+	
         <field name="id_country"
             type="modal_countries"
             label="COM_REMCA_HOUSES_FIELD_ID_COUNTRY_LABEL"
             description="COM_REMCA_HOUSES_FIELD_ID_COUNTRY_DESC"
             class="modal"
-			default="'0'"
+			default="0"
         >
         </field>  
         <field name="id_lstate"
@@ -165,7 +180,7 @@
             label="COM_REMCA_HOUSES_FIELD_ID_LSTATE_LABEL"
             description="COM_REMCA_HOUSES_FIELD_ID_LSTATE_DESC"
             class="modal"
-			default="'0'"
+			default="0"
         >
         </field>  
         <field name="id_lmunicipality"
@@ -173,7 +188,7 @@
             label="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL"
             description="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_DESC"
             class="modal"
-			default="'0'"
+			default="0"
         >
         </field>  
         <field name="sid"
@@ -186,11 +201,12 @@
         >
         </field>  
         <field name="id_rent"
-            type="modal_rent"
+            type="modal_rents"
             label="COM_REMCA_HOUSES_FIELD_ID_RENT_LABEL"
             description="COM_REMCA_HOUSES_FIELD_ID_RENT_DESC"
             class="modal"
-			default="'0'"
+			default="0"
+			type_alias="com_remca.rent" 
         >
         </field>  
         <field name="associate_house"
@@ -626,6 +642,7 @@
             description="COM_REMCA_HOUSES_FIELD_OWNER_ID_DESC"
             class="modal"
 			default="0"
+			type_alias="com_remca.user" 
         >
         </field>  
         <field name="energy_value"

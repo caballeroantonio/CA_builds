@@ -201,7 +201,7 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-id_lstate">
 							<?php 
 								if ($params->get('list_link_lmunicipality_id_lstate')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getLstateRoute($item->id_lstate, 0)).'">'.JString::trim($item->s_lstate_name).'</a>';
+									echo JString::trim($item->s_lstate_name);
 								else :
 									echo JString::trim($item->s_lstate_name);
 								endif; 
@@ -212,7 +212,7 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-id_country">
 							<?php 
 								if ($params->get('list_link_lmunicipality_id_country')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getCountryRoute($item->id_country, 0)).'">'.JString::trim($item->c1_country_name).'</a>';
+									echo JString::trim($item->c1_country_name);
 								else :
 									echo JString::trim($item->c1_country_name);
 								endif; 

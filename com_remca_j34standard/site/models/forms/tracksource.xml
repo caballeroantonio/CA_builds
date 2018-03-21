@@ -69,7 +69,8 @@
             label="COM_REMCA_TRACK_SOURCE_FIELD_ID_HOUSE_LABEL"
             description="COM_REMCA_TRACK_SOURCE_FIELD_ID_HOUSE_DESC"
             class="modal"
-			default="'0'"
+			default="0"
+			type_alias="com_remca.house" 
         >
         </field>  
         <field

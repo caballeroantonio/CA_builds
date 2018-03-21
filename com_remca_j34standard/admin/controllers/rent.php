@@ -10,7 +10,7 @@
  * 
  * The following Component Architect header section must remain in any distribution of this file
  *
- * @CAversion		Id: compobjectplural.php 571 2016-01-04 15:03:02Z BrianWade $
+ * @CAversion		Id: compobject.php 571 2016-01-04 15:03:02Z BrianWade $
  * @CAauthor		Component Architect (www.componentarchitect.com)
  * @CApackage		architectcomp
  * @CAsubpackage	architectcomp.admin
@@ -28,77 +28,56 @@
 
 defined('_JEXEC') or die;
 
-
 /**
- * Rent list controller class.
+ * Rent controller class.
  *
- * 
  */
-class RemcaControllerRent extends JControllerAdmin
+class RemcaControllerRent extends JControllerForm
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
 	 * 
 	 */
-	protected $text_prefix = 'COM_REMCA_RENT';
-
+	protected $text_prefix = 'COM_REMCA_RENTS';
 	/**
 	 * Constructor.
 	 *
 	 * @param	array An optional associative array of configuration settings.
+	 *
+	 * @return	JControllerForm
 	 * 
 	 */
 	public function __construct($config = array())
 	{
-		parent::__construct($config);
-	}
+		parent::__construct($config);	
 
-
-	/**
-	 * Method to get a model object, loading it if required.
-	 *
-	 * @param   string  $name    The model name. Optional.
-	 * @param   string  $prefix  The class prefix. Optional.
-	 * @param   array   $config  Configuration array for model. Optional.
-	 *
-	 * @return  object  The model.
-	 * 
-	 * 
-	 */
-	public function getModel($name = 'Rent', $prefix = 'RemcaModel',$config = array('ignore_request' => true))
-	{
-		$model = parent::getModel($name, $prefix, $config);
-		return $model;
+		$this->view_list = 'rents';
 	}
 	/**
-	 * Function that allows child controller access to model data
-	 * after the item has been deleted.
+	 * Function that allows child controller access to model data after the data has been saved.
 	 *
 	 * @param   JModelLegacy  $model  The data model object.
-	 * @param   integer       $ids    The array of ids for items being deleted.
+	 * @param   array         $valid_data   The validated data.
 	 *
-	 * @return  void
+	 * @return	void
 	 *
 	 */
-	protected function postDeleteHook(JModelLegacy $model, $ids = null)
+	protected function postSaveHook(JModelLegacy $model, $valid_data = array())
 	{
-	}	
-                
-        /*
-         * Function that allows download database information
-         * @ToDo implementar generación de código
+		return;
+	}
+
+        /**
+         * Redirect to History view
+         * Jform->getInput('contenthistory') no es re-utilizable en vista plural
          */
-        public function export(){
-			//from outside:
-			//$model = JModelLegacy::getInstance('Rent','RemcaModel', array('ignore_request' => FALSE));
-			
-            $model = $this->getModel('Rent','RemcaModel',array('ignore_request' => FALSE));
-			
-			//states
-//			$model->setState('list.ordering', 'a.ordering');//override
-//			$model->setState('list.direction', 'ASC');//override
-//			$model->setState('list.select', 'a.*');//override
-            $query = $model->getListQuery4Export();
-            echo($query);
+        public function showHistory(){
+            $item_id = $this->input->getInt('item_id');
+            $model = $this->getModel();
+            $typeId = JTable::getInstance('Contenttype')->getTypeId($model->typeAlias);
+            $token = JSession::getFormToken();
+            
+            $this->setRedirect('index.php?option=com_contenthistory&view=history&layout=modal&tmpl=component'
+                    . "&item_id={$item_id}&type_id={$typeId}&type_alias={$model->typeAlias}&{$token}=1");
         }
 }

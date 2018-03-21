@@ -65,5 +65,6 @@ class RemcaControllerLmunicipality extends JControllerForm
 	protected function postSaveHook(JModelLegacy $model, $valid_data = array())
 	{
 		return;
-	}	
+	}
+
 }

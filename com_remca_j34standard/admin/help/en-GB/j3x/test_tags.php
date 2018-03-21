@@ -1219,8 +1219,6 @@ architectcomp=remca
         	{FILTER_FIELD} id_lstate
 {1.3}
         	{FILTER_FIELD} id_lmunicipality
-{1.3}
-        	{FILTER_FIELD} price
 {-1.3}
     
 {1.0}
@@ -2486,11 +2484,11 @@ architectcomp=remca
     Compobject_short_name=Rent
     compobject_short_name=rent
     
-    COMPOBJECTPLURAL=RENT
-    compobjectplural=rent
-    CompObjectPlural=Rent
-    compobject_plural_name=rent
-    CompObject_plural_name=Rent
+    COMPOBJECTPLURAL=RENTS
+    compobjectplural=rents
+    CompObjectPlural=Rents
+    compobject_plural_name=rents
+    CompObject_plural_name=Rents
     compobject_short_plural_name=rents
     CompObject_short_plural_name=Rents
     
@@ -2698,26 +2696,26 @@ architectcomp=remca
     
 {1.0}
 	{COMPONENT_OBJECT}
-    Compobject_name=Rent_request
+    Compobject_name=Rent request
     Compobject_description_ini=
 	
     COMPOBJECT=RENTREQUEST
     compobject=rentrequest
     CompObject=RentRequest
     
-    compobject_name=rent_request
-    CompObject_name=Rent_request
-    CompObject_short_name=Rent_request
-    Compobject_short_name=Rent_request
-    compobject_short_name=rent_request
+    compobject_name=rent request
+    CompObject_name=Rent Request
+    CompObject_short_name=Rent Request
+    Compobject_short_name=Rent request
+    compobject_short_name=rent request
     
-    COMPOBJECTPLURAL=RENT_REQUEST
-    compobjectplural=rent_request
-    CompObjectPlural=RentRequest
-    compobject_plural_name=rent_request
-    CompObject_plural_name=Rent_request
-    compobject_short_plural_name=rent_requests
-    CompObject_short_plural_name=Rent_requests
+    COMPOBJECTPLURAL=RENT_REQUESTS
+    compobjectplural=rent_requests
+    CompObjectPlural=RentRequests
+    compobject_plural_name=rent requests
+    CompObject_plural_name=Rent Requests
+    compobject_short_plural_name=rent requests
+    CompObject_short_plural_name=Rent Requests
     
     
         {OBJECT_FIELDSET}

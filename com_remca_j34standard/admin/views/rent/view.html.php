@@ -29,14 +29,15 @@
 defined('_JEXEC') or die;
 
 /**
- * View class for a list of rent.
+ * View to edit a rent.
  *
  */
 class RemcaViewRent extends JViewLegacy
 {
-	protected $items;
-	protected $pagination;
+	protected $form;
+	protected $item;
 	protected $state;
+	protected $can_do;
 
 	/**
 	 * Execute and display a template script.
@@ -47,14 +48,11 @@ class RemcaViewRent extends JViewLegacy
 	 */
 	public function display($tpl = null)
 	{
-		
-		$this->items		= $this->get('Items');
-		$this->pagination	= $this->get('Pagination');
-		$this->state		= $this->get('State');
-		$this->filterForm    = $this->get('FilterForm');
-		$this->activeFilters = $this->get('ActiveFilters');
-		
 				
+		$this->form		= $this->get('Form');
+		$this->item		= $this->get('Item');
+		$this->state	= $this->get('State');
+
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
 		{
@@ -62,11 +60,11 @@ class RemcaViewRent extends JViewLegacy
 			return false;
 		}
 
-		if ($this->getLayout() !== 'modal')
+		if ($this->getLayout() == 'modal')
 		{
-			$this->addSidebar();
-			$this->addToolbar();
 		}
+		JToolbarHelper::help('JHELP_COMPONENTS_COM_REMCA_RENT_EDIT', true, null, 'com_remca');
+		$this->addToolbar();
 		$this->prepareDocument();		
 		parent::display($tpl);
 	}
@@ -77,38 +75,42 @@ class RemcaViewRent extends JViewLegacy
 	 */
 	protected function addToolbar()
 	{
-		$user  = JFactory::getUser();	
-		// Get the toolbar object instance
-		$bar = JToolbar::getInstance('toolbar');
-			
-		JToolbarHelper::title(JText::_('COM_REMCA_RENT_LIST_HEADER'), 'stack rent');
-
-		JToolbarHelper::addNew('rent.add','JTOOLBAR_NEW');
-		
-		JToolbarHelper::editList('rent.edit','JTOOLBAR_EDIT');
-		
-		JToolbarHelper::custom('rent.checkin', 'checkin.png', 'checkin_f2.png', 'JTOOLBAR_CHECKIN', true);
-
+		JFactory::getApplication()->input->set('hidemainmenu', true);
 	
-		JToolbarHelper::deleteList('', 'rent.delete','JTOOLBAR_DELETE');
-                        
-                JToolbarHelper::custom('rent.export', 'download','download', 'JTOOLBAR_EXPORT', FALSE);
+		$user		= JFactory::getUser();
+		$user_id		= $user->get('id');
+		$is_new		= ($this->item->id == 0);
+		$checkedOut	= !($this->item->checked_out == 0 OR $this->item->checked_out == $user_id);
 
+		JToolbarHelper::title(
+				JText::_('COM_REMCA_RENTS_' . (isset($checkedOut) && $checkedOut ? 'VIEW_HEADER' : ($is_new ? 'NEW_HEADER' : 'EDIT_HEADER'))), 
+				'rents.png'
+		);
+
+
+		JToolbarHelper::apply('rent.apply', 'JTOOLBAR_APPLY');
+		JToolbarHelper::save('rent.save', 'JTOOLBAR_SAVE');
+
+		JToolbarHelper::custom('rent.save2new', 'save-new.png', 'save-new_f2.png', 'JTOOLBAR_SAVE_AND_NEW', false);
+
+		if ($this->state->params->get('save_history', 1) AND $this->state->params->get('rent_save_history', 1)
+			AND !$is_new  
+			)
+		{
+			$item_id = $this->item->id;
+			$type_alias = 'com_remca.rent';
+			JToolbarHelper::versions($type_alias, $item_id);
+		}
 				
-		JToolbarHelper::preferences('com_remca');
-		JToolbarHelper::help('JHELP_COMPONENTS_COM_REMCA_RENT', true, null, 'com_remca');
+		if (empty($this->item->id))
+		{
+			JToolbarHelper::cancel('rent.cancel','JTOOLBAR_CANCEL');
+		}
+		else
+		{
+			JToolbarHelper::cancel('rent.cancel', 'JTOOLBAR_CLOSE');
+		}
 	}
-	/**
-	 * Add the page sidebar.
-	 *
-	 */
-	protected function addSidebar()
-	{	
-		JHtmlSidebar::setAction('index.php?option=com_remca&view=rent');
-				
-		$this->sidebar = JHtmlSidebar::render();			
-	}	
-	
 	/**
 	 * Prepares the document
 	 */

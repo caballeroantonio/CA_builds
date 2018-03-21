@@ -81,7 +81,7 @@
             label="COM_REMCA_LSTATES_FIELD_ID_COUNTRY_LABEL"
             description="COM_REMCA_LSTATES_FIELD_ID_COUNTRY_DESC"
             class="modal"
-			default="'0'"
+			default="0"
         >
         </field>  
         <field name="friendly_name"

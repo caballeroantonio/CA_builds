@@ -63,7 +63,7 @@ $input = $app->input;
 	<!-- Begin Content -->
 	<div class="form-horizontal">
 		<?php echo JHtml::_('bootstrap.startTabSet', 'rentrequest-tabs', array('active' => 'details')); ?>
-			<?php echo JHtml::_('bootstrap.addTab', 'rentrequest-tabs', 'details', JText::_('COM_REMCA_RENT_REQUEST_FIELDSET_DETAILS_LABEL', true)); ?>
+			<?php echo JHtml::_('bootstrap.addTab', 'rentrequest-tabs', 'details', JText::_('COM_REMCA_RENT_REQUESTS_FIELDSET_DETAILS_LABEL', true)); ?>
 			<div class="row-fluid">
 				<div class="span3">
 					<fieldset class="form-vertical">
@@ -95,7 +95,7 @@ $input = $app->input;
                         echo $this->form->renderField('version_note', null, null, array('group_id' => 'field_version_note')); 
 					 ?>
 			<?php echo JHtml::_('bootstrap.endTab'); ?>
-			<?php echo JHtml::_('bootstrap.addTab', 'rentrequest-tabs', 'fieldset-rent_request_fs', JText::_('COM_REMCA_RENT_REQUEST_FIELDSET_RENT_REQUEST_FS_LABEL', true)); ?>
+			<?php echo JHtml::_('bootstrap.addTab', 'rentrequest-tabs', 'fieldset-rent_request_fs', JText::_('COM_REMCA_RENT_REQUESTS_FIELDSET_RENT_REQUEST_FS_LABEL', true)); ?>
 			<div class="row-fluid form-horizontal-desktop">
 				<?php foreach($this->form->getFieldset('fieldset_rent_request_fs') as $field): ?>
 					<?php if (!$field->hidden) : ?>

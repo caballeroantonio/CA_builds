@@ -62,7 +62,6 @@ class RemcaModelHouses extends JModelList
 				's_lstate_name', 's.name',				
 				'id_lmunicipality', 'a.id_lmunicipality',
 				'm_lmunicipality_name', 'm.name',				
-				'price', 'a.price',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				'catid', 'a.catid', 'category_title', 'category_id',
@@ -125,8 +124,6 @@ class RemcaModelHouses extends JModelList
 		$this->setState('filter.id_lstate', $id_lstate);
 		$id_lmunicipality = $app->getUserStateFromRequest($this->context.'.filter.id_lmunicipality', 'filter_id_lmunicipality', 0, 'int');
 		$this->setState('filter.id_lmunicipality', $id_lmunicipality);
-		$price = $app->getUserStateFromRequest($this->context.'.filter.price', 'filter_price', '', 'float');
-		$this->setState('filter.price', $price);
 		$category_id = $app->getUserStateFromRequest($this->context.'.filter.category_id', 'filter_category_id');
 		$this->setState('filter.category_id', $category_id);		
 		
@@ -176,7 +173,6 @@ class RemcaModelHouses extends JModelList
 		$id	.= ':'.$this->getState('filter.id_country');	
 		$id	.= ':'.$this->getState('filter.id_lstate');	
 		$id	.= ':'.$this->getState('filter.id_lmunicipality');	
-		$id	.= ':'.$this->getState('filter.price');	
 		return parent::getStoreId($id);
 	}	
 	/**
@@ -283,7 +279,7 @@ class RemcaModelHouses extends JModelList
 		$query->select($db->quoteName('r.name').' AS r_rent_name');
 		$query->select($db->quoteName('r.id').' AS r_rent_id');
 
-		$query->join('LEFT', $db->quoteName('#__rem_rent').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.id_rent'));	
+		$query->join('LEFT', $db->quoteName('#__rem_rents').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.id_rent'));	
 		// Filter by and return name for owner_id level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
 		$query->select($db->quoteName('u.name').' AS u_user_name');
 		$query->select($db->quoteName('u.id').' AS u_user_id');
@@ -301,11 +297,6 @@ class RemcaModelHouses extends JModelList
 		if ($id_lmunicipality = $this->getState('filter.id_lmunicipality'))
 		{
 			$query->where($db->quoteName('a.id_lmunicipality').' = ' . (int) $id_lmunicipality);
-		}
-		if ($price = $this->getState('filter.price'))
-		{
-			$price = $db->escape(JString::strtolower($price), true);			
-			$query->where('LOWER('.$db->quoteName('a.price').') = ' . $db->quote($price));
 		}
 				
 		// Filter by a single or group of categories.

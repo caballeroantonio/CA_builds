@@ -113,14 +113,14 @@ class RemcaViewRemca_Dashboard extends JViewLegacy
 			'text'=>'Main_categories',//JText::_('REMCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_REMCA_MAINCATEGORY_DESCRIPTION')
 			);
-		$buttons[] = array('link'=>'index.php?option=com_remca&view=rent',
-			'object'=>'rent',
-			'text'=>'Rent',//JText::_('REMCA_COMPONENT_WIZARD'),
+		$buttons[] = array('link'=>'index.php?option=com_remca&view=rents',
+			'object'=>'rents',
+			'text'=>'Rents',//JText::_('REMCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_REMCA_RENT_DESCRIPTION')
 			);
-		$buttons[] = array('link'=>'index.php?option=com_remca&view=rent_request',
-			'object'=>'rent_request',
-			'text'=>'Rent_request',//JText::_('REMCA_COMPONENT_WIZARD'),
+		$buttons[] = array('link'=>'index.php?option=com_remca&view=rent_requests',
+			'object'=>'rent_requests',
+			'text'=>'Rent Requests',//JText::_('REMCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_REMCA_RENTREQUEST_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_remca&view=rent_sal',

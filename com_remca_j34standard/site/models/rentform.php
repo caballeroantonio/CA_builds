@@ -91,7 +91,7 @@ class RemcaModelRentForm extends RemcaModelRent
 	 * 
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Rent', $prefix = 'RemcaTable', $config = array())
+	public function getTable($type = 'Rents', $prefix = 'RemcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}

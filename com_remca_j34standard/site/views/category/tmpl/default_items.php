@@ -106,11 +106,6 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LMUNICIPALITY'); ?>
 							</th>
 						<?php endif; ?>	
-						<?php if ($this->params->get('list_show_house_price',0)) : ?>
-							<th class="list-price" id="tableOrderingprice">
-							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>
-							</th>
-						<?php endif; ?>	
 						<?php $show_actions = false;
 							foreach ($this->houses as $item) : ?>
 							<?php if ($item->params->get('access-edit') 
@@ -184,13 +179,6 @@ $empty = $component->params->get('default_empty_field', '');
 							<td class="list-id_lmunicipality">
 								<?php 
 									echo JString::trim($item->m_lmunicipality_name); 
-								?>
-							</td>
-						<?php endif; ?>
-						<?php if ($this->params->get('list_show_house_price',0)) : ?>
-							<td class="list-price">
-								<?php 
-									echo $item->price != '' ? $item->price : $empty; 
 								?>
 							</td>
 						<?php endif; ?>

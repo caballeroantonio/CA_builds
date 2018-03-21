@@ -10,7 +10,7 @@
  * 
  * The following Component Architect header section must remain in any distribution of this file
  *
- * @CAversion		Id: compobjectplural.php 571 2016-01-04 15:03:02Z BrianWade $
+ * @CAversion		Id: compobject.php 571 2016-01-04 15:03:02Z BrianWade $
  * @CAauthor		Component Architect (www.componentarchitect.com)
  * @CApackage		architectcomp
  * @CAsubpackage	architectcomp.site
@@ -31,13 +31,15 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * This models supports retrieving lists of rent.
+ * RealEstateManagerCA Component Rent Model
  *
  */
-class RemcaModelRent extends JModelList
+class RemcaModelRent extends JModelItem
 {
 	/**
-	 * @var    string	$context	Context string for the model type.  This is used to handle uniqueness within sessions data.
+	 * Model context string.  Used in setting the store id for the session
+	 *
+	 * @var		string
 	 */
 	protected $context = 'com_remca.rent';
 
@@ -49,11 +51,19 @@ class RemcaModelRent extends JModelList
 	 */
 	public function __construct($config = array())
 	{
-		if (empty($config['filter_fields']))
+		if (empty($config['rent_filter_fields']))
 		{
-			$config['filter_fields'] = array(
+			$config['rent_filter_fields'] = array(
 				'id', 'a.id',
 				'name', 'a.name',
+				'id_house','a.id_house',
+				'id_user','a.id_user',
+				'rent_from','a.rent_from',
+				'rent_until','a.rent_until',
+				'rent_return','a.rent_return',
+				'user_name','a.user_name',
+				'user_email','a.user_email',
+				'user_mailing','a.user_mailing',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				);
@@ -66,15 +76,21 @@ class RemcaModelRent extends JModelList
 	 *
 	 * Note. Calling getState in this method will result in recursion.
 	 *
-	 * @return	void
-	 * 
 	 */
-	protected function populateState($ordering = null, $direction = null)
+	protected function populateState()
 	{
-		$app = JFactory::getApplication();
+		$app = JFactory::getApplication('site');
+
+		// Load state from the request.
+		$pk = $app->input->getInt('id');
+		$this->setState('rent.id', $pk);
+
+		$offset = $app->input->getInt('limitstart');
+		$this->setState('list.offset', $offset);
+
 		// Load the parameters. Merge Global and Menu Item params into new object
 		$params = $app->getParams();
-		$menu_params = new JRegistry;
+		$menu_params = new Registry;
 
 		if ($menu = $app->getMenu()->getActive())
 		{
@@ -86,231 +102,85 @@ class RemcaModelRent extends JModelList
 
 		$this->setState('params', $merged_params);
 
-		$params = $this->state->params;	
-		
+		// TODO: Tune these values based on other permissions.
 		$user		= JFactory::getUser();
-		
-		$item_id = $app->input->getInt('id', 0) . ':' .$app->input->getInt('Itemid', 0);
-
-		// Check to see if a single rent has been specified either as a parameter or in the url Request
-		$pk = $params->get('rent_id', '') == '' ? $app->input->getInt('id', '') : $params->get('rent_id');
-		$this->setState('filter.rent_id', $pk);
-		
-		// List state information
-			$limit = $app->getUserStateFromRequest($this->context.'.list.' . $item_id . '.limit', 'limit', $params->get('rent_num_per_page'),'integer');
-		$this->setState('list.limit', $limit);
-
-		$value = $app->input->get('limitstart', 0, 'uint');
-		$this->setState('list.start', $value);
-
-		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
-		$this->setState('filter.search', $search);
-		
-
-		$order_col = $app->getUserStateFromRequest($this->context. '.filter_order', 'filter_order', $params->get('rent_initial_sort','a.name'), 'string');
-		if (!in_array($order_col, $this->filter_fields))
-		{
-			$order_col = $params->get('rent_initial_sort','a.name');
-		}
-
-		$this->setState('list.ordering', $order_col);
-
-		$list_order = $app->getUserStateFromRequest($this->context. '.filter_order_Dir', 'filter_order_Dir',  $params->get('rent_initial_direction','ASC'), 'cmd');
-		if (!in_array(JString::strtoupper($list_order), array('ASC', 'DESC', '')))
-		{
-			$list_order =  $params->get('rent_initial_direction','ASC');
-		}
-		$this->setState('list.direction', $list_order);
-		
-				
-
-		
-		$this->setState('layout', $app->input->getString('layout'));
-	}
-
-	/**
-	 * Method to get a store id based on model configuration state.
-	 *
-	 * This is necessary because the model is used by the component and
-	 * different modules that might need different sets of data or different
-	 * ordering requirements.
-	 *
-	 * @param	string		$id	A prefix for the store id.
-	 *
-	 * @return	string		A store id.
-	 * 
-	 */
-	protected function getStoreId($id = '')
-	{
-		// Compile the store id.
-		$id .= ':'.$this->getState('filter.search');				
-		$id .= ':'.serialize($this->getState('filter.rent_id'));
-		$id .= ':'.$this->getState('filter.rent_id.include');				
-		
-
-		return parent::getStoreId($id);
-	}
-
-	/**
-	 * Get the main query for retrieving a list of rent subject to the model state.
-	 *
-	 * @return	JDatabaseQuery
-	 * 
-	 */
-	protected function getListQuery()
-	{
-		// Get the current user for authorisation checks
-		$user	= JFactory::getUser();
-		// Create a new query object.
-		$db = $this->getDbo();
-		$query = $db->getQuery(true);
-		// Set date values
-		$null_date = $db->quote($db->getNullDate());
-		$now_date = $db->quote(JFactory::getDate()->toSQL());
-		
-		// Select the required fields from the table.
-		$query->select(
-			$this->getState(
-					'list.select',
-					'a.*'
-					)
-				);
-
-
-		$query->from($db->quoteName('#__rem_rent').' AS a');
-
-
-
-		
-		
-
-
-
-
-		
-		// Filter by and return name for id_house level.
-		$query->select($db->quoteName('h.name').' AS h_house_name');
-		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
-
-		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
-		// Filter by and return name for id_user level.
-		$query->select($db->quoteName('u.name').' AS u_user_name');
-		$query->select($db->quoteName('u.id').' AS u_user_id');
-
-		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.id_user'));	
-					
-
-		// Filter by a single or group of rent.
-		$rent_id = $this->getState('filter.rent_id');
-		if ($rent_id != '')
-		{
-			if (is_numeric($rent_id))
-			{
-				$type = $this->getState('filter.rent_id.include', true) ? '= ' : '<> ';
-				$query->where($db->quoteName('a.id').' '.$type.(int) $rent_id);
-			}
-			else
-			{
-				if (is_array($rent_id))
-				{
-					JArrayHelper::toInteger($rent_id);
-					$rent_id = implode(',', $rent_id);
-					$type = $this->getState('filter.rent_id.include', true) ? 'IN' : 'NOT IN';
-					$query->where($db->quoteName('a.id').' '.$type.' ('.$rent_id.')');
-				}
-			}
-		}
-		
-
-		// process the filter for list views with user-entered filters
-		$params = $this->getState('params');
-
-		if ((is_object($params)) AND ($params->get('show_rent_filter_field') != 'hide') AND ($filter = $this->getState('filter.search')))
-		{
-			// clean filter variable
-			$filter = JString::strtolower($filter);
-			$filter = $db->quote('%'.$db->escape($filter, true).'%', false);
-
-			switch ($params->get('show_rent_filter_field'))
-			{
-				case 'name':
-				default: // default to 'name' if parameter is not valid
-					$query->where('LOWER('.$db->quoteName('a.name').') LIKE '.$filter);
-					break;
-				
-			}
-		}
-
-		// Add the list ordering clause.
-		if (is_object($params))
-		{
-			$initial_sort = $params->get('field_initial_sort');
-		}
-		else
-		{
-			$initial_sort = '';
-		}
-		// Fall back to old style if the parameter hasn't been set yet.
-		if (empty($initial_sort) OR $this->getState('list.ordering') != '')
-		{
-			$order_col	= '';
-			$order_dirn	= $this->getState('list.direction');
-
-			// Allow for multi field order (routines defining these must cater for quotes on field names	
-			if (strpos($this->getState('list.ordering'),',') !== False)
-			{
-				$order_col = trim($this->getState('list.ordering'));
-			}			
-		
-
-
-			if ($order_col == '')
-			{
-				$order_col = is_string($this->getState('list.ordering')) ? $db->quoteName($this->getState('list.ordering')) : $db->quoteName('a.name');
-				$order_col .= ' '.$order_dirn;
-			}
-			$query->order($db->escape($order_col));			
-					
-		}
-		else
-		{
-			$query->order($db->quoteName('a.'.$initial_sort).' '.$db->escape($this->getState('list.direction', 'ASC')));
 			
-		}	
-		return $query;
 	}
-
 	/**
-	 * Method to get a list of rent.
+	 * Returns a Table object, always creating it
 	 *
-	 * Overriden to inject convert the params fields into an object.
-	 *
-	 * @return	mixed	An array of objects on success, false on failure.
-	 * 
-	 */
-	public function getItems()
+	 * @param	type	The table type to instantiate
+	 * @param	string	A prefix for the table class name. Optional.
+	 * @param	array	Configuration array for model. Optional.
+	 * @return	JTable	A database object
+	*/
+	public function getTable($type = 'Rents', $prefix = 'RemcaTable', $config = array())
 	{
-		$db = $this->getDbo();
-  		$query = $db->getQuery(true);
-		
+		return JTable::getInstance($type, $prefix, $config);
+	}
+	/**
+	 * Method to get Rent data.
+	 *
+	 * @param	integer	$pk	The id of the rent.
+	 *
+	 * @return	mixed	Menu item data object on success, false on failure.
+	 */
+	public function getItem($pk = null)
+	{
+		// Get current user for authorisation checks
 		$user	= JFactory::getUser();
-		$user_id	= $user->get('id');
-		$guest	= $user->get('guest');
-
+		
+		$pk = (!empty($pk)) ? $pk : (int) $this->getState('rent.id');
 		// Get the global params
 		$global_params = JComponentHelper::getParams('com_remca', true);
-		
-		if ($items = parent::getItems())
+
+		if ($this->_item === null)
 		{
-			// Convert the parameter fields into objects.
-			foreach ($items as &$item)
+			$this->_item = array();
+		}
+
+		if (!isset($this->_item[$pk]))
+		{
+			try
 			{
-				$query->clear();
+				$db = $this->getDbo();
+				$query = $db->getQuery(true);
 
-				$rent_params = new Registry;
+				$query->select($this->getState(
+					'item.select',
+					'a.*'
 
-
+					)
+				);
+				$query->from($db->quoteName('#__rem_rents').' AS a');
 				
+				
+				$query->where($db->quoteName('a.id').' = ' . (int) $pk);
+				
+					
+
+				//  Do not show unless today's date is within the publish up and down dates (or they are empty)
+				
+					
+				// Filter by and return name for id_house level.
+				$query->select($db->quoteName('h.name').' AS h_house_name');
+				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
+				// Filter by and return name for id_user level.
+				$query->select($db->quoteName('u.name').' AS u_user_name');
+				$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.id_user'));	
+																				
+				$db->setQuery($query);
+
+				$item = $db->loadObject();
+
+				if (empty($item))
+				{
+					return JError::raiseError(404, JText::_('COM_REMCA_RENTS_ERROR_ITEM_NOT_FOUND'));
+				}
+				// Include any manipulation of the data on the record e.g. expand out Registry fields
+				// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
+			
+
 				
 				
 				
@@ -320,74 +190,122 @@ class RemcaModelRent extends JModelList
 				
 				
 		
+
 							
 
+				// Convert parameter fields to objects.
+				$rent_params = new Registry;
 				
-							
-				if (!is_object($this->getState('params')))
+				$item->params = clone $this->getState('params');				
+								
+				// Rent params override menu item params only if menu param = 'use_rent'
+				// Otherwise, menu item params control the layout
+				// If menu item is 'use_rent' and there is no rent param, use global
+
+				// create an array of just the params set to 'use_rent'
+				$menu_params_array = $this->getState('params')->toArray();
+				$rent_array = array();
+
+				foreach ($menu_params_array as $key => $value)
 				{
-					$item->params = $rent_params;
+					if ($value === 'use_rent')
+					{
+						// if the rent has a value, use it
+						if ($rent_params->get($key) != '')
+						{
+							// get the value from the rent
+							$rent_array[$key] = $rent_params->get($key);
+						}
+						else
+						{
+							// otherwise, use the global value
+							$rent_array[$key] = $global_params->get($key);
+						}
+					}
+				}
+
+				// merge the selected rent params
+				if (count($rent_array) > 0)
+				{
+					$rent_params = new Registry;
+					$rent_params->loadArray($rent_array);
+					$item->params->merge($rent_params);
+				}
+
+
+
+
+				$this->_item[$pk] = $item;
+			}
+			catch (Exception $e)
+			{
+				if ($e->getCode() == 404)
+				{
+					// Need to go thru the error handler to allow Redirect to work.
+					JError::raiseError(404, $e->getMessage());
 				}
 				else
 				{
-					$item->params = clone $this->getState('params');
-
-					// Rent params override menu item params only if menu param = 'use_rent'
-					// Otherwise, menu item params control the layout
-					// If menu item is 'use_rent' and there is no rent param, use global
-
-					// create an array of just the params set to 'use_rent'
-					$menu_params_array = $this->getState('params')->toArray();
-					$rent_array = array();
-
-					foreach ($menu_params_array as $key => $value)
-					{
-						if ($value === 'use_rent')
-						{
-							// if the rent has a value, use it
-							if ($rent_params->get($key) != '')
-							{
-								// get the value from the rent
-								$rent_array[$key] = $rent_params->get($key);
-							}
-							else
-							{
-								// otherwise, use the global value
-								$rent_array[$key] = $global_params->get($key);
-							}
-						}
-					}
-
-					// merge the selected rent params
-					if (count($rent_array) > 0)
-					{
-						$rent_params = new Registry;
-						$rent_params->loadArray($rent_array);
-						$item->params->merge($rent_params);
-					}
-
-
-					// get display date
-					switch ($item->params->get('list_show_rent_date'))
-					{
-						default:
-							$item->display_date = 0;
-							break;
-					}
-				}
-
-
+					$this->setError($e);
+					$this->_item[$pk] = false;
+				}			
 			}
 		}
-		return $items;
+
+		return $this->_item[$pk];
 	}
-	
-        /*
-         * Function that allows download database information
-         * @ToDo implementar generación de código
-         */
-        public function getListQuery4Export(){
-            $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));
-            return $this->getDbo()->getQuery();
-        }
+
+		
+	/**
+	 * Method to delete one or more records.
+	 *
+	 * @param   array    $pks  An array of record primary keys.
+	 *
+	 * @return  boolean  True if successful, false if an error occurs.
+	 * 
+	 */
+	public function delete(&$pks)
+	{
+		
+		$dispatcher	= JEventDispatcher::getInstance();
+		$pks		= (array) $pks;
+		$table		= $this->getTable();
+
+		// Include the remca plugins for the on delete events.
+		JPluginHelper::importPlugin('remca');
+
+		// Iterate the items to delete each one.
+		foreach ($pks as $i => $pk)
+		{
+
+			if ($table->load($pk))
+			{
+					// Trigger the BeforeDelete event.
+					$result = $dispatcher->trigger('onRentBeforeDelete', array('com_remca.rent', &$table));
+					if (in_array(false, $result, true))
+					{
+						$this->setError($table->getError());
+						return false;
+					}
+					if (!$table->delete($pk))
+					{
+						$this->setError($table->getError());
+						return false;
+					}
+
+					// Trigger the AfterDelete event.
+					$dispatcher->trigger('onRentAfterDelete', array('com_remca.rent', &$table));
+			}
+			else
+			{
+				$this->setError($table->getError());
+				return false;
+			}
+		}
+
+		// Clear the component's cache
+		$this->cleanCache();
+
+		return true;
+	}
 }

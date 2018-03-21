@@ -148,7 +148,7 @@ class RemcaController extends JControllerLegacy
 					// Somehow the person just went to the form - we don't allow that.
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
-					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=rent', false));
+					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=rents', false));
 
 					return false;
 				}
@@ -160,7 +160,7 @@ class RemcaController extends JControllerLegacy
 					// Somehow the person just went to the form - we don't allow that.
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
-					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=rent_request', false));
+					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=rent_requests', false));
 
 					return false;
 				}

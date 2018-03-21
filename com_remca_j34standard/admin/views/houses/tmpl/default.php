@@ -132,9 +132,6 @@ $assoc	= JLanguageAssociations::isEnabled();
 					<th width="10%" class="nowrap center hidden-phone">
 						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LMUNICIPALITY'); ?>						
 					</th>	
-					<th width="10%" class="nowrap center hidden-phone">
-						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>						
-					</th>	
 					<th width="10%" class="center hidden-phone">
 						<?php echo JHtml::_('searchtools.sort', 'JCATEGORY', 'category_title', $list_dirn, $list_order); ?>
 					</th>
@@ -244,11 +241,6 @@ $assoc	= JLanguageAssociations::isEnabled();
 					<td class="nowrap small center hidden-phone">
 						<?php 
 							echo JString::trim($item->m_lmunicipality_name); 
-						?>				
-					</td>	
-					<td class="nowrap small center hidden-phone">
-						<?php 
-							echo $item->price != '' ? $item->price : $empty; 
 						?>				
 					</td>	
 					<td class="nowrap small center hidden-phone">

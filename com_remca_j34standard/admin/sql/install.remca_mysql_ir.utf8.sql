@@ -68,7 +68,7 @@ INSERT IGNORE INTO `#__rem_houses` (`id`, `name`, `description`, `ordering`, `st
 
 INSERT IGNORE INTO `#__rem_feature` (`id`, `name`, `state`) VALUES (0, "undefined", 0);
 
-INSERT IGNORE INTO `#__rem_rent` (`id`, `name`) VALUES (0, "undefined");
+INSERT IGNORE INTO `#__rem_rents` (`id`, `name`) VALUES (0, "undefined");
 
 INSERT IGNORE INTO `#__rem_houses` (`id`, `name`, `description`, `ordering`, `state`) VALUES (0, "undefined", "undefined default option", 0, 0);
 
@@ -135,7 +135,7 @@ FOREIGN KEY (`id_featured`) REFERENCES `#__rem_feature` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
 ALTER TABLE `#__rem_houses` ADD CONSTRAINT `fk2941_id_rent`
-FOREIGN KEY (`id_rent`) REFERENCES `#__rem_rent` (`id`)
+FOREIGN KEY (`id_rent`) REFERENCES `#__rem_rents` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
 ALTER TABLE `#__rem_houses` ADD CONSTRAINT `fk2990_owner_id`
@@ -166,19 +166,19 @@ ALTER TABLE `#__rem_photos` ADD CONSTRAINT `fk3040_id_house`
 FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_rent` ADD CONSTRAINT `fk3044_id_house`
+ALTER TABLE `#__rem_rents` ADD CONSTRAINT `fk3044_id_house`
 FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_rent` ADD CONSTRAINT `fk3045_id_user`
+ALTER TABLE `#__rem_rents` ADD CONSTRAINT `fk3045_id_user`
 FOREIGN KEY (`id_user`) REFERENCES `#__users` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_rent_request` ADD CONSTRAINT `fk3052_id_house`
+ALTER TABLE `#__rem_rent_requests` ADD CONSTRAINT `fk3052_id_house`
 FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_rent_request` ADD CONSTRAINT `fk3053_id_user`
+ALTER TABLE `#__rem_rent_requests` ADD CONSTRAINT `fk3053_id_user`
 FOREIGN KEY (`id_user`) REFERENCES `#__users` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										

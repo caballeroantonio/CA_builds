@@ -1832,7 +1832,7 @@ Configuraciones del despliegue de Rent en listas/Blog
 \end_layout
 
 \begin_layout Subsection
-Configuración de Rent_request
+Configuración de Rent Request
 \end_layout
 
 \begin_layout Standard
@@ -1857,7 +1857,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Configuraciones del despliegue de Rent_request
+Configuraciones del despliegue de Rent Request
 \end_layout
 
 \end_inset
@@ -1892,7 +1892,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Configuraciones del despliegue de Rent_request en listas/Blog
+Configuraciones del despliegue de Rent Request en listas/Blog
 \end_layout
 
 \end_inset
@@ -4447,7 +4447,7 @@ Diagrama entidad relación
 \end_layout
 
 \begin_layout Subsection
-#__rem_rent
+#__rem_rents
 \end_layout
 
 \begin_layout Subparagraph
@@ -4455,7 +4455,7 @@ Descripción
 \end_layout
 
 \begin_layout Standard
-Es la tabla para almacenar Rent
+Es la tabla para almacenar Rents
 \end_layout
 
 \begin_layout Standard
@@ -4619,7 +4619,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename der_rent.svg
+	filename der_rents.svg
 	lyxscale 30
 	width 80text%
 
@@ -4649,7 +4649,7 @@ Diagrama entidad relación
 \end_layout
 
 \begin_layout Subsection
-#__rem_rent_request
+#__rem_rent_requests
 \end_layout
 
 \begin_layout Subparagraph
@@ -4657,7 +4657,7 @@ Descripción
 \end_layout
 
 \begin_layout Standard
-Es la tabla para almacenar Rent_request
+Es la tabla para almacenar Rent Requests
 \end_layout
 
 \begin_layout Standard
@@ -4821,7 +4821,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename der_rent_request.svg
+	filename der_rent_requests.svg
 	lyxscale 30
 	width 80text%
 
@@ -10920,7 +10920,7 @@ status open
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Rent - Grid Panel Layout"
+name "Rents - Grid Panel Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=gridpanel"
 
 \end_inset
@@ -10937,7 +10937,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_rent.jpg
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_rents.jpg
 	lyxscale 30
 	width 80col%
 
@@ -10966,7 +10966,7 @@ Grid Panel Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Rent - Default List Layout"
+name "Rents - Default List Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]"
 
 \end_inset
@@ -11012,7 +11012,7 @@ Default List Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Rent - Blog Layout"
+name "Rents - Blog Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=blog"
 
 \end_inset
@@ -11058,7 +11058,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Rent - Single Rent Layout"
+name "Rents - Single Rent Layout"
 target "SERVER?option=com_remca&view=rent&id=1"
 
 \end_inset
@@ -11104,7 +11104,7 @@ Single Rent Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Rent - Single Rent Article Layout"
+name "Rents - Single Rent Article Layout"
 target "SERVER?option=com_remca&view=rent&layout=article&id=1"
 
 \end_inset
@@ -11150,7 +11150,7 @@ Single Rent Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Rent - Create Rent"
+name "Rents - Create Rent"
 target "SERVER?option=com_remca&view=rentform&layout=edit&id=1"
 
 \end_inset
@@ -11203,7 +11203,7 @@ Create Rent
 \end_layout
 
 \begin_layout Subsubsection
-Rent_request
+Rent request
 \end_layout
 
 \begin_layout Subparagraph
@@ -11282,7 +11282,7 @@ status open
 
 
 \backslash
-caption{Lista de campos en Rent_request}
+caption{Lista de campos en Rent request}
 \backslash
 
 \backslash
@@ -11326,7 +11326,7 @@ status open
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Rent_request - Grid Panel Layout"
+name "Rent Requests - Grid Panel Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=gridpanel"
 
 \end_inset
@@ -11343,7 +11343,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_rent_request.jpg
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_rent_requests.jpg
 	lyxscale 30
 	width 80col%
 
@@ -11372,7 +11372,7 @@ Grid Panel Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Rent_request - Default List Layout"
+name "Rent Requests - Default List Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]"
 
 \end_inset
@@ -11418,7 +11418,7 @@ Default List Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Rent_request - Blog Layout"
+name "Rent Requests - Blog Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=blog"
 
 \end_inset
@@ -11464,7 +11464,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Rent_request - Single Rent_request Layout"
+name "Rent Requests - Single Rent Request Layout"
 target "SERVER?option=com_remca&view=rentrequest&id=1"
 
 \end_inset
@@ -11494,7 +11494,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single Rent_request Layout
+Single Rent Request Layout
 \end_layout
 
 \end_inset
@@ -11510,7 +11510,7 @@ Single Rent_request Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Rent_request - Single Rent_request Article Layout"
+name "Rent Requests - Single Rent Request Article Layout"
 target "SERVER?option=com_remca&view=rentrequest&layout=article&id=1"
 
 \end_inset
@@ -11540,7 +11540,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single Rent_request Article Layout
+Single Rent Request Article Layout
 \end_layout
 
 \end_inset
@@ -11556,7 +11556,7 @@ Single Rent_request Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Rent_request - Create Rent_request"
+name "Rent Requests - Create Rent Request"
 target "SERVER?option=com_remca&view=rentrequestform&layout=edit&id=1"
 
 \end_inset
@@ -11586,7 +11586,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Create Rent_request
+Create Rent Request
 \end_layout
 
 \end_inset

@@ -62,7 +62,8 @@
             label="COM_REMCA_BUYING_REQUESTS_FIELD_ID_HOUSE_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_FIELD_ID_HOUSE_DESC"
             class="modal"
-			default="'0'"
+			default="0"
+			type_alias="com_remca.house" 
         >
         </field>  
         <field name="id_user"
@@ -71,6 +72,7 @@
             description="COM_REMCA_BUYING_REQUESTS_FIELD_ID_USER_DESC"
             class="modal"
 			default="0"
+			type_alias="com_remca.user" 
         >
         </field>  
         <field name="buying_request"
