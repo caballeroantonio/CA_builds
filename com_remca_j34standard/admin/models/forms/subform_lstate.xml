@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- @version 			$Id:$ -->
+<!-- @name			    RealEstateManagerCA -->
+<!-- @author			caballeroantonio (caballeroantonio.com) -->
+<!-- @package			com_remca -->
+<!-- @subpackage		com_remca.admin -->
+<!-- @copyright		     -->
+<!-- @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- The following Component Architect header section must remain in any distribution of this file -->
+
+<!-- @CAversion			Id: compobject.xml 604 2016-01-14 13:05:26Z BrianWade $ -->
+<!-- @CAauthor		    Component Architect (www.componentarchitect.com) -->
+<!-- @CApackage		    architectcomp -->
+<!-- @CAsubpackage	    architectcomp.admin -->
+<!-- @CAtemplate		joomla_3_4_standard (Release 1.0.1) -->
+<!-- @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved -->
+<!-- @Joomlacopyright   Copyright (c)2005 - 2016 Open Source Matters, Inc. All rights reserved. -->
+<!-- @CAlicense		    GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or (at your option) any later version. -->
+
+<!-- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of -->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. -->
+
+<form
+    addfieldpath="/administrator/components/com_remca/models/fields"
+    addrulepath="/administrator/components/com_remca/models/rules"
+
+>
+    <fieldset name="basic_details"
+    >
+        <field name="name"
+		    type="text"
+			label="COM_REMCA_FIELD_NAME_LABEL"
+			description="COM_REMCA_LSTATES_FIELD_NAME_DESC"
+			size="50"
+			required="true"
+		/>
+        <field name="buttonspacer"
+            type="spacer"
+            label="JGLOBAL_ACTION_PERMISSIONS_LABEL"
+            description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
+        />
+    </fieldset>
+    <fieldset name="fieldset_state_fs"
+        label="COM_REMCA_LSTATES_FIELDSET_STATE_FS_LABEL"
+        description="COM_REMCA_LSTATES_FIELDSET_STATE_FS_DESC"
+    >
+        <field name="id_country"
+            type="modal_countries"
+            label="COM_REMCA_LSTATES_FIELD_ID_COUNTRY_LABEL"
+            description="COM_REMCA_LSTATES_FIELD_ID_COUNTRY_DESC"
+            class="modal"
+			default="0"
+        >
+        </field>  
+        <field name="friendly_name"
+            type="text"
+            label="COM_REMCA_LSTATES_FIELD_FRIENDLY_NAME_LABEL"
+            description="COM_REMCA_LSTATES_FIELD_FRIENDLY_NAME_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+    </fieldset>
+    <fieldset name="publishing"
+		label="COM_REMCA_FIELDSET_PUBLISHING_LABEL"
+    >
+
+    </fieldset>
+</form>

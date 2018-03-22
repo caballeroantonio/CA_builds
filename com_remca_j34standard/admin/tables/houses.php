@@ -217,6 +217,10 @@ class RemcaTableHouses extends JTable
 		}		
 
 
+		if (isset($this->photos) AND is_array($this->photos))
+		{
+			$this->photos = implode(',',$this->photos);
+		}	
 										
 
 

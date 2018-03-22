@@ -147,6 +147,7 @@ class Foo {
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_OWNER_ID_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_OWNER_ID_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ENERGY_VALUE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ENERGY_VALUE_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_CLIMATE_VALUE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_CLIMATE_VALUE_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_PHOTOS_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_PHOTOS_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= '\textbf{' . $this->jtext2lyx('COM_REMCA_HOUSES_FIELD_CONFIG_BLOG_LIST_LABEL'). '} & \textbf{' . $this->jtext2lyx('COM_REMCA_HOUSES_FIELD_CONFIG_BLOG_LIST_DESC'). '} \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_NUM_LEADING_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_NUM_LEADING_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_NUM_INTRO_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_NUM_INTRO_DESC'). ' \tabularnewline\hline '. "\r\n";

@@ -51,8 +51,66 @@ class RemcaControllerHouses extends JControllerAdmin
 	public function __construct($config = array())
 	{
 		parent::__construct($config);
+		$this->registerTask('unfeatured',	'featured');
 	}
 
+	/**
+	 * Method to toggle the featured setting of a list of houses.
+	 *
+	 * @return	void
+	 * 
+	 */
+	public function featured()
+	{
+		// Check for request forgeries
+		$this->checkToken();
+
+		$user	= JFactory::getUser();
+		$ids	= $this->input->getVar('cid', array(), 'array');
+		$values	= array('featured' => 1, 'unfeatured' => 0);
+		$task	= $this->getTask();
+		$value	= JArrayHelper::getValue($values, $task, 0, 'int');
+		// Get the model.
+		$model = $this->getModel();
+
+		// Access checks.
+		foreach ($ids as $i => $id)
+		{
+			$item = $model->getItem($id);
+			if (!$user->authorise('core.edit.state', 'com_remca.category.'.(int) $item->catid) OR
+				!$user->authorise('core.edit.state', 'com_remca.house.'.$id))
+
+			{
+				// Prune items that you can't change.
+				unset($ids[$i]);
+				JError::raiseNotice(403, JText::_('JLIB_APPLICATION_ERROR_EDITSTATE_NOT_PERMITTED'));
+			}
+		}
+
+		if (empty($ids))
+		{
+			JError::raiseWarning(500, JText::_('COM_REMCA_HOUSES_NO_ITEM_SELECTED'));
+		}
+		else
+		{
+			// Publish the items.
+			if (!$model->featured($ids, $value))
+			{
+				JError::raiseWarning(500, $model->getError());
+			}
+			
+			if ($value == 1)
+			{
+				$message = JText::plural('COM_REMCA_HOUSES_N_ITEMS_FEATURED', count($ids));
+			}
+			else
+			{
+				$message = JText::plural('COM_REMCA_HOUSES_N_ITEMS_UNFEATURED', count($ids));
+			}			
+		}
+
+		$this->setRedirect(JRoute::_('index.php?option=com_remca&view=houses', false), $message);
+	}
 
 	/**
 	 * Method to get a model object, loading it if required.

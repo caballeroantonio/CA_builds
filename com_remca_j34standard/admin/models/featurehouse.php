@@ -186,6 +186,7 @@ class RemcaModelFeatureHouse extends JModelAdmin
 
 
 
+        
 
 		if (parent::save($data))
 		{

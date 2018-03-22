@@ -109,6 +109,16 @@
 			section="house"
 			validate="rules"
 		/>
+        <field name="featured"
+			type="radio"
+			label="JFEATURED"
+			description="COM_REMCA_HOUSES_FIELD_FEATURED_DESC"
+		    class="btn-group btn-group-yesno"
+			default="0"
+		>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
         <field name="language"
             type="contentlanguage"
             label="JFIELD_LANGUAGE_LABEL"
@@ -152,21 +162,6 @@
         label="COM_REMCA_HOUSES_FIELDSET_HOUSES_FS_LABEL"
         description="COM_REMCA_HOUSES_FIELDSET_HOUSES_FS_DESC"
     >
-<field name="photos" type="subform" multiple="true" max="2" layout="joomla.form.field.subform.repeatable-table" groupByFieldset="false" component_="com_remca" client_="admin"
-    formsource="administrator/components/com_remca/models/forms/photo.xml"
-    label="Subform Field" description="Subform Field Description" 
-    default="[
-    {
-        &quot;id&quot;: 1,
-        &quot;thumbnail_img&quot;: &quot;thumbnail_img&quot;
-    },{
-        &quot;id&quot;: 2,
-        &quot;thumbnail_img&quot;: &quot;thumbnail_img&quot;
-    }
-]"
-    type_alias="com_remca.photo"
-/>
-	
         <field name="id_country"
             type="modal_countries"
             label="COM_REMCA_HOUSES_FIELD_ID_COUNTRY_LABEL"
@@ -661,6 +656,17 @@
             class="inputbox"
 			size="1"
 			default="0"
+        >
+        </field>  
+        <field name="photos"
+            type="subform"
+            label="COM_REMCA_HOUSES_FIELD_PHOTOS_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_PHOTOS_DESC"
+            multiple="true"
+			default="[ ]"
+			layout="joomla.form.field.subform.repeatable-table" groupByFieldset="true"
+			formsource="administrator/components/com_remca/models/forms/photo.xml" 
+			type_alias="com_remca.photo" 
         >
         </field>  
     </fieldset>

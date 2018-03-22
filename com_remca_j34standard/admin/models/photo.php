@@ -210,6 +210,7 @@ class RemcaModelPhoto extends JModelAdmin
 		}
 
 
+        
 
 		if (parent::save($data))
 		{

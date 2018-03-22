@@ -114,7 +114,7 @@ $empty = $component->params->get('default_empty_field', '');
 
 		<?php else : ?>
 		<div style="overflow-x:auto;">
-			<table class="table table-striped" id="feature_houses">
+			<table class="table table-striped" id="feature_houses" style="margin-bottom: 200px;">
 			<?php if ($this->params->get('show_featurehouse_headings',1)) :?>
 			<thead>
 				<tr>

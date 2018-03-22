@@ -159,6 +159,7 @@ $params = $this->state->get('params');
 <?php /*?>                    
 						<?php echo $this->form->renderField('state', null, null, array('group_id' => 'state')); ?>
  <?php */?>                       
+						<?php echo $this->form->renderField('featured', null, null, array('group_id' => 'featured')); ?>
 <?php /*?>
 						<?php if (!is_null($this->item->id)):?>
 							<?php echo $this->form->renderField('ordering', null, null, array('group_id' => 'ordering')); ?>						

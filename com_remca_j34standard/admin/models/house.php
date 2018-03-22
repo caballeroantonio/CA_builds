@@ -232,11 +232,13 @@ class RemcaModelHouse extends JModelAdmin
 			// Disable fields for display.
 
 			$form->setFieldAttribute('ordering', 'disabled', 'true');
+			$form->setFieldAttribute('featured', 'disabled', 'true');
 			$form->setFieldAttribute('state', 'disabled', 'true');
 
 			// Disable fields while saving.
 			// The controller has already verified this is a record you can edit.
 			$form->setFieldAttribute('ordering', 'filter', 'unset');
+			$form->setFieldAttribute('featured', 'filter', 'unset');	
 			$form->setFieldAttribute('state', 'filter', 'unset');
 			$form->setFieldAttribute('language', 'filter', 'unset');
 		}
@@ -338,9 +340,15 @@ class RemcaModelHouse extends JModelAdmin
 		}
 
 
+        
+		$data['photos'] = json_encode( array_values( $data['photos']));
 
 		if (parent::save($data))
 		{
+			if (isset($data['featured']))
+			{
+				$this->featured($this->getState($this->getName().'.id'), $data['featured']);
+			}
 
 			$assoc =  JLanguageAssociations::isEnabled();
 			if ($assoc)
@@ -469,6 +477,57 @@ class RemcaModelHouse extends JModelAdmin
 	}
 
 
+	/**
+	 * Method to toggle the featured setting of houses.
+	 *
+	 * @param	array	$pks	The ids of the items to toggle.
+	 * @param	integer		$value	The value to toggle to.
+	 *
+	 * @return	boolean	True on success.
+	 */
+	public function featured($pks, $value = 0)
+	{
+		// Sanitize the ids.
+		$pks = (array) $pks;
+		JArrayHelper::toInteger($pks);
+
+		if (empty($pks))
+		{
+			$this->setError(JText::_('COM_REMCA_HOUSES_NO_ITEM_SELECTED'));
+			return false;
+		}
+
+		try
+		{
+			$db = $this->getDbo();
+
+			$query = $db->getQuery(true);
+			$query->update($db->quoteName('#__rem_houses'));
+			$query->set($db->quoteName('featured').' = ' . (int) $value);
+			$query->where($db->quoteName('id').' IN (' . implode(',', $pks) . ')');
+			
+			$db->setQuery($query);
+						
+			$db->execute();
+
+		}
+		catch (Exception $e)
+		{
+			$this->setError($e->getMessage());
+			return false;
+		}
+
+		$table = $this->getTable();		
+		$conditions_array = $this->getReorderConditions($table);
+		
+		$conditions = implode(' AND ', $conditions_array);				
+		$table->reorder($conditions);
+
+		// Clean component's cache
+		$this->cleanCache();
+
+		return true;
+	}
 	/**
 	 * Custom clean the cache of com_remca and remca modules
 	 *

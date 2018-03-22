@@ -942,6 +942,17 @@
                 <option	value="1">JSHOW</option>
                 <option	value="0">JHIDE</option>
             </field>
+            <field
+                name="show_house_photos"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_PHOTOS_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_PHOTOS_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
         </fieldset>
     </fields>
 </metadata>

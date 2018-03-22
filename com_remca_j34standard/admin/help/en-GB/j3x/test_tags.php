@@ -1195,6 +1195,27 @@ architectcomp=remca
 
         
 {-1.2}
+
+            {OBJECT_FIELD}
+            FIELD_NAME=photos
+            FIELD_CODE_NAME_UPPER=PHOTOS
+            FIELD_INTRO=
+            FIELD_DESCRIPTION_INI=
+            FIELD_DESCRIPTION= 
+            FIELDTYPE_ID=42
+                        
+            FIELD_OPTIONS_LANGUAGE_VARS=
+            FIELD_DB=`photos` MEDIUMTEXT  photos
+            
+            FIELD_NAME_LATEX=photos
+            FIELD_CODE_NAME_LATEX=photos
+            FIELD_DBCOMMENT_LATEX=
+            
+            
+
+
+        
+{-1.2}
 {-1.1}
         {1.1a}
 

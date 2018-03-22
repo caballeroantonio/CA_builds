@@ -84,6 +84,21 @@
                     <option value="">JOPTION_ALL_CATEGORIES</option>
                 </field>
 
+                <field
+					name="show_featured"
+					type="radio"
+					label="MOD_REMCA_HOUSES_FIELD_FEATURED_LABEL"
+					description="MOD_REMCA_HOUSES_FIELD_FEATURED_DESC"
+                    class="btn-group"			
+					default=""
+				>
+                    <option
+						value="">JSHOW</option>
+                    <option
+						value="0">JHIDE</option>
+                    <option
+						value="1">MOD_REMCA_HOUSES_VALUE_ONLY_SHOW_FEATURED</option>
+                </field>
 
                 <field
 					name="ordering"

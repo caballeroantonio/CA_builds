@@ -198,6 +198,7 @@ $assoc	= JLanguageAssociations::isEnabled();
 					<td class="center">
 						<div class="btn-group">
 							<?php echo JHtml::_('jgrid.published', $item->state, $i, 'houses.', $can_change); ?>
+							<?php echo JHtml::_('houseadministrator.featured', $item->featured, $i, $can_change); ?>
 							<?php
 								if ($archived) :
 									JHtml::_('actionsdropdown.unarchive', 'cb' . $i, 'houses');

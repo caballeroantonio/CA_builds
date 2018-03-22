@@ -66,6 +66,7 @@ class RemcaModelHouses extends JModelList
 				'checked_out_time', 'a.checked_out_time',
 				'catid', 'a.catid', 'category_title', 'category_id',
 				'state', 'a.state',
+				'featured', 'a.featured',
 				'language', 'a.language', 'l.title',
 				'hits', 'a.hits',
 				'ordering', 'a.ordering',				

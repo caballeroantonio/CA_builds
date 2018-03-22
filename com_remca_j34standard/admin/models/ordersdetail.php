@@ -188,6 +188,7 @@ class RemcaModelOrdersDetail extends JModelAdmin
 
 
 
+        
 
 		if (parent::save($data))
 		{

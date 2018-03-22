@@ -101,6 +101,18 @@
             <option value="-2">JTRASH</option>
         </field>
         <field
+			id="featured"
+			name="featured"
+			type="radio"
+			label="JGLOBAL_FIELD_FEATURED_LABEL"
+			description="JGLOBAL_FIELD_FEATURED_DESC"
+            class="btn-group"    
+			default="0"
+		>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field
             id="language"
             name="language"
             type="contentlanguage"
@@ -757,6 +769,19 @@
             class="inputbox"
 			size="1"
 			default="0"
+        >
+        </field>  
+        <field
+            id="photos"
+            name="photos"
+            type="subform"
+            label="COM_REMCA_HOUSES_FIELD_PHOTOS_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_PHOTOS_DESC"
+            multiple="true"
+			default="[ ]"
+			layout="joomla.form.field.subform.repeatable-table" groupByFieldset="true"
+			formsource="administrator/components/com_remca/models/forms/photo.xml" 
+			type_alias="com_remca.photo" 
         >
         </field>  
     </fieldset>

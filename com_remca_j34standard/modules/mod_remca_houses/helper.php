@@ -65,6 +65,8 @@ abstract class ModHousesHelper
 		$model->setState('filter.language',JLanguageMultilang::isEnabled());
 
 
+		//  Filter by featured
+		$model->setState('filter.featured', $params->get('show_featured'));
 		// Filter by language
 		$model->setState('filter.language', JLanguageMultilang::isEnabled());
 		

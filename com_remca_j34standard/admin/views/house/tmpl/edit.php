@@ -77,6 +77,7 @@ $input = $app->input;
 					<fieldset class="form-vertical">
 						<?php echo $this->form->renderField('catid', null, null, array('group_id' => 'field_catid')); ?>
 						<?php echo $this->form->renderField('state', null, null, array('group_id' => 'field_state')); ?>
+						<?php echo $this->form->renderField('featured', null, null, array('group_id' => 'field_featured')); ?>
 						<?php echo $this->form->renderField('language', null, null, array('group_id' => 'field_language')); ?>
 						<?php if ($this->item->hits) : ?>
 							<?php echo $this->form->renderField('hits', null, null, array('group_id' => 'field_hits')); ?>

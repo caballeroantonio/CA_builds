@@ -114,7 +114,7 @@ $empty = $component->params->get('default_empty_field', '');
 
 		<?php else : ?>
 		<div style="overflow-x:auto;">
-			<table class="table table-striped" id="mls_for_delete">
+			<table class="table table-striped" id="mls_for_delete" style="margin-bottom: 200px;">
 			<?php if ($this->params->get('show_mlsfordelete_headings',1)) :?>
 			<thead>
 				<tr>

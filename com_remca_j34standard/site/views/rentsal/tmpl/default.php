@@ -114,7 +114,7 @@ $empty = $component->params->get('default_empty_field', '');
 
 		<?php else : ?>
 		<div style="overflow-x:auto;">
-			<table class="table table-striped" id="rent_sal">
+			<table class="table table-striped" id="rent_sal" style="margin-bottom: 200px;">
 			<?php if ($this->params->get('show_rentsal_headings',1)) :?>
 			<thead>
 				<tr>

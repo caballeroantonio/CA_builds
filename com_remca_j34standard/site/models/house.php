@@ -116,10 +116,12 @@ class RemcaModelHouse extends JModelItem
 				'owner_id','a.owner_id',
 				'energy_value','a.energy_value',
 				'climate_value','a.climate_value',
+				'photos','a.photos',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				'catid', 'a.catid', 'category_title',
 				'state', 'a.state',
+				'featured', 'a.featured',
 				'language', 'a.language',
 				'hits', 'a.hits',
 				'ordering', 'a.ordering',
@@ -392,6 +394,7 @@ class RemcaModelHouse extends JModelItem
 				{
 					$item->id_currency = array();
 				}
+				
 				
 				
 				

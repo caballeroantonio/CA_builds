@@ -63,6 +63,7 @@ class RemcaModelHouses extends JModelList
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				'catid', 'a.catid', 'category_title',
+				'featured', 'a.featured',
 				'language', 'a.language',
 				'hits', 'a.hits',
 				'rating',
@@ -167,6 +168,11 @@ class RemcaModelHouses extends JModelList
 			$selected_categories = $params->get('filter_house_categories');
 			$this->setState('filter.category_id', $selected_categories);
 		}			
+		if ($params->get('filter_house_featured') <> "")
+		{
+			$this->setState('filter.featured', $params->get('filter_house_featured'));
+			
+		}
 		if ($params->get('filter_house_archived'))
 		{
 			$this->setState('filter.archived', $params->get('filter_house_archived'));
@@ -193,6 +199,7 @@ class RemcaModelHouses extends JModelList
 		$id .= ':'.$this->getState('filter.search');				
 		$id .= ':'.serialize($this->getState('filter.published'));
 		$id .= ':'.$this->getState('filter.archived');			
+		$id .= ':'.$this->getState('filter.featured');
 		$id .= ':'.serialize($this->getState('filter.category_id'));
 		$id .= ':'.serialize($this->getState('filter.category_id.include'));
 		$id	.= ':'.$this->getState('filter.id_country');	
@@ -289,6 +296,23 @@ class RemcaModelHouses extends JModelList
 			}
 		}
 
+		// Filter by featured state
+		$featured = $this->getState('filter.featured');
+		switch ($featured)
+		{
+			case '0':
+				$query->where($db->quoteName('a.featured').' = 0');
+				break;
+
+			case '1':
+				$query->where($db->quoteName('a.featured').' = 1');
+				break;
+
+			default:
+				// Normally we do not discriminate
+				// between featured/unfeatured items.
+				break;
+		}
 		
 		// Filter by and return name for id_country level.
 		$query->select($db->quoteName('c1.name').' AS c1_country_name');
@@ -536,6 +560,7 @@ class RemcaModelHouses extends JModelList
 				{
 					$item->id_currency = array();
 				}
+				
 				
 				
 				

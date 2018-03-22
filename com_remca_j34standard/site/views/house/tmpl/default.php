@@ -254,6 +254,7 @@ $empty = $component->params->get('default_empty_field', '');
 								($params->get('show_house_owner_id')) OR 
 								($params->get('show_house_energy_value')) OR 
 								($params->get('show_house_climate_value')) OR 
+								($params->get('show_house_photos')) OR 
 								$dummy
 								);
 			?>
@@ -922,6 +923,18 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
+						<?php if ($params->get('show_house_photos')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_PHOTOS_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->photos != '' ? $this->item->photos : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
 					</div>
 			<?php if ($display_fieldset) : ?>				
 				</fieldset>	
@@ -997,6 +1010,23 @@ $empty = $component->params->get('default_empty_field', '');
 								endswitch;
 							?>
 						</span>	
+					</div>
+					<div class="formelm">
+						<label>
+							<?php echo JText::_('COM_REMCA_FIELD_FEATURED_LABEL'); ?>
+						</label>
+						<span>
+							<?php 
+								switch ($this->item->featured) :
+									case '0':
+										echo JText::_('JNO');
+										break;
+									case '1':
+										echo JText::_('JYES');
+										break;
+								endswitch;
+							?>
+						</span>						
 					</div>
 					<div class="formelm">
 						<label>

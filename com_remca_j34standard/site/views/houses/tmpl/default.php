@@ -138,7 +138,7 @@ $empty = $component->params->get('default_empty_field', '');
 
 		<?php else : ?>
 		<div style="overflow-x:auto;">
-			<table class="table table-striped" id="houses">
+			<table class="table table-striped" id="houses" style="margin-bottom: 200px;">
 			<?php if ($this->params->get('show_house_headings',1)) :?>
 			<thead>
 				<tr>
@@ -426,6 +426,11 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_house_climate_value',1)) : ?>
 						<th class="list-climate_value" id="tableOrderingclimate_value">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_CLIMATE_VALUE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_house_photos',1)) : ?>
+						<th class="list-photos" id="tableOrderingphotos">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PHOTOS'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_ordering',0)) : ?>
@@ -903,6 +908,13 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-climate_value">
 							<?php 
 								echo $item->climate_value != '' ? $item->climate_value : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_house_photos',1)) : ?>
+						<td class="list-photos">
+							<?php 
+								echo $item->photos != '' ? $item->photos : $empty;
 							?>
 						</td>
 					<?php endif; ?>

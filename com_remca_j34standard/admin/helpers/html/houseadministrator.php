@@ -103,4 +103,36 @@ abstract class JHtmlHouseAdministrator
 		}
 		return $html;
 	}
+	/**
+	 * Show the feature/unfeature links
+	 *
+	 * @param   int      $value      The state value
+	 * @param   int      $i          Row number
+	 * @param   boolean  $can_change  Is user allowed to change?
+	 *
+	 * @return  string       HTML code
+	 */
+	public static function featured($value = 0, $i, $can_change = true)
+	{
+		JHtml::_('bootstrap.tooltip');
+			
+		// Array of image, task, title, action
+		$states	= array(
+			0	=> array('unfeatured', 'houses.featured', 'COM_REMCA_HOUSES_UNFEATURED', 'JGLOBAL_TOGGLE_FEATURED'),
+			1	=> array('featured', 'houses.unfeatured', 'COM_REMCA_HOUSES_FEATURED', 'JGLOBAL_TOGGLE_FEATURED'),
+		);
+		$state	= JArrayHelper::getValue($states, (int) $value, $states[1]);
+		$icon	= $state[0];
+		if ($can_change)
+		{
+			$html	= '<a href="#" onclick="return listItemTask(\'cb'.$i.'\',\''.$state[1].'\')" class="btn btn-micro hasTooltip' . ($value == 1 ? ' active' : '') . '" title="'.JText::_($state[3]).'"><i class="icon-'
+					. $icon.'"></i></a>';
+		}
+		else
+		{
+			$html	= '<a class="btn btn-micro hasTooltip disabled' . ($value == 1 ? ' active' : '') . '" title="'.JText::_($state[2]).'"><i class="icon-'
+					. $icon.'"></i></a>';
+		}
+		return $html;
+	}
 }

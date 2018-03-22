@@ -268,6 +268,7 @@ $use_def_list = (
 						($params->get('show_house_owner_id')) OR 
 						($params->get('show_house_energy_value')) OR 
 						($params->get('show_house_climate_value')) OR 
+						($params->get('show_house_photos')) OR 
 						$dummy
 						);
 		?>
@@ -717,6 +718,14 @@ $use_def_list = (
 					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_CLIMATE_VALUE_LABEL'); ?></strong>
 					<?php
 						echo $this->item->climate_value != '' ? $this->item->climate_value : $empty;
+					?>
+				</dd>
+			<?php endif; ?>
+			<?php if ($params->get('show_house_photos')) : ?>
+				<dd class="field">
+					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_PHOTOS_LABEL'); ?></strong>
+					<?php
+						echo $this->item->photos != '' ? $this->item->photos : $empty;
 					?>
 				</dd>
 			<?php endif; ?>

@@ -115,7 +115,7 @@ $empty = $component->params->get('default_empty_field', '');
 
 		<?php else : ?>
 		<div style="overflow-x:auto;">
-			<table class="table table-striped" id="photos">
+			<table class="table table-striped" id="photos" style="margin-bottom: 200px;">
 			<?php if ($this->params->get('show_photo_headings',1)) :?>
 			<thead>
 				<tr>

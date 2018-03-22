@@ -188,6 +188,7 @@ class RemcaModelRent extends JModelAdmin
 
 
 
+        
 
 		if (parent::save($data))
 		{

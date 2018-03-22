@@ -1235,6 +1235,28 @@ function getFields(){
 
     */
     $fields['climate_value'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'photos',
+        'FIELD_CODE_NAME' => 'photos',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 42,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=PHOTOS
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` MEDIUMTEXT  photos
+
+                FIELD_NAME_LATEX=photos
+                FIELD_CODE_NAME_LATEX=photos
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['photos'] = $field;
     return $fields;
 }
 
