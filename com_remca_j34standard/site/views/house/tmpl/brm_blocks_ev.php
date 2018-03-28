@@ -15,23 +15,23 @@
 	<meta name="description" content="REM| Cottage | Departamento Preventa 3 Recámaras con Balcón Heriberto Frías #1142 Col. Del Valle" />
 	<meta name="generator" content="Joomla! - Open Source Content Management" />
 	<title>REM| Cottage | Departamento Preventa 3 Recámaras con Balcón Heriberto</title>
-	<link href="/jpruebas/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="http://localhost/jpruebas/index.php?option=com_search&amp;task=view&amp;id=5&amp;catid=50&amp;Itemid=112&amp;format=opensearch" rel="search" title="Search jpruebas" type="application/opensearchdescription+xml" />
+	<link href="templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="index.php?option=com_search&amp;task=view&amp;id=5&amp;catid=50&amp;Itemid=112&amp;format=opensearch" rel="search" title="Search jpruebas" type="application/opensearchdescription+xml" />
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/animate.css" rel="stylesheet" />
-	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/jQuerREL-ui.css" rel="stylesheet" />
-	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/bootstrapREL.css" rel="stylesheet" />
-	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/realestatemanager.css" rel="stylesheet" />
-	<link href="http://localhost/jpruebas//components/com_realestatemanager/TABS/tabcontent.css" rel="stylesheet" />
-	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/swiper.css" rel="stylesheet" />
-	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/jquery.fancyboxREL.min.css" rel="stylesheet" />
-	<link href="http://localhost/jpruebas//components/com_realestatemanager/includes/styleFuncyboxThumbs.css" rel="stylesheet" />
-	<link href="/jpruebas/templates/protostar/css/template.css?eec19618931a41de90d4629367cd5943" rel="stylesheet" />
+	<link href="media/com_remca/includes/animate.css" rel="stylesheet" />
+	<link href="media/com_remca/includes/jquery-ui.css" rel="stylesheet" />
+	<link href="media/com_remca/includes/bootstrapREL.css" rel="stylesheet" />
+	<link href="media/com_remca/includes/realestatemanager.css" rel="stylesheet" />
+	<link href="media/com_remca/TABS//tabcontent.css" rel="stylesheet" />
+	<link href="media/com_remca/includes/swiper.css" rel="stylesheet" />
+	<link href="media/com_remca/includes/jquery.fancyboxREL.min.css" rel="stylesheet" />
+	<link href="media/com_remca/includes/styleFuncyboxThumbs.css" rel="stylesheet" />
+	<link href="templates/protostar/css/template.css?eec19618931a41de90d4629367cd5943" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<link href="http://localhost/jpruebas/modules/mod_socialmedialinksgenius/assets/font-awesome.css" rel="stylesheet" />
-	<link href="http://localhost/jpruebas/modules/mod_socialmedialinksgenius/assets/style.css" rel="stylesheet" />
-	<link href="http://localhost/jpruebas/modules/mod_slogin/tmpl/default/slogin.min.css?v=1" rel="stylesheet" />
+	<link href="modules/mod_socialmedialinksgenius/assets/font-awesome.css" rel="stylesheet" />
+	<link href="modules/mod_socialmedialinksgenius/assets/style.css" rel="stylesheet" />
+	<link href="modules/mod_slogin/tmpl/default/slogin.min.css?v=1" rel="stylesheet" />
 	<style>
 
 	h1, h2, h3, h4, h5, h6, .site-title {
@@ -39,30 +39,30 @@
 	}
 	</style>
 	<script type="application/json" class="joomla-script-options new">{"csrf.token":"7174ff684a63f4785fb5973e96ded581","system.paths":{"root":"\/jpruebas","base":"\/jpruebas"}}</script>
-	<script src="http://localhost/jpruebas//components/com_realestatemanager/includes/functions.js"></script>
-	<script src="/jpruebas/components/com_realestatemanager/lightbox/js/jQuerREL-1.2.6.js"></script>
-	<script src="/jpruebas/components/com_realestatemanager/includes/jQuerREL-ui.js"></script>
-	<script src="http://localhost/jpruebas//components/com_realestatemanager/includes/wishlist.js"></script>
-	<script src="http://localhost/jpruebas//components/com_realestatemanager/includes/jquery.raty.js"></script>
-	<script src="http://localhost/jpruebas//components/com_realestatemanager/TABS/tabcontent.js"></script>
-	<script src="http://localhost/jpruebas//components/com_realestatemanager/includes/swiper.js"></script>
-	<script src="http://localhost/jpruebas//components/com_realestatemanager/includes/jquery.fancyboxREL.min.js"></script>
-	<script src="/jpruebas/media/system/js/mootools-core.js?eec19618931a41de90d4629367cd5943"></script>
-	<script src="/jpruebas/media/system/js/core.js?eec19618931a41de90d4629367cd5943"></script>
-	<script src="/jpruebas/media/system/js/mootools-more.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="media/com_remca/includes/functions.js"></script>
+	<script src="media/com_remca/lightbox/js/jQuerREL-1.2.6.js"></script>
+	<!--<script src="media/com_remca/includes/jquery-ui.js"></script>-->
+	<script src="media/com_remca/includes/wishlist.js"></script>
+	<script src="media/com_remca/includes/jquery.raty.js"></script>
+	<script src="media/com_remca/TABS//tabcontent.js"></script>
+	<script src="media/com_remca/includes/swiper.js"></script>
+	<script src="media/com_remca/includes/jquery.fancyboxREL.min.js"></script>
+	<script src="media/system/js/mootools-core.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="media/system/js/core.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="media/system/js/mootools-more.js?eec19618931a41de90d4629367cd5943"></script>
 	
 
 	<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyD4ZY-54e-nzN0-KejXHkUh-D7bbexDMKk"></script>
 	
-	<script src="/jpruebas/media/jui/js/jquery.min.js?eec19618931a41de90d4629367cd5943"></script>
-	<script src="/jpruebas/media/jui/js/jquery-noconflict.js?eec19618931a41de90d4629367cd5943"></script>
-	<script src="/jpruebas/media/jui/js/jquery-migrate.min.js?eec19618931a41de90d4629367cd5943"></script>
-	<script src="/jpruebas/media/jui/js/bootstrap.min.js?eec19618931a41de90d4629367cd5943"></script>
-	<script src="/jpruebas/templates/protostar/js/template.js?eec19618931a41de90d4629367cd5943"></script>
-	<!--[if lt IE 9]><script src="/jpruebas/media/jui/js/html5.js?eec19618931a41de90d4629367cd5943"></script><![endif]-->
-	<script src="http://localhost/jpruebas/modules/mod_slogin/media/slogin.min.js?v=1"></script>
+	<script src="media/jui/js/jquery.min.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="media/jui/js/jquery-noconflict.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="media/jui/js/jquery-migrate.min.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="media/jui/js/bootstrap.min.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="templates/protostar/js/template.js?eec19618931a41de90d4629367cd5943"></script>
+	<!--[if lt IE 9]><script src="media/jui/js/html5.js?eec19618931a41de90d4629367cd5943"></script><![endif]-->
+	<script src="modules/mod_slogin/media/slogin.min.js?v=1"></script>
 	<script src="//ulogin.ru/js/ulogin.js"></script>
-	<script src="/jpruebas/media/system/js/html5fallback.js?eec19618931a41de90d4629367cd5943"></script>
+	<script src="media/system/js/html5fallback.js?eec19618931a41de90d4629367cd5943"></script>
 	<script>
 		jQuerREL=jQuerREL.noConflict();
 		jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
@@ -84,7 +84,7 @@
 <script type="text/javascript">  
 /* 
  Funcion tomada de:
- C:\xampp\htdocs\jpruebas\components\com_realestatemanager\views\view_house\tmpl\default.php 
+ C:\xampp\htdocs\jpruebas\components\remca\views\view_house\tmpl\default.php 
  TODO: Falta parametrizar datos de mapa
 */
       window.addEvent('domready', function() {
@@ -108,7 +108,7 @@
         if(document.getElementById("map_canvas") != undefined){
           map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
         }
-        var imgCatalogPath = "http://localhost/jpruebas//components/com_realestatemanager/";
+        var imgCatalogPath = "components/remca/";
           var srcForPic = "";
         var image = '';
         if(srcForPic.length){
@@ -293,7 +293,7 @@ function isValidEmail(str){
 
     var unavailableDates = Array();
     
-    jQuerREL(document).ready(function() {
+    jQuery(document).ready(function() {
         var k=0;
         <?php if(!empty($date_NA)){?>
             <?php foreach ($date_NA as $N_A){ ?>
@@ -323,7 +323,7 @@ function isValidEmail(str){
         }
 
 
-        jQuerREL( "#rent_from" ).datepicker(
+        jQuery( "#rent_from" ).datepicker(
         {
           minDate: "+0",
           dateFormat: "<?php echo transforDateFromPhpToJquery();?>",
@@ -331,30 +331,30 @@ function isValidEmail(str){
           onClose: function () {
               jQuerREL.ajax({ 
                   type: "POST",
-                  update: jQuerREL(" #alert_date "),
+                  update: jQuery(" #alert_date "),
                   success: function( data ) {
-                      jQuerREL("#alert_date").html("");
+                      jQuery("#alert_date").html("");
                   }
               });
 
-              var rent_from = jQuerREL(" #rent_from ").val();
-              var rent_until = jQuerREL(" #rent_until ").val();
+              var rent_from = jQuery(" #rent_from ").val();
+              var rent_until = jQuery(" #rent_until ").val();
               jQuerREL.ajax({ 
                   type: "POST",
-                  url: "index.php?option=com_realestatemanager&task=ajax_rent_calcualete"
+                  url: "index.php?option=remca&task=ajax_rent_calcualete"
                     +"&bid=<?php echo $this->item->id; ?>&rent_from="+
                     rent_from+"&rent_until="+rent_until,
                   data: { " #do " : " #1 " },
-                  update: jQuerREL(" #message-here "),
+                  update: jQuery(" #message-here "),
                   success: function( data ) {
-                      jQuerREL("#message-here").html(data);
-                      jQuerREL("#calculated_price").val(data);
+                      jQuery("#message-here").html(data);
+                      jQuery("#calculated_price").val(data);
                   }
               });
           }
         });          
         
-        jQuerREL( "#rent_until" ).datepicker(
+        jQuery( "#rent_until" ).datepicker(
         {
 
           minDate: "+0",
@@ -363,24 +363,24 @@ function isValidEmail(str){
           onClose: function () {
               jQuerREL.ajax({ 
                   type: "POST",
-                  update: jQuerREL(" #alert_date "),
+                  update: jQuery(" #alert_date "),
                   success: function( data ) {
-                      jQuerREL("#alert_date").html("");
+                      jQuery("#alert_date").html("");
                   }
               });
 
-              var rent_from = jQuerREL(" #rent_from ").val();
-              var rent_until = jQuerREL(" #rent_until ").val();
+              var rent_from = jQuery(" #rent_from ").val();
+              var rent_until = jQuery(" #rent_until ").val();
               jQuerREL.ajax({ 
                   type: "POST",
-                  url: "index.php?option=com_realestatemanager&task=ajax_rent_calcualete"
+                  url: "index.php?option=remca&task=ajax_rent_calcualete"
                     +"&bid=<?php echo $this->item->id; ?>&rent_from="+
                     rent_from+"&rent_until="+rent_until,
                   data: { " #do " : " #1 " },
-                  update: jQuerREL(" #message-here "),
+                  update: jQuery(" #message-here "),
                   success: function( data ) {
-                      jQuerREL("#message-here").html(data);
-                      jQuerREL("#calculated_price").val(data);
+                      jQuery("#message-here").html(data);
+                      jQuery("#calculated_price").val(data);
                   }
               });
           }
@@ -447,15 +447,15 @@ function isValidEmail(str){
     } 
 ?>  
 <script  type="text/javascript" charset="utf-8" async defer>
-    jQuerREL(document).ready(function () {
-      jQuerREL('input,textarea').focus(function(){
-        jQuerREL(this).data('placeholder',jQuerREL(this).attr('placeholder'))
-        jQuerREL(this).attr('placeholder','')
-        jQuerREL(this).css('color','#a3a3a3');
-        jQuerREL(this).css('border-color','#ddd');
+    jQuery(document).ready(function () {
+      jQuery('input,textarea').focus(function(){
+        jQuery(this).data('placeholder',jQuery(this).attr('placeholder'))
+        jQuery(this).attr('placeholder','')
+        jQuery(this).css('color','#a3a3a3');
+        jQuery(this).css('border-color','#ddd');
       });
-      jQuerREL('input,textarea').blur(function(){
-        jQuerREL(this).attr('placeholder',jQuerREL(this).data('placeholder'));
+      jQuery('input,textarea').blur(function(){
+        jQuery(this).attr('placeholder',jQuery(this).data('placeholder'));
       });
     });
 
@@ -495,7 +495,7 @@ if ($my->id == $this->item->owner_id && $my->id != '' || $isroot):
 
     global $option;
 
-    if ($option != 'com_realestatemanager') {
+    if ($option != 'remca') {
         $form_action = "index.php?option=" . $option .
          "&task=edit_house&Itemid=" . $Itemid ;
 
@@ -503,7 +503,7 @@ if ($my->id == $this->item->owner_id && $my->id != '' || $isroot):
 
     else
 
-      $form_action = "index.php?option=com_realestatemanager&task=edit_house&Itemid=" . $Itemid;
+      $form_action = "index.php?option=remca&task=edit_house&Itemid=" . $Itemid;
     ?>
 
 <?php endif;?>
@@ -616,7 +616,7 @@ if ($imageURL == '') $imageURL = JText::_('_REALESTATE_MANAGER_NO_PICTURE_BIG');
     //    $realestatemanager_configuration['fotomain']['high']);
 
      $file_name = $imageURL;
-    $file = $mosConfig_live_site . '/components/com_realestatemanager/photos/' . $file_name;
+    $file = $mosConfig_live_site . '/components/remca/photos/' . $file_name;
 echo '<div style="position:relative">';
 if($realestatemanager_configuration['show_house_slider']=='1') {
   $stdClassImage = new stdClass();
@@ -666,12 +666,12 @@ if($realestatemanager_configuration['show_house_slider']=='1') {
 
          ?> 
 
-            <a href="./components/com_realestatemanager/photos/<?php 
+            <a href="components/remca/photos/<?php 
                echo rem_picture_thumbnail($house_photos[$i]->main_img,
                $realestatemanager_configuration['fotomain']['width'],
                $realestatemanager_configuration['fotomain']['high'], $watermark); ?>" data-fancybox="slider" title="photo">
               <img alt="<?php echo $this->item->name; ?>" title="<?php echo $this->item->name; ?>" 
-              src="./components/com_realestatemanager/photos/<?php 
+              src="components/remca/photos/<?php 
                echo rem_picture_thumbnail($house_photos[$i]->main_img,
                $realestatemanager_configuration['fotomain']['width'],
                $realestatemanager_configuration['fotomain']['high'], $watermark); ?>"
@@ -724,12 +724,12 @@ else {
 
          <?php $house_photos[$i]->main_img = str_ireplace('watermark/', '', $house_photos[$i]->main_img) ?>
 
-              <a href="./components/com_realestatemanager/photos/<?php 
+              <a href="components/remca/photos/<?php 
                echo rem_picture_thumbnail($house_photos[$i]->main_img,
                $realestatemanager_configuration['fotomain']['width'],
                $realestatemanager_configuration['fotomain']['high'], $watermark); ?>" data-fancybox="gallery" title="photo" >
                <img alt="<?php echo $this->item->name; ?>" title="<?php echo $this->item->name; ?>" 
-               src="./components/com_realestatemanager/photos/<?php 
+               src="components/remca/photos/<?php 
                echo rem_picture_thumbnail($house_photos[$i]->main_img,
                $realestatemanager_configuration['fotogal']['width'],
                $realestatemanager_configuration['fotogal']['high'], $watermark); ?>" style = "vertical-align:middle;" />
@@ -1272,7 +1272,7 @@ $this->params->set('calendar_show', 1);
                                 <div class="title_rating">
                                     <h4 class="col_title_rev"><?php echo $review->title; ?></h4>
                                     <span class="col_rating_rev">
-                                        <img src="./components/com_realestatemanager/images/rating-<?php
+                                        <img src="components/remca/images/rating-<?php
                                              echo $review->rating; ?>.png" 
                                              alt="<?php echo ($review->rating) / 2; ?>" border="0" align="right"/>
                                     </span>
@@ -1337,9 +1337,9 @@ if ($this->params->get('show_reviews')) {
                     <!-- #### RATING #### -->
                     <?php if (version_compare(JVERSION, "3.0", "ge")): ?>
                     <script type="text/javascript">
-                        os_img_path = '<?php echo $mosConfig_live_site . '/components/com_realestatemanager/images/'; ?>' ;
-                        jQuerREL(document).ready(function(){
-                            jQuerREL('#star').raty({
+                        os_img_path = '<?php echo $mosConfig_live_site . '/components/remca/images/'; ?>' ;
+                        jQuery(document).ready(function(){
+                            jQuery('#star').raty({
                                 starHalf: os_img_path+'star-half.png',
                                 starOff: os_img_path+'star-off.png',
                                 starOn: os_img_path+'star-on.png' 
@@ -1367,7 +1367,7 @@ if ($this->params->get('show_reviews')) {
                                 echo "CHECKED";
                             }
                             ?> alt="Rating" />
-                            <img src="./components/com_realestatemanager/images/rating-<?php echo $k; ?>.png" 
+                            <img src="components/remca/images/rating-<?php echo $k; ?>.png" 
                               alt="<?php echo ($k) / 2; ?>" border="0" /><br />
                                 <?php
                                 $k++;
@@ -1512,11 +1512,11 @@ if ($this->item->listing_type == 1) {
     <?php
      if ($this->item->listing_type == 1) {
       if ($this->params->get('show_rentrequest') && $this->params->get('show_rentstatus')) {
-        if ($option != 'com_realestatemanager') {
+        if ($option != 'remca') {
           $form_action = "index.php?option=" . $option . "&task=save_rent_request&Itemid=" . $Itemid ;
         }
         else {
-          $form_action = "index.php?option=com_realestatemanager&amp;task=save_rent_request&amp;Itemid=" . $Itemid;
+          $form_action = "index.php?option=remca&amp;task=save_rent_request&amp;Itemid=" . $Itemid;
         }
     ?>
       <div id="rem_house_titlebox">
@@ -1659,12 +1659,12 @@ if ($this->item->listing_type == 1) {
     <?php
     if ($this->params->get('show_buyrequest') && $this->params->get('show_buystatus')) {
         global $option;
-        if ($option != 'com_realestatemanager') {
+        if ($option != 'remca') {
             $form_action = "index.php?option=" . $option 
             . "&task=buying_request&Itemid=" 
               . $Itemid ;
         } else
-            $form_action = "index.php?option=com_realestatemanager&amp;task=buying_request&amp;Itemid=" . $Itemid;
+            $form_action = "index.php?option=remca&amp;task=buying_request&amp;Itemid=" . $Itemid;
         ?>
     <div id="rem_house_titlebox">
         <?php echo JText::_('_REALESTATE_MANAGER_LABEL_BUTTON_SEND_MESSAGE'); ?>
@@ -1776,20 +1776,20 @@ if ($this->item->listing_type == 1) {
     prevButton: '#rem_house_galery .swiper-button-prev'
   })
 // fancybox
- jQuerREL('[data-fancybox]').fancybox({
+ jQuery('[data-fancybox]').fancybox({
   thumbs : {
     autoStart : true
   }
 })
 
 
-var width = jQuerREL('#rem_house_galery .swiper-container').width();
-jQuerREL('#rem_house_galery .swiper-container .swiper-slide img').height(width*<?php echo $slider_height; ?>);
-jQuerREL('#rem_house_galery .swiper-container .swiper-slide img').css('object-fit','<?php echo $slider_object_fit; ?>');
+var width = jQuery('#rem_house_galery .swiper-container').width();
+jQuery('#rem_house_galery .swiper-container .swiper-slide img').height(width*<?php echo $slider_height; ?>);
+jQuery('#rem_house_galery .swiper-container .swiper-slide img').css('object-fit','<?php echo $slider_object_fit; ?>');
 
-jQuerREL(window).resize(function(){
-  var width = jQuerREL('#rem_house_galery .swiper-container').width();
-  jQuerREL('#rem_house_galery .swiper-container .swiper-slide img').height(width*<?php echo $slider_height; ?>);
+jQuery(window).resize(function(){
+  var width = jQuery('#rem_house_galery .swiper-container').width();
+  jQuery('#rem_house_galery .swiper-container .swiper-slide img').height(width*<?php echo $slider_height; ?>);
 })
 
 

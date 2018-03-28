@@ -27,7 +27,7 @@
 <extension type="plugin" version="3.4" group="remca" method="upgrade">
     <name>plg_remca_loadmodule</name>
     <author>caballeroantonio</author>
-    <creationDate>March 2018</creationDate>
+    <creationDate>April 2018</creationDate>
     <copyright>
     </copyright>
     <license>

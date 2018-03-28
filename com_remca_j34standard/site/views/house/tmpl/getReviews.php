@@ -23,7 +23,7 @@
                                 <div class="title_rating">
                                     <h4 class="col_title_rev"><?php echo $review->title; ?></h4>
                                     <span class="col_rating_rev">
-                                        <img src="./components/com_realestatemanager/images/rating-<?php
+                                        <img src="media/com_remca/images/rating-<?php
                                              echo $review->rating; ?>.png" 
                                              alt="<?php echo ($review->rating) / 2; ?>" border="0" align="right"/>
                                     </span>
@@ -88,9 +88,9 @@ if ($this->params->get('show_reviews')) {
                     <!-- #### RATING #### -->
                     <?php if (version_compare(JVERSION, "3.0", "ge")): ?>
                     <script type="text/javascript">
-                        os_img_path = '<?php echo $mosConfig_live_site . '/components/com_realestatemanager/images/'; ?>' ;
-                        jQuerREL(document).ready(function(){
-                            jQuerREL('#star').raty({
+                        os_img_path = '<?php echo 'media/com_remca/images/'; ?>' ;
+                        jQuery(function(){
+                            jQuery('#star').raty({
                                 starHalf: os_img_path+'star-half.png',
                                 starOff: os_img_path+'star-off.png',
                                 starOn: os_img_path+'star-on.png' 
@@ -118,7 +118,7 @@ if ($this->params->get('show_reviews')) {
                                 echo "CHECKED";
                             }
                             ?> alt="Rating" />
-                            <img src="./components/com_realestatemanager/images/rating-<?php echo $k; ?>.png" 
+                            <img src="media/com_remca/images/rating-<?php echo $k; ?>.png" 
                               alt="<?php echo ($k) / 2; ?>" border="0" /><br />
                                 <?php
                                 $k++;

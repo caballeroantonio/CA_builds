@@ -8,7 +8,7 @@
  * 
  * Para obtener los valores de las etiquetas del archivo language.ini coloco el
  * compilado de este archivo en admin/views/dashboard/tmpl/ y lo despliego dentro de una vista, ejemplo
- * http://localhost/JPruebas/administrator/index.php?option=com_t396&view=dashboard&layout=borrame
+ * administrator/index.php?option=com_t396&view=dashboard&layout=borrame
  * 
  * el archivo language.ini puede contener carácteres especiales de latex, por lo que habrá que depurar.
  * 
@@ -104,9 +104,6 @@ class Foo {
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_LISTING_TYPE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_LISTING_TYPE_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_PRICE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_PRICE_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ID_CURRENCY_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ID_CURRENCY_DESC'). ' \tabularnewline\hline '. "\r\n";
-    $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HCOUNTRY_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HCOUNTRY_DESC'). ' \tabularnewline\hline '. "\r\n";
-    $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HREGION_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HREGION_DESC'). ' \tabularnewline\hline '. "\r\n";
-    $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HCITY_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HCITY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HZIPCODE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HZIPCODE_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HLOCATION_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HLOCATION_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HLATITUDE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HLATITUDE_DESC'). ' \tabularnewline\hline '. "\r\n";
@@ -116,7 +113,6 @@ class Foo {
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_BATHROOMS_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_BATHROOMS_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_BEDROOMS_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_BEDROOMS_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_CONTACTS_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_CONTACTS_DESC'). ' \tabularnewline\hline '. "\r\n";
-    $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_IMAGE_LINK_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_IMAGE_LINK_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_LISTING_STATUS_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_LISTING_STATUS_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_PROPERTY_TYPE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_PROPERTY_TYPE_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_YEAR_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_YEAR_DESC'). ' \tabularnewline\hline '. "\r\n";

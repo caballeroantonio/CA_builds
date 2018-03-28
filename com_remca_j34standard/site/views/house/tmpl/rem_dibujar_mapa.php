@@ -1,9 +1,8 @@
+<?php
   if($realestatemanager_configuration['street_view']['show']){
     ?>
     <script type="text/javascript">  
-      window.addEvent('domready', function() {
-        initialize();
-      });
+      jQuery( initialize );
       var map;
       var myLatlng=new google.maps.LatLng(<?php
         if ($house->hlatitude && $house->hlatitude != '')
@@ -36,8 +35,7 @@
         if(document.getElementById("map_canvas") != undefined){
           map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
         }
-        var imgCatalogPath = "<?php echo $mosConfig_live_site;
-         ?>/components/com_realestatemanager/";
+        var imgCatalogPath = "components/remca/";
   <?php
         $newArr = explode(",", _REALESTATE_MANAGER_HOUSE_MARKER);
         $numPick = '';
@@ -83,9 +81,7 @@
 
     ?>
     <script type="text/javascript">  
-      window.addEvent('domready', function() {
-        initialize();
-      });
+      jQuery( initialize );
       var map;
       var myLatlng=new google.maps.LatLng(<?php
         if ($house->hlatitude && $house->hlatitude != '')
@@ -113,8 +109,7 @@
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-        var imgCatalogPath = "<?php echo $mosConfig_live_site;
-         ?>/components/com_realestatemanager/";
+        var imgCatalogPath = "components/remca/";
   <?php
         $newArr = explode(",", _REALESTATE_MANAGER_HOUSE_MARKER);
         $numPick = '';

@@ -624,36 +624,6 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_house_hcountry"
-            type="radio"
-            label="COM_REMCA_HOUSES_SHOW_FIELD_HCOUNTRY_LABEL"
-            description="COM_REMCA_HOUSES_SHOW_FIELD_HCOUNTRY_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-        >
-            <option	value="1">JSHOW</option>
-            <option	value="0">JHIDE</option>
-        </field>
-        <field name="show_house_hregion"
-            type="radio"
-            label="COM_REMCA_HOUSES_SHOW_FIELD_HREGION_LABEL"
-            description="COM_REMCA_HOUSES_SHOW_FIELD_HREGION_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-        >
-            <option	value="1">JSHOW</option>
-            <option	value="0">JHIDE</option>
-        </field>
-        <field name="show_house_hcity"
-            type="radio"
-            label="COM_REMCA_HOUSES_SHOW_FIELD_HCITY_LABEL"
-            description="COM_REMCA_HOUSES_SHOW_FIELD_HCITY_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-        >
-            <option	value="1">JSHOW</option>
-            <option	value="0">JHIDE</option>
-        </field>
         <field name="show_house_hzipcode"
             type="radio"
             label="COM_REMCA_HOUSES_SHOW_FIELD_HZIPCODE_LABEL"
@@ -738,16 +708,6 @@
             type="radio"
             label="COM_REMCA_HOUSES_SHOW_FIELD_CONTACTS_LABEL"
             description="COM_REMCA_HOUSES_SHOW_FIELD_CONTACTS_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-        >
-            <option	value="1">JSHOW</option>
-            <option	value="0">JHIDE</option>
-        </field>
-        <field name="show_house_image_link"
-            type="radio"
-            label="COM_REMCA_HOUSES_SHOW_FIELD_IMAGE_LINK_LABEL"
-            description="COM_REMCA_HOUSES_SHOW_FIELD_IMAGE_LINK_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -1395,36 +1355,6 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_house_hcountry"
-                type="radio"
-                label="COM_REMCA_HOUSES_LIST_HCOUNTRY_LABEL"
-				description="COM_REMCA_HOUSES_LIST_HCOUNTRY_DESC"
-				class="btn-group"
-				default="1"
-			>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field name="list_show_house_hregion"
-                type="radio"
-                label="COM_REMCA_HOUSES_LIST_HREGION_LABEL"
-				description="COM_REMCA_HOUSES_LIST_HREGION_DESC"
-				class="btn-group"
-				default="1"
-			>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field name="list_show_house_hcity"
-                type="radio"
-                label="COM_REMCA_HOUSES_LIST_HCITY_LABEL"
-				description="COM_REMCA_HOUSES_LIST_HCITY_DESC"
-				class="btn-group"
-				default="1"
-			>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
             <field name="list_show_house_hzipcode"
                 type="radio"
                 label="COM_REMCA_HOUSES_LIST_HZIPCODE_LABEL"
@@ -1509,16 +1439,6 @@
                 type="radio"
                 label="COM_REMCA_HOUSES_LIST_CONTACTS_LABEL"
 				description="COM_REMCA_HOUSES_LIST_CONTACTS_DESC"
-				class="btn-group"
-				default="1"
-			>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field name="list_show_house_image_link"
-                type="radio"
-                label="COM_REMCA_HOUSES_LIST_IMAGE_LINK_LABEL"
-				description="COM_REMCA_HOUSES_LIST_IMAGE_LINK_DESC"
 				class="btn-group"
 				default="1"
 			>

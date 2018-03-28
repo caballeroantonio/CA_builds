@@ -543,27 +543,11 @@ class RemcaModelHouses extends JModelList
 				
 				if (isset($item->id_currency) AND $item->id_currency !='')
 				{
-					$sql = 'SELECT '.$db->quoteName('list.id').' AS id, '.$db->quoteName('list.currency').' AS value FROM (SELECT id, CONCAT_WS(\' - \', iso2, currency) \'currency\' FROM #__rem_countries WHERE published_cur) AS list';
+					$sql = 'SELECT '.$db->quoteName('list.currency').' AS value FROM (SELECT id, CONCAT_WS(\' - \', iso2, currency) \'currency\' FROM #__rem_countries WHERE published_cur) AS list';
 					$sql .= ' WHERE '.$db->quoteName('list.id').' IN ('.JString::trim($item->id_currency, ',').');';
-
-					$db->setQuery($sql);
-					
-					$rows = $db->loadAssocList();
-					$result_array = array();
-					foreach ($rows as $row)
-					{
-						$result_array[] = $row;
-					}					
-					$item->id_currency = $result_array;
+					$db->setQuery($sql);				
+					$item->id_currency = $db->loadResult();
 				}
-				else
-				{
-					$item->id_currency = array();
-				}
-				
-				
-				
-				
 				
 				
 				

@@ -72,7 +72,7 @@ class RemcaHelper extends JHelperContent
                     <?php echo $currentcat->descrip; ?>
                 </td>     
                 <td width="120" align="center">
-                    <img src="./components/com_realestatemanager/images/rem_logo.png"
+                    <img src="media/com_remca/images/rem_logo.png"
                      align="right" alt="Real Estate Manager logo"/>
                 </td>
             </tr>
@@ -94,7 +94,7 @@ class RemcaHelper extends JHelperContent
     static function displayHouses(&$rows, $currentcat, &$params, $tabclass, $catid, $categories, &$pageNav = null, $is_exist_sub_categories=false, $option, $layout = "default", $type = "alone_category") {
         global  $Itemid;  
         $type = 'alone_category';
-        require getLayoutPath::getLayoutPathCom('com_realestatemanager', $type, $layout);
+        require getLayoutPath::getLayoutPathCom('remca', $type, $layout);
     }    
 
     static function displaySearchHouses(&$rows, $currentcat, &$params, $tabclass, $catid, $categories, &$pageNav = null, $is_exist_sub_categories=false, $option, $layout = "default", $layoutsearch = "default") {
@@ -104,7 +104,7 @@ class RemcaHelper extends JHelperContent
         if($params->get('search_form_on_result_search_page_show')){
           PHP_realestatemanager::showSearchHouses($option, $catid, $option, $layoutsearch);  
         }
-        require getLayoutPath::getLayoutPathCom('com_realestatemanager', $type, $layout);
+        require getLayoutPath::getLayoutPathCom('remca', $type, $layout);
     }
 
 
@@ -115,7 +115,7 @@ class RemcaHelper extends JHelperContent
      & $house_photos,$videos,$tracks, $id, $catid, $option, & $house_feature, & $currencys_price, $layout = "default") {
         
         $type = 'view_house';
-        require getLayoutPath::getLayoutPathCom('com_realestatemanager', $type, $layout);
+        require getLayoutPath::getLayoutPathCom('remca', $type, $layout);
     }
 
     
@@ -126,14 +126,14 @@ class RemcaHelper extends JHelperContent
     static function showCategories(&$params, &$categories, &$catid, &$tabclass, &$currentcat, $layout) {
         
         $type = 'all_categories';
-        require getLayoutPath::getLayoutPathCom('com_realestatemanager', $type, $layout);
+        require getLayoutPath::getLayoutPathCom('remca', $type, $layout);
     }
     //30.06.17
     static function showSearchButton() {
         
         ?>
         <form action="<?php
-         echo sefRelToAbs("index.php?option=com_realestatemanager&amp;task=show_search_house"); ?>" method="post" name="search_button" enctype="multipart/form-data">
+         echo sefRelToAbs("index.php?option=remca&amp;task=show_search_house"); ?>" method="post" name="search_button" enctype="multipart/form-data">
             <input  type="submit" name="submit" value="<?php
              echo JText::_( '_REALESTATE_MANAGER_LABEL_SEARCH'); ?>" class="button"/>
         </form>
@@ -159,7 +159,7 @@ class RemcaHelper extends JHelperContent
           $layout = $params->get('showsearchhouselayout');
         }
         $type = "show_search_house";
-        require getLayoutPath::getLayoutPathCom('com_realestatemanager', $type, $layout);
+        require getLayoutPath::getLayoutPathCom('remca', $type, $layout);
     }
 
     /////////////////////////////////////
@@ -170,15 +170,15 @@ class RemcaHelper extends JHelperContent
     static function showTabs(&$params, &$userid, &$username, &$comprofiler, &$option) {
 
         
-        self::$doc->addStyleSheet('components/com_realestatemanager/TABS/tabcontent.css');
-        self::$doc->addScript('components/com_realestatemanager/TABS/tabcontent.js');
+        self::$doc->addStyleSheet('components/remca/TABS/tabcontent.css');
+        self::$doc->addScript('components/remca/TABS/tabcontent.js');
 
 
 ?>
 
          <?php 
         if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-1.2.6.js") === false ) {
-        self::$doc->addScript(JURI::root(true) . '/components/com_realestatemanager/lightbox/js/jQuerREL-1.2.6.js');
+        self::$doc->addScript('media/com_remca/lightbox/js/jQuerREL-1.2.6.js');
         } 
     ?>
         <script type="text/javascript">jQuerREL=jQuerREL.noConflict();</script>
@@ -235,15 +235,15 @@ class RemcaHelper extends JHelperContent
             </ul>
         </div>
 <script type="text/javascript">
-    jQuerREL(document).ready(function(){
-        var atr = jQuerREL("#adminForm div:first-child").attr("id");
+    jQuery(document).ready(function(){
+        var atr = jQuery("#adminForm div:first-child").attr("id");
         if(!atr){
-            atr = jQuerREL("#adminForm table:first-child").attr("id");
+            atr = jQuery("#adminForm table:first-child").attr("id");
         }
-        jQuerREL("#countrytabs > li > a."+atr).addClass("selected");
-         jQuerREL("#countrytabs > li > a").click(function(){
-             jQuerREL("#countrytabs > li > a").removeClass("selected");
-             jQuerREL(this).addClass("selected");
+        jQuery("#countrytabs > li > a."+atr).addClass("selected");
+         jQuery("#countrytabs > li > a").click(function(){
+             jQuery("#countrytabs > li > a").removeClass("selected");
+             jQuery(this).addClass("selected");
         });
     });
 
@@ -258,9 +258,9 @@ class RemcaHelper extends JHelperContent
                 
 
                 //require(JPATH_SITE.
-                // "/components/com_realestatemanager/views/my_houses/tmpl/".$layout.".php");
+                // "/components/remca/views/my_houses/tmpl/".$layout.".php");
                 $type = 'my_houses';
-                require getLayoutPath::getLayoutPathCom('com_realestatemanager', $type, $layout);
+                require getLayoutPath::getLayoutPathCom('remca', $type, $layout);
             }
 
            static function showRentHouses($option, $house1, $rows, & $userlist, $type) {
@@ -268,7 +268,7 @@ class RemcaHelper extends JHelperContent
         ?>
         <?php 
         if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-1.2.6.js") === false ) {
-        self::$doc->addScript(JURI::root(true) . '/components/com_realestatemanager/lightbox/js/jQuerREL-1.2.6.js');
+        self::$doc->addScript('media/com_remca/lightbox/js/jQuerREL-1.2.6.js');
         } 
     ?>
         <script type="text/javascript">jQuerREL=jQuerREL.noConflict();</script>
@@ -276,15 +276,15 @@ class RemcaHelper extends JHelperContent
 
         <?php 
 
-            if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-ui.js") === false ) {
-            self::$doc->addScript(JURI::root(true) . 'components/com_realestatemanager/includes/jQuerREL-ui.js');
-            }
+//            if(RemcaHelper::checkJavaScriptIncludedRE('jquery-ui.js') === false ) {
+//            self::$doc->addScript(JURI::root(true) . 'media/com_remca/includes/jquery-ui.js');
+//            }
 
         ?>
 
       <?php
-        self::$doc->addScript('components/com_realestatemanager/includes/functions.js');
-        self::$doc->addStyleSheet('components/com_realestatemanager/includes/realestatemanager.css');
+        self::$doc->addScript('media/com_remca/includes/functions.js');
+        self::$doc->addStyleSheet('media/com_remca/includes/realestatemanager.css');
         ?>
         <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
         <form action="index.php" method="get" name="adminForm" id="adminForm">
@@ -308,23 +308,23 @@ class RemcaHelper extends JHelperContent
 
 
                 <script type="text/javascript">
-                jQuerREL(document).ready(function($) {
+                jQuery(document).ready(function($) {
 
-                  jQuerREL('#userid').change(function(event) {
+                  jQuery('#userid').change(function(event) {
 
-                    if(jQuerREL(this).val() == '-1'){
-                      jQuerREL('.my_real [name=user_name]').val('');
-                      jQuerREL('.my_real [name=user_email]').val('');
-                      jQuerREL('[name=user_name], [name=user_email]').removeAttr('readonly');
+                    if(jQuery(this).val() == '-1'){
+                      jQuery('.my_real [name=user_name]').val('');
+                      jQuery('.my_real [name=user_email]').val('');
+                      jQuery('[name=user_name], [name=user_email]').removeAttr('readonly');
                     }else{
                       jQuerREL.ajax({
                         type: "POST",
-                        url: "index.php?option=com_realestatemanager&task=getUserData&userId="+jQuerREL(this).val()+"&format=raw",
+                        url: "index.php?option=remca&task=getUserData&userId="+jQuery(this).val()+"&format=raw",
                         success: function(user){
                           var user = jQuerREL.parseJSON(user);
-                          jQuerREL('[name=user_name], [name=user_email]').attr('readonly','readonly');
-                          jQuerREL('.my_real [name=user_name]').val(user.name);
-                          jQuerREL('.my_real [name=user_email]').val(user.email);
+                          jQuery('[name=user_name], [name=user_email]').attr('readonly','readonly');
+                          jQuery('.my_real [name=user_name]').val(user.name);
+                          jQuery('.my_real [name=user_email]').val(user.email);
                         }
                       });
                     }
@@ -358,7 +358,7 @@ class RemcaHelper extends JHelperContent
           ?>  
                <script language="javascript" type="text/javascript">
                   var unavailableDates = Array();
-                  jQuerREL(document).ready(function() {
+                  jQuery(document).ready(function() {
                       //var unavailableDates = Array();
                       var k=0;
                       <?php if(!empty($date_NA)){?>
@@ -388,14 +388,14 @@ class RemcaHelper extends JHelperContent
                           }
                       }
 
-                      jQuerREL( "#rent_from" ).datepicker(
+                      jQuery( "#rent_from" ).datepicker(
                       {
                         minDate: "+0",
                         dateFormat: "<?php echo RemcaHelper::transforDateFromPhpToJquery();?>",
                         beforeShowDay: unavailableFrom,
                       });
 
-                      jQuerREL( "#rent_until" ).datepicker(
+                      jQuery( "#rent_until" ).datepicker(
                       {
                         minDate: "+0",
                         dateFormat: "<?php echo RemcaHelper::transforDateFromPhpToJquery();?>",
@@ -554,7 +554,7 @@ class RemcaHelper extends JHelperContent
             <input type="hidden" name="save" value="1" />
             <input type="hidden" name="boxchecked" value="1" />
                 <?php
-                if ($option != "com_realestatemanager") {
+                if ($option != "remca") {
                     ?>
                 <input type="hidden" name="is_show_data" value="1" />
                     <?php
@@ -583,7 +583,7 @@ class RemcaHelper extends JHelperContent
     ?>
      <?php 
         if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-1.2.6.js") === false ) {
-        self::$doc->addScript(JURI::root(true) . '/components/com_realestatemanager/lightbox/js/jQuerREL-1.2.6.js');
+        self::$doc->addScript('media/com_remca/lightbox/js/jQuerREL-1.2.6.js');
         } 
     ?>
     <script type="text/javascript">jQuerREL=jQuerREL.noConflict();</script>
@@ -592,9 +592,9 @@ class RemcaHelper extends JHelperContent
 
     <?php 
 
-      if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-ui.js") === false ) {
-        self::$doc->addScript(JURI::root(true) . '/components/com_realestatemanager/includes/jQuerREL-ui.js');
-      }
+//      if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-ui.js") === false ) {
+//        self::$doc->addScript(JURI::root(true) . '/media/com_remca/includes/jquery-ui.js');
+//      }
 
 
      ?>
@@ -604,14 +604,14 @@ class RemcaHelper extends JHelperContent
     <?php
 
 
-    self::$doc->addScript('components/com_realestatemanager/includes/functions.js');
-    self::$doc->addStyleSheet('components/com_realestatemanager/includes/realestatemanager.css');
+    self::$doc->addScript('media/com_remca/includes/functions.js');
+    self::$doc->addStyleSheet('media/com_remca/includes/realestatemanager.css');
     ?>
 
  <!--///////////////////////////////calendar///////////////////////////////////////-->
   <script language="javascript" type="text/javascript">
-    jQuerREL(document).ready(function() {
-        jQuerREL( "#rent_from, #rent_until" ).datepicker(
+    jQuery(document).ready(function() {
+        jQuery( "#rent_from, #rent_until" ).datepicker(
         {
           dateFormat: "<?php echo RemcaHelper::transforDateFromPhpToJquery();?>",
         });
@@ -651,23 +651,23 @@ class RemcaHelper extends JHelperContent
                 </div>
 
                 <script type="text/javascript">
-                jQuerREL(document).ready(function($) {
+                jQuery(document).ready(function($) {
 
-                  jQuerREL('#userid').change(function(event) {
+                  jQuery('#userid').change(function(event) {
 
-                    if(jQuerREL(this).val() == '-1'){
-                      jQuerREL('.my_real [name=user_name]').val('');
-                      jQuerREL('.my_real [name=user_email]').val('');
-                      jQuerREL('[name=user_name], [name=user_email]').removeAttr('readonly');
+                    if(jQuery(this).val() == '-1'){
+                      jQuery('.my_real [name=user_name]').val('');
+                      jQuery('.my_real [name=user_email]').val('');
+                      jQuery('[name=user_name], [name=user_email]').removeAttr('readonly');
                     }else{
                       jQuerREL.ajax({
                         type: "POST",
-                        url: "index.php?option=com_realestatemanager&task=getUserData&userId="+jQuerREL(this).val()+"&format=raw",
+                        url: "index.php?option=remca&task=getUserData&userId="+jQuery(this).val()+"&format=raw",
                         success: function(user){
                           var user = jQuerREL.parseJSON(user);
-                          jQuerREL('[name=user_name], [name=user_email]').attr('readonly','readonly');
-                          jQuerREL('.my_real [name=user_name]').val(user.name);
-                          jQuerREL('.my_real [name=user_email]').val(user.email);
+                          jQuery('[name=user_name], [name=user_email]').attr('readonly','readonly');
+                          jQuery('.my_real [name=user_name]').val(user.name);
+                          jQuery('.my_real [name=user_email]').val(user.email);
                         }
                       });
                     }
@@ -839,7 +839,7 @@ class RemcaHelper extends JHelperContent
             <input type="hidden" name="save" value="1" />
             <input type="hidden" name="boxchecked" value="1" />
             <?php
-            if ($option != "com_realestatemanager") {
+            if ($option != "remca") {
             ?>
                 <input type="hidden" name="is_show_data" value="1" />
             <?php
@@ -869,7 +869,7 @@ class RemcaHelper extends JHelperContent
         global $my, $Itemid,  $mainframe;
         $session = JFactory::getSession();
         $arr = $session->get("array", "default");
-        self::$doc->addStyleSheet('components/com_realestatemanager/includes/realestatemanager.css');
+        self::$doc->addStyleSheet('media/com_remca/includes/realestatemanager.css');
         ?>
         <form action="index.php" method="get" name="adminForm" id="adminForm">
             <table id="my_houses_history" class="table_64 basictable">
@@ -921,8 +921,8 @@ class RemcaHelper extends JHelperContent
 		
         $session = JFactory::getSession();
         $arr = $session->get("array", "default");
-        self::$doc->addScript('components/com_realestatemanager/includes/functions.js');
-        self::$doc->addStyleSheet('components/com_realestatemanager/includes/realestatemanager.css');
+        self::$doc->addScript('media/com_remca/includes/functions.js');
+        self::$doc->addStyleSheet('media/com_remca/includes/realestatemanager.css');
         ?>
         <form action="index.php" method="get" name="adminForm" id="adminForm">
             <table id="my_houses_rent" cellpadding="4" cellspacing="0"
@@ -1012,7 +1012,7 @@ class RemcaHelper extends JHelperContent
 
             <input type="hidden" name="option" value="<?php echo $option; ?>" />
         <?php
-        if ($option != "com_realestatemanager") {
+        if ($option != "remca") {
             ?>
                 <input type="hidden" name="is_show_data" value="1" />
             <?php
@@ -1031,7 +1031,7 @@ class RemcaHelper extends JHelperContent
 
  static function listCategories(&$params, $cat_all, $catid, $tabclass, $currentcat) {
                 global $Itemid;
-                self::$doc->addStyleSheet('components/com_realestatemanager/includes/realestatemanager.css');
+                self::$doc->addStyleSheet('media/com_remca/includes/realestatemanager.css');
                 ?>
         <?php RemcaHelper::positions_rem($params->get('allcategories04')); ?>
         <div class="basictable table_58">
@@ -1061,14 +1061,14 @@ class RemcaHelper extends JHelperContent
         global $g_item_count;
         
 
-        self::$doc->addStyleSheet('components/com_realestatemanager/includes/realestatemanager.css');
+        self::$doc->addStyleSheet('media/com_remca/includes/realestatemanager.css');
 
         $deep++;
         for ($i = 0; $i < count($cat_all); $i++) {
             if (($id == $cat_all[$i]->parent_id) && ($cat_all[$i]->display == 1)) {
                 $g_item_count++;
 
-                $link = 'index.php?option=com_realestatemanager&amp;task=showCategory&amp;catid='
+                $link = 'index.php?option=remca&amp;task=showCategory&amp;catid='
                    . $cat_all[$i]->id . '&amp;Itemid=' . $Itemid;
                 ?>
                 <div class="table_59 <?php echo $tabclass[($g_item_count % 2)]; ?>">
@@ -1085,13 +1085,13 @@ class RemcaHelper extends JHelperContent
                     </span>
                     <span class="col_01">
                 <?php if (($params->get('show_cat_pic')) && ($cat_all[$i]->image != "")) { ?>
-                            <img src="./images/stories/<?php echo $cat_all[$i]->image; ?>"
+                            <img src="images/stories/<?php echo $cat_all[$i]->image; ?>"
                                alt="picture for subcategory" height="48" width="48" />&nbsp;
                     <?php } else {
                     ?>
                             <a <?php echo "href='" . sefRelToAbs($link) . "'"; ?> class="category<?php
                              echo $params->get('pageclass_sfx'); ?>" style="text-decoration: none"><img
-                              src="./components/com_realestatemanager/images/folder.png"
+                              src="media/com_remca/images/folder.png"
                                alt="picture for subcategory" height="48" width="48" /></a>&nbsp;
                 <?php } ?>
                     </span>
@@ -1145,7 +1145,7 @@ class RemcaHelper extends JHelperContent
         {
     //print_r($id . ':::::' . $cat_all[$i]->parent_id . ':::::' . $cat_all[$i]->display . '::::' . $tabclass[($g_item_count % 2)]);
           $g_item_count++;
-          $link = 'index.php?option=com_realestatemanager&amp;task=alone_category&amp;catid=' .
+          $link = 'index.php?option=remca&amp;task=alone_category&amp;catid=' .
           $cat_all[$i]->id . '&amp;Itemid=' . $Itemid;
     ?>
         <div class="row_img REL-collumn-lg-4 REL-collumn-md-4 REL-collumn-sm-6 REL-collumn-xs-12 <?php echo $tabclass[($g_item_count % 2)]; ?>">
@@ -1157,7 +1157,7 @@ class RemcaHelper extends JHelperContent
                   echo $params->get('pageclass_sfx'); ?>" style="text-decoration: none; " >
 
    <?php if (($params->get('show_cat_pic')) && ($cat_all[$i]->image != "")) { ?>
-                            <img src="./images/stories/<?php echo $cat_all[$i]->image; ?>"
+                            <img src="images/stories/<?php echo $cat_all[$i]->image; ?>"
                                alt="picture for subcategory" height="48" width="48" />
                     <?php } 
                     ?>
@@ -1170,13 +1170,13 @@ class RemcaHelper extends JHelperContent
                 <a href="<?php echo sefRelToAbs($link);?>" class="category<?php
                   echo $params->get('pageclass_sfx'); ?> cat_img" style="text-decoration: none; " >
                   <?php
-                  if(!file_exists(JPATH_SITE . '/components/com_realestatemanager/photos/folder.png'))
-                    copy ( JPATH_SITE."/components/com_realestatemanager/images/folder.png" ,
-                        JPATH_SITE . '/components/com_realestatemanager/photos/folder.png');
+                  if(!file_exists(JPATH_SITE . '/media/com_remca/photos/folder.png'))
+                    copy ( JPATH_SITE."/media/com_remca/images/folder.png" ,
+                        JPATH_SITE . '/media/com_remca/photos/folder.png');
                 $file_name = self::rem_picture_thumbnail( 'folder.png',
                   self::$params->get('fotogallery_high',100),
                   self::$params->get('fotogallery_width',100));
-                $file='components/com_realestatemanager/photos/'. $file_name;
+                $file='media/com_remca/photos/'. $file_name;
                 echo '<img alt="picture for subcategory" title="'.$cat_all[$i]->title.'" src="' .$file. '">';
                 ?>
             </a>
@@ -1206,8 +1206,8 @@ class RemcaHelper extends JHelperContent
         global $my,  $mainframe;
         $session = JFactory::getSession();
         $arr = $session->get("array", "default");
-        self::$doc->addScript('components/com_realestatemanager/includes/functions.js');
-        self::$doc->addStyleSheet('components/com_realestatemanager/includes/realestatemanager.css');
+        self::$doc->addScript('media/com_remca/includes/functions.js');
+        self::$doc->addStyleSheet('media/com_remca/includes/realestatemanager.css');
         ?>
         <form action="index.php" method="get" name="adminForm" id="adminForm">
 
@@ -1266,7 +1266,7 @@ class RemcaHelper extends JHelperContent
 
             <input type="hidden" name="option" value="<?php echo $option; ?>" />
         <?php
-        if ($option != "com_realestatemanager") {
+        if ($option != "remca") {
             ?>
                 <input type="hidden" name="is_show_data" value="1" />
             <?php
@@ -1288,14 +1288,13 @@ class RemcaHelper extends JHelperContent
     $layout = $params->get('house_layout', 'default');
     global   $Itemid;
 	 
-          $gmaps_api_key = self::$params->get('gmaps_api_key') ? "key=" . self::$params->get('gmaps_api_key') : JFactory::getApplication()->enqueueMessage("<a target='_blank' href='//developers.google.com/maps/documentation/geocoding/get-api-key'>" . JText::_( '_REALESTATE_MANAGER_GOOGLEMAP_API_KEY_LINK_MESSAGE') . "</a>", JText::_( '_REALESTATE_MANAGER_GOOGLEMAP_API_KEY_ERROR')); 
-          self::$doc->addScript("//maps.googleapis.com/maps/api/js?$gmaps_api_key"); ?>
+?>
 
 
       <script type="text/javascript">
-	  jQuery( initialize2 );
+	  jQuery( initialize );
 
-      function initialize2(){
+      function initialize(){
           var map;
           var marker = new Array();
           var myOptions = {
@@ -1305,7 +1304,7 @@ class RemcaHelper extends JHelperContent
               },
               mapTypeId: google.maps.MapTypeId.ROADMAP
           };
-          var imgCatalogPath = "components/com_realestatemanager/";
+          var imgCatalogPath = "components/remca/";
           var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
           var bounds = new google.maps.LatLngBounds ();
 
@@ -1365,8 +1364,12 @@ class RemcaHelper extends JHelperContent
                 ?>
                 var title =  "<?php echo $name ?>";
                 <?php 
+                $rows[$i]->photos = json_decode($rows[$i]->photos);
                   //for local images
-                  $imageURL = ($rows[$i]->image_link);
+                if(isset($rows[$i]->photos[0]))
+                  $imageURL = $rows[$i]->photos[0];
+                else
+                  $imageURL = '';  
 
                   if ($imageURL == '') $imageURL = _REALESTATE_MANAGER_NO_PICTURE_BIG;
 
@@ -1376,7 +1379,7 @@ class RemcaHelper extends JHelperContent
                         self::$params->get('fotogal_width',100),
                         self::$params->get('fotogal_high',100), $watermark);
                       
-                      $file = 'components/com_realestatemanager/photos/' . $file_name;
+                      $file = 'media/com_remca/photos/' . $file_name;
                 ?>
                 var imgUrl =  "<?php echo $file; ?>";
                       
@@ -1463,7 +1466,7 @@ class RemcaHelper extends JHelperContent
             // get a list of the menu items
             $query = "SELECT c.*, c.parent_id AS parent"
                     . "\n FROM #__rem_main_categories c"
-                    . "\n WHERE section='com_realestatemanager'"
+                    . "\n WHERE section='remca'"
                     . "\n AND state <> -2"
                     . "\n ORDER BY ordering";
             self::$db->setQuery($query);
@@ -1938,23 +1941,23 @@ class RemcaHelper extends JHelperContent
       function REMaddSubMenuRealEstate($vName) {
         if (!defined('_HEADER_NUMBER')) loadConstRem();
           JSubMenuHelper::addEntry(JText::_(_HEADER_NUMBER),
-           'index.php?option=com_realestatemanager', $vName == 'Houses');
+           'index.php?option=remca', $vName == 'Houses');
           JSubMenuHelper::addEntry(JText::_(_CATEGORIES_NAME),
-           'index.php?option=com_realestatemanager&section=categories', $vName == 'Categories');
+           'index.php?option=remca&section=categories', $vName == 'Categories');
           JSubMenuHelper::addEntry(JText::_(_REALESTATE_MANAGER_ADMIN_RENT_REQUESTS),
-           'index.php?option=com_realestatemanager&task=rent_requests', $vName == 'Rent Requests');
+           'index.php?option=remca&task=rent_requests', $vName == 'Rent Requests');
           JSubMenuHelper::addEntry(JText::_(_REALESTATE_MANAGER_ADMIN_RENT_HISTORY),
-           'index.php?option=com_realestatemanager&task=users_rent_history', $vName == 'Users Booking History');
+           'index.php?option=remca&task=users_rent_history', $vName == 'Users Booking History');
           JSubMenuHelper::addEntry(JText::_(_REALESTATE_MANAGER_ADMIN_SALE_MANAGER_MENU),
-           'index.php?option=com_realestatemanager&task=buying_requests', $vName == 'Sale Manager');
+           'index.php?option=remca&task=buying_requests', $vName == 'Sale Manager');
           JSubMenuHelper::addEntry(JText::_(_REALESTATE_MANAGER_LABEL_FEATURED_MANAGER_FEATURE_MANAGER),
-           'index.php?option=com_realestatemanager&section=featured_manager', $vName == 'Features Manager');
+           'index.php?option=remca&section=featured_manager', $vName == 'Features Manager');
           JSubMenuHelper::addEntry(JText::_(_REALESTATE_MANAGER_LABEL_LANGUAGE_MENU),
-           'index.php?option=com_realestatemanager&section=language_manager', $vName == 'Language Manager');
+           'index.php?option=remca&section=language_manager', $vName == 'Language Manager');
           JSubMenuHelper::addEntry(JText::_(_REALESTATE_MANAGER_ADMIN_LABEL_SETTINGS),
-           'index.php?option=com_realestatemanager&task=config', $vName == 'Settings');
+           'index.php?option=remca&task=config', $vName == 'Settings');
           JSubMenuHelper::addEntry(JText::_(_REALESTATE_MANAGER_ADMIN_ABOUT_ABOUT),
-           'index.php?option=com_realestatemanager&task=about', $vName == 'About');
+           'index.php?option=remca&task=about', $vName == 'About');
         }
 
 //    }
@@ -1964,7 +1967,7 @@ class RemcaHelper extends JHelperContent
         $is_exception = false;
         self::$db->setQuery("SELECT * FROM #__rem_languages");
         $langs = self::$db->loadObjectList();
-        $component_path = JPath::clean(JPATH_SITE . '/components/com_realestatemanager/lang/');
+        $component_path = JPath::clean(JPATH_SITE . '/components/remca/lang/');
         $component_constans = array();
         if (is_dir($component_path) && ($component_constans =
           JFolder::files($component_path, '^[^_]*\.php$', false, true))) {
@@ -1973,7 +1976,7 @@ class RemcaHelper extends JHelperContent
               $file_name = pathinfo($file);
               $file_name = $file_name['filename'];
               if ($file_name === 'constant') {
-                require(JPATH_SITE . "/components/com_realestatemanager/lang/$file_name.php");
+                require(JPATH_SITE . "/components/remca/lang/$file_name.php");
                 foreach ( $constMas as $mas ) {
                   self::$db->setQuery(
                     "INSERT IGNORE INTO #__rem_const (const, sys_type) VALUES ('".
@@ -1990,7 +1993,7 @@ class RemcaHelper extends JHelperContent
               $file_name = $file_name['filename'];
               $LangLocal = '';
               if ($file_name != 'constant') {
-                require(JPATH_SITE . "/components/com_realestatemanager/lang/$file_name.php");
+                require(JPATH_SITE . "/components/remca/lang/$file_name.php");
                 try {
                   self::$db->setQuery("INSERT IGNORE INTO #__rem_languages (lang_code,title) VALUES ('"
                             . $LangLocal['lang_code'] . "','" . $LangLocal['title'] . "')");
@@ -2044,7 +2047,7 @@ class RemcaHelper extends JHelperContent
         }
 
         //if some language file missing recover it
-        $component_path = JPath::clean(JPATH_SITE . '/components/com_realestatemanager/lang/');
+        $component_path = JPath::clean(JPATH_SITE . '/components/remca/lang/');
         $component_constans = array();
         if (is_dir($component_path) && ($component_constans = JFolder::files($component_path, '^[^_]*\.php$', false, true))) {
           foreach ($component_constans as $i => $file) {
@@ -2052,7 +2055,7 @@ class RemcaHelper extends JHelperContent
             $file_name = pathinfo($file);
             $file_name = $file_name['filename'];
             if ($file_name != 'constant') {
-              require(JPATH_SITE . "/components/com_realestatemanager/lang/$file_name.php");
+              require(JPATH_SITE . "/components/remca/lang/$file_name.php");
               //$fileMas[] = $LangLocal;
               $fileMas[] = $LangLocal['title']; 
             }
@@ -2094,7 +2097,7 @@ class RemcaHelper extends JHelperContent
             }
 
             // Write out new initialization file
-            $fd = fopen(JPATH_SITE . "/components/com_realestatemanager/lang/$result.php", "w")
+            $fd = fopen(JPATH_SITE . "/components/remca/lang/$result.php", "w")
              or die("Cannot create language file.");
             fwrite($fd, $langfile);
             fclose($fd);
@@ -3159,10 +3162,10 @@ class RemcaHelper extends JHelperContent
             $ext = str_replace('image/', '', $info['mime']);
 
             if($sWidth == 0 || $tmp_width == 0 ) {
-              $logPath  = JPATH_SITE . "/administrator/components/com_realestatemanager/my_log.log";
+              $logPath  = JPATH_SITE . "/administrator/components/remca/my_log.log";
               file_put_contents($logPath, "  rem_resize_img zero ".$imgSrc."::".$sWidth ."::" . $tmp_width."\n",  FILE_APPEND );
 
-              $imgSrc = JPATH_SITE."/components/com_realestatemanager/photos/"."no-img_eng_big.gif";
+              $imgSrc = JPATH_SITE."/media/com_remca/photos/"."no-img_eng_big.gif";
               $info = getimagesize($imgSrc, $imageinfo);
               $sWidth = $info[0];
               $sHeight = $info[1];
@@ -3317,8 +3320,8 @@ class RemcaHelper extends JHelperContent
           
           //min size in order to adding watermark
 
-          if(!file_exists(JPATH_SITE . '/components/com_realestatemanager/photos/watermark')){
-            mkdir(JPATH_SITE . '/components/com_realestatemanager/photos/watermark','755', true);
+          if(!file_exists(JPATH_SITE . '/media/com_remca/photos/watermark')){
+            mkdir(JPATH_SITE . '/media/com_remca/photos/watermark','755', true);
           }
 
 
@@ -3328,14 +3331,14 @@ class RemcaHelper extends JHelperContent
           $watermark_path = ($watermark) ? 'watermark/' : '';
 
           $params3 = self::$params->get('thumb_param_show');
-          $uploaddir = JPATH_SITE . '/components/com_realestatemanager/photos/';
+          $uploaddir = JPATH_SITE . '/media/com_remca/photos/';
 
           //file name and extention
           if($file === '' || !file_exists(JPATH_SITE .
-               '/components/com_realestatemanager/photos/' . $file)){  
+               '/media/com_remca/photos/' . $file)){  
             $file = 'no-img_eng_big.gif';
           }elseif($watermark){
-            if(!file_exists(JPATH_SITE . '/components/com_realestatemanager/photos/watermark/' . $file)){
+            if(!file_exists(JPATH_SITE . '/media/com_remca/photos/watermark/' . $file)){
               rem_createWaterMark($file, self::$params->get('watermark'));
             }
             if($high_original < $min_image_high || $width_original < $min_image_width){
@@ -3353,11 +3356,11 @@ class RemcaHelper extends JHelperContent
           $index = '';
 
           // Setting the resize parameters
-          list($width, $height) = getimagesize(JPATH_SITE . '/components/com_realestatemanager/photos/' . $file);
+          list($width, $height) = getimagesize(JPATH_SITE . '/media/com_remca/photos/' . $file);
 
           $size = "_" . $high_original . "_" . $width_original;
 
-          if (file_exists(JPATH_SITE . '/components/com_realestatemanager/photos/' . $file_name . $size . $index . $file_type)) {
+          if (file_exists(JPATH_SITE . '/media/com_remca/photos/' . $file_name . $size . $index . $file_type)) {
               return $file_name . $size . $index . $file_type;
           } else {
               if ($width < $height) {
@@ -3392,24 +3395,24 @@ class RemcaHelper extends JHelperContent
           $index = "_1_";
           switch (strtolower($file_type)) {
             case '.png':
-              $source = imagecreatefrompng(JPATH_SITE . '/components/com_realestatemanager/photos/' . $file);
+              $source = imagecreatefrompng(JPATH_SITE . '/media/com_remca/photos/' . $file);
               $file = imagecopyresampled($tn, $source, 0, 0, 0, 0, $w_, $h_, $width, $height);
-              imagepng($tn, JPATH_SITE . '/components/com_realestatemanager/photos/' . $file_name . $size . $index . $file_type);
+              imagepng($tn, JPATH_SITE . '/media/com_remca/photos/' . $file_name . $size . $index . $file_type);
               break;
             case '.jpg':
-              $source = imagecreatefromjpeg(JPATH_SITE . '/components/com_realestatemanager/photos/' . $file);
+              $source = imagecreatefromjpeg(JPATH_SITE . '/media/com_remca/photos/' . $file);
               $file = imagecopyresampled($tn, $source, 0, 0, 0, 0, $w_, $h_, $width, $height);
-              imagejpeg($tn, JPATH_SITE . '/components/com_realestatemanager/photos/' . $file_name . $size . $index . $file_type);
+              imagejpeg($tn, JPATH_SITE . '/media/com_remca/photos/' . $file_name . $size . $index . $file_type);
               break;
             case '.jpeg':
-              $source = imagecreatefromjpeg(JPATH_SITE . '/components/com_realestatemanager/photos/' . $file);
+              $source = imagecreatefromjpeg(JPATH_SITE . '/media/com_remca/photos/' . $file);
               $file = imagecopyresampled($tn, $source, 0, 0, 0, 0, $w_, $h_, $width, $height);
-              imagejpeg($tn, JPATH_SITE . '/components/com_realestatemanager/photos/' . $file_name . $size . $index . $file_type);
+              imagejpeg($tn, JPATH_SITE . '/media/com_remca/photos/' . $file_name . $size . $index . $file_type);
               break;
             case '.gif':
-              $source = imagecreatefromgif(JPATH_SITE . '/components/com_realestatemanager/photos/' . $file);
+              $source = imagecreatefromgif(JPATH_SITE . '/media/com_remca/photos/' . $file);
               $file = imagecopyresampled($tn, $source, 0, 0, 0, 0, $w_, $h_, $width, $height);
-              imagegif($tn, JPATH_SITE . '/components/com_realestatemanager/photos/' . $file_name . $size . $index . $file_type);
+              imagegif($tn, JPATH_SITE . '/media/com_remca/photos/' . $file_name . $size . $index . $file_type);
               break;
             default:
               echo 'not support';
@@ -3762,7 +3765,7 @@ class RemcaHelper extends JHelperContent
             // get a list of the menu items
               $query = "SELECT c.*, c.parent_id AS parent, c.params AS access"
                     . "\n FROM #__rem_main_categories c"
-                    . "\n WHERE section='com_realestatemanager'"
+                    . "\n WHERE section='remca'"
                     . "\n AND state <> 0 ";
             if($lang){
                 $query .=  " AND ($lang)"
@@ -3828,7 +3831,7 @@ class RemcaHelper extends JHelperContent
                 }
 
 //            }
-//com_realestatemanager_free_2018_01_10\site\realestatemanager.class.php
+//remca_free_2018_01_10\site\realestatemanager.class.php
     function check() {
         
         // check for existing houseid
@@ -4066,8 +4069,8 @@ class RemcaHelper extends JHelperContent
         $bedrooms->appendChild($xmlDoc->createTextNode($this->bedrooms));
         $retVal->appendChild($bedrooms);
         $image_link = $xmlDoc->createElement("image_link");
-        $image_link->appendChild($xmlDoc->createCDATASection($this->image_link));
-        $retVal->appendChild($image_link);
+//        $image_link->appendChild($xmlDoc->createCDATASection($this->image_link));
+//        $retVal->appendChild($image_link);
         $listing_status = $xmlDoc->createElement("listing_status");
         $listing_status->appendChild($xmlDoc->createTextNode($this->listing_status));
         $retVal->appendChild($listing_status);
@@ -4226,7 +4229,7 @@ class RemcaHelper extends JHelperContent
         $retVal.= "<bathrooms>" . $this->bathrooms . "</bathrooms>\n";
         $retVal.= "<bedrooms>" . $this->bedrooms . "</bedrooms>\n";
         $retVal.= "<contacts>" . $this->contacts . "</contacts>\n"; //<contacts>
-        $retVal.= "<image_link><![CDATA[" . $this->image_link . "]]></image_link>\n";
+//        $retVal.= "<image_link><![CDATA[" . $this->image_link . "]]></image_link>\n";
         $retVal.= "<listing_status>" . $this->listing_status . "</listing_status>\n";
         $retVal.= "<price_type>" . $this->price_type . "</price_type>\n";
         $retVal.= "<property_type>" . $this->property_type . "</property_type>\n";
@@ -4418,7 +4421,7 @@ class RemcaHelper extends JHelperContent
 				$plug_row->params = $params;
 				JPluginHelper::importPlugin('content');
 				$offset = 0;
-				$results = $dispatcher->trigger('onContentPrepare', array('com_realestatemanager', &$plug_row, &$plug_params, $offset)); //run mambot onPrepareContent on plug_row object
+				$results = $dispatcher->trigger('onContentPrepare', array('remca', &$plug_row, &$plug_params, $offset)); //run mambot onPrepareContent on plug_row object
 				echo $plug_row->text; //echo new content out
 				ini_set('display_errors', $err_state);
 			} else {
@@ -4514,7 +4517,7 @@ class RemcaHelper extends JHelperContent
 			if ($i > 0) {
 				if (version_compare(JVERSION, "1.6.0", "lt")) {
 					return '<a href="#reorder" onclick="return listItemTask(\'cb' . $index . '\',\'' . $task . '\')" title="' . $alt . '">
-					<img src="' . $mosConfig_live_site . '/administrator/images/uparrow-1.png" width="12" height="12" border="0" alt="' . $alt . '" />
+					<img src="' . 'administrator/images/uparrow-1.png" width="12" height="12" border="0" alt="' . $alt . '" />
 					</a>';
 				} else {
 					return '<a href="#reorder" onclick="return listItemTask(\'cb' . $index . '\',\'' . $task . '\')" title="' . $alt . '">
@@ -4535,7 +4538,7 @@ class RemcaHelper extends JHelperContent
 
     if (!1) {
       require_once (JPATH_ROOT . '/' . 'administrator' . '/' . 'components' . '/'
-       . 'com_realestatemanager' . '/' . 'realestatemanager.class.conf.php' );
+       . 'remca' . '/' . 'realestatemanager.class.conf.php' );
     }
 
 

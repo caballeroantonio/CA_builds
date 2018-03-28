@@ -69,7 +69,7 @@ if ($realestatemanager_configuration['location_tab']['show']
           map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
         }
         var imgCatalogPath = "<?php echo $mosConfig_live_site;
-         ?>/components/com_realestatemanager/";
+         ?>/components/remca/";
   <?php
         $newArr = explode(",", _REALESTATE_MANAGER_HOUSE_MARKER);
         $numPick = '';
@@ -146,7 +146,7 @@ if ($realestatemanager_configuration['location_tab']['show']
         };
         map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
         var imgCatalogPath = "<?php echo $mosConfig_live_site;
-         ?>/components/com_realestatemanager/";
+         ?>/components/remca/";
   <?php
         $newArr = explode(",", _REALESTATE_MANAGER_HOUSE_MARKER);
         $numPick = '';
@@ -273,7 +273,7 @@ function isValidEmail(str){
 
     var unavailableDates = Array();
     
-    jQuerREL(document).ready(function() {
+    jQuery(document).ready(function() {
         var k=0;
         <?php if(!empty($date_NA)){?>
             <?php foreach ($date_NA as $N_A){ ?>
@@ -304,7 +304,7 @@ function isValidEmail(str){
 
 
 
-        jQuerREL( "#rent_from" ).datepicker(
+        jQuery( "#rent_from" ).datepicker(
         {
           minDate: "+0",
           dateFormat: "<?php echo transforDateFromPhpToJquery();?>",
@@ -312,30 +312,30 @@ function isValidEmail(str){
           onClose: function () {
               jQuerREL.ajax({ 
                   type: "POST",
-                  update: jQuerREL(" #alert_date "),
+                  update: jQuery(" #alert_date "),
                   success: function( data ) {
-                      jQuerREL("#alert_date").html("");
+                      jQuery("#alert_date").html("");
                   }
               });
 
-              var rent_from = jQuerREL(" #rent_from ").val();
-              var rent_until = jQuerREL(" #rent_until ").val();
+              var rent_from = jQuery(" #rent_from ").val();
+              var rent_until = jQuery(" #rent_until ").val();
               jQuerREL.ajax({ 
                   type: "POST",
-                  url: "index.php?option=com_realestatemanager&task=ajax_rent_calcualete"
+                  url: "index.php?option=remca&task=ajax_rent_calcualete"
                     +"&bid=<?php echo $house->id; ?>&rent_from="+
                     rent_from+"&rent_until="+rent_until,
                   data: { " #do " : " #1 " },
-                  update: jQuerREL(" #message-here "),
+                  update: jQuery(" #message-here "),
                   success: function( data ) {
-                      jQuerREL("#message-here").html(data);
-                      jQuerREL("#calculated_price").val(data);
+                      jQuery("#message-here").html(data);
+                      jQuery("#calculated_price").val(data);
                   }
               });
           }
         });          
         
-        jQuerREL( "#rent_until" ).datepicker(
+        jQuery( "#rent_until" ).datepicker(
         {
 
           minDate: "+0",
@@ -344,24 +344,24 @@ function isValidEmail(str){
           onClose: function () {
               jQuerREL.ajax({ 
                   type: "POST",
-                  update: jQuerREL(" #alert_date "),
+                  update: jQuery(" #alert_date "),
                   success: function( data ) {
-                      jQuerREL("#alert_date").html("");
+                      jQuery("#alert_date").html("");
                   }
               });
 
-              var rent_from = jQuerREL(" #rent_from ").val();
-              var rent_until = jQuerREL(" #rent_until ").val();
+              var rent_from = jQuery(" #rent_from ").val();
+              var rent_until = jQuery(" #rent_until ").val();
               jQuerREL.ajax({ 
                   type: "POST",
-                  url: "index.php?option=com_realestatemanager&task=ajax_rent_calcualete"
+                  url: "index.php?option=remca&task=ajax_rent_calcualete"
                     +"&bid=<?php echo $house->id; ?>&rent_from="+
                     rent_from+"&rent_until="+rent_until,
                   data: { " #do " : " #1 " },
-                  update: jQuerREL(" #message-here "),
+                  update: jQuery(" #message-here "),
                   success: function( data ) {
-                      jQuerREL("#message-here").html(data);
-                      jQuerREL("#calculated_price").val(data);
+                      jQuery("#message-here").html(data);
+                      jQuery("#calculated_price").val(data);
                   }
               });
           }
@@ -428,15 +428,15 @@ function isValidEmail(str){
     } 
 ?>  
 <script  type="text/javascript" charset="utf-8" async defer>
-    jQuerREL(document).ready(function () {
-      jQuerREL('input,textarea').focus(function(){
-        jQuerREL(this).data('placeholder',jQuerREL(this).attr('placeholder'))
-        jQuerREL(this).attr('placeholder','')
-        jQuerREL(this).css('color','#a3a3a3');
-        jQuerREL(this).css('border-color','#ddd');
+    jQuery(document).ready(function () {
+      jQuery('input,textarea').focus(function(){
+        jQuery(this).data('placeholder',jQuery(this).attr('placeholder'))
+        jQuery(this).attr('placeholder','')
+        jQuery(this).css('color','#a3a3a3');
+        jQuery(this).css('border-color','#ddd');
       });
-      jQuerREL('input,textarea').blur(function(){
-        jQuerREL(this).attr('placeholder',jQuerREL(this).data('placeholder'));
+      jQuery('input,textarea').blur(function(){
+        jQuery(this).attr('placeholder',jQuery(this).data('placeholder'));
       });
     });
 
@@ -476,7 +476,7 @@ if ($my->id == $house->owner_id && $my->id != '' || $isroot):
 
     global $option;
 
-    if ($option != 'com_realestatemanager') {
+    if ($option != 'remca') {
         $form_action = "index.php?option=" . $option .
          "&task=edit_house&Itemid=" . $Itemid ;
 
@@ -484,7 +484,7 @@ if ($my->id == $house->owner_id && $my->id != '' || $isroot):
 
     else
 
-      $form_action = "index.php?option=com_realestatemanager&task=edit_house&Itemid=" . $Itemid;
+      $form_action = "index.php?option=remca&task=edit_house&Itemid=" . $Itemid;
     ?>
 
 <?php endif;?>
@@ -597,7 +597,7 @@ if ($imageURL == '') $imageURL = _REALESTATE_MANAGER_NO_PICTURE_BIG;
     //    $realestatemanager_configuration['fotomain']['high']);
 
      $file_name = $imageURL;
-    $file = $mosConfig_live_site . '/components/com_realestatemanager/photos/' . $file_name;
+    $file = $mosConfig_live_site . '/components/remca/photos/' . $file_name;
 echo '<div style="position:relative">';
 if($realestatemanager_configuration['show_house_slider']=='1') {
   $stdClassImage = new stdClass();
@@ -645,12 +645,12 @@ if($realestatemanager_configuration['show_house_slider']=='1') {
 
          ?> 
 
-            <a href="./components/com_realestatemanager/photos/<?php 
+            <a href="components/remca/photos/<?php 
                echo rem_picture_thumbnail($house_photos[$i]->main_img,
                $realestatemanager_configuration['fotomain']['width'],
                $realestatemanager_configuration['fotomain']['high'], $watermark); ?>" data-fancybox="slider" title="photo">
               <img alt="<?php echo $house->name; ?>" title="<?php echo $house->name; ?>" 
-              src="./components/com_realestatemanager/photos/<?php 
+              src="components/remca/photos/<?php 
                echo rem_picture_thumbnail($house_photos[$i]->main_img,
                $realestatemanager_configuration['fotomain']['width'],
                $realestatemanager_configuration['fotomain']['high'], $watermark); ?>"
@@ -695,12 +695,12 @@ else {
 
          <?php $house_photos[$i]->main_img = str_ireplace('watermark/', '', $house_photos[$i]->main_img) ?>
 
-              <a href="./components/com_realestatemanager/photos/<?php 
+              <a href="components/remca/photos/<?php 
                echo rem_picture_thumbnail($house_photos[$i]->main_img,
                $realestatemanager_configuration['fotomain']['width'],
                $realestatemanager_configuration['fotomain']['high'], $watermark); ?>" data-fancybox="gallery" title="photo" >
                <img alt="<?php echo $house->name; ?>" title="<?php echo $house->name; ?>" 
-               src="./components/com_realestatemanager/photos/<?php 
+               src="components/remca/photos/<?php 
                echo rem_picture_thumbnail($house_photos[$i]->main_img,
                $realestatemanager_configuration['fotogal']['width'],
                $realestatemanager_configuration['fotogal']['high'], $watermark); ?>" style = "vertical-align:middle;" />
@@ -1226,7 +1226,7 @@ if ($realestatemanager_configuration['extra9'] == 1 && $house->extra9 > 0) {
                                 <div class="title_rating">
                                     <h4 class="col_title_rev"><?php echo $review->title; ?></h4>
                                     <span class="col_rating_rev">
-                                        <img src="./components/com_realestatemanager/images/rating-<?php
+                                        <img src="components/remca/images/rating-<?php
                                              echo $review->rating; ?>.png" 
                                              alt="<?php echo ($review->rating) / 2; ?>" border="0" align="right"/>
                                     </span>
@@ -1291,9 +1291,9 @@ if ($params->get('show_reviews')) {
                     <!-- #### RATING #### -->
                     <?php if (version_compare(JVERSION, "3.0", "ge")): ?>
                     <script type="text/javascript">
-                        os_img_path = '<?php echo $mosConfig_live_site . '/components/com_realestatemanager/images/'; ?>' ;
-                        jQuerREL(document).ready(function(){
-                            jQuerREL('#star').raty({
+                        os_img_path = '<?php echo $mosConfig_live_site . '/components/remca/images/'; ?>' ;
+                        jQuery(document).ready(function(){
+                            jQuery('#star').raty({
                                 starHalf: os_img_path+'star-half.png',
                                 starOff: os_img_path+'star-off.png',
                                 starOn: os_img_path+'star-on.png' 
@@ -1321,7 +1321,7 @@ if ($params->get('show_reviews')) {
                                 echo "CHECKED";
                             }
                             ?> alt="Rating" />
-                            <img src="./components/com_realestatemanager/images/rating-<?php echo $k; ?>.png" 
+                            <img src="components/remca/images/rating-<?php echo $k; ?>.png" 
                               alt="<?php echo ($k) / 2; ?>" border="0" /><br />
                                 <?php
                                 $k++;
@@ -1466,11 +1466,11 @@ if ($house->listing_type == 1) {
     <?php
      if ($house->listing_type == 1) {
       if ($params->get('show_rentrequest') && $params->get('show_rentstatus')) {
-        if ($option != 'com_realestatemanager') {
+        if ($option != 'remca') {
           $form_action = "index.php?option=" . $option . "&task=save_rent_request&Itemid=" . $Itemid ;
         }
         else {
-          $form_action = "index.php?option=com_realestatemanager&amp;task=save_rent_request&amp;Itemid=" . $Itemid;
+          $form_action = "index.php?option=remca&amp;task=save_rent_request&amp;Itemid=" . $Itemid;
         }
     ?>
       <div id="rem_house_titlebox">
@@ -1613,12 +1613,12 @@ if ($house->listing_type == 1) {
     <?php
     if ($params->get('show_buyrequest') && $params->get('show_buystatus')) {
         global $option;
-        if ($option != 'com_realestatemanager') {
+        if ($option != 'remca') {
             $form_action = "index.php?option=" . $option 
             . "&task=buying_request&Itemid=" 
               . $Itemid ;
         } else
-            $form_action = "index.php?option=com_realestatemanager&amp;task=buying_request&amp;Itemid=" . $Itemid;
+            $form_action = "index.php?option=remca&amp;task=buying_request&amp;Itemid=" . $Itemid;
         ?>
     <div id="rem_house_titlebox">
         <?php echo _REALESTATE_MANAGER_LABEL_BUTTON_SEND_MESSAGE; ?>
@@ -1729,20 +1729,20 @@ if ($house->listing_type == 1) {
     prevButton: '#rem_house_galery .swiper-button-prev'
   })
 // fancybox
- jQuerREL('[data-fancybox]').fancybox({
+ jQuery('[data-fancybox]').fancybox({
   thumbs : {
     autoStart : true
   }
 })
 
 
-var width = jQuerREL('#rem_house_galery .swiper-container').width();
-jQuerREL('#rem_house_galery .swiper-container .swiper-slide img').height(width*<?php echo $slider_height; ?>);
-jQuerREL('#rem_house_galery .swiper-container .swiper-slide img').css('object-fit','<?php echo $slider_object_fit; ?>');
+var width = jQuery('#rem_house_galery .swiper-container').width();
+jQuery('#rem_house_galery .swiper-container .swiper-slide img').height(width*<?php echo $slider_height; ?>);
+jQuery('#rem_house_galery .swiper-container .swiper-slide img').css('object-fit','<?php echo $slider_object_fit; ?>');
 
-jQuerREL(window).resize(function(){
-  var width = jQuerREL('#rem_house_galery .swiper-container').width();
-  jQuerREL('#rem_house_galery .swiper-container .swiper-slide img').height(width*<?php echo $slider_height; ?>);
+jQuery(window).resize(function(){
+  var width = jQuery('#rem_house_galery .swiper-container').width();
+  jQuery('#rem_house_galery .swiper-container .swiper-slide img').height(width*<?php echo $slider_height; ?>);
 })
 
 

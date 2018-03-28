@@ -213,21 +213,6 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_CURRENCY'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_hcountry',1)) : ?>
-						<th class="list-hcountry" id="tableOrderinghcountry">
-							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HCOUNTRY'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_hregion',1)) : ?>
-						<th class="list-hregion" id="tableOrderinghregion">
-							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HREGION'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_hcity',1)) : ?>
-						<th class="list-hcity" id="tableOrderinghcity">
-							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HCITY'); ?>
-						</th>
-					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_hzipcode',1)) : ?>
 						<th class="list-hzipcode" id="tableOrderinghzipcode">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HZIPCODE'); ?>
@@ -271,11 +256,6 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_house_contacts',1)) : ?>
 						<th class="list-contacts" id="tableOrderingcontacts">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_CONTACTS'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_image_link',1)) : ?>
-						<th class="list-image_link" id="tableOrderingimage_link">
-							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_IMAGE_LINK'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_listing_status',1)) : ?>
@@ -426,11 +406,6 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_house_climate_value',1)) : ?>
 						<th class="list-climate_value" id="tableOrderingclimate_value">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_CLIMATE_VALUE'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_photos',1)) : ?>
-						<th class="list-photos" id="tableOrderingphotos">
-							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PHOTOS'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_ordering',0)) : ?>
@@ -606,27 +581,6 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_hcountry',1)) : ?>
-						<td class="list-hcountry">
-							<?php 
-								echo $item->hcountry != '' ? $item->hcountry : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_hregion',1)) : ?>
-						<td class="list-hregion">
-							<?php 
-								echo $item->hregion != '' ? $item->hregion : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_hcity',1)) : ?>
-						<td class="list-hcity">
-							<?php 
-								echo $item->hcity != '' ? $item->hcity : $empty;
-							?>
-						</td>
-					<?php endif; ?>
 					<?php if ($this->params->get('list_show_house_hzipcode',1)) : ?>
 						<td class="list-hzipcode">
 							<?php 
@@ -687,13 +641,6 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-contacts">
 							<?php 
 								echo $item->contacts != '' ? $item->contacts : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_image_link',1)) : ?>
-						<td class="list-image_link">
-							<?php 
-								echo $item->image_link != '' ? $item->image_link : $empty;
 							?>
 						</td>
 					<?php endif; ?>
@@ -908,13 +855,6 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-climate_value">
 							<?php 
 								echo $item->climate_value != '' ? $item->climate_value : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_photos',1)) : ?>
-						<td class="list-photos">
-							<?php 
-								echo $item->photos != '' ? $item->photos : $empty;
 							?>
 						</td>
 					<?php endif; ?>

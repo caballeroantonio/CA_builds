@@ -211,9 +211,6 @@ $empty = $component->params->get('default_empty_field', '');
 								($params->get('show_house_listing_type')) OR 
 								($params->get('show_house_price')) OR 
 								($params->get('show_house_id_currency')) OR 
-								($params->get('show_house_hcountry')) OR 
-								($params->get('show_house_hregion')) OR 
-								($params->get('show_house_hcity')) OR 
 								($params->get('show_house_hzipcode')) OR 
 								($params->get('show_house_hlocation')) OR 
 								($params->get('show_house_hlatitude')) OR 
@@ -223,7 +220,6 @@ $empty = $component->params->get('default_empty_field', '');
 								($params->get('show_house_bathrooms')) OR 
 								($params->get('show_house_bedrooms')) OR 
 								($params->get('show_house_contacts')) OR 
-								($params->get('show_house_image_link')) OR 
 								($params->get('show_house_listing_status')) OR 
 								($params->get('show_house_property_type')) OR 
 								($params->get('show_house_year')) OR 
@@ -407,42 +403,6 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_house_hcountry')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_HCOUNTRY_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->hcountry != '' ? $this->item->hcountry : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_house_hregion')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_HREGION_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->hregion != '' ? $this->item->hregion : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_house_hcity')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_HCITY_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->hcity != '' ? $this->item->hcity : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
 						<?php if ($params->get('show_house_hzipcode')) : ?>
 						<div class="formelm">
 							<label>
@@ -547,18 +507,6 @@ $empty = $component->params->get('default_empty_field', '');
 							<span>
 								<?php
 									echo $this->item->contacts != '' ? $this->item->contacts : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_house_image_link')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_IMAGE_LINK_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->image_link != '' ? $this->item->image_link : $empty;
 								?>
 							</span>
 						</div>	

@@ -225,9 +225,6 @@ $use_def_list = (
 						($params->get('show_house_listing_type')) OR 
 						($params->get('show_house_price')) OR 
 						($params->get('show_house_id_currency')) OR 
-						($params->get('show_house_hcountry')) OR 
-						($params->get('show_house_hregion')) OR 
-						($params->get('show_house_hcity')) OR 
 						($params->get('show_house_hzipcode')) OR 
 						($params->get('show_house_hlocation')) OR 
 						($params->get('show_house_hlatitude')) OR 
@@ -237,7 +234,6 @@ $use_def_list = (
 						($params->get('show_house_bathrooms')) OR 
 						($params->get('show_house_bedrooms')) OR 
 						($params->get('show_house_contacts')) OR 
-						($params->get('show_house_image_link')) OR 
 						($params->get('show_house_listing_status')) OR 
 						($params->get('show_house_property_type')) OR 
 						($params->get('show_house_year')) OR 
@@ -377,30 +373,6 @@ $use_def_list = (
 					?>
 				</dd>
 			<?php endif; ?>
-			<?php if ($params->get('show_house_hcountry')) : ?>
-				<dd class="field">
-					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_HCOUNTRY_LABEL'); ?></strong>
-					<?php
-						echo $this->item->hcountry != '' ? $this->item->hcountry : $empty;
-					?>
-				</dd>
-			<?php endif; ?>
-			<?php if ($params->get('show_house_hregion')) : ?>
-				<dd class="field">
-					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_HREGION_LABEL'); ?></strong>
-					<?php
-						echo $this->item->hregion != '' ? $this->item->hregion : $empty;
-					?>
-				</dd>
-			<?php endif; ?>
-			<?php if ($params->get('show_house_hcity')) : ?>
-				<dd class="field">
-					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_HCITY_LABEL'); ?></strong>
-					<?php
-						echo $this->item->hcity != '' ? $this->item->hcity : $empty;
-					?>
-				</dd>
-			<?php endif; ?>
 			<?php if ($params->get('show_house_hzipcode')) : ?>
 				<dd class="field">
 					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_HZIPCODE_LABEL'); ?></strong>
@@ -470,14 +442,6 @@ $use_def_list = (
 					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_CONTACTS_LABEL'); ?></strong>
 					<?php
 						echo $this->item->contacts != '' ? $this->item->contacts : $empty;
-					?>
-				</dd>
-			<?php endif; ?>
-			<?php if ($params->get('show_house_image_link')) : ?>
-				<dd class="field">
-					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_IMAGE_LINK_LABEL'); ?></strong>
-					<?php
-						echo $this->item->image_link != '' ? $this->item->image_link : $empty;
 					?>
 				</dd>
 			<?php endif; ?>

@@ -289,39 +289,6 @@
             <option value="">COM_REMCA_HOUSES_SELECT_ID_CURRENCY</option>
         </field>  
         <field
-            id="hcountry"
-            name="hcountry"
-            type="text"
-            label="COM_REMCA_HOUSES_FIELD_HCOUNTRY_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_HCOUNTRY_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            id="hregion"
-            name="hregion"
-            type="text"
-            label="COM_REMCA_HOUSES_FIELD_HREGION_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_HREGION_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            id="hcity"
-            name="hcity"
-            type="text"
-            label="COM_REMCA_HOUSES_FIELD_HCITY_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_HCITY_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
             id="hzipcode"
             name="hzipcode"
             type="text"
@@ -419,17 +386,6 @@
             type="text"
             label="COM_REMCA_HOUSES_FIELD_CONTACTS_LABEL"
             description="COM_REMCA_HOUSES_FIELD_CONTACTS_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            id="image_link"
-            name="image_link"
-            type="text"
-            label="COM_REMCA_HOUSES_FIELD_IMAGE_LINK_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_IMAGE_LINK_DESC"
             class="inputbox"
 			size="50"
 			maxlength="255"

@@ -35,8 +35,7 @@
         if(document.getElementById("map_canvas") != undefined){
           map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
         }
-        var imgCatalogPath = "<?php echo $mosConfig_live_site;
-         ?>/components/com_realestatemanager/";
+        var imgCatalogPath = "components/remca/";
   <?php
         $newArr = explode(",", JText::_('_REALESTATE_MANAGER_HOUSE_MARKER'));
         $numPick = '';
@@ -111,8 +110,7 @@
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-        var imgCatalogPath = "<?php echo $mosConfig_live_site;
-         ?>/components/com_realestatemanager/";
+        var imgCatalogPath = "components/remca/";
   <?php
         $newArr = explode(",", JText::_('_REALESTATE_MANAGER_HOUSE_MARKER'));
         $numPick = '';

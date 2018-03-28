@@ -93,7 +93,9 @@ h.bathrooms = coalesce(va.bath, 0),
 h.bedrooms = coalesce(va.beds, 0),
 h.year = coalesce(va.year, ''),
 h.agent = LEFT(coalesce(va.nombre_vendedor, ''), 45),
-h.image_link = coalesce(va.image_name, '')
+h.image_link = coalesce(va.image_name, ''),
+h.photos = CONCAT('[{"thumbnail_img": "',va.image_name,'"},{"thumbnail_img": "',va.image_ext,'"}]'),
+h.images = CONCAT_WS('','{"image_url":"',va.image_name,'","image_alt_text":"","image_caption":""}')
 # WHERE va.id BETWEEN 60000 AND 70000
 ;
 

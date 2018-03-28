@@ -73,9 +73,6 @@ class RemcaModelHouse extends JModelItem
 				'listing_type','a.listing_type',
 				'price','a.price',
 				'id_currency','a.id_currency',
-				'hcountry','a.hcountry',
-				'hregion','a.hregion',
-				'hcity','a.hcity',
 				'hzipcode','a.hzipcode',
 				'hlocation','a.hlocation',
 				'hlatitude','a.hlatitude',
@@ -85,7 +82,6 @@ class RemcaModelHouse extends JModelItem
 				'bathrooms','a.bathrooms',
 				'bedrooms','a.bedrooms',
 				'contacts','a.contacts',
-				'image_link','a.image_link',
 				'listing_status','a.listing_status',
 				'property_type','a.property_type',
 				'year','a.year',
@@ -377,27 +373,11 @@ class RemcaModelHouse extends JModelItem
 				
 				if (isset($item->id_currency) AND $item->id_currency !='')
 				{
-					$sql = 'SELECT '.$db->quoteName('list.id').' AS id, '.$db->quoteName('list.currency').' AS value FROM (SELECT id, CONCAT_WS(\' - \', iso2, currency) \'currency\' FROM #__rem_countries WHERE published_cur) AS list';
+					$sql = 'SELECT '.$db->quoteName('list.currency').' AS value FROM (SELECT id, CONCAT_WS(\' - \', iso2, currency) \'currency\' FROM #__rem_countries WHERE published_cur) AS list';
 					$sql .= ' WHERE '.$db->quoteName('list.id').' IN ('.JString::trim($item->id_currency, ',').');';
-
-					$db->setQuery($sql);
-					
-					$rows = $db->loadAssocList();
-					$result_array = array();
-					foreach ($rows as $row)
-					{
-						$result_array[] = $row;
-					}					
-					$item->id_currency = $result_array;
+					$db->setQuery($sql);				
+					$item->id_currency = $db->loadResult();
 				}
-				else
-				{
-					$item->id_currency = array();
-				}
-				
-				
-				
-				
 				
 				
 				
