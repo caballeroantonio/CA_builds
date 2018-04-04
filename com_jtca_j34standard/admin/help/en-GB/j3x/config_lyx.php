@@ -8,7 +8,7 @@
  * 
  * Para obtener los valores de las etiquetas del archivo language.ini coloco el
  * compilado de este archivo en admin/views/dashboard/tmpl/ y lo despliego dentro de una vista, ejemplo
- * http://localhost/JPruebas/administrator/index.php?option=com_t396&view=dashboard&layout=borrame
+ * administrator/index.php?option=com_t396&view=dashboard&layout=borrame
  * 
  * el archivo language.ini puede contener carácteres especiales de latex, por lo que habrá que depurar.
  * 

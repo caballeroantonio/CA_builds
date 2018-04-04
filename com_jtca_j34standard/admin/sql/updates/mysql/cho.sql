@@ -1,21 +1,9 @@
-#[%%START_CUSTOM_CODE%%]
-INSERT INTO jos_content_types (`type_title`, `type_alias`, `table`, `rules`, `field_mappings`, `router`, `content_history_options`)
-SELECT
-'' AS 'type_title', CONCAT('com_jtca.', l.clave) AS 'type_alias', '' AS 'table', '' AS 'rules', '' AS 'field_mappings', '' AS 'router', '' AS 'content_history_options'
-FROM jtc_libros l
-LEFT JOIN jos_content_types c ON c.type_alias = CONCAT('com_jtca.', l.clave)
-WHERE 1
-AND l.published
-AND l.id_materia
-AND c.type_id IS NULL
-;
-#[%%END_CUSTOM_CODE%%]
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Updates to table `jt_ljf22s`
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO',
-`table`='{"special":{"dbtable":"jtca_ljc01s","key":"id","type":"ljc01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc01s","key":"id","type":"ljc01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc01Route',
@@ -26,7 +14,7 @@ WHERE `type_alias`='com_jtca.ljc01';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE REGISTRO DE SENTENCIAS -TURNO- (OFICIAL)',
-`table`='{"special":{"dbtable":"jtca_lsc01s","key":"id","type":"lsc01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc01s","key":"id","type":"lsc01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc01Route',
@@ -37,7 +25,7 @@ WHERE `type_alias`='com_jtca.lsc01';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO',
-`table`='{"special":{"dbtable":"jtca_ljf01s","key":"id","type":"ljf01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf01s","key":"id","type":"ljf01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf01Route',
@@ -48,7 +36,7 @@ WHERE `type_alias`='com_jtca.ljf01';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO',
-`table`='{"special":{"dbtable":"jtca_ljp01s","key":"id","type":"ljp01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp01s","key":"id","type":"ljp01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp01Route',
@@ -59,7 +47,7 @@ WHERE `type_alias`='com_jtca.ljp01';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO',
-`table`='{"special":{"dbtable":"jtca_ljccm01s","key":"id","type":"ljccm01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm01s","key":"id","type":"ljccm01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm01Route',
@@ -70,7 +58,7 @@ WHERE `type_alias`='com_jtca.ljccm01';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO',
-`table`='{"special":{"dbtable":"jtca_ljoc01s","key":"id","type":"ljoc01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljoc01s","key":"id","type":"ljoc01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljoc01Route',
@@ -81,7 +69,7 @@ WHERE `type_alias`='com_jtca.ljoc01';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO',
-`table`='{"special":{"dbtable":"jtca_ljpdng01s","key":"id","type":"ljpdng01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng01s","key":"id","type":"ljpdng01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng01Route',
@@ -92,7 +80,7 @@ WHERE `type_alias`='com_jtca.ljpdng01';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO',
-`table`='{"special":{"dbtable":"jtca_ljpes01s","key":"id","type":"ljpes01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes01s","key":"id","type":"ljpes01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes01Route',
@@ -103,7 +91,7 @@ WHERE `type_alias`='com_jtca.ljpes01';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO',
-`table`='{"special":{"dbtable":"jtca_ljjadng01s","key":"id","type":"ljjadng01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadng01s","key":"id","type":"ljjadng01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadng01Route',
@@ -114,7 +102,7 @@ WHERE `type_alias`='com_jtca.ljjadng01';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO',
-`table`='{"special":{"dbtable":"jtca_ljjadg01s","key":"id","type":"ljjadg01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg01s","key":"id","type":"ljjadg01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg01Route',
@@ -125,7 +113,7 @@ WHERE `type_alias`='com_jtca.ljjadg01';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES CON DETENIDO',
-`table`='{"special":{"dbtable":"jtca_lcp01s","key":"id","type":"lcp01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp01s","key":"id","type":"lcp01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp01Route',
@@ -136,7 +124,7 @@ WHERE `type_alias`='com_jtca.lcp01';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES SIN DETENIDO',
-`table`='{"special":{"dbtable":"jtca_lcp02s","key":"id","type":"lcp02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp02s","key":"id","type":"lcp02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp02Route',
@@ -147,7 +135,7 @@ WHERE `type_alias`='com_jtca.lcp02';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO DE REMISIONES CON DETENIDO DE JUZGADOS ADOLESCENTES',
-`table`='{"special":{"dbtable":"jtca_lcp03s","key":"id","type":"lcp03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp03s","key":"id","type":"lcp03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp03Route',
@@ -158,7 +146,7 @@ WHERE `type_alias`='com_jtca.lcp03';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES CON DETENIDO DE PGR',
-`table`='{"special":{"dbtable":"jtca_lcp04s","key":"id","type":"lcp04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp04s","key":"id","type":"lcp04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp04Route',
@@ -169,7 +157,7 @@ WHERE `type_alias`='com_jtca.lcp04';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES SIN DETENIDO DE PGR',
-`table`='{"special":{"dbtable":"jtca_lcp05s","key":"id","type":"lcp05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp05s","key":"id","type":"lcp05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp05Route',
@@ -180,7 +168,7 @@ WHERE `type_alias`='com_jtca.lcp05';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO PARA INCOMPETENCIAS ADOLESCENTES',
-`table`='{"special":{"dbtable":"jtca_lcp06s","key":"id","type":"lcp06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp06s","key":"id","type":"lcp06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp06Route',
@@ -191,7 +179,7 @@ WHERE `type_alias`='com_jtca.lcp06';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO PARA EXCUSAS DE ADOLESCENTES',
-`table`='{"special":{"dbtable":"jtca_lcp07s","key":"id","type":"lcp07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp07s","key":"id","type":"lcp07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp07Route',
@@ -202,7 +190,7 @@ WHERE `type_alias`='com_jtca.lcp07';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ETAPA DE EJECUCIÓN PARA ADOLESCENTES',
-`table`='{"special":{"dbtable":"jtca_lcp09s","key":"id","type":"lcp09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp09s","key":"id","type":"lcp09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp09Route',
@@ -213,7 +201,7 @@ WHERE `type_alias`='com_jtca.lcp09';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO DE BENEFICIOS PENITENCIARIOS.',
-`table`='{"special":{"dbtable":"jtca_lcp10s","key":"id","type":"lcp10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp10s","key":"id","type":"lcp10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp10Route',
@@ -224,7 +212,7 @@ WHERE `type_alias`='com_jtca.lcp10';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO PARA CONSIGNACIONES CON DETENIDO PRIMERA INSTANCIA.',
-`table`='{"special":{"dbtable":"jtca_lcp18s","key":"id","type":"lcp18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp18s","key":"id","type":"lcp18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp18Route',
@@ -235,7 +223,7 @@ WHERE `type_alias`='com_jtca.lcp18';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO PARA CONSIGNACIONES SIN DETENIDO PRIMERA INSTANCIA.',
-`table`='{"special":{"dbtable":"jtca_lcp19s","key":"id","type":"lcp19s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp19s","key":"id","type":"lcp19s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp19Route',
@@ -246,7 +234,7 @@ WHERE `type_alias`='com_jtca.lcp19';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO PARA INCOMPETENCIAS PRIMERA INSTANCIA.',
-`table`='{"special":{"dbtable":"jtca_lcp20s","key":"id","type":"lcp20s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp20s","key":"id","type":"lcp20s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp20Route',
@@ -257,7 +245,7 @@ WHERE `type_alias`='com_jtca.lcp20';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO DE EXCUSAS PARA JUZGADOS DE PRIMERA INSTANCIA.',
-`table`='{"special":{"dbtable":"jtca_lcp21s","key":"id","type":"lcp21s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp21s","key":"id","type":"lcp21s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp21Route',
@@ -268,7 +256,7 @@ WHERE `type_alias`='com_jtca.lcp21';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ORDENES DE ARRAIGOS Y DE CATEOS PRIMERA INSTANCIA.',
-`table`='{"special":{"dbtable":"jtca_lcp22s","key":"id","type":"lcp22s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp22s","key":"id","type":"lcp22s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp22Route',
@@ -279,7 +267,7 @@ WHERE `type_alias`='com_jtca.lcp22';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ORDENES DE APREHENSIÓN, REAPREHENSION Y TRASLADO.',
-`table`='{"special":{"dbtable":"jtca_lcp23s","key":"id","type":"lcp23s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp23s","key":"id","type":"lcp23s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp23Route',
@@ -290,7 +278,7 @@ WHERE `type_alias`='com_jtca.lcp23';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO DE LA LEY DE ACCESO A LAS MUJERES A UNA VIDA LIBRE DE VIOLENCIA.',
-`table`='{"special":{"dbtable":"jtca_lcp24s","key":"id","type":"lcp24s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp24s","key":"id","type":"lcp24s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp24Route',
@@ -301,7 +289,7 @@ WHERE `type_alias`='com_jtca.lcp24';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO PARA CONSIGNACIONES CON DETENIDO DELITOS NO GRAVES',
-`table`='{"special":{"dbtable":"jtca_lcp25s","key":"id","type":"lcp25s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp25s","key":"id","type":"lcp25s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp25Route',
@@ -312,7 +300,7 @@ WHERE `type_alias`='com_jtca.lcp25';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO PARA CONSIGNACIONES SIN DETENIDO DELITOS NO GRAVES',
-`table`='{"special":{"dbtable":"jtca_lcp26s","key":"id","type":"lcp26s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp26s","key":"id","type":"lcp26s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp26Route',
@@ -323,7 +311,7 @@ WHERE `type_alias`='com_jtca.lcp26';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO PARA INCOMPETENCIAS DELITOS NO GRAVES',
-`table`='{"special":{"dbtable":"jtca_lcp27s","key":"id","type":"lcp27s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp27s","key":"id","type":"lcp27s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp27Route',
@@ -334,7 +322,7 @@ WHERE `type_alias`='com_jtca.lcp27';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO DE EXCUSAS PARA JUZGADOS  DE DELITOS NO GRAVES',
-`table`='{"special":{"dbtable":"jtca_lcp28s","key":"id","type":"lcp28s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp28s","key":"id","type":"lcp28s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp28Route',
@@ -345,7 +333,7 @@ WHERE `type_alias`='com_jtca.lcp28';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ORDENES PARA ARRAIGOS Y CATEOS DELITOS NO GRAVES',
-`table`='{"special":{"dbtable":"jtca_lcp29s","key":"id","type":"lcp29s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp29s","key":"id","type":"lcp29s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp29Route',
@@ -356,7 +344,7 @@ WHERE `type_alias`='com_jtca.lcp29';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE OFICIOS.',
-`table`='{"special":{"dbtable":"jtca_lcp11s","key":"id","type":"lcp11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp11s","key":"id","type":"lcp11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp11Route',
@@ -367,7 +355,7 @@ WHERE `type_alias`='com_jtca.lcp11';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE TURNO DE SALAS PARA JUZGADOS ORALES.',
-`table`='{"special":{"dbtable":"jtca_lcp12s","key":"id","type":"lcp12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp12s","key":"id","type":"lcp12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp12Route',
@@ -378,7 +366,7 @@ WHERE `type_alias`='com_jtca.lcp12';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE EXPEDIENTILLOS DE JUZGADOS DE EJECUCIÓN PARA JUZGADOS PENAL O NO GRAVES.',
-`table`='{"special":{"dbtable":"jtca_lcp13s","key":"id","type":"lcp13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp13s","key":"id","type":"lcp13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp13Route',
@@ -389,7 +377,7 @@ WHERE `type_alias`='com_jtca.lcp13';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE CUMPLIMIENTO DE EJECUTORIAS PARA JUZGADOS DE EJECUCIÓN.',
-`table`='{"special":{"dbtable":"jtca_lcp14s","key":"id","type":"lcp14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp14s","key":"id","type":"lcp14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp14Route',
@@ -400,7 +388,7 @@ WHERE `type_alias`='com_jtca.lcp14';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE OFICIOS DE AMPAROS DE TRAMITE.',
-`table`='{"special":{"dbtable":"jtca_lcp15s","key":"id","type":"lcp15s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp15s","key":"id","type":"lcp15s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp15Route',
@@ -411,7 +399,7 @@ WHERE `type_alias`='com_jtca.lcp15';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE  OFICIOS DE AMPAROS DE CONOCIMIENTO.',
-`table`='{"special":{"dbtable":"jtca_lcp16s","key":"id","type":"lcp16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp16s","key":"id","type":"lcp16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp16Route',
@@ -422,7 +410,7 @@ WHERE `type_alias`='com_jtca.lcp16';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE LIBERTADES JUZGADOS DE PRIMERA INSTANCIA',
-`table`='{"special":{"dbtable":"jtca_lcp30s","key":"id","type":"lcp30s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp30s","key":"id","type":"lcp30s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp30Route',
@@ -433,7 +421,7 @@ WHERE `type_alias`='com_jtca.lcp30';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE LIBERTADES JUZGADOS DE DELITOS NO GRAVES',
-`table`='{"special":{"dbtable":"jtca_lcp31s","key":"id","type":"lcp31s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp31s","key":"id","type":"lcp31s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp31Route',
@@ -444,7 +432,7 @@ WHERE `type_alias`='com_jtca.lcp31';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE LIBERTADES JUZGADOS DE EJECUCIÓN DE SENTENCIA',
-`table`='{"special":{"dbtable":"jtca_lcp32s","key":"id","type":"lcp32s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp32s","key":"id","type":"lcp32s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp32Route',
@@ -455,7 +443,7 @@ WHERE `type_alias`='com_jtca.lcp32';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE LIBERTADES DE SALAS PENALES',
-`table`='{"special":{"dbtable":"jtca_lcp33s","key":"id","type":"lcp33s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp33s","key":"id","type":"lcp33s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp33Route',
@@ -466,7 +454,7 @@ WHERE `type_alias`='com_jtca.lcp33';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE LIBERTADES JUZGADOS DE ADOLESCENTES',
-`table`='{"special":{"dbtable":"jtca_lcp34s","key":"id","type":"lcp34s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp34s","key":"id","type":"lcp34s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp34Route',
@@ -477,7 +465,7 @@ WHERE `type_alias`='com_jtca.lcp34';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE LIBERTADES DE SALAS DE ADOLESCENTES',
-`table`='{"special":{"dbtable":"jtca_lcp35s","key":"id","type":"lcp35s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp35s","key":"id","type":"lcp35s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp35Route',
@@ -488,7 +476,7 @@ WHERE `type_alias`='com_jtca.lcp35';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE RETURNO DE ADOLESCENTES',
-`table`='{"special":{"dbtable":"jtca_lcp36s","key":"id","type":"lcp36s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp36s","key":"id","type":"lcp36s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp36Route',
@@ -499,7 +487,7 @@ WHERE `type_alias`='com_jtca.lcp36';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO DE EXCUSAS PARA JUZGADOS DE JUSTICIA PARA ADOLESCENTES',
-`table`='{"special":{"dbtable":"jtca_lcp39s","key":"id","type":"lcp39s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp39s","key":"id","type":"lcp39s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp39Route',
@@ -510,7 +498,7 @@ WHERE `type_alias`='com_jtca.lcp39';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ORDENES DE DETENCIÓN PARA JUZGADOS DE JUSTICIA PARA ADOLESCENTES',
-`table`='{"special":{"dbtable":"jtca_lcp40s","key":"id","type":"lcp40s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp40s","key":"id","type":"lcp40s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp40Route',
@@ -521,7 +509,7 @@ WHERE `type_alias`='com_jtca.lcp40';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO DE REMISIONES SIN DETENIDO DE JUZGADOS ADOLESCENTES',
-`table`='{"special":{"dbtable":"jtca_lcp41s","key":"id","type":"lcp41s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lcp41s","key":"id","type":"lcp41s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlcp41Route',
@@ -532,7 +520,7 @@ WHERE `type_alias`='com_jtca.lcp41';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO',
-`table`='{"special":{"dbtable":"jtca_lspe01s","key":"id","type":"lspe01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lspe01s","key":"id","type":"lspe01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlspe01Route',
@@ -543,7 +531,7 @@ WHERE `type_alias`='com_jtca.lspe01';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE RESOLUCIONES DE PLANO',
-`table`='{"special":{"dbtable":"jtca_lspe02s","key":"id","type":"lspe02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lspe02s","key":"id","type":"lspe02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlspe02Route',
@@ -554,7 +542,7 @@ WHERE `type_alias`='com_jtca.lspe02';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE RESOLUCIONES',
-`table`='{"special":{"dbtable":"jtca_lspe03s","key":"id","type":"lspe03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lspe03s","key":"id","type":"lspe03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlspe03Route',
@@ -565,7 +553,7 @@ WHERE `type_alias`='com_jtca.lspe03';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE BENEFICIOS REVOCADO Y O/A',
-`table`='{"special":{"dbtable":"jtca_lspe04s","key":"id","type":"lspe04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lspe04s","key":"id","type":"lspe04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlspe04Route',
@@ -576,7 +564,7 @@ WHERE `type_alias`='com_jtca.lspe04';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE DESISTIMIENTO',
-`table`='{"special":{"dbtable":"jtca_lspe05s","key":"id","type":"lspe05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lspe05s","key":"id","type":"lspe05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlspe05Route',
@@ -587,7 +575,7 @@ WHERE `type_alias`='com_jtca.lspe05';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ARCHIVO',
-`table`='{"special":{"dbtable":"jtca_lspe06s","key":"id","type":"lspe06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lspe06s","key":"id","type":"lspe06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlspe06Route',
@@ -598,7 +586,7 @@ WHERE `type_alias`='com_jtca.lspe06';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE FINANZAS',
-`table`='{"special":{"dbtable":"jtca_lspe07s","key":"id","type":"lspe07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lspe07s","key":"id","type":"lspe07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlspe07Route',
@@ -609,7 +597,7 @@ WHERE `type_alias`='com_jtca.lspe07';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE INGRESO Y EGRESO DE BILLETES',
-`table`='{"special":{"dbtable":"jtca_lspe08s","key":"id","type":"lspe08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lspe08s","key":"id","type":"lspe08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlspe08Route',
@@ -620,7 +608,7 @@ WHERE `type_alias`='com_jtca.lspe08';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO (SISTEMA TRADICIONAL)',
-`table`='{"special":{"dbtable":"jtca_lsps01s","key":"id","type":"lsps01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps01s","key":"id","type":"lsps01s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps01Route',
@@ -631,7 +619,7 @@ WHERE `type_alias`='com_jtca.lsps01';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE REGISTRO DE ASISTENCIA (OFICIAL)',
-`table`='{"special":{"dbtable":"jtca_lsc02s","key":"id","type":"lsc02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc02s","key":"id","type":"lsc02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc02Route',
@@ -642,7 +630,7 @@ WHERE `type_alias`='com_jtca.lsc02';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE INGRESOS DE VALORES',
-`table`='{"special":{"dbtable":"jtca_ljc02s","key":"id","type":"ljc02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc02s","key":"id","type":"ljc02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc02Route',
@@ -653,7 +641,7 @@ WHERE `type_alias`='com_jtca.ljc02';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO DE BILLETES DE DEPÓSITO (INGRESOS)',
-`table`='{"special":{"dbtable":"jtca_ljp02s","key":"id","type":"ljp02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp02s","key":"id","type":"ljp02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp02Route',
@@ -664,7 +652,7 @@ WHERE `type_alias`='com_jtca.ljp02';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE INGRESO DE VALORES',
-`table`='{"special":{"dbtable":"jtca_ljccm02s","key":"id","type":"ljccm02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm02s","key":"id","type":"ljccm02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm02Route',
@@ -675,7 +663,7 @@ WHERE `type_alias`='com_jtca.ljccm02';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CERTIFICADO DE DEPÓSITOS DE INGRESO',
-`table`='{"special":{"dbtable":"jtca_ljpdng02s","key":"id","type":"ljpdng02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng02s","key":"id","type":"ljpdng02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng02Route',
@@ -686,7 +674,7 @@ WHERE `type_alias`='com_jtca.ljpdng02';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE PROMOCIONES',
-`table`='{"special":{"dbtable":"jtca_ljpes02s","key":"id","type":"ljpes02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes02s","key":"id","type":"ljpes02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes02Route',
@@ -697,7 +685,7 @@ WHERE `type_alias`='com_jtca.ljpes02';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE PROMOCIONES',
-`table`='{"special":{"dbtable":"jtca_ljjadng02s","key":"id","type":"ljjadng02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadng02s","key":"id","type":"ljjadng02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadng02Route',
@@ -708,7 +696,7 @@ WHERE `type_alias`='com_jtca.ljjadng02';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE PROMOCIONES',
-`table`='{"special":{"dbtable":"jtca_ljjadg02s","key":"id","type":"ljjadg02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg02s","key":"id","type":"ljjadg02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg02Route',
@@ -719,7 +707,7 @@ WHERE `type_alias`='com_jtca.ljjadg02';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO (NUEVO SISTEMA) (UNITARIO)',
-`table`='{"special":{"dbtable":"jtca_lsps02s","key":"id","type":"lsps02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps02s","key":"id","type":"lsps02s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps02Route',
@@ -730,18 +718,18 @@ WHERE `type_alias`='com_jtca.lsps02';
 --
 UPDATE `#__content_types` SET 
 `type_title`='Libro de ejemplo',
-`table`='{"special":{"dbtable":"jtca_lejemplos","key":"id","type":"lejemplos","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lejemplos","key":"id","type":"lejemplos","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlejemploRoute',
-`content_history_options`='{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lejemplo.xml","hideFields":["asset_id","checked_out","checked_out_time","version","id_my_suggest"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"my_ref2","targetTable":"jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"my_ref","targetTable":"jtc_materia","targetColumn":"id","displayColumn":"materia"}]}'
+`content_history_options`='{"formFile":"administrator\/components\/com_jtca\/models\/forms\/lejemplo.xml","hideFields":["asset_id","checked_out","checked_out_time","version","id_my_suggest"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_expediente","targetTable":"jt_expedientes","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_organo","targetTable":"jtc_organos","targetColumn":"id","displayColumn":"organo"},{"sourceColumn":"id_secretaria","targetTable":"jtc_secretarias","targetColumn":"id","displayColumn":"secretaria"},{"sourceColumn":"my_ref2","targetTable":"jtc_general","targetColumn":"id","displayColumn":"text"},{"sourceColumn":"my_ref","targetTable":"jtc_materia","targetColumn":"id","displayColumn":"materia"},{"sourceColumn":"my_parent","targetTable":"#__jtca_lejemplos","targetColumn":"id","displayColumn":"name"}]}'
 WHERE `type_alias`='com_jtca.lejemplo';
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Updates to table `jt_ljf22s`
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE VISTAS AL M.P (OFICIAL)',
-`table`='{"special":{"dbtable":"jtca_lsc03s","key":"id","type":"lsc03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc03s","key":"id","type":"lsc03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc03Route',
@@ -752,7 +740,7 @@ WHERE `type_alias`='com_jtca.lsc03';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE EGRESOS DE VALORES',
-`table`='{"special":{"dbtable":"jtca_ljc03s","key":"id","type":"ljc03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc03s","key":"id","type":"ljc03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc03Route',
@@ -763,7 +751,7 @@ WHERE `type_alias`='com_jtca.ljc03';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE EGRESOS DE VALORES',
-`table`='{"special":{"dbtable":"jtca_ljccm03s","key":"id","type":"ljccm03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm03s","key":"id","type":"ljccm03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm03Route',
@@ -774,7 +762,7 @@ WHERE `type_alias`='com_jtca.ljccm03';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CERTIFICADO DE DEPÓSITOS DE INGRESOS Y EGRESOS',
-`table`='{"special":{"dbtable":"jtca_ljoc03s","key":"id","type":"ljoc03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljoc03s","key":"id","type":"ljoc03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljoc03Route',
@@ -785,7 +773,7 @@ WHERE `type_alias`='com_jtca.ljoc03';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CERTIFICADO DE DEPÓSITOS DE EGRESO',
-`table`='{"special":{"dbtable":"jtca_ljpdng03s","key":"id","type":"ljpdng03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng03s","key":"id","type":"ljpdng03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng03Route',
@@ -796,7 +784,7 @@ WHERE `type_alias`='com_jtca.ljpdng03';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE RECURSOS DE APELACIÓN',
-`table`='{"special":{"dbtable":"jtca_ljpes03s","key":"id","type":"ljpes03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes03s","key":"id","type":"ljpes03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes03Route',
@@ -807,7 +795,7 @@ WHERE `type_alias`='com_jtca.ljpes03';
 --
 UPDATE `#__content_types` SET 
 `type_title`='AGENDA DE AUDIENCIAS',
-`table`='{"special":{"dbtable":"jtca_ljjadng03s","key":"id","type":"ljjadng03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadng03s","key":"id","type":"ljjadng03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadng03Route',
@@ -818,7 +806,7 @@ WHERE `type_alias`='com_jtca.ljjadng03';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE INGRESOS',
-`table`='{"special":{"dbtable":"jtca_ljjadg03s","key":"id","type":"ljjadg03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg03s","key":"id","type":"ljjadg03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg03Route',
@@ -829,7 +817,7 @@ WHERE `type_alias`='com_jtca.ljjadg03';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO (NUEVO SISTEMA) (COLEGIADO)',
-`table`='{"special":{"dbtable":"jtca_lsps03s","key":"id","type":"lsps03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps03s","key":"id","type":"lsps03s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps03Route',
@@ -840,7 +828,7 @@ WHERE `type_alias`='com_jtca.lsps03';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE MULTAS (OFICIAL)',
-`table`='{"special":{"dbtable":"jtca_lsc04s","key":"id","type":"lsc04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc04s","key":"id","type":"lsc04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc04Route',
@@ -851,7 +839,7 @@ WHERE `type_alias`='com_jtca.lsc04';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO DE PROMOCIONES',
-`table`='{"special":{"dbtable":"jtca_ljc04s","key":"id","type":"ljc04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc04s","key":"id","type":"ljc04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc04Route',
@@ -862,7 +850,7 @@ WHERE `type_alias`='com_jtca.ljc04';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE PROMOCIONES',
-`table`='{"special":{"dbtable":"jtca_ljf04s","key":"id","type":"ljf04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf04s","key":"id","type":"ljf04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf04Route',
@@ -873,7 +861,7 @@ WHERE `type_alias`='com_jtca.ljf04';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO DE PROMOCIONES',
-`table`='{"special":{"dbtable":"jtca_ljp04s","key":"id","type":"ljp04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp04s","key":"id","type":"ljp04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp04Route',
@@ -884,7 +872,7 @@ WHERE `type_alias`='com_jtca.ljp04';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE PROMOCIONES',
-`table`='{"special":{"dbtable":"jtca_ljoc04s","key":"id","type":"ljoc04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljoc04s","key":"id","type":"ljoc04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljoc04Route',
@@ -895,7 +883,7 @@ WHERE `type_alias`='com_jtca.ljoc04';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE PROMOCIONES',
-`table`='{"special":{"dbtable":"jtca_ljpdng04s","key":"id","type":"ljpdng04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng04s","key":"id","type":"ljpdng04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng04Route',
@@ -906,7 +894,7 @@ WHERE `type_alias`='com_jtca.ljpdng04';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE OFICIOS',
-`table`='{"special":{"dbtable":"jtca_ljpes04s","key":"id","type":"ljpes04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes04s","key":"id","type":"ljpes04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes04Route',
@@ -917,7 +905,7 @@ WHERE `type_alias`='com_jtca.ljpes04';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE SENTENCIAS',
-`table`='{"special":{"dbtable":"jtca_ljjadng04s","key":"id","type":"ljjadng04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadng04s","key":"id","type":"ljjadng04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadng04Route',
@@ -928,7 +916,7 @@ WHERE `type_alias`='com_jtca.ljjadng04';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE EGRESOS',
-`table`='{"special":{"dbtable":"jtca_ljjadg04s","key":"id","type":"ljjadg04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg04s","key":"id","type":"ljjadg04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg04Route',
@@ -939,7 +927,7 @@ WHERE `type_alias`='com_jtca.ljjadg04';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ACTUARIO',
-`table`='{"special":{"dbtable":"jtca_lsps04s","key":"id","type":"lsps04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps04s","key":"id","type":"lsps04s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps04Route',
@@ -950,7 +938,7 @@ WHERE `type_alias`='com_jtca.lsps04';
 --
 UPDATE `#__content_types` SET 
 `type_title`='AGENDA (OFICIAL)',
-`table`='{"special":{"dbtable":"jtca_lsc05s","key":"id","type":"lsc05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc05s","key":"id","type":"lsc05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc05Route',
@@ -961,7 +949,7 @@ WHERE `type_alias`='com_jtca.lsc05';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO PARA SENTENCIA',
-`table`='{"special":{"dbtable":"jtca_ljc05s","key":"id","type":"ljc05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc05s","key":"id","type":"ljc05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc05Route',
@@ -972,7 +960,7 @@ WHERE `type_alias`='com_jtca.ljc05';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE SENTENCIAS',
-`table`='{"special":{"dbtable":"jtca_ljf05s","key":"id","type":"ljf05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf05s","key":"id","type":"ljf05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf05Route',
@@ -983,7 +971,7 @@ WHERE `type_alias`='com_jtca.ljf05';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO PARA SENTENCIA',
-`table`='{"special":{"dbtable":"jtca_ljp05s","key":"id","type":"ljp05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp05s","key":"id","type":"ljp05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp05Route',
@@ -994,7 +982,7 @@ WHERE `type_alias`='com_jtca.ljp05';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO PARA SENTENCIA',
-`table`='{"special":{"dbtable":"jtca_ljccm05s","key":"id","type":"ljccm05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm05s","key":"id","type":"ljccm05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm05Route',
@@ -1005,7 +993,7 @@ WHERE `type_alias`='com_jtca.ljccm05';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE SENTENCIAS',
-`table`='{"special":{"dbtable":"jtca_ljoc05s","key":"id","type":"ljoc05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljoc05s","key":"id","type":"ljoc05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljoc05Route',
@@ -1016,7 +1004,7 @@ WHERE `type_alias`='com_jtca.ljoc05';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO PARA SENTENCIAS',
-`table`='{"special":{"dbtable":"jtca_ljpdng05s","key":"id","type":"ljpdng05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng05s","key":"id","type":"ljpdng05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng05Route',
@@ -1027,7 +1015,7 @@ WHERE `type_alias`='com_jtca.ljpdng05';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ACTUARIOS',
-`table`='{"special":{"dbtable":"jtca_ljpes05s","key":"id","type":"ljpes05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes05s","key":"id","type":"ljpes05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes05Route',
@@ -1038,7 +1026,7 @@ WHERE `type_alias`='com_jtca.ljpes05';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE RECURSOS DE APELACIÓN',
-`table`='{"special":{"dbtable":"jtca_ljjadng05s","key":"id","type":"ljjadng05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadng05s","key":"id","type":"ljjadng05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadng05Route',
@@ -1049,7 +1037,7 @@ WHERE `type_alias`='com_jtca.ljjadng05';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE SENTENCIAS',
-`table`='{"special":{"dbtable":"jtca_ljjadg05s","key":"id","type":"ljjadg05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg05s","key":"id","type":"ljjadg05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg05Route',
@@ -1060,7 +1048,7 @@ WHERE `type_alias`='com_jtca.ljjadg05';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO DE AMPAROS',
-`table`='{"special":{"dbtable":"jtca_lsps05s","key":"id","type":"lsps05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps05s","key":"id","type":"lsps05s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps05Route',
@@ -1071,7 +1059,7 @@ WHERE `type_alias`='com_jtca.lsps05';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE BILLETES Y PÓLIZAS (OFICIAL)',
-`table`='{"special":{"dbtable":"jtca_lsc06s","key":"id","type":"lsc06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc06s","key":"id","type":"lsc06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc06Route',
@@ -1082,7 +1070,7 @@ WHERE `type_alias`='com_jtca.lsc06';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE RECURSOS DE APELACIÓN',
-`table`='{"special":{"dbtable":"jtca_ljc06s","key":"id","type":"ljc06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc06s","key":"id","type":"ljc06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc06Route',
@@ -1093,7 +1081,7 @@ WHERE `type_alias`='com_jtca.ljc06';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE RECURSOS DE APELACIÓN',
-`table`='{"special":{"dbtable":"jtca_ljf06s","key":"id","type":"ljf06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf06s","key":"id","type":"ljf06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf06Route',
@@ -1104,7 +1092,7 @@ WHERE `type_alias`='com_jtca.ljf06';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE RECURSOS DE APELACIÓN',
-`table`='{"special":{"dbtable":"jtca_ljp06s","key":"id","type":"ljp06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp06s","key":"id","type":"ljp06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp06Route',
@@ -1115,7 +1103,7 @@ WHERE `type_alias`='com_jtca.ljp06';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE RECURSOS DE APELACIÓN',
-`table`='{"special":{"dbtable":"jtca_ljccm06s","key":"id","type":"ljccm06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm06s","key":"id","type":"ljccm06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm06Route',
@@ -1126,7 +1114,7 @@ WHERE `type_alias`='com_jtca.ljccm06';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE EXHORTOS',
-`table`='{"special":{"dbtable":"jtca_ljoc06s","key":"id","type":"ljoc06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljoc06s","key":"id","type":"ljoc06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljoc06Route',
@@ -1137,7 +1125,7 @@ WHERE `type_alias`='com_jtca.ljoc06';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE RECURSOS DE APELACIÓN',
-`table`='{"special":{"dbtable":"jtca_ljpdng06s","key":"id","type":"ljpdng06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng06s","key":"id","type":"ljpdng06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng06Route',
@@ -1148,7 +1136,7 @@ WHERE `type_alias`='com_jtca.ljpdng06';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE AMPAROS',
-`table`='{"special":{"dbtable":"jtca_ljpes06s","key":"id","type":"ljpes06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes06s","key":"id","type":"ljpes06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes06Route',
@@ -1159,7 +1147,7 @@ WHERE `type_alias`='com_jtca.ljpes06';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE EXHORTOS',
-`table`='{"special":{"dbtable":"jtca_ljjadng06s","key":"id","type":"ljjadng06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadng06s","key":"id","type":"ljjadng06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadng06Route',
@@ -1170,7 +1158,7 @@ WHERE `type_alias`='com_jtca.ljjadng06';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE RECURSOS DE APELACIÓN',
-`table`='{"special":{"dbtable":"jtca_ljjadg06s","key":"id","type":"ljjadg06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg06s","key":"id","type":"ljjadg06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg06Route',
@@ -1181,7 +1169,7 @@ WHERE `type_alias`='com_jtca.ljjadg06';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE PEDIMENTOS',
-`table`='{"special":{"dbtable":"jtca_lsps06s","key":"id","type":"lsps06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps06s","key":"id","type":"lsps06s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps06Route',
@@ -1192,7 +1180,7 @@ WHERE `type_alias`='com_jtca.lsps06';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE EGRESOS (OFICIAL)',
-`table`='{"special":{"dbtable":"jtca_lsc07s","key":"id","type":"lsc07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc07s","key":"id","type":"lsc07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc07Route',
@@ -1203,7 +1191,7 @@ WHERE `type_alias`='com_jtca.lsc07';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE EXHORTOS',
-`table`='{"special":{"dbtable":"jtca_ljc07s","key":"id","type":"ljc07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc07s","key":"id","type":"ljc07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc07Route',
@@ -1214,7 +1202,7 @@ WHERE `type_alias`='com_jtca.ljc07';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE EXHORTOS',
-`table`='{"special":{"dbtable":"jtca_ljf07s","key":"id","type":"ljf07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf07s","key":"id","type":"ljf07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf07Route',
@@ -1225,7 +1213,7 @@ WHERE `type_alias`='com_jtca.ljf07';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE EXHORTOS',
-`table`='{"special":{"dbtable":"jtca_ljccm07s","key":"id","type":"ljccm07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm07s","key":"id","type":"ljccm07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm07Route',
@@ -1236,7 +1224,7 @@ WHERE `type_alias`='com_jtca.ljccm07';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE OFICIOS',
-`table`='{"special":{"dbtable":"jtca_ljoc07s","key":"id","type":"ljoc07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljoc07s","key":"id","type":"ljoc07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljoc07Route',
@@ -1247,7 +1235,7 @@ WHERE `type_alias`='com_jtca.ljoc07';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE EXHORTOS',
-`table`='{"special":{"dbtable":"jtca_ljpdng07s","key":"id","type":"ljpdng07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng07s","key":"id","type":"ljpdng07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng07Route',
@@ -1258,7 +1246,7 @@ WHERE `type_alias`='com_jtca.ljpdng07';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE AMPAROS CIRCULANTES',
-`table`='{"special":{"dbtable":"jtca_ljpes07s","key":"id","type":"ljpes07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes07s","key":"id","type":"ljpes07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes07Route',
@@ -1269,7 +1257,7 @@ WHERE `type_alias`='com_jtca.ljpes07';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE OFICIOS',
-`table`='{"special":{"dbtable":"jtca_ljjadng07s","key":"id","type":"ljjadng07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadng07s","key":"id","type":"ljjadng07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadng07Route',
@@ -1280,7 +1268,7 @@ WHERE `type_alias`='com_jtca.ljjadng07';
 --
 UPDATE `#__content_types` SET 
 `type_title`='REGISTRO DE BILLETES DE DEPOSITO',
-`table`='{"special":{"dbtable":"jtca_lsps07s","key":"id","type":"lsps07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps07s","key":"id","type":"lsps07s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps07Route',
@@ -1291,7 +1279,7 @@ WHERE `type_alias`='com_jtca.lsps07';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE PÓLIZAS Y FIANZAS (OFICIAL) - ingresos',
-`table`='{"special":{"dbtable":"jtca_lsc08s","key":"id","type":"lsc08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc08s","key":"id","type":"lsc08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc08Route',
@@ -1302,7 +1290,7 @@ WHERE `type_alias`='com_jtca.lsc08';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE OFICIOS',
-`table`='{"special":{"dbtable":"jtca_ljc08s","key":"id","type":"ljc08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc08s","key":"id","type":"ljc08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc08Route',
@@ -1313,7 +1301,7 @@ WHERE `type_alias`='com_jtca.ljc08';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE OFICIOS',
-`table`='{"special":{"dbtable":"jtca_ljf08s","key":"id","type":"ljf08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf08s","key":"id","type":"ljf08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf08Route',
@@ -1324,7 +1312,7 @@ WHERE `type_alias`='com_jtca.ljf08';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE EXHORTOS',
-`table`='{"special":{"dbtable":"jtca_ljp08s","key":"id","type":"ljp08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp08s","key":"id","type":"ljp08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp08Route',
@@ -1335,7 +1323,7 @@ WHERE `type_alias`='com_jtca.ljp08';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE OFICIOS',
-`table`='{"special":{"dbtable":"jtca_ljccm08s","key":"id","type":"ljccm08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm08s","key":"id","type":"ljccm08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm08Route',
@@ -1346,7 +1334,7 @@ WHERE `type_alias`='com_jtca.ljccm08';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ACTUARIOS',
-`table`='{"special":{"dbtable":"jtca_ljoc08s","key":"id","type":"ljoc08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljoc08s","key":"id","type":"ljoc08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljoc08Route',
@@ -1357,7 +1345,7 @@ WHERE `type_alias`='com_jtca.ljoc08';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE OFICIOS',
-`table`='{"special":{"dbtable":"jtca_ljpdng08s","key":"id","type":"ljpdng08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng08s","key":"id","type":"ljpdng08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng08Route',
@@ -1368,7 +1356,7 @@ WHERE `type_alias`='com_jtca.ljpdng08';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE PEDIMENTOS',
-`table`='{"special":{"dbtable":"jtca_ljpes08s","key":"id","type":"ljpes08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes08s","key":"id","type":"ljpes08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes08Route',
@@ -1379,7 +1367,7 @@ WHERE `type_alias`='com_jtca.ljpes08';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE AMPAROS',
-`table`='{"special":{"dbtable":"jtca_ljjadng08s","key":"id","type":"ljjadng08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadng08s","key":"id","type":"ljjadng08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadng08Route',
@@ -1390,7 +1378,7 @@ WHERE `type_alias`='com_jtca.ljjadng08';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE PÓLIZAS Y FIANZAS (OFICIAL) - egresos',
-`table`='{"special":{"dbtable":"jtca_lsc14s","key":"id","type":"lsc14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc14s","key":"id","type":"lsc14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc14Route',
@@ -1401,7 +1389,7 @@ WHERE `type_alias`='com_jtca.lsc14';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO DE ENTREGAS DE TOCAS',
-`table`='{"special":{"dbtable":"jtca_lsps08s","key":"id","type":"lsps08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps08s","key":"id","type":"lsps08s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps08Route',
@@ -1412,7 +1400,7 @@ WHERE `type_alias`='com_jtca.lsps08';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE GOBIERNO (OFICIAL)',
-`table`='{"special":{"dbtable":"jtca_lsc09s","key":"id","type":"lsc09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc09s","key":"id","type":"lsc09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc09Route',
@@ -1423,7 +1411,7 @@ WHERE `type_alias`='com_jtca.lsc09';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ACTUARIOS',
-`table`='{"special":{"dbtable":"jtca_ljc09s","key":"id","type":"ljc09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc09s","key":"id","type":"ljc09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc09Route',
@@ -1434,7 +1422,7 @@ WHERE `type_alias`='com_jtca.ljc09';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ACTUARIOS',
-`table`='{"special":{"dbtable":"jtca_ljf09s","key":"id","type":"ljf09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf09s","key":"id","type":"ljf09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf09Route',
@@ -1445,7 +1433,7 @@ WHERE `type_alias`='com_jtca.ljf09';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE OFICIOS',
-`table`='{"special":{"dbtable":"jtca_ljp09s","key":"id","type":"ljp09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp09s","key":"id","type":"ljp09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp09Route',
@@ -1456,7 +1444,7 @@ WHERE `type_alias`='com_jtca.ljp09';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ACTUARIOS',
-`table`='{"special":{"dbtable":"jtca_ljccm09s","key":"id","type":"ljccm09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm09s","key":"id","type":"ljccm09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm09Route',
@@ -1467,7 +1455,7 @@ WHERE `type_alias`='com_jtca.ljccm09';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA',
-`table`='{"special":{"dbtable":"jtca_ljoc09s","key":"id","type":"ljoc09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljoc09s","key":"id","type":"ljoc09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljoc09Route',
@@ -1478,7 +1466,7 @@ WHERE `type_alias`='com_jtca.ljoc09';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ACTUARIOS',
-`table`='{"special":{"dbtable":"jtca_ljpdng09s","key":"id","type":"ljpdng09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng09s","key":"id","type":"ljpdng09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng09Route',
@@ -1489,7 +1477,7 @@ WHERE `type_alias`='com_jtca.ljpdng09';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE MULTAS JUDICIALES',
-`table`='{"special":{"dbtable":"jtca_ljpes09s","key":"id","type":"ljpes09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes09s","key":"id","type":"ljpes09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes09Route',
@@ -1500,7 +1488,7 @@ WHERE `type_alias`='com_jtca.ljpes09';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ACTUARIO',
-`table`='{"special":{"dbtable":"jtca_ljjadng09s","key":"id","type":"ljjadng09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadng09s","key":"id","type":"ljjadng09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadng09Route',
@@ -1511,7 +1499,7 @@ WHERE `type_alias`='com_jtca.ljjadng09';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ACTUARIOS',
-`table`='{"special":{"dbtable":"jtca_ljjadg09s","key":"id","type":"ljjadg09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg09s","key":"id","type":"ljjadg09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg09Route',
@@ -1522,7 +1510,7 @@ WHERE `type_alias`='com_jtca.ljjadg09';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REMISIÓN AL ARCHIVO',
-`table`='{"special":{"dbtable":"jtca_lsps09s","key":"id","type":"lsps09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps09s","key":"id","type":"lsps09s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps09Route',
@@ -1533,7 +1521,7 @@ WHERE `type_alias`='com_jtca.lsps09';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ACTUARIO (OFICIAL)',
-`table`='{"special":{"dbtable":"jtca_lsc10s","key":"id","type":"lsc10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc10s","key":"id","type":"lsc10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc10Route',
@@ -1544,7 +1532,7 @@ WHERE `type_alias`='com_jtca.lsc10';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA',
-`table`='{"special":{"dbtable":"jtca_ljc10s","key":"id","type":"ljc10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc10s","key":"id","type":"ljc10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc10Route',
@@ -1555,7 +1543,7 @@ WHERE `type_alias`='com_jtca.ljc10';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA, TUTORES Y CURADORES',
-`table`='{"special":{"dbtable":"jtca_ljf10s","key":"id","type":"ljf10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf10s","key":"id","type":"ljf10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf10Route',
@@ -1566,7 +1554,7 @@ WHERE `type_alias`='com_jtca.ljf10';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ACTUARIO',
-`table`='{"special":{"dbtable":"jtca_ljp10s","key":"id","type":"ljp10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp10s","key":"id","type":"ljp10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp10Route',
@@ -1577,7 +1565,7 @@ WHERE `type_alias`='com_jtca.ljp10';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO PARA NOTARIOS',
-`table`='{"special":{"dbtable":"jtca_ljccm10s","key":"id","type":"ljccm10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm10s","key":"id","type":"ljccm10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm10Route',
@@ -1588,7 +1576,7 @@ WHERE `type_alias`='com_jtca.ljccm10';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE AMPAROS',
-`table`='{"special":{"dbtable":"jtca_ljoc10s","key":"id","type":"ljoc10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljoc10s","key":"id","type":"ljoc10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljoc10Route',
@@ -1599,7 +1587,7 @@ WHERE `type_alias`='com_jtca.ljoc10';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO DE AMPAROS',
-`table`='{"special":{"dbtable":"jtca_ljpdng10s","key":"id","type":"ljpdng10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng10s","key":"id","type":"ljpdng10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng10Route',
@@ -1610,7 +1598,7 @@ WHERE `type_alias`='com_jtca.ljpdng10';
 --
 UPDATE `#__content_types` SET 
 `type_title`='AGENDA DE AUDIENCIAS PARA JUICIOS ORALES',
-`table`='{"special":{"dbtable":"jtca_ljpes10s","key":"id","type":"ljpes10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes10s","key":"id","type":"ljpes10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes10Route',
@@ -1621,7 +1609,7 @@ WHERE `type_alias`='com_jtca.ljpes10';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE PEDIMENTOS',
-`table`='{"special":{"dbtable":"jtca_ljjadng10s","key":"id","type":"ljjadng10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadng10s","key":"id","type":"ljjadng10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadng10Route',
@@ -1632,7 +1620,7 @@ WHERE `type_alias`='com_jtca.ljjadng10';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE AMPAROS',
-`table`='{"special":{"dbtable":"jtca_ljjadg10s","key":"id","type":"ljjadg10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg10s","key":"id","type":"ljjadg10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg10Route',
@@ -1643,7 +1631,7 @@ WHERE `type_alias`='com_jtca.ljjadg10';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE MULTAS',
-`table`='{"special":{"dbtable":"jtca_lsps10s","key":"id","type":"lsps10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps10s","key":"id","type":"lsps10s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps10Route',
@@ -1654,7 +1642,7 @@ WHERE `type_alias`='com_jtca.lsps10';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRETA DE OFICIOS (OFICIAL)',
-`table`='{"special":{"dbtable":"jtca_lsc11s","key":"id","type":"lsc11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc11s","key":"id","type":"lsc11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc11Route',
@@ -1665,7 +1653,7 @@ WHERE `type_alias`='com_jtca.lsc11';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO PARA NOTARIOS',
-`table`='{"special":{"dbtable":"jtca_ljf11s","key":"id","type":"ljf11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf11s","key":"id","type":"ljf11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf11Route',
@@ -1676,7 +1664,7 @@ WHERE `type_alias`='com_jtca.ljf11';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO DE AMPAROS',
-`table`='{"special":{"dbtable":"jtca_ljp11s","key":"id","type":"ljp11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp11s","key":"id","type":"ljp11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp11Route',
@@ -1687,7 +1675,7 @@ WHERE `type_alias`='com_jtca.ljp11';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO DE AMPAROS',
-`table`='{"special":{"dbtable":"jtca_ljccm11s","key":"id","type":"ljccm11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm11s","key":"id","type":"ljccm11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm11Route',
@@ -1698,7 +1686,7 @@ WHERE `type_alias`='com_jtca.ljccm11';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE MULTAS',
-`table`='{"special":{"dbtable":"jtca_ljoc11s","key":"id","type":"ljoc11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljoc11s","key":"id","type":"ljoc11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljoc11Route',
@@ -1709,7 +1697,7 @@ WHERE `type_alias`='com_jtca.ljoc11';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE AMPAROS CIRCULANTES O NEGADOS',
-`table`='{"special":{"dbtable":"jtca_ljpdng11s","key":"id","type":"ljpdng11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng11s","key":"id","type":"ljpdng11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng11Route',
@@ -1720,7 +1708,7 @@ WHERE `type_alias`='com_jtca.ljpdng11';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE INGRESOS Y EGRESOS DE BILLETES DE DEPÓSITO',
-`table`='{"special":{"dbtable":"jtca_ljpes11s","key":"id","type":"ljpes11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes11s","key":"id","type":"ljpes11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes11Route',
@@ -1731,7 +1719,7 @@ WHERE `type_alias`='com_jtca.ljpes11';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REMISIÓN AL ARCHIVO',
-`table`='{"special":{"dbtable":"jtca_ljjadng11s","key":"id","type":"ljjadng11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadng11s","key":"id","type":"ljjadng11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadng11Route',
@@ -1742,7 +1730,7 @@ WHERE `type_alias`='com_jtca.ljjadng11';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE FIANZAS',
-`table`='{"special":{"dbtable":"jtca_ljjadg11s","key":"id","type":"ljjadg11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg11s","key":"id","type":"ljjadg11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg11Route',
@@ -1753,7 +1741,7 @@ WHERE `type_alias`='com_jtca.ljjadg11';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE FIANZA',
-`table`='{"special":{"dbtable":"jtca_lsps11s","key":"id","type":"lsps11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps11s","key":"id","type":"lsps11s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps11Route',
@@ -1764,7 +1752,7 @@ WHERE `type_alias`='com_jtca.lsps11';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO DE AMPAROS (OFICIAL)',
-`table`='{"special":{"dbtable":"jtca_lsc12s","key":"id","type":"lsc12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc12s","key":"id","type":"lsc12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc12Route',
@@ -1775,7 +1763,7 @@ WHERE `type_alias`='com_jtca.lsc12';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO DE AMPAROS',
-`table`='{"special":{"dbtable":"jtca_ljc12s","key":"id","type":"ljc12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc12s","key":"id","type":"ljc12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc12Route',
@@ -1786,7 +1774,7 @@ WHERE `type_alias`='com_jtca.ljc12';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO DE AMPAROS',
-`table`='{"special":{"dbtable":"jtca_ljf12s","key":"id","type":"ljf12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf12s","key":"id","type":"ljf12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf12Route',
@@ -1797,7 +1785,7 @@ WHERE `type_alias`='com_jtca.ljf12';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO DE AMPAROS CIRCULANTES O NEGADOS',
-`table`='{"special":{"dbtable":"jtca_ljp12s","key":"id","type":"ljp12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp12s","key":"id","type":"ljp12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp12Route',
@@ -1808,7 +1796,7 @@ WHERE `type_alias`='com_jtca.ljp12';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE FIANZAS',
-`table`='{"special":{"dbtable":"jtca_ljccm12s","key":"id","type":"ljccm12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm12s","key":"id","type":"ljccm12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm12Route',
@@ -1819,7 +1807,7 @@ WHERE `type_alias`='com_jtca.ljccm12';
 --
 UPDATE `#__content_types` SET 
 `type_title`='AGENDA DE AUDIENCIAS',
-`table`='{"special":{"dbtable":"jtca_ljoc12s","key":"id","type":"ljoc12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljoc12s","key":"id","type":"ljoc12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljoc12Route',
@@ -1830,7 +1818,7 @@ WHERE `type_alias`='com_jtca.ljoc12';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE FIANZAS',
-`table`='{"special":{"dbtable":"jtca_ljpdng12s","key":"id","type":"ljpdng12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng12s","key":"id","type":"ljpdng12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng12Route',
@@ -1841,7 +1829,7 @@ WHERE `type_alias`='com_jtca.ljpdng12';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE FIANZAS',
-`table`='{"special":{"dbtable":"jtca_ljpes12s","key":"id","type":"ljpes12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes12s","key":"id","type":"ljpes12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes12Route',
@@ -1852,7 +1840,7 @@ WHERE `type_alias`='com_jtca.ljpes12';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBROS DE VALORES',
-`table`='{"special":{"dbtable":"jtca_ljjadng12s","key":"id","type":"ljjadng12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadng12s","key":"id","type":"ljjadng12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadng12Route',
@@ -1863,7 +1851,7 @@ WHERE `type_alias`='com_jtca.ljjadng12';
 --
 UPDATE `#__content_types` SET 
 `type_title`='REGISTRO DE PROMOCIONES',
-`table`='{"special":{"dbtable":"jtca_lsps12s","key":"id","type":"lsps12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps12s","key":"id","type":"lsps12s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps12Route',
@@ -1874,7 +1862,7 @@ WHERE `type_alias`='com_jtca.lsps12';
 --
 UPDATE `#__content_types` SET 
 `type_title`='PAPELETAS PARA EL PRÉSTAMO DE EXPEDIENTES',
-`table`='{"special":{"dbtable":"jtca_lsc13s","key":"id","type":"lsc13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsc13s","key":"id","type":"lsc13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsc13Route',
@@ -1885,7 +1873,7 @@ WHERE `type_alias`='com_jtca.lsc13';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE FIANZAS',
-`table`='{"special":{"dbtable":"jtca_ljc13s","key":"id","type":"ljc13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc13s","key":"id","type":"ljc13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc13Route',
@@ -1896,7 +1884,7 @@ WHERE `type_alias`='com_jtca.ljc13';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE FIANZAS',
-`table`='{"special":{"dbtable":"jtca_ljf13s","key":"id","type":"ljf13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf13s","key":"id","type":"ljf13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf13Route',
@@ -1907,7 +1895,7 @@ WHERE `type_alias`='com_jtca.ljf13';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE FIANZAS',
-`table`='{"special":{"dbtable":"jtca_ljp13s","key":"id","type":"ljp13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp13s","key":"id","type":"ljp13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp13Route',
@@ -1918,7 +1906,7 @@ WHERE `type_alias`='com_jtca.ljp13';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE MULTAS',
-`table`='{"special":{"dbtable":"jtca_ljccm13s","key":"id","type":"ljccm13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm13s","key":"id","type":"ljccm13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm13Route',
@@ -1929,7 +1917,7 @@ WHERE `type_alias`='com_jtca.ljccm13';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE NOTARIOS',
-`table`='{"special":{"dbtable":"jtca_ljoc13s","key":"id","type":"ljoc13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljoc13s","key":"id","type":"ljoc13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljoc13Route',
@@ -1940,7 +1928,7 @@ WHERE `type_alias`='com_jtca.ljoc13';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE MULTAS',
-`table`='{"special":{"dbtable":"jtca_ljpdng13s","key":"id","type":"ljpdng13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng13s","key":"id","type":"ljpdng13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng13Route',
@@ -1951,7 +1939,7 @@ WHERE `type_alias`='com_jtca.ljpdng13';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE RESOLUCIONES EN AUDIENCIA',
-`table`='{"special":{"dbtable":"jtca_ljpes13s","key":"id","type":"ljpes13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes13s","key":"id","type":"ljpes13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes13Route',
@@ -1962,7 +1950,7 @@ WHERE `type_alias`='com_jtca.ljpes13';
 --
 UPDATE `#__content_types` SET 
 `type_title`='AGENDA DE AUDIENCIAS',
-`table`='{"special":{"dbtable":"jtca_ljjadg13s","key":"id","type":"ljjadg13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg13s","key":"id","type":"ljjadg13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg13Route',
@@ -1973,7 +1961,7 @@ WHERE `type_alias`='com_jtca.ljjadg13';
 --
 UPDATE `#__content_types` SET 
 `type_title`='CONTROL DE FIRMAS DEL PROCESADO',
-`table`='{"special":{"dbtable":"jtca_lsps13s","key":"id","type":"lsps13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps13s","key":"id","type":"lsps13s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps13Route',
@@ -1984,7 +1972,7 @@ WHERE `type_alias`='com_jtca.lsps13';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE MULTAS',
-`table`='{"special":{"dbtable":"jtca_ljc14s","key":"id","type":"ljc14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc14s","key":"id","type":"ljc14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc14Route',
@@ -1995,7 +1983,7 @@ WHERE `type_alias`='com_jtca.ljc14';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE MULTAS',
-`table`='{"special":{"dbtable":"jtca_ljf14s","key":"id","type":"ljf14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf14s","key":"id","type":"ljf14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf14Route',
@@ -2006,7 +1994,7 @@ WHERE `type_alias`='com_jtca.ljf14';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE MULTAS',
-`table`='{"special":{"dbtable":"jtca_ljp14s","key":"id","type":"ljp14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp14s","key":"id","type":"ljp14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp14Route',
@@ -2017,7 +2005,7 @@ WHERE `type_alias`='com_jtca.ljp14';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE FIANZAS',
-`table`='{"special":{"dbtable":"jtca_ljoc14s","key":"id","type":"ljoc14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljoc14s","key":"id","type":"ljoc14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljoc14Route',
@@ -2028,7 +2016,7 @@ WHERE `type_alias`='com_jtca.ljoc14';
 --
 UPDATE `#__content_types` SET 
 `type_title`='AGENDA DE AUDIENCIAS',
-`table`='{"special":{"dbtable":"jtca_ljpdng14s","key":"id","type":"ljpdng14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng14s","key":"id","type":"ljpdng14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng14Route',
@@ -2039,7 +2027,7 @@ WHERE `type_alias`='com_jtca.ljpdng14';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE RESOLUCIONES DE PLANO',
-`table`='{"special":{"dbtable":"jtca_ljpes14s","key":"id","type":"ljpes14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes14s","key":"id","type":"ljpes14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes14Route',
@@ -2050,7 +2038,7 @@ WHERE `type_alias`='com_jtca.ljpes14';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE PEDIMENTOS',
-`table`='{"special":{"dbtable":"jtca_ljjadg14s","key":"id","type":"ljjadg14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg14s","key":"id","type":"ljjadg14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg14Route',
@@ -2061,7 +2049,7 @@ WHERE `type_alias`='com_jtca.ljjadg14';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE OFICIOS',
-`table`='{"special":{"dbtable":"jtca_lsps14s","key":"id","type":"lsps14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_lsps14s","key":"id","type":"lsps14s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getlsps14Route',
@@ -2072,7 +2060,7 @@ WHERE `type_alias`='com_jtca.lsps14';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO A CARGO DE LOS SECRETARIOS DE ACUERDOS',
-`table`='{"special":{"dbtable":"jtca_ljf15s","key":"id","type":"ljf15s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf15s","key":"id","type":"ljf15s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf15Route',
@@ -2083,7 +2071,7 @@ WHERE `type_alias`='com_jtca.ljf15';
 --
 UPDATE `#__content_types` SET 
 `type_title`='AGENDA DE AUDIENCIAS',
-`table`='{"special":{"dbtable":"jtca_ljccm15s","key":"id","type":"ljccm15s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm15s","key":"id","type":"ljccm15s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm15Route',
@@ -2094,7 +2082,7 @@ WHERE `type_alias`='com_jtca.ljccm15';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE PEDIMENTOS',
-`table`='{"special":{"dbtable":"jtca_ljpdng15s","key":"id","type":"ljpdng15s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng15s","key":"id","type":"ljpdng15s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng15Route',
@@ -2105,7 +2093,7 @@ WHERE `type_alias`='com_jtca.ljpdng15';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE BENEFICIOS REVOCADOS Y ORDENES DE RE-APREHENSIÓN',
-`table`='{"special":{"dbtable":"jtca_ljpes15s","key":"id","type":"ljpes15s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes15s","key":"id","type":"ljpes15s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes15Route',
@@ -2116,7 +2104,7 @@ WHERE `type_alias`='com_jtca.ljpes15';
 --
 UPDATE `#__content_types` SET 
 `type_title`='ARTICULO 36 o ARTICULO 28 LJADF',
-`table`='{"special":{"dbtable":"jtca_ljjadg15s","key":"id","type":"ljjadg15s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg15s","key":"id","type":"ljjadg15s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg15Route',
@@ -2127,7 +2115,7 @@ WHERE `type_alias`='com_jtca.ljjadg15';
 --
 UPDATE `#__content_types` SET 
 `type_title`='AGENDA DE AUDIENCIAS',
-`table`='{"special":{"dbtable":"jtca_ljc16s","key":"id","type":"ljc16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc16s","key":"id","type":"ljc16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc16Route',
@@ -2138,7 +2126,7 @@ WHERE `type_alias`='com_jtca.ljc16';
 --
 UPDATE `#__content_types` SET 
 `type_title`='AGENDA DE AUDIENCIAS',
-`table`='{"special":{"dbtable":"jtca_ljf16s","key":"id","type":"ljf16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf16s","key":"id","type":"ljf16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf16Route',
@@ -2149,7 +2137,7 @@ WHERE `type_alias`='com_jtca.ljf16';
 --
 UPDATE `#__content_types` SET 
 `type_title`='AGENDA DE AUDIENCIAS',
-`table`='{"special":{"dbtable":"jtca_ljp16s","key":"id","type":"ljp16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp16s","key":"id","type":"ljp16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp16Route',
@@ -2160,7 +2148,7 @@ WHERE `type_alias`='com_jtca.ljp16';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REMISIÓN DE EXPEDIENTES AL ARCHIVO',
-`table`='{"special":{"dbtable":"jtca_ljccm16s","key":"id","type":"ljccm16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm16s","key":"id","type":"ljccm16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm16Route',
@@ -2171,7 +2159,7 @@ WHERE `type_alias`='com_jtca.ljccm16';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO EN QUE SE HAYA OBSEQUIADO O NEGADO LA ORDEN DE APREHENSIÓN, COMPARECENCIA, PRESENTACIÓN, ARTÍCULO 36 DEL CÓDIGO DE PROCEDIMIENTOS PENALES Y OTROS',
-`table`='{"special":{"dbtable":"jtca_ljpdng16s","key":"id","type":"ljpdng16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng16s","key":"id","type":"ljpdng16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng16Route',
@@ -2182,7 +2170,7 @@ WHERE `type_alias`='com_jtca.ljpdng16';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE DESISTIMIENTOS',
-`table`='{"special":{"dbtable":"jtca_ljpes16s","key":"id","type":"ljpes16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes16s","key":"id","type":"ljpes16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes16Route',
@@ -2193,7 +2181,7 @@ WHERE `type_alias`='com_jtca.ljpes16';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE PRESENTACIÓN DE ADOLESCENTES EN LIBERTAD ANTE EL JUEZ',
-`table`='{"special":{"dbtable":"jtca_ljjadg16s","key":"id","type":"ljjadg16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg16s","key":"id","type":"ljjadg16s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg16Route',
@@ -2204,7 +2192,7 @@ WHERE `type_alias`='com_jtca.ljjadg16';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REMISIÓN AL ARCHIVO',
-`table`='{"special":{"dbtable":"jtca_ljc17s","key":"id","type":"ljc17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc17s","key":"id","type":"ljc17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc17Route',
@@ -2215,7 +2203,7 @@ WHERE `type_alias`='com_jtca.ljc17';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REMISIÓN AL ARCHIVO',
-`table`='{"special":{"dbtable":"jtca_ljf17s","key":"id","type":"ljf17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf17s","key":"id","type":"ljf17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf17Route',
@@ -2226,7 +2214,7 @@ WHERE `type_alias`='com_jtca.ljf17';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE PEDIMENTOS',
-`table`='{"special":{"dbtable":"jtca_ljp17s","key":"id","type":"ljp17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp17s","key":"id","type":"ljp17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp17Route',
@@ -2237,7 +2225,7 @@ WHERE `type_alias`='com_jtca.ljp17';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO',
-`table`='{"special":{"dbtable":"jtca_ljccm17s","key":"id","type":"ljccm17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljccm17s","key":"id","type":"ljccm17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljccm17Route',
@@ -2248,7 +2236,7 @@ WHERE `type_alias`='com_jtca.ljccm17';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE FIRMAS PROCESADOS',
-`table`='{"special":{"dbtable":"jtca_ljpdng17s","key":"id","type":"ljpdng17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng17s","key":"id","type":"ljpdng17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng17Route',
@@ -2259,7 +2247,7 @@ WHERE `type_alias`='com_jtca.ljpdng17';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ARCHIVO',
-`table`='{"special":{"dbtable":"jtca_ljpes17s","key":"id","type":"ljpes17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes17s","key":"id","type":"ljpes17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes17Route',
@@ -2270,7 +2258,7 @@ WHERE `type_alias`='com_jtca.ljpes17';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REMISIÓN AL ARCHIVO',
-`table`='{"special":{"dbtable":"jtca_ljjadg17s","key":"id","type":"ljjadg17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg17s","key":"id","type":"ljjadg17s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg17Route',
@@ -2281,7 +2269,7 @@ WHERE `type_alias`='com_jtca.ljjadg17';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO',
-`table`='{"special":{"dbtable":"jtca_ljc18s","key":"id","type":"ljc18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc18s","key":"id","type":"ljc18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc18Route',
@@ -2292,7 +2280,7 @@ WHERE `type_alias`='com_jtca.ljc18';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO',
-`table`='{"special":{"dbtable":"jtca_ljf18s","key":"id","type":"ljf18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf18s","key":"id","type":"ljf18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf18Route',
@@ -2303,7 +2291,7 @@ WHERE `type_alias`='com_jtca.ljf18';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REGISTRO EN QUE SE HAYA OBSEQUIADO O NEGADO LA ORDEN DE APREHENSIÓN, COMPARECENCIA, PRESENTACIÓN, ARTÍCULO 36 DEL CÓDIGO DE PROCEDIMIENTOS PENALES Y OTROS',
-`table`='{"special":{"dbtable":"jtca_ljp18s","key":"id","type":"ljp18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp18s","key":"id","type":"ljp18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp18Route',
@@ -2314,7 +2302,7 @@ WHERE `type_alias`='com_jtca.ljp18';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REMISIÓN AL ARCHIVO',
-`table`='{"special":{"dbtable":"jtca_ljpdng18s","key":"id","type":"ljpdng18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpdng18s","key":"id","type":"ljpdng18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpdng18Route',
@@ -2325,7 +2313,7 @@ WHERE `type_alias`='com_jtca.ljpdng18';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE AMPAROS *LOCOS*',
-`table`='{"special":{"dbtable":"jtca_ljjadg18s","key":"id","type":"ljjadg18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljjadg18s","key":"id","type":"ljjadg18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljjadg18Route',
@@ -2336,7 +2324,7 @@ WHERE `type_alias`='com_jtca.ljjadg18';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE EXHORTOS',
-`table`='{"special":{"dbtable":"jtca_ljpes18s","key":"id","type":"ljpes18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljpes18s","key":"id","type":"ljpes18s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljpes18Route',
@@ -2347,7 +2335,7 @@ WHERE `type_alias`='com_jtca.ljpes18';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN',
-`table`='{"special":{"dbtable":"jtca_ljc19s","key":"id","type":"ljc19s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc19s","key":"id","type":"ljc19s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc19Route',
@@ -2358,7 +2346,7 @@ WHERE `type_alias`='com_jtca.ljc19';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL PARA SU DESTRUCCIÓN',
-`table`='{"special":{"dbtable":"jtca_ljf19s","key":"id","type":"ljf19s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf19s","key":"id","type":"ljf19s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf19Route',
@@ -2369,7 +2357,7 @@ WHERE `type_alias`='com_jtca.ljf19';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE FIRMAS DE PROCESADOS',
-`table`='{"special":{"dbtable":"jtca_ljp19s","key":"id","type":"ljp19s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp19s","key":"id","type":"ljp19s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp19Route',
@@ -2380,7 +2368,7 @@ WHERE `type_alias`='com_jtca.ljp19';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA',
-`table`='{"special":{"dbtable":"jtca_ljc20s","key":"id","type":"ljc20s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc20s","key":"id","type":"ljc20s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc20Route',
@@ -2391,7 +2379,7 @@ WHERE `type_alias`='com_jtca.ljc20';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA',
-`table`='{"special":{"dbtable":"jtca_ljf20s","key":"id","type":"ljf20s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf20s","key":"id","type":"ljf20s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf20Route',
@@ -2402,7 +2390,7 @@ WHERE `type_alias`='com_jtca.ljf20';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE TURNO PARA CONCLUSIONES',
-`table`='{"special":{"dbtable":"jtca_ljp20s","key":"id","type":"ljp20s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp20s","key":"id","type":"ljp20s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp20Route',
@@ -2413,7 +2401,7 @@ WHERE `type_alias`='com_jtca.ljp20';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE MINISTERIO PÚBLICO',
-`table`='{"special":{"dbtable":"jtca_ljc21s","key":"id","type":"ljc21s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljc21s","key":"id","type":"ljc21s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljc21Route',
@@ -2424,7 +2412,7 @@ WHERE `type_alias`='com_jtca.ljc21';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE ADOPCIONES INTERNACIONALES',
-`table`='{"special":{"dbtable":"jtca_ljf21s","key":"id","type":"ljf21s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf21s","key":"id","type":"ljf21s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf21Route',
@@ -2435,7 +2423,7 @@ WHERE `type_alias`='com_jtca.ljf21';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE REMISIÓN AL ARCHIVO',
-`table`='{"special":{"dbtable":"jtca_ljp21s","key":"id","type":"ljp21s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljp21s","key":"id","type":"ljp21s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljp21Route',
@@ -2446,7 +2434,7 @@ WHERE `type_alias`='com_jtca.ljp21';
 --
 UPDATE `#__content_types` SET 
 `type_title`='LIBRO DE CONTROL DE RESTITUCIONES INTERNACIONALES',
-`table`='{"special":{"dbtable":"jtca_ljf22s","key":"id","type":"ljf22s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+`table`='{"special":{"dbtable":"jt_ljf22s","key":"id","type":"ljf22s","prefix":"jtcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 `rules`='',
 `field_mappings`='{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 `router`='jtcaHelperRoute::getljf22Route',

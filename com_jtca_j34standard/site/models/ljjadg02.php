@@ -246,44 +246,20 @@ class JtCaModelLjjadg02 extends JModelItem
 
 				if (isset($item->id_organo) AND $item->id_organo !='')
 				{
-					$sql = 'SELECT '.$db->quoteName('list.id').' AS id, '.$db->quoteName('list.organo').' AS value FROM (SELECT id, organo FROM jtc_organos) AS list';
+					$sql = 'SELECT '.$db->quoteName('list.organo').' AS value FROM (SELECT id, organo FROM jtc_organos) AS list';
 					$sql .= ' WHERE '.$db->quoteName('list.id').' IN ('.JString::trim($item->id_organo, ',').');';
-
-					$db->setQuery($sql);
-					
-					$rows = $db->loadAssocList();
-					$result_array = array();
-					foreach ($rows as $row)
-					{
-						$result_array[] = $row;
-					}					
-					$item->id_organo = $result_array;
-				}
-				else
-				{
-					$item->id_organo = array();
+					$db->setQuery($sql);				
+					$item->id_organo = $db->loadResult();
 				}
 				
 				
 				
 				if (isset($item->id_secretaria) AND $item->id_secretaria !='')
 				{
-					$sql = 'SELECT '.$db->quoteName('list.id').' AS id, '.$db->quoteName('list.secretaria').' AS value FROM (SELECT id, secretaria FROM jtc_secretarias) AS list';
+					$sql = 'SELECT '.$db->quoteName('list.secretaria').' AS value FROM (SELECT id, secretaria FROM jtc_secretarias) AS list';
 					$sql .= ' WHERE '.$db->quoteName('list.id').' IN ('.JString::trim($item->id_secretaria, ',').');';
-
-					$db->setQuery($sql);
-					
-					$rows = $db->loadAssocList();
-					$result_array = array();
-					foreach ($rows as $row)
-					{
-						$result_array[] = $row;
-					}					
-					$item->id_secretaria = $result_array;
-				}
-				else
-				{
-					$item->id_secretaria = array();
+					$db->setQuery($sql);				
+					$item->id_secretaria = $db->loadResult();
 				}
 				
 				

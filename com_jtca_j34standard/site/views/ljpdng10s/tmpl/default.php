@@ -80,6 +80,7 @@ $empty = $component->params->get('default_empty_field', '');
 	<?php endif; ?>
 
 	<?php
+		$can_edit = 0;$can_delete = 0;
 		$show_actions = false;
 		if ($this->params->get('show_ljpdng10_icons',1) >= 0) :
 			foreach ($this->items as $i => $item) :
@@ -114,7 +115,7 @@ $empty = $component->params->get('default_empty_field', '');
 
 		<?php else : ?>
 		<div style="overflow-x:auto;">
-			<table class="table table-striped" id="ljpdng10s">
+			<table class="table table-striped" id="ljpdng10s" style="margin-bottom: 200px;">
 			<?php if ($this->params->get('show_ljpdng10_headings',1)) :?>
 			<thead>
 				<tr>

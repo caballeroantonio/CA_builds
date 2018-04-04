@@ -553,7 +553,7 @@ El archivo config_lyx.tex es de ComponentArchitect y no del proyecto hay
 \end_layout
 
 \begin_layout Itemize
-http://localhost/JPruebas/administrator/index.php?option=com_componentarchitect&v
+administrator/index.php?option=com_componentarchitect&v
 iew=dashboard&layout=make_config_lyx
 \end_layout
 

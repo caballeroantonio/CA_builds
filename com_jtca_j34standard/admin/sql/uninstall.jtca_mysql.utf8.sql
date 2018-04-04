@@ -25,6 +25,9 @@
 --
 -- Uninstall of `#__jtca` tables
 --
+
+SET FOREIGN_KEY_CHECKS=0;
+
 DROP TABLE IF EXISTS `jt_ljc01s`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_jtca.ljc01';
 DELETE FROM `#__menu` WHERE `title`='COM_JTCA_LJC01S' AND `type`='component';
@@ -702,3 +705,5 @@ DELETE FROM `#__categories` WHERE `extension`='com_jtca';
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_jtca.category';
 DELETE FROM `#__menu` WHERE `title`='COM_JTCA_CATEGORIES' AND `type`='component';
 #[ %%ENDIF GENERATE_CATEGORIES%%]
+
+SET FOREIGN_KEY_CHECKS=1;

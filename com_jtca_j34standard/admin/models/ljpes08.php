@@ -262,6 +262,7 @@ class JtCaModelLjpes08 extends JModelAdmin
 		{
 			$data['state'] = 0;
 		}
+        
 
 		if (parent::save($data))
 		{

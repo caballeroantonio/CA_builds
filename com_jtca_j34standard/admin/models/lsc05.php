@@ -262,6 +262,7 @@ class JtCaModelLsc05 extends JModelAdmin
 		{
 			$data['state'] = 0;
 		}
+        
 
 		if (parent::save($data))
 		{

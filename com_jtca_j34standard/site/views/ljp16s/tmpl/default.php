@@ -80,6 +80,7 @@ $empty = $component->params->get('default_empty_field', '');
 	<?php endif; ?>
 
 	<?php
+		$can_edit = 0;$can_delete = 0;
 		$show_actions = false;
 		if ($this->params->get('show_ljp16_icons',1) >= 0) :
 			foreach ($this->items as $i => $item) :
@@ -114,7 +115,7 @@ $empty = $component->params->get('default_empty_field', '');
 
 		<?php else : ?>
 		<div style="overflow-x:auto;">
-			<table class="table table-striped" id="ljp16s">
+			<table class="table table-striped" id="ljp16s" style="margin-bottom: 200px;">
 			<?php if ($this->params->get('show_ljp16_headings',1)) :?>
 			<thead>
 				<tr>

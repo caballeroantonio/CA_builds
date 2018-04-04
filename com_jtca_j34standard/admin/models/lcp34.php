@@ -262,6 +262,7 @@ class JtCaModelLcp34 extends JModelAdmin
 		{
 			$data['state'] = 0;
 		}
+        
 
 		if (parent::save($data))
 		{
