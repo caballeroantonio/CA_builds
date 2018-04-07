@@ -56,6 +56,28 @@ function getFields(){
     $fields['id_organo'] = $field;
     //{OBJECT_FIELD}
     $field = array(
+        'FIELD_NAME' => 'Secretaría',
+        'FIELD_CODE_NAME' => 'id_secretaria',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 18,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_SECRETARIA
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) DEFAULT NULL Secretaría
+
+                FIELD_NAME_LATEX=Secretar\'i{}a
+                FIELD_CODE_NAME_LATEX=id\_secretaria
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['id_secretaria'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
         'FIELD_NAME' => 'Año j.',
         'FIELD_CODE_NAME' => 'anoj',
         'FIELD_DESCRIPTION' => '<p>Año judicial</p>',//<p>Año judicial</p>
@@ -81,7 +103,7 @@ function getFields(){
         'FIELD_NAME' => 'CAUSA',
         'FIELD_CODE_NAME' => 'id_expediente',
         'FIELD_DESCRIPTION' => '<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>',//<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-        'FIELDTYPE_ID' => 33,
+        'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
@@ -89,37 +111,18 @@ function getFields(){
                 FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) DEFAULT NULL CAUSA
+                FIELD_DB=`` INT(10) UNSIGNED  DEFAULT NULL CAUSA
 
                 FIELD_NAME_LATEX=CAUSA
                 FIELD_CODE_NAME_LATEX=id\_expediente
                 FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
 
+                    {FIELD_LINK}
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=E
+                    FIELD_FOREIGN_OBJECT_UPPER=EXPEDIENTE
 
     */
     $fields['id_expediente'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'Secretaría',
-        'FIELD_CODE_NAME' => 'id_secretaria',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 18,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_SECRETARIA
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) DEFAULT NULL Secretaría
-
-                FIELD_NAME_LATEX=Secretar\'i{}a
-                FIELD_CODE_NAME_LATEX=id\_secretaria
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['id_secretaria'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'ADOLESCENTE',
@@ -324,7 +327,7 @@ if ($this->params->get('save_history') AND $this->params->get('ljjadng11_save_hi
 	//hacer parametrizable data_id para que funcione versiones
 	
 	//$model	= JModelLegacy::getInstance('[%CompObject%]Form','[%ArchitectComp%]Model', array('ignore_request' => FALSE));
-	$model	= JModelLegacy::getInstance('Ljjadng11Form','JtCaModel', array('ignore_request' => FALSE));
+	$model	= JModelLegacy::getInstance('Ljjadng11Form','JtcaModel', array('ignore_request' => FALSE));
 	$data = array();
 	$data['id'] = 1;
 	$this->form	= $model->getForm($data, false);

@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES CON DETENIDO View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp01 extends JViewLegacy
+class JtcaViewLcp01 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLcp01 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLcp01Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLcp01Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lcp01_itemid')));
 

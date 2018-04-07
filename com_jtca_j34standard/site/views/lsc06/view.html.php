@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE CONTROL DE BILLETES Y PÓLIZAS (OFICIAL) View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsc06 extends JViewLegacy
+class JtcaViewLsc06 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLsc06 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLsc06Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLsc06Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lsc06_itemid')));
 

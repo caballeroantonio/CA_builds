@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRETA DE REGISTRO DE ASISTENCIA (OFICIAL) View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsc02Form extends JViewLegacy
+class JtcaViewLsc02Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

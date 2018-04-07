@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE CONTROL DE PEDIMENTOS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjp17 extends JViewLegacy
+class JtcaViewLjp17 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjp17 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjp17Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjp17Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljp17_itemid')));
 

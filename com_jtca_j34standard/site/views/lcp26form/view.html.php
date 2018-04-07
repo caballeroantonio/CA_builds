@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO PARA CONSIGNACIONES SIN DETENIDO DELITOS NO GRAVES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp26Form extends JViewLegacy
+class JtcaViewLcp26Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

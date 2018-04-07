@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * Methods supporting a list of lcp12 records.
  *
  */
-class JtCaModelLcp12s extends JModelList
+class JtcaModelLcp12s extends JModelList
 {
 	/**
 	 * Context string for the model type.  This is used to handle uniqueness
@@ -80,7 +80,7 @@ class JtCaModelLcp12s extends JModelList
 	 * 
 	 * @return	JTable	A database object
 	 */
-	public function getTable($type = 'Lcp12s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Lcp12s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}	

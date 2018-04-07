@@ -253,7 +253,7 @@ class JHTMLLjpdng12Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLjpdng12Route($ljpdng12->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLjpdng12Route($ljpdng12->slug,
 									$layout,
 									$params->get('keep_ljpdng12_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLjpdng12Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLjpdng12Route($ljpdng12->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLjpdng12Route($ljpdng12->slug,
 									$layout,
 									$params->get('keep_ljpdng12_itemid')) , false);
 		

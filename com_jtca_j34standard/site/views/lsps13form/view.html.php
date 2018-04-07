@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML CONTROL DE FIRMAS DEL PROCESADO View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsps13Form extends JViewLegacy
+class JtcaViewLsps13Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

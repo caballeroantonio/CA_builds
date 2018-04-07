@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO PARA INCOMPETENCIAS ADOLESCENTES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp06 extends JViewLegacy
+class JtcaViewLcp06 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLcp06 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLcp06Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLcp06Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lcp06_itemid')));
 

@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO PARA SENTENCIAS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjpdng05 extends JViewLegacy
+class JtcaViewLjpdng05 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjpdng05 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjpdng05Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjpdng05Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljpdng05_itemid')));
 

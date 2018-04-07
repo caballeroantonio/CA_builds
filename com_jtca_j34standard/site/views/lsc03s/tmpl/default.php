@@ -297,7 +297,11 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_lsc03_id_expediente',1)) : ?>
 						<td class="list-id_expediente">
 							<?php 
-								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
+								if ($params->get('list_link_lsc03_id_expediente')) :
+									echo '<a href="'.JRoute::_(JtcaHelperRoute::getExpedienteRoute($item->id_expediente, 0)).'">'.JString::trim($item->e_expediente_name).'</a>';
+								else :
+									echo JString::trim($item->e_expediente_name);
+								endif; 
 							?>
 						</td>
 					<?php endif; ?>

@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * TSJ CDMX Libros TxCA Component LIBRETA DE EXPEDIENTILLOS DE JUZGADOS DE EJECUCIÓN PARA JUZGADOS PENAL O NO GRAVES. Model
  *
  */
-class JtCaModelLcp13 extends JModelItem
+class JtcaModelLcp13 extends JModelItem
 {
 	/**
 	 * Model context string.  Used in setting the store id for the session
@@ -56,8 +56,8 @@ class JtCaModelLcp13 extends JModelItem
 			$config['lcp13_filter_fields'] = array(
 				'id', 'a.id',
 				'id_organo','a.id_organo',
-				'anoj','a.anoj',
 				'id_secretaria','a.id_secretaria',
+				'anoj','a.anoj',
 				'fh_recepcion','a.fh_recepcion',
 				'field3','a.field3',
 				'organo1','a.organo1',
@@ -166,7 +166,7 @@ class JtCaModelLcp13 extends JModelItem
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Lcp13s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Lcp13s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -251,7 +251,6 @@ class JtCaModelLcp13 extends JModelItem
 					$item->id_organo = $db->loadResult();
 				}
 				
-				
 				if (isset($item->id_secretaria) AND $item->id_secretaria !='')
 				{
 					$sql = 'SELECT '.$db->quoteName('list.secretaria').' AS value FROM (SELECT id, secretaria FROM jtc_secretarias) AS list';
@@ -259,6 +258,7 @@ class JtCaModelLcp13 extends JModelItem
 					$db->setQuery($sql);				
 					$item->id_secretaria = $db->loadResult();
 				}
+				
 				
 				
 				

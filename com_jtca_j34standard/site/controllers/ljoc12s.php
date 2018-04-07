@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * AGENDA DE AUDIENCIAS list controller class.
  *
  */
-class JtCaControllerLjoc12s extends JControllerLegacy
+class JtcaControllerLjoc12s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLjoc12s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Ljoc12s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Ljoc12s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLjoc12s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Ljoc12Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Ljoc12Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Ljoc12s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Ljoc12s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

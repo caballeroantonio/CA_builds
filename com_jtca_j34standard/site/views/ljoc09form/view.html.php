@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjoc09Form extends JViewLegacy
+class JtcaViewLjoc09Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

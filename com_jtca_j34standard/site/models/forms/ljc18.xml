@@ -117,17 +117,6 @@
     >
 
         <field
-            id="id_expediente"
-            name="id_expediente"
-            type="modal_expedientes"
-            label="COM_JTCA_LJC18S_FIELD_ID_EXPEDIENTE_LABEL"
-            description="COM_JTCA_LJC18S_FIELD_ID_EXPEDIENTE_DESC"
-            class="modal"
-			required="true"
-			default="0"
-        >
-        </field>  
-        <field
             id="id_organo"
             name="id_organo"
             type="sql"
@@ -164,6 +153,18 @@
             class="inputbox"
 			size="50"
 			maxlength="255"
+        >
+        </field>  
+        <field
+            id="id_expediente"
+            name="id_expediente"
+            type="modal_expedientes"
+            label="COM_JTCA_LJC18S_FIELD_ID_EXPEDIENTE_LABEL"
+            description="COM_JTCA_LJC18S_FIELD_ID_EXPEDIENTE_DESC"
+            class="modal"
+			required="true"
+			default="0"
+			type_alias="com_jtca.expediente" 
         >
         </field>  
         <field
@@ -218,49 +219,6 @@
 			format="%Y-%m-%d"
 			filter="fixed"
 			validate="date"
-        >
-        </field>  
-        <field
-            id="field10_paterno"
-            name="field10_paterno"
-            type="text"
-            label="COM_JTCA_LJC18S_FIELD_FIELD10_PATERNO_LABEL"
-            description="COM_JTCA_LJC18S_FIELD_FIELD10_PATERNO_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            id="field10_materno"
-            name="field10_materno"
-            type="text"
-            label="COM_JTCA_LJC18S_FIELD_FIELD10_MATERNO_LABEL"
-            description="COM_JTCA_LJC18S_FIELD_FIELD10_MATERNO_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            id="field10_nombre"
-            name="field10_nombre"
-            type="text"
-            label="COM_JTCA_LJC18S_FIELD_FIELD10_NOMBRE_LABEL"
-            description="COM_JTCA_LJC18S_FIELD_FIELD10_NOMBRE_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            id="field10_isMoral"
-            name="field10_isMoral"
-            type="checkbox"
-            label="COM_JTCA_LJC18S_FIELD_FIELD10_ISMORAL_LABEL"
-            description="COM_JTCA_LJC18S_FIELD_FIELD10_ISMORAL_DESC"
-            class="inputbox"
-			value="1"
         >
         </field>  
         <field

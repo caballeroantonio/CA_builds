@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO DE ENTREGAS DE TOCAS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsps08Form extends JViewLegacy
+class JtcaViewLsps08Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

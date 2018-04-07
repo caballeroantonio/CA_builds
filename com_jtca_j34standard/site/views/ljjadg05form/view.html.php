@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE SENTENCIAS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjjadg05Form extends JViewLegacy
+class JtcaViewLjjadg05Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

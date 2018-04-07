@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRETA DE RETURNO DE ADOLESCENTES list controller class.
  *
  */
-class JtCaControllerLcp36s extends JControllerLegacy
+class JtcaControllerLcp36s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLcp36s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Lcp36s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Lcp36s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLcp36s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Lcp36Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Lcp36Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Lcp36s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Lcp36s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

@@ -125,8 +125,8 @@ $empty = $component->params->get('default_empty_field', '');
 								($params->get('show_lsc08_id_organo')) OR 
 								($params->get('show_lsc08_id_secretaria')) OR 
 								($params->get('show_lsc08_anoj')) OR 
-								($params->get('show_lsc08_field177')) OR 
 								($params->get('show_lsc08_id_expediente')) OR 
+								($params->get('show_lsc08_field177')) OR 
 								($params->get('show_lsc08_billete')) OR 
 								$dummy
 								);
@@ -196,6 +196,18 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
+						<?php if ($params->get('show_lsc08_id_expediente')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LSC08S_FIELD_ID_EXPEDIENTE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo JString::trim($this->item->e_expediente_name);
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
 						<?php if ($params->get('show_lsc08_field177')) : ?>
 						<div class="formelm">
 							<label>
@@ -204,18 +216,6 @@ $empty = $component->params->get('default_empty_field', '');
 							<span>
 								<?php
 									echo ($this->item->field177 != '' AND $this->item->field177 != '0000-00-00 00:00:00') ? JHtml::date($this->item->field177, '%Y-%m-%d', null) : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_lsc08_id_expediente')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LSC08S_FIELD_ID_EXPEDIENTE_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->id_expediente != '' ? $this->item->id_expediente : $empty;
 								?>
 							</span>
 						</div>	

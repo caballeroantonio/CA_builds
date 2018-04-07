@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML AGENDA DE AUDIENCIAS PARA JUICIOS ORALES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjpes10 extends JViewLegacy
+class JtcaViewLjpes10 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjpes10 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjpes10Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjpes10Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljpes10_itemid')));
 

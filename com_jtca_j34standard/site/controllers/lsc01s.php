@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRETA DE REGISTRO DE SENTENCIAS -TURNO- (OFICIAL list controller class.
  *
  */
-class JtCaControllerLsc01s extends JControllerLegacy
+class JtcaControllerLsc01s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLsc01s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Lsc01s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Lsc01s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLsc01s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Lsc01Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Lsc01Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Lsc01s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Lsc01s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

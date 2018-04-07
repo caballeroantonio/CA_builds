@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE RESOLUCIONES EN AUDIENCIA View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjpes13 extends JViewLegacy
+class JtcaViewLjpes13 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjpes13 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjpes13Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjpes13Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljpes13_itemid')));
 

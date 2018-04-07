@@ -76,15 +76,6 @@
         label="COM_JTCA_LJC13S_FIELDSET_LJC13_FS_LABEL"
         description="COM_JTCA_LJC13S_FIELDSET_LJC13_FS_DESC"
     >
-        <field name="id_expediente"
-            type="modal_expedientes"
-            label="COM_JTCA_LJC13S_FIELD_ID_EXPEDIENTE_LABEL"
-            description="COM_JTCA_LJC13S_FIELD_ID_EXPEDIENTE_DESC"
-            class="modal"
-			required="true"
-			default="0"
-        >
-        </field>  
         <field name="id_organo"
             type="sql"
             label="COM_JTCA_LJC13S_FIELD_ID_ORGANO_LABEL"
@@ -118,39 +109,14 @@
 			maxlength="255"
         >
         </field>  
-        <field name="field2_paterno"
-            type="text"
-            label="COM_JTCA_LJC13S_FIELD_FIELD2_PATERNO_LABEL"
-            description="COM_JTCA_LJC13S_FIELD_FIELD2_PATERNO_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field name="field2_materno"
-            type="text"
-            label="COM_JTCA_LJC13S_FIELD_FIELD2_MATERNO_LABEL"
-            description="COM_JTCA_LJC13S_FIELD_FIELD2_MATERNO_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field name="field2_nombre"
-            type="text"
-            label="COM_JTCA_LJC13S_FIELD_FIELD2_NOMBRE_LABEL"
-            description="COM_JTCA_LJC13S_FIELD_FIELD2_NOMBRE_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field name="field2_isMoral"
-            type="checkbox"
-            label="COM_JTCA_LJC13S_FIELD_FIELD2_ISMORAL_LABEL"
-            description="COM_JTCA_LJC13S_FIELD_FIELD2_ISMORAL_DESC"
-            class="inputbox"
-			value="1"
+        <field name="id_expediente"
+            type="modal_expedientes"
+            label="COM_JTCA_LJC13S_FIELD_ID_EXPEDIENTE_LABEL"
+            description="COM_JTCA_LJC13S_FIELD_ID_EXPEDIENTE_DESC"
+            class="modal"
+			required="true"
+			default="0"
+			type_alias="com_jtca.expediente" 
         >
         </field>  
         <field name="field2_isMoral"

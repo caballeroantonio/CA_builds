@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * TSJ CDMX Libros TxCA Component LIBRETA DE REGISTRO DE ASISTENCIA (OFICIAL) Model
  *
  */
-class JtCaModelLsc02 extends JModelItem
+class JtcaModelLsc02 extends JModelItem
 {
 	/**
 	 * Model context string.  Used in setting the store id for the session
@@ -163,7 +163,7 @@ class JtCaModelLsc02 extends JModelItem
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Lsc02s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Lsc02s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}

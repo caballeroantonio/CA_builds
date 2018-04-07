@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE MULTAS JUDICIALES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjpes09 extends JViewLegacy
+class JtcaViewLjpes09 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjpes09 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjpes09Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjpes09Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljpes09_itemid')));
 

@@ -88,15 +88,6 @@
         >
             <option value="">COM_JTCA_LSC06S_SELECT_ID_ORGANO</option>
         </field>  
-        <field name="id_expediente"
-            type="modal_expedientes"
-            label="COM_JTCA_LSC06S_FIELD_ID_EXPEDIENTE_LABEL"
-            description="COM_JTCA_LSC06S_FIELD_ID_EXPEDIENTE_DESC"
-            class="modal"
-			required="true"
-			default="0"
-        >
-        </field>  
         <field name="id_secretaria"
             type="sql"
             label="COM_JTCA_LSC06S_FIELD_ID_SECRETARIA_LABEL"
@@ -116,6 +107,16 @@
             class="inputbox"
 			size="50"
 			maxlength="255"
+        >
+        </field>  
+        <field name="id_expediente"
+            type="modal_expedientes"
+            label="COM_JTCA_LSC06S_FIELD_ID_EXPEDIENTE_LABEL"
+            description="COM_JTCA_LSC06S_FIELD_ID_EXPEDIENTE_DESC"
+            class="modal"
+			required="true"
+			default="0"
+			type_alias="com_jtca.expediente" 
         >
         </field>  
         <field name="field149"

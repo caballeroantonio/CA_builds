@@ -103,7 +103,7 @@ function getFields(){
         'FIELD_NAME' => 'TOCA',
         'FIELD_CODE_NAME' => 'id_expediente',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 33,
+        'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
@@ -111,12 +111,15 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) DEFAULT NULL TOCA
+                FIELD_DB=`` INT(10) UNSIGNED  DEFAULT NULL TOCA
 
                 FIELD_NAME_LATEX=TOCA
                 FIELD_CODE_NAME_LATEX=id\_expediente
                 FIELD_DBCOMMENT_LATEX=
 
+                    {FIELD_LINK}
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=E
+                    FIELD_FOREIGN_OBJECT_UPPER=EXPEDIENTE
 
     */
     $fields['id_expediente'] = $field;
@@ -214,7 +217,7 @@ if ($this->params->get('save_history') AND $this->params->get('lsc05_save_histor
 	//hacer parametrizable data_id para que funcione versiones
 	
 	//$model	= JModelLegacy::getInstance('[%CompObject%]Form','[%ArchitectComp%]Model', array('ignore_request' => FALSE));
-	$model	= JModelLegacy::getInstance('Lsc05Form','JtCaModel', array('ignore_request' => FALSE));
+	$model	= JModelLegacy::getInstance('Lsc05Form','JtcaModel', array('ignore_request' => FALSE));
 	$data = array();
 	$data['id'] = 1;
 	$this->form	= $model->getForm($data, false);

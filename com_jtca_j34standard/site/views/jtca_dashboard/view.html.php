@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * MVC View for Dashboard
  *
  */
-class JtCaViewJtCa_Dashboard extends JViewLegacy
+class JtcaViewJtca_Dashboard extends JViewLegacy
 {
 	//protected $state;//no hay modelo, no hay state
 
@@ -361,6 +361,114 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
                     'desc'=>JText::_('COM_JTCA_LCP41_DESCRIPTION')
                 );
 		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=slpersons&layout=gridpanel&tmpl=component',
+                    'object'=>'slpersons',
+                    'text'=>'Persons',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLPERSON_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=sldil_jccm07s&layout=gridpanel&tmpl=component',
+                    'object'=>'sldil_jccm07s',
+                    'text'=>'DILIGENCIA Del LIBRO DE EXHORTOS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLDILJCCM07_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=sldil_jccm09s&layout=gridpanel&tmpl=component',
+                    'object'=>'sldil_jccm09s',
+                    'text'=>'DILIGENCIA Del LIBRO DE ACTUARIOS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLDILJCCM09_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=sldep_joc03s&layout=gridpanel&tmpl=component',
+                    'object'=>'sldep_joc03s',
+                    'text'=>'CERTIFICADO DE EGRESOS Del LIBRO DE CERTIFICADO DE',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLDEPJOC03_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=slincul_jpdng01s&layout=gridpanel&tmpl=component',
+                    'object'=>'slincul_jpdng01s',
+                    'text'=>'DATOS DEL(OS) INCULPADO(S) Del LIBRO DE GOBIERNO',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLINCULJPDNG01_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=slofen_jpdng01s&layout=gridpanel&tmpl=component',
+                    'object'=>'slofen_jpdng01s',
+                    'text'=>'DATOS DEL(OS) OFENDIDO(S) Del LIBRO DE GOBIERNO',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLOFENJPDNG01_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=sldecl_jpdng01s&layout=gridpanel&tmpl=component',
+                    'object'=>'sldecl_jpdng01s',
+                    'text'=>'DECLARACION PREPARATORIA Del LIBRO DE GOBIERNO',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLDECLJPDNG01_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=sldili_jpdng09s&layout=gridpanel&tmpl=component',
+                    'object'=>'sldili_jpdng09s',
+                    'text'=>'DILIGENCIA Del LIBRO DE ACTUARIOS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLDILIJPDNG09_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=slfirm_jpdng17s&layout=gridpanel&tmpl=component',
+                    'object'=>'slfirm_jpdng17s',
+                    'text'=>'CONTROL DE FIRMAS Del LIBRO DE CONTROL DE FIRMAS P',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLFIRMJPDNG17_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=sladol_jjadg05s&layout=gridpanel&tmpl=component',
+                    'object'=>'sladol_jjadg05s',
+                    'text'=>'ADOLESCENTES Del LIBRO DE SENTENCIAS',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLADOLJJADG05_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=slfirm_jjadg16s&layout=gridpanel&tmpl=component',
+                    'object'=>'slfirm_jjadg16s',
+                    'text'=>'CONTROL DE FIRMAS Del LIBRO DE CONTROL DE PRESENTA',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLFIRMJJADG16_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=sladol_jjadg01s&layout=gridpanel&tmpl=component',
+                    'object'=>'sladol_jjadg01s',
+                    'text'=>'ADOLESCENTE Del LIBRO DE GOBIERNO',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLADOLJJADG01_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=slaveriguaciones&layout=gridpanel&tmpl=component',
+                    'object'=>'slaveriguaciones',
+                    'text'=>'Averiguaciones Previas',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLAVERIGUACION_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=slpersonaliasedades&layout=gridpanel&tmpl=component',
+                    'object'=>'slpersonaliasedades',
+                    'text'=>'Adolescentes',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLPERSONALIASEDAD_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=slpersonedadsexos&layout=gridpanel&tmpl=component',
+                    'object'=>'slpersonedadsexos',
+                    'text'=>'Adolescente',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLPERSONEDADSEXO_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=slpersondelitos&layout=gridpanel&tmpl=component',
+                    'object'=>'slpersondelitos',
+                    'text'=>'Inculpados',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLPERSONDELITO_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=slpersonaliases&layout=gridpanel&tmpl=component',
+                    'object'=>'slpersonaliases',
+                    'text'=>'Inculpado',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLPERSONALIAS_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=slpartescontenciosas&layout=gridpanel&tmpl=component',
+                    'object'=>'slpartescontenciosas',
+                    'text'=>'Partes Contenciosas En Juicio',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_SLPARTECONTENCIOSA_DESCRIPTION')
+                );
+		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=lspe01s&layout=gridpanel&tmpl=component',
                     'object'=>'lspe01s',
                     'text'=>'LIBRO DE GOBIERNO',//JText::_('JTCA_COMPONENT_WIZARD'),
@@ -469,12 +577,6 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
                     'desc'=>JText::_('COM_JTCA_LSPS02_DESCRIPTION')
                 );
 		$buttons[] = array(
-                    'link'=>'index.php?option=com_jtca&view=lejemplos&layout=gridpanel&tmpl=component',
-                    'object'=>'lejemplos',
-                    'text'=>'Libro De Ejemplo',//JText::_('JTCA_COMPONENT_WIZARD'),
-                    'desc'=>JText::_('COM_JTCA_LEJEMPLO_DESCRIPTION')
-                );
-		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=lsc03s&layout=gridpanel&tmpl=component',
                     'object'=>'lsc03s',
                     'text'=>'LIBRETA DE VISTAS AL M.P (OFICIAL)',//JText::_('JTCA_COMPONENT_WIZARD'),
@@ -527,6 +629,12 @@ class JtCaViewJtCa_Dashboard extends JViewLegacy
                     'object'=>'lsps03s',
                     'text'=>'LIBRO DE GOBIERNO (NUEVO SISTEMA) (COLEGIADO)',//JText::_('JTCA_COMPONENT_WIZARD'),
                     'desc'=>JText::_('COM_JTCA_LSPS03_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_jtca&view=expedientes&layout=gridpanel&tmpl=component',
+                    'object'=>'expedientes',
+                    'text'=>'Expedientes',//JText::_('JTCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_JTCA_EXPEDIENTE_DESCRIPTION')
                 );
 		$buttons[] = array(
                     'link'=>'index.php?option=com_jtca&view=lsc04s&layout=gridpanel&tmpl=component',

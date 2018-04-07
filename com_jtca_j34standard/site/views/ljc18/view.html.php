@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjc18 extends JViewLegacy
+class JtcaViewLjc18 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjc18 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjc18Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjc18Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljc18_itemid')));
 

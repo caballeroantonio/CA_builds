@@ -145,6 +145,29 @@
             <option value="">COM_JTCA_LSC13S_SELECT_ID_SECRETARIA</option>
         </field>  
         <field
+            id="anoj"
+            name="anoj"
+            type="text"
+            label="COM_JTCA_LSC13S_FIELD_ANOJ_LABEL"
+            description="COM_JTCA_LSC13S_FIELD_ANOJ_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="id_expediente"
+            name="id_expediente"
+            type="modal_expedientes"
+            label="COM_JTCA_LSC13S_FIELD_ID_EXPEDIENTE_LABEL"
+            description="COM_JTCA_LSC13S_FIELD_ID_EXPEDIENTE_DESC"
+            class="modal"
+			required="true"
+			default="0"
+			type_alias="com_jtca.expediente" 
+        >
+        </field>  
+        <field
             id="field225_isMoral"
             name="field225_isMoral"
             type="person"
@@ -202,28 +225,6 @@
             type="combo_suggest"
             label="COM_JTCA_LSC13S_FIELD_ID_FIELD2283_LABEL"
             description="COM_JTCA_LSC13S_FIELD_ID_FIELD2283_DESC"
-        >
-        </field>  
-        <field
-            id="anoj"
-            name="anoj"
-            type="text"
-            label="COM_JTCA_LSC13S_FIELD_ANOJ_LABEL"
-            description="COM_JTCA_LSC13S_FIELD_ANOJ_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            id="id_expediente"
-            name="id_expediente"
-            type="modal_expedientes"
-            label="COM_JTCA_LSC13S_FIELD_ID_EXPEDIENTE_LABEL"
-            description="COM_JTCA_LSC13S_FIELD_ID_EXPEDIENTE_DESC"
-            class="modal"
-			required="true"
-			default="0"
         >
         </field>  
         <field

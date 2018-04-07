@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRO DE TURNO DE BENEFICIOS PENITENCIARIOS. list controller class.
  *
  */
-class JtCaControllerLcp10s extends JControllerLegacy
+class JtcaControllerLcp10s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLcp10s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Lcp10s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Lcp10s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLcp10s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Lcp10Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Lcp10Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Lcp10s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Lcp10s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

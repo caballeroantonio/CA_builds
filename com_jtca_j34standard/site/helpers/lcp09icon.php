@@ -253,7 +253,7 @@ class JHTMLLcp09Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLcp09Route($lcp09->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLcp09Route($lcp09->slug,
 									$layout,
 									$params->get('keep_lcp09_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLcp09Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLcp09Route($lcp09->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLcp09Route($lcp09->slug,
 									$layout,
 									$params->get('keep_lcp09_itemid')) , false);
 		

@@ -37,7 +37,7 @@ if (!JFactory::getUser()->authorise('core.manage', 'com_jtca'))
 }
 
 // Include dependancies
-JLoader::register('JtCaHelper', __DIR__ . '/helpers/jtca.php');
+JLoader::register('JtcaHelper', __DIR__ . '/helpers/jtca.php');
 
 $controller	= JControllerLegacy::getInstance('jtca');
 $controller->execute(JFactory::getApplication()->input->get('task'));

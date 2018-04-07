@@ -1,0 +1,610 @@
+<?php
+/**
+ * @version 		$Id:$
+ * @name			TSJ CDMX Libros TxCA
+ * @author			caballeroantonio (caballeroantonio.com)
+ * @package			com_jtca
+ * @subpackage		com_jtca.site
+ * @copyright		Copyright (c) 2017 - 2020. All Rights Reserved
+ * @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html 
+ * 
+ * The following Component Architect header section must remain in any distribution of this file
+ *
+ * @CAversion		Id: default.php 604 2016-01-14 13:05:26Z BrianWade $
+ * @CAauthor		Component Architect (www.componentarchitect.com)
+ * @CApackage		architectcomp
+ * @CAsubpackage	architectcomp.site
+ * @CAtemplate		joomla_3_4_standard (Release 1.0.1)
+ * @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved
+ * @Joomlacopyright Copyright (c)2005 - 2016 Open Source Matters, Inc. All rights reserved.
+ * @CAlicense		GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html
+ * 
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ */
+
+defined('_JEXEC') or die;
+
+/*
+ *	Add style sheets, javascript and behaviours here in the layout so they can be overridden, if required, in a template override 
+ */
+
+// Add css files for the jtca component and categories if they exist
+$this->document->addStyleSheet(JUri::root().'media/com_jtca/css/site_jtca.css');
+$this->document->addStyleSheet(JUri::root().'media/com_jtca/css/site_sladol_jjadg01s.css');
+
+if ($lang->isRTL())
+{
+	$this->document->addStyleSheet(JUri::root().'media/com_jtca/css/site_jtca-rtl.css');
+	$this->document->addStyleSheet(JUri::root().'media/com_jtca/css/site_sladol_jjadg01s-rtl.css');
+}
+
+// Add Javscript functions for field display
+JHtml::_('bootstrap.tooltip');
+JHtml::_('behavior.multiselect');
+JHtml::_('dropdown.init');
+JHtml::_('formbehavior.chosen', 'select');	
+
+/*
+ *	Initialise values for the layout 
+ */	
+ 
+// Create some shortcuts.
+$user		= JFactory::getUser();
+$n			= count($this->items);
+$list_order	= $this->state->get('list.ordering');
+$list_dirn	= $this->state->get('list.direction');
+
+$layout		= $this->params->get('sladoljjadg01_layout', 'default');
+
+$can_create	= $user->authorise('core.create', 'com_jtca');
+// Get from global settings the text to use for an empty field
+$component = JComponentHelper::getComponent( 'com_jtca' );
+$empty = $component->params->get('default_empty_field', '');
+
+/*
+ *	Layout HTML
+ */
+?>
+<noscript>
+<p style="color: red;"><?php echo JText::_('COM_JTCA_WARNING_NOSCRIPT'); ?><p>
+</noscript>
+<div class="jtca sladol_jjadg01s-list<?php echo $this->params->get('pageclass_sfx');?>">
+	<?php if ($this->params->get('show_page_heading')): ?>
+		<div class="page-header">
+			<h1><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
+		</div>
+	<?php endif; ?>
+
+	<?php
+		$can_edit = 0;$can_delete = 0;
+		$show_actions = false;
+		if ($this->params->get('show_sladoljjadg01_icons',1) >= 0) :
+			foreach ($this->items as $i => $item) :
+				if ($item->params->get('access-edit',1) OR $item->params->get('access-delete',1)) :
+					$show_actions = true;
+					continue;
+				endif;
+			endforeach;
+		endif;
+	?>
+	<form action="<?php echo htmlspecialchars(JUri::getInstance()->toString()); ?>" method="post" name="adminForm" id="adminForm">
+		<?php if (($this->params->get('show_sladoljjadg01_filter_field') != '' AND $this->params->get('show_sladoljjadg01_filter_field') != 'hide')) :?>
+			<div class="filter-search">
+				<?php if ($this->params->get('show_sladoljjadg01_filter_field') != '' AND $this->params->get('show_sladoljjadg01_filter_field') != 'hide') :?>
+					<input type="text" name="filter_search" id="filter_search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_JTCA_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_JTCA_'.$this->params->get('show_sladoljjadg01_filter_field').'_FILTER_LABEL'); ?>" />
+				<?php endif; ?>	
+				<?php if ($this->params->get('list_show_sladoljjadg01_id_record',1)) : ?>
+					<select name="filter_id_record" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_JTCA_SLADOL_JJADG01S_SELECT_ID_RECORD');?></option>
+					<?php echo JHtml::_('select.options', $this->id_record_values, 'value', 'text', $this->state->get('filter.id_record'));?>
+					</select>
+				<?php endif; ?>	
+				<?php if ($this->params->get('list_show_sladoljjadg01_id_field',1)) : ?>
+					<select name="filter_id_field" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_JTCA_SLADOL_JJADG01S_SELECT_ID_FIELD');?></option>
+					<?php echo JHtml::_('select.options', $this->id_field_values, 'value', 'text', $this->state->get('filter.id_field'));?>
+					</select>
+				<?php endif; ?>	
+			</div>
+		<?php endif; ?>
+
+		<?php if ($this->params->get('show_sladoljjadg01_pagination_limit')) : ?>
+			<div class="display-limit">
+				<?php echo JText::_('JGLOBAL_DISPLAY_NUM'); ?>&#160;
+				<?php echo $this->pagination->getLimitBox(); ?>
+			</div>
+		<?php endif; ?>	
+		<div style="clear:both;"></div>				
+		<?php if (empty($this->items)) : ?>
+
+			<?php if ($this->params->get('show_no_sladol_jjadg01s',1)) : ?>
+			<p><?php echo JText::_('COM_JTCA_SLADOL_JJADG01S_NO_ITEMS'); ?></p>
+			<?php endif; ?>
+
+		<?php else : ?>
+		<div style="overflow-x:auto;">
+			<table class="table table-striped" id="sladol_jjadg01s" style="margin-bottom: 200px;">
+			<?php if ($this->params->get('show_sladoljjadg01_headings',1)) :?>
+			<thead>
+				<tr>
+					<th width="1%" style="display:none;">
+					</th>				
+					<?php if ($date = $this->params->get('list_show_sladoljjadg01_date')) : ?>
+						<th class="list-date" id="tableOrderingdate">
+							<?php echo JHtml::_('grid.sort', 'COM_JTCA_FIELD_'.JString::strtoupper($date).'_LABEL', 'a.'.$date, $list_dirn, $list_order); ?>
+						</th>
+					<?php endif; ?>
+
+					<?php if ($this->params->get('list_show_sladoljjadg01_created_by',0)) : ?>
+						<th class="list-created_by" id="tableOrderingcreated_by">
+							<?php echo JHtml::_('grid.sort', 'COM_JTCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
+						</th>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_txt_field2031',1)) : ?>
+						<th class="list-txt_field2031" id="tableOrderingtxt_field2031">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_TXT_FIELD2031'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_id_field2031',1)) : ?>
+						<th class="list-id_field2031" id="tableOrderingid_field2031">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_ID_FIELD2031'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield29',1)) : ?>
+						<th class="list-sfield29" id="tableOrderingsfield29">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD29'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield9',1)) : ?>
+						<th class="list-sfield9" id="tableOrderingsfield9">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD9'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield10',1)) : ?>
+						<th class="list-sfield10" id="tableOrderingsfield10">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD10'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield11',1)) : ?>
+						<th class="list-sfield11" id="tableOrderingsfield11">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD11'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield12',1)) : ?>
+						<th class="list-sfield12" id="tableOrderingsfield12">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD12'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield28',1)) : ?>
+						<th class="list-sfield28" id="tableOrderingsfield28">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD28'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield13',1)) : ?>
+						<th class="list-sfield13" id="tableOrderingsfield13">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD13'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield14',1)) : ?>
+						<th class="list-sfield14" id="tableOrderingsfield14">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD14'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield15',1)) : ?>
+						<th class="list-sfield15" id="tableOrderingsfield15">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD15'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield16',1)) : ?>
+						<th class="list-sfield16" id="tableOrderingsfield16">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD16'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield30',1)) : ?>
+						<th class="list-sfield30" id="tableOrderingsfield30">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD30'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield17',1)) : ?>
+						<th class="list-sfield17" id="tableOrderingsfield17">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD17'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield18',1)) : ?>
+						<th class="list-sfield18" id="tableOrderingsfield18">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD18'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield19',1)) : ?>
+						<th class="list-sfield19" id="tableOrderingsfield19">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD19'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield20',1)) : ?>
+						<th class="list-sfield20" id="tableOrderingsfield20">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD20'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield21',1)) : ?>
+						<th class="list-sfield21" id="tableOrderingsfield21">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD21'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield22',1)) : ?>
+						<th class="list-sfield22" id="tableOrderingsfield22">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD22'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield23',1)) : ?>
+						<th class="list-sfield23" id="tableOrderingsfield23">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD23'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield24',1)) : ?>
+						<th class="list-sfield24" id="tableOrderingsfield24">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD24'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield25',1)) : ?>
+						<th class="list-sfield25" id="tableOrderingsfield25">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD25'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield26',1)) : ?>
+						<th class="list-sfield26" id="tableOrderingsfield26">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD26'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield27',1)) : ?>
+						<th class="list-sfield27" id="tableOrderingsfield27">
+							<?php echo JTEXT::_('COM_JTCA_SLADOL_JJADG01S_HEADING_SFIELD27'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_sladoljjadg01_ordering',0)) : ?>
+						<th width="10%">
+							<?php echo JHtml::_('grid.sort',  'COM_JTCA_HEADING_ORDERING', 'a.ordering', $list_dirn, $list_order); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($show_actions) : ?>
+						<th width="12%" class="list-actions">
+							<?php echo JText::_('COM_JTCA_HEADING_ACTIONS'); ?>						
+						</th> 					
+					<?php endif; ?>
+				</tr>
+			</thead>
+			<?php endif; ?>
+
+			<tbody>
+
+				<?php foreach ($this->items as $i => $item) :
+				
+					$can_edit	= $item->params->get('access-edit');
+			
+					$can_delete	= $item->params->get('access-delete');
+
+							
+				?>			
+					<?php $params = $item->params; ?>		
+
+					<?php if ($item->state == 0) : ?>
+						<tr class="system-unpublished cat-list-row<?php echo $i % 2; ?>">
+					<?php else: ?>
+						<tr class="cat-list-row<?php echo $i % 2; ?>">
+					<?php endif; ?>
+					<td class="center" style="display:none;">
+						<?php echo JHtml::_('grid.id', $i, $item->id); ?>
+					</td>				
+
+					<?php if ($this->params->get('list_show_sladoljjadg01_date')) : ?>
+						<td class="list-date">
+							<time datetime="<?php echo JHtml::_('date', $item->display_date, 'c'); ?>">
+								<?php echo JHtml::_('date',$item->display_date, $this->escape($this->params->get('sladoljjadg01_date_format', JText::_('DATE_FORMAT_LC3')))); ?>
+							</time>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_created_by',0)) : ?>
+						<td class="createdby">
+							<?php 
+								$created_by =  $item->created_by;
+								$created_by = ($item->created_by_name ? $item->created_by_name : $created_by);
+								if (!empty($item->created_by )) :
+									if ($this->params->get('link_sladoljjadg01_created_by') == 1) :
+										$created_by = JHtml::_('link', JRoute::_('index.php?option=com_users&view=profile&id='.$item->created_by), $created_by); 
+									endif;
+									if ($this->params->get('show_sladoljjadg01_headings',1)) :
+										echo $created_by;
+									else :
+										echo JText::sprintf('COM_JTCA_CREATED_BY', $created_by);
+									endif;
+								else:
+									echo $empty;
+								endif;								
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_txt_field2031',1)) : ?>
+						<td class="list-txt_field2031">
+							<?php 
+								echo $item->txt_field2031 != '' ? $item->txt_field2031 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_id_field2031',1)) : ?>
+						<td class="list-id_field2031">
+							<?php 
+								echo $item->id_field2031 != '' ? $item->id_field2031 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield29',1)) : ?>
+						<td class="list-sfield29">
+							<?php 
+								echo $item->sfield29 != '' ? $item->sfield29 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield9',1)) : ?>
+						<td class="list-sfield9">
+							<?php 
+								echo $item->sfield9 != '' ? $item->sfield9 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield10',1)) : ?>
+						<td class="list-sfield10">
+							<?php 
+								echo $item->sfield10 != '' ? $item->sfield10 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield11',1)) : ?>
+						<td class="list-sfield11">
+							<?php 
+								echo $item->sfield11 != '' ? $item->sfield11 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield12',1)) : ?>
+						<td class="list-sfield12">
+							<?php 
+								echo $item->sfield12 != '' ? $item->sfield12 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield28',1)) : ?>
+						<td class="list-sfield28">
+							<?php 
+								echo $item->sfield28 != '' ? $item->sfield28 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield13',1)) : ?>
+						<td class="list-sfield13">
+							<?php 
+								echo ($item->sfield13 != '' AND $item->sfield13 != '0000-00-00 00:00:00') ? JHtml::date($item->sfield13, '%Y-%m-%d', null) : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield14',1)) : ?>
+						<td class="list-sfield14">
+							<?php 
+								echo $item->sfield14 != '' ? $item->sfield14 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield15',1)) : ?>
+						<td class="list-sfield15">
+							<?php 
+								echo ($item->sfield15 != '' AND $item->sfield15 != '0000-00-00 00:00:00') ? JHtml::date($item->sfield15, '%Y-%m-%d %H:%M', null) : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield16',1)) : ?>
+						<td class="list-sfield16">
+							<?php 
+								echo $item->sfield16 != '' ? $item->sfield16 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield30',1)) : ?>
+						<td class="list-sfield30">
+							<?php 
+								echo ($item->sfield30 != '' AND $item->sfield30 != '0000-00-00 00:00:00') ? JHtml::date($item->sfield30, '%Y-%m-%d %H:%M', null) : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield17',1)) : ?>
+						<td class="list-sfield17">
+							<?php 
+								echo $item->sfield17 != '' ? $item->sfield17 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield18',1)) : ?>
+						<td class="list-sfield18">
+							<?php 
+								echo $item->sfield18 != '' ? $item->sfield18 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield19',1)) : ?>
+						<td class="list-sfield19">
+							<?php 
+								echo $item->sfield19 != '' ? $item->sfield19 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield20',1)) : ?>
+						<td class="list-sfield20">
+							<?php 
+								echo $item->sfield20 != '' ? $item->sfield20 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield21',1)) : ?>
+						<td class="list-sfield21">
+							<?php 
+								switch ($item->sfield21) :
+									case '0':
+										echo JText::_('JNO');
+										break;
+									case '1':
+										echo JText::_('JYES');
+										break;
+									default:
+										echo JText::_('JNONE');
+										break;
+								endswitch;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield22',1)) : ?>
+						<td class="list-sfield22">
+							<?php 
+								echo $item->sfield22 != '' ? $item->sfield22 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield23',1)) : ?>
+						<td class="list-sfield23">
+							<?php 
+								echo $item->sfield23 != '' ? $item->sfield23 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield24',1)) : ?>
+						<td class="list-sfield24">
+							<?php 
+								echo $item->sfield24 != '' ? $item->sfield24 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield25',1)) : ?>
+						<td class="list-sfield25">
+							<?php 
+								echo $item->sfield25 != '' ? $item->sfield25 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield26',1)) : ?>
+						<td class="list-sfield26">
+							<?php 
+								echo $item->sfield26 != '' ? $item->sfield26 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_sfield27',1)) : ?>
+						<td class="list-sfield27">
+							<?php 
+								echo $item->sfield27 != '' ? $item->sfield27 : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_sladoljjadg01_ordering',0)) : ?>
+						<td class="list-order">
+							<?php echo $item->ordering; ?>
+						</td>
+					<?php endif; ?>
+					
+					<?php if ($show_actions) : ?>
+						<td class="list-actions">
+                        	<div class="btn-group pull-right">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
+                                <ul class="dropdown-menu">
+							<?php if ($params->get('show_sladoljjadg01_print_icon')) : ?>
+								<li class="print-icon">
+										<?php echo JHtml::_('sladoljjadg01icon.print_popup',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+
+							<?php if ($params->get('show_sladoljjadg01_email_icon')) : ?>
+								<li class="email-icon">
+										<?php echo JHtml::_('sladoljjadg01icon.email',  $item, $params); ?>
+								</li>
+							<?php endif; ?>
+								<?php if ($can_edit ) : ?>
+                                    <li class="edit-icon">
+                                        <?php echo JHtml::_('sladoljjadg01icon.edit',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>					
+                                <?php if ($can_delete) : ?>
+                                    <li class="delete-icon">
+                                        <?php echo JHtml::_('sladoljjadg01icon.delete',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>
+							<?php if ($can_edit AND $params->get('save_history') AND $params->get('sladoljjadg01_save_history')) : ?>
+								<li class="version-icon">
+									<?php echo JHtml::_('sladoljjadg01icon.versions',$item, $params); ?>
+								</li>	
+							<?php endif; ?>	
+                                </ul>
+                            </div>
+						</td>															
+					<?php endif; ?>
+				</tr>
+			<?php endforeach; ?>
+			</tbody>
+			</table>
+		</div>
+			<?php if (($this->params->def('show_sladoljjadg01_pagination', 2) == 1  OR ($this->params->get('show_sladoljjadg01_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
+			<div class="pagination">
+
+				<?php if ($this->params->def('show_sladoljjadg01_pagination_results', 0)) : ?>
+				<p class="counter">
+						<?php echo $this->pagination->getPagesCounter(); ?>
+				</p>
+				<?php endif; ?>
+
+				<?php echo $this->pagination->getPagesLinks(); ?>
+			</div>
+			<?php endif; ?>
+
+			<div>
+				<!-- @TODO add hidden inputs -->
+				<input type="hidden" name="task" value="" />
+				<input type="hidden" name="boxchecked" value="0" />			
+				<input type="hidden" name="filter_order" value="" />
+				<input type="hidden" name="filter_order_Dir" value="" />
+				<input type="hidden" name="limitstart" value="" />
+				<?php echo JHtml::_('form.token'); ?>
+			</div>
+		<?php endif; ?>
+		<?php // Code to add a link to submit an sladoljjadg01. ?>
+		<?php if ($this->params->get('show_sladoljjadg01_add_link', 1)) : ?>
+			<?php if ($can_create) : ?>
+				<?php echo JHtml::_('sladoljjadg01icon.create', $this->params); ?>
+			<?php  endif; ?>
+		<?php endif; ?>		
+                <?php echo '<button>export</button>'//JHtml::_('sladoljjadg01icon.create', $this->params); ?>
+	</form>
+</div>
+
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('sladoljjadg01_save_history')) : ?>
+<script>
+jQuery(document).ready(function($) {
+   $('#collapsibleModal')
+   .on('hide.bs.modal', function () {
+        $(this).removeData('modal');
+   });
+});
+
+function show_collapsibleModal(item_id){
+	jQuery('#collapsibleModal').modal('show');
+	var modalBody = jQuery(document).find('.modal-body');
+	modalBody.find('iframe').remove();
+	modalBody.prepend('<iframe class="iframe" src="index.php?option=com_jtca&task=sladoljjadg01.showHistory&item_id='+item_id+'" name="titulo" height="450"></iframe>');
+	return;
+}
+</script>
+<div id="collapsibleModal" tabindex="-1" class="modal hide fade">
+	<div class="modal-header">
+			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
+				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>
+	</div>
+	<div class="modal-body"></div>
+</div>
+<?php endif; ?>	

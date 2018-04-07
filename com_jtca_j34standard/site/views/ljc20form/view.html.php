@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE CONTROL DE ASUNTOS CONFORME A LOS ARTÍCULOS 13 FRACCIÓN XIV Y 25 DE LA LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjc20Form extends JViewLegacy
+class JtcaViewLjc20Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

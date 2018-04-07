@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE CERTIFICADO DE DEPÓSITOS DE INGRESOS Y EGRESOS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjoc03 extends JViewLegacy
+class JtcaViewLjoc03 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjoc03 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjoc03Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjoc03Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljoc03_itemid')));
 

@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML AGENDA DE AUDIENCIAS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjoc12Form extends JViewLegacy
+class JtcaViewLjoc12Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

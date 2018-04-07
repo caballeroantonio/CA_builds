@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE REGISTRO DE AMPAROS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsps05 extends JViewLegacy
+class JtcaViewLsps05 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLsps05 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLsps05Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLsps05Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lsps05_itemid')));
 

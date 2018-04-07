@@ -253,7 +253,7 @@ class JHTMLLcp32Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLcp32Route($lcp32->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLcp32Route($lcp32->slug,
 									$layout,
 									$params->get('keep_lcp32_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLcp32Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLcp32Route($lcp32->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLcp32Route($lcp32->slug,
 									$layout,
 									$params->get('keep_lcp32_itemid')) , false);
 		

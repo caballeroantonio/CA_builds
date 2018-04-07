@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * View to edit a ljpdng03.
  *
  */
-class JtCaViewLjpdng03 extends JViewLegacy
+class JtcaViewLjpdng03 extends JViewLegacy
 {
 	protected $form;
 	protected $item;

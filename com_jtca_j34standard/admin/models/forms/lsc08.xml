@@ -109,6 +109,16 @@
 			maxlength="255"
         >
         </field>  
+        <field name="id_expediente"
+            type="modal_expedientes"
+            label="COM_JTCA_LSC08S_FIELD_ID_EXPEDIENTE_LABEL"
+            description="COM_JTCA_LSC08S_FIELD_ID_EXPEDIENTE_DESC"
+            class="modal"
+			required="true"
+			default="0"
+			type_alias="com_jtca.expediente" 
+        >
+        </field>  
         <field name="field177"
             type="calendar"
             label="COM_JTCA_LSC08S_FIELD_FIELD177_LABEL"
@@ -119,15 +129,6 @@
 			format="%Y-%m-%d"
 			filter="fixed"
 			validate="date"
-        >
-        </field>  
-        <field name="id_expediente"
-            type="modal_expedientes"
-            label="COM_JTCA_LSC08S_FIELD_ID_EXPEDIENTE_LABEL"
-            description="COM_JTCA_LSC08S_FIELD_ID_EXPEDIENTE_DESC"
-            class="modal"
-			required="true"
-			default="0"
         >
         </field>  
         <field name="billete"

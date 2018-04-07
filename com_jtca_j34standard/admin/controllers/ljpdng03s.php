@@ -34,7 +34,7 @@ defined('_JEXEC') or die;
  *
  * 
  */
-class JtCaControllerLjpdng03s extends JControllerAdmin
+class JtcaControllerLjpdng03s extends JControllerAdmin
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -65,7 +65,7 @@ class JtCaControllerLjpdng03s extends JControllerAdmin
 	 * 
 	 * 
 	 */
-	public function getModel($name = 'Ljpdng03', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Ljpdng03', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -90,9 +90,9 @@ class JtCaControllerLjpdng03s extends JControllerAdmin
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Ljpdng03s','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Ljpdng03s','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Ljpdng03s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Ljpdng03s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

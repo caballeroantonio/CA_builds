@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE NOTARIOS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjoc13 extends JViewLegacy
+class JtcaViewLjoc13 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjoc13 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjoc13Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjoc13Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljoc13_itemid')));
 

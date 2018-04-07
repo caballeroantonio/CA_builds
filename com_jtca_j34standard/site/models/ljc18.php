@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * TSJ CDMX Libros TxCA Component LIBRO DE REMISIÓN DE DOCUMENTOS AL ARCHIVO Model
  *
  */
-class JtCaModelLjc18 extends JModelItem
+class JtcaModelLjc18 extends JModelItem
 {
 	/**
 	 * Model context string.  Used in setting the store id for the session
@@ -55,18 +55,14 @@ class JtCaModelLjc18 extends JModelItem
 		{
 			$config['ljc18_filter_fields'] = array(
 				'id', 'a.id',
-				'id_expediente','a.id_expediente',
 				'id_organo','a.id_organo',
 				'id_secretaria','a.id_secretaria',
 				'anoj','a.anoj',
+				'id_expediente','a.id_expediente',
 				'field5','a.field5',
 				'field6','a.field6',
 				'field7','a.field7',
 				'field9','a.field9',
-				'field10_paterno','a.field10_paterno',
-				'field10_materno','a.field10_materno',
-				'field10_nombre','a.field10_nombre',
-				'field10_isMoral','a.field10_isMoral',
 				'field10_isMoral','a.field10_isMoral',
 				'field10_paterno','a.field10_paterno',
 				'field10_materno','a.field10_materno',
@@ -175,7 +171,7 @@ class JtCaModelLjc18 extends JModelItem
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Ljc18s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Ljc18s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -239,6 +235,9 @@ class JtCaModelLjc18 extends JModelItem
 				}
 				
 					
+				// Filter by and return name for id_expediente level.
+				$query->select($db->quoteName('e.name').' AS e_expediente_name');
+				$query->join('LEFT', $db->quoteName('jt_expedientes').' AS e ON '.$db->quoteName('e.id').' = '.$db->quoteName('a.id_expediente'));	
 																				
 				$db->setQuery($query);
 
@@ -252,7 +251,6 @@ class JtCaModelLjc18 extends JModelItem
 				// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
 			
 
-				
 				if (isset($item->id_organo) AND $item->id_organo !='')
 				{
 					$sql = 'SELECT '.$db->quoteName('list.organo').' AS value FROM (SELECT id, organo FROM jtc_organos) AS list';
@@ -268,9 +266,6 @@ class JtCaModelLjc18 extends JModelItem
 					$db->setQuery($sql);				
 					$item->id_secretaria = $db->loadResult();
 				}
-				
-				
-				
 				
 				
 				

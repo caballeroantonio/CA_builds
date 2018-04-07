@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE REGISTRO EN QUE SE HAYA OBSEQUIADO O NEGADO LA ORDEN DE APREHENSIÓN, COMPARECENCIA, PRESENTACIÓN, ARTÍCULO 36 DEL CÓDIGO DE PROCEDIMIENTOS PENALES Y OTROS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjpdng16 extends JViewLegacy
+class JtcaViewLjpdng16 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjpdng16 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjpdng16Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjpdng16Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljpdng16_itemid')));
 

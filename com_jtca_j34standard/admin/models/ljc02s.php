@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * Methods supporting a list of ljc02 records.
  *
  */
-class JtCaModelLjc02s extends JModelList
+class JtcaModelLjc02s extends JModelList
 {
 	/**
 	 * Context string for the model type.  This is used to handle uniqueness
@@ -81,7 +81,7 @@ class JtCaModelLjc02s extends JModelList
 	 * 
 	 * @return	JTable	A database object
 	 */
-	public function getTable($type = 'Ljc02s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Ljc02s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}	
@@ -218,6 +218,11 @@ class JtCaModelLjc02s extends JModelList
 			$query->where($db->quoteName('a.created_by').' = ' . (int) $created_by);
 		}	
 
+		// Filter by and return name for id_expediente level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
+		$query->select($db->quoteName('e.name').' AS e_expediente_name');
+		$query->select($db->quoteName('e.id').' AS e_expediente_id');
+
+		$query->join('LEFT', $db->quoteName('jt_expedientes').' AS e ON '.$db->quoteName('e.id').' = '.$db->quoteName('a.id_expediente'));	
 		
 		if ($billete = $this->getState('filter.billete'))
 		{

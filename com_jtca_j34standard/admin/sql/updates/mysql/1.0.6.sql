@@ -31,6 +31,8 @@ ALTER TABLE jtsl_personalias RENAME TO jt_slpersonaliases;
 ALTER TABLE jtsl_personaliasedad RENAME TO jt_slpersonaliasedades;
 ALTER TABLE jtsl_persondelito RENAME TO jt_slpersondelitos;
 ALTER TABLE jtsl_personedadsexo RENAME TO jt_slpersonedadsexos;
+ALTER TABLE `jtsl_address` RENAME TO  `jt_sladdresss` ;
+
 
 UPDATE jtc_libros SET tabla='jt_sladol_jjadg01s' WHERE id='176';
 UPDATE jtc_libros SET tabla='jt_sladol_jjadg05s' WHERE id='173';
@@ -71,6 +73,21 @@ UPDATE jtc_libros l LEFT JOIN jt3_campos c ON l.clave = c.clave SET l.clave = 's
 UPDATE jtc_libros l LEFT JOIN jt3_campos c ON l.clave = c.clave SET l.clave = 'slpersondelito', c.clave = 'slpersondelito' WHERE l.id =217;
 UPDATE jtc_libros l LEFT JOIN jt3_campos c ON l.clave = c.clave SET l.clave = 'slpersonedadsexo', c.clave = 'slpersonedadsexo' WHERE l.id =216;
 
+UPDATE jt3_campos
+SET store = 'slpartecontenciosa'
+WHERE 1
+AND dataType = 'parent'
+AND store = 'slpartescontenciosas'
+;
+
+UPDATE
+jt3_campos
+SET store = 'slperson'
+WHERE 1
+AND dataType = 'parent'
+AND store = 'slpersons'
+;
+
 #re-nombrar vistas
 DROP VIEW IF EXISTS jtvsl_adol_jjadg01;
 DROP VIEW IF EXISTS jtvsl_adol_jjadg05;
@@ -97,6 +114,7 @@ UPDATE jtc_libros SET view="jt_vslfirm_jpdng17" WHERE id=127;
 UPDATE jtc_libros SET view="jt_vslincul_jpdng01" WHERE id=123;
 UPDATE jtc_libros SET view="jt_vslofen_jpdng01" WHERE id=124;
 UPDATE jtc_libros SET view="jt_vslpartescontenciosas" WHERE id=265;
+UPDATE `jtc_libros` SET `view`='jt_slpersons' WHERE `id`='2';
 
 #re-generar las vistas sub-libros
 
@@ -255,8 +273,370 @@ FROM jt_slofen_jpdng01s l;
 
 DROP TABLE IF EXISTS `jt_vslpartescontenciosas`;
 DROP VIEW IF EXISTS `jt_vslpartescontenciosas`;
-CREATE OR REPLACE VIEW jt_vslpartescontenciosas AS
+CREATE  OR REPLACE VIEW jt_vslpartescontenciosas AS
+SELECT 
+p.*,
+p.txt_ijuridico 'ijuridico',
+CONCAT_WS('', 'Calle: ', calle, ' # ', numero, '\nColonia: ', colonia, '\nC.P.: ', cp, '\n', municipio, ',', e.entidadfn) 'address',
+CONCAT_WS(' ', p.paterno, p.materno, p.nombre) 'fullname'
+FROM jt_slpartescontenciosas p
+LEFT JOIN jtc_entidadesf e ON e.id = p.id_entidadf
+LEFT JOIN jtc_general g ON g.id = p.id_ijuridico
+ORDER BY g.ordering, p.id
+;
+
+/*
+#add missing columns state, version, ordering, and validate with:
+SELECT 
+b.TABLE_SCHEMA, b.TABLE_NAME, b.COLUMN_NAME, g.COLUMN_NAME
+, CONCAT('ALTER TABLE `',b.TABLE_NAME,'` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT \'progressive version counter\';') ''
+FROM INFORMATION_SCHEMA.COLUMNS b
+LEFT JOIN INFORMATION_SCHEMA.COLUMNS g ON 1
+AND g.TABLE_SCHEMA = 'gpcb'
+AND g.TABLE_NAME = b.TABLE_NAME
+AND g.COLUMN_NAME = b.COLUMN_NAME
+WHERE 1
+AND b.TABLE_SCHEMA = 'borrame'
+AND b.TABLE_NAME LIKE 'jt%'
+AND g.COLUMN_NAME IS NULL
+*/
+
+ALTER TABLE `jt_slpersons` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sldil_jccm07s` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sldil_jccm09s` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sldep_joc03s` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slincul_jpdng01s` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slofen_jpdng01s` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sldecl_jpdng01s` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sldili_jpdng09s` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slfirm_jpdng17s` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sladol_jjadg05s` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slfirm_jjadg16s` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sladol_jjadg01s` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slaveriguaciones` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slpersonaliasedades` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slpersonedadsexos` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slpersondelitos` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slpersonaliases` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_expedientes` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slpartescontenciosas` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+
+ALTER TABLE `jt_slpersons` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sldil_jccm07s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sldil_jccm09s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sldep_joc03s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slincul_jpdng01s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slofen_jpdng01s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sldecl_jpdng01s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sldili_jpdng09s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slfirm_jpdng17s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sladol_jjadg05s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slfirm_jjadg16s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_sladol_jjadg01s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slaveriguaciones` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slpersonaliasedades` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slpersonedadsexos` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slpersondelitos` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slpersonaliases` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_expedientes` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+ALTER TABLE `jt_slpartescontenciosas` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter', ADD COLUMN `ordering` INT(11) NOT NULL DEFAULT 0;
+
+ALTER TABLE `jt_lejemplos` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_ljf07s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc01s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc02s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc03s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc04s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc05s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc06s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc07s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc08s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc09s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc10s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc11s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc12s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc13s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsc14s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lspe01s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lspe02s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lspe03s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lspe04s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lspe05s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lspe06s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lspe07s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lspe08s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps01s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps02s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps03s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps04s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps05s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps06s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps07s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps08s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps09s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps10s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps11s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps12s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps13s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+ALTER TABLE `jt_lsps14s` ADD COLUMN `version` INT(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'progressive version counter';
+
+ALTER TABLE `jt_ljf07s` ADD COLUMN `state` TINYINT(1) NOT NULL DEFAULT 0;
+
+#subforms
+ALTER TABLE `jt_expedientes` ADD COLUMN `partescontenciosas` MEDIUMTEXT NULL COMMENT 'Partes contenciosas';
+
+DROP VIEW `jtvsl_persons`;
+CREATE  OR REPLACE VIEW jt_vslpersons AS
+SELECT id, id_field, id_record, isMoral, paterno, materno, nombre
+, CONCAT_WS(' ', paterno, materno, nombre)  AS 'fullname' 
+FROM jt_slpersons;
+
+
+UPDATE `jtc_libros` SET `tabla`='jt_slpersons p, jt_sladdresss a', `view`='jt_vslpersonswaddresss', `json`='{\"tablas\":[{\"name\":\"jtsl_persons\",\"primaryKey\":\"id\",\"alias\":\"p\"},{\"name\":\"jtsl_address\",\"foreignKey\":\"id_record\",\"join\":\"a__id_record = p__id AND a__id_field = {\"tablas\":[{\"name\":\"jt_slpersons\",\"primaryKey\":\"id\",\"alias\":\"p\"},{\"name\":\"jt_sladdress\",\"foreignKey\":\"id_record\",\"join\":\"a__id_record = p__id AND a__id_field = 2104\",\"alias\":\"a\"}],\"orderingKey\":\"p__id\",\"view\":\"jt_vslpersonswaddresss\",\"alias\":\"l\"}' WHERE `id`='249';
+DROP VIEW `jtvsl_personswaddress`; 
+CREATE  OR REPLACE VIEW jt_vslpersonswaddresss AS
+SELECT 
+CASE WHEN a.id IS NOT NULL THEN CONCAT_WS('', 'Calle: ', a.calle, ' # ', a.numero, '\nColonia: ', a.colonia, '\nC.P.: ', a.cp, '\n', a.municipio, ',', e.entidadfn) END 'a__address',
+p.id 'p__id', p.id_field 'p__id_field', p.id_record 'p__id_record', p.isMoral 'p__isMoral', p.paterno 'p__paterno', 
+p.materno 'p__materno', p.nombre 'p__nombre', CONCAT_WS(' ', p.paterno, p.materno, p.nombre) 'p__fullname',
+a.id 'a__id', a.id_field 'a__id_field', a.id_record 'a__id_record', a.curp 'a__curp', a.rfc 'a__rfc', a.calle 'a__calle', a.numero 'a__numero', a.colonia 'a__colonia', a.cp 'a__cp', a.municipio 'a__municipio', a.id_entidadf 'a__id_entidadf'
+FROM jt_slpersons p
+LEFT JOIN jt_sladdresss a ON a.id_record = p.id AND a.id_field = 2104
+LEFT JOIN jtc_entidadesf e ON e.id = a.id_entidadf
+;
+
+UPDATE `jtc_libros` SET `view`='jt_vsladdresss' WHERE `id`='250';
+DROP VIEW `jtvsl_address`;
+CREATE VIEW jt_vsladdresss AS
 
 SELECT l.id,l.id_field, l.id_record 
-,l.id_ijuridico,l.txt_ijuridico,l.isMoral,l.paterno,l.materno,l.nombre,l.curp,l.rfc,l.calle,l.numero,l.colonia,l.cp,l.id_entidadf,l.municipio
-FROM jt_slpartescontenciosas l;
+,l.curp, l.rfc,l.calle,l.numero,l.colonia,l.cp,l.id_entidadf,l.municipio
+FROM jt_sladdresss l;
+
+#BC-03 el martes - cambio de etiqueta FECHA=>FECHA DE LA RESOLUCIÓN APELADA
+UPDATE `jt3_campos` SET `columnText`='FECHA DE LA RESOLUCIÓN APELADA' WHERE `id`='2354';
+
+#name alwayschange para lograr la validación
+UPDATE `jt3_campos` SET `alwaysChange`='1' WHERE `id`='1966';
+
+#T54.06 orden de los campos.
+ALTER TABLE `jt_ljc01s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc02s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc03s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc04s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc05s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc06s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc07s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc08s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc09s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc10s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc12s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc13s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc14s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc16s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc17s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc18s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc19s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc20s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljc21s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf01s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf04s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf05s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf06s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf07s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf08s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf09s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf10s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf11s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf12s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf13s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf14s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf15s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf16s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf17s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf18s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf19s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf20s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf21s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljf22s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp01s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp02s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp04s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp05s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp06s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp08s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp09s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp10s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp11s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp12s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp13s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp14s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp16s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp17s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp18s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp19s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp20s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljp21s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm01s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm02s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm03s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm05s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm06s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm07s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm08s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm09s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm10s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm11s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm12s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm13s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm15s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljccm16s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+
+ALTER TABLE `jt_ljccm17s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljoc01s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljoc04s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljoc05s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljoc06s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljoc07s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljoc08s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljoc09s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljoc10s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljoc11s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljoc12s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljoc13s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljoc14s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng01s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng02s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng03s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng04s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng05s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng06s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng07s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng08s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng09s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng10s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng11s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng12s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng13s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng14s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng15s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng16s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng17s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpdng18s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes01s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes02s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes03s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes04s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes05s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes06s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes07s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes08s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes09s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes10s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes11s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes12s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes13s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes14s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes15s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes16s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljpes17s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadng01s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadng02s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadng03s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadng04s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadng05s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadng06s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadng07s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadng08s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadng09s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadng10s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadng11s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg01s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg02s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg03s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg04s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg05s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg06s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg09s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg10s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg11s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg13s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg14s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg15s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg16s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg17s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadg18s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_ljjadng12s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp01s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp02s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp03s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp04s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp05s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp06s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp07s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp09s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp10s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp18s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp19s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp20s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp21s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp22s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp23s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp24s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp25s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp26s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp27s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp28s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp29s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp11s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp12s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp13s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp14s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp15s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp16s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp30s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp31s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp32s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp33s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp34s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp35s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp36s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp39s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp40s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lcp41s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc01s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc02s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc03s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc04s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc05s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc06s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc07s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc08s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc09s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc10s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc11s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc12s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc13s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsc14s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lspe01s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lspe02s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lspe03s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lspe04s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lspe05s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lspe06s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lspe07s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lspe08s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps01s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps02s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps03s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps04s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps05s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps06s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps07s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps08s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps09s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps10s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps11s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps12s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps13s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;
+ALTER TABLE `jt_lsps14s` CHANGE COLUMN `id_expediente` `id_expediente` INT(11) NULL DEFAULT NULL AFTER `ordering`;

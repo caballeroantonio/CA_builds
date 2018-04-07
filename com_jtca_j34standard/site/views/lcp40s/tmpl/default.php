@@ -137,14 +137,14 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_JTCA_LCP40S_HEADING_ID_ORGANO'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_lcp40_anoj',1)) : ?>
-						<th class="list-anoj" id="tableOrderinganoj">
-							<?php echo JTEXT::_('COM_JTCA_LCP40S_HEADING_ANOJ'); ?>
-						</th>
-					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_lcp40_id_secretaria',1)) : ?>
 						<th class="list-id_secretaria" id="tableOrderingid_secretaria">
 							<?php echo JTEXT::_('COM_JTCA_LCP40S_HEADING_ID_SECRETARIA'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lcp40_anoj',1)) : ?>
+						<th class="list-anoj" id="tableOrderinganoj">
+							<?php echo JTEXT::_('COM_JTCA_LCP40S_HEADING_ANOJ'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_lcp40_fh_recepcion',1)) : ?>
@@ -248,13 +248,6 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lcp40_anoj',1)) : ?>
-						<td class="list-anoj">
-							<?php 
-								echo $item->anoj != '' ? $item->anoj : $empty;
-							?>
-						</td>
-					<?php endif; ?>
 					<?php if ($this->params->get('list_show_lcp40_id_secretaria',1)) : ?>
 						<td class="list-id_secretaria">
 							<?php 
@@ -271,6 +264,13 @@ $empty = $component->params->get('default_empty_field', '');
 								else :;
 									echo $item->id_secretaria != '' ? $item->id_secretaria : $empty;
 								endif;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lcp40_anoj',1)) : ?>
+						<td class="list-anoj">
+							<?php 
+								echo $item->anoj != '' ? $item->anoj : $empty;
 							?>
 						</td>
 					<?php endif; ?>

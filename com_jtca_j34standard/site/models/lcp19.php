@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * TSJ CDMX Libros TxCA Component LIBRO DE TURNO PARA CONSIGNACIONES SIN DETENIDO PRIMERA INSTANCIA. Model
  *
  */
-class JtCaModelLcp19 extends JModelItem
+class JtcaModelLcp19 extends JModelItem
 {
 	/**
 	 * Model context string.  Used in setting the store id for the session
@@ -56,8 +56,8 @@ class JtCaModelLcp19 extends JModelItem
 			$config['lcp19_filter_fields'] = array(
 				'id', 'a.id',
 				'id_organo','a.id_organo',
-				'anoj','a.anoj',
 				'id_secretaria','a.id_secretaria',
+				'anoj','a.anoj',
 				'fh_recepcion','a.fh_recepcion',
 				'field5','a.field5',
 				'organo1','a.organo1',
@@ -166,7 +166,7 @@ class JtCaModelLcp19 extends JModelItem
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Lcp19s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Lcp19s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -251,7 +251,6 @@ class JtCaModelLcp19 extends JModelItem
 					$item->id_organo = $db->loadResult();
 				}
 				
-				
 				if (isset($item->id_secretaria) AND $item->id_secretaria !='')
 				{
 					$sql = 'SELECT '.$db->quoteName('list.secretaria').' AS value FROM (SELECT id, secretaria FROM jtc_secretarias) AS list';
@@ -259,6 +258,7 @@ class JtCaModelLcp19 extends JModelItem
 					$db->setQuery($sql);				
 					$item->id_secretaria = $db->loadResult();
 				}
+				
 				
 				
 				

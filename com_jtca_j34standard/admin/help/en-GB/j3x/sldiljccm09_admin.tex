@@ -1,0 +1,40 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_record & INT(10) & id\_record: \tabularnewline\hline 
+	id\_field & INT(10) & id\_field: \tabularnewline\hline 
+	sfield5 & VARCHAR(45) & N\'UMERO DE C\'EDULA: \tabularnewline\hline 
+	sfield8\_isMoral & TINYINT(1) & PERSONA A NOTIFICAR (isMoral): \tabularnewline\hline 
+	sfield8\_paterno & VARCHAR(255) & PERSONA A NOTIFICAR (paterno): \tabularnewline\hline 
+	sfield8\_materno & VARCHAR(45) & PERSONA A NOTIFICAR (materno): \tabularnewline\hline 
+	sfield8\_nombre & VARCHAR(45) & PERSONA A NOTIFICAR (nombre): \tabularnewline\hline 
+	sfield9 & TEXT & LUGAR DONDE DEBE ACTUARSE: \tabularnewline\hline 
+	sfield10 & DATETIME & FECHA DE LA DILIGENCIA: \tabularnewline\hline 
+	sfield11 & DATETIME & FECHA DE LA DEVOLUCI\'ON: \tabularnewline\hline 

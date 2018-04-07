@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * Ljc02 table
  *
  */
-class JtCaTableLjc02s extends JTable
+class JtcaTableLjc02s extends JTable
 {
 
 	/**
@@ -156,7 +156,7 @@ class JtCaTableLjc02s extends JTable
 		}
 
 		// Get an instance of the table
-		$table = JTable::getInstance('Ljc02s','JtCaTable');
+		$table = JTable::getInstance('Ljc02s','JtcaTable');
 
 		// For all keys
 		foreach ($pks as $pk)

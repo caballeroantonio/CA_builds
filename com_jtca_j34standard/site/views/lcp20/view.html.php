@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO PARA INCOMPETENCIAS PRIMERA INSTANCIA. View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp20 extends JViewLegacy
+class JtcaViewLcp20 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLcp20 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLcp20Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLcp20Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lcp20_itemid')));
 

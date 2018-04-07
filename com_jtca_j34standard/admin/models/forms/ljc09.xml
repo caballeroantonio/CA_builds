@@ -76,15 +76,6 @@
         label="COM_JTCA_LJC09S_FIELDSET_LJC09_FS_LABEL"
         description="COM_JTCA_LJC09S_FIELDSET_LJC09_FS_DESC"
     >
-        <field name="id_expediente"
-            type="modal_expedientes"
-            label="COM_JTCA_LJC09S_FIELD_ID_EXPEDIENTE_LABEL"
-            description="COM_JTCA_LJC09S_FIELD_ID_EXPEDIENTE_DESC"
-            class="modal"
-			required="true"
-			default="0"
-        >
-        </field>  
         <field name="id_organo"
             type="sql"
             label="COM_JTCA_LJC09S_FIELD_ID_ORGANO_LABEL"
@@ -116,6 +107,16 @@
             class="inputbox"
 			size="50"
 			maxlength="255"
+        >
+        </field>  
+        <field name="id_expediente"
+            type="modal_expedientes"
+            label="COM_JTCA_LJC09S_FIELD_ID_EXPEDIENTE_LABEL"
+            description="COM_JTCA_LJC09S_FIELD_ID_EXPEDIENTE_DESC"
+            class="modal"
+			required="true"
+			default="0"
+			type_alias="com_jtca.expediente" 
         >
         </field>  
         <field name="field5"

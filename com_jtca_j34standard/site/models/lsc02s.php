@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * This models supports retrieving lists of libreta de registro de asistencia (oficial).
  *
  */
-class JtCaModelLsc02s extends JModelList
+class JtcaModelLsc02s extends JModelList
 {
 	/**
 	 * @var    string	$context	Context string for the model type.  This is used to handle uniqueness within sessions data.

@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML PAPELETAS PARA EL PRÉSTAMO DE EXPEDIENTES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsc13 extends JViewLegacy
+class JtcaViewLsc13 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLsc13 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLsc13Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLsc13Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lsc13_itemid')));
 

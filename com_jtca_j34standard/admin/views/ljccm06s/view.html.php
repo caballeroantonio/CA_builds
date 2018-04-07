@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * View class for a list of ljccm06s.
  *
  */
-class JtCaViewLjccm06s extends JViewLegacy
+class JtcaViewLjccm06s extends JViewLegacy
 {
 	protected $items;
 	protected $pagination;

@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * Lsc10 controller class.
  * 
  */
-class JtCaControllerLsc10 extends JControllerForm
+class JtcaControllerLsc10 extends JControllerForm
 {
 	/**
 	 * @var    string	$view_item	The URL view item variable.

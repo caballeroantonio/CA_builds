@@ -123,8 +123,8 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php $dummy = false;
 					$display_fieldset = (
 								($params->get('show_lcp28_id_organo')) OR 
-								($params->get('show_lcp28_anoj')) OR 
 								($params->get('show_lcp28_id_secretaria')) OR 
+								($params->get('show_lcp28_anoj')) OR 
 								($params->get('show_lcp28_fh_recepcion')) OR 
 								($params->get('show_lcp28_field5')) OR 
 								($params->get('show_lcp28_field6')) OR 
@@ -165,18 +165,6 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_lcp28_anoj')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LCP28S_FIELD_ANOJ_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->anoj != '' ? $this->item->anoj : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
 						<?php if ($params->get('show_lcp28_id_secretaria')) : ?>
 						<div class="formelm">
 							<label>
@@ -197,6 +185,18 @@ $empty = $component->params->get('default_empty_field', '');
 								else :;
 									echo $this->item->id_secretaria != '' ? $this->item->id_secretaria : $empty;
 								endif;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lcp28_anoj')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LCP28S_FIELD_ANOJ_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->anoj != '' ? $this->item->anoj : $empty;
 								?>
 							</span>
 						</div>	

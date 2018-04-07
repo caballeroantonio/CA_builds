@@ -34,28 +34,6 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'Expediente',
-        'FIELD_CODE_NAME' => 'id_expediente',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 33,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) DEFAULT NULL Expediente
-
-                FIELD_NAME_LATEX=Expediente
-                FIELD_CODE_NAME_LATEX=id\_expediente
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['id_expediente'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
         'FIELD_NAME' => 'Órgano',
         'FIELD_CODE_NAME' => 'id_organo',
         'FIELD_DESCRIPTION' => '',//
@@ -78,7 +56,7 @@ function getFields(){
     $fields['id_organo'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'Secretaría',
+        'FIELD_NAME' => 'Ponencia',
         'FIELD_CODE_NAME' => 'id_secretaria',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 18,
@@ -89,9 +67,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) DEFAULT NULL Secretaría
+                FIELD_DB=`` INT(10) DEFAULT NULL Ponencia
 
-                FIELD_NAME_LATEX=Secretar\'i{}a
+                FIELD_NAME_LATEX=Ponencia
                 FIELD_CODE_NAME_LATEX=id\_secretaria
                 FIELD_DBCOMMENT_LATEX=
 
@@ -120,6 +98,31 @@ function getFields(){
 
     */
     $fields['anoj'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'Expediente',
+        'FIELD_CODE_NAME' => 'id_expediente',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 13,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) UNSIGNED  DEFAULT NULL Expediente
+
+                FIELD_NAME_LATEX=Expediente
+                FIELD_CODE_NAME_LATEX=id\_expediente
+                FIELD_DBCOMMENT_LATEX=
+
+                    {FIELD_LINK}
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=E
+                    FIELD_FOREIGN_OBJECT_UPPER=EXPEDIENTE
+
+    */
+    $fields['id_expediente'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'DESTINATARIO',
@@ -456,7 +459,7 @@ if ($this->params->get('save_history') AND $this->params->get('lsps04_save_histo
 	//hacer parametrizable data_id para que funcione versiones
 	
 	//$model	= JModelLegacy::getInstance('[%CompObject%]Form','[%ArchitectComp%]Model', array('ignore_request' => FALSE));
-	$model	= JModelLegacy::getInstance('Lsps04Form','JtCaModel', array('ignore_request' => FALSE));
+	$model	= JModelLegacy::getInstance('Lsps04Form','JtcaModel', array('ignore_request' => FALSE));
 	$data = array();
 	$data['id'] = 1;
 	$this->form	= $model->getForm($data, false);

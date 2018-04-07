@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRETA DE LIBERTADES DE SALAS DE ADOLESCENTES list controller class.
  *
  */
-class JtCaControllerLcp35s extends JControllerLegacy
+class JtcaControllerLcp35s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLcp35s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Lcp35s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Lcp35s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLcp35s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Lcp35Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Lcp35Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Lcp35s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Lcp35s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

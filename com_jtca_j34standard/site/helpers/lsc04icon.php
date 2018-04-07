@@ -253,7 +253,7 @@ class JHTMLLsc04Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLsc04Route($lsc04->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLsc04Route($lsc04->slug,
 									$layout,
 									$params->get('keep_lsc04_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLsc04Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLsc04Route($lsc04->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLsc04Route($lsc04->slug,
 									$layout,
 									$params->get('keep_lsc04_itemid')) , false);
 		

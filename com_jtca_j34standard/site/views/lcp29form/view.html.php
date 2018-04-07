@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE ORDENES PARA ARRAIGOS Y CATEOS DELITOS NO GRAVES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp29Form extends JViewLegacy
+class JtcaViewLcp29Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

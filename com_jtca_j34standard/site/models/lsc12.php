@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * TSJ CDMX Libros TxCA Component LIBRO DE REGISTRO DE AMPAROS (OFICIAL) Model
  *
  */
-class JtCaModelLsc12 extends JModelItem
+class JtcaModelLsc12 extends JModelItem
 {
 	/**
 	 * Model context string.  Used in setting the store id for the session
@@ -171,7 +171,7 @@ class JtCaModelLsc12 extends JModelItem
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Lsc12s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Lsc12s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -235,6 +235,9 @@ class JtCaModelLsc12 extends JModelItem
 				}
 				
 					
+				// Filter by and return name for id_expediente level.
+				$query->select($db->quoteName('e.name').' AS e_expediente_name');
+				$query->join('LEFT', $db->quoteName('jt_expedientes').' AS e ON '.$db->quoteName('e.id').' = '.$db->quoteName('a.id_expediente'));	
 																				
 				$db->setQuery($query);
 

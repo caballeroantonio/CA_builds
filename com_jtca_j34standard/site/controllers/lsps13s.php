@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * CONTROL DE FIRMAS DEL PROCESADO list controller class.
  *
  */
-class JtCaControllerLsps13s extends JControllerLegacy
+class JtcaControllerLsps13s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLsps13s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Lsps13s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Lsps13s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLsps13s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Lsps13Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Lsps13Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Lsps13s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Lsps13s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO PARA CONSIGNACIONES CON DETENIDO PRIMERA INSTANCIA. View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp18 extends JViewLegacy
+class JtcaViewLcp18 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLcp18 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLcp18Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLcp18Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lcp18_itemid')));
 

@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * TSJ CDMX Libros TxCA Component LIBRO DE GOBIERNO (OFICIAL) Model
  *
  */
-class JtCaModelLsc09 extends JModelItem
+class JtcaModelLsc09 extends JModelItem
 {
 	/**
 	 * Model context string.  Used in setting the store id for the session
@@ -166,7 +166,7 @@ class JtCaModelLsc09 extends JModelItem
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Lsc09s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Lsc09s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -230,6 +230,9 @@ class JtCaModelLsc09 extends JModelItem
 				}
 				
 					
+				// Filter by and return name for id_expediente level.
+				$query->select($db->quoteName('e.name').' AS e_expediente_name');
+				$query->join('LEFT', $db->quoteName('jt_expedientes').' AS e ON '.$db->quoteName('e.id').' = '.$db->quoteName('a.id_expediente'));	
 																				
 				$db->setQuery($query);
 

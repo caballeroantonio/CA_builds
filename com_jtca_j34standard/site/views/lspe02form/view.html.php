@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE RESOLUCIONES DE PLANO View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLspe02Form extends JViewLegacy
+class JtcaViewLspe02Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

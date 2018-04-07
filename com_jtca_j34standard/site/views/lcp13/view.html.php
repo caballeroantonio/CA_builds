@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRETA DE EXPEDIENTILLOS DE JUZGADOS DE EJECUCIÓN PARA JUZGADOS PENAL O NO GRAVES. View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp13 extends JViewLegacy
+class JtcaViewLcp13 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLcp13 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLcp13Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLcp13Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lcp13_itemid')));
 

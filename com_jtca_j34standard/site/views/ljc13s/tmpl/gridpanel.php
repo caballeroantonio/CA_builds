@@ -34,28 +34,6 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'Expediente',
-        'FIELD_CODE_NAME' => 'id_expediente',
-        'FIELD_DESCRIPTION' => '<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>',//<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-        'FIELDTYPE_ID' => 33,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-                FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) DEFAULT NULL Expediente
-
-                FIELD_NAME_LATEX=Expediente
-                FIELD_CODE_NAME_LATEX=id\_expediente
-                FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-
-
-    */
-    $fields['id_expediente'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
         'FIELD_NAME' => 'Órgano',
         'FIELD_CODE_NAME' => 'id_organo',
         'FIELD_DESCRIPTION' => '',//
@@ -122,92 +100,29 @@ function getFields(){
     $fields['anoj'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'GARANTE (a. paterno)',
-        'FIELD_CODE_NAME' => 'field2_paterno',
-        'FIELD_DESCRIPTION' => 'apellido paterno',//apellido paterno
-        'FIELDTYPE_ID' => 1,
+        'FIELD_NAME' => 'Expediente',
+        'FIELD_CODE_NAME' => 'id_expediente',
+        'FIELD_DESCRIPTION' => '<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>',//<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
+        'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD2_PATERNO
-                FIELD_INTRO=apellido paterno
+                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+                FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(255) DEFAULT NULL GARANTE (a. paterno)
+                FIELD_DB=`` INT(10) UNSIGNED  DEFAULT NULL Expediente
 
-                FIELD_NAME_LATEX=GARANTE (a. paterno)
-                FIELD_CODE_NAME_LATEX=field2\_paterno
-                FIELD_DBCOMMENT_LATEX=apellido paterno
+                FIELD_NAME_LATEX=Expediente
+                FIELD_CODE_NAME_LATEX=id\_expediente
+                FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
 
-
-    */
-    $fields['field2_paterno'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'GARANTE (a. materno)',
-        'FIELD_CODE_NAME' => 'field2_materno',
-        'FIELD_DESCRIPTION' => 'apellido materno',//apellido materno
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD2_MATERNO
-                FIELD_INTRO=apellido materno
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(45) DEFAULT NULL GARANTE (a. materno)
-
-                FIELD_NAME_LATEX=GARANTE (a. materno)
-                FIELD_CODE_NAME_LATEX=field2\_materno
-                FIELD_DBCOMMENT_LATEX=apellido materno
-
+                    {FIELD_LINK}
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=E
+                    FIELD_FOREIGN_OBJECT_UPPER=EXPEDIENTE
 
     */
-    $fields['field2_materno'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'GARANTE (nombre)',
-        'FIELD_CODE_NAME' => 'field2_nombre',
-        'FIELD_DESCRIPTION' => 'nombre',//nombre
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD2_NOMBRE
-                FIELD_INTRO=nombre
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(45) DEFAULT NULL GARANTE (nombre)
-
-                FIELD_NAME_LATEX=GARANTE (nombre)
-                FIELD_CODE_NAME_LATEX=field2\_nombre
-                FIELD_DBCOMMENT_LATEX=nombre
-
-
-    */
-    $fields['field2_nombre'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'GARANTE (es Moral)',
-        'FIELD_CODE_NAME' => 'field2_isMoral',
-        'FIELD_DESCRIPTION' => 'es Moral',//es Moral
-        'FIELDTYPE_ID' => 16,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD2_ISMORAL
-                FIELD_INTRO=es Moral
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` TINYINT(1) DEFAULT NULL GARANTE (es Moral)
-
-                FIELD_NAME_LATEX=GARANTE (es Moral)
-                FIELD_CODE_NAME_LATEX=field2\_isMoral
-                FIELD_DBCOMMENT_LATEX=es Moral
-
-
-    */
-    $fields['field2_isMoral'] = $field;
+    $fields['id_expediente'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'GARANTE (isMoral)',
@@ -434,7 +349,7 @@ if ($this->params->get('save_history') AND $this->params->get('ljc13_save_histor
 	//hacer parametrizable data_id para que funcione versiones
 	
 	//$model	= JModelLegacy::getInstance('[%CompObject%]Form','[%ArchitectComp%]Model', array('ignore_request' => FALSE));
-	$model	= JModelLegacy::getInstance('Ljc13Form','JtCaModel', array('ignore_request' => FALSE));
+	$model	= JModelLegacy::getInstance('Ljc13Form','JtcaModel', array('ignore_request' => FALSE));
 	$data = array();
 	$data['id'] = 1;
 	$this->form	= $model->getForm($data, false);

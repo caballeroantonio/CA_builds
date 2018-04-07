@@ -153,14 +153,14 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_JTCA_LSC08S_HEADING_ANOJ'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_lsc08_field177',1)) : ?>
-						<th class="list-field177" id="tableOrderingfield177">
-							<?php echo JTEXT::_('COM_JTCA_LSC08S_HEADING_FIELD177'); ?>
-						</th>
-					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_lsc08_id_expediente',1)) : ?>
 						<th class="list-id_expediente" id="tableOrderingid_expediente">
 							<?php echo JTEXT::_('COM_JTCA_LSC08S_HEADING_ID_EXPEDIENTE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc08_field177',1)) : ?>
+						<th class="list-field177" id="tableOrderingfield177">
+							<?php echo JTEXT::_('COM_JTCA_LSC08S_HEADING_FIELD177'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_lsc08_billete',1)) : ?>
@@ -275,17 +275,21 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsc08_id_expediente',1)) : ?>
+						<td class="list-id_expediente">
+							<?php 
+								if ($params->get('list_link_lsc08_id_expediente')) :
+									echo '<a href="'.JRoute::_(JtcaHelperRoute::getExpedienteRoute($item->id_expediente, 0)).'">'.JString::trim($item->e_expediente_name).'</a>';
+								else :
+									echo JString::trim($item->e_expediente_name);
+								endif; 
+							?>
+						</td>
+					<?php endif; ?>
 					<?php if ($this->params->get('list_show_lsc08_field177',1)) : ?>
 						<td class="list-field177">
 							<?php 
 								echo ($item->field177 != '' AND $item->field177 != '0000-00-00 00:00:00') ? JHtml::date($item->field177, '%Y-%m-%d', null) : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc08_id_expediente',1)) : ?>
-						<td class="list-id_expediente">
-							<?php 
-								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
 							?>
 						</td>
 					<?php endif; ?>

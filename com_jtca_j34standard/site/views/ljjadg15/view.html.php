@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML ARTICULO 36 O ARTICULO 28 LJADF View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjjadg15 extends JViewLegacy
+class JtcaViewLjjadg15 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjjadg15 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjjadg15Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjjadg15Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljjadg15_itemid')));
 

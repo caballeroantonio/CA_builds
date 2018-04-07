@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE CONTROL DE BILLETES Y PÓLIZAS (OFICIAL) View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsc06Form extends JViewLegacy
+class JtcaViewLsc06Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

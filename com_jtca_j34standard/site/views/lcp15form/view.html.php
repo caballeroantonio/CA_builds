@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRETA DE OFICIOS DE AMPAROS DE TRAMITE. View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp15Form extends JViewLegacy
+class JtcaViewLcp15Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

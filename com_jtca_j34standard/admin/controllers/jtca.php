@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * TSJ CDMX Libros TxCA controller class.
  *
  */
-class JtCaControllerJtCa extends JControllerForm
+class JtcaControllerJtca extends JControllerForm
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.

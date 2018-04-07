@@ -31,10 +31,10 @@ defined('_JEXEC') or die;
 JLoader::register('CategoryHelperAssociation', JPATH_ADMINISTRATOR . '/components/com_categories/helpers/association.php');
 
 /**
- * JtCa Component Association Helper
+ * Jtca Component Association Helper
  *
  */
-abstract class JtCaHelperAssociation extends CategoryHelperAssociation
+abstract class JtcaHelperAssociation extends CategoryHelperAssociation
 {
 	/**
 	 * Method to get the associations for a given item

@@ -253,7 +253,7 @@ class JHTMLLspe08Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLspe08Route($lspe08->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLspe08Route($lspe08->slug,
 									$layout,
 									$params->get('keep_lspe08_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLspe08Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLspe08Route($lspe08->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLspe08Route($lspe08->slug,
 									$layout,
 									$params->get('keep_lspe08_itemid')) , false);
 		

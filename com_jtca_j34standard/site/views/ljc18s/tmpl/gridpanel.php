@@ -34,28 +34,6 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'Expediente',
-        'FIELD_CODE_NAME' => 'id_expediente',
-        'FIELD_DESCRIPTION' => '<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>',//<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-        'FIELDTYPE_ID' => 33,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-                FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) DEFAULT NULL Expediente
-
-                FIELD_NAME_LATEX=Expediente
-                FIELD_CODE_NAME_LATEX=id\_expediente
-                FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-
-
-    */
-    $fields['id_expediente'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
         'FIELD_NAME' => 'Órgano',
         'FIELD_CODE_NAME' => 'id_organo',
         'FIELD_DESCRIPTION' => '',//
@@ -120,6 +98,31 @@ function getFields(){
 
     */
     $fields['anoj'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'Expediente',
+        'FIELD_CODE_NAME' => 'id_expediente',
+        'FIELD_DESCRIPTION' => '<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>',//<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
+        'FIELDTYPE_ID' => 13,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+                FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) UNSIGNED  DEFAULT NULL Expediente
+
+                FIELD_NAME_LATEX=Expediente
+                FIELD_CODE_NAME_LATEX=id\_expediente
+                FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
+
+                    {FIELD_LINK}
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=E
+                    FIELD_FOREIGN_OBJECT_UPPER=EXPEDIENTE
+
+    */
+    $fields['id_expediente'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'FOJAS',
@@ -208,94 +211,6 @@ function getFields(){
 
     */
     $fields['field9'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'PERSONA QUE RECIBIÓ DEL ARCHIVO (a. paterno)',
-        'FIELD_CODE_NAME' => 'field10_paterno',
-        'FIELD_DESCRIPTION' => 'apellido paterno',//apellido paterno
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD10_PATERNO
-                FIELD_INTRO=apellido paterno
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(255) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (a. paterno)
-
-                FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (a. paterno)
-                FIELD_CODE_NAME_LATEX=field10\_paterno
-                FIELD_DBCOMMENT_LATEX=apellido paterno
-
-
-    */
-    $fields['field10_paterno'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'PERSONA QUE RECIBIÓ DEL ARCHIVO (a. materno)',
-        'FIELD_CODE_NAME' => 'field10_materno',
-        'FIELD_DESCRIPTION' => 'apellido materno',//apellido materno
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD10_MATERNO
-                FIELD_INTRO=apellido materno
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (a. materno)
-
-                FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (a. materno)
-                FIELD_CODE_NAME_LATEX=field10\_materno
-                FIELD_DBCOMMENT_LATEX=apellido materno
-
-
-    */
-    $fields['field10_materno'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'PERSONA QUE RECIBIÓ DEL ARCHIVO (nombre)',
-        'FIELD_CODE_NAME' => 'field10_nombre',
-        'FIELD_DESCRIPTION' => 'nombre',//nombre
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD10_NOMBRE
-                FIELD_INTRO=nombre
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(45) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (nombre)
-
-                FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (nombre)
-                FIELD_CODE_NAME_LATEX=field10\_nombre
-                FIELD_DBCOMMENT_LATEX=nombre
-
-
-    */
-    $fields['field10_nombre'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'PERSONA QUE RECIBIÓ DEL ARCHIVO (es Moral)',
-        'FIELD_CODE_NAME' => 'field10_isMoral',
-        'FIELD_DESCRIPTION' => 'es Moral',//es Moral
-        'FIELDTYPE_ID' => 16,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD10_ISMORAL
-                FIELD_INTRO=es Moral
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` TINYINT(1) DEFAULT NULL PERSONA QUE RECIBIÓ DEL ARCHIVO (es Moral)
-
-                FIELD_NAME_LATEX=PERSONA QUE RECIBI\'O DEL ARCHIVO (es Moral)
-                FIELD_CODE_NAME_LATEX=field10\_isMoral
-                FIELD_DBCOMMENT_LATEX=es Moral
-
-
-    */
-    $fields['field10_isMoral'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'PERSONA QUE RECIBIÓ DEL ARCHIVO (isMoral)',
@@ -456,7 +371,7 @@ if ($this->params->get('save_history') AND $this->params->get('ljc18_save_histor
 	//hacer parametrizable data_id para que funcione versiones
 	
 	//$model	= JModelLegacy::getInstance('[%CompObject%]Form','[%ArchitectComp%]Model', array('ignore_request' => FALSE));
-	$model	= JModelLegacy::getInstance('Ljc18Form','JtCaModel', array('ignore_request' => FALSE));
+	$model	= JModelLegacy::getInstance('Ljc18Form','JtcaModel', array('ignore_request' => FALSE));
 	$data = array();
 	$data['id'] = 1;
 	$this->form	= $model->getForm($data, false);

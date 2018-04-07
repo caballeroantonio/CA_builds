@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE PÓLIZAS Y FIANZAS (OFICIAL) - Egresos View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsc14 extends JViewLegacy
+class JtcaViewLsc14 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLsc14 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLsc14Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLsc14Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lsc14_itemid')));
 

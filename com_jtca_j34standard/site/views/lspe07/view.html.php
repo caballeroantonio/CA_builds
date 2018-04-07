@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE FINANZAS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLspe07 extends JViewLegacy
+class JtcaViewLspe07 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLspe07 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLspe07Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLspe07Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lspe07_itemid')));
 

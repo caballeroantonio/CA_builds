@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO DE BENEFICIOS PENITENCIARIOS. View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp10Form extends JViewLegacy
+class JtcaViewLcp10Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

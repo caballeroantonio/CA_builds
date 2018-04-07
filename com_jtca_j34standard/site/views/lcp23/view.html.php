@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE ORDENES DE APREHENSIÓN, REAPREHENSION Y TRASLADO. View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp23 extends JViewLegacy
+class JtcaViewLcp23 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLcp23 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLcp23Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLcp23Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lcp23_itemid')));
 

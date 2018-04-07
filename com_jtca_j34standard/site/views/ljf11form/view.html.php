@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE REGISTRO PARA NOTARIOS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjf11Form extends JViewLegacy
+class JtcaViewLjf11Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

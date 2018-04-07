@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML AGENDA DE AUDIENCIAS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjjadg13 extends JViewLegacy
+class JtcaViewLjjadg13 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjjadg13 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjjadg13Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjjadg13Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljjadg13_itemid')));
 

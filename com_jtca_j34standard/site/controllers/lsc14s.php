@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRO DE PÓLIZAS Y FIANZAS (OFICIAL) - Egresos list controller class.
  *
  */
-class JtCaControllerLsc14s extends JControllerLegacy
+class JtcaControllerLsc14s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLsc14s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Lsc14s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Lsc14s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLsc14s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Lsc14Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Lsc14Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Lsc14s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Lsc14s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

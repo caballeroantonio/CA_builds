@@ -117,17 +117,6 @@
     >
 
         <field
-            id="id_expediente"
-            name="id_expediente"
-            type="modal_expedientes"
-            label="COM_JTCA_LJC04S_FIELD_ID_EXPEDIENTE_LABEL"
-            description="COM_JTCA_LJC04S_FIELD_ID_EXPEDIENTE_DESC"
-            class="modal"
-			required="true"
-			default="0"
-        >
-        </field>  
-        <field
             id="id_organo"
             name="id_organo"
             type="sql"
@@ -164,6 +153,18 @@
             class="inputbox"
 			size="50"
 			maxlength="255"
+        >
+        </field>  
+        <field
+            id="id_expediente"
+            name="id_expediente"
+            type="modal_expedientes"
+            label="COM_JTCA_LJC04S_FIELD_ID_EXPEDIENTE_LABEL"
+            description="COM_JTCA_LJC04S_FIELD_ID_EXPEDIENTE_DESC"
+            class="modal"
+			required="true"
+			default="0"
+			type_alias="com_jtca.expediente" 
         >
         </field>  
         <field

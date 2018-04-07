@@ -253,7 +253,7 @@ class JHTMLLjc17Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLjc17Route($ljc17->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLjc17Route($ljc17->slug,
 									$layout,
 									$params->get('keep_ljc17_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLjc17Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLjc17Route($ljc17->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLjc17Route($ljc17->slug,
 									$layout,
 									$params->get('keep_ljc17_itemid')) , false);
 		

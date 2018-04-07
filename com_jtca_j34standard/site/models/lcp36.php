@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * TSJ CDMX Libros TxCA Component LIBRETA DE RETURNO DE ADOLESCENTES Model
  *
  */
-class JtCaModelLcp36 extends JModelItem
+class JtcaModelLcp36 extends JModelItem
 {
 	/**
 	 * Model context string.  Used in setting the store id for the session
@@ -56,8 +56,8 @@ class JtCaModelLcp36 extends JModelItem
 			$config['lcp36_filter_fields'] = array(
 				'id', 'a.id',
 				'id_organo','a.id_organo',
-				'anoj','a.anoj',
 				'id_secretaria','a.id_secretaria',
+				'anoj','a.anoj',
 				'field1','a.field1',
 				'fh_recepcion','a.fh_recepcion',
 				'field6','a.field6',
@@ -170,7 +170,7 @@ class JtCaModelLcp36 extends JModelItem
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Lcp36s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Lcp36s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -255,7 +255,6 @@ class JtCaModelLcp36 extends JModelItem
 					$item->id_organo = $db->loadResult();
 				}
 				
-				
 				if (isset($item->id_secretaria) AND $item->id_secretaria !='')
 				{
 					$sql = 'SELECT '.$db->quoteName('list.secretaria').' AS value FROM (SELECT id, secretaria FROM jtc_secretarias) AS list';
@@ -263,6 +262,7 @@ class JtCaModelLcp36 extends JModelItem
 					$db->setQuery($sql);				
 					$item->id_secretaria = $db->loadResult();
 				}
+				
 				
 				
 				

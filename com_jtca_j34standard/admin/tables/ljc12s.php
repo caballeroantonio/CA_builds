@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * Ljc12 table
  *
  */
-class JtCaTableLjc12s extends JTable
+class JtcaTableLjc12s extends JTable
 {
 
 	/**
@@ -108,11 +108,6 @@ class JtCaTableLjc12s extends JTable
 	public function bind($array, $ignore = array())
 	{
 			
-		if ( !array_key_exists('field6_isMoral',$array)  ) 
-		{
-			$array['field6_isMoral'] = '0';
-		}
-			
 		if ( !array_key_exists('field15',$array)  ) 
 		{
 			$array['field15'] = '0';
@@ -165,7 +160,7 @@ class JtCaTableLjc12s extends JTable
 		}
 
 		// Get an instance of the table
-		$table = JTable::getInstance('Ljc12s','JtCaTable');
+		$table = JTable::getInstance('Ljc12s','JtcaTable');
 
 		// For all keys
 		foreach ($pks as $pk)

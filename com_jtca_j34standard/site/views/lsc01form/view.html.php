@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRETA DE REGISTRO DE SENTENCIAS -TURNO- (OFICIAL) View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsc01Form extends JViewLegacy
+class JtcaViewLsc01Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

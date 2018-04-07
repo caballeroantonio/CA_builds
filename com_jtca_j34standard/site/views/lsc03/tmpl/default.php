@@ -208,7 +208,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo $this->item->id_expediente != '' ? $this->item->id_expediente : $empty;
+									echo JString::trim($this->item->e_expediente_name);
 								?>
 							</span>
 						</div>	

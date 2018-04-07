@@ -142,14 +142,14 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_JTCA_LSC01S_HEADING_ID_SECRETARIA'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_lsc01_id_expediente',1)) : ?>
-						<th class="list-id_expediente" id="tableOrderingid_expediente">
-							<?php echo JTEXT::_('COM_JTCA_LSC01S_HEADING_ID_EXPEDIENTE'); ?>
-						</th>
-					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_lsc01_anoj',1)) : ?>
 						<th class="list-anoj" id="tableOrderinganoj">
 							<?php echo JTEXT::_('COM_JTCA_LSC01S_HEADING_ANOJ'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc01_id_expediente',1)) : ?>
+						<th class="list-id_expediente" id="tableOrderingid_expediente">
+							<?php echo JTEXT::_('COM_JTCA_LSC01S_HEADING_ID_EXPEDIENTE'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_lsc01_field116',1)) : ?>
@@ -307,17 +307,21 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc01_id_expediente',1)) : ?>
-						<td class="list-id_expediente">
-							<?php 
-								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
-							?>
-						</td>
-					<?php endif; ?>
 					<?php if ($this->params->get('list_show_lsc01_anoj',1)) : ?>
 						<td class="list-anoj">
 							<?php 
 								echo $item->anoj != '' ? $item->anoj : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsc01_id_expediente',1)) : ?>
+						<td class="list-id_expediente">
+							<?php 
+								if ($params->get('list_link_lsc01_id_expediente')) :
+									echo '<a href="'.JRoute::_(JtcaHelperRoute::getExpedienteRoute($item->id_expediente, 0)).'">'.JString::trim($item->e_expediente_name).'</a>';
+								else :
+									echo JString::trim($item->e_expediente_name);
+								endif; 
 							?>
 						</td>
 					<?php endif; ?>

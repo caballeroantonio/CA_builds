@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRO DE TURNO PARA INCOMPETENCIAS PRIMERA INSTANC list controller class.
  *
  */
-class JtCaControllerLcp20s extends JControllerLegacy
+class JtcaControllerLcp20s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLcp20s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Lcp20s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Lcp20s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLcp20s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Lcp20Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Lcp20Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Lcp20s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Lcp20s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

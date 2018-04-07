@@ -253,7 +253,7 @@ class JHTMLLcp27Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLcp27Route($lcp27->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLcp27Route($lcp27->slug,
 									$layout,
 									$params->get('keep_lcp27_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLcp27Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLcp27Route($lcp27->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLcp27Route($lcp27->slug,
 									$layout,
 									$params->get('keep_lcp27_itemid')) , false);
 		

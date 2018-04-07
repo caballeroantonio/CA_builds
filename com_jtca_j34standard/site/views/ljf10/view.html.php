@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE AUXILIARES DE LA ADMINISTRACIÓN DE JUSTICIA, TUTORES Y CURADORES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjf10 extends JViewLegacy
+class JtcaViewLjf10 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjf10 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjf10Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjf10Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljf10_itemid')));
 

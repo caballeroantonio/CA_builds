@@ -142,6 +142,16 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_JTCA_LSC13S_HEADING_ID_SECRETARIA'); ?>
 						</th>
 					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc13_anoj',1)) : ?>
+						<th class="list-anoj" id="tableOrderinganoj">
+							<?php echo JTEXT::_('COM_JTCA_LSC13S_HEADING_ANOJ'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_lsc13_id_expediente',1)) : ?>
+						<th class="list-id_expediente" id="tableOrderingid_expediente">
+							<?php echo JTEXT::_('COM_JTCA_LSC13S_HEADING_ID_EXPEDIENTE'); ?>
+						</th>
+					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_lsc13_field225_isMoral',1)) : ?>
 						<th class="list-field225_isMoral" id="tableOrderingfield225_isMoral">
 							<?php echo JTEXT::_('COM_JTCA_LSC13S_HEADING_FIELD225_ISMORAL'); ?>
@@ -170,16 +180,6 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_lsc13_id_field2283',1)) : ?>
 						<th class="list-id_field2283" id="tableOrderingid_field2283">
 							<?php echo JTEXT::_('COM_JTCA_LSC13S_HEADING_ID_FIELD2283'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_lsc13_anoj',1)) : ?>
-						<th class="list-anoj" id="tableOrderinganoj">
-							<?php echo JTEXT::_('COM_JTCA_LSC13S_HEADING_ANOJ'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_lsc13_id_expediente',1)) : ?>
-						<th class="list-id_expediente" id="tableOrderingid_expediente">
-							<?php echo JTEXT::_('COM_JTCA_LSC13S_HEADING_ID_EXPEDIENTE'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_lsc13_field227',1)) : ?>
@@ -307,6 +307,24 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsc13_anoj',1)) : ?>
+						<td class="list-anoj">
+							<?php 
+								echo $item->anoj != '' ? $item->anoj : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_lsc13_id_expediente',1)) : ?>
+						<td class="list-id_expediente">
+							<?php 
+								if ($params->get('list_link_lsc13_id_expediente')) :
+									echo '<a href="'.JRoute::_(JtcaHelperRoute::getExpedienteRoute($item->id_expediente, 0)).'">'.JString::trim($item->e_expediente_name).'</a>';
+								else :
+									echo JString::trim($item->e_expediente_name);
+								endif; 
+							?>
+						</td>
+					<?php endif; ?>
 					<?php if ($this->params->get('list_show_lsc13_field225_isMoral',1)) : ?>
 						<td class="list-field225_isMoral">
 							<?php 
@@ -346,20 +364,6 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-id_field2283">
 							<?php 
 								echo $item->id_field2283 != '' ? $item->id_field2283 : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc13_anoj',1)) : ?>
-						<td class="list-anoj">
-							<?php 
-								echo $item->anoj != '' ? $item->anoj : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lsc13_id_expediente',1)) : ?>
-						<td class="list-id_expediente">
-							<?php 
-								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
 							?>
 						</td>
 					<?php endif; ?>

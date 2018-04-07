@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * TSJ CDMX Libros TxCA Component LIBRO DE CONTROL DE ADOPCIONES INTERNACIONALES Model
  *
  */
-class JtCaModelLjf21 extends JModelItem
+class JtcaModelLjf21 extends JModelItem
 {
 	/**
 	 * Model context string.  Used in setting the store id for the session
@@ -56,9 +56,9 @@ class JtCaModelLjf21 extends JModelItem
 			$config['ljf21_filter_fields'] = array(
 				'id', 'a.id',
 				'id_organo','a.id_organo',
+				'id_secretaria','a.id_secretaria',
 				'anoj','a.anoj',
 				'id_expediente','a.id_expediente',
-				'id_secretaria','a.id_secretaria',
 				'field5','a.field5',
 				'field6','a.field6',
 				'field7','a.field7',
@@ -168,7 +168,7 @@ class JtCaModelLjf21 extends JModelItem
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Ljf21s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Ljf21s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -232,6 +232,9 @@ class JtCaModelLjf21 extends JModelItem
 				}
 				
 					
+				// Filter by and return name for id_expediente level.
+				$query->select($db->quoteName('e.name').' AS e_expediente_name');
+				$query->join('LEFT', $db->quoteName('jt_expedientes').' AS e ON '.$db->quoteName('e.id').' = '.$db->quoteName('a.id_expediente'));	
 																				
 				$db->setQuery($query);
 
@@ -253,8 +256,6 @@ class JtCaModelLjf21 extends JModelItem
 					$item->id_organo = $db->loadResult();
 				}
 				
-				
-				
 				if (isset($item->id_secretaria) AND $item->id_secretaria !='')
 				{
 					$sql = 'SELECT '.$db->quoteName('list.secretaria').' AS value FROM (SELECT id, secretaria FROM jtc_secretarias) AS list';
@@ -262,6 +263,8 @@ class JtCaModelLjf21 extends JModelItem
 					$db->setQuery($sql);				
 					$item->id_secretaria = $db->loadResult();
 				}
+				
+				
 				
 				
 				

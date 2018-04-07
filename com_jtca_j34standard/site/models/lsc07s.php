@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * This models supports retrieving lists of libro de egresos (oficial).
  *
  */
-class JtCaModelLsc07s extends JModelList
+class JtcaModelLsc07s extends JModelList
 {
 	/**
 	 * @var    string	$context	Context string for the model type.  This is used to handle uniqueness within sessions data.
@@ -249,6 +249,11 @@ class JtCaModelLsc07s extends JModelList
 		}
 
 		
+		// Filter by and return name for id_expediente level.
+		$query->select($db->quoteName('e.name').' AS e_expediente_name');
+		$query->select($db->quoteName('e.id').' AS e_expediente_id');
+
+		$query->join('LEFT', $db->quoteName('jt_expedientes').' AS e ON '.$db->quoteName('e.id').' = '.$db->quoteName('a.id_expediente'));	
 					
 		if ($billete = $this->getState('filter.billete'))
 		{
@@ -452,7 +457,6 @@ class JtCaModelLsc07s extends JModelList
 					$item->id_organo = $db->loadResult();
 				}
 				
-				
 				if (isset($item->id_secretaria) AND $item->id_secretaria !='')
 				{
 					$sql = 'SELECT '.$db->quoteName('list.secretaria').' AS value FROM (SELECT id, secretaria FROM jtc_secretarias) AS list';
@@ -460,6 +464,7 @@ class JtCaModelLsc07s extends JModelList
 					$db->setQuery($sql);				
 					$item->id_secretaria = $db->loadResult();
 				}
+				
 				
 				
 				

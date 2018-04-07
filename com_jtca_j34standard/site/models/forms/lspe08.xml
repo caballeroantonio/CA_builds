@@ -131,6 +131,20 @@
             <option value="">COM_JTCA_LSPE08S_SELECT_ID_ORGANO</option>
         </field>  
         <field
+            id="id_secretaria"
+            name="id_secretaria"
+            type="sql"
+            label="COM_JTCA_LSPE08S_FIELD_ID_SECRETARIA_LABEL"
+            description="COM_JTCA_LSPE08S_FIELD_ID_SECRETARIA_DESC"
+            class="inputbox"
+			size="1"
+			query="SELECT id, secretaria FROM jtc_secretarias"
+			key_field="id"
+			value_field="secretaria"
+        >
+            <option value="">COM_JTCA_LSPE08S_SELECT_ID_SECRETARIA</option>
+        </field>  
+        <field
             id="anoj"
             name="anoj"
             type="text"
@@ -150,21 +164,8 @@
             class="modal"
 			required="true"
 			default="0"
+			type_alias="com_jtca.expediente" 
         >
-        </field>  
-        <field
-            id="id_secretaria"
-            name="id_secretaria"
-            type="sql"
-            label="COM_JTCA_LSPE08S_FIELD_ID_SECRETARIA_LABEL"
-            description="COM_JTCA_LSPE08S_FIELD_ID_SECRETARIA_DESC"
-            class="inputbox"
-			size="1"
-			query="SELECT id, secretaria FROM jtc_secretarias"
-			key_field="id"
-			value_field="secretaria"
-        >
-            <option value="">COM_JTCA_LSPE08S_SELECT_ID_SECRETARIA</option>
         </field>  
         <field
             id="billete"

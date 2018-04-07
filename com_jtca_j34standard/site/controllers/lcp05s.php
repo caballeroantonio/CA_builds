@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES SIN D list controller class.
  *
  */
-class JtCaControllerLcp05s extends JControllerLegacy
+class JtcaControllerLcp05s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLcp05s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Lcp05s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Lcp05s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLcp05s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Lcp05Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Lcp05Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Lcp05s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Lcp05s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

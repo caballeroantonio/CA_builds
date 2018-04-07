@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE GOBIERNO (SISTEMA TRADICIONAL) View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsps01Form extends JViewLegacy
+class JtcaViewLsps01Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

@@ -137,6 +137,11 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_JTCA_LJP01S_HEADING_ID_ORGANO'); ?>
 						</th>
 					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljp01_id_secretaria',1)) : ?>
+						<th class="list-id_secretaria" id="tableOrderingid_secretaria">
+							<?php echo JTEXT::_('COM_JTCA_LJP01S_HEADING_ID_SECRETARIA'); ?>
+						</th>
+					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_ljp01_anoj',1)) : ?>
 						<th class="list-anoj" id="tableOrderinganoj">
 							<?php echo JTEXT::_('COM_JTCA_LJP01S_HEADING_ANOJ'); ?>
@@ -145,11 +150,6 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_ljp01_id_expediente',1)) : ?>
 						<th class="list-id_expediente" id="tableOrderingid_expediente">
 							<?php echo JTEXT::_('COM_JTCA_LJP01S_HEADING_ID_EXPEDIENTE'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_ljp01_id_secretaria',1)) : ?>
-						<th class="list-id_secretaria" id="tableOrderingid_secretaria">
-							<?php echo JTEXT::_('COM_JTCA_LJP01S_HEADING_ID_SECRETARIA'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_ljp01_field2',1)) : ?>
@@ -298,20 +298,6 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp01_anoj',1)) : ?>
-						<td class="list-anoj">
-							<?php 
-								echo $item->anoj != '' ? $item->anoj : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljp01_id_expediente',1)) : ?>
-						<td class="list-id_expediente">
-							<?php 
-								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
-							?>
-						</td>
-					<?php endif; ?>
 					<?php if ($this->params->get('list_show_ljp01_id_secretaria',1)) : ?>
 						<td class="list-id_secretaria">
 							<?php 
@@ -328,6 +314,24 @@ $empty = $component->params->get('default_empty_field', '');
 								else :;
 									echo $item->id_secretaria != '' ? $item->id_secretaria : $empty;
 								endif;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_ljp01_anoj',1)) : ?>
+						<td class="list-anoj">
+							<?php 
+								echo $item->anoj != '' ? $item->anoj : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_ljp01_id_expediente',1)) : ?>
+						<td class="list-id_expediente">
+							<?php 
+								if ($params->get('list_link_ljp01_id_expediente')) :
+									echo '<a href="'.JRoute::_(JtcaHelperRoute::getExpedienteRoute($item->id_expediente, 0)).'">'.JString::trim($item->e_expediente_name).'</a>';
+								else :
+									echo JString::trim($item->e_expediente_name);
+								endif; 
 							?>
 						</td>
 					<?php endif; ?>

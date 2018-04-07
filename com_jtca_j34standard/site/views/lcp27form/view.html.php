@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO PARA INCOMPETENCIAS DELITOS NO GRAVES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp27Form extends JViewLegacy
+class JtcaViewLcp27Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

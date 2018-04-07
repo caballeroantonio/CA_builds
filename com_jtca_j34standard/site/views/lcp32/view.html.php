@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRETA DE LIBERTADES JUZGADOS DE EJECUCIÓN DE SENTENCIA View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp32 extends JViewLegacy
+class JtcaViewLcp32 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLcp32 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLcp32Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLcp32Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lcp32_itemid')));
 

@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * TSJ CDMX Libros TxCA Component LIBRO DE RECURSOS DE APELACIÓN Model
  *
  */
-class JtCaModelLjpdng06 extends JModelItem
+class JtcaModelLjpdng06 extends JModelItem
 {
 	/**
 	 * Model context string.  Used in setting the store id for the session
@@ -56,9 +56,9 @@ class JtCaModelLjpdng06 extends JModelItem
 			$config['ljpdng06_filter_fields'] = array(
 				'id', 'a.id',
 				'id_organo','a.id_organo',
+				'id_secretaria','a.id_secretaria',
 				'anoj','a.anoj',
 				'id_expediente','a.id_expediente',
-				'id_secretaria','a.id_secretaria',
 				'field2','a.field2',
 				'field3','a.field3',
 				'field4','a.field4',
@@ -177,7 +177,7 @@ class JtCaModelLjpdng06 extends JModelItem
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Ljpdng06s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Ljpdng06s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -241,6 +241,9 @@ class JtCaModelLjpdng06 extends JModelItem
 				}
 				
 					
+				// Filter by and return name for id_expediente level.
+				$query->select($db->quoteName('e.name').' AS e_expediente_name');
+				$query->join('LEFT', $db->quoteName('jt_expedientes').' AS e ON '.$db->quoteName('e.id').' = '.$db->quoteName('a.id_expediente'));	
 																				
 				$db->setQuery($query);
 
@@ -262,8 +265,6 @@ class JtCaModelLjpdng06 extends JModelItem
 					$item->id_organo = $db->loadResult();
 				}
 				
-				
-				
 				if (isset($item->id_secretaria) AND $item->id_secretaria !='')
 				{
 					$sql = 'SELECT '.$db->quoteName('list.secretaria').' AS value FROM (SELECT id, secretaria FROM jtc_secretarias) AS list';
@@ -271,6 +272,8 @@ class JtCaModelLjpdng06 extends JModelItem
 					$db->setQuery($sql);				
 					$item->id_secretaria = $db->loadResult();
 				}
+				
+				
 				
 				
 				

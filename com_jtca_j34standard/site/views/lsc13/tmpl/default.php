@@ -124,14 +124,14 @@ $empty = $component->params->get('default_empty_field', '');
 					$display_fieldset = (
 								($params->get('show_lsc13_id_organo')) OR 
 								($params->get('show_lsc13_id_secretaria')) OR 
+								($params->get('show_lsc13_anoj')) OR 
+								($params->get('show_lsc13_id_expediente')) OR 
 								($params->get('show_lsc13_field225_isMoral')) OR 
 								($params->get('show_lsc13_field225_paterno')) OR 
 								($params->get('show_lsc13_field225_materno')) OR 
 								($params->get('show_lsc13_field225_nombre')) OR 
 								($params->get('show_lsc13_txt_field2283')) OR 
 								($params->get('show_lsc13_id_field2283')) OR 
-								($params->get('show_lsc13_anoj')) OR 
-								($params->get('show_lsc13_id_expediente')) OR 
 								($params->get('show_lsc13_field227')) OR 
 								($params->get('show_lsc13_field228')) OR 
 								($params->get('show_lsc13_field229')) OR 
@@ -189,6 +189,30 @@ $empty = $component->params->get('default_empty_field', '');
 								else :;
 									echo $this->item->id_secretaria != '' ? $this->item->id_secretaria : $empty;
 								endif;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lsc13_anoj')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LSC13S_FIELD_ANOJ_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->anoj != '' ? $this->item->anoj : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lsc13_id_expediente')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LSC13S_FIELD_ID_EXPEDIENTE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo JString::trim($this->item->e_expediente_name);
 								?>
 							</span>
 						</div>	
@@ -261,30 +285,6 @@ $empty = $component->params->get('default_empty_field', '');
 							<span>
 								<?php
 									echo $this->item->id_field2283 != '' ? $this->item->id_field2283 : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_lsc13_anoj')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LSC13S_FIELD_ANOJ_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->anoj != '' ? $this->item->anoj : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_lsc13_id_expediente')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LSC13S_FIELD_ID_EXPEDIENTE_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->id_expediente != '' ? $this->item->id_expediente : $empty;
 								?>
 							</span>
 						</div>	

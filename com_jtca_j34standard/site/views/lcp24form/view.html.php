@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE REGISTRO DE LA LEY DE ACCESO A LAS MUJERES A UNA VIDA LIBRE DE VIOLENCIA. View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp24Form extends JViewLegacy
+class JtcaViewLcp24Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

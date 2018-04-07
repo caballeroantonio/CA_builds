@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO DE EXCUSAS PARA JUZGADOS  DE DELITOS NO GRAVES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp28Form extends JViewLegacy
+class JtcaViewLcp28Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

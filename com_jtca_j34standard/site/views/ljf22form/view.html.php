@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE CONTROL DE RESTITUCIONES INTERNACIONALES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjf22Form extends JViewLegacy
+class JtcaViewLjf22Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

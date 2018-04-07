@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRO DE REMISIÓN DE EXPEDIENTES AL ARCHIVO list controller class.
  *
  */
-class JtCaControllerLjccm16s extends JControllerLegacy
+class JtcaControllerLjccm16s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLjccm16s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Ljccm16s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Ljccm16s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLjccm16s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Ljccm16Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Ljccm16Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Ljccm16s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Ljccm16s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

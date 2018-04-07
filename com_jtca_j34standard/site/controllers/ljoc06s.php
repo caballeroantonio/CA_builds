@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRO DE EXHORTOS list controller class.
  *
  */
-class JtCaControllerLjoc06s extends JControllerLegacy
+class JtcaControllerLjoc06s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLjoc06s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Ljoc06s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Ljoc06s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLjoc06s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Ljoc06Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Ljoc06Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Ljoc06s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Ljoc06s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

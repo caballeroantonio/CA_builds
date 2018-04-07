@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO DE EXCUSAS PARA JUZGADOS DE PRIMERA INSTANCIA. View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp21 extends JViewLegacy
+class JtcaViewLcp21 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLcp21 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLcp21Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLcp21Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lcp21_itemid')));
 

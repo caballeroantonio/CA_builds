@@ -122,10 +122,10 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="lsps03Form" id="lsps03Form">
 			<?php $dummy = false;
 					$display_fieldset = (
-								($params->get('show_lsps03_id_expediente')) OR 
 								($params->get('show_lsps03_id_organo')) OR 
 								($params->get('show_lsps03_id_secretaria')) OR 
 								($params->get('show_lsps03_anoj')) OR 
+								($params->get('show_lsps03_id_expediente')) OR 
 								($params->get('show_lsps03_field2370')) OR 
 								($params->get('show_lsps03_field2371')) OR 
 								($params->get('show_lsps03_field2372')) OR 
@@ -145,18 +145,6 @@ $empty = $component->params->get('default_empty_field', '');
 					<legend><?php echo JText::_('COM_JTCA_LSPS03S_FIELDSET_LSPS03_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
-						<?php if ($params->get('show_lsps03_id_expediente')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LSPS03S_FIELD_ID_EXPEDIENTE_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->id_expediente != '' ? $this->item->id_expediente : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
 						<?php if ($params->get('show_lsps03_id_organo')) : ?>
 						<div class="formelm">
 							<label>
@@ -213,6 +201,18 @@ $empty = $component->params->get('default_empty_field', '');
 							<span>
 								<?php
 									echo $this->item->anoj != '' ? $this->item->anoj : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_lsps03_id_expediente')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LSPS03S_FIELD_ID_EXPEDIENTE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo JString::trim($this->item->e_expediente_name);
 								?>
 							</span>
 						</div>	

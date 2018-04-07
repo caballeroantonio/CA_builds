@@ -1,7 +1,7 @@
 <?php
 /**
  * @version 		$Id:$
- * @name			TSJ CDMX Libros TxCA Ejemplo
+ * @name			TSJ CDMX Libros TxCA
  * @author			caballeroantonio (caballeroantonio.com)
  * @package			com_jtca
  * @subpackage		com_jtca.admin
@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * Lcp39 controller class.
  *
  */
-class JtCaControllerLcp39 extends JControllerForm
+class JtcaControllerLcp39 extends JControllerForm
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.

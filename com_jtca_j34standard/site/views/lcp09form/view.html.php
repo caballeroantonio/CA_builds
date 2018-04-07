@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE ETAPA DE EJECUCIÓN PARA ADOLESCENTES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp09Form extends JViewLegacy
+class JtcaViewLcp09Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

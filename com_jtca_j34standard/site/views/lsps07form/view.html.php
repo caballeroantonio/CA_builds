@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML REGISTRO DE BILLETES DE DEPOSITO View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsps07Form extends JViewLegacy
+class JtcaViewLsps07Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

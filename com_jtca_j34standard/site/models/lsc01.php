@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * TSJ CDMX Libros TxCA Component LIBRETA DE REGISTRO DE SENTENCIAS -TURNO- (OFICIAL) Model
  *
  */
-class JtCaModelLsc01 extends JModelItem
+class JtcaModelLsc01 extends JModelItem
 {
 	/**
 	 * Model context string.  Used in setting the store id for the session
@@ -57,8 +57,8 @@ class JtCaModelLsc01 extends JModelItem
 				'id', 'a.id',
 				'id_organo','a.id_organo',
 				'id_secretaria','a.id_secretaria',
-				'id_expediente','a.id_expediente',
 				'anoj','a.anoj',
+				'id_expediente','a.id_expediente',
 				'field116','a.field116',
 				'field117','a.field117',
 				'field120','a.field120',
@@ -172,7 +172,7 @@ class JtCaModelLsc01 extends JModelItem
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Lsc01s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Lsc01s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -236,6 +236,9 @@ class JtCaModelLsc01 extends JModelItem
 				}
 				
 					
+				// Filter by and return name for id_expediente level.
+				$query->select($db->quoteName('e.name').' AS e_expediente_name');
+				$query->join('LEFT', $db->quoteName('jt_expedientes').' AS e ON '.$db->quoteName('e.id').' = '.$db->quoteName('a.id_expediente'));	
 																				
 				$db->setQuery($query);
 

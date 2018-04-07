@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * This models supports retrieving lists of libro de registro de la ley de acceso a las mujere.
  *
  */
-class JtCaModelLcp24s extends JModelList
+class JtcaModelLcp24s extends JModelList
 {
 	/**
 	 * @var    string	$context	Context string for the model type.  This is used to handle uniqueness within sessions data.
@@ -443,7 +443,6 @@ class JtCaModelLcp24s extends JModelList
 					$item->id_organo = $db->loadResult();
 				}
 				
-				
 				if (isset($item->id_secretaria) AND $item->id_secretaria !='')
 				{
 					$sql = 'SELECT '.$db->quoteName('list.secretaria').' AS value FROM (SELECT id, secretaria FROM jtc_secretarias) AS list';
@@ -451,6 +450,7 @@ class JtCaModelLcp24s extends JModelList
 					$db->setQuery($sql);				
 					$item->id_secretaria = $db->loadResult();
 				}
+				
 				
 				
 				

@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * Frontpage View class
  *
  */
-class JtCaViewLjjadng07s extends JViewLegacy
+class JtcaViewLjjadng07s extends JViewLegacy
 {
 	protected $items;
 	protected $pagination;

@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO PARA INCOMPETENCIAS DELITOS NO GRAVES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp27 extends JViewLegacy
+class JtcaViewLcp27 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLcp27 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLcp27Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLcp27Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lcp27_itemid')));
 

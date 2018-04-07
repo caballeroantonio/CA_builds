@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO PARA INCOMPETENCIAS PRIMERA INSTANCIA. View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp20Form extends JViewLegacy
+class JtcaViewLcp20Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

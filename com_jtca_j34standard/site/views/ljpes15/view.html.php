@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE BENEFICIOS REVOCADOS Y ORDENES DE RE-APREHENSIÓN View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjpes15 extends JViewLegacy
+class JtcaViewLjpes15 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjpes15 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjpes15Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjpes15Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljpes15_itemid')));
 

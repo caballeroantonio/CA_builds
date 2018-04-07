@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE CONTROL DE FIANZAS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjccm12Form extends JViewLegacy
+class JtcaViewLjccm12Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

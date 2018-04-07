@@ -33,7 +33,7 @@ use Joomla\Registry\Registry;
  * Lsc08 model.
  *
  */
-class JtCaModelLsc08 extends JModelAdmin
+class JtcaModelLsc08 extends JModelAdmin
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -77,7 +77,7 @@ class JtCaModelLsc08 extends JModelAdmin
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	 */
-	public function getTable($type = 'Lsc08s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Lsc08s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}	

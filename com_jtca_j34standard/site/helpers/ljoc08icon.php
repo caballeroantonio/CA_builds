@@ -253,7 +253,7 @@ class JHTMLLjoc08Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLjoc08Route($ljoc08->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLjoc08Route($ljoc08->slug,
 									$layout,
 									$params->get('keep_ljoc08_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLjoc08Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLjoc08Route($ljoc08->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLjoc08Route($ljoc08->slug,
 									$layout,
 									$params->get('keep_ljoc08_itemid')) , false);
 		

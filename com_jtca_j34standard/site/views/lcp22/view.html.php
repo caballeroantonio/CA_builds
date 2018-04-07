@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE ORDENES DE ARRAIGOS Y DE CATEOS PRIMERA INSTANCIA. View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp22 extends JViewLegacy
+class JtcaViewLcp22 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLcp22 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLcp22Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLcp22Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lcp22_itemid')));
 

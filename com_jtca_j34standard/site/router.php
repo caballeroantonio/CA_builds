@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
  * Routing class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaRouter extends JComponentRouterBase
+class JtcaRouter extends JComponentRouterBase
 {
 	/**
 	 * Build the route for the TSJ CDMX Libros TxCA component
@@ -1234,6 +1234,438 @@ class JtCaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
+				case 'slperson':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'slpersons':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'sldiljccm07':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'sldil_jccm07s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'sldiljccm09':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'sldil_jccm09s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'sldepjoc03':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'sldep_joc03s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'slinculjpdng01':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'slincul_jpdng01s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'slofenjpdng01':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'slofen_jpdng01s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'sldecljpdng01':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'sldecl_jpdng01s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'sldilijpdng09':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'sldili_jpdng09s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'slfirmjpdng17':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'slfirm_jpdng17s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'sladoljjadg05':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'sladol_jjadg05s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'slfirmjjadg16':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'slfirm_jjadg16s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'sladoljjadg01':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'sladol_jjadg01s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'slaveriguacion':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'slaveriguaciones':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'slpersonaliasedad':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'slpersonaliasedades':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'slpersonedadsexo':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'slpersonedadsexos':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'slpersondelito':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'slpersondelitos':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'slpersonalias':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'slpersonaliases':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'slpartecontenciosa':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'slpartescontenciosas':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
 				case 'lspe01':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
@@ -1666,30 +2098,6 @@ class JtCaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'lejemplo':
-					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
-					{
-						if($advanced)
-						{
-							list($tmp, $id) = explode(':', $query['id'], 2);
-						}
-						else
-						{
-							$id = isset($query['id']) ? $query['id'] : null;
-						}
-						$segments[] = $view;					
-						$segments[] = $id;
-					}
-					unset($query['view']);				
-					unset($query['id']);
-					break;
-				case 'lejemplos':
-					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
-					{
-						$segments[] = $view;											
-					}
-					unset($query['view']);				
-					break;					
 				case 'lsc03':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
@@ -1900,6 +2308,30 @@ class JtCaRouter extends JComponentRouterBase
 					unset($query['id']);
 					break;
 				case 'lsps03s':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'expediente':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'expedientes':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						$segments[] = $view;											
@@ -6633,6 +7065,438 @@ class JtCaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
+				if ($item->query['view'] == 'slperson' OR $view == 'slperson')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_slpersons'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'slpersons'OR $view == 'slpersons')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'sldiljccm07' OR $view == 'sldiljccm07')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_sldil_jccm07s'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'sldil_jccm07s'OR $view == 'sldil_jccm07s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'sldiljccm09' OR $view == 'sldiljccm09')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_sldil_jccm09s'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'sldil_jccm09s'OR $view == 'sldil_jccm09s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'sldepjoc03' OR $view == 'sldepjoc03')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_sldep_joc03s'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'sldep_joc03s'OR $view == 'sldep_joc03s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'slinculjpdng01' OR $view == 'slinculjpdng01')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_slincul_jpdng01s'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'slincul_jpdng01s'OR $view == 'slincul_jpdng01s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'slofenjpdng01' OR $view == 'slofenjpdng01')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_slofen_jpdng01s'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'slofen_jpdng01s'OR $view == 'slofen_jpdng01s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'sldecljpdng01' OR $view == 'sldecljpdng01')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_sldecl_jpdng01s'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'sldecl_jpdng01s'OR $view == 'sldecl_jpdng01s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'sldilijpdng09' OR $view == 'sldilijpdng09')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_sldili_jpdng09s'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'sldili_jpdng09s'OR $view == 'sldili_jpdng09s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'slfirmjpdng17' OR $view == 'slfirmjpdng17')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_slfirm_jpdng17s'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'slfirm_jpdng17s'OR $view == 'slfirm_jpdng17s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'sladoljjadg05' OR $view == 'sladoljjadg05')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_sladol_jjadg05s'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'sladol_jjadg05s'OR $view == 'sladol_jjadg05s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'slfirmjjadg16' OR $view == 'slfirmjjadg16')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_slfirm_jjadg16s'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'slfirm_jjadg16s'OR $view == 'slfirm_jjadg16s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'sladoljjadg01' OR $view == 'sladoljjadg01')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_sladol_jjadg01s'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'sladol_jjadg01s'OR $view == 'sladol_jjadg01s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'slaveriguacion' OR $view == 'slaveriguacion')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_slaveriguaciones'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'slaveriguaciones'OR $view == 'slaveriguaciones')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'slpersonaliasedad' OR $view == 'slpersonaliasedad')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_slpersonaliasedades'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'slpersonaliasedades'OR $view == 'slpersonaliasedades')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'slpersonedadsexo' OR $view == 'slpersonedadsexo')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_slpersonedadsexos'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'slpersonedadsexos'OR $view == 'slpersonedadsexos')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'slpersondelito' OR $view == 'slpersondelito')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_slpersondelitos'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'slpersondelitos'OR $view == 'slpersondelitos')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'slpersonalias' OR $view == 'slpersonalias')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_slpersonaliases'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'slpersonaliases'OR $view == 'slpersonaliases')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'slpartecontenciosa' OR $view == 'slpartecontenciosa')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_slpartescontenciosas'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'slpartescontenciosas'OR $view == 'slpartescontenciosas')
+				{
+					$vars['view'] = $view;
+				}				
 				if ($item->query['view'] == 'lspe01' OR $view == 'lspe01')
 				{
 					if($advanced)
@@ -7065,30 +7929,6 @@ class JtCaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
-				if ($item->query['view'] == 'lejemplo' OR $view == 'lejemplo')
-				{
-					if($advanced)
-					{
-						$db = JFactory::getDbo();
-							
-						$query = $db->getQuery(true);
-						$query->select($db->quoteName('id'));
-						$query->from($db->quoteName('jt_lejemplos'));
-								
-						$db->setQuery($query);
-						$nid = $db->loadResult();
-					}
-					else
-					{
-						$nid = $segment;
-					}
-					$vars['id'] = $nid;
-					$vars['view'] = $view;
-				}
-				if ($item->query['view'] == 'lejemplos'OR $view == 'lejemplos')
-				{
-					$vars['view'] = $view;
-				}				
 				if ($item->query['view'] == 'lsc03' OR $view == 'lsc03')
 				{
 					if($advanced)
@@ -7302,6 +8142,30 @@ class JtCaRouter extends JComponentRouterBase
 					$vars['view'] = $view;
 				}
 				if ($item->query['view'] == 'lsps03s'OR $view == 'lsps03s')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'expediente' OR $view == 'expediente')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('jt_expedientes'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'expedientes'OR $view == 'expedientes')
 				{
 					$vars['view'] = $view;
 				}				

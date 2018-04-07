@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * TSJ CDMX Libros TxCA Component LIBRETA DE VISTAS AL M.P (OFICIAL) Model
  *
  */
-class JtCaModelLsc03 extends JModelItem
+class JtcaModelLsc03 extends JModelItem
 {
 	/**
 	 * Model context string.  Used in setting the store id for the session
@@ -168,7 +168,7 @@ class JtCaModelLsc03 extends JModelItem
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Lsc03s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Lsc03s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -232,6 +232,9 @@ class JtCaModelLsc03 extends JModelItem
 				}
 				
 					
+				// Filter by and return name for id_expediente level.
+				$query->select($db->quoteName('e.name').' AS e_expediente_name');
+				$query->join('LEFT', $db->quoteName('jt_expedientes').' AS e ON '.$db->quoteName('e.id').' = '.$db->quoteName('a.id_expediente'));	
 																				
 				$db->setQuery($query);
 

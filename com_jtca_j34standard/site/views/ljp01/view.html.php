@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE GOBIERNO View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjp01 extends JViewLegacy
+class JtcaViewLjp01 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjp01 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjp01Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjp01Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljp01_itemid')));
 

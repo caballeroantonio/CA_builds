@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRO DE ORDENES DE DETENCIÓN PARA JUZGADOS DE JUS list controller class.
  *
  */
-class JtCaControllerLcp40s extends JControllerLegacy
+class JtcaControllerLcp40s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLcp40s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Lcp40s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Lcp40s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLcp40s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Lcp40Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Lcp40Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Lcp40s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Lcp40s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

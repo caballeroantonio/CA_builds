@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML PAPELETAS PARA EL PRÉSTAMO DE EXPEDIENTES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsc13Form extends JViewLegacy
+class JtcaViewLsc13Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

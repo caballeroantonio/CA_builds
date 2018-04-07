@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO DE ENTREGAS DE TOCAS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsps08 extends JViewLegacy
+class JtcaViewLsps08 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLsps08 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLsps08Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLsps08Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lsps08_itemid')));
 

@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE CERTIFICADO DE DEPÓSITOS DE INGRESO View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjpdng02Form extends JViewLegacy
+class JtcaViewLjpdng02Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

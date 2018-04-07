@@ -1,0 +1,44 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+	name & VARCHAR(255) & no description \tabularnewline\hline 
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+
+%each field
+	id\_organo & INT(10) & \'Organo: \tabularnewline\hline 
+	numero & VARCHAR(255) & N\'umero:N\'umero del expediente@ToDo :- required- validaiones INT \tabularnewline\hline 
+	ano & INT(10) & A\~no: \tabularnewline\hline 
+	bis & INT(10) & Bis: \tabularnewline\hline 
+	nrecurso & INT(10) & N\'umero de recurso: \tabularnewline\hline 
+	id\_tipoarchivo & INT(10) & Tipo de archivo: \tabularnewline\hline 
+	txt\_tipojuicio & VARCHAR(255) & Tipo de juicio: \tabularnewline\hline 
+	id\_tipojuicio & INT(10) & Tipo de juicio: \tabularnewline\hline 
+	partescontenciosas & MEDIUMTEXT & Partes contenciosas: \tabularnewline\hline 
+	id\_opc & INT(10) & id del WS de OPC: \tabularnewline\hline 
+	txt\_opc & TEXT & respuesta del WS de OPC: \tabularnewline\hline 
+	delito & VARCHAR(255) & DELITO: \tabularnewline\hline 
+	pena & VARCHAR(255) & Pena total o medida privativa: \tabularnewline\hline 
+	id\_exp\_orig & INT(10) UNSIGNED  & Expediente de origen: \tabularnewline\hline 

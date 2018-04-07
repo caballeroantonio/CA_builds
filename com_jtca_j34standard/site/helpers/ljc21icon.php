@@ -253,7 +253,7 @@ class JHTMLLjc21Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLjc21Route($ljc21->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLjc21Route($ljc21->slug,
 									$layout,
 									$params->get('keep_ljc21_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLjc21Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLjc21Route($ljc21->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLjc21Route($ljc21->slug,
 									$layout,
 									$params->get('keep_ljc21_itemid')) , false);
 		

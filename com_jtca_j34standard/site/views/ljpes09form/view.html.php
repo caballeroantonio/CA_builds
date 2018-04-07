@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE MULTAS JUDICIALES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjpes09Form extends JViewLegacy
+class JtcaViewLjpes09Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

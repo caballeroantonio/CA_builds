@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE ORDENES DE DETENCIÓN PARA JUZGADOS DE JUSTICIA PARA ADOLESCENTES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp40 extends JViewLegacy
+class JtcaViewLcp40 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLcp40 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLcp40Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLcp40Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lcp40_itemid')));
 

@@ -253,7 +253,7 @@ class JHTMLLjp18Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLjp18Route($ljp18->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLjp18Route($ljp18->slug,
 									$layout,
 									$params->get('keep_ljp18_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLjp18Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLjp18Route($ljp18->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLjp18Route($ljp18->slug,
 									$layout,
 									$params->get('keep_ljp18_itemid')) , false);
 		

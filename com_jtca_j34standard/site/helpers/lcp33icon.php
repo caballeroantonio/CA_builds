@@ -253,7 +253,7 @@ class JHTMLLcp33Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLcp33Route($lcp33->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLcp33Route($lcp33->slug,
 									$layout,
 									$params->get('keep_lcp33_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLcp33Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLcp33Route($lcp33->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLcp33Route($lcp33->slug,
 									$layout,
 									$params->get('keep_lcp33_itemid')) , false);
 		

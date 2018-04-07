@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO DE REMISIONES CON DETENIDO DE JUZGADOS ADOLESCENTES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp03Form extends JViewLegacy
+class JtcaViewLcp03Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

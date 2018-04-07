@@ -517,6 +517,186 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
+        <field name="slperson_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLPERSONS_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLPERSONS_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="sldiljccm07_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLDIL_JCCM07S_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLDIL_JCCM07S_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="sldiljccm09_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLDIL_JCCM09S_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLDIL_JCCM09S_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="sldepjoc03_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLDEP_JOC03S_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLDEP_JOC03S_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="slinculjpdng01_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLINCUL_JPDNG01S_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLINCUL_JPDNG01S_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="slofenjpdng01_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLOFEN_JPDNG01S_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLOFEN_JPDNG01S_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="sldecljpdng01_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLDECL_JPDNG01S_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLDECL_JPDNG01S_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="sldilijpdng09_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLDILI_JPDNG09S_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLDILI_JPDNG09S_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="slfirmjpdng17_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLFIRM_JPDNG17S_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLFIRM_JPDNG17S_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="sladoljjadg05_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLADOL_JJADG05S_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLADOL_JJADG05S_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="slfirmjjadg16_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLFIRM_JJADG16S_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLFIRM_JJADG16S_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="sladoljjadg01_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLADOL_JJADG01S_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLADOL_JJADG01S_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="slaveriguacion_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLAVERIGUACIONES_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLAVERIGUACIONES_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="slpersonaliasedad_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLPERSONALIASEDADES_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLPERSONALIASEDADES_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="slpersonedadsexo_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLPERSONEDADSEXOS_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLPERSONEDADSEXOS_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="slpersondelito_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLPERSONDELITOS_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLPERSONDELITOS_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="slpersonalias_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLPERSONALIASES_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLPERSONALIASES_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="slpartecontenciosa_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_SLPARTESCONTENCIOSAS_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_SLPARTESCONTENCIOSAS_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
         <field name="lspe01_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -697,16 +877,6 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="lejemplo_save_history"
-			type="radio"
-			class="btn-group btn-group-yesno"
-			default="1"
-			label="COM_JTCA_LEJEMPLOS_FIELD_SAVE_HISTORY_LABEL"
-			description="COM_JTCA_LEJEMPLOS_FIELD_SAVE_HISTORY_DESC"
-			>
-            <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>
         <field name="lsc03_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
@@ -793,6 +963,16 @@
 			default="1"
 			label="COM_JTCA_LSPS03S_FIELD_SAVE_HISTORY_LABEL"
 			description="COM_JTCA_LSPS03S_FIELD_SAVE_HISTORY_DESC"
+			>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="expediente_save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_JTCA_EXPEDIENTES_FIELD_SAVE_HISTORY_LABEL"
+			description="COM_JTCA_EXPEDIENTES_FIELD_SAVE_HISTORY_DESC"
 			>
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>

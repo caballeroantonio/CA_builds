@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRETA DE VISTAS AL M.P (OFICIAL) View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsc03 extends JViewLegacy
+class JtcaViewLsc03 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLsc03 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLsc03Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLsc03Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lsc03_itemid')));
 

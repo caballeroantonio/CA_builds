@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * TSJ CDMX Libros TxCA Component LIBRO DE CONTROL DE FIANZA Model
  *
  */
-class JtCaModelLsps11 extends JModelItem
+class JtcaModelLsps11 extends JModelItem
 {
 	/**
 	 * Model context string.  Used in setting the store id for the session
@@ -55,10 +55,10 @@ class JtCaModelLsps11 extends JModelItem
 		{
 			$config['lsps11_filter_fields'] = array(
 				'id', 'a.id',
-				'id_expediente','a.id_expediente',
 				'id_organo','a.id_organo',
 				'id_secretaria','a.id_secretaria',
 				'anoj','a.anoj',
+				'id_expediente','a.id_expediente',
 				'field2433_isMoral','a.field2433_isMoral',
 				'field2433_paterno','a.field2433_paterno',
 				'field2433_materno','a.field2433_materno',
@@ -175,7 +175,7 @@ class JtCaModelLsps11 extends JModelItem
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Lsps11s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Lsps11s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -239,6 +239,9 @@ class JtCaModelLsps11 extends JModelItem
 				}
 				
 					
+				// Filter by and return name for id_expediente level.
+				$query->select($db->quoteName('e.name').' AS e_expediente_name');
+				$query->join('LEFT', $db->quoteName('jt_expedientes').' AS e ON '.$db->quoteName('e.id').' = '.$db->quoteName('a.id_expediente'));	
 																				
 				$db->setQuery($query);
 
@@ -252,7 +255,6 @@ class JtCaModelLsps11 extends JModelItem
 				// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
 			
 
-				
 				if (isset($item->id_organo) AND $item->id_organo !='')
 				{
 					$sql = 'SELECT '.$db->quoteName('list.organo').' AS value FROM (SELECT id, organo FROM jtc_organos) AS list';
@@ -268,6 +270,7 @@ class JtCaModelLsps11 extends JModelItem
 					$db->setQuery($sql);				
 					$item->id_secretaria = $db->loadResult();
 				}
+				
 				
 				
 				

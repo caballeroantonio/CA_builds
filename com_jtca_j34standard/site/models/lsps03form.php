@@ -33,7 +33,7 @@ use Joomla\Registry\Registry;
 // Base this model on the backend version.
 require_once JPATH_ADMINISTRATOR.'/components/com_jtca/models/lsps03.php';
 
-class JtCaModelLsps03Form extends JtCaModelLsps03
+class JtcaModelLsps03Form extends JtcaModelLsps03
 {
 	/**
 	 * Model context string.
@@ -91,7 +91,7 @@ class JtCaModelLsps03Form extends JtCaModelLsps03
 	 * 
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Lsps03s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Lsps03s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}

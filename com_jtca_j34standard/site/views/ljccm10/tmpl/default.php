@@ -123,9 +123,9 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php $dummy = false;
 					$display_fieldset = (
 								($params->get('show_ljccm10_id_organo')) OR 
+								($params->get('show_ljccm10_id_secretaria')) OR 
 								($params->get('show_ljccm10_anoj')) OR 
 								($params->get('show_ljccm10_id_expediente')) OR 
-								($params->get('show_ljccm10_id_secretaria')) OR 
 								($params->get('show_ljccm10_field1')) OR 
 								($params->get('show_ljccm10_field2_isMoral')) OR 
 								($params->get('show_ljccm10_field2_paterno')) OR 
@@ -174,30 +174,6 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_ljccm10_anoj')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LJCCM10S_FIELD_ANOJ_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->anoj != '' ? $this->item->anoj : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_ljccm10_id_expediente')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LJCCM10S_FIELD_ID_EXPEDIENTE_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->id_expediente != '' ? $this->item->id_expediente : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
 						<?php if ($params->get('show_ljccm10_id_secretaria')) : ?>
 						<div class="formelm">
 							<label>
@@ -218,6 +194,30 @@ $empty = $component->params->get('default_empty_field', '');
 								else :;
 									echo $this->item->id_secretaria != '' ? $this->item->id_secretaria : $empty;
 								endif;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_ljccm10_anoj')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LJCCM10S_FIELD_ANOJ_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->anoj != '' ? $this->item->anoj : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_ljccm10_id_expediente')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LJCCM10S_FIELD_ID_EXPEDIENTE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo JString::trim($this->item->e_expediente_name);
 								?>
 							</span>
 						</div>	

@@ -253,7 +253,7 @@ class JHTMLLjf06Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLjf06Route($ljf06->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLjf06Route($ljf06->slug,
 									$layout,
 									$params->get('keep_ljf06_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLjf06Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLjf06Route($ljf06->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLjf06Route($ljf06->slug,
 									$layout,
 									$params->get('keep_ljf06_itemid')) , false);
 		

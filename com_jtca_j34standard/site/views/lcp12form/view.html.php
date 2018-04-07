@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRETA DE TURNO DE SALAS PARA JUZGADOS ORALES. View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp12Form extends JViewLegacy
+class JtcaViewLcp12Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

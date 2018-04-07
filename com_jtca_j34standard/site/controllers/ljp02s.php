@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRO DE REGISTRO DE BILLETES DE DEPÓSITO (INGRESO list controller class.
  *
  */
-class JtCaControllerLjp02s extends JControllerLegacy
+class JtcaControllerLjp02s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLjp02s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Ljp02s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Ljp02s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLjp02s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Ljp02Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Ljp02Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Ljp02s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Ljp02s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

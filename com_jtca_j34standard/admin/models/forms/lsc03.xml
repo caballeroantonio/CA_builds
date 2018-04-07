@@ -116,6 +116,7 @@
             class="modal"
 			required="true"
 			default="0"
+			type_alias="com_jtca.expediente" 
         >
         </field>  
         <field name="field131"

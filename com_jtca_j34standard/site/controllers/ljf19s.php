@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRO DE ENVÍO DE EXPEDIENTES AL ARCHIVO JUDICIAL  list controller class.
  *
  */
-class JtCaControllerLjf19s extends JControllerLegacy
+class JtcaControllerLjf19s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLjf19s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Ljf19s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Ljf19s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLjf19s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Ljf19Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Ljf19Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Ljf19s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Ljf19s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

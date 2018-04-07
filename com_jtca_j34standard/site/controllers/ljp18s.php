@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRO DE REGISTRO EN QUE SE HAYA OBSEQUIADO O NEGA list controller class.
  *
  */
-class JtCaControllerLjp18s extends JControllerLegacy
+class JtcaControllerLjp18s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLjp18s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Ljp18s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Ljp18s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLjp18s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Ljp18Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Ljp18Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Ljp18s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Ljp18s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

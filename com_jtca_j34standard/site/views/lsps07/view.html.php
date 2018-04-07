@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML REGISTRO DE BILLETES DE DEPOSITO View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsps07 extends JViewLegacy
+class JtcaViewLsps07 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLsps07 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLsps07Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLsps07Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lsps07_itemid')));
 

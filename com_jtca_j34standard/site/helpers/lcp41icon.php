@@ -253,7 +253,7 @@ class JHTMLLcp41Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLcp41Route($lcp41->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLcp41Route($lcp41->slug,
 									$layout,
 									$params->get('keep_lcp41_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLcp41Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLcp41Route($lcp41->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLcp41Route($lcp41->slug,
 									$layout,
 									$params->get('keep_lcp41_itemid')) , false);
 		

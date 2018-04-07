@@ -1,0 +1,46 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_record & INT(10) & id\_record: \tabularnewline\hline 
+	txt\_ijuridico & VARCHAR(255) & Inter\'es Jur\'i{}dico: \tabularnewline\hline 
+	id\_ijuridico & INT(10) & Inter\'es Jur\'i{}dico: \tabularnewline\hline 
+	id\_field & INT(10) & id\_field: \tabularnewline\hline 
+	isMoral & TINYINT(1) & Es persona moral?: \tabularnewline\hline 
+	paterno & VARCHAR(255) & A. Paterno: \tabularnewline\hline 
+	materno & VARCHAR(45) & A. Materno: \tabularnewline\hline 
+	nombre & VARCHAR(255) & Nombre(s): \tabularnewline\hline 
+	curp & VARCHAR(45) & CURP: \tabularnewline\hline 
+	rfc & VARCHAR(45) & RFC: \tabularnewline\hline 
+	calle & VARCHAR(45) & Calle: \tabularnewline\hline 
+	numero & VARCHAR(45) & N\'umero: \tabularnewline\hline 
+	colonia & VARCHAR(45) & Colonia: \tabularnewline\hline 
+	cp & VARCHAR(45) & C.P.: \tabularnewline\hline 
+	id\_entidadf & INT(10) & Estado: \tabularnewline\hline 
+	municipio & VARCHAR(45) & Municipio: \tabularnewline\hline 

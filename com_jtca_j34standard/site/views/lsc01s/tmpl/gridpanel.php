@@ -78,28 +78,6 @@ function getFields(){
     $fields['id_secretaria'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'NÚMERO DE TOCA',
-        'FIELD_CODE_NAME' => 'id_expediente',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 33,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) DEFAULT NULL NÚMERO DE TOCA
-
-                FIELD_NAME_LATEX=N\'UMERO DE TOCA
-                FIELD_CODE_NAME_LATEX=id\_expediente
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['id_expediente'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
         'FIELD_NAME' => 'Año j.',
         'FIELD_CODE_NAME' => 'anoj',
         'FIELD_DESCRIPTION' => '<p>Año judicial</p>',//<p>Año judicial</p>
@@ -120,6 +98,31 @@ function getFields(){
 
     */
     $fields['anoj'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'NÚMERO DE TOCA',
+        'FIELD_CODE_NAME' => 'id_expediente',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 13,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) UNSIGNED  DEFAULT NULL NÚMERO DE TOCA
+
+                FIELD_NAME_LATEX=N\'UMERO DE TOCA
+                FIELD_CODE_NAME_LATEX=id\_expediente
+                FIELD_DBCOMMENT_LATEX=
+
+                    {FIELD_LINK}
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=E
+                    FIELD_FOREIGN_OBJECT_UPPER=EXPEDIENTE
+
+    */
+    $fields['id_expediente'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'FECHA DE RECEPCIÓN DEL ASUNTO',
@@ -390,7 +393,7 @@ if ($this->params->get('save_history') AND $this->params->get('lsc01_save_histor
 	//hacer parametrizable data_id para que funcione versiones
 	
 	//$model	= JModelLegacy::getInstance('[%CompObject%]Form','[%ArchitectComp%]Model', array('ignore_request' => FALSE));
-	$model	= JModelLegacy::getInstance('Lsc01Form','JtCaModel', array('ignore_request' => FALSE));
+	$model	= JModelLegacy::getInstance('Lsc01Form','JtcaModel', array('ignore_request' => FALSE));
 	$data = array();
 	$data['id'] = 1;
 	$this->form	= $model->getForm($data, false);

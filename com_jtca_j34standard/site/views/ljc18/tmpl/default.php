@@ -122,18 +122,14 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="ljc18Form" id="ljc18Form">
 			<?php $dummy = false;
 					$display_fieldset = (
-								($params->get('show_ljc18_id_expediente')) OR 
 								($params->get('show_ljc18_id_organo')) OR 
 								($params->get('show_ljc18_id_secretaria')) OR 
 								($params->get('show_ljc18_anoj')) OR 
+								($params->get('show_ljc18_id_expediente')) OR 
 								($params->get('show_ljc18_field5')) OR 
 								($params->get('show_ljc18_field6')) OR 
 								($params->get('show_ljc18_field7')) OR 
 								($params->get('show_ljc18_field9')) OR 
-								($params->get('show_ljc18_field10_paterno')) OR 
-								($params->get('show_ljc18_field10_materno')) OR 
-								($params->get('show_ljc18_field10_nombre')) OR 
-								($params->get('show_ljc18_field10_isMoral')) OR 
 								($params->get('show_ljc18_field10_isMoral')) OR 
 								($params->get('show_ljc18_field10_paterno')) OR 
 								($params->get('show_ljc18_field10_materno')) OR 
@@ -148,18 +144,6 @@ $empty = $component->params->get('default_empty_field', '');
 					<legend><?php echo JText::_('COM_JTCA_LJC18S_FIELDSET_LJC18_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
-						<?php if ($params->get('show_ljc18_id_expediente')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LJC18S_FIELD_ID_EXPEDIENTE_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->id_expediente != '' ? $this->item->id_expediente : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
 						<?php if ($params->get('show_ljc18_id_organo')) : ?>
 						<div class="formelm">
 							<label>
@@ -220,6 +204,18 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
+						<?php if ($params->get('show_ljc18_id_expediente')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_JTCA_LJC18S_FIELD_ID_EXPEDIENTE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo JString::trim($this->item->e_expediente_name);
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
 						<?php if ($params->get('show_ljc18_field5')) : ?>
 						<div class="formelm">
 							<label>
@@ -264,64 +260,6 @@ $empty = $component->params->get('default_empty_field', '');
 							<span>
 								<?php
 									echo ($this->item->field9 != '' AND $this->item->field9 != '0000-00-00 00:00:00') ? JHtml::date($this->item->field9, '%Y-%m-%d', null) : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_ljc18_field10_paterno')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LJC18S_FIELD_FIELD10_PATERNO_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->field10_paterno != '' ? $this->item->field10_paterno : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_ljc18_field10_materno')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LJC18S_FIELD_FIELD10_MATERNO_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->field10_materno != '' ? $this->item->field10_materno : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_ljc18_field10_nombre')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LJC18S_FIELD_FIELD10_NOMBRE_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->field10_nombre != '' ? $this->item->field10_nombre : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_ljc18_field10_isMoral')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LJC18S_FIELD_FIELD10_ISMORAL_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									switch ($this->item->field10_isMoral) :
-									case '0':
-										echo JText::_('JNO');
-										break;
-									case '1':
-										echo JText::_('JYES');
-										break;
-									default:
-										echo JText::_('JNONE');
-										break;
-								endswitch;
 								?>
 							</span>
 						</div>	

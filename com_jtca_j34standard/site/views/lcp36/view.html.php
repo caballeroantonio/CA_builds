@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRETA DE RETURNO DE ADOLESCENTES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp36 extends JViewLegacy
+class JtcaViewLcp36 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLcp36 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLcp36Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLcp36Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lcp36_itemid')));
 

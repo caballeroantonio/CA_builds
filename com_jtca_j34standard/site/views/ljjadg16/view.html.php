@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE CONTROL DE PRESENTACIÓN DE ADOLESCENTES EN LIBERTAD ANTE EL JUEZ View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjjadg16 extends JViewLegacy
+class JtcaViewLjjadg16 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjjadg16 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjjadg16Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjjadg16Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljjadg16_itemid')));
 

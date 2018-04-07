@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
  * Architectcomp_name component helper.
  *
  */
-class JtCaHelper extends JHelperContent
+class JtcaHelper extends JHelperContent
 {
 	/**
 	 * Constructor.
@@ -470,6 +470,150 @@ class JtCaHelper extends JHelperContent
 			$active
 		);
 	
+		$active = $view_name == 'slpersons'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLPERSONS_SUBMENU'),
+			'index.php?option=com_jtca&view=slpersons',
+			$view_name == 'slpersons',
+			$active
+		);
+	
+		$active = $view_name == 'sldil_jccm07s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLDIL_JCCM07S_SUBMENU'),
+			'index.php?option=com_jtca&view=sldil_jccm07s',
+			$view_name == 'sldil_jccm07s',
+			$active
+		);
+	
+		$active = $view_name == 'sldil_jccm09s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLDIL_JCCM09S_SUBMENU'),
+			'index.php?option=com_jtca&view=sldil_jccm09s',
+			$view_name == 'sldil_jccm09s',
+			$active
+		);
+	
+		$active = $view_name == 'sldep_joc03s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLDEP_JOC03S_SUBMENU'),
+			'index.php?option=com_jtca&view=sldep_joc03s',
+			$view_name == 'sldep_joc03s',
+			$active
+		);
+	
+		$active = $view_name == 'slincul_jpdng01s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLINCUL_JPDNG01S_SUBMENU'),
+			'index.php?option=com_jtca&view=slincul_jpdng01s',
+			$view_name == 'slincul_jpdng01s',
+			$active
+		);
+	
+		$active = $view_name == 'slofen_jpdng01s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLOFEN_JPDNG01S_SUBMENU'),
+			'index.php?option=com_jtca&view=slofen_jpdng01s',
+			$view_name == 'slofen_jpdng01s',
+			$active
+		);
+	
+		$active = $view_name == 'sldecl_jpdng01s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLDECL_JPDNG01S_SUBMENU'),
+			'index.php?option=com_jtca&view=sldecl_jpdng01s',
+			$view_name == 'sldecl_jpdng01s',
+			$active
+		);
+	
+		$active = $view_name == 'sldili_jpdng09s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLDILI_JPDNG09S_SUBMENU'),
+			'index.php?option=com_jtca&view=sldili_jpdng09s',
+			$view_name == 'sldili_jpdng09s',
+			$active
+		);
+	
+		$active = $view_name == 'slfirm_jpdng17s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLFIRM_JPDNG17S_SUBMENU'),
+			'index.php?option=com_jtca&view=slfirm_jpdng17s',
+			$view_name == 'slfirm_jpdng17s',
+			$active
+		);
+	
+		$active = $view_name == 'sladol_jjadg05s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLADOL_JJADG05S_SUBMENU'),
+			'index.php?option=com_jtca&view=sladol_jjadg05s',
+			$view_name == 'sladol_jjadg05s',
+			$active
+		);
+	
+		$active = $view_name == 'slfirm_jjadg16s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLFIRM_JJADG16S_SUBMENU'),
+			'index.php?option=com_jtca&view=slfirm_jjadg16s',
+			$view_name == 'slfirm_jjadg16s',
+			$active
+		);
+	
+		$active = $view_name == 'sladol_jjadg01s'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLADOL_JJADG01S_SUBMENU'),
+			'index.php?option=com_jtca&view=sladol_jjadg01s',
+			$view_name == 'sladol_jjadg01s',
+			$active
+		);
+	
+		$active = $view_name == 'slaveriguaciones'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLAVERIGUACIONES_SUBMENU'),
+			'index.php?option=com_jtca&view=slaveriguaciones',
+			$view_name == 'slaveriguaciones',
+			$active
+		);
+	
+		$active = $view_name == 'slpersonaliasedades'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLPERSONALIASEDADES_SUBMENU'),
+			'index.php?option=com_jtca&view=slpersonaliasedades',
+			$view_name == 'slpersonaliasedades',
+			$active
+		);
+	
+		$active = $view_name == 'slpersonedadsexos'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLPERSONEDADSEXOS_SUBMENU'),
+			'index.php?option=com_jtca&view=slpersonedadsexos',
+			$view_name == 'slpersonedadsexos',
+			$active
+		);
+	
+		$active = $view_name == 'slpersondelitos'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLPERSONDELITOS_SUBMENU'),
+			'index.php?option=com_jtca&view=slpersondelitos',
+			$view_name == 'slpersondelitos',
+			$active
+		);
+	
+		$active = $view_name == 'slpersonaliases'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLPERSONALIASES_SUBMENU'),
+			'index.php?option=com_jtca&view=slpersonaliases',
+			$view_name == 'slpersonaliases',
+			$active
+		);
+	
+		$active = $view_name == 'slpartescontenciosas'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_SLPARTESCONTENCIOSAS_SUBMENU'),
+			'index.php?option=com_jtca&view=slpartescontenciosas',
+			$view_name == 'slpartescontenciosas',
+			$active
+		);
+	
 		$active = $view_name == 'lspe01s'? true : false;
 		JHtmlSidebar::addEntry(
 			JText::_('COM_JTCA_LSPE01S_SUBMENU'),
@@ -614,14 +758,6 @@ class JtCaHelper extends JHelperContent
 			$active
 		);
 	
-		$active = $view_name == 'lejemplos'? true : false;
-		JHtmlSidebar::addEntry(
-			JText::_('COM_JTCA_LEJEMPLOS_SUBMENU'),
-			'index.php?option=com_jtca&view=lejemplos',
-			$view_name == 'lejemplos',
-			$active
-		);
-	
 		$active = $view_name == 'lsc03s'? true : false;
 		JHtmlSidebar::addEntry(
 			JText::_('COM_JTCA_LSC03S_SUBMENU'),
@@ -691,6 +827,14 @@ class JtCaHelper extends JHelperContent
 			JText::_('COM_JTCA_LSPS03S_SUBMENU'),
 			'index.php?option=com_jtca&view=lsps03s',
 			$view_name == 'lsps03s',
+			$active
+		);
+	
+		$active = $view_name == 'expedientes'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_JTCA_EXPEDIENTES_SUBMENU'),
+			'index.php?option=com_jtca&view=expedientes',
+			$view_name == 'expedientes',
 			$active
 		);
 	

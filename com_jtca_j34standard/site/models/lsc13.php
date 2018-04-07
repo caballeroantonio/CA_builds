@@ -34,7 +34,7 @@ use Joomla\Registry\Registry;
  * TSJ CDMX Libros TxCA Component PAPELETAS PARA EL PRÉSTAMO DE EXPEDIENTES Model
  *
  */
-class JtCaModelLsc13 extends JModelItem
+class JtcaModelLsc13 extends JModelItem
 {
 	/**
 	 * Model context string.  Used in setting the store id for the session
@@ -57,14 +57,14 @@ class JtCaModelLsc13 extends JModelItem
 				'id', 'a.id',
 				'id_organo','a.id_organo',
 				'id_secretaria','a.id_secretaria',
+				'anoj','a.anoj',
+				'id_expediente','a.id_expediente',
 				'field225_isMoral','a.field225_isMoral',
 				'field225_paterno','a.field225_paterno',
 				'field225_materno','a.field225_materno',
 				'field225_nombre','a.field225_nombre',
 				'txt_field2283','a.txt_field2283',
 				'id_field2283','a.id_field2283',
-				'anoj','a.anoj',
-				'id_expediente','a.id_expediente',
 				'field227','a.field227',
 				'field228','a.field228',
 				'field229','a.field229',
@@ -172,7 +172,7 @@ class JtCaModelLsc13 extends JModelItem
 	 * @param	array	Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Lsc13s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Lsc13s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -236,6 +236,9 @@ class JtCaModelLsc13 extends JModelItem
 				}
 				
 					
+				// Filter by and return name for id_expediente level.
+				$query->select($db->quoteName('e.name').' AS e_expediente_name');
+				$query->join('LEFT', $db->quoteName('jt_expedientes').' AS e ON '.$db->quoteName('e.id').' = '.$db->quoteName('a.id_expediente'));	
 																				
 				$db->setQuery($query);
 

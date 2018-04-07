@@ -33,7 +33,7 @@ use Joomla\Registry\Registry;
 // Base this model on the backend version.
 require_once JPATH_ADMINISTRATOR.'/components/com_jtca/models/ljpes12.php';
 
-class JtCaModelLjpes12Form extends JtCaModelLjpes12
+class JtcaModelLjpes12Form extends JtcaModelLjpes12
 {
 	/**
 	 * Model context string.
@@ -91,7 +91,7 @@ class JtCaModelLjpes12Form extends JtCaModelLjpes12
 	 * 
 	 * @return	JTable	A database object
 	*/
-	public function getTable($type = 'Ljpes12s', $prefix = 'JtCaTable', $config = array())
+	public function getTable($type = 'Ljpes12s', $prefix = 'JtcaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}

@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRETA DE  OFICIOS DE AMPAROS DE CONOCIMIENTO. list controller class.
  *
  */
-class JtCaControllerLcp16s extends JControllerLegacy
+class JtcaControllerLcp16s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLcp16s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Lcp16s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Lcp16s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLcp16s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Lcp16Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Lcp16Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Lcp16s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Lcp16s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

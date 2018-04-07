@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE OFICIOS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjpes04 extends JViewLegacy
+class JtcaViewLjpes04 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjpes04 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjpes04Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjpes04Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljpes04_itemid')));
 

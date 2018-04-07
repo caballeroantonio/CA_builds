@@ -34,28 +34,6 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'Expediente',
-        'FIELD_CODE_NAME' => 'id_expediente',
-        'FIELD_DESCRIPTION' => '<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>',//<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-        'FIELDTYPE_ID' => 33,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-                FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) DEFAULT NULL Expediente
-
-                FIELD_NAME_LATEX=Expediente
-                FIELD_CODE_NAME_LATEX=id\_expediente
-                FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
-
-
-    */
-    $fields['id_expediente'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
         'FIELD_NAME' => 'Órgano',
         'FIELD_CODE_NAME' => 'id_organo',
         'FIELD_DESCRIPTION' => '',//
@@ -122,92 +100,29 @@ function getFields(){
     $fields['anoj'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'BENEFICIARIO (a. paterno)',
-        'FIELD_CODE_NAME' => 'field1_paterno',
-        'FIELD_DESCRIPTION' => 'apellido paterno',//apellido paterno
-        'FIELDTYPE_ID' => 1,
+        'FIELD_NAME' => 'Expediente',
+        'FIELD_CODE_NAME' => 'id_expediente',
+        'FIELD_DESCRIPTION' => '<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>',//<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
+        'FIELDTYPE_ID' => 13,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD1_PATERNO
-                FIELD_INTRO=apellido paterno
+                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+                FIELD_INTRO=<p>@ToDo add CONSTRAINT id_expediente -&gt; jt_expediente</p>
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(255) DEFAULT NULL BENEFICIARIO (a. paterno)
+                FIELD_DB=`` INT(10) UNSIGNED  DEFAULT NULL Expediente
 
-                FIELD_NAME_LATEX=BENEFICIARIO (a. paterno)
-                FIELD_CODE_NAME_LATEX=field1\_paterno
-                FIELD_DBCOMMENT_LATEX=apellido paterno
+                FIELD_NAME_LATEX=Expediente
+                FIELD_CODE_NAME_LATEX=id\_expediente
+                FIELD_DBCOMMENT_LATEX=@ToDo add CONSTRAINT id\_expediente -\&gt; jt\_expediente
 
-
-    */
-    $fields['field1_paterno'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'BENEFICIARIO (a. materno)',
-        'FIELD_CODE_NAME' => 'field1_materno',
-        'FIELD_DESCRIPTION' => 'apellido materno',//apellido materno
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD1_MATERNO
-                FIELD_INTRO=apellido materno
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(45) DEFAULT NULL BENEFICIARIO (a. materno)
-
-                FIELD_NAME_LATEX=BENEFICIARIO (a. materno)
-                FIELD_CODE_NAME_LATEX=field1\_materno
-                FIELD_DBCOMMENT_LATEX=apellido materno
-
+                    {FIELD_LINK}
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=E
+                    FIELD_FOREIGN_OBJECT_UPPER=EXPEDIENTE
 
     */
-    $fields['field1_materno'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'BENEFICIARIO (nombre)',
-        'FIELD_CODE_NAME' => 'field1_nombre',
-        'FIELD_DESCRIPTION' => 'nombre',//nombre
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD1_NOMBRE
-                FIELD_INTRO=nombre
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(45) DEFAULT NULL BENEFICIARIO (nombre)
-
-                FIELD_NAME_LATEX=BENEFICIARIO (nombre)
-                FIELD_CODE_NAME_LATEX=field1\_nombre
-                FIELD_DBCOMMENT_LATEX=nombre
-
-
-    */
-    $fields['field1_nombre'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'BENEFICIARIO (es Moral)',
-        'FIELD_CODE_NAME' => 'field1_isMoral',
-        'FIELD_DESCRIPTION' => 'es Moral',//es Moral
-        'FIELDTYPE_ID' => 16,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD1_ISMORAL
-                FIELD_INTRO=es Moral
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` TINYINT(1) DEFAULT NULL BENEFICIARIO (es Moral)
-
-                FIELD_NAME_LATEX=BENEFICIARIO (es Moral)
-                FIELD_CODE_NAME_LATEX=field1\_isMoral
-                FIELD_DBCOMMENT_LATEX=es Moral
-
-
-    */
-    $fields['field1_isMoral'] = $field;
+    $fields['id_expediente'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'BENEFICIARIO (isMoral)',
@@ -384,94 +299,6 @@ function getFields(){
 
     */
     $fields['field5'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'NOMBRE DE QUIEN RECIBE (a. paterno)',
-        'FIELD_CODE_NAME' => 'field6_paterno',
-        'FIELD_DESCRIPTION' => 'apellido paterno',//apellido paterno
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD6_PATERNO
-                FIELD_INTRO=apellido paterno
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(255) DEFAULT NULL NOMBRE DE QUIEN RECIBE (a. paterno)
-
-                FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (a. paterno)
-                FIELD_CODE_NAME_LATEX=field6\_paterno
-                FIELD_DBCOMMENT_LATEX=apellido paterno
-
-
-    */
-    $fields['field6_paterno'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'NOMBRE DE QUIEN RECIBE (a. materno)',
-        'FIELD_CODE_NAME' => 'field6_materno',
-        'FIELD_DESCRIPTION' => 'apellido materno',//apellido materno
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD6_MATERNO
-                FIELD_INTRO=apellido materno
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(45) DEFAULT NULL NOMBRE DE QUIEN RECIBE (a. materno)
-
-                FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (a. materno)
-                FIELD_CODE_NAME_LATEX=field6\_materno
-                FIELD_DBCOMMENT_LATEX=apellido materno
-
-
-    */
-    $fields['field6_materno'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'NOMBRE DE QUIEN RECIBE (nombre)',
-        'FIELD_CODE_NAME' => 'field6_nombre',
-        'FIELD_DESCRIPTION' => 'nombre',//nombre
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD6_NOMBRE
-                FIELD_INTRO=nombre
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(45) DEFAULT NULL NOMBRE DE QUIEN RECIBE (nombre)
-
-                FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (nombre)
-                FIELD_CODE_NAME_LATEX=field6\_nombre
-                FIELD_DBCOMMENT_LATEX=nombre
-
-
-    */
-    $fields['field6_nombre'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'NOMBRE DE QUIEN RECIBE (es Moral)',
-        'FIELD_CODE_NAME' => 'field6_isMoral',
-        'FIELD_DESCRIPTION' => 'es Moral',//es Moral
-        'FIELDTYPE_ID' => 16,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=FIELD6_ISMORAL
-                FIELD_INTRO=es Moral
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` TINYINT(1) DEFAULT NULL NOMBRE DE QUIEN RECIBE (es Moral)
-
-                FIELD_NAME_LATEX=NOMBRE DE QUIEN RECIBE (es Moral)
-                FIELD_CODE_NAME_LATEX=field6\_isMoral
-                FIELD_DBCOMMENT_LATEX=es Moral
-
-
-    */
-    $fields['field6_isMoral'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'NOMBRE DE QUIEN RECIBE (isMoral)',
@@ -786,7 +613,7 @@ if ($this->params->get('save_history') AND $this->params->get('ljc03_save_histor
 	//hacer parametrizable data_id para que funcione versiones
 	
 	//$model	= JModelLegacy::getInstance('[%CompObject%]Form','[%ArchitectComp%]Model', array('ignore_request' => FALSE));
-	$model	= JModelLegacy::getInstance('Ljc03Form','JtCaModel', array('ignore_request' => FALSE));
+	$model	= JModelLegacy::getInstance('Ljc03Form','JtcaModel', array('ignore_request' => FALSE));
 	$data = array();
 	$data['id'] = 1;
 	$this->form	= $model->getForm($data, false);

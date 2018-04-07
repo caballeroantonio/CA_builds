@@ -253,7 +253,7 @@ class JHTMLLjoc10Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLjoc10Route($ljoc10->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLjoc10Route($ljoc10->slug,
 									$layout,
 									$params->get('keep_ljoc10_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLjoc10Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLjoc10Route($ljoc10->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLjoc10Route($ljoc10->slug,
 									$layout,
 									$params->get('keep_ljoc10_itemid')) , false);
 		

@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRETA DE LIBERTADES DE SALAS DE ADOLESCENTES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp35Form extends JViewLegacy
+class JtcaViewLcp35Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

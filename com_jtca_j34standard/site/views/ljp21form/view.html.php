@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE REMISIÓN AL ARCHIVO View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjp21Form extends JViewLegacy
+class JtcaViewLjp21Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

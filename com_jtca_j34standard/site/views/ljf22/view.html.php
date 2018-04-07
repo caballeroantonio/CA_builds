@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE CONTROL DE RESTITUCIONES INTERNACIONALES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjf22 extends JViewLegacy
+class JtcaViewLjf22 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLjf22 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLjf22Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLjf22Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_ljf22_itemid')));
 

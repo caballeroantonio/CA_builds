@@ -131,17 +131,6 @@
             <option value="">COM_JTCA_LCP03S_SELECT_ID_ORGANO</option>
         </field>  
         <field
-            id="anoj"
-            name="anoj"
-            type="text"
-            label="COM_JTCA_LCP03S_FIELD_ANOJ_LABEL"
-            description="COM_JTCA_LCP03S_FIELD_ANOJ_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
             id="id_secretaria"
             name="id_secretaria"
             type="sql"
@@ -154,6 +143,17 @@
 			value_field="secretaria"
         >
             <option value="">COM_JTCA_LCP03S_SELECT_ID_SECRETARIA</option>
+        </field>  
+        <field
+            id="anoj"
+            name="anoj"
+            type="text"
+            label="COM_JTCA_LCP03S_FIELD_ANOJ_LABEL"
+            description="COM_JTCA_LCP03S_FIELD_ANOJ_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
         </field>  
         <field
             id="fh_recepcion"

@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * LIBRO DE REGISTRO DE LA LEY DE ACCESO A LAS MUJERE list controller class.
  *
  */
-class JtCaControllerLcp24s extends JControllerLegacy
+class JtcaControllerLcp24s extends JControllerLegacy
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
@@ -63,7 +63,7 @@ class JtCaControllerLcp24s extends JControllerLegacy
 	 * @return  object  The model.
 	 * 
 	 */
-	public function getModel($name = 'Lcp24s', $prefix = 'JtCaModel',$config = array('ignore_request' => true))
+	public function getModel($name = 'Lcp24s', $prefix = 'JtcaModel',$config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
@@ -75,9 +75,9 @@ class JtCaControllerLcp24s extends JControllerLegacy
          */
         public function export(){
 			//from outside:
-			//$model = JModelLegacy::getInstance('Lcp24Form','JtCaModel', array('ignore_request' => FALSE));
+			//$model = JModelLegacy::getInstance('Lcp24Form','JtcaModel', array('ignore_request' => FALSE));
 			
-            $model = $this->getModel('Lcp24s','JtCaModel',array('ignore_request' => FALSE));
+            $model = $this->getModel('Lcp24s','JtcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override

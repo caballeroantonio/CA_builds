@@ -1,0 +1,36 @@
+id & INT(10) & PK \tabularnewline\hline 
+
+
+
+
+
+
+
+  state & TINYINT(1) & no description \tabularnewline\hline
+
+
+  created & DATETIME & Fecha de creación \tabularnewline\hline
+  created\_by & INT(10) & FK - creado por \tabularnewline\hline
+
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
+
+
+  version & int(10) & no description \tabularnewline\hline
+
+  ordering & INT(11) & no description \tabularnewline\hline
+
+
+
+
+
+
+
+
+%each field
+	id\_record & INT(10) & id\_record: \tabularnewline\hline 
+	paterno & VARCHAR(45) & A. Paterno: \tabularnewline\hline 
+	id\_field & INT(10) & id\_field: \tabularnewline\hline 
+	materno & VARCHAR(45) & A. Materno: \tabularnewline\hline 
+	nombre & VARCHAR(255) & Nombre(s): \tabularnewline\hline 
+	alias & VARCHAR(45) & Alias: \tabularnewline\hline 

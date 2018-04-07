@@ -88,15 +88,6 @@
         >
             <option value="">COM_JTCA_LCP41S_SELECT_ID_ORGANO</option>
         </field>  
-        <field name="anoj"
-            type="text"
-            label="COM_JTCA_LCP41S_FIELD_ANOJ_LABEL"
-            description="COM_JTCA_LCP41S_FIELD_ANOJ_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
         <field name="id_secretaria"
             type="sql"
             label="COM_JTCA_LCP41S_FIELD_ID_SECRETARIA_LABEL"
@@ -108,6 +99,15 @@
 			value_field="secretaria"
         >
             <option value="">COM_JTCA_LCP41S_SELECT_ID_SECRETARIA</option>
+        </field>  
+        <field name="anoj"
+            type="text"
+            label="COM_JTCA_LCP41S_FIELD_ANOJ_LABEL"
+            description="COM_JTCA_LCP41S_FIELD_ANOJ_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
         </field>  
         <field name="fh_recepcion"
             type="calendar"

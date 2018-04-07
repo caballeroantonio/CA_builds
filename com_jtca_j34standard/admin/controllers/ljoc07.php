@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * Ljoc07 controller class.
  *
  */
-class JtCaControllerLjoc07 extends JControllerForm
+class JtcaControllerLjoc07 extends JControllerForm
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.

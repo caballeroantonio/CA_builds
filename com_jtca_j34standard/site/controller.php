@@ -32,12 +32,12 @@ defined('_JEXEC') or die;
  * TSJ CDMX Libros TxCA Component Controller
  *
  */
-class JtCaController extends JControllerLegacy
+class JtcaController extends JControllerLegacy
 {
 	/**
 	 * @var		string	$default_view	The default view.
 	 */
-	protected $default_view = 'lejemplos';
+	protected $default_view = 'ljc01s';
 	
 	/**
 	 * Constructor
@@ -137,6 +137,24 @@ edité el menú login para que hiciera redirect a este componente
 			'filter_lcp39_order'=>'CMD','filter_lcp39_order_Dir'=>'CMD','lcp39-filter-search'=>'STRING',
 			'filter_lcp40_order'=>'CMD','filter_lcp40_order_Dir'=>'CMD','lcp40-filter-search'=>'STRING',
 			'filter_lcp41_order'=>'CMD','filter_lcp41_order_Dir'=>'CMD','lcp41-filter-search'=>'STRING',
+			'filter_slperson_order'=>'CMD','filter_slperson_order_Dir'=>'CMD','slperson-filter-search'=>'STRING',
+			'filter_sldiljccm07_order'=>'CMD','filter_sldiljccm07_order_Dir'=>'CMD','sldiljccm07-filter-search'=>'STRING',
+			'filter_sldiljccm09_order'=>'CMD','filter_sldiljccm09_order_Dir'=>'CMD','sldiljccm09-filter-search'=>'STRING',
+			'filter_sldepjoc03_order'=>'CMD','filter_sldepjoc03_order_Dir'=>'CMD','sldepjoc03-filter-search'=>'STRING',
+			'filter_slinculjpdng01_order'=>'CMD','filter_slinculjpdng01_order_Dir'=>'CMD','slinculjpdng01-filter-search'=>'STRING',
+			'filter_slofenjpdng01_order'=>'CMD','filter_slofenjpdng01_order_Dir'=>'CMD','slofenjpdng01-filter-search'=>'STRING',
+			'filter_sldecljpdng01_order'=>'CMD','filter_sldecljpdng01_order_Dir'=>'CMD','sldecljpdng01-filter-search'=>'STRING',
+			'filter_sldilijpdng09_order'=>'CMD','filter_sldilijpdng09_order_Dir'=>'CMD','sldilijpdng09-filter-search'=>'STRING',
+			'filter_slfirmjpdng17_order'=>'CMD','filter_slfirmjpdng17_order_Dir'=>'CMD','slfirmjpdng17-filter-search'=>'STRING',
+			'filter_sladoljjadg05_order'=>'CMD','filter_sladoljjadg05_order_Dir'=>'CMD','sladoljjadg05-filter-search'=>'STRING',
+			'filter_slfirmjjadg16_order'=>'CMD','filter_slfirmjjadg16_order_Dir'=>'CMD','slfirmjjadg16-filter-search'=>'STRING',
+			'filter_sladoljjadg01_order'=>'CMD','filter_sladoljjadg01_order_Dir'=>'CMD','sladoljjadg01-filter-search'=>'STRING',
+			'filter_slaveriguacion_order'=>'CMD','filter_slaveriguacion_order_Dir'=>'CMD','slaveriguacion-filter-search'=>'STRING',
+			'filter_slpersonaliasedad_order'=>'CMD','filter_slpersonaliasedad_order_Dir'=>'CMD','slpersonaliasedad-filter-search'=>'STRING',
+			'filter_slpersonedadsexo_order'=>'CMD','filter_slpersonedadsexo_order_Dir'=>'CMD','slpersonedadsexo-filter-search'=>'STRING',
+			'filter_slpersondelito_order'=>'CMD','filter_slpersondelito_order_Dir'=>'CMD','slpersondelito-filter-search'=>'STRING',
+			'filter_slpersonalias_order'=>'CMD','filter_slpersonalias_order_Dir'=>'CMD','slpersonalias-filter-search'=>'STRING',
+			'filter_slpartecontenciosa_order'=>'CMD','filter_slpartecontenciosa_order_Dir'=>'CMD','slpartecontenciosa-filter-search'=>'STRING',
 			'filter_lspe01_order'=>'CMD','filter_lspe01_order_Dir'=>'CMD','lspe01-filter-search'=>'STRING',
 			'filter_lspe02_order'=>'CMD','filter_lspe02_order_Dir'=>'CMD','lspe02-filter-search'=>'STRING',
 			'filter_lspe03_order'=>'CMD','filter_lspe03_order_Dir'=>'CMD','lspe03-filter-search'=>'STRING',
@@ -155,7 +173,6 @@ edité el menú login para que hiciera redirect a este componente
 			'filter_ljjadng02_order'=>'CMD','filter_ljjadng02_order_Dir'=>'CMD','ljjadng02-filter-search'=>'STRING',
 			'filter_ljjadg02_order'=>'CMD','filter_ljjadg02_order_Dir'=>'CMD','ljjadg02-filter-search'=>'STRING',
 			'filter_lsps02_order'=>'CMD','filter_lsps02_order_Dir'=>'CMD','lsps02-filter-search'=>'STRING',
-			'filter_lejemplo_order'=>'CMD','filter_lejemplo_order_Dir'=>'CMD','lejemplo-filter-search'=>'STRING',
 			'filter_lsc03_order'=>'CMD','filter_lsc03_order_Dir'=>'CMD','lsc03-filter-search'=>'STRING',
 			'filter_ljc03_order'=>'CMD','filter_ljc03_order_Dir'=>'CMD','ljc03-filter-search'=>'STRING',
 			'filter_ljccm03_order'=>'CMD','filter_ljccm03_order_Dir'=>'CMD','ljccm03-filter-search'=>'STRING',
@@ -165,6 +182,7 @@ edité el menú login para que hiciera redirect a este componente
 			'filter_ljjadng03_order'=>'CMD','filter_ljjadng03_order_Dir'=>'CMD','ljjadng03-filter-search'=>'STRING',
 			'filter_ljjadg03_order'=>'CMD','filter_ljjadg03_order_Dir'=>'CMD','ljjadg03-filter-search'=>'STRING',
 			'filter_lsps03_order'=>'CMD','filter_lsps03_order_Dir'=>'CMD','lsps03-filter-search'=>'STRING',
+			'filter_expediente_order'=>'CMD','filter_expediente_order_Dir'=>'CMD','expediente-filter-search'=>'STRING',
 			'filter_lsc04_order'=>'CMD','filter_lsc04_order_Dir'=>'CMD','lsc04-filter-search'=>'STRING',
 			'filter_ljc04_order'=>'CMD','filter_ljc04_order_Dir'=>'CMD','ljc04-filter-search'=>'STRING',
 			'filter_ljf04_order'=>'CMD','filter_ljf04_order_Dir'=>'CMD','ljf04-filter-search'=>'STRING',

@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE ACTUARIO (OFICIAL) View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLsc10Form extends JViewLegacy
+class JtcaViewLsc10Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

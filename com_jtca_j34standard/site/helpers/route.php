@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * TSJ CDMX Libros TxCA Component Route Helper
  *
  */
-abstract class JtCaHelperRoute
+abstract class JtcaHelperRoute
 {
 	protected static $lookup = array();
 			
@@ -1447,6 +1447,546 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
+	 * @param	integer	The route of the Sub Libro Personas
+	 */
+	public static function getSlpersonRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'slperson'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=slperson&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=slperson&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Sub Libro DILIGENCIA Del LIBRO DE EXHORTOS
+	 */
+	public static function getSldilJccm07Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'sldiljccm07'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=sldiljccm07&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=sldiljccm07&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Sub Libro DILIGENCIA Del LIBRO DE ACTUARIOS
+	 */
+	public static function getSldilJccm09Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'sldiljccm09'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=sldiljccm09&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=sldiljccm09&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Sub Libro CERTIFICADO DE EGRESOS Del LIBRO DE CERTIFICADO DE DEPÓSITOS DE INGRESOS Y EGRESOS
+	 */
+	public static function getSldepJoc03Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'sldepjoc03'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=sldepjoc03&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=sldepjoc03&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Sub Libro DATOS DEL(OS) INCULPADO(S) Del LIBRO DE GOBIERNO
+	 */
+	public static function getSlinculJpdng01Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'slinculjpdng01'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=slinculjpdng01&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=slinculjpdng01&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Sub Libro DATOS DEL(OS) OFENDIDO(S) Del LIBRO DE GOBIERNO
+	 */
+	public static function getSlofenJpdng01Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'slofenjpdng01'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=slofenjpdng01&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=slofenjpdng01&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Sub Libro DECLARACION PREPARATORIA Del LIBRO DE GOBIERNO
+	 */
+	public static function getSldeclJpdng01Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'sldecljpdng01'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=sldecljpdng01&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=sldecljpdng01&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Sub Libro DILIGENCIA Del LIBRO DE ACTUARIOS
+	 */
+	public static function getSldiliJpdng09Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'sldilijpdng09'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=sldilijpdng09&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=sldilijpdng09&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Sub Libro CONTROL DE FIRMAS Del LIBRO DE CONTROL DE FIRMAS PROCESADOS
+	 */
+	public static function getSlfirmJpdng17Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'slfirmjpdng17'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=slfirmjpdng17&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=slfirmjpdng17&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Sub Libro ADOLESCENTES Del LIBRO DE SENTENCIAS
+	 */
+	public static function getSladolJjadg05Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'sladoljjadg05'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=sladoljjadg05&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=sladoljjadg05&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Sub Libro CONTROL DE FIRMAS Del LIBRO DE CONTROL DE PRESENTACION DE ADOLESCENTES EN LIBERTAD ANTE EL JUEZ
+	 */
+	public static function getSlfirmJjadg16Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'slfirmjjadg16'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=slfirmjjadg16&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=slfirmjjadg16&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Sub Libro ADOLESCENTE Del LIBRO DE GOBIERNO
+	 */
+	public static function getSladolJjadg01Route($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'sladoljjadg01'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=sladoljjadg01&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=sladoljjadg01&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Averiguaciones Previas
+	 */
+	public static function getSlaveriguacionRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'slaveriguacion'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=slaveriguacion&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=slaveriguacion&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Adolescentes
+	 */
+	public static function getSlpersonaliasedadRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'slpersonaliasedad'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=slpersonaliasedad&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=slpersonaliasedad&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Adolescente
+	 */
+	public static function getSlpersonedadsexoRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'slpersonedadsexo'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=slpersonedadsexo&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=slpersonedadsexo&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Inculpados
+	 */
+	public static function getSlpersondelitoRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'slpersondelito'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=slpersondelito&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=slpersondelito&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Inculpado
+	 */
+	public static function getSlpersonaliasRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'slpersonalias'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=slpersonalias&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=slpersonalias&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Partes Contenciosas En Juicio
+	 */
+	public static function getSlpartecontenciosaRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'slpartecontenciosa'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=slpartecontenciosa&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=slpartecontenciosa&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
 	 * @param	integer	The route of the LIBRO DE GOBIERNO
 	 */
 	public static function getLspe01Route($id, $layout = 'default', $keep_item_id = false)
@@ -1987,36 +2527,6 @@ abstract class JtCaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the Libro De Ejemplo
-	 */
-	public static function getLejemploRoute($id, $layout = 'default', $keep_item_id = false)
-	{
-		$needles = array(
-			'lejemplo'  => array((int) $id)
-		);
-		// Remove lead string from the form field value
-		$layout = str_replace('_:', '', $layout);	
-				
-		if ($layout == '' OR $layout == 'default')
-		{
-			//Create the link
-			$link = 'index.php?option=com_jtca&view=lejemplo&id='. $id;
-		}
-		else
-		{
-			//Create the link with a layout
-			$link = 'index.php?option=com_jtca&view=lejemplo&layout='.$layout.'&id='. $id;
-		}
-
-		
-		if ($item = self::findItem($needles, $keep_item_id, $layout))
-		{
-			$link .= '&Itemid='.$item;
-		}
-
-		return $link;
-	}
-	/**
 	 * @param	integer	The route of the LIBRETA DE VISTAS AL M.P (OFICIAL)
 	 */
 	public static function getLsc03Route($id, $layout = 'default', $keep_item_id = false)
@@ -2276,6 +2786,36 @@ abstract class JtCaHelperRoute
 		{
 			//Create the link with a layout
 			$link = 'index.php?option=com_jtca&view=lsps03&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Expedientes
+	 */
+	public static function getExpedienteRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'expediente'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_jtca&view=expediente&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_jtca&view=expediente&layout='.$layout.'&id='. $id;
 		}
 
 		

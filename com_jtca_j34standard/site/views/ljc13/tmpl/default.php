@@ -122,14 +122,10 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="ljc13Form" id="ljc13Form">
 			<?php $dummy = false;
 					$display_fieldset = (
-								($params->get('show_ljc13_id_expediente')) OR 
 								($params->get('show_ljc13_id_organo')) OR 
 								($params->get('show_ljc13_id_secretaria')) OR 
 								($params->get('show_ljc13_anoj')) OR 
-								($params->get('show_ljc13_field2_paterno')) OR 
-								($params->get('show_ljc13_field2_materno')) OR 
-								($params->get('show_ljc13_field2_nombre')) OR 
-								($params->get('show_ljc13_field2_isMoral')) OR 
+								($params->get('show_ljc13_id_expediente')) OR 
 								($params->get('show_ljc13_field2_isMoral')) OR 
 								($params->get('show_ljc13_field2_paterno')) OR 
 								($params->get('show_ljc13_field2_materno')) OR 
@@ -147,18 +143,6 @@ $empty = $component->params->get('default_empty_field', '');
 					<legend><?php echo JText::_('COM_JTCA_LJC13S_FIELDSET_LJC13_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
-						<?php if ($params->get('show_ljc13_id_expediente')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LJC13S_FIELD_ID_EXPEDIENTE_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->id_expediente != '' ? $this->item->id_expediente : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
 						<?php if ($params->get('show_ljc13_id_organo')) : ?>
 						<div class="formelm">
 							<label>
@@ -219,60 +203,14 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_ljc13_field2_paterno')) : ?>
+						<?php if ($params->get('show_ljc13_id_expediente')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_JTCA_LJC13S_FIELD_FIELD2_PATERNO_LABEL'); ?>
+								<?php echo JText::_('COM_JTCA_LJC13S_FIELD_ID_EXPEDIENTE_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->field2_paterno != '' ? $this->item->field2_paterno : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_ljc13_field2_materno')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LJC13S_FIELD_FIELD2_MATERNO_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->field2_materno != '' ? $this->item->field2_materno : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_ljc13_field2_nombre')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LJC13S_FIELD_FIELD2_NOMBRE_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->field2_nombre != '' ? $this->item->field2_nombre : $empty;
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_ljc13_field2_isMoral')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_JTCA_LJC13S_FIELD_FIELD2_ISMORAL_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									switch ($this->item->field2_isMoral) :
-									case '0':
-										echo JText::_('JNO');
-										break;
-									case '1':
-										echo JText::_('JYES');
-										break;
-									default:
-										echo JText::_('JNONE');
-										break;
-								endswitch;
+									echo JString::trim($this->item->e_expediente_name);
 								?>
 							</span>
 						</div>	

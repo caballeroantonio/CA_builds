@@ -253,7 +253,7 @@ class JHTMLLcp23Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLcp23Route($lcp23->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLcp23Route($lcp23->slug,
 									$layout,
 									$params->get('keep_lcp23_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLcp23Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLcp23Route($lcp23->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLcp23Route($lcp23->slug,
 									$layout,
 									$params->get('keep_lcp23_itemid')) , false);
 		

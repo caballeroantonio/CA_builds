@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
  * Frontpage View class
  *
  */
-class JtCaViewLjccm07s extends JViewLegacy
+class JtcaViewLjccm07s extends JViewLegacy
 {
 
 	/**
@@ -66,7 +66,7 @@ class JtCaViewLjccm07s extends JViewLegacy
 			$row->slug = $row->id;
 
 			// url link to ljccm07
-			$link = JRoute::_(JtCaHelperRoute::getLjccm07Route($row->slug, 
+			$link = JRoute::_(JtcaHelperRoute::getLjccm07Route($row->slug, 
 																						'default',								
 																						$params->get('keep_ljccm07_itemid')), false);
 			

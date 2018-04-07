@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO DE JUSTICIA PARA ADOLESCENTES CON DETENIDO DE PGR View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp04Form extends JViewLegacy
+class JtcaViewLcp04Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

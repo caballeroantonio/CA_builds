@@ -117,17 +117,6 @@
     >
 
         <field
-            id="id_expediente"
-            name="id_expediente"
-            type="modal_expedientes"
-            label="COM_JTCA_LJC03S_FIELD_ID_EXPEDIENTE_LABEL"
-            description="COM_JTCA_LJC03S_FIELD_ID_EXPEDIENTE_DESC"
-            class="modal"
-			required="true"
-			default="0"
-        >
-        </field>  
-        <field
             id="id_organo"
             name="id_organo"
             type="sql"
@@ -167,46 +156,15 @@
         >
         </field>  
         <field
-            id="field1_paterno"
-            name="field1_paterno"
-            type="text"
-            label="COM_JTCA_LJC03S_FIELD_FIELD1_PATERNO_LABEL"
-            description="COM_JTCA_LJC03S_FIELD_FIELD1_PATERNO_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            id="field1_materno"
-            name="field1_materno"
-            type="text"
-            label="COM_JTCA_LJC03S_FIELD_FIELD1_MATERNO_LABEL"
-            description="COM_JTCA_LJC03S_FIELD_FIELD1_MATERNO_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            id="field1_nombre"
-            name="field1_nombre"
-            type="text"
-            label="COM_JTCA_LJC03S_FIELD_FIELD1_NOMBRE_LABEL"
-            description="COM_JTCA_LJC03S_FIELD_FIELD1_NOMBRE_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            id="field1_isMoral"
-            name="field1_isMoral"
-            type="checkbox"
-            label="COM_JTCA_LJC03S_FIELD_FIELD1_ISMORAL_LABEL"
-            description="COM_JTCA_LJC03S_FIELD_FIELD1_ISMORAL_DESC"
-            class="inputbox"
-			value="1"
+            id="id_expediente"
+            name="id_expediente"
+            type="modal_expedientes"
+            label="COM_JTCA_LJC03S_FIELD_ID_EXPEDIENTE_LABEL"
+            description="COM_JTCA_LJC03S_FIELD_ID_EXPEDIENTE_DESC"
+            class="modal"
+			required="true"
+			default="0"
+			type_alias="com_jtca.expediente" 
         >
         </field>  
         <field
@@ -298,49 +256,6 @@
             class="inputbox"
 			size="1"
 			default="0"
-        >
-        </field>  
-        <field
-            id="field6_paterno"
-            name="field6_paterno"
-            type="text"
-            label="COM_JTCA_LJC03S_FIELD_FIELD6_PATERNO_LABEL"
-            description="COM_JTCA_LJC03S_FIELD_FIELD6_PATERNO_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            id="field6_materno"
-            name="field6_materno"
-            type="text"
-            label="COM_JTCA_LJC03S_FIELD_FIELD6_MATERNO_LABEL"
-            description="COM_JTCA_LJC03S_FIELD_FIELD6_MATERNO_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            id="field6_nombre"
-            name="field6_nombre"
-            type="text"
-            label="COM_JTCA_LJC03S_FIELD_FIELD6_NOMBRE_LABEL"
-            description="COM_JTCA_LJC03S_FIELD_FIELD6_NOMBRE_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field
-            id="field6_isMoral"
-            name="field6_isMoral"
-            type="checkbox"
-            label="COM_JTCA_LJC03S_FIELD_FIELD6_ISMORAL_LABEL"
-            description="COM_JTCA_LJC03S_FIELD_FIELD6_ISMORAL_DESC"
-            class="inputbox"
-			value="1"
         >
         </field>  
         <field

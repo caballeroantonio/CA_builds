@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * View class for a list of ljoc05s.
  *
  */
-class JtCaViewLjoc05s extends JViewLegacy
+class JtcaViewLjoc05s extends JViewLegacy
 {
 	protected $items;
 	protected $pagination;

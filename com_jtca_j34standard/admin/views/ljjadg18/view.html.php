@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * View to edit a ljjadg18.
  *
  */
-class JtCaViewLjjadg18 extends JViewLegacy
+class JtcaViewLjjadg18 extends JViewLegacy
 {
 	protected $form;
 	protected $item;

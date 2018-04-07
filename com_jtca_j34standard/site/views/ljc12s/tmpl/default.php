@@ -132,11 +132,6 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JHtml::_('grid.sort', 'COM_JTCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljc12_id_expediente',1)) : ?>
-						<th class="list-id_expediente" id="tableOrderingid_expediente">
-							<?php echo JTEXT::_('COM_JTCA_LJC12S_HEADING_ID_EXPEDIENTE'); ?>
-						</th>
-					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_ljc12_id_organo',1)) : ?>
 						<th class="list-id_organo" id="tableOrderingid_organo">
 							<?php echo JTEXT::_('COM_JTCA_LJC12S_HEADING_ID_ORGANO'); ?>
@@ -152,29 +147,14 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_JTCA_LJC12S_HEADING_ANOJ'); ?>
 						</th>
 					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_ljc12_id_expediente',1)) : ?>
+						<th class="list-id_expediente" id="tableOrderingid_expediente">
+							<?php echo JTEXT::_('COM_JTCA_LJC12S_HEADING_ID_EXPEDIENTE'); ?>
+						</th>
+					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_ljc12_field1',1)) : ?>
 						<th class="list-field1" id="tableOrderingfield1">
 							<?php echo JTEXT::_('COM_JTCA_LJC12S_HEADING_FIELD1'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_ljc12_field6_paterno',1)) : ?>
-						<th class="list-field6_paterno" id="tableOrderingfield6_paterno">
-							<?php echo JTEXT::_('COM_JTCA_LJC12S_HEADING_FIELD6_PATERNO'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_ljc12_field6_materno',1)) : ?>
-						<th class="list-field6_materno" id="tableOrderingfield6_materno">
-							<?php echo JTEXT::_('COM_JTCA_LJC12S_HEADING_FIELD6_MATERNO'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_ljc12_field6_nombre',1)) : ?>
-						<th class="list-field6_nombre" id="tableOrderingfield6_nombre">
-							<?php echo JTEXT::_('COM_JTCA_LJC12S_HEADING_FIELD6_NOMBRE'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_ljc12_field6_isMoral',1)) : ?>
-						<th class="list-field6_isMoral" id="tableOrderingfield6_isMoral">
-							<?php echo JTEXT::_('COM_JTCA_LJC12S_HEADING_FIELD6_ISMORAL'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_ljc12_field6_isMoral',1)) : ?>
@@ -299,13 +279,6 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljc12_id_expediente',1)) : ?>
-						<td class="list-id_expediente">
-							<?php 
-								echo $item->id_expediente != '' ? $item->id_expediente : $empty;
-							?>
-						</td>
-					<?php endif; ?>
 					<?php if ($this->params->get('list_show_ljc12_id_organo',1)) : ?>
 						<td class="list-id_organo">
 							<?php 
@@ -351,48 +324,21 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_ljc12_id_expediente',1)) : ?>
+						<td class="list-id_expediente">
+							<?php 
+								if ($params->get('list_link_ljc12_id_expediente')) :
+									echo '<a href="'.JRoute::_(JtcaHelperRoute::getExpedienteRoute($item->id_expediente, 0)).'">'.JString::trim($item->e_expediente_name).'</a>';
+								else :
+									echo JString::trim($item->e_expediente_name);
+								endif; 
+							?>
+						</td>
+					<?php endif; ?>
 					<?php if ($this->params->get('list_show_ljc12_field1',1)) : ?>
 						<td class="list-field1">
 							<?php 
 								echo $item->field1 != '' ? $item->field1 : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljc12_field6_paterno',1)) : ?>
-						<td class="list-field6_paterno">
-							<?php 
-								echo $item->field6_paterno != '' ? $item->field6_paterno : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljc12_field6_materno',1)) : ?>
-						<td class="list-field6_materno">
-							<?php 
-								echo $item->field6_materno != '' ? $item->field6_materno : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljc12_field6_nombre',1)) : ?>
-						<td class="list-field6_nombre">
-							<?php 
-								echo $item->field6_nombre != '' ? $item->field6_nombre : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_ljc12_field6_isMoral',1)) : ?>
-						<td class="list-field6_isMoral">
-							<?php 
-								switch ($item->field6_isMoral) :
-									case '0':
-										echo JText::_('JNO');
-										break;
-									case '1':
-										echo JText::_('JYES');
-										break;
-									default:
-										echo JText::_('JNONE');
-										break;
-								endswitch;
 							?>
 						</td>
 					<?php endif; ?>

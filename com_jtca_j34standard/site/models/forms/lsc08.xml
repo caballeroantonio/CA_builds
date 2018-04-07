@@ -156,6 +156,18 @@
         >
         </field>  
         <field
+            id="id_expediente"
+            name="id_expediente"
+            type="modal_expedientes"
+            label="COM_JTCA_LSC08S_FIELD_ID_EXPEDIENTE_LABEL"
+            description="COM_JTCA_LSC08S_FIELD_ID_EXPEDIENTE_DESC"
+            class="modal"
+			required="true"
+			default="0"
+			type_alias="com_jtca.expediente" 
+        >
+        </field>  
+        <field
             id="field177"
             name="field177"
             type="calendar"
@@ -167,17 +179,6 @@
 			format="%Y-%m-%d"
 			filter="fixed"
 			validate="date"
-        >
-        </field>  
-        <field
-            id="id_expediente"
-            name="id_expediente"
-            type="modal_expedientes"
-            label="COM_JTCA_LSC08S_FIELD_ID_EXPEDIENTE_LABEL"
-            description="COM_JTCA_LSC08S_FIELD_ID_EXPEDIENTE_DESC"
-            class="modal"
-			required="true"
-			default="0"
         >
         </field>  
         <field

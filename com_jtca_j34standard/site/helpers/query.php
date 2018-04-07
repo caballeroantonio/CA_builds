@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * TSJ CDMX Libros TxCA Component Query Helper
  *
  */
-class JtCaHelperQuery
+class JtcaHelperQuery
 {
 	/**
 	 * Translate an order code to a field for ordering.

@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
  * Tsj cdmx libros txca component helper.
  *
  */
-class JtCaHelper extends JHelperContent
+class JtcaHelper extends JHelperContent
 {
 	/**
 	 * Constructor.

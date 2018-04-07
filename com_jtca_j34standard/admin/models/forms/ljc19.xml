@@ -76,15 +76,6 @@
         label="COM_JTCA_LJC19S_FIELDSET_LJC19_FS_LABEL"
         description="COM_JTCA_LJC19S_FIELDSET_LJC19_FS_DESC"
     >
-        <field name="id_expediente"
-            type="modal_expedientes"
-            label="COM_JTCA_LJC19S_FIELD_ID_EXPEDIENTE_LABEL"
-            description="COM_JTCA_LJC19S_FIELD_ID_EXPEDIENTE_DESC"
-            class="modal"
-			required="true"
-			default="0"
-        >
-        </field>  
         <field name="id_organo"
             type="sql"
             label="COM_JTCA_LJC19S_FIELD_ID_ORGANO_LABEL"
@@ -118,6 +109,16 @@
 			maxlength="255"
         >
         </field>  
+        <field name="id_expediente"
+            type="modal_expedientes"
+            label="COM_JTCA_LJC19S_FIELD_ID_EXPEDIENTE_LABEL"
+            description="COM_JTCA_LJC19S_FIELD_ID_EXPEDIENTE_DESC"
+            class="modal"
+			required="true"
+			default="0"
+			type_alias="com_jtca.expediente" 
+        >
+        </field>  
         <field name="field5"
             type="integer"
             label="COM_JTCA_LJC19S_FIELD_FIELD5_LABEL"
@@ -149,41 +150,6 @@
 			format="%Y-%m-%d"
 			filter="fixed"
 			validate="date"
-        >
-        </field>  
-        <field name="field8_paterno"
-            type="text"
-            label="COM_JTCA_LJC19S_FIELD_FIELD8_PATERNO_LABEL"
-            description="COM_JTCA_LJC19S_FIELD_FIELD8_PATERNO_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field name="field8_materno"
-            type="text"
-            label="COM_JTCA_LJC19S_FIELD_FIELD8_MATERNO_LABEL"
-            description="COM_JTCA_LJC19S_FIELD_FIELD8_MATERNO_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field name="field8_nombre"
-            type="text"
-            label="COM_JTCA_LJC19S_FIELD_FIELD8_NOMBRE_LABEL"
-            description="COM_JTCA_LJC19S_FIELD_FIELD8_NOMBRE_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-        >
-        </field>  
-        <field name="field8_isMoral"
-            type="checkbox"
-            label="COM_JTCA_LJC19S_FIELD_FIELD8_ISMORAL_LABEL"
-            description="COM_JTCA_LJC19S_FIELD_FIELD8_ISMORAL_DESC"
-            class="inputbox"
-			value="1"
         >
         </field>  
         <field name="field8_isMoral"

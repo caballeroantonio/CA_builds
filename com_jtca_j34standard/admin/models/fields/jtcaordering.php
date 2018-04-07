@@ -31,7 +31,7 @@ defined('JPATH_BASE') or die;
  * Supports an HTML ordering select list for objects in component tsj cdmx libros txca
  *
  */
-class JFormFieldJtCaOrdering extends JFormField
+class JFormFieldJtcaOrdering extends JFormField
 {
 	/**
 	 * The form field type.

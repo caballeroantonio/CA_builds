@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML ARTICULO 36 O ARTICULO 28 LJADF View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjjadg15Form extends JViewLegacy
+class JtcaViewLjjadg15Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

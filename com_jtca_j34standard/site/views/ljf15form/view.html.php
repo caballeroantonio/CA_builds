@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO A CARGO DE LOS SECRETARIOS DE ACUERDOS View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjf15Form extends JViewLegacy
+class JtcaViewLjf15Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

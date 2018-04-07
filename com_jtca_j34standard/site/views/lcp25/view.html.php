@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE TURNO PARA CONSIGNACIONES CON DETENIDO DELITOS NO GRAVES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp25 extends JViewLegacy
+class JtcaViewLcp25 extends JViewLegacy
 {
 	protected $item;
 	protected $params;
@@ -134,7 +134,7 @@ class JtCaViewLcp25 extends JViewLegacy
 			}
 		}
 		
-		$item->readmore_link = JRoute::_(JtCaHelperRoute::getLcp25Route($item->slug,
+		$item->readmore_link = JRoute::_(JtcaHelperRoute::getLcp25Route($item->slug,
 										$this->getLayout(), 
 										$this->params->get('keep_lcp25_itemid')));
 

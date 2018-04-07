@@ -78,6 +78,53 @@ function getFields(){
     $fields['id_secretaria'] = $field;
     //{OBJECT_FIELD}
     $field = array(
+        'FIELD_NAME' => 'Año j.',
+        'FIELD_CODE_NAME' => 'anoj',
+        'FIELD_DESCRIPTION' => '<p>Año judicial</p>',//<p>Año judicial</p>
+        'FIELDTYPE_ID' => 1,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ANOJ
+                FIELD_INTRO=<p>Año judicial</p>
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` YEAR(4) DEFAULT NULL Año j.
+
+                FIELD_NAME_LATEX=A\~no j.
+                FIELD_CODE_NAME_LATEX=anoj
+                FIELD_DBCOMMENT_LATEX=A\~no judicial
+
+
+    */
+    $fields['anoj'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'NÚMERO DE TOCA',
+        'FIELD_CODE_NAME' => 'id_expediente',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 13,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) UNSIGNED  DEFAULT NULL NÚMERO DE TOCA
+
+                FIELD_NAME_LATEX=N\'UMERO DE TOCA
+                FIELD_CODE_NAME_LATEX=id\_expediente
+                FIELD_DBCOMMENT_LATEX=
+
+                    {FIELD_LINK}
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=E
+                    FIELD_FOREIGN_OBJECT_UPPER=EXPEDIENTE
+
+    */
+    $fields['id_expediente'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
         'FIELD_NAME' => 'NOMBRE COMPLETO DEL SOLICITANTE (isMoral)',
         'FIELD_CODE_NAME' => 'field225_isMoral',
         'FIELD_DESCRIPTION' => '',//
@@ -208,50 +255,6 @@ function getFields(){
 
     */
     $fields['id_field2283'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'Año j.',
-        'FIELD_CODE_NAME' => 'anoj',
-        'FIELD_DESCRIPTION' => '<p>Año judicial</p>',//<p>Año judicial</p>
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ANOJ
-                FIELD_INTRO=<p>Año judicial</p>
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` YEAR(4) DEFAULT NULL Año j.
-
-                FIELD_NAME_LATEX=A\~no j.
-                FIELD_CODE_NAME_LATEX=anoj
-                FIELD_DBCOMMENT_LATEX=A\~no judicial
-
-
-    */
-    $fields['anoj'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'NÚMERO DE TOCA',
-        'FIELD_CODE_NAME' => 'id_expediente',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 33,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_EXPEDIENTE
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) DEFAULT NULL NÚMERO DE TOCA
-
-                FIELD_NAME_LATEX=N\'UMERO DE TOCA
-                FIELD_CODE_NAME_LATEX=id\_expediente
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['id_expediente'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'TIPO DE IDENTIFICACIÓN',
@@ -390,7 +393,7 @@ if ($this->params->get('save_history') AND $this->params->get('lsc13_save_histor
 	//hacer parametrizable data_id para que funcione versiones
 	
 	//$model	= JModelLegacy::getInstance('[%CompObject%]Form','[%ArchitectComp%]Model', array('ignore_request' => FALSE));
-	$model	= JModelLegacy::getInstance('Lsc13Form','JtCaModel', array('ignore_request' => FALSE));
+	$model	= JModelLegacy::getInstance('Lsc13Form','JtcaModel', array('ignore_request' => FALSE));
 	$data = array();
 	$data['id'] = 1;
 	$this->form	= $model->getForm($data, false);

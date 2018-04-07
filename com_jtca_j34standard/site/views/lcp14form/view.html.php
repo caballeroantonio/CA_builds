@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRETA DE CUMPLIMIENTO DE EJECUTORIAS PARA JUZGADOS DE EJECUCIÓN. View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp14Form extends JViewLegacy
+class JtcaViewLcp14Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

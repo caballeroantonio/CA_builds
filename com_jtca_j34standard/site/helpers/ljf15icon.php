@@ -253,7 +253,7 @@ class JHTMLLjf15Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLjf15Route($ljf15->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLjf15Route($ljf15->slug,
 									$layout,
 									$params->get('keep_ljf15_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLjf15Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLjf15Route($ljf15->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLjf15Route($ljf15->slug,
 									$layout,
 									$params->get('keep_ljf15_itemid')) , false);
 		

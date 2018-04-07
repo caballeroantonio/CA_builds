@@ -253,7 +253,7 @@ class JHTMLLsps06Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 		
-		$link	= $base.JRoute::_(JtCaHelperRoute::getLsps06Route($lsps06->slug,
+		$link	= $base.JRoute::_(JtcaHelperRoute::getLsps06Route($lsps06->slug,
 									$layout,
 									$params->get('keep_lsps06_itemid')) , false);
 
@@ -302,7 +302,7 @@ class JHTMLLsps06Icon
 		
 		$layout = $app->input->getString('layout', 'default');
 	
-		$link	= JRoute::_(JtCaHelperRoute::getLsps06Route($lsps06->slug,
+		$link	= JRoute::_(JtcaHelperRoute::getLsps06Route($lsps06->slug,
 									$layout,
 									$params->get('keep_lsps06_itemid')) , false);
 		

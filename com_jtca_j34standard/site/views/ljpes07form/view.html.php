@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE AMPAROS CIRCULANTES View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLjpes07Form extends JViewLegacy
+class JtcaViewLjpes07Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

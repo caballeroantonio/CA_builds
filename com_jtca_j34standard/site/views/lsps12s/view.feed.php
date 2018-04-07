@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
  * Frontpage View class
  *
  */
-class JtCaViewLsps12s extends JViewLegacy
+class JtcaViewLsps12s extends JViewLegacy
 {
 
 	/**
@@ -66,7 +66,7 @@ class JtCaViewLsps12s extends JViewLegacy
 			$row->slug = $row->id;
 
 			// url link to lsps12
-			$link = JRoute::_(JtCaHelperRoute::getLsps12Route($row->slug, 
+			$link = JRoute::_(JtcaHelperRoute::getLsps12Route($row->slug, 
 																						'default',								
 																						$params->get('keep_lsps12_itemid')), false);
 			

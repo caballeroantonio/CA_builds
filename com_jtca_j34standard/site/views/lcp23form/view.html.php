@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
  * HTML LIBRO DE ORDENES DE APREHENSIÓN, REAPREHENSION Y TRASLADO. View class for the TSJ CDMX Libros TxCA component
  *
  */
-class JtCaViewLcp23Form extends JViewLegacy
+class JtcaViewLcp23Form extends JViewLegacy
 {
 	protected $state;
 	protected $item;

@@ -88,6 +88,18 @@
         >
             <option value="">COM_JTCA_LJJADNG07S_SELECT_ID_ORGANO</option>
         </field>  
+        <field name="id_secretaria"
+            type="sql"
+            label="COM_JTCA_LJJADNG07S_FIELD_ID_SECRETARIA_LABEL"
+            description="COM_JTCA_LJJADNG07S_FIELD_ID_SECRETARIA_DESC"
+            class="inputbox"
+			size="1"
+			query="SELECT id, secretaria FROM jtc_secretarias"
+			key_field="id"
+			value_field="secretaria"
+        >
+            <option value="">COM_JTCA_LJJADNG07S_SELECT_ID_SECRETARIA</option>
+        </field>  
         <field name="anoj"
             type="text"
             label="COM_JTCA_LJJADNG07S_FIELD_ANOJ_LABEL"
@@ -103,19 +115,8 @@
             description="COM_JTCA_LJJADNG07S_FIELD_ID_EXPEDIENTE_DESC"
             class="modal"
 			default="0"
+			type_alias="com_jtca.expediente" 
         >
-        </field>  
-        <field name="id_secretaria"
-            type="sql"
-            label="COM_JTCA_LJJADNG07S_FIELD_ID_SECRETARIA_LABEL"
-            description="COM_JTCA_LJJADNG07S_FIELD_ID_SECRETARIA_DESC"
-            class="inputbox"
-			size="1"
-			query="SELECT id, secretaria FROM jtc_secretarias"
-			key_field="id"
-			value_field="secretaria"
-        >
-            <option value="">COM_JTCA_LJJADNG07S_SELECT_ID_SECRETARIA</option>
         </field>  
         <field name="field1"
             type="calendar"
