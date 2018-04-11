@@ -9096,7 +9096,16 @@
         name="fieldset_config_fs"
         label="COM_REMCA_CONFIGS_FIELDSET_CONFIG_FS_LABEL"
     >
-
+        <field name="group_filters"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_REMCA_CONFIGS_FIELD_GROUP_FILTERS_LABEL"
+			description="COM_REMCA_CONFIGS_FIELD_GROUP_FILTERS_DESC"
+		>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>	
         <field
             id="gmaps_api_key"
             name="gmaps_api_key"

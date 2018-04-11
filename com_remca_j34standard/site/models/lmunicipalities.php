@@ -443,7 +443,8 @@ class RemcaModelLmunicipalities extends JModelList
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
 
-		$group_filter = false;
+		$params = JFactory::getApplication()->getParams();
+		$group_filter = $params->get('group_filters');
 		
 		// Construct the query
 		$query->select($db->quoteName('s.id').' AS value');
@@ -486,7 +487,8 @@ class RemcaModelLmunicipalities extends JModelList
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
 
-		$group_filter = false;
+		$params = JFactory::getApplication()->getParams();
+		$group_filter = $params->get('group_filters');
 		
 		// Construct the query
 		$query->select($db->quoteName('c1.id').' AS value');
