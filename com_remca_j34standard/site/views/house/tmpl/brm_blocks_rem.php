@@ -590,7 +590,7 @@ if(!incorrect_price($house->price)){
 
     //for local images
 $imageURL = ($house->image_link);
-if ($imageURL == '') $imageURL = _REALESTATE_MANAGER_NO_PICTURE_BIG;
+if ($imageURL == '') $imageURL = JText::_('_REALESTATE_MANAGER_NO_PICTURE_BIG');;
 
     // $file_name = rem_picture_thumbnail($imageURL,
     //    $realestatemanager_configuration['fotomain']['width'],

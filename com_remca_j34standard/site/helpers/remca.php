@@ -92,13 +92,13 @@ class RemcaHelper extends JHelperContent
     }
 
     static function displayHouses(&$rows, $currentcat, &$params, $tabclass, $catid, $categories, &$pageNav = null, $is_exist_sub_categories=false, $option, $layout = "default", $type = "alone_category") {
-        global  $Itemid;  
+          
         $type = 'alone_category';
         require getLayoutPath::getLayoutPathCom('remca', $type, $layout);
     }    
 
     static function displaySearchHouses(&$rows, $currentcat, &$params, $tabclass, $catid, $categories, &$pageNav = null, $is_exist_sub_categories=false, $option, $layout = "default", $layoutsearch = "default") {
-        global  $Itemid; 
+         
         $type = 'search_result';
 
         if($params->get('search_form_on_result_search_page_show')){
@@ -145,15 +145,15 @@ class RemcaHelper extends JHelperContent
     }
 
     static function showButtonMyHouses() {
-        global $Itemid;
+        
     }
 
     static function showOwnersButton() {
-        global $Itemid;
+        
     }
 
     static function showSearchHouses($params, $currentcat, $clist, $option, &$temp1, &$temp2, $layout = "default") {
-        global  $task;
+        global $task;
         //$type = $task == "search" ? "show_search_result" : "show_search_house";
         if($params->get('showsearchhouselayout')){
           $layout = $params->get('showsearchhouselayout');
@@ -253,7 +253,7 @@ class RemcaHelper extends JHelperContent
 
             static function showMyHouses(&$houses, &$params, &$pageNav, $option,& $clist, &$language, & $rentlist,
            & $publist, & $search, $search_list, $ownerlist, $layout = "default") {
-                global  $Itemid;
+                
 
                 
 
@@ -264,7 +264,7 @@ class RemcaHelper extends JHelperContent
             }
 
            static function showRentHouses($option, $house1, $rows, & $userlist, $type) {
-                global $my,  $mainframe, $Itemid;
+                global $my,  $mainframe;
         ?>
         <?php 
         if(RemcaHelper::checkJavaScriptIncludedRE("jQuerREL-1.2.6.js") === false ) {
@@ -577,7 +577,7 @@ class RemcaHelper extends JHelperContent
 
 
  static function editRentHouses($option, $house1, $rows, $title_assoc, & $userlist, & $all_assosiate_rent, $type) {
-    global $my,  $mainframe, $Itemid;
+    global $my,  $mainframe;
 	
 
     ?>
@@ -866,7 +866,7 @@ class RemcaHelper extends JHelperContent
 
 
     static function showRentHistory($option, $rows, $pageNav) {
-        global $my, $Itemid,  $mainframe;
+        global $my,  $mainframe;
         $session = JFactory::getSession();
         $arr = $session->get("array", "default");
         self::$doc->addStyleSheet('media/com_remca/includes/realestatemanager.css');
@@ -917,7 +917,7 @@ class RemcaHelper extends JHelperContent
     }
 
     static function showRequestRentHouses($option, $rent_requests, &$pageNav) {
-        global $my,  $mainframe, $Itemid;
+        global $my,  $mainframe;
 		
         $session = JFactory::getSession();
         $arr = $session->get("array", "default");
@@ -1030,7 +1030,7 @@ class RemcaHelper extends JHelperContent
     }
 
  static function listCategories(&$params, $cat_all, $catid, $tabclass, $currentcat) {
-                global $Itemid;
+                
                 self::$doc->addStyleSheet('media/com_remca/includes/realestatemanager.css');
                 ?>
         <?php RemcaHelper::positions_rem($params->get('allcategories04')); ?>
@@ -1118,7 +1118,7 @@ class RemcaHelper extends JHelperContent
 
     static function listCategoriesBigImg(&$params, $cat_all, $catid, $tabclass, $currentcat)
     {
-        global $Itemid;
+        
         ?>
         <?php RemcaHelper::positions_rem($params->get('allcategories04')); ?>
         <div class="basictable_12 basictable">
@@ -1286,145 +1286,80 @@ class RemcaHelper extends JHelperContent
   static function add_google_map($params, &$rows) {
     echo '<div id="map_canvas" class="re_map_canvas re_map_canvas_01"></div>';
     $layout = $params->get('house_layout', 'default');
-    global   $Itemid;
-	 
+    $gmaps_api_key = self::$params->get('gmaps_api_key') ? "key=" . self::$params->get('gmaps_api_key') : JFactory::getApplication()->enqueueMessage("<a target='_blank' href='//developers.google.com/maps/documentation/geocoding/get-api-key'>" . JText::_( '_REALESTATE_MANAGER_GOOGLEMAP_API_KEY_LINK_MESSAGE') . "</a>", JText::_( '_REALESTATE_MANAGER_GOOGLEMAP_API_KEY_ERROR')); 
+    self::$doc->addScript("https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"); 
+    self::$doc->addScript("//maps.googleapis.com/maps/api/js?$gmaps_api_key"); 
 ?>
 
 
       <script type="text/javascript">
 	  jQuery( initialize );
 
-      function initialize(){
-          var map;
-          var marker = new Array();
-          var myOptions = {
-              scrollwheel: false,
-              zoomControlOptions: {
-                  style: google.maps.ZoomControlStyle.LARGE
-              },
-              mapTypeId: google.maps.MapTypeId.ROADMAP
-          };
-          var imgCatalogPath = "components/remca/";
-          var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-          var bounds = new google.maps.LatLngBounds ();
+      function initialize() {
 
-          var remove_id_list = [];
-          <?php
-
-          $newArr = explode(",", JText::_( '_REALESTATE_MANAGER_HOUSE_MARKER'));
-          $j = 0; 
-          for ($i = 0;$i < count($rows);$i++) { 
-        $link = JRoute::_(RemcaHelperRoute::getHouseRoute($rows[$i]->slug, 
-            $rows[$i]->catid, 
-            $rows[$i]->language,
-            $layout,									
-            $rows[$i]->params->get('keep_house_itemid')));
-        $link = RemcaHelper::sefRelToAbs($link);            
-              
+<?php 
+        $locations = [];
+        for ($i = 0;$i < count($rows);$i++) {
             if ($rows[$i]->hlatitude && $rows[$i]->hlongitude) {
-              $numPick = '';
-              if (isset($newArr[$rows[$i]->property_type])) {
-                  $numPick = $newArr[$rows[$i]->property_type];
-              }
-          ?>
-              var srcForPic = "<?php echo $numPick; ?>";
-              var image = '';
-              if(srcForPic.length){
-                  var image = new google.maps.MarkerImage(imgCatalogPath + srcForPic,
-                      new google.maps.Size(32, 32),
-                      new google.maps.Point(0,0),
-                      new google.maps.Point(16, 32));
-              }
-                  
-
-         
-              marker.push(new google.maps.Marker({
-                  icon: image,
-                  position: new google.maps.LatLng(<?php echo $rows[$i]->hlatitude; ?>,
-                   <?php echo $rows[$i]->hlongitude; ?>),
-                  map: map,
-                  title: "<?php echo self::$db->Quote($rows[$i]->name); ?>"
-              }));
-
-              bounds.extend(new google.maps.LatLng(<?php echo $rows[$i]->hlatitude; ?>,
-                <?php echo $rows[$i]->hlongitude; ?>));
-
-    
-
-
-              var infowindow  = new google.maps.InfoWindow({});
-              google.maps.event.addListener(marker[<?php echo $j; ?>], 'mouseover', 
-              function() {
-                <?php
-                if (strlen($rows[$i]->name) > 45)
-                    $name = mb_substr($rows[$i]->name, 0, 25) . '...';
-                else {
-                    $name = $rows[$i]->name;
-                }
-                ?>
-                var title =  "<?php echo $name ?>";
-                <?php 
-                $rows[$i]->photos = json_decode($rows[$i]->photos);
-                  //for local images
-                if(isset($rows[$i]->photos[0]))
-                  $imageURL = $rows[$i]->photos[0];
-                else
-                  $imageURL = '';  
-
-                  if ($imageURL == '') $imageURL = _REALESTATE_MANAGER_NO_PICTURE_BIG;
-
-                  $watermark_path = (self::$params->get('watermark_show') == 1) ? 'watermark/' : '';
-                  $watermark = (self::$params->get('watermark_show') == 1) ? true : false;  
-                      $file_name = self::rem_picture_thumbnail($imageURL,
-                        self::$params->get('fotogal_width',100),
-                        self::$params->get('fotogal_high',100), $watermark);
-                      
-                      $file = 'media/com_remca/photos/' . $file_name;
-                ?>
-                var imgUrl =  "<?php echo $file; ?>";
-                      
-                <?php if(!self::incorrect_price($rows[$i]->price)):?>
-                  var price =  "<?php echo $rows[$i]->price; ?>";
-                  var priceunit =  "<?php echo $rows[$i]->priceunit; ?>";
-                <?php else:?>
-                  var price =  "<?php echo $rows[$i]->price; ?>";
-                  var priceunit="";
-                <?php endif;?>
-
-
-             var contentStr = '<div>'+
-                '<a onclick=window.open("<?= $link ?>") >'+
-               '<img width = "100%" src = "'+imgUrl+'">'+
-               '</a>' +
-                  '</div>'+
-                  '<div id="marker_link">'+
-                      '<a onclick=window.open("<?= $link ?>") >' + title + '</a>'+
-                  '</div>'+
-                  '<div id="marker_price">'+
-                      '<a onclick=window.open("<?= $link ?>") >' + price +' ' + priceunit + '</a>'+
-              '</div>';
-
-                   infowindow.setContent(contentStr);
-                   infowindow.setOptions( { maxWidth: <?php echo self::$params->get('fotogal_width',100) ; ?> });
-                   infowindow.open(map,marker[<?php echo $j; ?>]);
-              });
-
-
-              var myLatlng = new google.maps.LatLng(<?php echo $rows[$i]->hlatitude;
-               ?>,<?php echo $rows[$i]->hlongitude; ?>);
-              var myZoom = <?php echo $rows[$i]->map_zoom; ?>;
-          
-
-              <?php
-              $j++;
+                $locations[] = array(
+                    'lat' => (float) $rows[$i]->hlatitude,
+                    'lng' => (float) $rows[$i]->hlongitude,
+                    'title' => self::$db->Quote($rows[$i]->name),
+                    //'content' => 'contentString',
+                );
             }
-          }
-  ?>
-          if (<?php echo $j; ?>>1) map.fitBounds(bounds);
-          else if (<?php echo $j; ?>==1) {map.setCenter(myLatlng);map.setZoom(myZoom)}
-          else {map.setCenter(new google.maps.LatLng(0,0));map.setZoom(0);}
-
         }
+?>
+      var locations = <?= json_encode($locations) ?>
+      
+        var map = new google.maps.Map(document.getElementById('map_canvas'), {
+          scrollwheel: false,
+          zoomControlOptions: {
+              style: google.maps.ZoomControlStyle.LARGE,
+              zoom: 4,
+          },
+          zoom: 4,
+          center: {lat: -28.024, lng: 140.887}
+        });
+        var bounds = new google.maps.LatLngBounds ();
+
+        // Add some markers to the map.
+        // Note: The code uses the JavaScript Array.prototype.map() method to
+        // create an array of markers based on a given "locations" array.
+        // The map() method here has nothing to do with the Google Maps API.
+        var markers = locations.map(function(location, i) {
+          bounds.extend(new google.maps.LatLng(location.lat, location.lng));
+          return new google.maps.Marker({
+            position: location,
+            title:  location.title,
+          });
+        });
+        
+        /*markers.map(function(marker, i) {
+            var infowindow = new google.maps.InfoWindow({
+              content: locations[i].content,
+              maxWidth: <?php echo self::$params->get('fotogal_width',100) ; ?> 
+            });
+            marker.addListener('click', function() {
+              infowindow.open(map, marker);
+            });
+
+        });*/
+        
+        // Add a marker clusterer to manage the markers.
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+            
+          if ( locations.length > 1 ) 
+              map.fitBounds(bounds);
+          else if ( locations.length === 1 ) {
+              map.setCenter({lat: locations[0].lat, lng:locations[0].lng});map.setZoom(<?= $rows[0]->map_zoom; ?>)
+          }
+          else {
+              map.setCenter(new google.maps.LatLng(0,0));map.setZoom(0);
+          }
+      }
+
       </script>
   <?php    
   }
@@ -2316,7 +2251,7 @@ class RemcaHelper extends JHelperContent
 //    if (!function_exists('data_transform_rem')) {
 
       function REMdata_transform_rem($date, $date_format = "from") {
-          global  $database;     
+          global $database;     
 
           if (strstr($date, "00:00:00") OR strlen($date) < 11) {
               $format = self::$params->get('date_format');
@@ -2938,7 +2873,7 @@ class RemcaHelper extends JHelperContent
 //    }
 //    if(!function_exists('save_house_associate')){
       function REMsave_house_associate(){
-      global  $database;
+      global $database;
           $id_check = JRequest::getVar('id', "");
           $id_true = JRequest::getVar('idtrue', "");
           $language_post = JRequest::getVar('language', "");
@@ -3334,6 +3269,7 @@ class RemcaHelper extends JHelperContent
           $uploaddir = JPATH_SITE . '/media/com_remca/photos/';
 
           //file name and extention
+          print_r($file);die;
           if($file === '' || !file_exists(JPATH_SITE .
                '/media/com_remca/photos/' . $file)){  
             $file = 'no-img_eng_big.gif';
@@ -3419,7 +3355,7 @@ class RemcaHelper extends JHelperContent
               return;
           }
 
-          return $file_name . $size . $index . $file_type;
+          return 'media/com_remca/photos/' . $file_name . $size . $index . $file_type;
       }
 //    }
 

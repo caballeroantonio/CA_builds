@@ -162,9 +162,9 @@ $doc->addScript('media/com_remca/fancybox/jquery.fancybox-1.3.4.pack.js');
         $remca_helper = new RemcaHelper();
         
         //draw maps
-//        if ( $this->params->get('location_map',1)){
-//            RemcaHelper::add_google_map($this->params, $this->items);
-//        }
+        if ( $this->params->get('location_map',1)){
+            RemcaHelper::add_google_map($this->params, $this->items);
+        }
 ?>
 
 <div class="REL-row">
@@ -172,15 +172,24 @@ $doc->addScript('media/com_remca/fancybox/jquery.fancybox-1.3.4.pack.js');
     <div id="gallery_rem" data-collumn-lg="3" data-collumn-md="3" data-collumn-sm="2" data-collumn-xs="2" >
       <?php foreach($this->items as $item): ?>
       <?php 
-        $item->photos = json_decode($item->photos); 
         $link = JRoute::_(RemcaHelperRoute::getHouseRoute($item->slug, 
                 $item->catid, 
                 $item->language,
                 $layout,									
                 $item->params->get('keep_house_itemid')));
+		
+        $imageURL = '';
+        if(isset($item->images['image_url']))
+            $imageURL = $item->images['image_url'];
+
+        if ($imageURL == '') 
+            $imageURL = JText::_('_REALESTATE_MANAGER_NO_PICTURE_BIG');
       ?>
       <div class="okno_R" id="block<?php echo $item->id ?>">
-        <div id="divamage" style = "position: relative; text-align:center;"> <a href="<?= $link ?>" style="text-decoration: none"> <img alt="<?php echo $item->name ?>" title="<?php echo $item->name ?>" src="<?= $item->photos[0]->thumbnail_img ?>" border="0" class="little"> </a>
+        <div id="divamage" style = "position: relative; text-align:center;"> 
+            <a href="<?= $link ?>" style="text-decoration: none">
+                <img alt="<?php echo $item->name ?>" title="<?php echo $item->name ?>" src="<?= $imageURL ?>" border="0" class="little" /> 
+            </a>
           <?php if ($item->state == true) :?>
           <div class="rem_listing_status">Active</div>
           <?php endif?>
@@ -198,7 +207,7 @@ $doc->addScript('media/com_remca/fancybox/jquery.fancybox-1.3.4.pack.js');
           </div>
           <div style="clear: both;"></div>
           <div class="rem_type_Allhouses">
-            <div class="row_text"> <i class="fa fa-expand"></i> <span class="col_text_2"><?php echo $item->lot_size ?> Sqrt</span> </div>
+            <div class="row_text"> <i class="fa fa-expand"></i> <span class="col_text_2"><?php echo $item->lot_size ?> <?= JText::_('_REALESTATE_MANAGER_LABEL_SIZE_SUFFIX') ?></span> </div>
             <div class="row_text"> <i class="fa fa-building-o"></i> <span class="col_text_1">Rooms:</span> <span class="col_text_2"><?php echo $item->rooms ?></span> </div>
             <div class="row_text"> <i class="fa fa-calendar"></i> <span class="col_text_1">Built year:</span> <span class="col_text_2"><?php echo $item->year ?></span> </div>
             <div class="row_text"> <i class="fa fa-inbox"></i> <span class="col_text_1">Bedrooms:</span> <span class="col_text_2"><?php echo $item->bedrooms ?></span> </div>
@@ -246,7 +255,7 @@ $doc->addScript('media/com_remca/fancybox/jquery.fancybox-1.3.4.pack.js');
 				<?php echo JHtml::_('houseicon.create', $this->params); ?>
 			<?php  endif; ?>
 		<?php endif; ?>		
-                <?php echo '<button>export</button>'//JHtml::_('houseicon.create', $this->params); ?>
+                <?php //echo '<button>export</button>'//JHtml::_('houseicon.create', $this->params); ?>
 	</form>
 </div>
 

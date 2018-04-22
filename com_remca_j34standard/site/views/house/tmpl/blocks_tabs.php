@@ -1,9 +1,5 @@
 <?php
-$this->item->reviews[0] = array(
-    'title' => 'Really wonderful stay',
-    'comment' => 'The house had plenty of space for our family, a fully equipped kitchen, a charming pool and of course a magnificent view. I would recommend this house to any family that is searching for a nice home.',
-    'date' => '2014-12-15 15:59:18',
-);
+
 ?>
 
 <div class="tabs_buttons">
@@ -15,12 +11,16 @@ $this->item->reviews[0] = array(
 		<li>
 			<a href="#" rel="country2" onmouseup="setTimeout('initialize()',10)">Location</a>
 		</li>
+    <?php if($show_reviews): ?>
 		<li>
 			<a href="#" rel="country4">Reviews</a>
 		</li>
+	<?php endif; ?>
+    <?php if($show_calendar): ?>
 		<li>
 			<a href="#" rel="country5">Calendar</a>
 		</li>
+	<?php endif; ?>
 	</ul>
 </div>
 
@@ -67,6 +67,7 @@ $this->item->reviews[0] = array(
 			</div>
 			<div class="rem_house_desciption"><?= $this->item->description ?></div>
 		</div>
+    <?php if($show_amenities): ?>
 		<div class="table_tab_01 table_03">
 			<div class="table_country3 ">
 				<div class="row_text">
@@ -84,16 +85,29 @@ $this->item->reviews[0] = array(
 				</div>
 			</div>
 		</div>
+	<?php endif; ?>
 	</div>
 	<!--end of tab-->
 	<div id="country2" class="tabcontent">
-		<!--if we are given the coordinates, then display latitude, longitude and a map with a marker -->
-		<div class="table_latitude table_04">
-			<div id="map_canvas" class="re_map_canvas re_map_canvas_02"></div>
-			<div id="map_pano" class="re_map_canvas re_map_canvas_02"></div>
-		</div>
+        <!--if we are given the coordinates, then display latitude, longitude and a map with a marker -->
+<?php if ($this->item->hlatitude && $this->item->hlongitude) {?> 
+          <div class="table_latitude table_04">
+            <?php
+            if(($this->params->get('show_location') && $this->params->get('show_locationtab_registrationlevel'))){ ?>
+              <div id="map_canvas" class="re_map_canvas re_map_canvas_02"></div>
+            <?php
+            }
+            if($this->params->get('street_view') && $this->params->get('street_view_registrationlevel')){ ?>
+              <div id="map_pano" class="re_map_canvas re_map_canvas_02"></div>
+              <?php
+            } ?>
+          </div>
+          <?php 
+      } else
+        echo JText::_('_REALESTATE_MANAGER_LABEL_NO_LOCATION_AVAILIBLE');
+        ?>
 	</div>
-	<!--tab for reviews-->
+    <?php if($show_calendar): ?>
 	<div id="country4" class="tabcontent">
 		<br />
 		<div class="componentheading">
@@ -165,6 +179,8 @@ $this->item->reviews[0] = array(
 		</div>
 		<!-- end <div id="hidden_review"> -->
 	</div>
+	<?php endif; ?>
+    <?php if($show_reviews): ?>
 	<div id="country5" class="tabcontent">
 		<div style="text-align: center;" >
 			<h4>Calendar of availability and rental rates per period</h4>
@@ -495,6 +511,7 @@ $this->item->reviews[0] = array(
 			</div>
 		</div>
 	</div>
+	<?php endif; ?>
 </div>
 <!--end all tabs -->
 <script type="text/javascript">

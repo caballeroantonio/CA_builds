@@ -31,29 +31,29 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL DEFAULT '',
   `description` MEDIUMTEXT NOT NULL,
-  `id_country` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Country',
-  `id_lstate` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'State',
-  `id_lmunicipality` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Municipality',
+  `id_country` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'país',
+  `id_lstate` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'estado',
+  `id_lmunicipality` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'municipio',
   `sid` INT(11) DEFAULT NULL COMMENT 'sid',
   `id_rent` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Rent',
   `associate_house` VARCHAR(255) DEFAULT NULL COMMENT 'associate_house',
   `houseid` VARCHAR(20) NOT NULL DEFAULT '' COMMENT 'houseid',
   `link` VARCHAR(250) NOT NULL DEFAULT '' COMMENT 'link',
   `listing_type` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'listing_type',
-  `price` DECIMAL(11,2) NOT NULL DEFAULT '0' COMMENT 'Price',
-  `id_currency` INT(10) NOT NULL DEFAULT '0' COMMENT 'Currency',
-  `hzipcode` VARCHAR(50) NOT NULL DEFAULT '' COMMENT 'Zip Code',
-  `hlocation` VARCHAR(100) NOT NULL DEFAULT '' COMMENT 'Location',
-  `hlatitude` VARCHAR(20) NOT NULL DEFAULT '' COMMENT 'Latitude',
-  `hlongitude` VARCHAR(20) NOT NULL DEFAULT '' COMMENT 'Longitude',
+  `price` DECIMAL(11,2) NOT NULL DEFAULT '0' COMMENT 'precio',
+  `id_currency` INT(10) NOT NULL DEFAULT '0' COMMENT 'moneda',
+  `hzipcode` VARCHAR(50) NOT NULL DEFAULT '' COMMENT 'código postal',
+  `hlocation` TINYTEXT(255) NOT NULL DEFAULT '' COMMENT 'ubicación',
+  `hlatitude` VARCHAR(20) NOT NULL DEFAULT '' COMMENT 'latitud',
+  `hlongitude` VARCHAR(20) NOT NULL DEFAULT '' COMMENT 'longitud',
   `map_zoom` INT(10) NOT NULL DEFAULT '14' COMMENT 'Map zoom',
-  `rooms` INT(11) NOT NULL DEFAULT '0' COMMENT 'Rooms',
-  `bathrooms` INT(11) NOT NULL DEFAULT '0' COMMENT 'Bathrooms',
-  `bedrooms` INT(11) NOT NULL DEFAULT '0' COMMENT 'Bedrooms',
+  `rooms` INT(11) NOT NULL DEFAULT '0' COMMENT 'habitaciones',
+  `bathrooms` INT(11) NOT NULL DEFAULT '0' COMMENT 'baños',
+  `bedrooms` INT(11) NOT NULL DEFAULT '0' COMMENT 'dormitorios',
   `contacts` VARCHAR(250) DEFAULT NULL COMMENT 'Contacts',
   `listing_status` VARCHAR(45) DEFAULT NULL COMMENT 'listing_status',
   `property_type` VARCHAR(45) DEFAULT NULL COMMENT 'property_type',
-  `year` VARCHAR(4) DEFAULT NULL COMMENT 'Year',
+  `year` VARCHAR(4) DEFAULT NULL COMMENT 'año de construcción',
   `agent` VARCHAR(45) DEFAULT NULL COMMENT 'Agent',
   `area_unit` VARCHAR(45) DEFAULT NULL COMMENT 'area_unit',
   `land_area` VARCHAR(45) DEFAULT NULL COMMENT 'land_area',
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `expiration_date` DATETIME DEFAULT NULL COMMENT 'expiration_date',
   `lot_size` INT(11) NOT NULL DEFAULT '0' COMMENT 'lot_size',
   `house_size` INT(11) NOT NULL DEFAULT '0' COMMENT 'house_size',
-  `garages` VARCHAR(50) DEFAULT NULL COMMENT 'Garages',
+  `garages` VARCHAR(50) DEFAULT NULL COMMENT 'cochera',
   `date` DATETIME DEFAULT NULL COMMENT 'Date',
   `edok_link` VARCHAR(200) DEFAULT NULL COMMENT 'edok_link',
   `owneremail` VARCHAR(50) DEFAULT NULL COMMENT 'owneremail',
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `owner_id` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'owner_id',
   `energy_value` DECIMAL(11,2) DEFAULT NULL COMMENT 'energy_value',
   `climate_value` DECIMAL(11,2) DEFAULT NULL COMMENT 'climate_value',
-  `photos` MEDIUMTEXT  COMMENT 'Photos',
+  `photos` MEDIUMTEXT  COMMENT 'fotos',
   `images` TEXT NOT NULL,
   `catid` INT(10) UNSIGNED DEFAULT NULL COMMENT 'FK to categories in #__categories', # NOT NULL DEFAULT '0'
   KEY `idx_catid` (`catid`),
@@ -563,7 +563,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"description","core_hits":"hits","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"featured","core_metadata":"null","core_language":"language","core_images":"images","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"catid","core_xreference":"null","asset_id":"asset_id"}}',
 'remcaHelperRoute::gethouseRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/house.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_country","targetTable":"#__rem_countries","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_lstate","targetTable":"#__rem_lstates","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_lmunicipality","targetTable":"#__rem_lmunicipalities","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_rent","targetTable":"#__rem_rents","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_currency","targetTable":"#__remca_countries","targetColumn":"id","displayColumn":"currency"},{"sourceColumn":"owner_id","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/house.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_country","targetTable":"#__rem_countries","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_lstate","targetTable":"#__remca_lstates","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_lmunicipality","targetTable":"#__remca_lmunicipalities","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_rent","targetTable":"#__remca_rents","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_currency","targetTable":"#__remca_countries","targetColumn":"id","displayColumn":"currency"},{"sourceColumn":"owner_id","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
         
 --
@@ -623,7 +623,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getorders_detailRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/orders_detail.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_order","targetTable":"#__rem_orders","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_user","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_house","targetTable":"#__rem_houses","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/orders_detail.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_order","targetTable":"#__rem_orders","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_user","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_house","targetTable":"#__remca_houses","targetColumn":"id","displayColumn":"name"}]}'
 );
         
 --
@@ -743,7 +743,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getcategoryRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/category.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"iditem","targetTable":"#__rem_houses","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"idcat","targetTable":"#__rem_main_categories","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/category.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"iditem","targetTable":"#__rem_houses","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"idcat","targetTable":"#__remca_main_categories","targetColumn":"id","displayColumn":"name"}]}'
 );
         
 --
@@ -767,7 +767,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getconst_languageRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/const_language.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"fk_constid","targetTable":"#__rem_const","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"fk_languagesid","targetTable":"#__rem_languages","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/const_language.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"fk_constid","targetTable":"#__rem_const","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"fk_languagesid","targetTable":"#__remca_languages","targetColumn":"id","displayColumn":"name"}]}'
 );
         
 --
@@ -791,7 +791,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getfeature_houseRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/feature_house.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_house","targetTable":"#__rem_houses","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_featured","targetTable":"#__rem_feature","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/feature_house.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_house","targetTable":"#__rem_houses","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_featured","targetTable":"#__remca_feature","targetColumn":"id","displayColumn":"name"}]}'
 );
         
 --
@@ -815,7 +815,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"null","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getlmunicipalityRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/lmunicipality.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_lstate","targetTable":"#__rem_lstates","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_country","targetTable":"#__rem_countries","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/lmunicipality.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_lstate","targetTable":"#__rem_lstates","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_country","targetTable":"#__remca_countries","targetColumn":"id","displayColumn":"name"}]}'
 );
         
 --

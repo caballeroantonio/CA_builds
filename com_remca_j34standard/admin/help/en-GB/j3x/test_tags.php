@@ -48,7 +48,7 @@ architectcomp=remca
 {1.1}        
 
             {OBJECT_FIELD}
-            FIELD_NAME=Country
+            FIELD_NAME=país
             FIELD_CODE_NAME_UPPER=ID_COUNTRY
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -56,9 +56,9 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_country` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Country
+            FIELD_DB=`id_country` INT(10) UNSIGNED  NOT NULL DEFAULT '0' país
             
-            FIELD_NAME_LATEX=Country
+            FIELD_NAME_LATEX=pa\'i{}s
             FIELD_CODE_NAME_LATEX=id\_country
             FIELD_DBCOMMENT_LATEX=
             
@@ -72,7 +72,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=State
+            FIELD_NAME=estado
             FIELD_CODE_NAME_UPPER=ID_LSTATE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -80,9 +80,9 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_lstate` INT(10) UNSIGNED  NOT NULL DEFAULT '0' State
+            FIELD_DB=`id_lstate` INT(10) UNSIGNED  NOT NULL DEFAULT '0' estado
             
-            FIELD_NAME_LATEX=State
+            FIELD_NAME_LATEX=estado
             FIELD_CODE_NAME_LATEX=id\_lstate
             FIELD_DBCOMMENT_LATEX=
             
@@ -96,7 +96,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Municipality
+            FIELD_NAME=municipio
             FIELD_CODE_NAME_UPPER=ID_LMUNICIPALITY
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -104,9 +104,9 @@ architectcomp=remca
             FIELDTYPE_ID=13
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_lmunicipality` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Municipality
+            FIELD_DB=`id_lmunicipality` INT(10) UNSIGNED  NOT NULL DEFAULT '0' municipio
             
-            FIELD_NAME_LATEX=Municipality
+            FIELD_NAME_LATEX=municipio
             FIELD_CODE_NAME_LATEX=id\_lmunicipality
             FIELD_DBCOMMENT_LATEX=
             
@@ -249,7 +249,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Price
+            FIELD_NAME=precio
             FIELD_CODE_NAME_UPPER=PRICE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -257,9 +257,9 @@ architectcomp=remca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`price` DECIMAL(11,2) NOT NULL DEFAULT '0' Price
+            FIELD_DB=`price` DECIMAL(11,2) NOT NULL DEFAULT '0' precio
             
-            FIELD_NAME_LATEX=Price
+            FIELD_NAME_LATEX=precio
             FIELD_CODE_NAME_LATEX=price
             FIELD_DBCOMMENT_LATEX=
             
@@ -270,7 +270,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Currency
+            FIELD_NAME=moneda
             FIELD_CODE_NAME_UPPER=ID_CURRENCY
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -278,9 +278,9 @@ architectcomp=remca
             FIELDTYPE_ID=18
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`id_currency` INT(10) NOT NULL DEFAULT '0' Currency
+            FIELD_DB=`id_currency` INT(10) NOT NULL DEFAULT '0' moneda
             
-            FIELD_NAME_LATEX=Currency
+            FIELD_NAME_LATEX=moneda
             FIELD_CODE_NAME_LATEX=id\_currency
             FIELD_DBCOMMENT_LATEX=
             
@@ -291,7 +291,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Zip Code
+            FIELD_NAME=código postal
             FIELD_CODE_NAME_UPPER=HZIPCODE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -299,9 +299,9 @@ architectcomp=remca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`hzipcode` VARCHAR(50) NOT NULL DEFAULT '' Zip Code
+            FIELD_DB=`hzipcode` VARCHAR(50) NOT NULL DEFAULT '' código postal
             
-            FIELD_NAME_LATEX=Zip Code
+            FIELD_NAME_LATEX=c\'odigo postal
             FIELD_CODE_NAME_LATEX=hzipcode
             FIELD_DBCOMMENT_LATEX=
             
@@ -312,7 +312,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Location
+            FIELD_NAME=ubicación
             FIELD_CODE_NAME_UPPER=HLOCATION
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -320,9 +320,9 @@ architectcomp=remca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`hlocation` VARCHAR(100) NOT NULL DEFAULT '' Location
+            FIELD_DB=`hlocation` TINYTEXT(255) NOT NULL DEFAULT '' ubicación
             
-            FIELD_NAME_LATEX=Location
+            FIELD_NAME_LATEX=ubicaci\'on
             FIELD_CODE_NAME_LATEX=hlocation
             FIELD_DBCOMMENT_LATEX=
             
@@ -333,7 +333,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Latitude
+            FIELD_NAME=latitud
             FIELD_CODE_NAME_UPPER=HLATITUDE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -341,9 +341,9 @@ architectcomp=remca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`hlatitude` VARCHAR(20) NOT NULL DEFAULT '' Latitude
+            FIELD_DB=`hlatitude` VARCHAR(20) NOT NULL DEFAULT '' latitud
             
-            FIELD_NAME_LATEX=Latitude
+            FIELD_NAME_LATEX=latitud
             FIELD_CODE_NAME_LATEX=hlatitude
             FIELD_DBCOMMENT_LATEX=
             
@@ -354,7 +354,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Longitude
+            FIELD_NAME=longitud
             FIELD_CODE_NAME_UPPER=HLONGITUDE
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -362,9 +362,9 @@ architectcomp=remca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`hlongitude` VARCHAR(20) NOT NULL DEFAULT '' Longitude
+            FIELD_DB=`hlongitude` VARCHAR(20) NOT NULL DEFAULT '' longitud
             
-            FIELD_NAME_LATEX=Longitude
+            FIELD_NAME_LATEX=longitud
             FIELD_CODE_NAME_LATEX=hlongitude
             FIELD_DBCOMMENT_LATEX=
             
@@ -396,7 +396,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Rooms
+            FIELD_NAME=habitaciones
             FIELD_CODE_NAME_UPPER=ROOMS
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -404,9 +404,9 @@ architectcomp=remca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`rooms` INT(11) NOT NULL DEFAULT '0' Rooms
+            FIELD_DB=`rooms` INT(11) NOT NULL DEFAULT '0' habitaciones
             
-            FIELD_NAME_LATEX=Rooms
+            FIELD_NAME_LATEX=habitaciones
             FIELD_CODE_NAME_LATEX=rooms
             FIELD_DBCOMMENT_LATEX=
             
@@ -417,7 +417,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Bathrooms
+            FIELD_NAME=baños
             FIELD_CODE_NAME_UPPER=BATHROOMS
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -425,9 +425,9 @@ architectcomp=remca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`bathrooms` INT(11) NOT NULL DEFAULT '0' Bathrooms
+            FIELD_DB=`bathrooms` INT(11) NOT NULL DEFAULT '0' baños
             
-            FIELD_NAME_LATEX=Bathrooms
+            FIELD_NAME_LATEX=ba\~nos
             FIELD_CODE_NAME_LATEX=bathrooms
             FIELD_DBCOMMENT_LATEX=
             
@@ -438,7 +438,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Bedrooms
+            FIELD_NAME=dormitorios
             FIELD_CODE_NAME_UPPER=BEDROOMS
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -446,9 +446,9 @@ architectcomp=remca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`bedrooms` INT(11) NOT NULL DEFAULT '0' Bedrooms
+            FIELD_DB=`bedrooms` INT(11) NOT NULL DEFAULT '0' dormitorios
             
-            FIELD_NAME_LATEX=Bedrooms
+            FIELD_NAME_LATEX=dormitorios
             FIELD_CODE_NAME_LATEX=bedrooms
             FIELD_DBCOMMENT_LATEX=
             
@@ -522,7 +522,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Year
+            FIELD_NAME=año de construcción
             FIELD_CODE_NAME_UPPER=YEAR
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -530,9 +530,9 @@ architectcomp=remca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`year` VARCHAR(4) DEFAULT NULL Year
+            FIELD_DB=`year` VARCHAR(4) DEFAULT NULL año de construcción
             
-            FIELD_NAME_LATEX=Year
+            FIELD_NAME_LATEX=a\~no de construcci\'on
             FIELD_CODE_NAME_LATEX=year
             FIELD_DBCOMMENT_LATEX=
             
@@ -650,9 +650,9 @@ architectcomp=remca
             {OBJECT_FIELD}
             FIELD_NAME=lot_size
             FIELD_CODE_NAME_UPPER=LOT_SIZE
-            FIELD_INTRO=<p>tamaño del lote</p>
-            FIELD_DESCRIPTION_INI=<p>tamaño del lote</p>
-            FIELD_DESCRIPTION=<p>tamaño del lote</p> 
+            FIELD_INTRO=area del lote
+            FIELD_DESCRIPTION_INI=area del lote
+            FIELD_DESCRIPTION=area del lote 
             FIELDTYPE_ID=22
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
@@ -660,7 +660,7 @@ architectcomp=remca
             
             FIELD_NAME_LATEX=lot\_size
             FIELD_CODE_NAME_LATEX=lot\_size
-            FIELD_DBCOMMENT_LATEX=tama\~no del lote
+            FIELD_DBCOMMENT_LATEX=area del lote
             
             
 
@@ -671,9 +671,9 @@ architectcomp=remca
             {OBJECT_FIELD}
             FIELD_NAME=house_size
             FIELD_CODE_NAME_UPPER=HOUSE_SIZE
-            FIELD_INTRO=
-            FIELD_DESCRIPTION_INI=
-            FIELD_DESCRIPTION= 
+            FIELD_INTRO=area de construcción
+            FIELD_DESCRIPTION_INI=area de construcción
+            FIELD_DESCRIPTION=area de construcción 
             FIELDTYPE_ID=22
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
@@ -681,7 +681,7 @@ architectcomp=remca
             
             FIELD_NAME_LATEX=house\_size
             FIELD_CODE_NAME_LATEX=house\_size
-            FIELD_DBCOMMENT_LATEX=
+            FIELD_DBCOMMENT_LATEX=area de construcci\'on
             
             
 
@@ -690,7 +690,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Garages
+            FIELD_NAME=cochera
             FIELD_CODE_NAME_UPPER=GARAGES
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -698,9 +698,9 @@ architectcomp=remca
             FIELDTYPE_ID=1
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`garages` VARCHAR(50) DEFAULT NULL Garages
+            FIELD_DB=`garages` VARCHAR(50) DEFAULT NULL cochera
             
-            FIELD_NAME_LATEX=Garages
+            FIELD_NAME_LATEX=cochera
             FIELD_CODE_NAME_LATEX=garages
             FIELD_DBCOMMENT_LATEX=
             
@@ -1113,7 +1113,7 @@ architectcomp=remca
 {-1.2}
 
             {OBJECT_FIELD}
-            FIELD_NAME=Photos
+            FIELD_NAME=fotos
             FIELD_CODE_NAME_UPPER=PHOTOS
             FIELD_INTRO=
             FIELD_DESCRIPTION_INI=
@@ -1121,9 +1121,9 @@ architectcomp=remca
             FIELDTYPE_ID=42
                         
             FIELD_OPTIONS_LANGUAGE_VARS=
-            FIELD_DB=`photos` MEDIUMTEXT  Photos
+            FIELD_DB=`photos` MEDIUMTEXT  fotos
             
-            FIELD_NAME_LATEX=Photos
+            FIELD_NAME_LATEX=fotos
             FIELD_CODE_NAME_LATEX=photos
             FIELD_DBCOMMENT_LATEX=
             
