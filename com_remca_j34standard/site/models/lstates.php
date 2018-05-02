@@ -356,6 +356,7 @@ class RemcaModelLstates extends JModelList
 				
 				
 				
+				
 		
 							
 
@@ -450,6 +451,7 @@ class RemcaModelLstates extends JModelList
 
 		if($group_filter){
 			$query->where($db->quoteName('a.id_country').' != 0');
+		$query->where('a.state = 1');
 			$query->join('INNER', $db->quoteName('#__rem_lstates').' AS a ON '.$db->quoteName('a.id_country').' = '.$db->quoteName('c1.id'));
 			$query->group($db->quoteName('c1.id').', '.
 				$db->quoteName('c1.name'));

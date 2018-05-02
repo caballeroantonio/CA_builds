@@ -47,7 +47,7 @@
 			</script>
       <div class="row_05">
         <p>
-          <textarea name="user_mailing" cols="50" rows="8" placeholder="Description" ></textarea>
+          <textarea name="user_mailing" cols="50" rows="8" placeholder=<?= JText::_('JGLOBAL_DESCRIPTION'); ?> ></textarea>
         </p>
       </div>
       <div class="row_06">

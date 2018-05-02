@@ -1,10 +1,11 @@
 <?php 
-	$photos = json_decode($this->item->photos);
+	$this->item->photos = json_decode($this->item->photos);
 	
 $show_calendar = false;
 $show_reviews = false;
 $show_book = false;
 $show_amenities = false;
+$show_properties = false;
 
 $this->item->reviews[0] = array(
     'title' => 'Really wonderful stay',
@@ -19,7 +20,34 @@ $this->item->owneremail = 'quickstart_j3@mail.com';
 <div class="REL-row">
 	<div class="REL-collumn-xs-12 REL-collumn-sm-8 REL-collumn-md-9 REL-collumn-lg-9">
 		<?php require_once('blocks_galery.php'); ?>
-		<?php require_once('blocks_properties.php'); ?>
+
+<?php
+if($show_properties):
+?>
+<div id="rem_house_property">
+	<div class="row_text">
+		<span class="col_text_1">Listing status:</span>
+		<span class="col_text_2"><?= JText::_('REMCA_LISTING_STATUS'.$this->item->state) ?></span>
+	</div>
+	<div class="row_text">
+		<span class="col_text_1">Property type:</span>
+		<span class="col_text_2"><?= $this->item->property_type ?></span>
+	</div>
+	<div class="row_text">
+		<span class="col_text_1">Property ID:</span>
+		<span class="col_text_2"><?= $this->item->houseid ?></span>
+	</div>
+	<div class="row_text">
+		<span class="col_text_icon"></span>
+		<span class="col_01">Listing type:</span>
+		<span class="col_02"><?= $this->item->listing_type ?></span>
+	</div>
+</div>
+<?php
+endif;//end show_properties
+?>
+		
+
 		<?php require_once('blocks_tabs.php'); ?>
 	</div>
 		<?php 

@@ -2,6 +2,8 @@
 <?php if($this->params->get('manager_feature_category') == 1) { ?>
 <div class="table_country3 ">
   <?php 
+    //if (count($house_feature)) {
+	//$house_feature = array();
     if (count($house_feature)) {
   ?>
     <div class="row_text">

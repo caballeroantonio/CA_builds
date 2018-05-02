@@ -30,7 +30,7 @@
                       size="38" maxlength="80" placeholder="Phone" />
             </span> </div>
           <div class="row_06">
-            <textarea name="customer_comment" cols="50" rows="8" placeholder="Description" ></textarea>
+            <textarea name="customer_comment" cols="50" rows="8" placeholder="<?= JText::_('JGLOBAL_DESCRIPTION'); ?>" ></textarea>
             <input type="hidden" name="bid[]" value="2" />
           </div>
           <div class="row_07"> <span class="col_01">

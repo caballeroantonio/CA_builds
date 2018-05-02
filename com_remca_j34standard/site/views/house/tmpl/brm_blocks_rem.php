@@ -27,149 +27,11 @@ if (!JFactory::getApplication()->get('os_lightbox'))
 ////////////Adding google map
 $realestatemanager_configuration = $GLOBALS['realestatemanager_configuration'];
 if ($realestatemanager_configuration['location_tab']['show'] 
-    || $realestatemanager_configuration['street_view']['show']) {
+    || $realestatemanager_configuration['show_street_view']['show']) {
   $api_key = $realestatemanager_configuration['api_key'] ? "key=" . $realestatemanager_configuration['api_key'] : JFactory::getApplication()->enqueueMessage("<a target='_blank' href='//developers.google.com/maps/documentation/geocoding/get-api-key'>" . _REALESTATE_MANAGER_GOOGLEMAP_API_KEY_LINK_MESSAGE . "</a>", _REALESTATE_MANAGER_GOOGLEMAP_API_KEY_ERROR); 
   $doc->addScript("//maps.googleapis.com/maps/api/js?{$api_key}");
-  if($realestatemanager_configuration['street_view']['show']){
-    ?>
-    <script type="text/javascript">  
-      window.addEvent('domready', function() {
-        initialize();
-      });
-      var map;
-      var myLatlng=new google.maps.LatLng(<?php
-        if ($house->hlatitude && $house->hlatitude != '')
-          echo $house->hlatitude;
-        else
-          echo 0;
-        ?>,<?php
-        if ($house->hlongitude && $house->hlongitude != '')
-          echo $house->hlongitude;
-        else
-          echo 0;
-        ?>);
-      var sv = new google.maps.StreetViewService();
-
-      var panorama;
-      function initialize(){
-        var myOptions = {
-            zoom: <?php if ($house->map_zoom)
-                            echo $house->map_zoom;
-                        else
-                            echo 1;
-                        ?>,
-            center: myLatlng,
-            scrollwheel: false,
-            zoomControlOptions: {
-                style: google.maps.ZoomControlStyle.LARGE
-            },
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        if(document.getElementById("map_canvas") != undefined){
-          map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-        }
-        var imgCatalogPath = "<?php echo $mosConfig_live_site;
-         ?>/components/remca/";
-  <?php
-        $newArr = explode(",", _REALESTATE_MANAGER_HOUSE_MARKER);
-        $numPick = '';
-        if (isset($newArr[$house->property_type])) {
-            $numPick = $newArr[$house->property_type];
-        }
-  ?>
-        var srcForPic = "<?php echo $numPick; ?>";
-        var image = '';
-        if(srcForPic.length){
-          var image = new google.maps.MarkerImage(imgCatalogPath + srcForPic,
-          new google.maps.Size(32, 32),
-          new google.maps.Point(0,0),
-          new google.maps.Point(16, 32));
-        }
-        var marker = new google.maps.Marker({ icon: image,position: myLatlng });
-        marker.setMap(map);
-        var panoramaOptions = {
-          position: myLatlng,
-          pov: {
-            heading: 34,
-            pitch: 10
-          }
-        };
-        var streetViewService = new google.maps.StreetViewService();
-        var STREETVIEW_MAX_DISTANCE = 50;
-        streetViewService.getPanoramaByLocation(myLatlng, STREETVIEW_MAX_DISTANCE, function (streetViewPanoramaData, status) {
-          if (status === google.maps.StreetViewStatus.OK) {
-            // ok
-            var panorama = new google.maps.StreetViewPanorama(document.getElementById('map_pano'), panoramaOptions);
-            map.setStreetView(panorama);
-          } else {
-            document.getElementById('map_pano').style.display = "none";
-            // no street view available in this range, or some error occurred
-          }
-        });
-
-      }
-    </script>
-    <?php
-
-  }else{
-
-    ?>
-    <script type="text/javascript">  
-      window.addEvent('domready', function() {
-        initialize();
-      });
-      var map;
-      var myLatlng=new google.maps.LatLng(<?php
-        if ($house->hlatitude && $house->hlatitude != '')
-          echo $house->hlatitude;
-        else
-          echo 0;
-        ?>,<?php
-        if ($house->hlongitude && $house->hlongitude != '')
-          echo $house->hlongitude;
-        else
-          echo 0;
-        ?>); 
-      function initialize(){
-        var myOptions = {
-            zoom: <?php if ($house->map_zoom)
-                            echo $house->map_zoom;
-                        else
-                            echo 1;
-                        ?>,
-            center: myLatlng,
-            scrollwheel: false,
-            zoomControlOptions: {
-                style: google.maps.ZoomControlStyle.LARGE
-            },
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-        var imgCatalogPath = "<?php echo $mosConfig_live_site;
-         ?>/components/remca/";
-  <?php
-        $newArr = explode(",", _REALESTATE_MANAGER_HOUSE_MARKER);
-        $numPick = '';
-        if (isset($newArr[$house->property_type])) {
-            $numPick = $newArr[$house->property_type];
-        }
-  ?>
-        var srcForPic = "<?php echo $numPick; ?>";
-        var image = '';
-        if(srcForPic.length){
-          var image = new google.maps.MarkerImage(imgCatalogPath + srcForPic,
-          new google.maps.Size(32, 32),
-          new google.maps.Point(0,0),
-          new google.maps.Point(16, 32));
-        }
-        var marker = new google.maps.Marker({ icon: image,position: myLatlng });
-        marker.setMap(map);
-      }
-    </script>
-    <?php }
-
+	require('dibujar_mapa.php')
   }
-
 ?>
 <div id="overDiv" ></div>
 
@@ -928,7 +790,7 @@ if ($realestatemanager_configuration['extra9'] == 1 && $house->extra9 > 0) {
         </li>
         <?php
         if (($params->get('show_location') && $params->get('show_locationtab_registrationlevel'))
-            || ($params->get('street_view') && $params->get('street_view_registrationlevel'))) {
+            || ($params->get('show_street_view') && $params->get('street_view_registrationlevel'))) {
             ?>
             <li>
               <a href="#" rel="country2" onmouseup="setTimeout('initialize()',10)">
@@ -1146,40 +1008,8 @@ if ($realestatemanager_configuration['extra9'] == 1 && $house->extra9 > 0) {
             </div>
 <?php   } ?>
 
-<!--       *******************************************************************         -->
-<?php if($realestatemanager_configuration['manager_feature_category'] == 1) { ?>
-<div class="table_country3 ">
-  <?php 
-    if (count($house_feature)) {
-  ?>
-    <div class="row_text">
-        <div class="rem_features_title">
-        <?php echo _REALESTATE_MANAGER_LABEL_FEATURED_MANAGER_FEATURE; ?>:
-        </div>
-        <span class="col_text_2">
-        <?php 
-        for ($i = 0; $i < count($house_feature); $i++) {
-          if ($i != 0) {
-            if ($house_feature[$i]->categories !== $house_feature[$i - 1]->categories)
-              echo "<div class='rem_features_category'>" . $house_feature[$i]->categories . "</div>";
-          }
-          else {
-            echo "<div class='rem_features_category'>" . $house_feature[$i]->categories . "</div>";
-          }
-          echo "<span class='rem_features_name'><i class='fa  fa-check rem_fa'></i>"
-             . $house_feature[$i]->name . "</span>";
-          if ($i != count($house_feature)-1) {
-            if ($house_feature[$i]->categories == $house_feature[$i + 1]->categories);            
-          }
-        }
-        ?>
-        </span>
-    </div>
 
-        <?php }
-    ?>
-</div>
-<?php } ?>
+<?php //require_once ('house_feature.php'); ?>
         </div>
     </div><!--end of tab-->
 <div id="country2" class="tabcontent">
@@ -1191,7 +1021,7 @@ if ($realestatemanager_configuration['extra9'] == 1 && $house->extra9 > 0) {
               <div id="map_canvas" class="re_map_canvas re_map_canvas_02"></div>
             <?php
             }
-            if($params->get('street_view') && $params->get('street_view_registrationlevel')){ ?>
+            if($params->get('show_street_view') && $params->get('street_view_registrationlevel')){ ?>
               <div id="map_pano" class="re_map_canvas re_map_canvas_02"></div>
               <?php
             } ?>

@@ -1,18 +1,15 @@
-
 <!-- 
 TODO: 
 Colocar cada script en el contexto (template) en que se utilice
 -->
+<?php if($this->params->get('show_location',1)): ?>
 <script type="text/javascript">  
 	jQuery( initialize );
 	var map;
 	var myLatlng=new google.maps.LatLng(<?= $this->item->hlatitude ?>,<?= $this->item->hlongitude ?>);
-	var sv = new google.maps.StreetViewService();
-	
-	var panorama;
 	function initialize(){
 	  var myOptions = {
-	      zoom: 14,
+            zoom: <?= $this->item->map_zoom ?>,
 	      center: myLatlng,
 	      scrollwheel: false,
 	      zoomControlOptions: {
@@ -25,7 +22,7 @@ Colocar cada script en el contexto (template) en que se utilice
 	  }
 	  var imgCatalogPath = "media/com_remca/";
 	    var srcForPic = "/images/marker-11.png";
-	  var image = '';
+//	  var image = '';
 	  if(srcForPic.length){
 	    var image = new google.maps.MarkerImage(imgCatalogPath + srcForPic,
 	    new google.maps.Size(32, 32),
@@ -34,6 +31,9 @@ Colocar cada script en el contexto (template) en que se utilice
 	  }
 	  var marker = new google.maps.Marker({ icon: image,position: myLatlng });
 	  marker.setMap(map);
+	  
+	  
+	  <?php if($this->params->get('show_street_view',1)): ?>
 	  var panoramaOptions = {
 	    position: myLatlng,
 	    pov: {
@@ -44,18 +44,21 @@ Colocar cada script en el contexto (template) en que se utilice
 	  var streetViewService = new google.maps.StreetViewService();
 	  var STREETVIEW_MAX_DISTANCE = 50;
 	  streetViewService.getPanoramaByLocation(myLatlng, STREETVIEW_MAX_DISTANCE, function (streetViewPanoramaData, status) {
-	    if (status === google.maps.StreetViewStatus.OK) {
-	      // ok
-	      var panorama = new google.maps.StreetViewPanorama(document.getElementById('map_pano'), panoramaOptions);
-	      map.setStreetView(panorama);
-	    } else {
-	      document.getElementById('map_pano').style.display = "none";
-	      // no street view available in this range, or some error occurred
-	    }
-	  });
+                if (status === google.maps.StreetViewStatus.OK) {
+                  // ok
+                  var panorama = new google.maps.StreetViewPanorama(document.getElementById('map_pano'), panoramaOptions);
+                  map.setStreetView(panorama);
+                } else {
+                  document.getElementById('map_pano').style.display = "none";
+                  // no street view available in this range, or some error occurred
+                }
+            }
+          );
+	  <?php endif; ?>
 	
 	}
 </script>
+<?php endif; ?>
 <script language="javascript" type="text/javascript">
 	function review_submitbutton() {
 	    var form = document.review_house;

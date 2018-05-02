@@ -6,19 +6,19 @@
 	<!--list of the tabs-->
 	<ul id="countrytabs" class="shadetabs">
 		<li>
-			<a href="#" rel="country1" class="selected">Description</a>
+			<a href="#" rel="country1" class="selected"><?= JText::_('JGLOBAL_DESCRIPTION'); ?></a>
 		</li>
 		<li>
-			<a href="#" rel="country2" onmouseup="setTimeout('initialize()',10)">Location</a>
+			<a href="#" rel="country2" onmouseup="setTimeout('initialize()',10)"><?= JText::_('_REALESTATE_MANAGER_LABEL_SELECT_BY_LOCATION'); ?></a>
 		</li>
     <?php if($show_reviews): ?>
 		<li>
-			<a href="#" rel="country4">Reviews</a>
+			<a href="#" rel="country4"><?= JText::_('_REALESTATE_MANAGER_LABEL_REVIEWS'); ?></a>
 		</li>
 	<?php endif; ?>
     <?php if($show_calendar): ?>
 		<li>
-			<a href="#" rel="country5">Calendar</a>
+			<a href="#" rel="country5"><?= JText::_('_REALESTATE_MANAGER_LABEL_CALENDAR_CALENDAR'); ?></a>
 		</li>
 	<?php endif; ?>
 	</ul>
@@ -32,42 +32,44 @@
 		<div class="rem_type_house">
 			<div class="row_text">
 				<i class="fa fa-building-o"></i>
-				<span class="col_text_1">Rooms:</span>
+				<span class="col_text_1"><?= JText::_('COM_REMCA_HOUSES_FIELD_ROOMS_LABEL'); ?>:</span>
 				<span class="col_text_2"><?= $this->item->rooms ?></span>
 			</div>
 			<div class="row_text">
 				<i class="fa fa-tint"></i>
-				<span class="col_text_1">Bathrooms:</span>
+				<span class="col_text_1"><?= JText::_('COM_REMCA_HOUSES_FIELD_BATHROOMS_LABEL'); ?>:</span>
 				<span class="col_text_2"><?= $this->item->bathrooms ?></span>
 			</div>
 			<div class="row_text">
 				<i class="fa fa-inbox"></i>
-				<span class="col_text_1">Bedrooms:</span>
+				<span class="col_text_1"><?= JText::_('COM_REMCA_HOUSES_FIELD_BEDROOMS_LABEL'); ?>:</span>
 				<span class="col_text_2"><?= $this->item->bedrooms ?></span>
 			</div>
 			<div class="row_text">
 				<i class="fa fa-calendar"></i>
-				<span class="col_text_1">Built year:</span>
+				<span class="col_text_1"><?= JText::_('COM_REMCA_HOUSES_FIELD_YEAR_LABEL'); ?>:</span>
 				<span class="col_text_2"><?= $this->item->year ?></span>
 			</div>
 			<div class="row_text">
 				<i class="fa fa-truck"></i>
-				<span class="col_text_1">Garages:</span>
+				<span class="col_text_1"><?= JText::_('COM_REMCA_HOUSES_FIELD_GARAGES_LABEL'); ?>:</span>
 				<span class="col_text_2"><?= $this->item->garages ?></span>
 			</div>
 			<div class="row_text">
 				<i class="fa fa-arrows-alt"></i>
-				<span class="col_text_1">Lot size:</span>
-				<span class="col_text_2"><?= $this->item->lot_size ?> Ar</span>
+				<span class="col_text_1"><?= JText::_('COM_REMCA_HOUSES_FIELD_LOT_SIZE_LABEL'); ?>:</span>
+				<span class="col_text_2"><?= $this->item->lot_size ?> m2</span>
 			</div>
 			<div class="row_text">
 				<i class="fa fa-expand"></i>
-				<span class="col_text_1">House size:</span>
-				<span class="col_text_2"><?= $this->item->house_size ?> Sqrt</span>
+				<span class="col_text_1"><?= JText::_('COM_REMCA_HOUSES_FIELD_HOUSE_SIZE_LABEL'); ?>:</span>
+				<span class="col_text_2"><?= $this->item->house_size ?> m2</span>
 			</div>
 			<div class="rem_house_desciption"><?= $this->item->description ?></div>
 		</div>
-    <?php if($show_amenities): ?>
+    <?php if($show_amenities): 
+		//ver house_feature.php
+	?>
 		<div class="table_tab_01 table_03">
 			<div class="table_country3 ">
 				<div class="row_text">
@@ -93,14 +95,13 @@
 <?php if ($this->item->hlatitude && $this->item->hlongitude) {?> 
           <div class="table_latitude table_04">
             <?php
-            if(($this->params->get('show_location') && $this->params->get('show_locationtab_registrationlevel'))){ ?>
+            if($this->params->get('show_location',1)){ ?>
               <div id="map_canvas" class="re_map_canvas re_map_canvas_02"></div>
             <?php
-            }
-            if($this->params->get('street_view') && $this->params->get('street_view_registrationlevel')){ ?>
+            } 
+			if($this->params->get('show_street_view',1)){ ?>
               <div id="map_pano" class="re_map_canvas re_map_canvas_02"></div>
-              <?php
-            } ?>
+            <?php } ?>
           </div>
           <?php 
       } else

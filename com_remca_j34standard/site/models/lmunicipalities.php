@@ -370,6 +370,7 @@ class RemcaModelLmunicipalities extends JModelList
 				
 				
 				
+				
 		
 							
 
@@ -464,6 +465,7 @@ class RemcaModelLmunicipalities extends JModelList
 
 		if($group_filter){
 			$query->where($db->quoteName('a.id_lstate').' != 0');
+		$query->where('a.state = 1');
 			$query->join('INNER', $db->quoteName('#__rem_lmunicipalities').' AS a ON '.$db->quoteName('a.id_lstate').' = '.$db->quoteName('s.id'));
 			$query->group($db->quoteName('s.id').', '.
 				$db->quoteName('s.name'));
@@ -508,6 +510,7 @@ class RemcaModelLmunicipalities extends JModelList
 
 		if($group_filter){
 			$query->where($db->quoteName('a.id_country').' != 0');
+		$query->where('a.state = 1');
 			$query->join('INNER', $db->quoteName('#__rem_lmunicipalities').' AS a ON '.$db->quoteName('a.id_country').' = '.$db->quoteName('c1.id'));
 			$query->group($db->quoteName('c1.id').', '.
 				$db->quoteName('c1.name'));

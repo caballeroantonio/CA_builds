@@ -63,6 +63,9 @@ class RemcaModelHouses extends JModelList
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				'catid', 'a.catid', 'category_title',
+				'modified', 'a.modified',
+				'modified_by', 'a.modified_by',
+				'modified_by_name', 'uam.name',	
 				'featured', 'a.featured',
 				'language', 'a.language',
 				'hits', 'a.hits',
@@ -143,13 +146,14 @@ class RemcaModelHouses extends JModelList
 		}
 		$this->setState('list.direction', $list_order);
 		
-		$id_country = $app->getUserStateFromRequest($this->context.'.filter.id_country', 'filter_id_country', 0, 'int');
+		//usar algo como house_initial_sort => country_initial_filter
+                $id_country = $app->getUserStateFromRequest($this->context.'.filter.id_country', 'filter_id_country', 484, 'int');
 		$this->setState('filter.id_country', $id_country);
-		$id_lstate = $app->getUserStateFromRequest($this->context.'.filter.id_lstate', 'filter_id_lstate', 0, 'int');
+		$id_lstate = $app->getUserStateFromRequest($this->context.'.filter.id_lstate', 'filter_id_lstate', 9, 'int');
 		$this->setState('filter.id_lstate', $id_lstate);
-		$id_lmunicipality = $app->getUserStateFromRequest($this->context.'.filter.id_lmunicipality', 'filter_id_lmunicipality', 0, 'int');
+		$id_lmunicipality = $app->getUserStateFromRequest($this->context.'.filter.id_lmunicipality', 'filter_id_lmunicipality', 9003, 'int');
 		$this->setState('filter.id_lmunicipality', $id_lmunicipality);
-				
+                
 		if ((!$user->authorise('core.edit.state', 'com_remca')) AND  (!$user->authorise('core.edit', 'com_remca')))
 		{
 			// filter on status of published for those who do not have edit or edit.state rights.
@@ -256,6 +260,10 @@ class RemcaModelHouses extends JModelList
 
 
 
+		$query->select($db->quoteName('a.modified').' AS modified');
+		$query->select($db->quoteName('uam.name').' AS modified_by_name');
+		$query->join('LEFT', $db->quoteName('#__users').' AS uam on '.$db->quoteName('uam.id').' = '.$db->quoteName('a.modified_by'));
+		
 		
 			// Filter by language
 		if ($this->getState('filter.language'))
@@ -640,6 +648,9 @@ class RemcaModelHouses extends JModelList
 					// get display date
 					switch ($item->params->get('list_show_house_date'))
 					{
+						case 'modified':
+							$item->display_date = $item->modified;
+							break;
 						default:
 							$item->display_date = 0;
 							break;
@@ -710,6 +721,7 @@ class RemcaModelHouses extends JModelList
 			{
 				$query->where($db->quoteName('a.language').' IN ('.$db->quote(JFactory::getLanguage()->getTag()).','.$db->quote('*').')');
 			}
+		$query->where('a.state = 1');
 			$query->join('INNER', $db->quoteName('#__rem_houses').' AS a ON '.$db->quoteName('a.id_country').' = '.$db->quoteName('c1.id'));
 			$query->group($db->quoteName('c1.id').', '.
 				$db->quoteName('c1.name'));
@@ -759,11 +771,22 @@ class RemcaModelHouses extends JModelList
 			{
 				$query->where($db->quoteName('a.language').' IN ('.$db->quote(JFactory::getLanguage()->getTag()).','.$db->quote('*').')');
 			}
+		$query->where('a.state = 1');
 			$query->join('INNER', $db->quoteName('#__rem_houses').' AS a ON '.$db->quoteName('a.id_lstate').' = '.$db->quoteName('s.id'));
 			$query->group($db->quoteName('s.id').', '.
 				$db->quoteName('s.name'));
 		}
 
+		//custom code chain filter
+		if ($id_country = $this->getState('filter.id_country'))
+		{
+			$query->where($db->quoteName('s.id_country').' = ' . (int) $id_country);
+		}
+		//si el filtro no está vacio, que aparezca en el catálogo porque de otra forma no se entiende porque no hay resultados
+		if ($id_lstate = $this->getState('filter.id_lstate'))
+		{
+			$query->where('1 OR' . $db->quoteName('s.id').' = ' . (int) $id_lstate);
+		}	
 
 		// Setup the query
 		$db->setQuery($query);
@@ -808,11 +831,26 @@ class RemcaModelHouses extends JModelList
 			{
 				$query->where($db->quoteName('a.language').' IN ('.$db->quote(JFactory::getLanguage()->getTag()).','.$db->quote('*').')');
 			}
+		$query->where('a.state = 1');
 			$query->join('INNER', $db->quoteName('#__rem_houses').' AS a ON '.$db->quoteName('a.id_lmunicipality').' = '.$db->quoteName('m.id'));
 			$query->group($db->quoteName('m.id').', '.
 				$db->quoteName('m.name'));
 		}
 
+		//custom code chain filter
+		if ($id_country = $this->getState('filter.id_country'))
+		{
+			$query->where($db->quoteName('m.id_country').' = ' . (int) $id_country);
+		}	
+		if ($id_lstate = $this->getState('filter.id_lstate'))
+		{
+			$query->where($db->quoteName('m.id_lstate').' = ' . (int) $id_lstate);
+		}
+		//si el filtro no está vacio, que aparezca en el catálogo porque de otra forma no se entiende porque no hay resultados
+		if ($id_lmunicipality = $this->getState('filter.id_lmunicipality'))
+		{
+			$query->where('1 OR' . $db->quoteName('m.id').' = ' . (int) $id_lmunicipality);
+		}
 
 		// Setup the query
 		$db->setQuery($query);

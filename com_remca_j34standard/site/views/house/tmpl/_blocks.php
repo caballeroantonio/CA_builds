@@ -814,7 +814,7 @@ if ($this->params->get('extra9') == 1 && $this->item->extra9 > 0) {
         </li>
         <?php
         if (($this->params->get('show_location') && $this->params->get('show_locationtab_registrationlevel'))
-            || ($this->params->get('street_view') && $this->params->get('street_view_registrationlevel'))) {
+            || ($this->params->get('show_street_view') && $this->params->get('street_view_registrationlevel'))) {
             ?>
             <li>
               <a href="#" rel="country2" onmouseup="setTimeout('initialize()',10)">
@@ -1043,7 +1043,7 @@ if ($this->params->get('extra9') == 1 && $this->item->extra9 > 0) {
               <div id="map_canvas" class="re_map_canvas re_map_canvas_02"></div>
             <?php
             }
-            if($this->params->get('street_view') && $this->params->get('street_view_registrationlevel')){ ?>
+            if($this->params->get('show_street_view') && $this->params->get('street_view_registrationlevel')){ ?>
               <div id="map_pano" class="re_map_canvas re_map_canvas_02"></div>
               <?php
             } ?>

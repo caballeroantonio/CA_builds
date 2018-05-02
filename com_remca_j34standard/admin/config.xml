@@ -474,6 +474,16 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
+        <field name="show_house_modified"
+            type="radio"
+            label="COM_REMCA_SHOW_MODIFIED_LABEL"
+            description="COM_REMCA_HOUSES_SHOW_MODIFIED_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
         <field name="show_house_hits"
             type="radio"
             label="COM_REMCA_SHOW_HITS_LABEL"
@@ -1099,6 +1109,7 @@
             description="COM_REMCA_HOUSES_ORDERING_DATE_DESC"
 			class="chzn-color"
 		>
+            <option value="modified">JGLOBAL_MODIFIED</option>
         </field>
         <field name="house_initial_sort"
             type="list"
@@ -1106,6 +1117,7 @@
             description="COM_REMCA_HOUSES_ORDER_DESC"
 			class="chzn-color"
 		>
+            <option value="modified">JGLOBAL_MODIFIED</option>
             <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
             <option value="hits">JGLOBAL_MOST_HITS</option>
             <option value="ordering">COM_REMCA_HOUSES_ORDER</option>
@@ -1217,6 +1229,7 @@
             default="0"
 		>
             <option value="0">JHIDE</option>
+            <option value="modified">JGLOBAL_MODIFIED</option>
         </field>
 
         <field name="house_date_format"
@@ -9096,16 +9109,20 @@
         name="fieldset_config_fs"
         label="COM_REMCA_CONFIGS_FIELDSET_CONFIG_FS_LABEL"
     >
-        <field name="group_filters"
-			type="radio"
-			class="btn-group btn-group-yesno"
+
+        <field
+            id="group_filters"
+            name="group_filters"
+            type="radio"
+            label="COM_REMCA_CONFIGS_FIELD_GROUP_FILTERS_LABEL"
+            description="COM_REMCA_CONFIGS_FIELD_GROUP_FILTERS_DESC"
+            class="btn-group"
+			required="true"
 			default="1"
-			label="COM_REMCA_CONFIGS_FIELD_GROUP_FILTERS_LABEL"
-			description="COM_REMCA_CONFIGS_FIELD_GROUP_FILTERS_DESC"
-		>
+        >
             <option	value="1">JYES</option>
-            <option	value="0">JNO</option>
-        </field>	
+			<option	value="0">JNO</option>
+        </field>  
         <field
             id="gmaps_api_key"
             name="gmaps_api_key"
@@ -9118,6 +9135,32 @@
 			required="true"
 			default="AIzaSyD4ZY-54e-nzN0-KejXHkUh-D7bbexDMKk"
         >
+        </field>  
+        <field
+            id="show_location"
+            name="show_location"
+            type="radio"
+            label="COM_REMCA_CONFIGS_FIELD_SHOW_LOCATION_LABEL"
+            description="COM_REMCA_CONFIGS_FIELD_SHOW_LOCATION_DESC"
+            class="btn-group"
+			required="true"
+			default="1"
+        >
+            <option	value="1">JYES</option>
+			<option	value="0">JNO</option>
+        </field>  
+        <field
+            id="show_street_view"
+            name="show_street_view"
+            type="radio"
+            label="COM_REMCA_CONFIGS_FIELD_SHOW_STREET_VIEW_LABEL"
+            description="COM_REMCA_CONFIGS_FIELD_SHOW_STREET_VIEW_DESC"
+            class="btn-group"
+			required="true"
+			default="1"
+        >
+            <option	value="1">JYES</option>
+			<option	value="0">JNO</option>
         </field>  
     </fieldset>
 </config>

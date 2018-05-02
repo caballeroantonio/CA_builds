@@ -27,15 +27,15 @@
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 				
-					<?php foreach ($photos as $photo) : ?>
+					<?php foreach ($this->item->photos as $photo) : ?>
 					
 							<div class="swiper-slide">
 								<div class="rem_col_rent view_veh"><?= $this->item->listing_type ?></div>
 								<div class="rem_listing_status view_veh">
 									<?php if ($this->item->state == true) :?>Active<?php endif?>
 								</div>
-								<a href="<?= $photo->thumbnail_img ?>" data-fancybox="slider" title="photo">
-									<img alt="" title="" src="<?= $photo->thumbnail_img ?>" />
+								<a href="<?= $photo ?>" data-fancybox="slider" title="photo">
+									<img alt="" title="" src="<?= $photo ?>" />
 								</a>
 							</div>
 							
@@ -57,13 +57,13 @@
 	
 	<div class="table_gallery table_07">
 		<div class="gallery_img">
-			<?php foreach ($photos as $photo) : ?>
+			<?php foreach ($this->item->photos as $photo) : ?>
 				<div class="thumbnail viewHouses" style="width: 100px; height: 100px;" >
-					<a href="<?= $photo->thumbnail_img ?>" data-fancybox="gallery" title="photo" >
+					<a href="<?= $photo ?>" data-fancybox="gallery" title="photo" >
 						<img 
 							alt="" 
 							title="" 
-							src="<?= $photo->thumbnail_img ?>" 
+							src="<?= $photo ?>" 
 							style="vertical-align:middle;" />
 					</a>
 				</div>

@@ -179,10 +179,10 @@ $doc->addScript('media/com_remca/fancybox/jquery.fancybox-1.3.4.pack.js');
                 $item->params->get('keep_house_itemid')));
 		
         $imageURL = '';
-        if(isset($item->images['image_url']))
-            $imageURL = $item->images['image_url'];
-
-        if ($imageURL == '') 
+		$item->photos = json_decode($item->photos);
+        if(isset($item->photos[0]))
+            $imageURL = $item->photos[0];
+        else
             $imageURL = JText::_('_REALESTATE_MANAGER_NO_PICTURE_BIG');
       ?>
       <div class="okno_R" id="block<?php echo $item->id ?>">
@@ -190,9 +190,8 @@ $doc->addScript('media/com_remca/fancybox/jquery.fancybox-1.3.4.pack.js');
             <a href="<?= $link ?>" style="text-decoration: none">
                 <img alt="<?php echo $item->name ?>" title="<?php echo $item->name ?>" src="<?= $imageURL ?>" border="0" class="little" /> 
             </a>
-          <?php if ($item->state == true) :?>
-          <div class="rem_listing_status">Active</div>
-          <?php endif?>
+          <div class="rem_listing_status"><?= JText::_('REMCA_LISTING_STATUS'.$item->state) ?></div>
+
           <div class="col_rent">
             <?php echo $item->category_title; ?>
           </div>
@@ -207,15 +206,15 @@ $doc->addScript('media/com_remca/fancybox/jquery.fancybox-1.3.4.pack.js');
           </div>
           <div style="clear: both;"></div>
           <div class="rem_type_Allhouses">
-            <div class="row_text"> <i class="fa fa-expand"></i> <span class="col_text_2"><?php echo $item->lot_size ?> <?= JText::_('_REALESTATE_MANAGER_LABEL_SIZE_SUFFIX') ?></span> </div>
-            <div class="row_text"> <i class="fa fa-building-o"></i> <span class="col_text_1">Rooms:</span> <span class="col_text_2"><?php echo $item->rooms ?></span> </div>
-            <div class="row_text"> <i class="fa fa-calendar"></i> <span class="col_text_1">Built year:</span> <span class="col_text_2"><?php echo $item->year ?></span> </div>
-            <div class="row_text"> <i class="fa fa-inbox"></i> <span class="col_text_1">Bedrooms:</span> <span class="col_text_2"><?php echo $item->bedrooms ?></span> </div>
+            <div class="row_text"> <i class="fa fa-expand"></i> <span class="col_text_2"><?php echo $item->lot_size ?> m2</span> </div>
+            <div class="row_text"> <i class="fa fa-building-o"></i> <span class="col_text_1"><?=JText::_('COM_REMCA_HOUSES_FIELD_ROOMS_LABEL')?>:</span> <span class="col_text_2"><?php echo $item->rooms ?></span> </div>
+            <div class="row_text"> <i class="fa fa-calendar"></i> <span class="col_text_1"><?=JText::_('COM_REMCA_HOUSES_FIELD_YEAR_LABEL')?>:</span> <span class="col_text_2"><?php echo $item->year ?></span> </div>
+            <div class="row_text"> <i class="fa fa-inbox"></i> <span class="col_text_1"><?=JText::_('COM_REMCA_HOUSES_FIELD_BEDROOMS_LABEL')?>:</span> <span class="col_text_2"><?php echo $item->bedrooms ?></span> </div>
           </div>
         </div>
         <div class="rem_house_viewlist"> <a href="<?= $link ?>" style="display: block">
           <div class="price"><?php echo $item->price ?> <?= $item->id_currency ?></div>
-          <span>View listing</span> </a>
+          <span><?=JText::_('JDETAILS')?></span> </a>
           <div style="clear: both;"></div>
         </div>
       </div>
