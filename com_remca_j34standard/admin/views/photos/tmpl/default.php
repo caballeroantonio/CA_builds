@@ -66,14 +66,6 @@ $search		= $this->state->get('filter.search','');
 $component = JComponentHelper::getComponent( 'com_remca' );
 $empty = $component->params->get('default_empty_field', '');
 
-$save_order	= ($list_order=='ordering' OR $list_order=='a.ordering');
-
-if ($save_order)
-{
-	$save_ordering_url = 'index.php?option=com_remca&task=photos.saveOrderAjax&tmpl=component';
-	JHtml::_('sortablelist.sortable', 'photo-list', 'adminForm', strtolower($list_dirn), $save_ordering_url);
-}
-
 ?>
 <noscript>
 <p style="color: red;"><?php echo JText::_('COM_REMCA_WARNING_NOSCRIPT'); ?><p>
@@ -109,9 +101,6 @@ if ($save_order)
 		<table class="table table-striped" id="photo-list">
 			<thead>
 				<tr>
-					<th width="1%" class="nowrap center hidden-phone">
-						<?php echo JHtml::_('searchtools.sort', '', 'a.ordering', $list_dirn, $list_order, null, 'asc', 'JGRID_HEADING_ORDERING', 'icon-menu-2'); ?>
-					</th>	
 					<th width="1%" class="center">
 						<?php echo JHtml::_('grid.checkall'); ?>
 					</th>
@@ -123,31 +112,10 @@ if ($save_order)
 			<tbody>
 			<?php foreach ($this->items as $i => $item) :
 
-				$item->max_ordering = 0; //??
-				$ordering	= ($list_order=='ordering' OR $list_order=='a.ordering');
 				$can_change = true;
 							
 				?>
 				<tr class="row<?php echo $i % 2; ?>">
-					<td class="order nowrap center hidden-phone">
-						<?php if ($can_change) :
-							$disable_class_name = '';
-							$disabled_label	  = '';
-
-							if (!$save_order) :
-								$disabled_label    = JText::_('JORDERINGDISABLED');
-								$disable_class_name = 'inactive tip-top';
-							endif; ?>
-							<span class="sortable-handler hasTooltip <?php echo $disable_class_name; ?>" title="<?php echo $disabled_label; ?>">
-								<i class="icon-menu"></i>
-							</span>
-							<input type="text" style="display:none" name="order[]" size="5" value="<?php echo $item->ordering; ?>" class="width-20 text-area-order " />
-						<?php else : ?>
-							<span class="sortable-handler inactive" >
-								<i class="icon-menu"></i>
-							</span>
-						<?php endif; ?>
-					</td>
 					<td class="center">
 						<?php echo JHtml::_('grid.id', $i, $item->id); ?>
 					</td>

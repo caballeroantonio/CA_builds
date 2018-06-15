@@ -124,20 +124,20 @@ function getFields(){
     $field = array(
         'FIELD_NAME' => 'currency',
         'FIELD_CODE_NAME' => 'currency',
-        'FIELD_DESCRIPTION' => '',//
+        'FIELD_DESCRIPTION' => '<p>https://en.wikipedia.org/wiki/ISO_4217</p>',//<p>https://en.wikipedia.org/wiki/ISO_4217</p>
         'FIELDTYPE_ID' => 1,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
                 FIELD_CODE_NAME_UPPER=CURRENCY
-                FIELD_INTRO=
+                FIELD_INTRO=<p>https://en.wikipedia.org/wiki/ISO_4217</p>
                 FIELD_DESCRIPTION_INI=
 
                 FIELD_DB=`` VARCHAR(45) DEFAULT NULL currency
 
                 FIELD_NAME_LATEX=currency
                 FIELD_CODE_NAME_LATEX=currency
-                FIELD_DBCOMMENT_LATEX=
+                FIELD_DBCOMMENT_LATEX=https://en.wikipedia.org/wiki/ISO\_4217
 
 
     */
@@ -186,6 +186,28 @@ function getFields(){
 
     */
     $fields['conversion_date'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'id va',
+        'FIELD_CODE_NAME' => 'id_va',
+        'FIELD_DESCRIPTION' => 'vivanuncios id',//vivanuncios id
+        'FIELDTYPE_ID' => 22,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_VA
+                FIELD_INTRO=vivanuncios id
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' id va
+
+                FIELD_NAME_LATEX=id va
+                FIELD_CODE_NAME_LATEX=id\_va
+                FIELD_DBCOMMENT_LATEX=vivanuncios id
+
+
+    */
+    $fields['id_va'] = $field;
     return $fields;
 }
 

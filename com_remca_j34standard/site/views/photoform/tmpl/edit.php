@@ -48,10 +48,6 @@ JHtml::_('behavior.keepalive');
 JHtml::_('behavior.calendar');
 JHtml::_('behavior.formvalidation');	
 JHtml::_('formbehavior.chosen', 'select');
-if ($this->params->get('save_history') AND $this->params->get('photo_save_history'))
-{
-	JHtml::_('behavior.modal', 'a.modal_jform_contenthistory');
-}
 $this->document->addScript(JUri::root() .'media/com_remca/js/remcavalidate.js');
 
 $this->document->addScript(JUri::root() .'media/com_remca/js/formsubmitbutton.js');
@@ -90,31 +86,11 @@ $params = $this->state->get('params');
 					<span class="icon-cancel"></span>&#160;<?php echo JText::_('JCANCEL') ?>
 				</button>
 			</div>
-			<?php if (
-				  $this->item->version 
-				  //AND $user->authorise('core.version.tasks', 'com_remca') 
-				  AND $params->get('save_history') 
-				  AND $params->get('photo_save_history')
-			) : ?>
-				<div class="btn-group">
-					<?php echo $this->form->getInput('contenthistory'); ?>
-				</div>
-			<?php endif; ?>	
 		</div>		
 		<div style="clear:both;padding-top: 10px;"></div>
         <!--begin all fields-->
         			<!-- begin fields basic-details-->
 <?php /*?>                    
-                    <?php
-						$user  = JFactory::getUser();
-						if (
-							$this->item->version 
-							AND $user->authorise('core.version.note', 'com_remca') 
-							AND $params->get('save_history') 
-							AND $params->get('photo_save_history')
-						)
-                        echo $this->form->renderField('version_note', null, null, array('group_id' => 'field_version_note')); 
-					 ?>
 <?php */?>
         			<!-- end fields basic-details-->
                     <!-- begin fields fieldset-[%%FIELDSET_CODE_NAME%%]-->
@@ -142,13 +118,6 @@ $params = $this->state->get('params');
 <?php /*?>                    
  <?php */?>                       
 <?php /*?>
-						<?php if (!is_null($this->item->id)):?>
-							<?php echo $this->form->renderField('ordering', null, null, array('group_id' => 'ordering')); ?>						
-						<?php else: ?>
-							<div class="form-note">
-								<p><?php echo JText::_('COM_REMCA_PHOTOS_ORDERING'); ?></p>
-							</div>
-						<?php endif; ?>
 <?php */?>
                     <!-- end fields publishing-->
                     <!-- begin fields metadata-->
@@ -160,7 +129,6 @@ $params = $this->state->get('params');
 <?php /*?>			<ul class="nav nav-tabs">
 				<li class="active"><a href="#basic-details" data-toggle="tab"><?php echo JText::_('COM_REMCA_PHOTOS_FIELDSET_DETAILS_LABEL');?></a></li>
 				<li><a href="#fieldset-photos_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_PHOTOS_FIELDSET_PHOTOS_FS_LABEL');?></a></li>
-				<li><a href="#images" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_IMAGES_LABEL');?></a></li>
 				<li><a href="#publishing" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_PUBLISHING_LABEL');?></a></li>
 			</ul>		<?php */?>
 		
@@ -170,17 +138,7 @@ $params = $this->state->get('params');
 
 
 
-				<div class="tab-pane" id="images">
-					<div class="span6">
-						<?php foreach ($this->form->getGroup('images') as $field) : ?>
-							<?php if (!$field->hidden) : ?>
-								<?php $fieldname = (string) $field->fieldname; ?>
-								<?php echo $this->form->renderField($fieldname, 'images', null, array('group_id' => 'field_'.$fieldname)); ?>							
-							<?php endif; ?>
-						<?php endforeach; ?>
-					</div>
 
-				</div>
 				
 						
 				<input type="hidden" name="task" value="" />

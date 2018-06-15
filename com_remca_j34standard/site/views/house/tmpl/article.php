@@ -62,6 +62,7 @@ $dummy = false;
 $use_def_list = (
 			($params->get('show_house_category')) OR 
 			($params->get('show_house_parent_category') AND $this->item->parent_slug != '1:root') OR
+			($params->get('show_house_modified')) OR
 			($params->get('show_house_hits')) OR
 			$dummy
 			);
@@ -216,12 +217,12 @@ $use_def_list = (
 			$use_fields_list = (
 						($params->get('show_house_id_country')) OR 
 						($params->get('show_house_id_lstate')) OR 
-						($params->get('show_house_id_lmunicipality')) OR 
 						($params->get('show_house_sid')) OR 
-						($params->get('show_house_id_rent')) OR 
 						($params->get('show_house_associate_house')) OR 
+						($params->get('show_house_id_lmunicipality')) OR 
 						($params->get('show_house_houseid')) OR 
 						($params->get('show_house_link')) OR 
+						($params->get('show_house_id_rent')) OR 
 						($params->get('show_house_listing_type')) OR 
 						($params->get('show_house_price')) OR 
 						($params->get('show_house_id_currency')) OR 
@@ -261,9 +262,9 @@ $use_def_list = (
 						($params->get('show_house_extra8')) OR 
 						($params->get('show_house_extra9')) OR 
 						($params->get('show_house_extra10')) OR 
-						($params->get('show_house_owner_id')) OR 
 						($params->get('show_house_energy_value')) OR 
 						($params->get('show_house_climate_value')) OR 
+						($params->get('show_house_owner_id')) OR 
 						($params->get('show_house_photos')) OR 
 						$dummy
 						);
@@ -289,14 +290,6 @@ $use_def_list = (
 					?>
 				</dd>
 			<?php endif; ?>
-			<?php if ($params->get('show_house_id_lmunicipality')) : ?>
-				<dd class="field">
-					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL'); ?></strong>
-					<?php
-						echo JString::trim($this->item->m_lmunicipality_name);
-					?>
-				</dd>
-			<?php endif; ?>
 			<?php if ($params->get('show_house_sid')) : ?>
 				<dd class="field">
 					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_SID_LABEL'); ?></strong>
@@ -305,19 +298,19 @@ $use_def_list = (
 					?>
 				</dd>
 			<?php endif; ?>
-			<?php if ($params->get('show_house_id_rent')) : ?>
-				<dd class="field">
-					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_RENT_LABEL'); ?></strong>
-					<?php
-						echo JString::trim($this->item->r_rent_name);
-					?>
-				</dd>
-			<?php endif; ?>
 			<?php if ($params->get('show_house_associate_house')) : ?>
 				<dd class="field">
 					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ASSOCIATE_HOUSE_LABEL'); ?></strong>
 					<?php
 						echo $this->item->associate_house != '' ? $this->item->associate_house : $empty;
+					?>
+				</dd>
+			<?php endif; ?>
+			<?php if ($params->get('show_house_id_lmunicipality')) : ?>
+				<dd class="field">
+					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL'); ?></strong>
+					<?php
+						echo JString::trim($this->item->m_lmunicipality_name);
 					?>
 				</dd>
 			<?php endif; ?>
@@ -334,6 +327,14 @@ $use_def_list = (
 					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_LINK_LABEL'); ?></strong>
 					<?php
 						echo $this->item->link != '' ? $this->item->link : $empty;
+					?>
+				</dd>
+			<?php endif; ?>
+			<?php if ($params->get('show_house_id_rent')) : ?>
+				<dd class="field">
+					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_RENT_LABEL'); ?></strong>
+					<?php
+						echo JString::trim($this->item->r_rent_name);
 					?>
 				</dd>
 			<?php endif; ?>
@@ -661,14 +662,6 @@ $use_def_list = (
 					?>
 				</dd>
 			<?php endif; ?>
-			<?php if ($params->get('show_house_owner_id')) : ?>
-				<dd class="field">
-					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_OWNER_ID_LABEL'); ?></strong>
-					<?php
-						echo JString::trim($this->item->u_user_name);
-					?>
-				</dd>
-			<?php endif; ?>
 			<?php if ($params->get('show_house_energy_value')) : ?>
 				<dd class="field">
 					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ENERGY_VALUE_LABEL'); ?></strong>
@@ -682,6 +675,14 @@ $use_def_list = (
 					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_CLIMATE_VALUE_LABEL'); ?></strong>
 					<?php
 						echo $this->item->climate_value != '' ? $this->item->climate_value : $empty;
+					?>
+				</dd>
+			<?php endif; ?>
+			<?php if ($params->get('show_house_owner_id')) : ?>
+				<dd class="field">
+					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_OWNER_ID_LABEL'); ?></strong>
+					<?php
+						echo JString::trim($this->item->u_user_name);
 					?>
 				</dd>
 			<?php endif; ?>

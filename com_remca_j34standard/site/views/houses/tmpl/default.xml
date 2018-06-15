@@ -89,6 +89,7 @@
 			    class="chzn-color"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="modified">JGLOBAL_MODIFIED</option>
                 <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
                 <option value="hits">JGLOBAL_MOST_HITS</option>
                 <option value="ordering">COM_REMCA_HOUSES_ORDER</option>
@@ -216,6 +217,7 @@
 	        >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="0">JHIDE</option>
+                <option value="modified">JGLOBAL_MODIFIED</option>
             </field>
             <field
                 name="house_date_format"
@@ -269,17 +271,6 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="list_show_house_id_lmunicipality"
-                type="radio"
-                label="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_LABEL"
-				description="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
                 name="list_show_house_sid"
                 type="radio"
                 label="COM_REMCA_HOUSES_LIST_SID_LABEL"
@@ -291,10 +282,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="list_show_house_id_rent"
+                name="list_show_house_associate_house"
                 type="radio"
-                label="COM_REMCA_HOUSES_LIST_ID_RENT_LABEL"
-				description="COM_REMCA_HOUSES_LIST_ID_RENT_DESC"
+                label="COM_REMCA_HOUSES_LIST_ASSOCIATE_HOUSE_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ASSOCIATE_HOUSE_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -302,10 +293,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="list_show_house_associate_house"
+                name="list_show_house_id_lmunicipality"
                 type="radio"
-                label="COM_REMCA_HOUSES_LIST_ASSOCIATE_HOUSE_LABEL"
-				description="COM_REMCA_HOUSES_LIST_ASSOCIATE_HOUSE_DESC"
+                label="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -328,6 +319,17 @@
                 type="radio"
                 label="COM_REMCA_HOUSES_LIST_LINK_LABEL"
 				description="COM_REMCA_HOUSES_LIST_LINK_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_house_id_rent"
+                type="radio"
+                label="COM_REMCA_HOUSES_LIST_ID_RENT_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ID_RENT_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -764,17 +766,6 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="list_show_house_owner_id"
-                type="radio"
-                label="COM_REMCA_HOUSES_LIST_OWNER_ID_LABEL"
-				description="COM_REMCA_HOUSES_LIST_OWNER_ID_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
                 name="list_show_house_energy_value"
                 type="radio"
                 label="COM_REMCA_HOUSES_LIST_ENERGY_VALUE_LABEL"
@@ -790,6 +781,17 @@
                 type="radio"
                 label="COM_REMCA_HOUSES_LIST_CLIMATE_VALUE_LABEL"
 				description="COM_REMCA_HOUSES_LIST_CLIMATE_VALUE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_house_owner_id"
+                type="radio"
+                label="COM_REMCA_HOUSES_LIST_OWNER_ID_LABEL"
+				description="COM_REMCA_HOUSES_LIST_OWNER_ID_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -1071,6 +1073,17 @@
                 hr="true"
 			/>
             <field
+                name="show_house_modified"
+                type="radio"
+                label="COM_REMCA_SHOW_MODIFIED_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_MODIFIED_DESC"
+                class="btn-group"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
                 name="show_house_hits"
                 type="radio"
                 label="COM_REMCA_SHOW_HITS_LABEL"
@@ -1137,17 +1150,6 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_house_id_lmunicipality"
-                type="radio"
-                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_LABEL"
-                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_DESC"
-                class="btn-group"
-           >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option	value="1">JSHOW</option>
-                <option	value="0">JHIDE</option>
-            </field>
-            <field
                 name="show_house_sid"
                 type="radio"
                 label="COM_REMCA_HOUSES_SHOW_FIELD_SID_LABEL"
@@ -1159,10 +1161,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_house_id_rent"
+                name="show_house_associate_house"
                 type="radio"
-                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_LABEL"
-                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_DESC"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -1170,10 +1172,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_house_associate_house"
+                name="show_house_id_lmunicipality"
                 type="radio"
-                label="COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_LABEL"
-                description="COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_DESC"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -1196,6 +1198,17 @@
                 type="radio"
                 label="COM_REMCA_HOUSES_SHOW_FIELD_LINK_LABEL"
                 description="COM_REMCA_HOUSES_SHOW_FIELD_LINK_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_id_rent"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -1632,17 +1645,6 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_house_owner_id"
-                type="radio"
-                label="COM_REMCA_HOUSES_SHOW_FIELD_OWNER_ID_LABEL"
-                description="COM_REMCA_HOUSES_SHOW_FIELD_OWNER_ID_DESC"
-                class="btn-group"
-           >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option	value="1">JSHOW</option>
-                <option	value="0">JHIDE</option>
-            </field>
-            <field
                 name="show_house_energy_value"
                 type="radio"
                 label="COM_REMCA_HOUSES_SHOW_FIELD_ENERGY_VALUE_LABEL"
@@ -1658,6 +1660,17 @@
                 type="radio"
                 label="COM_REMCA_HOUSES_SHOW_FIELD_CLIMATE_VALUE_LABEL"
                 description="COM_REMCA_HOUSES_SHOW_FIELD_CLIMATE_VALUE_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_owner_id"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_OWNER_ID_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_OWNER_ID_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>

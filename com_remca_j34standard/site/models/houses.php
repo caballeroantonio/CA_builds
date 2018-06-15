@@ -146,14 +146,14 @@ class RemcaModelHouses extends JModelList
 		}
 		$this->setState('list.direction', $list_order);
 		
-		//usar algo como house_initial_sort => country_initial_filter
-                $id_country = $app->getUserStateFromRequest($this->context.'.filter.id_country', 'filter_id_country', 484, 'int');
+		//tx custom usar algo como house_initial_sort => country_initial_filter
+		$id_country = $app->getUserStateFromRequest($this->context.'.filter.id_country', 'filter_id_country', 484, 'int');
 		$this->setState('filter.id_country', $id_country);
 		$id_lstate = $app->getUserStateFromRequest($this->context.'.filter.id_lstate', 'filter_id_lstate', 9, 'int');
 		$this->setState('filter.id_lstate', $id_lstate);
 		$id_lmunicipality = $app->getUserStateFromRequest($this->context.'.filter.id_lmunicipality', 'filter_id_lmunicipality', 9003, 'int');
 		$this->setState('filter.id_lmunicipality', $id_lmunicipality);
-                
+				
 		if ((!$user->authorise('core.edit.state', 'com_remca')) AND  (!$user->authorise('core.edit', 'com_remca')))
 		{
 			// filter on status of published for those who do not have edit or edit.state rights.
@@ -551,7 +551,7 @@ class RemcaModelHouses extends JModelList
 				
 				if (isset($item->id_currency) AND $item->id_currency !='')
 				{
-					$sql = 'SELECT '.$db->quoteName('list.currency').' AS value FROM (SELECT id, CONCAT_WS(\' - \', iso2, currency) \'currency\' FROM #__rem_countries WHERE published_cur) AS list';
+					$sql = 'SELECT '.$db->quoteName('list.currency').' AS value FROM (SELECT id, currency FROM #__rem_countries WHERE published_cur) AS list';
 					$sql .= ' WHERE '.$db->quoteName('list.id').' IN ('.JString::trim($item->id_currency, ',').');';
 					$db->setQuery($sql);				
 					$item->id_currency = $db->loadResult();
@@ -851,7 +851,7 @@ class RemcaModelHouses extends JModelList
 		{
 			$query->where('1 OR' . $db->quoteName('m.id').' = ' . (int) $id_lmunicipality);
 		}
-
+                
 		// Setup the query
 		$db->setQuery($query);
 

@@ -34,31 +34,6 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'House',
-        'FIELD_CODE_NAME' => 'id_house',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 13,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_HOUSE
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
-
-                FIELD_NAME_LATEX=House
-                FIELD_CODE_NAME_LATEX=id\_house
-                FIELD_DBCOMMENT_LATEX=
-
-                    {FIELD_LINK}
-                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
-                    FIELD_FOREIGN_OBJECT_UPPER=HOUSE
-
-    */
-    $fields['id_house'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
         'FIELD_NAME' => 'thumbnail_img',
         'FIELD_CODE_NAME' => 'thumbnail_img',
         'FIELD_DESCRIPTION' => '',//

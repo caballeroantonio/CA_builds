@@ -59,7 +59,8 @@ class RemcaModelLstate extends JModelItem
 				'id_country', 'a.id_country',
 				'c1_country_name', 'c1.country_name',
 				'id_country','a.id_country',
-				'friendly_name','a.friendly_name',
+				'official_name','a.official_name',
+				'id_va','a.id_va',
 				'state', 'a.state',
 				'ordering', 'a.ordering',
 				);
@@ -190,6 +191,7 @@ class RemcaModelLstate extends JModelItem
 				// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
 			
 
+				
 				
 				
 		

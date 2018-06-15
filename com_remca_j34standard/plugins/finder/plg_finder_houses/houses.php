@@ -346,6 +346,7 @@ class PlgFinderHouses extends FinderIndexerAdapter
 		$query->select($db->quoteName('a.description').' AS body');
 		$query->select($db->quoteName('a.state'));
 		$query->select($db->quoteName('a.catid'));
+		$query->select($db->quoteName('a.modified').', '.$db->quoteName('a.modified_by'));
 		$query->select($db->quoteName('a.language')); 
 		$query->select($db->quoteName('c.title').' AS category, '.$db->quoteName('c.published').' AS cat_state, '.$db->quoteName('c.access').' AS cat_access');
 		$query->select($db->quoteName('a.ordering'));

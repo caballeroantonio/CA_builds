@@ -140,9 +140,9 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_REMCA_LSTATES_HEADING_ID_COUNTRY'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_lstate_friendly_name',1)) : ?>
-						<th class="list-friendly_name" id="tableOrderingfriendly_name">
-							<?php echo JTEXT::_('COM_REMCA_LSTATES_HEADING_FRIENDLY_NAME'); ?>
+					<?php if ($this->params->get('list_show_lstate_official_name',1)) : ?>
+						<th class="list-official_name" id="tableOrderingofficial_name">
+							<?php echo JTEXT::_('COM_REMCA_LSTATES_HEADING_OFFICIAL_NAME'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_lstate_ordering',0)) : ?>
@@ -202,10 +202,10 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_lstate_friendly_name',1)) : ?>
-						<td class="list-friendly_name">
+					<?php if ($this->params->get('list_show_lstate_official_name',1)) : ?>
+						<td class="list-official_name">
 							<?php 
-								echo $item->friendly_name != '' ? $item->friendly_name : $empty;
+								echo $item->official_name != '' ? $item->official_name : $empty;
 							?>
 						</td>
 					<?php endif; ?>

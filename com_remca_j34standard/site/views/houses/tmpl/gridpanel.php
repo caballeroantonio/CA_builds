@@ -45,7 +45,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' país
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '484' país
 
                 FIELD_NAME_LATEX=pa\'i{}s
                 FIELD_CODE_NAME_LATEX=id\_country
@@ -84,6 +84,50 @@ function getFields(){
     $fields['id_lstate'] = $field;
     //{OBJECT_FIELD}
     $field = array(
+        'FIELD_NAME' => 'sid',
+        'FIELD_CODE_NAME' => 'sid',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 22,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=SID
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(11) DEFAULT NULL sid
+
+                FIELD_NAME_LATEX=sid
+                FIELD_CODE_NAME_LATEX=sid
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['sid'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'associate_house',
+        'FIELD_CODE_NAME' => 'associate_house',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 1,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ASSOCIATE_HOUSE
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(255) DEFAULT NULL associate_house
+
+                FIELD_NAME_LATEX=associate\_house
+                FIELD_CODE_NAME_LATEX=associate\_house
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['associate_house'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
         'FIELD_NAME' => 'municipio',
         'FIELD_CODE_NAME' => 'id_lmunicipality',
         'FIELD_DESCRIPTION' => '',//
@@ -107,75 +151,6 @@ function getFields(){
 
     */
     $fields['id_lmunicipality'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'sid',
-        'FIELD_CODE_NAME' => 'sid',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 22,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=SID
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(11) DEFAULT NULL sid
-
-                FIELD_NAME_LATEX=sid
-                FIELD_CODE_NAME_LATEX=sid
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['sid'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'Rent',
-        'FIELD_CODE_NAME' => 'id_rent',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 13,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_RENT
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Rent
-
-                FIELD_NAME_LATEX=Rent
-                FIELD_CODE_NAME_LATEX=id\_rent
-                FIELD_DBCOMMENT_LATEX=
-
-                    {FIELD_LINK}
-                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=R
-                    FIELD_FOREIGN_OBJECT_UPPER=RENT
-
-    */
-    $fields['id_rent'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'associate_house',
-        'FIELD_CODE_NAME' => 'associate_house',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ASSOCIATE_HOUSE
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(255) DEFAULT NULL associate_house
-
-                FIELD_NAME_LATEX=associate\_house
-                FIELD_CODE_NAME_LATEX=associate\_house
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['associate_house'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'houseid',
@@ -220,6 +195,31 @@ function getFields(){
 
     */
     $fields['link'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'Rent',
+        'FIELD_CODE_NAME' => 'id_rent',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 13,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_RENT
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Rent
+
+                FIELD_NAME_LATEX=Rent
+                FIELD_CODE_NAME_LATEX=id\_rent
+                FIELD_DBCOMMENT_LATEX=
+
+                    {FIELD_LINK}
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=R
+                    FIELD_FOREIGN_OBJECT_UPPER=RENT
+
+    */
+    $fields['id_rent'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'listing_type',
@@ -334,20 +334,20 @@ function getFields(){
     $field = array(
         'FIELD_NAME' => 'latitud',
         'FIELD_CODE_NAME' => 'hlatitude',
-        'FIELD_DESCRIPTION' => '',//
+        'FIELD_DESCRIPTION' => 'vivanuncios: components.o.w[1][3].s.adDetails.location.latitude',//vivanuncios: components.o.w[1][3].s.adDetails.location.latitude
         'FIELDTYPE_ID' => 1,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
                 FIELD_CODE_NAME_UPPER=HLATITUDE
-                FIELD_INTRO=
+                FIELD_INTRO=vivanuncios: components.o.w[1][3].s.adDetails.location.latitude
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(20) NOT NULL DEFAULT '' latitud
+                FIELD_DB=`` VARCHAR(20) NOT NULL DEFAULT '0' latitud
 
                 FIELD_NAME_LATEX=latitud
                 FIELD_CODE_NAME_LATEX=hlatitude
-                FIELD_DBCOMMENT_LATEX=
+                FIELD_DBCOMMENT_LATEX=vivanuncios: components.o.w[1][3].s.adDetails.location.latitude
 
 
     */
@@ -356,20 +356,20 @@ function getFields(){
     $field = array(
         'FIELD_NAME' => 'longitud',
         'FIELD_CODE_NAME' => 'hlongitude',
-        'FIELD_DESCRIPTION' => '',//
+        'FIELD_DESCRIPTION' => 'vivanuncios: components.o.w[1][3].s.adDetails.location.longitude',//vivanuncios: components.o.w[1][3].s.adDetails.location.longitude
         'FIELDTYPE_ID' => 1,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
                 FIELD_CODE_NAME_UPPER=HLONGITUDE
-                FIELD_INTRO=
+                FIELD_INTRO=vivanuncios: components.o.w[1][3].s.adDetails.location.longitude
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(20) NOT NULL DEFAULT '' longitud
+                FIELD_DB=`` VARCHAR(20) NOT NULL DEFAULT '0' longitud
 
                 FIELD_NAME_LATEX=longitud
                 FIELD_CODE_NAME_LATEX=hlongitude
-                FIELD_DBCOMMENT_LATEX=
+                FIELD_DBCOMMENT_LATEX=vivanuncios: components.o.w[1][3].s.adDetails.location.longitude
 
 
     */
@@ -431,7 +431,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' baños
+                FIELD_DB=`` VARCHAR(4) NOT NULL DEFAULT '0' baños
 
                 FIELD_NAME_LATEX=ba\~nos
                 FIELD_CODE_NAME_LATEX=bathrooms
@@ -453,7 +453,7 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' dormitorios
+                FIELD_DB=`` VARCHAR(4) NOT NULL DEFAULT '0' dormitorios
 
                 FIELD_NAME_LATEX=dormitorios
                 FIELD_CODE_NAME_LATEX=bedrooms
@@ -662,7 +662,7 @@ function getFields(){
     $fields['expiration_date'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'lot_size',
+        'FIELD_NAME' => 'area del lote',
         'FIELD_CODE_NAME' => 'lot_size',
         'FIELD_DESCRIPTION' => 'area del lote',//area del lote
         'FIELDTYPE_ID' => 22,
@@ -673,9 +673,9 @@ function getFields(){
                 FIELD_INTRO=area del lote
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' lot_size
+                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' area del lote
 
-                FIELD_NAME_LATEX=lot\_size
+                FIELD_NAME_LATEX=area del lote
                 FIELD_CODE_NAME_LATEX=lot\_size
                 FIELD_DBCOMMENT_LATEX=area del lote
 
@@ -684,7 +684,7 @@ function getFields(){
     $fields['lot_size'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'house_size',
+        'FIELD_NAME' => 'area de construcción',
         'FIELD_CODE_NAME' => 'house_size',
         'FIELD_DESCRIPTION' => 'area de construcción',//area de construcción
         'FIELDTYPE_ID' => 22,
@@ -695,9 +695,9 @@ function getFields(){
                 FIELD_INTRO=area de construcción
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' house_size
+                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' area de construcción
 
-                FIELD_NAME_LATEX=house\_size
+                FIELD_NAME_LATEX=area de construcci\'on
                 FIELD_CODE_NAME_LATEX=house\_size
                 FIELD_DBCOMMENT_LATEX=area de construcci\'on
 
@@ -706,7 +706,7 @@ function getFields(){
     $fields['house_size'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'cochera',
+        'FIELD_NAME' => 'cocheras',
         'FIELD_CODE_NAME' => 'garages',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 1,
@@ -717,9 +717,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(50) DEFAULT NULL cochera
+                FIELD_DB=`` VARCHAR(4) DEFAULT NULL cocheras
 
-                FIELD_NAME_LATEX=cochera
+                FIELD_NAME_LATEX=cocheras
                 FIELD_CODE_NAME_LATEX=garages
                 FIELD_DBCOMMENT_LATEX=
 
@@ -1080,31 +1080,6 @@ function getFields(){
     $fields['extra10'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'owner_id',
-        'FIELD_CODE_NAME' => 'owner_id',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 13,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=OWNER_ID
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' owner_id
-
-                FIELD_NAME_LATEX=owner\_id
-                FIELD_CODE_NAME_LATEX=owner\_id
-                FIELD_DBCOMMENT_LATEX=
-
-                    {FIELD_LINK}
-                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
-                    FIELD_FOREIGN_OBJECT_UPPER=USER
-
-    */
-    $fields['owner_id'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
         'FIELD_NAME' => 'energy_value',
         'FIELD_CODE_NAME' => 'energy_value',
         'FIELD_DESCRIPTION' => '',//
@@ -1147,6 +1122,31 @@ function getFields(){
 
     */
     $fields['climate_value'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'owner_id',
+        'FIELD_CODE_NAME' => 'owner_id',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 13,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=OWNER_ID
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' owner_id
+
+                FIELD_NAME_LATEX=owner\_id
+                FIELD_CODE_NAME_LATEX=owner\_id
+                FIELD_DBCOMMENT_LATEX=
+
+                    {FIELD_LINK}
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
+                    FIELD_FOREIGN_OBJECT_UPPER=USER
+
+    */
+    $fields['owner_id'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'fotos',

@@ -67,34 +67,11 @@ $input = $app->input;
 			<div class="row-fluid">
 				<div class="span3">
 					<fieldset class="form-vertical">
-                    <?php
-						$user  = JFactory::getUser();
-						if (
-							$this->item->version 
-							AND $user->authorise('core.version.note', 'com_remca') 
-							AND $params->get('save_history') 
-							AND $params->get('photo_save_history')
-						)
-                        echo $this->form->renderField('version_note', null, null, array('group_id' => 'field_version_note')); 
-					 ?>
-						<?php echo $this->form->renderField('ordering', null, null, array('group_id' => 'field_ordering')); ?>
 						<?php echo $this->form->renderField('id', null, null, array('group_id' => 'field_id')); ?>
 										
 					</fieldset>
 				</div>				
 			</div>				
-			<?php echo JHtml::_('bootstrap.endTab'); ?>
-			<?php echo JHtml::_('bootstrap.addTab', 'photo-tabs', 'publishing', JText::_('COM_REMCA_FIELDSET_PUBLISHING_LABEL', true)); ?>
-                    <?php
-						$user  = JFactory::getUser();
-						if (
-							$this->item->version 
-							AND $user->authorise('core.version.note', 'com_remca') 
-							AND $params->get('save_history') 
-							AND $params->get('photo_save_history')
-						)
-                        echo $this->form->renderField('version_note', null, null, array('group_id' => 'field_version_note')); 
-					 ?>
 			<?php echo JHtml::_('bootstrap.endTab'); ?>
 			<?php echo JHtml::_('bootstrap.addTab', 'photo-tabs', 'fieldset-photos_fs', JText::_('COM_REMCA_PHOTOS_FIELDSET_PHOTOS_FS_LABEL', true)); ?>
 			<div class="row-fluid form-horizontal-desktop">
@@ -112,19 +89,7 @@ $input = $app->input;
 			</div>
 			<?php echo JHtml::_('bootstrap.endTab'); ?>
 
-			<?php echo JHtml::_('bootstrap.addTab', 'photo-tabs', 'images', JText::_('COM_REMCA_FIELDSET_IMAGES_LABEL', true)); ?>
-			<div class="row-fluid form-horizontal-desktop">
-				<div class="span6">
-					<?php foreach ($this->form->getGroup('images') as $field) : ?>
-						<?php if (!$field->hidden) : ?>
-							<?php $fieldname = (string) $field->fieldname; ?>
-							<?php echo $this->form->renderField($fieldname, 'images', null, array('group_id' => 'field_'.$fieldname)); ?>							
-						<?php endif; ?>							
-					<?php endforeach; ?>
-				</div>
 
-			</div>
-			<?php echo JHtml::_('bootstrap.endTab'); ?>
 
 		<?php echo JHtml::_('bootstrap.endTabSet'); ?>
 	</div>

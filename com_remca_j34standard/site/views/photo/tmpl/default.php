@@ -43,7 +43,6 @@ if ($lang->isRTL())
 }
 				
 // Add Javascript behaviors
-JHtml::_('behavior.caption');
 
 /*
  *	Initialise values for the layout 
@@ -107,42 +106,6 @@ $empty = $component->params->get('default_empty_field', '');
 
 	
 	<?php echo $this->item->event->beforeDisplayPhoto; ?>
-	<?php $images = $this->item->images; ?>
-	
-			<div class="pull-<?php echo htmlspecialchars($params->get('show_photo_image_float','right')); ?>">
-			<?php if ($params->get('show_photo_image') == '1' AND isset($images['image_url']) AND $images['image_url'] != '') : ?>
-			
-					<?php 
-						$image = $images['image_url'];
-						
-						list($img_width, $img_height) = getimagesize($image);
-						
-						$display_width = (int) $params->get('show_photo_intro_image_width','100');
-						$display_height = (int) $params->get('show_photo_intro_image_height','0');
-						
-						if ($display_width > $img_width) :
-							if ($display_height < $img_height AND $display_height > 0) :
-								$display_width = 0;
-							endif;
-						else :
-							$display_height = 0;
-						endif;	
-					?>
-					<img src="<?php echo $image; ?>"
-						<?php if ($display_width > 0) : ?>
-							<?php echo 'width="'.$display_width.'"'; ?>"
-						<?php endif; ?>	
-						<?php if ($display_height > 0) : ?>
-							<?php echo 'height="'.$display_height.'"'; ?>
-						<?php endif; ?>	
-						<?php if ($images['image_caption']): ?>
-							<?php echo 'class="caption"'.' title="' .htmlspecialchars($images['image_caption']) . '"'; ?>
-						<?php endif; ?>							
-						<?php echo  $images['image_alt_text'] != '' ?'alt="'.$this->escape($images['image_alt_text']).'"':''; ?>
-					/>
-			<?php endif; ?>			 
-		</div>
-	<?php endif; ?>	
 	<div style="clear:both; padding-top: 10px;">
 
 	</div>
@@ -151,7 +114,6 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="photoForm" id="photoForm">
 			<?php $dummy = false;
 					$display_fieldset = (
-								($params->get('show_photo_id_house')) OR 
 								($params->get('show_photo_thumbnail_img')) OR 
 								$dummy
 								);
@@ -161,18 +123,6 @@ $empty = $component->params->get('default_empty_field', '');
 					<legend><?php echo JText::_('COM_REMCA_PHOTOS_FIELDSET_PHOTOS_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
-						<?php if ($params->get('show_photo_id_house')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_REMCA_PHOTOS_FIELD_ID_HOUSE_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo JString::trim($this->item->h_house_name);
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
 						<?php if ($params->get('show_photo_thumbnail_img')) : ?>
 						<div class="formelm">
 							<label>
@@ -203,14 +153,6 @@ $empty = $component->params->get('default_empty_field', '');
 	
 				<?php if ($params->get('show_photo_admin')) : ?>
 				
-					<div class="formelm">
-						<label>
-							<?php echo JText::_('JFIELD_ORDERING_LABEL'); ?>
-						</label>
-						<span>
-							<?php echo $this->item->ordering; ?>
-						</span>
-					</div>	
 				<?php endif; ?>
 				
 			

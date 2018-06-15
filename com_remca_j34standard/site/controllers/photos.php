@@ -50,8 +50,6 @@ class RemcaControllerPhotos extends JControllerLegacy
 	{
 		parent::__construct($config);
 
-		$this->registerTask('orderup','reorder');
-		$this->registerTask('orderdown','reorder');
 	}	
 	/**
 	 * Method to get a model object, loading it if required.

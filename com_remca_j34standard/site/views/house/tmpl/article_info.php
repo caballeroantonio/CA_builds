@@ -67,6 +67,14 @@ $empty = $component->params->get('default_empty_field', '');
 				<?php endif; ?>
 			</dd>
 		<?php endif; ?>
+		<?php if ($params->get('show_house_modified') AND $this->item->modified > 0) : ?>
+			<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="<?php echo JHtml::_('date', $this->item->modified, 'c'); ?>">
+					<?php echo JText::sprintf('COM_REMCA_LAST_UPDATED', JHtml::_('date',$this->item->modified, JText::_('DATE_FORMAT_LC3'))); ?>
+				</time>
+			</dd>
+		<?php endif; ?>
 		<?php if ($params->get('show_house_hits')) : ?>
 			<dd class="hits">
 				<span class="icon-eye-open"></span>

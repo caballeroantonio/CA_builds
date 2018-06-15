@@ -26,14 +26,14 @@
 -- Referential integrity
 --
 
-# root category - uncategorised
+# root category - uncategorised, no resultó buena idea aparece filtro uncategorised, de momento Archived=2
 INSERT INTO `#__categories` (`asset_id`,`parent_id`,`lft`,`rgt`,`level`,`path`,`extension`,`title`,
 `alias`,`note`,`description`,
 `published`,`checked_out`,`checked_out_time`,`access`,`params`,
 `metadesc`,`metakey`,`metadata`,`created_user_id`,`created_time`,`modified_user_id`,`modified_time`,`hits`,`language`,`version`) VALUES 
 (0,1,1,2,1,'remca-house-categories','com_remca','uncategorised',
 'remca-house-uncategorised','','Root Remca House uncategorised',
-1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}','','','{\"author\":\"\",\"robots\":\"\"}',1,'2011-01-01 00:00:01',0,'0000-00-00 00:00:00',0,'*',0);
+2,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}','','','{\"author\":\"\",\"robots\":\"\"}',1,'2011-01-01 00:00:01',0,'0000-00-00 00:00:00',0,'*',0);
 
 SET FOREIGN_KEY_CHECKS=0;
 SET SESSION sql_mode='NO_AUTO_VALUE_ON_ZERO';
@@ -73,8 +73,6 @@ INSERT IGNORE INTO `#__rem_rents` (`id`, `name`) VALUES (0, "undefined");
 INSERT IGNORE INTO `#__rem_houses` (`id`, `name`, `description`, `ordering`, `state`) VALUES (0, "undefined", "undefined default option", 0, 0);
 
 INSERT IGNORE INTO `#__rem_orders` (`id`, `name`) VALUES (0, "undefined");
-
-INSERT IGNORE INTO `#__rem_houses` (`id`, `name`, `description`, `ordering`, `state`) VALUES (0, "undefined", "undefined default option", 0, 0);
 
 INSERT IGNORE INTO `#__rem_houses` (`id`, `name`, `description`, `ordering`, `state`) VALUES (0, "undefined", "undefined default option", 0, 0);
 
@@ -159,10 +157,6 @@ FOREIGN KEY (`id_user`) REFERENCES `#__users` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
 ALTER TABLE `#__rem_orders_details` ADD CONSTRAINT `fk3030_id_house`
-FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
-ON DELETE RESTRICT ON UPDATE CASCADE;
-										
-ALTER TABLE `#__rem_photos` ADD CONSTRAINT `fk3040_id_house`
 FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										

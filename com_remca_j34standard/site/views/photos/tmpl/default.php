@@ -43,7 +43,6 @@ if ($lang->isRTL())
 }
 
 // Add Javscript functions for field display
-JHtml::_('behavior.caption');
 JHtml::_('bootstrap.tooltip');
 JHtml::_('behavior.multiselect');
 JHtml::_('dropdown.init');
@@ -127,19 +126,9 @@ $empty = $component->params->get('default_empty_field', '');
 						</th>
 					<?php endif; ?>
 
-					<?php if ($this->params->get('list_show_photo_id_house',1)) : ?>
-						<th class="list-id_house" id="tableOrderingid_house">
-							<?php echo JTEXT::_('COM_REMCA_PHOTOS_HEADING_ID_HOUSE'); ?>
-						</th>
-					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_photo_thumbnail_img',1)) : ?>
 						<th class="list-thumbnail_img" id="tableOrderingthumbnail_img">
 							<?php echo JTEXT::_('COM_REMCA_PHOTOS_HEADING_THUMBNAIL_IMG'); ?>
-						</th>
-					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_photo_ordering',0)) : ?>
-						<th width="10%">
-							<?php echo JHtml::_('grid.sort',  'COM_REMCA_HEADING_ORDERING', 'a.ordering', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($show_actions) : ?>
@@ -171,17 +160,6 @@ $empty = $component->params->get('default_empty_field', '');
 							</time>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_photo_id_house',1)) : ?>
-						<td class="list-id_house">
-							<?php 
-								if ($params->get('list_link_photo_id_house')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->id_house, 0)).'">'.JString::trim($item->h_house_name).'</a>';
-								else :
-									echo JString::trim($item->h_house_name);
-								endif; 
-							?>
-						</td>
-					<?php endif; ?>
 					<?php if ($this->params->get('list_show_photo_thumbnail_img',1)) : ?>
 						<td class="list-thumbnail_img">
 							<?php 
@@ -189,12 +167,6 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_photo_ordering',0)) : ?>
-						<td class="list-order">
-							<?php echo $item->ordering; ?>
-						</td>
-					<?php endif; ?>
-					
 					<?php if ($show_actions) : ?>
 						<td class="list-actions">
                         	<div class="btn-group pull-right">
@@ -211,11 +183,6 @@ $empty = $component->params->get('default_empty_field', '');
 										<?php echo JHtml::_('photoicon.email',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
-							<?php if ($can_edit AND $params->get('save_history') AND $params->get('photo_save_history')) : ?>
-								<li class="version-icon">
-									<?php echo JHtml::_('photoicon.versions',$item, $params); ?>
-								</li>	
-							<?php endif; ?>	
                                 </ul>
                             </div>
 						</td>															

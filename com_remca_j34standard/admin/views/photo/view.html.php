@@ -92,14 +92,6 @@ class RemcaViewPhoto extends JViewLegacy
 
 		JToolbarHelper::custom('photo.save2new', 'save-new.png', 'save-new_f2.png', 'JTOOLBAR_SAVE_AND_NEW', false);
 
-		if ($this->state->params->get('save_history', 1) AND $this->state->params->get('photo_save_history', 1)
-			AND !$is_new  
-			)
-		{
-			$item_id = $this->item->id;
-			$type_alias = 'com_remca.photo';
-			JToolbarHelper::versions($type_alias, $item_id);
-		}
 				
 		if (empty($this->item->id))
 		{

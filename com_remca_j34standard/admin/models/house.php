@@ -153,6 +153,7 @@ class RemcaModelHouse extends JModelAdmin
 			{
 				$item->id_currency = explode(',',JString::trim($item->id_currency, ','));
 			}	
+				$item->photos = json_decode($item->photos);
 
 			
 			// Convert the images field to an array.

@@ -39,69 +39,13 @@
 			readonly="true"
 		/>
 
-        <field
-			id="contenthistory"
-			name="contenthistory"
-			type="contenthistory"
-			label="JTOOLBAR_VERSIONS"
-			data-typeAlias="com_remca.photo"
-		/>
 
-        <field
-			id="version_note"
-			name="version_note"
-			type="text"
-			label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
-			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
-			class="inputbox"
-			size="45"
-		/>
     </fieldset>
-    <fields
-        name="images"
-        label="COM_REMCA_PHOTOS_IMAGE_OPTIONS"
-    >
-        <field
-            id="image_url"
-            name="image_url"
-            type="media"
-            label="COM_REMCA_FIELD_IMAGE_LABEL"
-            description="COM_REMCA_PHOTOS_FIELD_IMAGE_DESC"
-        />
-        <field
-            id="image_alt_text"
-            name="image_alt_text"
-            type="text"
-            label="COM_REMCA_FIELD_IMAGE_ALTTEXT_LABEL"
-            description="COM_REMCA_PHOTOS_FIELD_IMAGE_ALTTEXT_DESC"
-            class="inputbox"
-            size="20"
-        />
-        <field
-            name="image_caption"
-            type="text"
-            label="COM_REMCA_FIELD_IMAGE_CAPTION_LABEL"
-            description="COM_REMCA_PHOTOS_FIELD_IMAGE_CAPTION_DESC"
-            class="inputbox"
-            size="20"
-        />
-    </fields>
     <fieldset
         name="fieldset_photos_fs"
         label="COM_REMCA_PHOTOS_FIELDSET_PHOTOS_FS_LABEL"
     >
 
-        <field
-            id="id_house"
-            name="id_house"
-            type="modal_houses"
-            label="COM_REMCA_PHOTOS_FIELD_ID_HOUSE_LABEL"
-            description="COM_REMCA_PHOTOS_FIELD_ID_HOUSE_DESC"
-            class="modal"
-			default="0"
-			type_alias="com_remca.house" 
-        >
-        </field>  
         <field
             id="thumbnail_img"
             name="thumbnail_img"

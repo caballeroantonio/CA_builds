@@ -1,6 +1,4 @@
-<?php 
-	$this->item->photos = json_decode($this->item->photos);
-	
+<?php 	
 $show_calendar = false;
 $show_reviews = false;
 $show_book = false;

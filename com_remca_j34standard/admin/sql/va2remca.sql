@@ -1,67 +1,180 @@
 # Proceso para migrar datos de scraping vivanuncios a remca.houses
-CREATE TABLE `scrpng_vivanuncios` (
-  `idPropiedad` text,
-  `category_id` int(11) DEFAULT NULL,
-  `agent_id` int(11) DEFAULT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `type_popiedad` text,
-  `name` text,
-  `slug` text,
-  `description` text,
-  `image_link` text,
-  `meta_keywords` text,
-  `meta_desc` text,
-  `status` int(11) DEFAULT NULL,
-  `create_date` text,
-  `updated_at` text,
-  `hlocation` text,
-  `hcity` text,
-  `hregion` text,
-  `hzipcode` text,
-  `hcountry` text,
-  `hlatitude` text,
-  `hlongitude` text,
-  `price` int(11) DEFAULT NULL,
-  `bedrooms` int(11) DEFAULT NULL,
-  `services` text,
-  `characteristics` text,
-  `bathrooms` int(11) DEFAULT NULL,
-  `year` int(11) DEFAULT NULL,
-  `features` text,
-  `is_delete` int(11) DEFAULT NULL,
-  `featured` int(11) DEFAULT NULL,
-  `size` int(11) DEFAULT NULL,
-  `related` text,
-  `disponible` int(11) DEFAULT NULL,
-  `category` text,
-  `tipoPublicado` text,
-  `link` text,
-  `url_vendedor` text,
-  `agent` text,
-  `ad_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `leyenda` text,
-  `sitio` text,
-  `category_pri_attrs` varchar(45) DEFAULT NULL,
-  `contacts` text,
-  `photos_big` text,
-  `photos_small` text,
+CREATE TABLE `scrpng_vivanuncios2` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `id_remhouse` int(11) unsigned DEFAULT NULL,
-  `need_update` tinyint(1) NOT NULL DEFAULT '0',
+  `link` varchar(255) DEFAULT NULL,
+  `html` longtext,
+  `ad_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `hlatitude` varchar(20) NOT NULL DEFAULT '0',
+  `hlongitude` varchar(20) NOT NULL DEFAULT '0',
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `description` mediumtext NOT NULL,
+  `price` decimal(11,2) unsigned NOT NULL DEFAULT '0.00',
+  `currency` varchar(45) NOT NULL DEFAULT '',
+  `sellerlink` varchar(255) NOT NULL DEFAULT '',
+  `sellerpicture` varchar(255) NOT NULL DEFAULT '',
+  `is_pending` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `is_active` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `is_deleted` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `is_blocked` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `is_error` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `adphone` varchar(45) NOT NULL DEFAULT '',
+  `l1categoryname` varchar(45) NOT NULL DEFAULT '',
+  `dwellingtype` varchar(45) NOT NULL DEFAULT '',
+  `bedrooms` varchar(45) NOT NULL DEFAULT '0',
+  `bathrooms` varchar(45) NOT NULL DEFAULT '',
+  `garages` varchar(45) NOT NULL DEFAULT '0',
+  `availabilitystartdate` datetime DEFAULT NULL,
+  `dwellingforsaleby` varchar(45) NOT NULL DEFAULT '',
+  `lot_size` int(10) unsigned NOT NULL DEFAULT '0',
+  `area_unit` varchar(45) NOT NULL,
+  `id_cat` int(10) unsigned DEFAULT NULL,
+  `catname` varchar(45) NOT NULL DEFAULT '',
+  `id_location` int(10) unsigned NOT NULL DEFAULT '0',
+  `id_hcountry` int(10) unsigned NOT NULL DEFAULT '0',
+  `hcountry` varchar(255) NOT NULL DEFAULT '',
+  `id_lstate` int(10) unsigned NOT NULL DEFAULT '0',
+  `lstate` varchar(255) NOT NULL DEFAULT '',
+  `id_lmunicipality` int(10) unsigned NOT NULL DEFAULT '0',
+  `lmunicipality` varchar(255) NOT NULL DEFAULT '',
+  `id_hcolonia` int(10) unsigned NOT NULL DEFAULT '0',
+  `hcolonia` varchar(255) NOT NULL DEFAULT '',
+  `hlocation` varchar(255) NOT NULL DEFAULT '',
+  `hzipcode` varchar(50) NOT NULL DEFAULT '',
+  `hits` int(10) unsigned NOT NULL DEFAULT '0',
+  `fullbleedpics` mediumtext,
+  `r_status` int(10) unsigned NOT NULL DEFAULT '0',
+  `modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `need_update` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `id_remhouse` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `uk_anuncion_idx` (`ad_id`),
-  KEY `fk_vahouse_idx` (`id_remhouse`),
+  UNIQUE KEY `uk_anuncio_idx` (`ad_id`),
+  UNIQUE KEY `idx_link` (`link`),
+  UNIQUE KEY `fk_va2house_idx` (`id_remhouse`),
   KEY `idx_need_update` (`need_update`),
-  CONSTRAINT `fk_vahouse_idx` FOREIGN KEY (`id_remhouse`) REFERENCES `jos_rem_houses` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `idx_is_active` (`is_active`),
+  KEY `idx_id_cat` (`id_cat`),
+  CONSTRAINT `fk_va2house_idx` FOREIGN KEY (`id_remhouse`) REFERENCES `jos_rem_houses` (`id`) ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=74263 DEFAULT CHARSET=utf8;
 
-# 1) almacena el ultimo rem_houses.id
+
+#1 sincronizo categorias
+INSERT IGNORE remca.jos_categories
+SELECT * FROM jpruebas.jos_categories
+WHERE 1
+AND extension = 'com_remca'
+;
+
+#2 actualizo categorias que coinciden
+UPDATE
+scrpng_vivanuncios2 va
+LEFT JOIN jos_categories c ON c.extension = 'com_remca' AND c.path = 'bienes-raices' AND c.level = 1
+SET va.id_cat = c.id
+WHERE 1
+AND va.id_cat IS NULL
+AND va.catname = ''
+AND va.dwellingtype =''
+;
+UPDATE
+scrpng_vivanuncios2 va
+LEFT JOIN jos_categories c1 ON c1.extension = 'com_remca' AND c1.title = va.dwellingtype
+LEFT JOIN jos_categories c2 ON c1.id IS NULL AND c2.extension = 'com_remca' AND c2.title = va.catname
+SET va.id_cat = coalesce(c1.id, c2.id)
+WHERE 1
+AND va.id_cat IS NULL
+;
+
+#3 reviso que no haya categorias faltantes y si existen repito 1 y 2
+SELECT 
+va.id, va.ad_id, va.id_cat, va.catname, va.dwellingtype
+, c1.id, c1.title
+, c2.id, c2.title
+FROM 
+scrpng_vivanuncios2 va
+LEFT JOIN jos_categories c1 ON c1.extension = 'com_remca' AND c1.title = va.dwellingtype
+LEFT JOIN jos_categories c2 ON c1.id IS NULL AND c2.extension = 'com_remca' AND c2.title = va.catname
+WHERE 1
+AND va.id_cat IS NULL
+;
+
+# compruebo que no faltan catalogos
+SELECT 
+va.id 'va.id', va.hcountry 'va.hcountry', va.lstate 'va.lstate', va.id_lmunicipality 'va.id_lmunicipality', va.lmunicipality 'va.lmunicipality',
+c.id 'c.id', c.name 'c.name', s.id 's.id', s.name 's.name', m.id 'm.id', m.name 'm.name', p.id 'p.id', p.name 'p.name'
+FROM scrpng_vivanuncios2 va
+LEFT JOIN jos_rem_countries c ON c.id_va = va.id_hcountry
+LEFT JOIN jos_rem_lstates s ON s.id_va = va.id_lstate
+LEFT JOIN jos_rem_lmunicipalities m ON m.id_va = va.id_lmunicipality
+LEFT JOIN jos_rem_countries p ON p.currency = va.currency #DISTINCT currency = MXN, USD
+
+WHERE 1
+AND va.is_active
+AND va.need_update
+AND va.id IS NOT NULL
+AND (
+	c.id IS NULL
+	OR s.id IS NULL
+	OR m.id IS NULL
+	OR p.id IS NULL
+)
+GROUP BY va.id_lmunicipality
+;
+
+/*
+hcolonia a veces tiene municipios, identificar si es colonia o municipio.
+si es municipio entonces
+	h.id_lmunicipality = jos_rem_lmunicipalities.id ON va.id_lmunicipality|va.id_hcolonia 
+si es colonia
+	h.location = va.hcolonia 
+*/
+
+#actualizar municipios faltantes V2.0
+#INSERT INTO jos_rem_lmunicipalities (name, official_name, id_lstate, id_country, state, ordering, id_va)
+#va.lmunicipality 'name', 'vivanuncios' AS 'official_name', s.id 'id_lstate', c.id 'id_country', 1 'state', 1000 'ordering', va.id_lmunicipality 'id_va'
+#/*
+SELECT 
+va.id 'va.id', va.hcountry 'va.hcountry', va.lstate 'va.lstate', va.id_lmunicipality 'va.id_lmunicipality', va.lmunicipality 'va.lmunicipality',
+c.id 'c.id', c.name 'c.name', s.id 's.id', s.name 's.name', m.id 'm.id', m.name 'm.name'#, p.id 'p.id', p.name 'p.name'
+, mf.name 'mf.name'
+FROM 
+#*/
+#UPDATE
+scrpng_vivanuncios2 va
+LEFT JOIN jos_rem_countries c ON c.id_va = va.id_hcountry
+LEFT JOIN jos_rem_lstates s ON s.id_va = va.id_lstate
+LEFT JOIN jos_rem_lmunicipalities m ON m.id_va = va.id_lmunicipality
+#LEFT JOIN jos_rem_countries p ON p.currency = va.currency #DISTINCT currency = MXN, USD
+LEFT JOIN jos_rem_lmunicipalities mf ON 
+    mf.id_lstate = s.id
+    AND (va.lmunicipality = mf.name OR va.lmunicipality = mf.official_name)
+#SET mf.id_va = va.id_lmunicipality
+WHERE 1
+AND va.is_active
+AND va.need_update
+AND va.id IS NOT NULL
+AND (
+	c.id IS NULL
+	OR s.id IS NULL
+	OR m.id IS NULL
+	#OR p.id IS NULL
+)
+#siempre poner los sujetos de prueba del resultado anterior
+AND va.id IN (173, 186, 406, 92, 836, 25, 64, 928, 270, 35214, 94, 630, 639)
+#los que si existen hacer UPDATE
+	#AND mf.id IS NOT NULL
+#los que no existen hacer INSERT
+	#AND mf.id IS NULL
+GROUP BY va.id_lmunicipality
+;
+
+
+# 4) almacena el ultimo rem_houses.id
 SELECT 
 @laih:= AUTO_INCREMENT - 1 'Last AI houses'
 FROM  INFORMATION_SCHEMA.TABLES t
 WHERE 1
 AND t.TABLE_SCHEMA = DATABASE()
 AND t.TABLE_NAME LIKE '%rem_houses';
+SELECT @laih 'nuevos => laih';
 
 # 2) condiciones iniciales, cargué la información del CSV
 #SET @laih := 1; # Last AI houses - 1
@@ -71,78 +184,105 @@ SET @ordering := @laih;
 # 3) copy empty records to houses
 INSERT INTO jos_rem_houses (id, description, images, state)
 SELECT @ordering := @ordering + 1 AS 'id', '' AS 'description', '' AS 'images', 1 AS state 
-FROM scrpng_vivanuncios va
+FROM scrpng_vivanuncios2 va
 WHERE id_remhouse IS NULL
+AND va.is_active
+AND va.need_update
 ;
 
 # 4) refer va.fk to h.pk empty records
 SET @ordering := @laih;
-UPDATE scrpng_vivanuncios va
+UPDATE scrpng_vivanuncios2 va
 SET va.id_remhouse = @ordering := @ordering + 1, need_update = 1
-WHERE id_remhouse IS NULL
+WHERE 1
+AND id_remhouse IS NULL
+AND va.is_active
+AND va.need_update
 ;
+
 
 # 5) update set h.values = va.values
 UPDATE jos_rem_houses h
-LEFT JOIN scrpng_vivanuncios va ON va.id_remhouse = h.id
+LEFT JOIN scrpng_vivanuncios2 va ON va.id_remhouse = h.id
+LEFT JOIN jos_rem_countries c ON c.id_va = va.id_hcountry
+LEFT JOIN jos_rem_lstates s ON s.id_va = va.id_lstate
+LEFT JOIN jos_rem_lmunicipalities m ON m.id_va = va.id_lmunicipality
+LEFT JOIN jos_rem_countries p ON p.currency = va.currency
 SET 
-h.description = coalesce(va.description, ''),
-h.link = coalesce(va.link, ''),
-h.price = coalesce(va.price, 0.00),
-h.name = coalesce(va.name, ''),
-#h.hcountry = coalesce(va.hcountry, ''),
-#h.hregion = coalesce(va.hregion, ''),
-#h.hcity = coalesce(va.hcity, ''),
-h.hzipcode = coalesce(va.hzipcode, ''),
-h.hlocation = LEFT(coalesce(va.hlocation, ''),254),
-h.hlatitude = coalesce(va.hlatitude, ''),
-h.hlongitude = coalesce(va.hlongitude, ''),
-h.bathrooms = coalesce(va.bathrooms, 0),
-h.bedrooms = coalesce(va.bedrooms, 0),
-h.year = coalesce(va.year, ''),
-h.agent = LEFT(coalesce(va.agent, ''), 45),
-#h.image_link = coalesce(va.image_link, ''),
-h.photos = CONCAT('[{"thumbnail_img": "',va.image_link,'"},{"thumbnail_img": "', replace(va.photos_small, ',', '"},{"thumbnail_img": "'),'"}]'),
-h.images = CONCAT_WS('','{"image_url":"',va.image_link,'","image_alt_text":"","image_caption":""}'),
-h.state = 1
-#, h.modified = NOW()
-WHERE va.need_update = 1
-;
- 
-# 6) update id_country
-UPDATE
-scrpng_vivanuncios va
-INNER JOIN jos_rem_houses h ON h.id = va.id_remhouse
-INNER JOIN jos_rem_countries c ON c.name LIKE va.hcountry AND c.state = 1
-SET h.id_country = c.id #, h.modified = NOW()
-WHERE va.need_update = 1
+
+h.catid = va.id_cat,
+#h.year = coalesce(va.year, ''),
+#h.agent = LEFT(coalesce(va.agent, ''), 45),
+##h.image_link = coalesce(va.image_link, ''),
+#h.photos = va.fullbleedpics,
+#h.images = CONCAT_WS('','{"image_url":"',va.image_link,'","image_alt_text":"","image_caption":""}'),
+
+
+hcolonia = '',
+
+h.id_country = c.id, #pais
+h.id_lstate = s.id, #estado
+h.id_lmunicipality = coalesce(m.id, 0),  #municipio
+h.garages = va.garages,
+h.id_currency = p.id,
+
+
+h.name = va.name,
+h.description = va.description,
+h.hits = GREATEST(h.hits,va.hits),
+h.link = va.link,
+h.price = va.price,
+h.lot_size = va.lot_size,
+h.area_unit = va.area_unit,
+h.hzipcode = va.hzipcode,
+h.hlocation = LEFT(va.hlocation,254),
+h.hlatitude = va.hlatitude,
+h.hlongitude = va.hlongitude,
+h.bathrooms = va.bathrooms,
+h.bedrooms = va.bedrooms,
+h.contacts = va.adphone,
+h.state = va.is_active,
+h.modified = NOW(),
+
+va.need_update = 0
+
+WHERE 1
+AND va.is_active
+AND va.need_update
+AND va.id IS NOT NULL
+
+#sujeto de prueba
+#AND h.id = 74288
 ;
 
+#################REVISAR
+ 
+# 6) insert missing scrpng_vivanuncios2.id_hcountry to jos_rem_countries.id_va
+
 # 6) update id_lstate
-UPDATE 
-scrpng_vivanuncios va 
-INNER JOIN jos_rem_houses h ON h.id = va.id_remhouse 
-INNER JOIN jos_rem_lstates l ON l.id_country = h.id_country 
-    AND l.friendly_name LIKE va.hregion 
-SET h.id_lstate = l.id #, h.modified = NOW()
-WHERE va.need_update = 1
+UPDATE
+scrpng_vivanuncios2 va
+LEFT JOIN jos_rem_lstates l ON l.id_country = va.id_hcountry AND (l.name = va.lstate OR l.official_name = va.lstate)
+SET va.id_lstate = coalesce(l.id,0)
+WHERE 1
+AND va.is_active
+AND va.need_update
+AND va.id_hcountry = 484
 ;
 
 # 6) update id_lmunicipality
 UPDATE
-scrpng_vivanuncios va
-INNER JOIN jos_rem_houses h ON h.id = va.id_remhouse
-INNER JOIN jos_rem_lmunicipalities l ON l.id_country = h.id_country 
-    AND l.id_lstate = h.id_lstate
-    AND l.name LIKE va.hcity
-SET h.id_lmunicipality = l.id #, h.modified = NOW()
+scrpng_vivanuncios2 va
+LEFT JOIN jos_rem_lmunicipalities l ON l.id_country = va.id_hcountry AND va.id_lstate = l.id_lstate
+	AND l.name = va.lmunicipality
+SET va.id_lmunicipality = coalesce(l.id,0)
 WHERE 1
-AND h.id_country
-AND h.id_lstate
-AND va.need_update = 1
+AND va.is_active
+AND va.need_update
+AND va.id_hcountry = 484
 ;
 
-UPDATE scrpng_vivanuncios SET need_update = 0 WHERE need_update = 1;
+UPDATE scrpng_vivanuncios2 SET need_update = 0 WHERE need_update = 1;
 
 -- 
 -- En revisión, lo de abajo no lo he aprobado de nuevo.
@@ -165,3 +305,28 @@ UPDATE vivanuncios_items va
 INNER JOIN jos_rem_houses h ON h.id = va.id_remhouse
 SET h.listing_type = 0
 ;
+
+
+#relación entre catalogos y scrpng_vivanuncios2
+
+#UPDATE
+#/*
+SELECT 
+#va.id, va.id_hcountry, va.hcountry, va.id_lstate, va.lstate, va.id_lmunicipality, va.lmunicipality, va.hcolonia
+#, c.name, ls.name, lm.name
+#, va.catname, va.id_location
+COUNT(*)
+FROM 
+#*/
+scrpng_vivanuncios2 va
+LEFT JOIN jos_rem_countries c ON c.id_va != 0 AND c.id_va = va.id_hcountry
+LEFT JOIN jos_rem_lstates ls ON ls.id_va != 0 AND ls.id_va = va.id_lstate
+LEFT JOIN jos_rem_lmunicipalities lm ON lm.id_va != 0 AND lm.id_va = va.id_lmunicipality
+#SET lm.id_va = va.id_lmunicipality
+WHERE 1
+AND va.is_active
+AND va.id_remhouse IS NULL
+#AND va.id_hcountry != 0
+AND c.id IS NOT NULL
+AND ls.id IS NOT NULL
+AND lm.id IS NOT NULL

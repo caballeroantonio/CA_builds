@@ -153,11 +153,6 @@ class RemcaModelPhotoForm extends RemcaModelPhoto
 		// Include any manipulation of the data on the record e.g. expand out Registry fields
 		// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
 		
-		// Convert the images field to an array.
-		$registry = new Registry;
-		$registry->loadString($item->images);
-		$item->images = $registry->toArray();
-		$registry = null; //release memory	
 	
 				
 
@@ -261,14 +256,6 @@ class RemcaModelPhotoForm extends RemcaModelPhoto
 			return false;
 		}
 
-		// Reorder the photos so the new photo is first
-		if (empty($table->id))
-		{
-			$conditions_array = $this->getReorderConditions($table);
-			
-			$conditions = implode(' AND ', $conditions_array);				
-			$table->reorder($conditions);
-		}
 
 		// Include the realestatemanagerca plugins for the onSave events.
 		JPluginHelper::importPlugin('remca');
@@ -301,17 +288,4 @@ class RemcaModelPhotoForm extends RemcaModelPhoto
 	}
 
 
-	/**
-	* A protected method to get a set of ordering conditions.
-	*
-	* @param	object	A record object.
-	* @return	array	An array of conditions to add to add to ordering queries.
-	*/
-	protected function getReorderConditions($table)
-	{
-		$db = JFactory::getDbo();
-		
-		$condition = array();
-		return $condition;
-	}	
 }

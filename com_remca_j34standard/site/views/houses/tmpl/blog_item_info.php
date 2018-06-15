@@ -63,6 +63,13 @@ $params = $this->item->params;
 			<?php endif; ?>
 		</dd>
 	<?php endif; ?>
+	<?php if ($params->get('show_house_modified') AND $this->item->modified > 0) : ?>
+		<dd class="modified">
+			<time datetime="<?php echo JHtml::_('date', $this->item->modified, 'c'); ?>">
+				<?php echo JText::sprintf('COM_REMCA_LAST_UPDATED', JHtml::_('date',$this->item->modified, JText::_('DATE_FORMAT_LC2'))); ?>
+			</time>
+		</dd>
+	<?php endif; ?>
 	<?php if ($params->get('show_house_hits') AND !empty($this->item->hits)) : ?>
 			<dd class="hits">
 		<?php echo JText::sprintf('COM_REMCA_HITS', $this->item->hits); ?>

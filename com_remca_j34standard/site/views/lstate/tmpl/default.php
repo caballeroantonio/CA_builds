@@ -128,7 +128,7 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php $dummy = false;
 					$display_fieldset = (
 								($params->get('show_lstate_id_country')) OR 
-								($params->get('show_lstate_friendly_name')) OR 
+								($params->get('show_lstate_official_name')) OR 
 								$dummy
 								);
 			?>
@@ -149,14 +149,14 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_lstate_friendly_name')) : ?>
+						<?php if ($params->get('show_lstate_official_name')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_LSTATES_FIELD_FRIENDLY_NAME_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_LSTATES_FIELD_OFFICIAL_NAME_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->friendly_name != '' ? $this->item->friendly_name : $empty;
+									echo $this->item->official_name != '' ? $this->item->official_name : $empty;
 								?>
 							</span>
 						</div>	

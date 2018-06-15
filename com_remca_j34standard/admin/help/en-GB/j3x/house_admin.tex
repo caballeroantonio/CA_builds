@@ -14,6 +14,8 @@ id & INT(10) & PK \tabularnewline\hline
 
 
 
+  modified & DATETIME & no description \tabularnewline\hline
+  modified\_by & INT(10) & no description \tabularnewline\hline
 
   checked\_out & INT(10) & no description \tabularnewline\hline
   checked\_out\_time & DATETIME & no description \tabularnewline\hline
@@ -36,23 +38,23 @@ id & INT(10) & PK \tabularnewline\hline
 %each field
 	id\_country & INT(10) UNSIGNED  & pa\'i{}s: \tabularnewline\hline 
 	id\_lstate & INT(10) UNSIGNED  & estado: \tabularnewline\hline 
-	id\_lmunicipality & INT(10) UNSIGNED  & municipio: \tabularnewline\hline 
 	sid & INT(11) & sid: \tabularnewline\hline 
-	id\_rent & INT(10) UNSIGNED  & Rent: \tabularnewline\hline 
 	associate\_house & VARCHAR(255) & associate\_house: \tabularnewline\hline 
+	id\_lmunicipality & INT(10) UNSIGNED  & municipio: \tabularnewline\hline 
 	houseid & VARCHAR(20) & houseid: \tabularnewline\hline 
 	link & VARCHAR(250) & link: \tabularnewline\hline 
+	id\_rent & INT(10) UNSIGNED  & Rent: \tabularnewline\hline 
 	listing\_type & VARCHAR(45) & listing\_type: \tabularnewline\hline 
 	price & DECIMAL(11,2) & precio: \tabularnewline\hline 
 	id\_currency & INT(10) & moneda: \tabularnewline\hline 
 	hzipcode & VARCHAR(50) & c\'odigo postal: \tabularnewline\hline 
 	hlocation & TINYTEXT(255) & ubicaci\'on: \tabularnewline\hline 
-	hlatitude & VARCHAR(20) & latitud: \tabularnewline\hline 
-	hlongitude & VARCHAR(20) & longitud: \tabularnewline\hline 
+	hlatitude & VARCHAR(20) & latitud:vivanuncios: components.o.w[1][3].s.adDetails.location.latitude \tabularnewline\hline 
+	hlongitude & VARCHAR(20) & longitud:vivanuncios: components.o.w[1][3].s.adDetails.location.longitude \tabularnewline\hline 
 	map\_zoom & INT(10) & Map zoom: \tabularnewline\hline 
 	rooms & INT(11) & habitaciones: \tabularnewline\hline 
-	bathrooms & INT(11) & ba\~nos: \tabularnewline\hline 
-	bedrooms & INT(11) & dormitorios: \tabularnewline\hline 
+	bathrooms & VARCHAR(4) & ba\~nos: \tabularnewline\hline 
+	bedrooms & VARCHAR(4) & dormitorios: \tabularnewline\hline 
 	contacts & VARCHAR(250) & Contacts: \tabularnewline\hline 
 	listing\_status & VARCHAR(45) & listing\_status: \tabularnewline\hline 
 	property\_type & VARCHAR(45) & property\_type: \tabularnewline\hline 
@@ -62,9 +64,9 @@ id & INT(10) & PK \tabularnewline\hline
 	land\_area & VARCHAR(45) & land\_area: \tabularnewline\hline 
 	land\_area\_unit & VARCHAR(45) & land\_area\_unit: \tabularnewline\hline 
 	expiration\_date & DATETIME & expiration\_date: \tabularnewline\hline 
-	lot\_size & INT(11) & lot\_size:area del lote \tabularnewline\hline 
-	house\_size & INT(11) & house\_size:area de construcci\'on \tabularnewline\hline 
-	garages & VARCHAR(50) & cochera: \tabularnewline\hline 
+	lot\_size & INT(11) & area del lote:area del lote \tabularnewline\hline 
+	house\_size & INT(11) & area de construcci\'on:area de construcci\'on \tabularnewline\hline 
+	garages & VARCHAR(4) & cocheras: \tabularnewline\hline 
 	date & DATETIME & Date: \tabularnewline\hline 
 	edok\_link & VARCHAR(200) & edok\_link: \tabularnewline\hline 
 	owneremail & VARCHAR(50) & owneremail: \tabularnewline\hline 
@@ -81,7 +83,7 @@ id & INT(10) & PK \tabularnewline\hline
 	extra8 & VARCHAR(250) & extra8: \tabularnewline\hline 
 	extra9 & VARCHAR(250) & extra9: \tabularnewline\hline 
 	extra10 & VARCHAR(250) & extra10: \tabularnewline\hline 
-	owner\_id & INT(10) UNSIGNED  & owner\_id: \tabularnewline\hline 
 	energy\_value & DECIMAL(11,2) & energy\_value: \tabularnewline\hline 
 	climate\_value & DECIMAL(11,2) & climate\_value: \tabularnewline\hline 
+	owner\_id & INT(10) UNSIGNED  & owner\_id: \tabularnewline\hline 
 	photos & MEDIUMTEXT & fotos: \tabularnewline\hline 

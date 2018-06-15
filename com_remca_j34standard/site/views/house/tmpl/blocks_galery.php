@@ -34,8 +34,8 @@
 								<div class="rem_listing_status view_veh">
 									<?php if ($this->item->state == true) :?>Active<?php endif?>
 								</div>
-								<a href="<?= $photo ?>" data-fancybox="slider" title="photo">
-									<img alt="" title="" src="<?= $photo ?>" />
+								<a href="<?= $photo->thumbnail_img ?>" data-fancybox="slider" title="photo">
+									<img alt="" title="" src="<?= $photo->thumbnail_img ?>" />
 								</a>
 							</div>
 							
@@ -59,11 +59,11 @@
 		<div class="gallery_img">
 			<?php foreach ($this->item->photos as $photo) : ?>
 				<div class="thumbnail viewHouses" style="width: 100px; height: 100px;" >
-					<a href="<?= $photo ?>" data-fancybox="gallery" title="photo" >
+					<a href="<?= $photo->thumbnail_img ?>" data-fancybox="gallery" title="photo" >
 						<img 
 							alt="" 
 							title="" 
-							src="<?= $photo ?>" 
+							src="<?= $photo->thumbnail_img ?>" 
 							style="vertical-align:middle;" />
 					</a>
 				</div>

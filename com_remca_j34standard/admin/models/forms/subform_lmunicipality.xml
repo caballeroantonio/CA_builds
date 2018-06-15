@@ -64,6 +64,18 @@
 			default="0"
         >
         </field>  
+        <field name="id_va"
+            type="integer"
+            label="COM_REMCA_LMUNICIPALITIES_FIELD_ID_VA_LABEL"
+            description="COM_REMCA_LMUNICIPALITIES_FIELD_ID_VA_DESC"
+            class="inputbox"
+			size="1"
+			hidden="true"
+			readonly="true"
+			disabled="true"
+			default="0"
+        >
+        </field>  
     </fieldset>
     <fieldset name="publishing"
 		label="COM_REMCA_FIELDSET_PUBLISHING_LABEL"

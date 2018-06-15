@@ -185,6 +185,27 @@ class RemcaModelHouseForm extends RemcaModelHouse
 		$user_id	= $user->get('id');
 
 		// Get user name.
+		if ($item_id)
+		{
+			$db		= $this->getDbo();
+			$query	= $db->getQuery(true);		
+			// Retrieve user name(s)
+			$query->clear();
+			$query->select($db->quoteName('id').', '.$db->quoteName('name'));
+			$query->from($db->quoteName('#__users'));
+			$query->where($db->quoteName('id').' = '.$item->modified_by);
+					// Setup the query
+			$db->setQuery($query);
+
+			// Return the result
+			$modified_by_user = $db->loadObjectList();		
+			$item->modified_by_name = $modified_by_user ? $modified_by_user[0]->name : $item->modified_by;
+		}
+		else
+		{
+			// New item.
+			$item->modified_by_name = $user->name;
+		}			
 		
 		$asset	= 'com_remca.house.'.$item->id;
 

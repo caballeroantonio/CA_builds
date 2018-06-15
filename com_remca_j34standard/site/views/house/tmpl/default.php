@@ -201,12 +201,12 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php $dummy = false;
 					$display_fieldset = (
 								($params->get('show_house_id_country')) OR 
-								($params->get('show_house_id_lstate')) OR 
-								($params->get('show_house_id_lmunicipality')) OR 
 								($params->get('show_house_sid')) OR 
-								($params->get('show_house_id_rent')) OR 
+								($params->get('show_house_id_lstate')) OR 
 								($params->get('show_house_associate_house')) OR 
+								($params->get('show_house_id_lmunicipality')) OR 
 								($params->get('show_house_houseid')) OR 
+								($params->get('show_house_id_rent')) OR 
 								($params->get('show_house_link')) OR 
 								($params->get('show_house_listing_type')) OR 
 								($params->get('show_house_price')) OR 
@@ -247,9 +247,9 @@ $empty = $component->params->get('default_empty_field', '');
 								($params->get('show_house_extra8')) OR 
 								($params->get('show_house_extra9')) OR 
 								($params->get('show_house_extra10')) OR 
-								($params->get('show_house_owner_id')) OR 
 								($params->get('show_house_energy_value')) OR 
 								($params->get('show_house_climate_value')) OR 
+								($params->get('show_house_owner_id')) OR 
 								($params->get('show_house_photos')) OR 
 								$dummy
 								);
@@ -271,30 +271,6 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_house_id_lstate')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_LSTATE_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo JString::trim($this->item->s_lstate_name);
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_house_id_lmunicipality')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo JString::trim($this->item->m_lmunicipality_name);
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
 						<?php if ($params->get('show_house_sid')) : ?>
 						<div class="formelm">
 							<label>
@@ -307,14 +283,14 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_house_id_rent')) : ?>
+						<?php if ($params->get('show_house_id_lstate')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_RENT_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_LSTATE_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo JString::trim($this->item->r_rent_name);
+									echo JString::trim($this->item->s_lstate_name);
 								?>
 							</span>
 						</div>	
@@ -331,6 +307,18 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
+						<?php if ($params->get('show_house_id_lmunicipality')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo JString::trim($this->item->m_lmunicipality_name);
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
 						<?php if ($params->get('show_house_houseid')) : ?>
 						<div class="formelm">
 							<label>
@@ -339,6 +327,18 @@ $empty = $component->params->get('default_empty_field', '');
 							<span>
 								<?php
 									echo $this->item->houseid != '' ? $this->item->houseid : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_house_id_rent')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_RENT_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo JString::trim($this->item->r_rent_name);
 								?>
 							</span>
 						</div>	
@@ -835,18 +835,6 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_house_owner_id')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_OWNER_ID_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo JString::trim($this->item->u_user_name);
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
 						<?php if ($params->get('show_house_energy_value')) : ?>
 						<div class="formelm">
 							<label>
@@ -867,6 +855,18 @@ $empty = $component->params->get('default_empty_field', '');
 							<span>
 								<?php
 									echo $this->item->climate_value != '' ? $this->item->climate_value : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_house_owner_id')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_OWNER_ID_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo JString::trim($this->item->u_user_name);
 								?>
 							</span>
 						</div>	
@@ -892,6 +892,7 @@ $empty = $component->params->get('default_empty_field', '');
 		$display_fieldset = (
 							($params->get('show_house_category')) OR 
 							($params->get('show_house_parent_category') AND $this->item->parent_slug != '1:root') OR
+							($params->get('show_house_modified')) OR
 							($params->get('show_house_admin') AND $this->item->params->get('access-change')) OR							
 							$dummy
 							);
@@ -933,6 +934,16 @@ $empty = $component->params->get('default_empty_field', '');
 					</span>
 				</div>								
 			<?php endif; ?>						
+			<?php if ($params->get('show_house_modified')) : ?>
+				<div class="formelm">
+					<label>
+						<?php echo JText::_('COM_REMCA_FIELD_MODIFIED_LABEL'); ?>				
+					</label>
+					<time datetime="<?php echo JHtml::_('date', $this->item->modified, 'c'); ?>">
+						<?php echo JHtml::_('date',$this->item->modified, JText::_('DATE_FORMAT_LC2')); ?>
+					</time>
+				</div>
+			<?php endif; ?>	
 			<?php if ($params->get('access-change')): ?>
 				<?php if ($params->get('show_house_admin')) : ?>
 				

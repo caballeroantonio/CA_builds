@@ -178,17 +178,13 @@ $doc->addScript('media/com_remca/fancybox/jquery.fancybox-1.3.4.pack.js');
                 $layout,									
                 $item->params->get('keep_house_itemid')));
 		
-        $imageURL = '';
-		$item->photos = json_decode($item->photos);
-        if(isset($item->photos[0]))
-            $imageURL = $item->photos[0];
-        else
-            $imageURL = JText::_('_REALESTATE_MANAGER_NO_PICTURE_BIG');
+        if($item->images['image_url'] == '')
+            $item->images['image_url'] = JText::_('_REALESTATE_MANAGER_NO_PICTURE_BIG');
       ?>
       <div class="okno_R" id="block<?php echo $item->id ?>">
         <div id="divamage" style = "position: relative; text-align:center;"> 
             <a href="<?= $link ?>" style="text-decoration: none">
-                <img alt="<?php echo $item->name ?>" title="<?php echo $item->name ?>" src="<?= $imageURL ?>" border="0" class="little" /> 
+                <img alt="<?php echo $item->name ?>" title="<?php echo $item->name ?>" src="<?= $item->images['image_url'] ?>" border="0" class="little" /> 
             </a>
           <div class="rem_listing_status"><?= JText::_('REMCA_LISTING_STATUS'.$item->state) ?></div>
 

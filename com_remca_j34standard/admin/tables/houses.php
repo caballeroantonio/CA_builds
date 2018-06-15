@@ -56,6 +56,8 @@ class RemcaTableHouses extends JTable
 		$user = JFactory::getUser();	
 		
 
+		$this->modified = $date->toSQL();
+		$this->modified_by = $user->id;	
 
 
 		JTableObserverContenthistory::createObserver($this, array('typeAlias' => 'com_remca.house'));
@@ -205,6 +207,9 @@ class RemcaTableHouses extends JTable
 		$user	= JFactory::getUser();
 		
 
+		// Existing item
+		$this->modified		= $date->toSQL();
+		$this->modified_by	= $user->get('id');		
 
 
 

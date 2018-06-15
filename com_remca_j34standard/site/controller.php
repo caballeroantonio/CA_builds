@@ -121,7 +121,6 @@ edité el menú login para que hiciera redirect a este componente
 			'filter_lmunicipality_order'=>'CMD','filter_lmunicipality_order_Dir'=>'CMD','lmunicipality-filter-search'=>'STRING',
 			'filter_lstate_order'=>'CMD','filter_lstate_order_Dir'=>'CMD','lstate-filter-search'=>'STRING',
 			'filter_country_order'=>'CMD','filter_country_order_Dir'=>'CMD','country-filter-search'=>'STRING',
-			'filter_config_order'=>'CMD','filter_config_order_Dir'=>'CMD','config-filter-search'=>'STRING',
 			'print'=>'BOOLEAN','lang'=>'CMD', 'Itemid'=>'INT');
 
 		parent::display($cachable,$safe_url_params);

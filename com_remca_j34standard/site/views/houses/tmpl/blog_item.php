@@ -143,6 +143,7 @@ $images = $this->item->images;
 	$use_def_list = (
 		($params->get('show_house_category')) OR 
 		($params->get('show_house_parent_category') AND $this->item->parent_slug != '1:root') OR 
+		($params->get('show_house_modified')) OR 
 		($params->get('show_house_hits')) OR
 		$dummy
 	);

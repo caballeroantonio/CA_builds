@@ -86,6 +86,27 @@
             addfieldpath="/administrator/components/com_categories/models/fields"
 		/>
         <field
+            id="modified"
+            name="modified"
+            type="calendar"
+			label="COM_REMCA_FIELD_MODIFIED_LABEL"
+			description="COM_REMCA_HOUSES_FIELD_MODIFIED_DESC"
+            class="readonly"
+			size="22"
+			readonly="true"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc"
+		/>
+        <field
+            id="modified_by"
+            name="modified_by"
+            type="user"
+		    label="COM_REMCA_FIELD_MODIFIED_BY_LABEL"
+		    class="readonly"
+		    readonly="true"
+		    filter="unset"
+		/>
+        <field
             id="state"
             name="state"
             type="list"
@@ -174,26 +195,7 @@
             label="COM_REMCA_HOUSES_FIELD_ID_COUNTRY_LABEL"
             description="COM_REMCA_HOUSES_FIELD_ID_COUNTRY_DESC"
             class="modal"
-			default="0"
-        >
-        </field>  
-        <field
-            id="id_lstate"
-            name="id_lstate"
-            type="modal_lstates"
-            label="COM_REMCA_HOUSES_FIELD_ID_LSTATE_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_ID_LSTATE_DESC"
-            class="modal"
-			default="0"
-        >
-        </field>  
-        <field
-            id="id_lmunicipality"
-            name="id_lmunicipality"
-            type="modal_lmunicipalities"
-            label="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_DESC"
-            class="modal"
+			required="true"
 			default="0"
         >
         </field>  
@@ -209,14 +211,13 @@
         >
         </field>  
         <field
-            id="id_rent"
-            name="id_rent"
-            type="modal_rents"
-            label="COM_REMCA_HOUSES_FIELD_ID_RENT_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_ID_RENT_DESC"
+            id="id_lstate"
+            name="id_lstate"
+            type="modal_lstates"
+            label="COM_REMCA_HOUSES_FIELD_ID_LSTATE_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_ID_LSTATE_DESC"
             class="modal"
 			default="0"
-			type_alias="com_remca.rent" 
         >
         </field>  
         <field
@@ -231,6 +232,16 @@
         >
         </field>  
         <field
+            id="id_lmunicipality"
+            name="id_lmunicipality"
+            type="modal_lmunicipalities"
+            label="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_DESC"
+            class="modal"
+			default="0"
+        >
+        </field>  
+        <field
             id="houseid"
             name="houseid"
             type="text"
@@ -239,6 +250,17 @@
             class="inputbox"
 			size="50"
 			maxlength="255"
+        >
+        </field>  
+        <field
+            id="id_rent"
+            name="id_rent"
+            type="modal_rents"
+            label="COM_REMCA_HOUSES_FIELD_ID_RENT_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_ID_RENT_DESC"
+            class="modal"
+			default="0"
+			type_alias="com_remca.rent" 
         >
         </field>  
         <field
@@ -282,7 +304,7 @@
             description="COM_REMCA_HOUSES_FIELD_ID_CURRENCY_DESC"
             class="inputbox validate-numeric"
 			size="1"
-			query="SELECT id, CONCAT_WS(' - ', iso2, currency) 'currency' FROM #__rem_countries WHERE published_cur"
+			query="SELECT id, currency FROM #__rem_countries WHERE published_cur"
 			key_field="id"
 			value_field="currency"
         >
@@ -316,9 +338,11 @@
             type="text"
             label="COM_REMCA_HOUSES_FIELD_HLATITUDE_LABEL"
             description="COM_REMCA_HOUSES_FIELD_HLATITUDE_DESC"
-            class="inputbox"
+            class="inputbox validate-numeric"
 			size="50"
 			maxlength="255"
+			required="true"
+			default="0"
         >
         </field>  
         <field
@@ -327,9 +351,11 @@
             type="text"
             label="COM_REMCA_HOUSES_FIELD_HLONGITUDE_LABEL"
             description="COM_REMCA_HOUSES_FIELD_HLONGITUDE_DESC"
-            class="inputbox"
+            class="inputbox validate-numeric"
 			size="50"
 			maxlength="255"
+			required="true"
+			default="0"
         >
         </field>  
         <field
@@ -341,6 +367,7 @@
             class="inputbox validate-numeric"
 			size="50"
 			maxlength="255"
+			required="true"
 			default="14"
         >
         </field>  
@@ -362,7 +389,7 @@
             type="text"
             label="COM_REMCA_HOUSES_FIELD_BATHROOMS_LABEL"
             description="COM_REMCA_HOUSES_FIELD_BATHROOMS_DESC"
-            class="inputbox validate-numeric"
+            class="inputbox"
 			size="1"
 			maxlength="255"
 			default="0"
@@ -374,7 +401,7 @@
             type="text"
             label="COM_REMCA_HOUSES_FIELD_BEDROOMS_LABEL"
             description="COM_REMCA_HOUSES_FIELD_BEDROOMS_DESC"
-            class="inputbox validate-numeric"
+            class="inputbox"
 			size="1"
 			maxlength="255"
 			default="0"
@@ -695,17 +722,6 @@
         >
         </field>  
         <field
-            id="owner_id"
-            name="owner_id"
-            type="modal_jusers"
-            label="COM_REMCA_HOUSES_FIELD_OWNER_ID_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_OWNER_ID_DESC"
-            class="modal"
-			default="0"
-			type_alias="com_remca.user" 
-        >
-        </field>  
-        <field
             id="energy_value"
             name="energy_value"
             type="currency"
@@ -725,6 +741,17 @@
             class="inputbox"
 			size="1"
 			default="0"
+        >
+        </field>  
+        <field
+            id="owner_id"
+            name="owner_id"
+            type="modal_jusers"
+            label="COM_REMCA_HOUSES_FIELD_OWNER_ID_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_OWNER_ID_DESC"
+            class="modal"
+			default="0"
+			type_alias="com_remca.user" 
         >
         </field>  
         <field

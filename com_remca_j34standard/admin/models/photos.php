@@ -55,7 +55,6 @@ class RemcaModelPhotos extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
-				'ordering', 'a.ordering',				
 			);
 
 			$assoc = JLanguageAssociations::isEnabled();
@@ -183,11 +182,6 @@ class RemcaModelPhotos extends JModelList
 		
 		
 
-		// Filter by and return name for id_house level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
-		$query->select($db->quoteName('h.name').' AS h_house_name');
-		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
-
-		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
 		
 				
 		// Add the list ordering clause.
@@ -197,12 +191,6 @@ class RemcaModelPhotos extends JModelList
 		
 
 
-		if ($this->getState('list.ordering') == 'a.ordering' OR $this->getState('list.ordering') == 'ordering')
-		{
-			$order_col	= '';
-			$order_col	.= $db->quoteName('a.ordering').' '.$order_dirn;		
-			
-		}
 		
 		if ($order_col == '' AND $this->getState('list.ordering') != '')
 		{
@@ -237,11 +225,6 @@ class RemcaModelPhotos extends JModelList
 			{
 				$query->clear();
 							
-				// Convert the images field to an array.
-				$registry = new Registry;
-				$registry->loadString($item->images);
-				$item->images = $registry->toArray();
-				$registry = null; //release memory	
 
 							
 			}

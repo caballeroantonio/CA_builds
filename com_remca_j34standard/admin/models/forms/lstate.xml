@@ -84,13 +84,25 @@
 			default="0"
         >
         </field>  
-        <field name="friendly_name"
+        <field name="official_name"
             type="text"
-            label="COM_REMCA_LSTATES_FIELD_FRIENDLY_NAME_LABEL"
-            description="COM_REMCA_LSTATES_FIELD_FRIENDLY_NAME_DESC"
+            label="COM_REMCA_LSTATES_FIELD_OFFICIAL_NAME_LABEL"
+            description="COM_REMCA_LSTATES_FIELD_OFFICIAL_NAME_DESC"
             class="inputbox"
 			size="50"
 			maxlength="255"
+        >
+        </field>  
+        <field name="id_va"
+            type="integer"
+            label="COM_REMCA_LSTATES_FIELD_ID_VA_LABEL"
+            description="COM_REMCA_LSTATES_FIELD_ID_VA_DESC"
+            class="inputbox"
+			size="1"
+			hidden="true"
+			readonly="true"
+			disabled="true"
+			default="0"
         >
         </field>  
     </fieldset>

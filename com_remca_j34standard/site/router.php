@@ -795,30 +795,6 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'config':
-					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
-					{
-						if($advanced)
-						{
-							list($tmp, $id) = explode(':', $query['id'], 2);
-						}
-						else
-						{
-							$id = isset($query['id']) ? $query['id'] : null;
-						}
-						$segments[] = $view;					
-						$segments[] = $id;
-					}
-					unset($query['view']);				
-					unset($query['id']);
-					break;
-				case 'configs':
-					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
-					{
-						$segments[] = $view;											
-					}
-					unset($query['view']);				
-					break;					
 				default:
 					break;	
 			}
@@ -1498,30 +1474,6 @@ class RemcaRouter extends JComponentRouterBase
 					$vars['view'] = $view;
 				}
 				if ($item->query['view'] == 'countries'OR $view == 'countries')
-				{
-					$vars['view'] = $view;
-				}				
-				if ($item->query['view'] == 'config' OR $view == 'config')
-				{
-					if($advanced)
-					{
-						$db = JFactory::getDbo();
-							
-						$query = $db->getQuery(true);
-						$query->select($db->quoteName('id'));
-						$query->from($db->quoteName('#__rem_configs'));
-								
-						$db->setQuery($query);
-						$nid = $db->loadResult();
-					}
-					else
-					{
-						$nid = $segment;
-					}
-					$vars['id'] = $nid;
-					$vars['view'] = $view;
-				}
-				if ($item->query['view'] == 'configs'OR $view == 'configs')
 				{
 					$vars['view'] = $view;
 				}				

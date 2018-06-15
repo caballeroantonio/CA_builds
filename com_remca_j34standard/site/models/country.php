@@ -63,6 +63,7 @@ class RemcaModelCountry extends JModelItem
 				'currency','a.currency',
 				'conversion','a.conversion',
 				'conversion_date','a.conversion_date',
+				'id_va','a.id_va',
 				'state', 'a.state',
 				'ordering', 'a.ordering',
 				);
@@ -190,6 +191,7 @@ class RemcaModelCountry extends JModelItem
 				// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
 			
 
+				
 				
 				
 				

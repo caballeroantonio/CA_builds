@@ -100,6 +100,10 @@ $input = $app->input;
 			</div>				
 			<?php echo JHtml::_('bootstrap.endTab'); ?>
 			<?php echo JHtml::_('bootstrap.addTab', 'house-tabs', 'publishing', JText::_('COM_REMCA_FIELDSET_PUBLISHING_LABEL', true)); ?>
+				<?php if ($this->item->modified_by) : ?>
+					<?php echo $this->form->renderField('modified_by', null, null, array('group_id' => 'field_modified_by')); ?>
+					<?php echo $this->form->renderField('modified', null, null, array('group_id' => 'field_modified')); ?>
+				<?php endif; ?>
                     <?php
 						$user  = JFactory::getUser();
 						if (

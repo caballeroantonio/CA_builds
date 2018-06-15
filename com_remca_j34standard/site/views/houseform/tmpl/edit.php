@@ -161,6 +161,21 @@ $params = $this->state->get('params');
  <?php */?>                       
 						<?php echo $this->form->renderField('featured', null, null, array('group_id' => 'featured')); ?>
 <?php /*?>
+						<?php if ($this->item->modified_by) : ?>
+							<?php $user = '' ?>
+							<?php $user =  $this->item->modified_by ?>
+							<?php $user = ($this->item->modified_by_name ? $this->item->modified_by_name : $user);?>								
+							<?php $user = JHtml::_(
+														'link',
+														JRoute::_('index.php?option=com_users&view=profile&id='.$this->item->modified_by),
+														$user);
+							?>
+
+							<?php echo $this->form->renderField('modified_by', null, null, array('group_id' => 'modified_by', 'user' => $user)); ?>							
+							
+							<?php echo $this->form->renderField('modified', null, null, array('group_id' => 'modified')); ?>						
+
+						<?php endif; ?>
 						<?php if (!is_null($this->item->id)):?>
 							<?php echo $this->form->renderField('ordering', null, null, array('group_id' => 'ordering')); ?>						
 						<?php else: ?>

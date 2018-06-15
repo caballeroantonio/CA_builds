@@ -64,12 +64,12 @@ class RemcaModelHouse extends JModelItem
 				'm_lmunicipality_name', 'm.lmunicipality_name',
 				'id_country','a.id_country',
 				'id_lstate','a.id_lstate',
-				'id_lmunicipality','a.id_lmunicipality',
 				'sid','a.sid',
-				'id_rent','a.id_rent',
 				'associate_house','a.associate_house',
+				'id_lmunicipality','a.id_lmunicipality',
 				'houseid','a.houseid',
 				'link','a.link',
+				'id_rent','a.id_rent',
 				'listing_type','a.listing_type',
 				'price','a.price',
 				'id_currency','a.id_currency',
@@ -109,9 +109,9 @@ class RemcaModelHouse extends JModelItem
 				'extra8','a.extra8',
 				'extra9','a.extra9',
 				'extra10','a.extra10',
-				'owner_id','a.owner_id',
 				'energy_value','a.energy_value',
 				'climate_value','a.climate_value',
+				'owner_id','a.owner_id',
 				'photos','a.photos',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
@@ -288,6 +288,8 @@ class RemcaModelHouse extends JModelItem
 								$db->quoteName('parent.path').' AS parent_route'
 				);
 				$query->join('LEFT', $db->quoteName('#__categories').' AS parent ON '.$db->quoteName('parent.id').' = '.$db->quoteName('c.parent_id'));				
+				$query->select($db->quoteName('uam.name').' AS modified_by_name');
+				$query->join('LEFT', $db->quoteName('#__users').' AS uam on '.$db->quoteName('uam.id').' = '.$db->quoteName('a.modified_by'));
 				
 				
 				// Join over the language
@@ -373,7 +375,7 @@ class RemcaModelHouse extends JModelItem
 				
 				if (isset($item->id_currency) AND $item->id_currency !='')
 				{
-					$sql = 'SELECT '.$db->quoteName('list.currency').' AS value FROM (SELECT id, CONCAT_WS(\' - \', iso2, currency) \'currency\' FROM #__rem_countries WHERE published_cur) AS list';
+					$sql = 'SELECT '.$db->quoteName('list.currency').' AS value FROM (SELECT id, currency FROM #__rem_countries WHERE published_cur) AS list';
 					$sql .= ' WHERE '.$db->quoteName('list.id').' IN ('.JString::trim($item->id_currency, ',').');';
 					$db->setQuery($sql);				
 					$item->id_currency = $db->loadResult();
@@ -419,6 +421,7 @@ class RemcaModelHouse extends JModelItem
 				
 				
 				
+					$item->photos = json_decode($item->photos);
 		
 
 							

@@ -780,36 +780,6 @@ abstract class RemcaHelperRoute
 
 		return $link;
 	}
-	/**
-	 * @param	integer	The route of the Config
-	 */
-	public static function getConfigRoute($id, $layout = 'default', $keep_item_id = false)
-	{
-		$needles = array(
-			'config'  => array((int) $id)
-		);
-		// Remove lead string from the form field value
-		$layout = str_replace('_:', '', $layout);	
-				
-		if ($layout == '' OR $layout == 'default')
-		{
-			//Create the link
-			$link = 'index.php?option=com_remca&view=config&id='. $id;
-		}
-		else
-		{
-			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=config&layout='.$layout.'&id='. $id;
-		}
-
-		
-		if ($item = self::findItem($needles, $keep_item_id, $layout))
-		{
-			$link .= '&Itemid='.$item;
-		}
-
-		return $link;
-	}
 		//se está repitiendo
 	public static function getCategoryRoute_($cat_id, $keep_item_id = false, $language = 0)
 	{

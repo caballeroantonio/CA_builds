@@ -309,6 +309,7 @@
 #gallery_rem #divamage img {
   width: 100%;
   height: auto;
+  max-height: 200px;
 }
 #gallery_rem a {
   display: block;

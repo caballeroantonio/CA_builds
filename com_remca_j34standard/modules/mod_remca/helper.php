@@ -92,6 +92,7 @@ abstract class ModRemcaHelper
 		if (JString::strtolower($component_object_names[1]) == JString::substr($params->get('ordering'),0,JString::strlen($params->get('ordering'))-6))
 		{
 			$order_map = array(
+				'houses m_dsc' => 'a.modified',
 				'houses h_dsc' => 'a.hits',
 				'houses n_asc' => 'a.name',
 				'houses n_dsc' => 'a.name',

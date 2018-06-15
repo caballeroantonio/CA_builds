@@ -82,6 +82,28 @@ function getFields(){
 
     */
     $fields['id_country'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'id va',
+        'FIELD_CODE_NAME' => 'id_va',
+        'FIELD_DESCRIPTION' => 'vivanuncios id',//vivanuncios id
+        'FIELDTYPE_ID' => 22,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ID_VA
+                FIELD_INTRO=vivanuncios id
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' id va
+
+                FIELD_NAME_LATEX=id va
+                FIELD_CODE_NAME_LATEX=id\_va
+                FIELD_DBCOMMENT_LATEX=vivanuncios id
+
+
+    */
+    $fields['id_va'] = $field;
     return $fields;
 }
 

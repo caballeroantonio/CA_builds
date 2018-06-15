@@ -71,6 +71,7 @@ abstract class ModHousesHelper
 		$model->setState('filter.language', JLanguageMultilang::isEnabled());
 		
 		$order_map = array(
+			'm_dsc' => 'a.modified',
 			'h_dsc' => 'a.hits',
 			'n_asc' => 'a.name',
 			'n_dsc' => 'a.name',
