@@ -99,20 +99,20 @@ Colocar cada script en el contexto (template) en que se utilice
 	        document.getElementById('customer_name_warning').innerHTML =
 	         "Please enter name!";
 	        document.getElementById('customer_name_warning').style.color = "red";
-	        document.getElementById('alert_name_buy').style.borderColor = "red";
-	        document.getElementById('alert_name_buy').style.color = "red";
+	        form.customer_name.style.borderColor = "red";
+	        form.customer_name.style.color = "red";
 	    } else if (form.customer_email.value == ""|| !isValidEmail(form.customer_email.value)) {
 	        document.getElementById('customer_email_warning').innerHTML =
 	         "Please enter e-mail!";
 	        document.getElementById('customer_email_warning').style.color = "red";
-	        document.getElementById('alert_mail_buy').style.borderColor = "red";
-	        document.getElementById('alert_mail_buy').style.color = "red";
+	        form.customer_email.style.borderColor = "red";
+	        form.customer_email.style.color = "red";
 	    } else if (!isValidPhoneNumber(form.customer_phone.value)){
 	        document.getElementById('customer_phone_warning').innerHTML =
 	         "Phone";
 	        document.getElementById('customer_phone_warning').style.color = "red";
-	        document.getElementById('customer_phone').style.borderColor = "red";
-	        document.getElementById('customer_phone').style.color = "red";
+	        form.customer_phone.style.borderColor = "red";
+	        form.customer_phone.style.color = "red";
 	    } else {
 	        form.submit();
 	    }

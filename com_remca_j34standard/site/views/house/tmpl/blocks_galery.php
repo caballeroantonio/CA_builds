@@ -6,12 +6,8 @@
 		<span class="col_text_2"><?= $this->item->name ?></span>
 		<div class="rem_house_price">
 			<div class="pricemoney">
-				<span class="money"><?= $this->item->price ?></span><span class="price">&nbsp;<?= $this->item->id_currency ?></span>
+				<span class="money"><?= number_format($this->item->price, 2, '.', ',') ?></span><span class="price">&nbsp;<?= $this->item->id_currency ?></span>
 			</div>
-			<!--
-			<div class="pricemoney"><span class="money">1.958,00</span><span class="price">&nbsp;EUR</span></div>
-			<div class="pricemoney"><span class="money">2.640,00</span><span class="price">&nbsp;CAD</span></div>
-			-->
 		</div>
 	</div>
 	<div style="clear:both"></div>

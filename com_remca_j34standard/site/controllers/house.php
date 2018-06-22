@@ -710,4 +710,16 @@ class RemcaControllerHouse extends JControllerForm
             $this->setRedirect('index.php?option=com_contenthistory&view=history&layout=modal&tmpl=component'
                     . "&item_id={$item_id}&type_id={$typeId}&type_alias={$model->typeAlias}&{$token}=1");
         }
+		
+        function rent_request(){
+                $data  = $this->input->post->get('jform', array(), 'array');
+                $model = JModelLegacy::getInstance('BuyingRequestForm','RemcaModel', array('ignore_request' => FALSE));
+                if (!$model->save($data)) {
+                    $this->setMessage(JText::sprintf('JLIB_APPLICATION_ERROR_SAVE_FAILED', $model->getError()), 'warning');
+                    $this->setRedirect($_SERVER['HTTP_REFERER']);
+                }else{
+                    $this->setMessage(JText::_('REMCA_RENT_REQUEST_THANKS'));
+                    $this->setRedirect($_SERVER['HTTP_REFERER']);
+                }
+        }
 }

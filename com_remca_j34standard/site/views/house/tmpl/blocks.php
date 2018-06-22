@@ -1,7 +1,7 @@
 <?php 	
 $show_calendar = false;
 $show_reviews = false;
-$show_book = false;
+$show_book = true;
 $show_amenities = false;
 $show_properties = false;
 

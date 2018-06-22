@@ -98,10 +98,12 @@ $empty = $component->params->get('default_empty_field', '');
 				<?php if ($this->params->get('show_house_filter_field') != '' AND $this->params->get('show_house_filter_field') != 'hide') :?>
 					<input type="text" name="filter_search" id="filter_search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_REMCA_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_REMCA_'.$this->params->get('show_house_filter_field').'_FILTER_LABEL'); ?>" />
 				<?php endif; ?>	
+				<?php if ($this->params->get('show_house_category',1)) : ?>
 				<select name="filter_category_id" onchange="this.form.submit()">
 					<option value=""><?php echo JText::_('JOPTION_SELECT_CATEGORY');?></option>
 					<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_remca'), 'value', 'text', $this->state->get('filter.category_id'));?>
 				</select>
+				<?php endif; ?>	
 				<?php if ($this->params->get('list_show_house_id_country',1)) : ?>
 					<select name="filter_id_country" onchange="this.form.submit()">
 					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_C1_COUNTRY');?></option>
@@ -202,14 +204,22 @@ $doc->addScript('media/com_remca/fancybox/jquery.fancybox-1.3.4.pack.js');
           </div>
           <div style="clear: both;"></div>
           <div class="rem_type_Allhouses">
+            <?php if($item->lot_size):?>
             <div class="row_text"> <i class="fa fa-expand"></i> <span class="col_text_2"><?php echo $item->lot_size ?> m2</span> </div>
+            <?php endif; ?>
+            <?php if($item->rooms):?>
             <div class="row_text"> <i class="fa fa-building-o"></i> <span class="col_text_1"><?=JText::_('COM_REMCA_HOUSES_FIELD_ROOMS_LABEL')?>:</span> <span class="col_text_2"><?php echo $item->rooms ?></span> </div>
+            <?php endif; ?>
+            <?php if($item->year):?>
             <div class="row_text"> <i class="fa fa-calendar"></i> <span class="col_text_1"><?=JText::_('COM_REMCA_HOUSES_FIELD_YEAR_LABEL')?>:</span> <span class="col_text_2"><?php echo $item->year ?></span> </div>
+            <?php endif; ?>
+            <?php if($item->bedrooms):?>
             <div class="row_text"> <i class="fa fa-inbox"></i> <span class="col_text_1"><?=JText::_('COM_REMCA_HOUSES_FIELD_BEDROOMS_LABEL')?>:</span> <span class="col_text_2"><?php echo $item->bedrooms ?></span> </div>
+            <?php endif; ?>
           </div>
         </div>
         <div class="rem_house_viewlist"> <a href="<?= $link ?>" style="display: block">
-          <div class="price"><?php echo $item->price ?> <?= $item->id_currency ?></div>
+          <div class="price"><?php echo number_format($item->price, 2, '.', ',') ?> <?= $item->id_currency ?></div>
           <span><?=JText::_('JDETAILS')?></span> </a>
           <div style="clear: both;"></div>
         </div>
