@@ -81,6 +81,48 @@
             <option value="">COM_REMCA_HOUSES_SELECT_M_LMUNICIPALITY</option>
         </field>
         <field
+			name="price"
+			type="sql"
+			label="COM_REMCA_FILTER_PRICE_LABEL"
+			description="COM_REMCA_FILTER_PRICE_DESC"
+			onchange="this.form.submit();"
+			query="SELECT DISTINCT `a`.`PRICE` AS `value`, `a`.`PRICE` AS `text`
+		            FROM `#__rem_houses` AS `a` 
+		            ORDER BY `a`.`PRICE`"
+			key_field="value"
+			value_field="text"
+		>
+            <option value="">COM_REMCA_HOUSES_SELECT_PRICE</option>
+        </field>
+        <field
+			name="bathrooms"
+			type="sql"
+			label="COM_REMCA_FILTER_BATHROOMS_LABEL"
+			description="COM_REMCA_FILTER_BATHROOMS_DESC"
+			onchange="this.form.submit();"
+			query="SELECT DISTINCT `a`.`BATHROOMS` AS `value`, `a`.`BATHROOMS` AS `text`
+		            FROM `#__rem_houses` AS `a` 
+		            ORDER BY `a`.`BATHROOMS`"
+			key_field="value"
+			value_field="text"
+		>
+            <option value="">COM_REMCA_HOUSES_SELECT_BATHROOMS</option>
+        </field>
+        <field
+			name="bedrooms"
+			type="sql"
+			label="COM_REMCA_FILTER_BEDROOMS_LABEL"
+			description="COM_REMCA_FILTER_BEDROOMS_DESC"
+			onchange="this.form.submit();"
+			query="SELECT DISTINCT `a`.`BEDROOMS` AS `value`, `a`.`BEDROOMS` AS `text`
+		            FROM `#__rem_houses` AS `a` 
+		            ORDER BY `a`.`BEDROOMS`"
+			key_field="value"
+			value_field="text"
+		>
+            <option value="">COM_REMCA_HOUSES_SELECT_BEDROOMS</option>
+        </field>
+        <field
 			name="state"
 			type="status"
 			label="COM_REMCA_FILTER_STATUS_LABEL"
@@ -129,6 +171,12 @@
             <option value="s_lstate_name DESC">COM_REMCA_HOUSES_FIELD_ID_LSTATE_SORT_DESC_LABEL</option>
             <option value="m_lmunicipality_name ASC">COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_SORT_ASC_LABEL</option>
             <option value="m_lmunicipality_name DESC">COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_SORT_DESC_LABEL</option>
+            <option value="a.price ASC">COM_REMCA_HOUSES_FIELD_PRICE_SORT_ASC_LABEL</option>
+            <option value="a.price DESC">COM_REMCA_HOUSES_FIELD_PRICE_SORT_DESC_LABEL</option>
+            <option value="a.bathrooms ASC">COM_REMCA_HOUSES_FIELD_BATHROOMS_SORT_ASC_LABEL</option>
+            <option value="a.bathrooms DESC">COM_REMCA_HOUSES_FIELD_BATHROOMS_SORT_DESC_LABEL</option>
+            <option value="a.bedrooms ASC">COM_REMCA_HOUSES_FIELD_BEDROOMS_SORT_ASC_LABEL</option>
+            <option value="a.bedrooms DESC">COM_REMCA_HOUSES_FIELD_BEDROOMS_SORT_DESC_LABEL</option>
 			<option value="a.state ASC">JSTATUS_ASC</option>
 			<option value="a.state DESC">JSTATUS_DESC</option>
 			<option value="category_title ASC">JCATEGORY_ASC</option>

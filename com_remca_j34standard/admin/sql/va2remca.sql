@@ -228,7 +228,7 @@ h.id_currency = p.id,
 
 
 h.name = va.name,
-h.description = va.description,
+#h.description = va.description,#agregar geocode x python
 h.hits = GREATEST(h.hits,va.hits),
 h.link = va.link,
 h.price = va.price,

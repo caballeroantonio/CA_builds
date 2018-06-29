@@ -41,6 +41,9 @@ class RemcaViewHouses extends JViewLegacy
 	protected $countries;
 	protected $lstates;
 	protected $lmunicipalities;
+	protected $price_values;
+	protected $bathrooms_values;
+	protected $bedrooms_values;
 
 	/**
 	 * Execute and display a template script.

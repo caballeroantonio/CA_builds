@@ -94,7 +94,11 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php if (($this->params->get('show_ordersdetail_filter_field') != '' AND $this->params->get('show_ordersdetail_filter_field') != 'hide')) :?>
 			<div class="filter-search">
 				<?php if ($this->params->get('show_ordersdetail_filter_field') != '' AND $this->params->get('show_ordersdetail_filter_field') != 'hide') :?>
+                <div class="input-append">
 					<input type="text" name="filter_search" id="filter_search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_REMCA_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_REMCA_'.$this->params->get('show_ordersdetail_filter_field').'_FILTER_LABEL'); ?>" />
+                    <button type="submit" class="btn hasTooltip" title="" data-original-title="<?= JText::_('JSEARCH_FILTER_SUBMIT') ?>"> <i class="icon-search"></i> </button>
+				</div>
+                <!--<button type="button" class="btn hasTooltip js-stools-btn-clear" title="" data-original-title="<?= JText::_('JSEARCH_FILTER_CLEAR') ?>"><?= JText::_('JSEARCH_FILTER_CLEAR') ?></button>-->
 				<?php endif; ?>	
 			</div>
 		<?php endif; ?>
@@ -427,7 +431,7 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php if ($this->params->get('show_ordersdetail_add_link', 1)) : ?>
 			<?php echo JHtml::_('ordersdetailicon.create', $this->params); ?>
 		<?php endif; ?>		
-                <?php echo '<button>export</button>'//JHtml::_('ordersdetailicon.create', $this->params); ?>
+
 	</form>
 </div>
 

@@ -96,12 +96,18 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php if (($this->params->get('show_house_filter_field') != '' AND $this->params->get('show_house_filter_field') != 'hide')) :?>
 			<div class="filter-search">
 				<?php if ($this->params->get('show_house_filter_field') != '' AND $this->params->get('show_house_filter_field') != 'hide') :?>
+                <div class="input-append">
 					<input type="text" name="filter_search" id="filter_search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_REMCA_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_REMCA_'.$this->params->get('show_house_filter_field').'_FILTER_LABEL'); ?>" />
+                    <button type="submit" class="btn hasTooltip" title="" data-original-title="<?= JText::_('JSEARCH_FILTER_SUBMIT') ?>"> <i class="icon-search"></i> </button>
+				</div>
+                <!--<button type="button" class="btn hasTooltip js-stools-btn-clear" title="" data-original-title="<?= JText::_('JSEARCH_FILTER_CLEAR') ?>"><?= JText::_('JSEARCH_FILTER_CLEAR') ?></button>-->
 				<?php endif; ?>	
+				<?php if ($this->params->get('show_house_category',1)) : ?>
 				<select name="filter_category_id" onchange="this.form.submit()">
 					<option value=""><?php echo JText::_('JOPTION_SELECT_CATEGORY');?></option>
 					<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_remca'), 'value', 'text', $this->state->get('filter.category_id'));?>
 				</select>
+				<?php endif; ?>	
 				<?php if ($this->params->get('list_show_house_id_country',1)) : ?>
 					<select name="filter_id_country" onchange="this.form.submit()">
 					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_C1_COUNTRY');?></option>
@@ -118,6 +124,22 @@ $empty = $component->params->get('default_empty_field', '');
 					<select name="filter_id_lmunicipality" onchange="this.form.submit()">
 					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_M_LMUNICIPALITY');?></option>
 					<?php echo JHtml::_('select.options', $this->lmunicipalities, 'value', 'text', $this->state->get('filter.id_lmunicipality'));?>
+					</select>
+				<?php endif; ?>	
+				<?php if ($this->params->get('list_show_house_price',1)) : ?>
+					<input name="filter_price_lt" id="filter_price_lt" value="<?= $this->state->get('filter.price_lt') ?>" title="<?php echo JText::_('COM_REMCA_HOUSES_SELECT_PRICE');?>" placeholder="min" type="number">
+					<input name="filter_price_gt" id="filter_price_gt" value="<?= $this->state->get('filter.price_gt') ?>" title="<?php echo JText::_('COM_REMCA_HOUSES_SELECT_PRICE');?>" placeholder="max" type="number">
+				<?php endif; ?>	
+				<?php if ($this->params->get('list_show_house_bathrooms',1)) : ?>
+					<select name="filter_bathrooms" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_BATHROOMS');?></option>
+					<?php echo JHtml::_('select.options', $this->bathrooms_values, 'value', 'text', $this->state->get('filter.bathrooms'));?>
+					</select>
+				<?php endif; ?>	
+				<?php if ($this->params->get('list_show_house_bedrooms',1)) : ?>
+					<select name="filter_bedrooms" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_BEDROOMS');?></option>
+					<?php echo JHtml::_('select.options', $this->bedrooms_values, 'value', 'text', $this->state->get('filter.bedrooms'));?>
 					</select>
 				<?php endif; ?>	
 			</div>
@@ -933,7 +955,7 @@ $empty = $component->params->get('default_empty_field', '');
 				<?php echo JHtml::_('houseicon.create', $this->params); ?>
 			<?php  endif; ?>
 		<?php endif; ?>		
-                <?php echo '<button>export</button>'//JHtml::_('houseicon.create', $this->params); ?>
+
 	</form>
 </div>
 

@@ -62,7 +62,11 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php if (($this->params->get('show_house_filter_field') != '' AND $this->params->get('show_house_filter_field') != 'hide') OR $this->params->get('show_house_pagination_limit')) :?>
 			<div class="filter-search">
 				<?php if ($this->params->get('show_house_filter_field') != '' AND $this->params->get('show_house_filter_field') != 'hide') :?>
+                <div class="input-append">
 					<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_REMCA_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_REMCA_'.$this->params->get('show_house_filter_field').'_FILTER_LABEL'); ?>" />
+                    <button type="submit" class="btn hasTooltip" title="" data-original-title="<?= JText::_('JSEARCH_FILTER_SUBMIT') ?>"> <i class="icon-search"></i> </button>
+				</div>
+                <!--<button type="button" class="btn hasTooltip js-stools-btn-clear" title="" data-original-title="<?= JText::_('JSEARCH_FILTER_CLEAR') ?>"><?= JText::_('JSEARCH_FILTER_CLEAR') ?></button>-->
 				<?php endif; ?>						
 				<?php if ($this->params->get('show_house_pagination_limit')) : ?>
 					<div class="display-limit">
@@ -104,6 +108,21 @@ $empty = $component->params->get('default_empty_field', '');
 						<?php if ($this->params->get('list_show_house_id_lmunicipality',0)) : ?>
 							<th class="list-id_lmunicipality" id="tableOrderingid_lmunicipality">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LMUNICIPALITY'); ?>
+							</th>
+						<?php endif; ?>	
+						<?php if ($this->params->get('list_show_house_price',0)) : ?>
+							<th class="list-price" id="tableOrderingprice">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>
+							</th>
+						<?php endif; ?>	
+						<?php if ($this->params->get('list_show_house_bathrooms',0)) : ?>
+							<th class="list-bathrooms" id="tableOrderingbathrooms">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_BATHROOMS'); ?>
+							</th>
+						<?php endif; ?>	
+						<?php if ($this->params->get('list_show_house_bedrooms',0)) : ?>
+							<th class="list-bedrooms" id="tableOrderingbedrooms">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_BEDROOMS'); ?>
 							</th>
 						<?php endif; ?>	
 						<?php $show_actions = false;
@@ -179,6 +198,27 @@ $empty = $component->params->get('default_empty_field', '');
 							<td class="list-id_lmunicipality">
 								<?php 
 									echo JString::trim($item->m_lmunicipality_name); 
+								?>
+							</td>
+						<?php endif; ?>
+						<?php if ($this->params->get('list_show_house_price',0)) : ?>
+							<td class="list-price">
+								<?php 
+									echo $item->price != '' ? $item->price : $empty; 
+								?>
+							</td>
+						<?php endif; ?>
+						<?php if ($this->params->get('list_show_house_bathrooms',0)) : ?>
+							<td class="list-bathrooms">
+								<?php 
+									echo $item->bathrooms != '' ? $item->bathrooms : $empty; 
+								?>
+							</td>
+						<?php endif; ?>
+						<?php if ($this->params->get('list_show_house_bedrooms',0)) : ?>
+							<td class="list-bedrooms">
+								<?php 
+									echo $item->bedrooms != '' ? $item->bedrooms : $empty; 
 								?>
 							</td>
 						<?php endif; ?>

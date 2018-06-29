@@ -60,6 +60,9 @@ class RemcaModelHouses extends JModelList
 				's_lstate_name', 's.name',				
 				'id_lmunicipality','a.id_lmunicipality',
 				'm_lmunicipality_name', 'm.name',				
+				'price','a.price',
+				'bathrooms','a.bathrooms',
+				'bedrooms','a.bedrooms',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				'catid', 'a.catid', 'category_title',
@@ -146,13 +149,20 @@ class RemcaModelHouses extends JModelList
 		}
 		$this->setState('list.direction', $list_order);
 		
-		//tx custom usar algo como house_initial_sort => country_initial_filter
-		$id_country = $app->getUserStateFromRequest($this->context.'.filter.id_country', 'filter_id_country', 484, 'int');
+		$id_country = $app->getUserStateFromRequest($this->context.'.filter.id_country', 'filter_id_country', 0, 'int');
 		$this->setState('filter.id_country', $id_country);
-		$id_lstate = $app->getUserStateFromRequest($this->context.'.filter.id_lstate', 'filter_id_lstate', 9, 'int');
+		$id_lstate = $app->getUserStateFromRequest($this->context.'.filter.id_lstate', 'filter_id_lstate', 0, 'int');
 		$this->setState('filter.id_lstate', $id_lstate);
-		$id_lmunicipality = $app->getUserStateFromRequest($this->context.'.filter.id_lmunicipality', 'filter_id_lmunicipality', 9003, 'int');
+		$id_lmunicipality = $app->getUserStateFromRequest($this->context.'.filter.id_lmunicipality', 'filter_id_lmunicipality', 0, 'int');
 		$this->setState('filter.id_lmunicipality', $id_lmunicipality);
+		$price_lt = $app->getUserStateFromRequest($this->context.'.filter.price_lt', 'filter_price_lt', '', 'string');
+		$this->setState('filter.price_lt', $price_lt);
+		$price_gt = $app->getUserStateFromRequest($this->context.'.filter.price_gt', 'filter_price_gt', '', 'string');
+		$this->setState('filter.price_gt', $price_gt);
+		$bathrooms = $app->getUserStateFromRequest($this->context.'.filter.bathrooms', 'filter_bathrooms', '', 'string');
+		$this->setState('filter.bathrooms', $bathrooms);
+		$bedrooms = $app->getUserStateFromRequest($this->context.'.filter.bedrooms', 'filter_bedrooms', '', 'string');
+		$this->setState('filter.bedrooms', $bedrooms);
 				
 		if ((!$user->authorise('core.edit.state', 'com_remca')) AND  (!$user->authorise('core.edit', 'com_remca')))
 		{
@@ -209,6 +219,10 @@ class RemcaModelHouses extends JModelList
 		$id	.= ':'.$this->getState('filter.id_country');	
 		$id	.= ':'.$this->getState('filter.id_lstate');	
 		$id	.= ':'.$this->getState('filter.id_lmunicipality');	
+		$id	.= ':'.$this->getState('filter.price_lt');	
+		$id	.= ':'.$this->getState('filter.price_lg');	
+		$id	.= ':'.$this->getState('filter.bathrooms');	
+		$id	.= ':'.$this->getState('filter.bedrooms');	
 		$id .= ':'.serialize($this->getState('filter.house_id'));
 		$id .= ':'.$this->getState('filter.house_id.include');				
 		
@@ -359,6 +373,29 @@ class RemcaModelHouses extends JModelList
 		if ($id_lmunicipality = $this->getState('filter.id_lmunicipality'))
 		{
 			$query->where($db->quoteName('a.id_lmunicipality').' = ' . (int) $id_lmunicipality);
+		}
+		
+		//tx custom code gt_price < filter.price > lt_price
+		if ($price_lt = $this->getState('filter.price_lt'))
+		{
+			$price_lt = $db->escape(JString::strtolower($price_lt), true);			
+			$query->where($db->quoteName('a.price').' > ' . $db->quote($price_lt));
+		}	
+		//tx custom code gt_price < filter.price > lt_price
+		if ($price_gt = $this->getState('filter.price_gt'))
+		{
+			$price_gt = $db->escape(JString::strtolower($price_gt), true);			
+			$query->where($db->quoteName('a.price').' < ' . $db->quote($price_gt));
+		}	
+		if ($bathrooms = $this->getState('filter.bathrooms'))
+		{
+			$bathrooms = $db->escape(JString::strtolower($bathrooms), true);			
+			$query->where($db->quoteName('a.bathrooms').' = ' . $db->quote($bathrooms));
+		}	
+		if ($bedrooms = $this->getState('filter.bedrooms'))
+		{
+			$bedrooms = $db->escape(JString::strtolower($bedrooms), true);			
+			$query->where($db->quoteName('a.bedrooms').' = ' . $db->quote($bedrooms));
 		}	
 
 		// Filter by a single or group of houses.
@@ -434,6 +471,7 @@ class RemcaModelHouses extends JModelList
 			// clean filter variable
 			$filter = JString::strtolower($filter);
 			$hits_filter = (int) $filter;
+			$filter_words = $db->escape($filter, true);
 			$filter = $db->quote('%'.$db->escape($filter, true).'%', false);
 
 			switch ($params->get('show_house_filter_field'))
@@ -443,7 +481,28 @@ class RemcaModelHouses extends JModelList
 					break;
 				case 'name':
 				default: // default to 'name' if parameter is not valid
-					$query->where('LOWER('.$db->quoteName('a.name').') LIKE '.$filter);
+$regex = '/\s+/';
+//$regex = '~\s+~';
+$words = preg_split($regex, $filter_words, -1, PREG_SPLIT_NO_EMPTY);
+$where = '( ';
+
+#name
+$where .= "\n\t( 1";
+foreach ($words AS $word){
+    $where .= "\n\t AND ".$db->quoteName('a.name')." LIKE '%{$word}%'";
+}
+$where .= "\n\t)";
+
+$where .= "\n OR";
+#description
+$where .= "\n\t( 1 ";
+foreach ($words AS $word){
+    $where .= "\n\t AND ".$db->quoteName('a.description')." LIKE '%{$word}%'";
+}
+$where .= "\n\t)";
+$where .= "\n)";
+
+					$query->where($where);
 					break;
 				
 			}
@@ -801,6 +860,12 @@ class RemcaModelHouses extends JModelList
 	 */
 	public function getLmunicipalities()
 	{
+		/**
+                 * No muestra valores si no se elige el catálogo encadenado superior.
+                 */
+		if (!$this->getState('filter.id_lstate'))
+			return;
+		
 		// Create a new query object.
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
@@ -846,18 +911,236 @@ class RemcaModelHouses extends JModelList
 		{
 			$query->where($db->quoteName('m.id_lstate').' = ' . (int) $id_lstate);
 		}
-		//si el filtro no está vacio, que aparezca en el catálogo porque de otra forma no se entiende porque no hay resultados
+                /**
+                 * si el filtro no está vacio
+                 * se evalúa que existan resultados, si no existen limpio el filtro
+                 * para evitar combinaciones indeseadas como 
+                 * lstate = Ciudad de México + lmunicipality = Ecatepec
+                 */		
 		if ($id_lmunicipality = $this->getState('filter.id_lmunicipality'))
 		{
-			$query->where('1 OR' . $db->quoteName('m.id').' = ' . (int) $id_lmunicipality);
+                    // Setup the query
+                    $db->setQuery($query);
+
+                    // Return the result
+                    $result = $db->loadObjectList();
+                    
+                    if(count($result) == 0){
+			$this->setState('filter.id_lmunicipality', '');
+                        $app = JFactory::getApplication();
+                        $app->setUserState($this->context.'.filter.id_lmunicipality', 0);                        
+                    }else{
+                        return $result;
+                    }
 		}
-                
+
 		// Setup the query
 		$db->setQuery($query);
 
 		// Return the result
 		return $db->loadObjectList();
 	}
+	/**
+	 * Build a list of distinct values in the precio field
+	 *
+	 * @return	JDatabaseQuery
+	 */
+	public function getPricevalues()
+	{
+            /**
+             * custom code, no quiero GROUP BY price
+             */
+            return;
+
+	}				
+	/**
+	 * Build a list of distinct values in the baños field
+         * tx custom code
+	 *
+	 * @return	JDatabaseQuery
+	 */
+	public function getBathroomsvalues()
+	{
+            $app = JFactory::getApplication();
+            $params = $app->getParams();
+            $group_filter = $params->get('group_filters');
+            if(!$group_filter){
+                /*return [
+                    (object) array('text' => '0', 'value' => '0'),
+                    (object) array('text' => '1', 'value' => '1'),
+                    (object) array('text' => '2', 'value' => '2'),
+                    (object) array('text' => '3', 'value' => '3'),
+                    (object) array('text' => '+4', 'value' => '+4'),
+                ];*/
+				// Create a new query object.
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+
+		// Construct the query
+		$query->select('DISTINCT '.$db->quoteName('bathrooms').' AS value, '.$db->quoteName('bathrooms').' AS text');
+		$query->from($db->quoteName('#__rem_houses'));
+		$query->where($db->quoteName('bathrooms').' != \'\'');
+
+		$query->order($db->quoteName('bathrooms'));
+
+		// Setup the query
+		$db->setQuery($query);
+                
+		// Return the result
+		return $db->loadObjectList();
+            }else{
+				// Create a new query object.
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+
+		// Construct the query
+		$query->select($db->quoteName('bathrooms').' AS value, CONCAT('.$db->quoteName('bathrooms').', " (", count(*), ")") AS text');
+                $query->group($db->quoteName('bathrooms'));
+                
+		$query->from($db->quoteName('#__rem_houses').' AS a');
+		$query->where($db->quoteName('bathrooms').' != \'\'');
+
+		if ($id_country = $this->getState('filter.id_country'))
+		{
+			$query->where($db->quoteName('a.id_country').' = ' . (int) $id_country);
+		}	
+		if ($id_lstate = $this->getState('filter.id_lstate'))
+		{
+			$query->where($db->quoteName('a.id_lstate').' = ' . (int) $id_lstate);
+		}	
+		if ($id_lmunicipality = $this->getState('filter.id_lmunicipality'))
+		{
+			$query->where($db->quoteName('a.id_lmunicipality').' = ' . (int) $id_lmunicipality);
+		}
+		
+		//tx custom code gt_price < filter.price > lt_price
+		if ($price_lt = $this->getState('filter.price_lt'))
+		{
+			$price_lt = $db->escape(JString::strtolower($price_lt), true);			
+			$query->where($db->quoteName('a.price').' > ' . $db->quote($price_lt));
+		}	
+		//tx custom code gt_price < filter.price > lt_price
+		if ($price_gt = $this->getState('filter.price_gt'))
+		{
+			$price_gt = $db->escape(JString::strtolower($price_gt), true);			
+			$query->where($db->quoteName('a.price').' < ' . $db->quote($price_gt));
+		}	
+		/*if ($bathrooms = $this->getState('filter.bathrooms'))
+		{
+			$bathrooms = $db->escape(JString::strtolower($bathrooms), true);			
+			$query->where($db->quoteName('a.bathrooms').' = ' . $db->quote($bathrooms));
+		}*/
+		if ($bedrooms = $this->getState('filter.bedrooms'))
+		{
+			$bedrooms = $db->escape(JString::strtolower($bedrooms), true);			
+			$query->where($db->quoteName('a.bedrooms').' = ' . $db->quote($bedrooms));
+		}
+
+		$query->order($db->quoteName('bathrooms'));
+
+		// Setup the query
+		$db->setQuery($query);
+//echo $query;die;                
+		// Return the result
+		return $db->loadObjectList();
+
+            }
+
+	}				
+	/**
+	 * Build a list of distinct values in the dormitorios field
+	 *
+	 * @return	JDatabaseQuery
+	 */
+	public function getBedroomsvalues()
+	{
+            $app = JFactory::getApplication();
+            $params = $app->getParams();
+            $group_filter = $params->get('group_filters');
+
+            if(!$group_filter){
+                /*return [
+		(object) array('text' => '0', 'value' => '0'),
+		(object) array('text' => '1', 'value' => '1'),
+		(object) array('text' => '2', 'value' => '2'),
+		(object) array('text' => '3', 'value' => '3'),
+		(object) array('text' => '4', 'value' => '4'),
+		(object) array('text' => '5', 'value' => '5'),
+		(object) array('text' => '6+', 'value' => '6+'),
+                ];*/
+				// Create a new query object.
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+
+		// Construct the query
+		$query->select('DISTINCT '.$db->quoteName('bedrooms').' AS value, '.$db->quoteName('bedrooms').' AS text');
+		$query->from($db->quoteName('#__rem_houses'));
+		$query->where($db->quoteName('bedrooms').' != \'\'');
+
+		$query->order($db->quoteName('bedrooms'));
+
+		// Setup the query
+		$db->setQuery($query);
+
+		// Return the result
+		return $db->loadObjectList();
+            }else{
+				// Create a new query object.
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+
+		// Construct the query
+		$query->select($db->quoteName('bedrooms').' AS value, CONCAT('.$db->quoteName('bedrooms').', " (", count(*), ")") AS text');
+                $query->group($db->quoteName('bedrooms'));
+                
+		$query->from($db->quoteName('#__rem_houses').' AS a');
+		$query->where($db->quoteName('bedrooms').' != \'\'');
+
+		if ($id_country = $this->getState('filter.id_country'))
+		{
+			$query->where($db->quoteName('a.id_country').' = ' . (int) $id_country);
+		}	
+		if ($id_lstate = $this->getState('filter.id_lstate'))
+		{
+			$query->where($db->quoteName('a.id_lstate').' = ' . (int) $id_lstate);
+		}	
+		if ($id_lmunicipality = $this->getState('filter.id_lmunicipality'))
+		{
+			$query->where($db->quoteName('a.id_lmunicipality').' = ' . (int) $id_lmunicipality);
+		}
+		
+		//tx custom code gt_price < filter.price > lt_price
+		if ($price_lt = $this->getState('filter.price_lt'))
+		{
+			$price_lt = $db->escape(JString::strtolower($price_lt), true);			
+			$query->where($db->quoteName('a.price').' > ' . $db->quote($price_lt));
+		}	
+		//tx custom code gt_price < filter.price > lt_price
+		if ($price_gt = $this->getState('filter.price_gt'))
+		{
+			$price_gt = $db->escape(JString::strtolower($price_gt), true);			
+			$query->where($db->quoteName('a.price').' < ' . $db->quote($price_gt));
+		}	
+		if ($bathrooms = $this->getState('filter.bathrooms'))
+		{
+			$bathrooms = $db->escape(JString::strtolower($bathrooms), true);			
+			$query->where($db->quoteName('a.bathrooms').' = ' . $db->quote($bathrooms));
+		}	
+		/*if ($bedrooms = $this->getState('filter.bedrooms'))
+		{
+			$bedrooms = $db->escape(JString::strtolower($bedrooms), true);			
+			$query->where($db->quoteName('a.bedrooms').' = ' . $db->quote($bedrooms));
+		}*/
+
+		$query->order($db->quoteName('bedrooms'));
+
+		// Setup the query
+		$db->setQuery($query);
+
+		// Return the result
+		return $db->loadObjectList();   
+            }
+	}				
 	
         /*
          * Function that allows download database information

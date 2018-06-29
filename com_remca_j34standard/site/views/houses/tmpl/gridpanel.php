@@ -423,10 +423,17 @@ function getFields(){
         'FIELD_NAME' => 'baños',
         'FIELD_CODE_NAME' => 'bathrooms',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
+        'FIELDTYPE_ID' => 30,
     );
     /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_OPTIONS_LANGUAGE_VARS=COM_REMCA_HOUSES_BATHROOMS_VALUE_0="0"
+COM_REMCA_HOUSES_BATHROOMS_VALUE_1="1"
+COM_REMCA_HOUSES_BATHROOMS_VALUE_2="2"
+COM_REMCA_HOUSES_BATHROOMS_VALUE_3="3"
+COM_REMCA_HOUSES_BATHROOMS_VALUE_4="4"
+COM_REMCA_HOUSES_BATHROOMS_VALUE_5="5"
+COM_REMCA_HOUSES_BATHROOMS_VALUE_6="6+"
+
                 FIELD_CODE_NAME_UPPER=BATHROOMS
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
@@ -445,10 +452,17 @@ function getFields(){
         'FIELD_NAME' => 'dormitorios',
         'FIELD_CODE_NAME' => 'bedrooms',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
+        'FIELDTYPE_ID' => 30,
     );
     /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_OPTIONS_LANGUAGE_VARS=COM_REMCA_HOUSES_BEDROOMS_VALUE_0="0"
+COM_REMCA_HOUSES_BEDROOMS_VALUE_1="1"
+COM_REMCA_HOUSES_BEDROOMS_VALUE_2="2"
+COM_REMCA_HOUSES_BEDROOMS_VALUE_3="3"
+COM_REMCA_HOUSES_BEDROOMS_VALUE_4="4"
+COM_REMCA_HOUSES_BEDROOMS_VALUE_5="5"
+COM_REMCA_HOUSES_BEDROOMS_VALUE_6="6+"
+
                 FIELD_CODE_NAME_UPPER=BEDROOMS
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
@@ -662,44 +676,44 @@ function getFields(){
     $fields['expiration_date'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'area del lote',
+        'FIELD_NAME' => 'área del lote',
         'FIELD_CODE_NAME' => 'lot_size',
-        'FIELD_DESCRIPTION' => 'area del lote',//area del lote
+        'FIELD_DESCRIPTION' => 'área del lote',//área del lote
         'FIELDTYPE_ID' => 22,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
                 FIELD_CODE_NAME_UPPER=LOT_SIZE
-                FIELD_INTRO=area del lote
+                FIELD_INTRO=área del lote
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' area del lote
+                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' área del lote
 
-                FIELD_NAME_LATEX=area del lote
+                FIELD_NAME_LATEX=\'area del lote
                 FIELD_CODE_NAME_LATEX=lot\_size
-                FIELD_DBCOMMENT_LATEX=area del lote
+                FIELD_DBCOMMENT_LATEX=\'area del lote
 
 
     */
     $fields['lot_size'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'area de construcción',
+        'FIELD_NAME' => 'área de construcción',
         'FIELD_CODE_NAME' => 'house_size',
-        'FIELD_DESCRIPTION' => 'area de construcción',//area de construcción
+        'FIELD_DESCRIPTION' => 'área de construcción',//área de construcción
         'FIELDTYPE_ID' => 22,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
                 FIELD_CODE_NAME_UPPER=HOUSE_SIZE
-                FIELD_INTRO=area de construcción
+                FIELD_INTRO=área de construcción
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' area de construcción
+                FIELD_DB=`` INT(11) NOT NULL DEFAULT '0' área de construcción
 
-                FIELD_NAME_LATEX=area de construcci\'on
+                FIELD_NAME_LATEX=\'area de construcci\'on
                 FIELD_CODE_NAME_LATEX=house\_size
-                FIELD_DBCOMMENT_LATEX=area de construcci\'on
+                FIELD_DBCOMMENT_LATEX=\'area de construcci\'on
 
 
     */

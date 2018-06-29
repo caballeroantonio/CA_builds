@@ -59,8 +59,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `land_area` VARCHAR(45) DEFAULT NULL COMMENT 'land_area',
   `land_area_unit` VARCHAR(45) DEFAULT NULL COMMENT 'land_area_unit',
   `expiration_date` DATETIME DEFAULT NULL COMMENT 'expiration_date',
-  `lot_size` INT(11) NOT NULL DEFAULT '0' COMMENT 'area del lote',
-  `house_size` INT(11) NOT NULL DEFAULT '0' COMMENT 'area de construcción',
+  `lot_size` INT(11) NOT NULL DEFAULT '0' COMMENT 'área del lote',
+  `house_size` INT(11) NOT NULL DEFAULT '0' COMMENT 'área de construcción',
   `garages` VARCHAR(4) DEFAULT NULL COMMENT 'cocheras',
   `date` DATETIME DEFAULT NULL COMMENT 'Date',
   `edok_link` VARCHAR(200) DEFAULT NULL COMMENT 'edok_link',
@@ -106,6 +106,9 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   KEY `idx_id_country` (`id_country`),
   KEY `idx_id_lstate` (`id_lstate`),
   KEY `idx_id_lmunicipality` (`id_lmunicipality`),
+#  KEY `idx_price` (`price`),
+#  KEY `idx_bathrooms` (`bathrooms`),
+#  KEY `idx_bedrooms` (`bedrooms`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
 

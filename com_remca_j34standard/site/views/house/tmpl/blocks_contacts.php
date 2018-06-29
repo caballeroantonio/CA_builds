@@ -34,7 +34,7 @@ $user = JFactory::getUser();
             </span> </div>
           <div class="row_06">
             <textarea name="jform[customer_comment]" cols="50" rows="8" placeholder="<?= JText::_('JGLOBAL_DESCRIPTION'); ?>" ></textarea>
-            <input type="hidden" name="jform[fk_house_id]" value="<?= $this->item->id ?>" />
+            <input type="hidden" name="jform[id_house]" value="<?= $this->item->id ?>" />
           </div>
           <div class="row_07"> <span class="col_01">
             <input type="button" value="Send message" 

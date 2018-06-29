@@ -248,6 +248,7 @@
             class="inputbox validate-numeric"
 			size="50"
 			maxlength="255"
+			required="true"
         >
         </field>  
         <field name="id_currency"
@@ -256,7 +257,7 @@
             description="COM_REMCA_HOUSES_FIELD_ID_CURRENCY_DESC"
             class="inputbox validate-numeric"
 			size="1"
-			query="SELECT id, currency FROM #__rem_countries WHERE published_cur"
+			query="SELECT id, CONCAT_WS(' - ', iso2, currency) 'currency' FROM #__rem_countries WHERE published_cur"
 			key_field="id"
 			value_field="currency"
         >
@@ -324,24 +325,32 @@
         >
         </field>  
         <field name="bathrooms"
-            type="text"
+            type="combo"
             label="COM_REMCA_HOUSES_FIELD_BATHROOMS_LABEL"
             description="COM_REMCA_HOUSES_FIELD_BATHROOMS_DESC"
-            class="inputbox"
-			size="1"
-			maxlength="255"
-			default="0"
+            default="0"
         >
+            <option	value="0">COM_REMCA_HOUSES_BATHROOMS_VALUE_0</option>
+			<option	value="1">COM_REMCA_HOUSES_BATHROOMS_VALUE_1</option>
+			<option	value="2">COM_REMCA_HOUSES_BATHROOMS_VALUE_2</option>
+			<option	value="3">COM_REMCA_HOUSES_BATHROOMS_VALUE_3</option>
+			<option	value="4">COM_REMCA_HOUSES_BATHROOMS_VALUE_4</option>
+			<option	value="5">COM_REMCA_HOUSES_BATHROOMS_VALUE_5</option>
+			<option	value="6+">COM_REMCA_HOUSES_BATHROOMS_VALUE_6</option>
         </field>  
         <field name="bedrooms"
-            type="text"
+            type="combo"
             label="COM_REMCA_HOUSES_FIELD_BEDROOMS_LABEL"
             description="COM_REMCA_HOUSES_FIELD_BEDROOMS_DESC"
-            class="inputbox"
-			size="1"
-			maxlength="255"
-			default="0"
+            default="0"
         >
+            <option	value="0">COM_REMCA_HOUSES_BEDROOMS_VALUE_0</option>
+			<option	value="1">COM_REMCA_HOUSES_BEDROOMS_VALUE_1</option>
+			<option	value="2">COM_REMCA_HOUSES_BEDROOMS_VALUE_2</option>
+			<option	value="3">COM_REMCA_HOUSES_BEDROOMS_VALUE_3</option>
+			<option	value="4">COM_REMCA_HOUSES_BEDROOMS_VALUE_4</option>
+			<option	value="5">COM_REMCA_HOUSES_BEDROOMS_VALUE_5</option>
+			<option	value="6+">COM_REMCA_HOUSES_BEDROOMS_VALUE_6</option>
         </field>  
         <field name="contacts"
             type="text"

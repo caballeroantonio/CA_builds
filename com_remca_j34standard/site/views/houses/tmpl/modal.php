@@ -71,10 +71,12 @@ $empty = $component->params->get('default_empty_field', '');
 	<form action="<?php echo JRoute::_('index.php?option=com_remca&view=houses&layout=modal&tmpl=component');?>" method="post" name="adminForm" id="adminForm">
 		<div class="filter_search">
 			<input type="text" name="filter_search" id="filter_search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>"  onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_REMCA_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('JSEARCH_FILTER_LABEL'); ?>" />
+				<?php if ($this->params->get('show_house_category',1)) : ?>
 			<select name="filter_category_id" onchange="this.form.submit()">
 				<option value=""><?php echo JText::_('JOPTION_SELECT_CATEGORY');?></option>
 				<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_remca'), 'value', 'text', $this->state->get('filter.category_id'));?>
 			</select>
+				<?php endif; ?>	
 			<select name="filter_id_country" onchange="this.form.submit()">
 				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_C1_COUNTRY');?></option>
 				<?php echo JHtml::_('select.options', $this->countries, 'value', 'text', $this->state->get('filter.id_country'));?>
@@ -86,6 +88,18 @@ $empty = $component->params->get('default_empty_field', '');
 			<select name="filter_id_lmunicipality" onchange="this.form.submit()">
 				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_M_LMUNICIPALITY');?></option>
 				<?php echo JHtml::_('select.options', $this->lmunicipalities, 'value', 'text', $this->state->get('filter.id_lmunicipality'));?>
+			</select>	
+			<select name="filter_price" onchange="this.form.submit()">
+				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_PRICE');?></option>
+				<?php echo JHtml::_('select.options', $this->price_values, 'value', 'text', $this->state->get('filter.price'));?>
+			</select>	
+			<select name="filter_bathrooms" onchange="this.form.submit()">
+				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_BATHROOMS');?></option>
+				<?php echo JHtml::_('select.options', $this->bathrooms_values, 'value', 'text', $this->state->get('filter.bathrooms'));?>
+			</select>	
+			<select name="filter_bedrooms" onchange="this.form.submit()">
+				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_BEDROOMS');?></option>
+				<?php echo JHtml::_('select.options', $this->bedrooms_values, 'value', 'text', $this->state->get('filter.bedrooms'));?>
 			</select>	
 			<div class="display-limit">
 				<?php echo $this->pagination->getLimitBox(); ?>
@@ -106,6 +120,15 @@ $empty = $component->params->get('default_empty_field', '');
 					</th>	
 					<th width="10%">
 						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LMUNICIPALITY'); ?>
+					</th>	
+					<th width="10%">
+						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_PRICE'); ?>
+					</th>	
+					<th width="10%">
+						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_BATHROOMS'); ?>
+					</th>	
+					<th width="10%">
+						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_BEDROOMS'); ?>
 					</th>	
 					<th width="10%">
 						<?php echo JHtml::_('grid.sort', 'JCATEGORY', 'category_title', $list_dirn, $list_order); ?>
@@ -142,6 +165,27 @@ $empty = $component->params->get('default_empty_field', '');
 						<a class="pointer" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
 							<?php 
 								echo JString::trim($item->m_lmunicipality_name); 
+							?>
+						</a>	
+					</td>	
+					<td class="center">
+						<a class="pointer" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
+							<?php 
+								echo $item->price != '' ? $item->price : $empty; 
+							?>
+						</a>	
+					</td>	
+					<td class="center">
+						<a class="pointer" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
+							<?php 
+								echo $item->bathrooms != '' ? $item->bathrooms : $empty; 
+							?>
+						</a>	
+					</td>	
+					<td class="center">
+						<a class="pointer" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
+							<?php 
+								echo $item->bedrooms != '' ? $item->bedrooms : $empty; 
 							?>
 						</a>	
 					</td>	

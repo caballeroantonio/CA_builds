@@ -62,6 +62,9 @@ class RemcaModelHouses extends JModelList
 				's_lstate_name', 's.name',				
 				'id_lmunicipality', 'a.id_lmunicipality',
 				'm_lmunicipality_name', 'm.name',				
+				'price', 'a.price',
+				'bathrooms', 'a.bathrooms',
+				'bedrooms', 'a.bedrooms',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				'catid', 'a.catid', 'category_title', 'category_id',
@@ -125,6 +128,12 @@ class RemcaModelHouses extends JModelList
 		$this->setState('filter.id_lstate', $id_lstate);
 		$id_lmunicipality = $app->getUserStateFromRequest($this->context.'.filter.id_lmunicipality', 'filter_id_lmunicipality', 0, 'int');
 		$this->setState('filter.id_lmunicipality', $id_lmunicipality);
+		$price = $app->getUserStateFromRequest($this->context.'.filter.price', 'filter_price', '', 'float');
+		$this->setState('filter.price', $price);
+		$bathrooms = $app->getUserStateFromRequest($this->context.'.filter.bathrooms', 'filter_bathrooms', '', 'string');
+		$this->setState('filter.bathrooms', $bathrooms);
+		$bedrooms = $app->getUserStateFromRequest($this->context.'.filter.bedrooms', 'filter_bedrooms', '', 'string');
+		$this->setState('filter.bedrooms', $bedrooms);
 		$category_id = $app->getUserStateFromRequest($this->context.'.filter.category_id', 'filter_category_id');
 		$this->setState('filter.category_id', $category_id);		
 		
@@ -174,6 +183,9 @@ class RemcaModelHouses extends JModelList
 		$id	.= ':'.$this->getState('filter.id_country');	
 		$id	.= ':'.$this->getState('filter.id_lstate');	
 		$id	.= ':'.$this->getState('filter.id_lmunicipality');	
+		$id	.= ':'.$this->getState('filter.price');	
+		$id	.= ':'.$this->getState('filter.bathrooms');	
+		$id	.= ':'.$this->getState('filter.bedrooms');	
 		return parent::getStoreId($id);
 	}	
 	/**
@@ -298,6 +310,21 @@ class RemcaModelHouses extends JModelList
 		if ($id_lmunicipality = $this->getState('filter.id_lmunicipality'))
 		{
 			$query->where($db->quoteName('a.id_lmunicipality').' = ' . (int) $id_lmunicipality);
+		}
+		if ($price = $this->getState('filter.price'))
+		{
+			$price = $db->escape(JString::strtolower($price), true);			
+			$query->where('LOWER('.$db->quoteName('a.price').') = ' . $db->quote($price));
+		}
+		if ($bathrooms = $this->getState('filter.bathrooms'))
+		{
+			$bathrooms = $db->escape(JString::strtolower($bathrooms), true);			
+			$query->where('LOWER('.$db->quoteName('a.bathrooms').') = ' . $db->quote($bathrooms));
+		}
+		if ($bedrooms = $this->getState('filter.bedrooms'))
+		{
+			$bedrooms = $db->escape(JString::strtolower($bedrooms), true);			
+			$query->where('LOWER('.$db->quoteName('a.bedrooms').') = ' . $db->quote($bedrooms));
 		}
 				
 		// Filter by a single or group of categories.

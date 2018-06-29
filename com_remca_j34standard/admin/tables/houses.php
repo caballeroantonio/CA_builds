@@ -90,6 +90,9 @@ class RemcaTableHouses extends JTable
 				$additional_order .= $this->_db->quoteName('id_country').'=' . $this->_db->Quote($this->id_country).' AND ';
 				$additional_order .= $this->_db->quoteName('id_lstate').'=' . $this->_db->Quote($this->id_lstate).' AND ';
 				$additional_order .= $this->_db->quoteName('id_lmunicipality').'=' . $this->_db->Quote($this->id_lmunicipality).' AND ';
+				$additional_order .= $this->_db->quoteName('price').'=' . $this->_db->Quote($this->price).' AND ';
+				$additional_order .= $this->_db->quoteName('bathrooms').'=' . $this->_db->Quote($this->bathrooms).' AND ';
+				$additional_order .= $this->_db->quoteName('bedrooms').'=' . $this->_db->Quote($this->bedrooms).' AND ';
 				$this->ordering = self::getNextOrder($additional_order.' state>=0');
 			}
 		}
