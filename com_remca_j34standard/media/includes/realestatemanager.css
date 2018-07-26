@@ -2899,6 +2899,28 @@ div.rem_tableC .rem_tableC {
 .rem_col_sale {
   background: #FF4000;
 }
+
+.ui-item__bookmark{
+  position: absolute;
+  right: 0;
+  top:0;
+  color: crimson;
+  font-size: 24px;
+  line-height: 18px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.ui-item__bookmark:hover{
+  font-size:28px;
+  transition: 1s ease-out;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
 .rem_listing_status {
   position: absolute;
   right: 0;
