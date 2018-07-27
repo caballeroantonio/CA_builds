@@ -196,7 +196,7 @@ class RemcaTableHouses extends JTable
 
 		
 	/**
-	 * Stores a House
+	 * Stores a Inmueble
 	 *
 	 * @param	boolean	$update_nulls	True to update fields even if they are null.
 	 * 

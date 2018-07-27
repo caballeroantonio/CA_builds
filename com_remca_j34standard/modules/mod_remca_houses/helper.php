@@ -46,7 +46,7 @@ abstract class ModHousesHelper
 		// Get the dbo
 		$db = JFactory::getDbo();
 
-		// Get an instance of the generic houses model
+		// Get an instance of the generic inmuebles model
 		$model = JModelLegacy::getInstance('Houses', 'RemcaModel', array('ignore_request' => true));
 
 		// Set application parameters in model
@@ -124,7 +124,7 @@ abstract class ModHousesHelper
 
 				if ($item_id_str == '')
 				{
-					// We know that user has the privilege to view the house
+					// We know that user has the privilege to view the inmueble
 					$item->link = JRoute::_(RemcaHelperRoute::getHouseRoute($item->slug, $item->catid, $item->language, $layout));
 				}
 				else

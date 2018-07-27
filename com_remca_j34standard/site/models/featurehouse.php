@@ -154,8 +154,8 @@ class RemcaModelFeatureHouse extends JModelItem
 				
 					
 				// Filter by and return name for id_house level.
-				$query->select($db->quoteName('h.name').' AS h_house_name');
-				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
+				$query->select($db->quoteName('i.name').' AS i_house_name');
+				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS i ON '.$db->quoteName('i.id').' = '.$db->quoteName('a.id_house'));	
 				// Filter by and return name for id_featured level.
 				$query->select($db->quoteName('f.name').' AS f_feature_name');
 				$query->join('LEFT', $db->quoteName('#__rem_feature').' AS f ON '.$db->quoteName('f.id').' = '.$db->quoteName('a.id_featured'));	

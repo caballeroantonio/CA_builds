@@ -173,9 +173,9 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-iditem">
 							<?php 
 								if ($params->get('list_link_category_iditem')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->iditem, 0)).'">'.JString::trim($item->h_house_name).'</a>';
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->iditem, 0)).'">'.JString::trim($item->i_house_name).'</a>';
 								else :
-									echo JString::trim($item->h_house_name);
+									echo JString::trim($item->i_house_name);
 								endif; 
 							?>
 						</td>
@@ -248,7 +248,10 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php if ($this->params->get('show_category_add_link', 1)) : ?>
 			<?php echo JHtml::_('categoryicon.create', $this->params); ?>
 		<?php endif; ?>		
-
+		<?php 
+			if($user->id == 1)
+	            echo '<button>export</button>'//JHtml::_('categoryicon.create', $this->params); 
+        ?>
 	</form>
 </div>
 

@@ -189,6 +189,16 @@ $doc->addScript('media/com_remca/fancybox/jquery.fancybox-1.3.4.pack.js');
         }
 ?>
 
+<div class="page-header">
+    <h2 itemprop="headline"><a href="index.php?option=com_remca&view=wisheslist" target="_blank"><?php echo JText::_('COM_REMCA_WISHESLIST'); ?></a></h2>
+</div>  
+<div data-collumn-lg="3" data-collumn-md="3" data-collumn-sm="2" data-collumn-xs="2" class="regular slider" >
+
+</div>
+      
+<div class="page-header">
+    <h2 itemprop="headline">Resultados</h2>
+</div>  
 <div class="REL-row">
   <div class="REL-collumn-xs-12 REL-collumn-sm-12 REL-collumn-md-12 REL-collumn-lg-12">
     <div id="gallery_rem" data-collumn-lg="3" data-collumn-md="3" data-collumn-sm="2" data-collumn-xs="2" >
@@ -203,12 +213,12 @@ $doc->addScript('media/com_remca/fancybox/jquery.fancybox-1.3.4.pack.js');
         if($item->images['image_url'] == '')
             $item->images['image_url'] = JText::_('_REALESTATE_MANAGER_NO_PICTURE_BIG');
       ?>
-      <div class="okno_R" id="block<?php echo $item->id ?>">
+      <div class="okno_R" id="block<?php echo $item->id ?>"  data-id="<?= $item->id ?>">
         <div id="divamage" style = "position: relative; text-align:center;"> 
             <a href="<?= $link ?>" style="text-decoration: none">
                 <img alt="<?php echo $item->name ?>" title="<?php echo $item->name ?>" src="<?= $item->images['image_url'] ?>" border="0" class="little" /> 
             </a>
-          <div class="rem_listing_status"><?= JText::_('REMCA_LISTING_STATUS'.$item->state) ?></div>
+          <i class="fa fa-heart-o ui-item__bookmark"></i>
 
           <div class="col_rent">
             <?php echo $item->category_title; ?>
@@ -280,7 +290,6 @@ $doc->addScript('media/com_remca/fancybox/jquery.fancybox-1.3.4.pack.js');
 				<?php echo JHtml::_('houseicon.create', $this->params); ?>
 			<?php  endif; ?>
 		<?php endif; ?>		
-
 	</form>
 </div>
 
@@ -309,3 +318,50 @@ function show_collapsibleModal(item_id){
 	<div class="modal-body"></div>
 </div>
 <?php endif; ?>	
+
+<?php
+//slick
+$doc->addStyleSheet('media/com_remca/slick/slick.css');
+$doc->addStyleSheet('media/com_remca/slick/slick-theme.css');
+$doc->addScript('media/com_remca/slick/slick.min.js');
+?>
+<script type="text/javascript">
+    jQuery(function ($) {
+        $(".regular").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+		  
+        $('.ui-item__bookmark').on('click', function(evnt) {
+            target = evnt.target;
+            parent = target.closest('.okno_R');
+
+            in_gallery = $(target).hasClass('fa-heart-o');
+            $(target).toggleClass( "fa-heart-o", !in_gallery ).toggleClass( "fa-times-circle", in_gallery );
+            if(in_gallery){
+                //$(target).toggleClass( "fa-heart-o", false ).toggleClass( "fa-times-circle", true );
+
+                $('.slider').slick('slickAdd',parent);
+            }else{
+                //$(target).toggleClass( "fa-heart-o", true ).toggleClass( "fa-times-circle", false );
+
+                $(parent).removeAttr('data-slick-index').appendTo('#gallery_rem');
+                index = $(parent).attr('data-slick-index');
+                $('.slider').slick('slickRemove',index);//return slider
+            }
+            
+            //set wishlist
+            jQuery.ajax({
+                url: "index.php",
+                method: 'POST',
+                data : { 
+                    'task' : 'wishlist.wish_request', 
+                    'jform[id_house]' : $(parent).data("id"),
+                    'jform[state]': in_gallery & 1,
+                },
+            });
+        });
+    });
+</script>

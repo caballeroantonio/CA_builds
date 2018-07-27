@@ -269,7 +269,7 @@ class RemcaControllerHouse extends JControllerForm
 	/**
 	 * Method to add a new record.
 	 *
-	 * @return  mixed  True if the House can be added, a error object if not.
+	 * @return  mixed  True if the Inmueble can be added, a error object if not.
 	 *
 	 */
 	public function add()
@@ -711,15 +711,53 @@ class RemcaControllerHouse extends JControllerForm
                     . "&item_id={$item_id}&type_id={$typeId}&type_alias={$model->typeAlias}&{$token}=1");
         }
 		
-        function rent_request(){
-                $data  = $this->input->post->get('jform', array(), 'array');
-                $model = JModelLegacy::getInstance('BuyingRequestForm','RemcaModel', array('ignore_request' => FALSE));
-                if (!$model->save($data)) {
-                    $this->setMessage(JText::sprintf('JLIB_APPLICATION_ERROR_SAVE_FAILED', $model->getError()), 'warning');
-                    $this->setRedirect($_SERVER['HTTP_REFERER']);
-                }else{
-                    $this->setMessage(JText::_('REMCA_RENT_REQUEST_THANKS'));
-                    $this->setRedirect($_SERVER['HTTP_REFERER']);
+        /**
+         * user check contact form
+         */
+        function contact_request(){
+            $data  = $this->input->post->get('jform', array(), 'array');
+            $house = $this->getModel('houseform')->getItem($data['id_house']);
+            $owneremail = $house->get('owneremail');
+            
+            if($owneremail){
+                $referer = $_SERVER['HTTP_REFERER'];
+                $house_name = $house->get('name');
+                $body = <<<EOD
+    {$data['customer_name']} visitó la publicación <a href="$referer">$house_name</a><br/>
+EOD;
+                foreach($data as $key=>$value){
+                    $label = strtoupper($key);
+                    $label = "COM_REMCA_BUYING_REQUESTS_FIELD_{$label}_LABEL";
+                    $label = JText::_($label);
+                    $body .= "{$label}: {$value} <br/>\n";
                 }
+                
+                $mailer = JFactory::getMailer();
+                $config = JFactory::getConfig();
+                $sender = array( 
+                    $config->get( 'mailfrom' ),
+                    $config->get( 'fromname' ) 
+                );
+                $mailer->setSender($sender);
+
+
+                $mailer->addRecipient($owneremail);
+                $mailer->setSubject('Has recibido una visita en ' .  $config->get( 'sitename' ) );
+                $mailer->setBody($body);
+                $mailer->isHtml(true);
+                $mailer->Encoding = 'base64';
+
+                $mailer->Send();
+                
+            }
+
+            $model = JModelLegacy::getInstance('BuyingRequestForm','RemcaModel', array('ignore_request' => FALSE));
+            if (!$model->save($data)) {
+                $this->setMessage(JText::sprintf('JLIB_APPLICATION_ERROR_SAVE_FAILED', $model->getError()), 'warning');
+                $this->setRedirect($_SERVER['HTTP_REFERER']);
+            }else{
+                $this->setMessage(JText::_('REMCA_RENT_REQUEST_THANKS'));
+                $this->setRedirect($_SERVER['HTTP_REFERER']);
+            }
         }
 }

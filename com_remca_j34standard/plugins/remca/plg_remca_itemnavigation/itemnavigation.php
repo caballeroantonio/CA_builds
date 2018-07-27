@@ -128,7 +128,7 @@ class PlgRemcaItemnavigation extends JPlugin
 
 			reset($list);
 
-			// Location of current house item in array list.
+			// Location of current inmueble item in array list.
 			$location = array_search($uid, array_keys($list));
 
 			$rows = array_values($list);
@@ -142,7 +142,7 @@ class PlgRemcaItemnavigation extends JPlugin
 			if ($location -1 >= 0)	
 			{
 				$row->prev = $location -1 ; 
-				// The previous house item cannot be in the array position -1.
+				// The previous inmueble item cannot be in the array position -1.
 				for ($i = $location-1; $i >= 0; $i--)
 				{
 
@@ -156,7 +156,7 @@ class PlgRemcaItemnavigation extends JPlugin
 			if (($location +1) < count($rows)) 
 			{
 				$row->next = $location +1;
-				// The next house item cannot be in an array position greater than the number of array postions.
+				// The next inmueble item cannot be in an array position greater than the number of array postions.
 				for ($i = $location+1; $i <= count($rows)-1; $i++)
 				{
 					$row->next = $rows[$i];

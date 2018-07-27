@@ -37,7 +37,7 @@ abstract class RemcaHelperRoute
 	protected static $lookup = array();
 			
 	/**
-	 * @param	integer	The route of the House
+	 * @param	integer	The route of the Inmueble
 	 */
 	public static function getHouseRoute($id, $cat_id = 0, $language = 0, $layout = 'default', $keep_item_id = false)
 	{
@@ -421,12 +421,12 @@ abstract class RemcaHelperRoute
 		return $link;
 	}
 	/**
-	 * @param	integer	The route of the Users_wishlist
+	 * @param	integer	The route of the Favorito
 	 */
-	public static function getUsersWishlistRoute($id, $layout = 'default', $keep_item_id = false)
+	public static function getWishlistRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'userswishlist'  => array((int) $id)
+			'wishlist'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -434,12 +434,12 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=userswishlist&id='. $id;
+			$link = 'index.php?option=com_remca&view=wishlist&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=userswishlist&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=wishlist&layout='.$layout.'&id='. $id;
 		}
 
 		

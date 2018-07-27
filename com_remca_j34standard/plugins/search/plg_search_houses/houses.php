@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 require_once JPATH_SITE.'/components/com_remca/router.php';
 
 /**
- * Houses Search plugin
+ * Inmuebles Search plugin
  *
  */
 class PlgSearchHouses extends JPlugin
@@ -74,7 +74,7 @@ class PlgSearchHouses extends JPlugin
 	}
 
 	/**
-	 * Houses Search method
+	 * Inmuebles Search method
 	 * The sql must return the following fields that are used in a common display
 	 * routine: href, title, section, created, text, browsernav
 	 * @param string Target search string
@@ -181,7 +181,7 @@ class PlgSearchHouses extends JPlugin
 		$query	= $db->getQuery(true);
 
 		$search_section = JText::_('PLG_SEARCH_HOUSES_HOUSES');
-		// search houses
+		// search inmuebles
 		if ($sHouse AND $limit > 0)
 		{
 			$query->clear();
@@ -239,7 +239,7 @@ class PlgSearchHouses extends JPlugin
 			$rows[] = $list;
 		}
 
-		// search archived houses
+		// search archived inmuebles
 		if ($sHouseArchived AND $limit > 0)
 		{
 			$query->clear();

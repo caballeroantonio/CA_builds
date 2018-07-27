@@ -955,7 +955,10 @@ $empty = $component->params->get('default_empty_field', '');
 				<?php echo JHtml::_('houseicon.create', $this->params); ?>
 			<?php  endif; ?>
 		<?php endif; ?>		
-
+		<?php 
+			if($user->id == 1)
+	            echo '<button>export</button>'//JHtml::_('houseicon.create', $this->params); 
+        ?>
 	</form>
 </div>
 

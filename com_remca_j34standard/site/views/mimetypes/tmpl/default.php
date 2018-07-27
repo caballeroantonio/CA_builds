@@ -240,7 +240,10 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php if ($this->params->get('show_mimetype_add_link', 1)) : ?>
 			<?php echo JHtml::_('mimetypeicon.create', $this->params); ?>
 		<?php endif; ?>		
-
+		<?php 
+			if($user->id == 1)
+	            echo '<button>export</button>'//JHtml::_('mimetypeicon.create', $this->params); 
+        ?>
 	</form>
 </div>
 

@@ -128,7 +128,7 @@ class RemcaModelHouses extends JModelList
 		$this->setState('filter.id_lstate', $id_lstate);
 		$id_lmunicipality = $app->getUserStateFromRequest($this->context.'.filter.id_lmunicipality', 'filter_id_lmunicipality', 0, 'int');
 		$this->setState('filter.id_lmunicipality', $id_lmunicipality);
-		$price = $app->getUserStateFromRequest($this->context.'.filter.price', 'filter_price', '', 'float');
+		$price = $app->getUserStateFromRequest($this->context.'.filter.price', 'filter_price', 0, 'float');
 		$this->setState('filter.price', $price);
 		$bathrooms = $app->getUserStateFromRequest($this->context.'.filter.bathrooms', 'filter_bathrooms', '', 'string');
 		$this->setState('filter.bathrooms', $bathrooms);

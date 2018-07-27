@@ -170,8 +170,8 @@ class RemcaModelOrder extends JModelItem
 				$query->select($db->quoteName('u.name').' AS u_user_name');
 				$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.id_user'));	
 				// Filter by and return name for id_house level.
-				$query->select($db->quoteName('h.name').' AS h_house_name');
-				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
+				$query->select($db->quoteName('i.name').' AS i_house_name');
+				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS i ON '.$db->quoteName('i.id').' = '.$db->quoteName('a.id_house'));	
 																				
 				$db->setQuery($query);
 

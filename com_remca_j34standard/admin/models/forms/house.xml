@@ -242,13 +242,13 @@
         >
         </field>  
         <field name="price"
-            type="text"
+            type="integer"
             label="COM_REMCA_HOUSES_FIELD_PRICE_LABEL"
             description="COM_REMCA_HOUSES_FIELD_PRICE_DESC"
             class="inputbox validate-numeric"
-			size="50"
-			maxlength="255"
+			size="1"
 			required="true"
+			default="0"
         >
         </field>  
         <field name="id_currency"
@@ -257,7 +257,7 @@
             description="COM_REMCA_HOUSES_FIELD_ID_CURRENCY_DESC"
             class="inputbox validate-numeric"
 			size="1"
-			query="SELECT id, CONCAT_WS(' - ', iso2, currency) 'currency' FROM #__rem_countries WHERE published_cur"
+			query="SELECT id, currency FROM #__rem_countries WHERE published_cur"
 			key_field="id"
 			value_field="currency"
         >

@@ -154,8 +154,8 @@ class RemcaModelCategory extends JModelItem
 				
 					
 				// Filter by and return name for iditem level.
-				$query->select($db->quoteName('h.name').' AS h_house_name');
-				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.iditem'));	
+				$query->select($db->quoteName('i.name').' AS i_house_name');
+				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS i ON '.$db->quoteName('i.id').' = '.$db->quoteName('a.iditem'));	
 				// Filter by and return name for idcat level.
 				$query->select($db->quoteName('m.name').' AS m_main_category_name');
 				$query->join('LEFT', $db->quoteName('#__rem_maincategories').' AS m ON '.$db->quoteName('m.id').' = '.$db->quoteName('a.idcat'));	

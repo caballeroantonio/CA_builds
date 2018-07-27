@@ -31,7 +31,7 @@ defined('JPATH_BASE') or die;
 jimport('joomla.form.formfield');
 
 /**
- * Supports a modal house picker.
+ * Supports a modal inmueble picker.
  *
  */
 class JFormFieldModal_Houses extends JFormField

@@ -81,8 +81,14 @@ class RemcaViewRemca_Dashboard extends JViewLegacy
 		$buttons[] = array(
                     'link'=>'index.php?option=com_remca&view=houses&layout=gridpanel&tmpl=component',
                     'object'=>'houses',
-                    'text'=>'Houses',//JText::_('REMCA_COMPONENT_WIZARD'),
+                    'text'=>'Inmuebles',//JText::_('REMCA_COMPONENT_WIZARD'),
                     'desc'=>JText::_('COM_REMCA_HOUSE_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_remca&view=wisheslist&layout=gridpanel&tmpl=component',
+                    'object'=>'wisheslist',
+                    'text'=>'Favoritos',//JText::_('REMCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_REMCA_WISHLIST_DESCRIPTION')
                 );
 
 		return $buttons;

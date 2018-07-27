@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * Houses list controller class.
+ * Inmuebles list controller class.
  *
  */
 class RemcaControllerHouses extends JControllerLegacy

@@ -165,7 +165,7 @@ function getFields(){
                 FIELD_DBCOMMENT_LATEX=
 
                     {FIELD_LINK}
-                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=H
+                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=I
                     FIELD_FOREIGN_OBJECT_UPPER=HOUSE
 
     */

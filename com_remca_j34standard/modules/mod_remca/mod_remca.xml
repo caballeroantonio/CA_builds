@@ -27,7 +27,7 @@
 <extension type="module" version="3.4" client="site" method="upgrade">
     <name>mod_remca</name>
     <author>caballeroantonio</author>
-    <creationDate>June 2018</creationDate>
+    <creationDate>July 2018</creationDate>
     <copyright>
     </copyright>
     <license>
@@ -61,7 +61,7 @@
 			        class="chzn-color"
                     required="true"
 		        >
-                    <option value="House:Houses">House</option>
+                    <option value="House:Houses">Inmueble</option>
                 </field>
                 <field
 					name="user_id"

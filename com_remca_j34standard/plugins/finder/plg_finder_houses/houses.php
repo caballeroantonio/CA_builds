@@ -62,7 +62,7 @@ class PlgFinderHouses extends FinderIndexerAdapter
 	/**
 	 * @var    $type_title	string	The type of content that the adapter indexes.
 	 */
-	protected $type_title = 'Houses';
+	protected $type_title = 'Inmuebles';
 
 	/**
 	 * @var    $table	string	The table name.
@@ -153,7 +153,7 @@ class PlgFinderHouses extends FinderIndexerAdapter
 	 */
 	public function onFinderAfterSave($context, $row, $is_new)
 	{
-		// We only want to handle houses here
+		// We only want to handle inmuebles here
 		if ($context == 'com_remca.house' OR $context == 'com_remca.houseform')
 		{
 
@@ -217,7 +217,7 @@ class PlgFinderHouses extends FinderIndexerAdapter
 	 */
 	public function onFinderChangeState($context, $pks, $value)
 	{
-		// We only want to handle houses here
+		// We only want to handle inmuebles here
 		if ($context == 'com_remca.house' OR $context == 'com_remca.houseform')
 		{
 			$this->itemStateChange($pks, $value);
@@ -298,7 +298,7 @@ class PlgFinderHouses extends FinderIndexerAdapter
 		$item->state = $this->translateState($item->state);
 
 		// Add the type taxonomy data.
-		$item->addTaxonomy('Type', 'House');
+		$item->addTaxonomy('Type', 'Inmueble');
 
 
 		// Add the category taxonomy data.

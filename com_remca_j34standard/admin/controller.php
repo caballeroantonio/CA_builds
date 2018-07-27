@@ -201,14 +201,14 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'userswishlist': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.userswishlist', $id))
+			case 'wishlist': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.wishlist', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
-					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=users_wishlist', false));
+					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=wisheslist', false));
 
 					return false;
 				}

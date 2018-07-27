@@ -313,21 +313,21 @@ input.order-input
 {
       background-image: url(../images/icon-48-track_source.png);
 }
-.icon-16-userswishlist
+.icon-16-wishlist
 {
-      background-image: url(../images/icon-16-users_wishlist.png);
+      background-image: url(../images/icon-16-wisheslist.png);
 }
-.icon-16-users_wishlist
+.icon-16-wisheslist
 {
-      background-image: url(../images/icon-16-users_wishlist.png);
+      background-image: url(../images/icon-16-wisheslist.png);
 }
-.icon-48-userswishlist
+.icon-48-wishlist
 {
-      background-image: url(../images/icon-48-users_wishlist.png);
+      background-image: url(../images/icon-48-wisheslist.png);
 }
-.icon-48-users_wishlist
+.icon-48-wisheslist
 {
-      background-image: url(../images/icon-48-users_wishlist.png);
+      background-image: url(../images/icon-48-wisheslist.png);
 }
 .icon-16-videosource
 {

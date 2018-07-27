@@ -27,7 +27,7 @@
 <extension type="plugin" version="3.4" group="remca" method="upgrade">
     <name>plg_remca_itemnavigation</name>
     <author>caballeroantonio</author>
-    <creationDate>June 2018</creationDate>
+    <creationDate>July 2018</creationDate>
     <copyright>
     </copyright>
     <license>

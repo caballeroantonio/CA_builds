@@ -99,6 +99,8 @@ INSERT IGNORE INTO `#__rem_lstates` (`id`, `name`, `ordering`, `state`) VALUES (
 INSERT IGNORE INTO `#__rem_countries` (`id`, `name`, `ordering`, `state`) VALUES (0, "undefined", 0, 0);
 
 INSERT IGNORE INTO `#__rem_countries` (`id`, `name`, `ordering`, `state`) VALUES (0, "undefined", 0, 0);
+
+INSERT IGNORE INTO `#__rem_houses` (`id`, `name`, `description`, `ordering`, `state`) VALUES (0, "undefined", "undefined default option", 0, 0);
 					
 ALTER TABLE `#__rem_buying_requests` ADD CONSTRAINT `fk2919_id_house`
 FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
@@ -218,6 +220,14 @@ ON DELETE RESTRICT ON UPDATE CASCADE;
 										
 ALTER TABLE `#__rem_lmunicipalities` ADD CONSTRAINT `fk3463_id_country`
 FOREIGN KEY (`id_country`) REFERENCES `#__rem_countries` (`id`)
+ON DELETE RESTRICT ON UPDATE CASCADE;
+										
+ALTER TABLE `#__rem_wisheslist` ADD CONSTRAINT `fk3747_id_user`
+FOREIGN KEY (`id_user`) REFERENCES `#__users` (`id`)
+ON DELETE RESTRICT ON UPDATE CASCADE;
+										
+ALTER TABLE `#__rem_wisheslist` ADD CONSTRAINT `fk3748_id_house`
+FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 					
 SET FOREIGN_KEY_CHECKS=1;

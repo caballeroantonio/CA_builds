@@ -35,13 +35,13 @@ defined('_JEXEC') or die;
 class PlgRemcaFinder extends JPlugin
 {
 	/**
-	 * Smart Search after save house method
-	 * House is passed by reference, but after the save, so no changes will be saved.
-	 * Method is called right after the house is saved
+	 * Smart Search after save inmueble method
+	 * Inmueble is passed by reference, but after the save, so no changes will be saved.
+	 * Method is called right after the inmueble is saved
 	 *
 	 * @param	string		$context	The context of the item passed to the plugin
 	 * @param	object		$house	A JTableHouse object
-	 * @param	boolean		$is_new		If the house has just been created
+	 * @param	boolean		$is_new		If the inmueble has just been created
 	 */
 	public function onHouseAfterSave($context, $house, $is_new)
 	{
@@ -53,13 +53,13 @@ class PlgRemcaFinder extends JPlugin
 
 	}
 	/**
-	 * Smart Search before save house method
-	 * House is passed by reference, but after the save, so no changes will be saved.
+	 * Smart Search before save inmueble method
+	 * Inmueble is passed by reference, but after the save, so no changes will be saved.
 	 * Method is called right after the content is saved
 	 *
 	 * @param	string		$context	The context of the item passed to the plugin
 	 * @param	object		$house	A JTableHouse object
-	 * @param	boolean		$is_new		If the house has just been created
+	 * @param	boolean		$is_new		If the inmueble has just been created
 	 */
 	public function onHouseBeforeSave($context, $house, $is_new)
 	{
@@ -71,9 +71,9 @@ class PlgRemcaFinder extends JPlugin
 
 	}
 	/**
-	 * Smart Search after delete house method
-	 * house is passed by reference, but after the save, so no changes will be saved.
-	 * Method is called right after the house is saved
+	 * Smart Search after delete inmueble method
+	 * inmueble is passed by reference, but after the save, so no changes will be saved.
+	 * Method is called right after the inmueble is saved
 	 *
 	 * @param	string		$context	The context of the item passed to the plugin
 	 * @param	object		$house	A JTableHouse object
@@ -89,7 +89,7 @@ class PlgRemcaFinder extends JPlugin
 
 	}
 	/**
-	 * Smart Search change state house method
+	 * Smart Search change state inmueble method
 	 * Method to update the link information for items that have been changed
 	 * from outside the edit screen. This is fired when the item's state,
 	 * is changed from the list view.

@@ -122,7 +122,7 @@ class RemcaModelHouse extends JModelAdmin
 		}
 		else
 		{
-			// New house, so check against the category.		
+			// New inmueble, so check against the category.		
 			if (!empty($record->catid))
 			{
 				return $user->authorise('core.edit.state', 'com_remca.category.'.(int) $record->catid);
@@ -219,7 +219,7 @@ class RemcaModelHouse extends JModelAdmin
 			$id = $this->getState('house.id');		
 			// Existing record. Can only edit in selected categories.
 			$form->setFieldAttribute('catid', 'action', 'core.edit');
-			// Existing record. Can only edit own houses in selected categories.
+			// Existing record. Can only edit own inmuebles in selected categories.
 			$form->setFieldAttribute('catid', 'action', 'core.edit.own');
 		}
 		else
@@ -244,7 +244,7 @@ class RemcaModelHouse extends JModelAdmin
 			$form->setFieldAttribute('language', 'filter', 'unset');
 		}
 
-		// Prevent messing with House language and category when editing existing House with associations
+		// Prevent messing with Inmueble language and category when editing existing Inmueble with associations
 		$app = JFactory::getApplication();
 		$assoc = JLanguageAssociations::isEnabled();
 
@@ -300,7 +300,7 @@ class RemcaModelHouse extends JModelAdmin
 		
 		$table->name = htmlspecialchars_decode($table->name, ENT_QUOTES);
 		
-		// Increment the house version number.
+		// Increment the inmueble version number.
 		$table->version++;
 		
 		if (empty($table->id) OR $table->id == 0)
@@ -482,7 +482,7 @@ class RemcaModelHouse extends JModelAdmin
 
 
 	/**
-	 * Method to toggle the featured setting of houses.
+	 * Method to toggle the featured setting of inmuebles.
 	 *
 	 * @param	array	$pks	The ids of the items to toggle.
 	 * @param	integer		$value	The value to toggle to.
@@ -544,7 +544,7 @@ class RemcaModelHouse extends JModelAdmin
 
 	}
 	/**
-	 * Pre process the form to pick up houses associated by language
+	 * Pre process the form to pick up inmuebles associated by language
 	 *
 	 * @param   object  $form		A form object
 	 * @param   array	$data		The record data

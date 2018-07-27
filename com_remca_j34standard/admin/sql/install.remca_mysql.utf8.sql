@@ -106,9 +106,9 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   KEY `idx_id_country` (`id_country`),
   KEY `idx_id_lstate` (`id_lstate`),
   KEY `idx_id_lmunicipality` (`id_lmunicipality`),
-#  KEY `idx_price` (`price`),
-#  KEY `idx_bathrooms` (`bathrooms`),
-#  KEY `idx_bedrooms` (`bedrooms`),
+  KEY `idx_price` (`price`),
+  KEY `idx_bathrooms` (`bathrooms`),
+  KEY `idx_bedrooms` (`bedrooms`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
 
@@ -344,13 +344,26 @@ CREATE TABLE IF NOT EXISTS `#__rem_track_source` (
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `#__rem_users_wishlist`
+-- Table structure for table `#__rem_wisheslist`
 --
 
-#DROP TABLE IF EXISTS `#__rem_users_wishlist`;
-CREATE TABLE IF NOT EXISTS `#__rem_users_wishlist` (
+#DROP TABLE IF EXISTS `#__rem_wisheslist`;
+CREATE TABLE IF NOT EXISTS `#__rem_wisheslist` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
+  `state` TINYINT(1) NOT NULL DEFAULT '0',
+  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
+  KEY `idx_createdby` (`created_by`),
+  CONSTRAINT `remca_wishlist_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
+  KEY `idx_modifiedby` (`modified_by`),
+#IR no validado  
+#  CONSTRAINT `remca_wishlist_modifiedby` FOREIGN KEY (`modified_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
+  KEY `idx_state` (`state`),
   PRIMARY KEY (`id`)
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -566,7 +579,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
- INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('house',
+ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Inmueble',
 'com_remca.house',
 '{"special":{"dbtable":"#__rem_houses","key":"id","type":"houses","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 '',
@@ -710,13 +723,13 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 --
 -- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
 --
- INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('users_wishlist',
-'com_remca.users_wishlist',
-'{"special":{"dbtable":"#__rem_users_wishlist","key":"id","type":"users_wishlist","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+ INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Favorito',
+'com_remca.wishlist',
+'{"special":{"dbtable":"#__rem_wisheslist","key":"id","type":"wisheslist","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 '',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'remcaHelperRoute::getusers_wishlistRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/users_wishlist.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
+'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
+'remcaHelperRoute::getwishlistRoute',
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/wishlist.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_user","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_house","targetTable":"#__rem_houses","targetColumn":"id","displayColumn":"name"}]}'
 );
         
 --

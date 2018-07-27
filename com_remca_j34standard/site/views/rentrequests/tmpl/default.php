@@ -208,9 +208,9 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-id_house">
 							<?php 
 								if ($params->get('list_link_rentrequest_id_house')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->id_house, 0)).'">'.JString::trim($item->h_house_name).'</a>';
+									echo '<a href="'.JRoute::_(RemcaHelperRoute::getHouseRoute($item->id_house, 0)).'">'.JString::trim($item->i_house_name).'</a>';
 								else :
-									echo JString::trim($item->h_house_name);
+									echo JString::trim($item->i_house_name);
 								endif; 
 							?>
 						</td>
@@ -332,7 +332,10 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php if ($this->params->get('show_rentrequest_add_link', 1)) : ?>
 			<?php echo JHtml::_('rentrequesticon.create', $this->params); ?>
 		<?php endif; ?>		
-
+		<?php 
+			if($user->id == 1)
+	            echo '<button>export</button>'//JHtml::_('rentrequesticon.create', $this->params); 
+        ?>
 	</form>
 </div>
 

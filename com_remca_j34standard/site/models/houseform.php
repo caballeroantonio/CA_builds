@@ -132,11 +132,11 @@ class RemcaModelHouseForm extends RemcaModelHouse
 	}
 
 	/**
-	 * Method to get house data.
+	 * Method to get inmueble data.
 	 *
-	 * @param	integer	$item_id	The id of the house.
+	 * @param	integer	$item_id	The id of the inmueble.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	House item data object on success, false on failure.
+	 * @return	mixed	Inmueble item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{
@@ -355,7 +355,7 @@ class RemcaModelHouseForm extends RemcaModelHouse
 			return false;
 		}
 
-		// Reorder the houses so the new house is first
+		// Reorder the inmuebles so the new inmueble is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);

@@ -84,7 +84,7 @@ class JHTMLHouseIcon
 	/**
 	 * Display an edit icon for the house.
 	 *
-	 * This icon will not display in a popup window, nor if the house is trashed.
+	 * This icon will not display in a popup window, nor if the inmueble is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$house	The house in question.
@@ -116,7 +116,7 @@ class JHTMLHouseIcon
 
 		JHtml::_('bootstrap.tooltip');
 
-		// Show checked_out icon if the house is checked out by a different user
+		// Show checked_out icon if the inmueble is checked out by a different user
 		if (property_exists($house, 'checked_out') AND 
 			property_exists($house, 'checked_out_time') AND 
 			$house->checked_out > 0 AND 
@@ -169,7 +169,7 @@ class JHTMLHouseIcon
 	/**
 	 * Display an delete icon for the house.
 	 *
-	 * This icon will not display in a popup window, nor if the house is trashed.
+	 * This icon will not display in a popup window, nor if the inmueble is trashed.
 	 * Edit access checks must be performed in the calling code.
 	 *
 	 * @param	object		$house	The house in question.
@@ -201,7 +201,7 @@ class JHTMLHouseIcon
 
 		JHtml::_('behavior.tooltip');
 
-		// Show checked_out icon if the house is checked out by a different user
+		// Show checked_out icon if the inmueble is checked out by a different user
 		if (property_exists($house, 'checked_out') AND 
 			property_exists($house, 'checked_out_time') AND 
 			$house->checked_out > 0 AND 

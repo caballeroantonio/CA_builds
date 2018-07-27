@@ -193,11 +193,11 @@ class RemcaHelper extends JHelperContent
 			$active
 		);
 	
-		$active = $view_name == 'users_wishlist'? true : false;
+		$active = $view_name == 'wisheslist'? true : false;
 		JHtmlSidebar::addEntry(
-			JText::_('COM_REMCA_USERS_WISHLIST_SUBMENU'),
-			'index.php?option=com_remca&view=users_wishlist',
-			$view_name == 'users_wishlist',
+			JText::_('COM_REMCA_WISHESLIST_SUBMENU'),
+			'index.php?option=com_remca&view=wisheslist',
+			$view_name == 'wisheslist',
 			$active
 		);
 	

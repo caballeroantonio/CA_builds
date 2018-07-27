@@ -247,7 +247,7 @@ function getFields(){
         'FIELD_NAME' => 'precio',
         'FIELD_CODE_NAME' => 'price',
         'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
+        'FIELDTYPE_ID' => 22,
     );
     /*
                 FIELD_OPTIONS_LANGUAGE_VARS=
@@ -1277,7 +1277,7 @@ document.id = Ext.documentId;
         var pathImg = 'http://localhost/resources/images/fatcow-hosting-icons-2000/16x16/';
 	
 	Ext.create('Ext.grid.Panel', {
-		title: 'Houses',
+		title: 'Inmuebles',
 		store: Ext.data.StoreManager.lookup('simpsonsStore'),
 		columns: [
                     

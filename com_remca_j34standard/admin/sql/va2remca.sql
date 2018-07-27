@@ -64,24 +64,8 @@ WHERE 1
 AND extension = 'com_remca'
 ;
 
-#2 actualizo categorias que coinciden
-UPDATE
-scrpng_vivanuncios2 va
-LEFT JOIN jos_categories c ON c.extension = 'com_remca' AND c.path = 'bienes-raices' AND c.level = 1
-SET va.id_cat = c.id
-WHERE 1
-AND va.id_cat IS NULL
-AND va.catname = ''
-AND va.dwellingtype =''
-;
-UPDATE
-scrpng_vivanuncios2 va
-LEFT JOIN jos_categories c1 ON c1.extension = 'com_remca' AND c1.title = va.dwellingtype
-LEFT JOIN jos_categories c2 ON c1.id IS NULL AND c2.extension = 'com_remca' AND c2.title = va.catname
-SET va.id_cat = coalesce(c1.id, c2.id)
-WHERE 1
-AND va.id_cat IS NULL
-;
+# actualizo categorias que coinciden
+
 
 #3 reviso que no haya categorias faltantes y si existen repito 1 y 2
 SELECT 
@@ -97,27 +81,25 @@ AND va.id_cat IS NULL
 ;
 
 # compruebo que no faltan catalogos
-SELECT 
-va.id 'va.id', va.hcountry 'va.hcountry', va.lstate 'va.lstate', va.id_lmunicipality 'va.id_lmunicipality', va.lmunicipality 'va.lmunicipality',
-c.id 'c.id', c.name 'c.name', s.id 's.id', s.name 's.name', m.id 'm.id', m.name 'm.name', p.id 'p.id', p.name 'p.name'
+
+/*
+SELECT
+#va.id_lmunicipality, va.lmunicipality, m1.*,
+concat('UPDATE jos_rem_lmunicipalities SET id_va=',va.id_lmunicipality,' WHERE id=',m1.id,';') 'query'
 FROM scrpng_vivanuncios2 va
-LEFT JOIN jos_rem_countries c ON c.id_va = va.id_hcountry
 LEFT JOIN jos_rem_lstates s ON s.id_va = va.id_lstate
 LEFT JOIN jos_rem_lmunicipalities m ON m.id_va = va.id_lmunicipality
-LEFT JOIN jos_rem_countries p ON p.currency = va.currency #DISTINCT currency = MXN, USD
-
+LEFT JOIN jos_rem_lmunicipalities m1 ON m.id IS NULL AND m1.id_lstate = s.id AND (m1.name = va.lmunicipality OR m1.official_name = va.lmunicipality)
 WHERE 1
-AND va.is_active
-AND va.need_update
-AND va.id IS NOT NULL
-AND (
-	c.id IS NULL
-	OR s.id IS NULL
-	OR m.id IS NULL
-	OR p.id IS NULL
-)
-GROUP BY va.id_lmunicipality
+            AND va.is_active
+            AND va.need_update
+            AND va.id IS NOT NULL
+            AND m.id IS NULL
+#AND va.id = 777
 ;
+*/
+
+
 
 /*
 hcolonia a veces tiene municipios, identificar si es colonia o municipio.
@@ -168,37 +150,21 @@ GROUP BY va.id_lmunicipality
 
 
 # 4) almacena el ultimo rem_houses.id
-SELECT 
-@laih:= AUTO_INCREMENT - 1 'Last AI houses'
-FROM  INFORMATION_SCHEMA.TABLES t
-WHERE 1
-AND t.TABLE_SCHEMA = DATABASE()
-AND t.TABLE_NAME LIKE '%rem_houses';
-SELECT @laih 'nuevos => laih';
+
+
+#SELECT @laih 'nuevos => laih';
 
 # 2) condiciones iniciales, cargué la información del CSV
 #SET @laih := 1; # Last AI houses - 1
 #DELETE FROM jos_rem_houses WHERE id > @laih;
-SET @ordering := @laih;
+
+
 
 # 3) copy empty records to houses
-INSERT INTO jos_rem_houses (id, description, images, state)
-SELECT @ordering := @ordering + 1 AS 'id', '' AS 'description', '' AS 'images', 1 AS state 
-FROM scrpng_vivanuncios2 va
-WHERE id_remhouse IS NULL
-AND va.is_active
-AND va.need_update
-;
+
 
 # 4) refer va.fk to h.pk empty records
-SET @ordering := @laih;
-UPDATE scrpng_vivanuncios2 va
-SET va.id_remhouse = @ordering := @ordering + 1, need_update = 1
-WHERE 1
-AND id_remhouse IS NULL
-AND va.is_active
-AND va.need_update
-;
+
 
 
 # 5) update set h.values = va.values
@@ -210,25 +176,21 @@ LEFT JOIN jos_rem_lmunicipalities m ON m.id_va = va.id_lmunicipality
 LEFT JOIN jos_rem_countries p ON p.currency = va.currency
 SET 
 
-h.catid = va.id_cat,
 #h.year = coalesce(va.year, ''),
 #h.agent = LEFT(coalesce(va.agent, ''), 45),
-##h.image_link = coalesce(va.image_link, ''),
-#h.photos = va.fullbleedpics,
-#h.images = CONCAT_WS('','{"image_url":"',va.image_link,'","image_alt_text":"","image_caption":""}'),
+#h.photos = va.fullbleedpics# set in python
+#h.images = # set in python
+#h.description = va.description,# set in python
 
-
-hcolonia = '',
-
+h.catid = va.id_cat,
 h.id_country = c.id, #pais
 h.id_lstate = s.id, #estado
 h.id_lmunicipality = coalesce(m.id, 0),  #municipio
-h.garages = va.garages,
 h.id_currency = p.id,
+hcolonia = '',
 
-
+h.garages = va.garages,
 h.name = va.name,
-#h.description = va.description,#agregar geocode x python
 h.hits = GREATEST(h.hits,va.hits),
 h.link = va.link,
 h.price = va.price,
@@ -250,9 +212,6 @@ WHERE 1
 AND va.is_active
 AND va.need_update
 AND va.id IS NOT NULL
-
-#sujeto de prueba
-#AND h.id = 74288
 ;
 
 #################REVISAR

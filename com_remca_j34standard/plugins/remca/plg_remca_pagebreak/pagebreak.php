@@ -58,8 +58,8 @@ class PlgRemcaPagebreak extends JPlugin
 	 * Plugin that adds a pagebreak into the text and truncates text at that point
 	 *
 	 * @param   string   $context  The context of the content being passed to the plugin.
-	 * @param   object   &$row     The house object.  Note $house->text is also available
-	 * @param   mixed    &$params  The house  params
+	 * @param   object   &$row     The inmueble object.  Note $house->text is also available
+	 * @param   mixed    &$params  The inmueble  params
 	 * @param   integer  $page     The 'page' number
 	 *
 	 * @return  mixed  Always returns void or true
@@ -252,7 +252,7 @@ class PlgRemcaPagebreak extends JPlugin
 	/**
 	 * Creates a Table of Contents for the pagebreak
 	 *
-	 * @param   object   &$row      The house object.  Note $house->text is also available
+	 * @param   object   &$row      The inmueble object.  Note $house->text is also available
 	 * @param   array    &$matches  Array of matches of a regex in onHousePrepare
 	 * @param   integer  &$page     The 'page' number
 	 *
@@ -362,7 +362,7 @@ class PlgRemcaPagebreak extends JPlugin
 	/**
 	 * Creates the navigation for the item
 	 *
-	 * @param   object  &$row  The house object.  Note $house->text is also available
+	 * @param   object  &$row  The inmueble object.  Note $house->text is also available
 	 * @param   int     $page  The total number of pages
 	 * @param   int     $n     The page number
 	 *

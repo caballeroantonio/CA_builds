@@ -80,7 +80,7 @@ class RemcaViewRemca_Dashboard extends JViewLegacy
 		$buttons = array();
 		$buttons[] = array('link'=>'index.php?option=com_remca&view=houses',
 			'object'=>'houses',
-			'text'=>'Houses',//JText::_('REMCA_COMPONENT_WIZARD'),
+			'text'=>'Inmuebles',//JText::_('REMCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_REMCA_HOUSE_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_remca&view=photos',
@@ -138,10 +138,10 @@ class RemcaViewRemca_Dashboard extends JViewLegacy
 			'text'=>'Track_source',//JText::_('REMCA_COMPONENT_WIZARD'),
 			'desc'=>JText::_('COM_REMCA_TRACKSOURCE_DESCRIPTION')
 			);
-		$buttons[] = array('link'=>'index.php?option=com_remca&view=users_wishlist',
-			'object'=>'users_wishlist',
-			'text'=>'Users_wishlist',//JText::_('REMCA_COMPONENT_WIZARD'),
-			'desc'=>JText::_('COM_REMCA_USERSWISHLIST_DESCRIPTION')
+		$buttons[] = array('link'=>'index.php?option=com_remca&view=wisheslist',
+			'object'=>'wisheslist',
+			'text'=>'Favoritos',//JText::_('REMCA_COMPONENT_WIZARD'),
+			'desc'=>JText::_('COM_REMCA_WISHLIST_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_remca&view=video_source',
 			'object'=>'video_source',

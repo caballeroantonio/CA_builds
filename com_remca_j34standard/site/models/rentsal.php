@@ -186,10 +186,10 @@ class RemcaModelRentSal extends JModelList
 
 		
 		// Filter by and return name for id_house level.
-		$query->select($db->quoteName('h.name').' AS h_house_name');
-		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
+		$query->select($db->quoteName('i.name').' AS i_house_name');
+		$query->select($db->quoteName('i.ordering').' AS i_house_ordering');
 
-		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
+		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS i ON '.$db->quoteName('i.id').' = '.$db->quoteName('a.id_house'));	
 					
 
 		// Filter by a single or group of rent_sal.

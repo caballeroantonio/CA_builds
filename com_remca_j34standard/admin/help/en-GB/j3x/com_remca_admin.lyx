@@ -1120,7 +1120,7 @@ Diagrama entidad relación
 \end_layout
 
 \begin_layout Subsection
-Configuración de House
+Configuración de Inmueble
 \end_layout
 
 \begin_layout Standard
@@ -1145,7 +1145,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Configuraciones del despliegue de House
+Configuraciones del despliegue de Inmueble
 \end_layout
 
 \end_inset
@@ -1180,7 +1180,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Configuraciones del despliegue de House en listas/Blog
+Configuraciones del despliegue de Inmueble en listas/Blog
 \end_layout
 
 \end_inset
@@ -2111,7 +2111,7 @@ Configuraciones del despliegue de Track_source en listas/Blog
 \end_layout
 
 \begin_layout Subsection
-Configuración de Users_wishlist
+Configuración de Favorito
 \end_layout
 
 \begin_layout Standard
@@ -2136,7 +2136,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Configuraciones del despliegue de Users_wishlist
+Configuraciones del despliegue de Favorito
 \end_layout
 
 \end_inset
@@ -2171,7 +2171,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Configuraciones del despliegue de Users_wishlist en listas/Blog
+Configuraciones del despliegue de Favorito en listas/Blog
 \end_layout
 
 \end_inset
@@ -2964,7 +2964,7 @@ Descripción
 \end_layout
 
 \begin_layout Standard
-Es la tabla para almacenar Houses
+Es la tabla para almacenar Inmuebles
 \end_layout
 
 \begin_layout Standard
@@ -5380,7 +5380,7 @@ Diagrama entidad relación
 \end_layout
 
 \begin_layout Subsection
-#__rem_users_wishlist
+#__rem_wisheslist
 \end_layout
 
 \begin_layout Subparagraph
@@ -5388,7 +5388,7 @@ Descripción
 \end_layout
 
 \begin_layout Standard
-Es la tabla para almacenar Users_wishlist
+Es la tabla para almacenar Favoritos
 \end_layout
 
 \begin_layout Standard
@@ -5443,7 +5443,7 @@ Descripción
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "userswishlist_admin.tex"
+filename "wishlist_admin.tex"
 
 \end_inset
 
@@ -5552,7 +5552,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename der_users_wishlist.svg
+	filename der_wisheslist.svg
 	lyxscale 30
 	width 80text%
 
@@ -7878,7 +7878,7 @@ Interfaces
 \end_layout
 
 \begin_layout Subsubsection
-House
+Inmueble
 \end_layout
 
 \begin_layout Subparagraph
@@ -7957,7 +7957,7 @@ status collapsed
 
 
 \backslash
-caption{Lista de campos en House}
+caption{Lista de campos en Inmueble}
 \backslash
 
 \backslash
@@ -8001,7 +8001,7 @@ status collapsed
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Houses - Grid Panel Layout"
+name "Inmuebles - Grid Panel Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=gridpanel"
 
 \end_inset
@@ -8047,7 +8047,7 @@ Grid Panel Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Houses - Default List Layout"
+name "Inmuebles - Default List Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]"
 
 \end_inset
@@ -8093,7 +8093,7 @@ Default List Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Houses - Blog Layout"
+name "Inmuebles - Blog Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=blog"
 
 \end_inset
@@ -8139,7 +8139,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Houses - Single House Layout"
+name "Inmuebles - Single Inmueble Layout"
 target "SERVER?option=com_remca&view=house&id=1"
 
 \end_inset
@@ -8169,7 +8169,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single House Layout
+Single Inmueble Layout
 \end_layout
 
 \end_inset
@@ -8185,7 +8185,7 @@ Single House Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Houses - Single House Article Layout"
+name "Inmuebles - Single Inmueble Article Layout"
 target "SERVER?option=com_remca&view=house&layout=article&id=1"
 
 \end_inset
@@ -8215,7 +8215,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single House Article Layout
+Single Inmueble Article Layout
 \end_layout
 
 \end_inset
@@ -8231,7 +8231,7 @@ Single House Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Houses - Create House"
+name "Inmuebles - Create Inmueble"
 target "SERVER?option=com_remca&view=houseform&layout=edit&id=1"
 
 \end_inset
@@ -8261,7 +8261,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Create House
+Create Inmueble
 \end_layout
 
 \end_inset
@@ -12750,7 +12750,7 @@ Create Track_source
 \end_layout
 
 \begin_layout Subsubsection
-Users_wishlist
+Favorito
 \end_layout
 
 \begin_layout Subparagraph
@@ -12798,7 +12798,7 @@ Descripción
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
-filename "userswishlist_user.tex"
+filename "wishlist_user.tex"
 
 \end_inset
 
@@ -12829,7 +12829,7 @@ status collapsed
 
 
 \backslash
-caption{Lista de campos en Users_wishlist}
+caption{Lista de campos en Favorito}
 \backslash
 
 \backslash
@@ -12873,7 +12873,7 @@ status collapsed
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Users_wishlist - Grid Panel Layout"
+name "Favoritos - Grid Panel Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=gridpanel"
 
 \end_inset
@@ -12890,7 +12890,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_users_wishlist.jpg
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_wisheslist.jpg
 	lyxscale 30
 	width 80col%
 
@@ -12919,7 +12919,7 @@ Grid Panel Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Users_wishlist - Default List Layout"
+name "Favoritos - Default List Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]"
 
 \end_inset
@@ -12965,7 +12965,7 @@ Default List Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Users_wishlist - Blog Layout"
+name "Favoritos - Blog Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=blog"
 
 \end_inset
@@ -13011,8 +13011,8 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Users_wishlist - Single Users_wishlist Layout"
-target "SERVER?option=com_remca&view=userswishlist&id=1"
+name "Favoritos - Single Favorito Layout"
+target "SERVER?option=com_remca&view=wishlist&id=1"
 
 \end_inset
 
@@ -13041,7 +13041,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single Users_wishlist Layout
+Single Favorito Layout
 \end_layout
 
 \end_inset
@@ -13057,8 +13057,8 @@ Single Users_wishlist Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Users_wishlist - Single Users_wishlist Article Layout"
-target "SERVER?option=com_remca&view=userswishlist&layout=article&id=1"
+name "Favoritos - Single Favorito Article Layout"
+target "SERVER?option=com_remca&view=wishlist&layout=article&id=1"
 
 \end_inset
 
@@ -13087,7 +13087,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Single Users_wishlist Article Layout
+Single Favorito Article Layout
 \end_layout
 
 \end_inset
@@ -13103,8 +13103,8 @@ Single Users_wishlist Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Users_wishlist - Create Users_wishlist"
-target "SERVER?option=com_remca&view=userswishlistform&layout=edit&id=1"
+name "Favoritos - Create Favorito"
+target "SERVER?option=com_remca&view=wishlistform&layout=edit&id=1"
 
 \end_inset
 
@@ -13133,7 +13133,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Create Users_wishlist
+Create Favorito
 \end_layout
 
 \end_inset

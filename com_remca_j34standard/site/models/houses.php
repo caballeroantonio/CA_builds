@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * This models supports retrieving lists of houses.
+ * This models supports retrieving lists of inmuebles.
  *
  */
 class RemcaModelHouses extends JModelList
@@ -110,7 +110,7 @@ class RemcaModelHouses extends JModelList
 		
 		$item_id = $app->input->getInt('id', 0) . ':' .$app->input->getInt('Itemid', 0);
 
-		// Check to see if a single house has been specified either as a parameter or in the url Request
+		// Check to see if a single inmueble has been specified either as a parameter or in the url Request
 		$pk = $params->get('house_id', '') == '' ? $app->input->getInt('id', '') : $params->get('house_id');
 		$this->setState('filter.house_id', $pk);
 		
@@ -373,7 +373,7 @@ class RemcaModelHouses extends JModelList
 		if ($id_lmunicipality = $this->getState('filter.id_lmunicipality'))
 		{
 			$query->where($db->quoteName('a.id_lmunicipality').' = ' . (int) $id_lmunicipality);
-		}
+		}	
 		
 		//tx custom code gt_price < filter.price > lt_price
 		if ($price_lt = $this->getState('filter.price_lt'))
@@ -492,7 +492,6 @@ foreach ($words AS $word){
     $where .= "\n\t AND ".$db->quoteName('a.name')." LIKE '%{$word}%'";
 }
 $where .= "\n\t)";
-
 $where .= "\n OR";
 #description
 $where .= "\n\t( 1 ";
@@ -500,6 +499,7 @@ foreach ($words AS $word){
     $where .= "\n\t AND ".$db->quoteName('a.description')." LIKE '%{$word}%'";
 }
 $where .= "\n\t)";
+
 $where .= "\n)";
 
 					$query->where($where);
@@ -563,7 +563,7 @@ $where .= "\n)";
 	}
 
 	/**
-	 * Method to get a list of houses.
+	 * Method to get a list of inmuebles.
 	 *
 	 * Overriden to inject convert the params fields into an object.
 	 *

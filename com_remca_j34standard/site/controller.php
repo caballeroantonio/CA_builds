@@ -109,7 +109,7 @@ edité el menú login para que hiciera redirect a este componente
 			'filter_rentsal_order'=>'CMD','filter_rentsal_order_Dir'=>'CMD','rentsal-filter-search'=>'STRING',
 			'filter_review_order'=>'CMD','filter_review_order_Dir'=>'CMD','review-filter-search'=>'STRING',
 			'filter_tracksource_order'=>'CMD','filter_tracksource_order_Dir'=>'CMD','tracksource-filter-search'=>'STRING',
-			'filter_userswishlist_order'=>'CMD','filter_userswishlist_order_Dir'=>'CMD','userswishlist-filter-search'=>'STRING',
+			'filter_wishlist_order'=>'CMD','filter_wishlist_order_Dir'=>'CMD','wishlist-filter-search'=>'STRING',
 			'filter_videosource_order'=>'CMD','filter_videosource_order_Dir'=>'CMD','videosource-filter-search'=>'STRING',
 			'filter_buyingrequest_order'=>'CMD','filter_buyingrequest_order_Dir'=>'CMD','buyingrequest-filter-search'=>'STRING',
 			'filter_category_order'=>'CMD','filter_category_order_Dir'=>'CMD','category-filter-search'=>'STRING',

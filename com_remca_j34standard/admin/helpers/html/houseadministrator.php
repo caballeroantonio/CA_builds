@@ -30,7 +30,7 @@ defined('_JEXEC') or die;
 
 JLoader::register('ContentHelper', JPATH_ADMINISTRATOR . '/components/com_remca/helpers/remca.php');
 /**
- * Houses component helper.
+ * Inmuebles component helper.
  *
  */
 abstract class JHtmlHouseAdministrator
@@ -38,7 +38,7 @@ abstract class JHtmlHouseAdministrator
 	/**
 	 * Render the list of associated items
 	 * 
-	 * @param	integer $house_id	The house item id
+	 * @param	integer $house_id	The inmueble item id
 	 * 
 	 * @return  string  The language HTML
      */

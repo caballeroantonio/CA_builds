@@ -175,7 +175,7 @@ $images = $this->item->images;
 			echo $this->loadTemplate('item_info');
 		endif;
 	?>			
-	<?php //Optional link to let them register to see the whole house. ?>
+	<?php //Optional link to let them register to see the whole inmueble. ?>
 	<?php if ($params->get('show_house_readmore')) :
 				$link = JRoute::_(RemcaHelperRoute::getHouseRoute($this->item->slug, 
 																							$this->item->catid, 

@@ -216,7 +216,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo JString::trim($this->item->h_house_name);
+									echo JString::trim($this->item->i_house_name);
 								?>
 							</span>
 						</div>	

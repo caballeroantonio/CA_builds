@@ -26,7 +26,7 @@
 
 <metadata>
 	<view
-		title="House">
+		title="Inmueble">
 		<message><![CDATA[COM_REMCA_HOUSE_LAYOUT_DESC]]></message>
 	</view>
 </metadata>

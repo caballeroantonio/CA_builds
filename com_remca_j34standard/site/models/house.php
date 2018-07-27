@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * RealEstateManagerCA Component House Model
+ * RealEstateManagerCA Component Inmueble Model
  *
  */
 class RemcaModelHouse extends JModelItem
@@ -167,7 +167,7 @@ class RemcaModelHouse extends JModelItem
 		}
 		else
 		{
-			// New house, so check against the category.		
+			// New inmueble, so check against the category.		
 			if (!empty($record->catid))
 			{
 				return $user->authorise('core.edit.state', 'com_remca.category.'.(int) $record->catid);
@@ -242,9 +242,9 @@ class RemcaModelHouse extends JModelItem
 		return JTable::getInstance($type, $prefix, $config);
 	}
 	/**
-	 * Method to get House data.
+	 * Method to get Inmueble data.
 	 *
-	 * @param	integer	$pk	The id of the house.
+	 * @param	integer	$pk	The id of the inmueble.
 	 *
 	 * @return	mixed	Menu item data object on success, false on failure.
 	 */
@@ -816,9 +816,9 @@ class RemcaModelHouse extends JModelItem
 		return true;
 	}
 	/**
-	 * Increment the hit counter for the house.
+	 * Increment the hit counter for the inmueble.
 	 *
-	 * @pk		int		Optional primary key of the house to increment.
+	 * @pk		int		Optional primary key of the inmueble to increment.
 	 *
 	 * @return	boolean	True if successful; false otherwise and internal error set.
 	 */
@@ -840,10 +840,10 @@ class RemcaModelHouse extends JModelItem
 		return true;
 	}
 	/**
-	 * Update the vote rating for the house.
+	 * Update the vote rating for the inmueble.
 	 *
-	 * @pk		int		Optional primary key of the house to rate.
-	 * @rate	int		Optional rating for the house.
+	 * @pk		int		Optional primary key of the inmueble to rate.
+	 * @rate	int		Optional rating for the inmueble.
 	 *
 	 * @return	boolean	True if successful; false otherwise and internal error set.
 	 */	

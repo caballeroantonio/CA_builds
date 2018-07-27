@@ -189,10 +189,10 @@ class RemcaModelRents extends JModelList
 
 		
 		// Filter by and return name for id_house level.
-		$query->select($db->quoteName('h.name').' AS h_house_name');
-		$query->select($db->quoteName('h.ordering').' AS h_house_ordering');
+		$query->select($db->quoteName('i.name').' AS i_house_name');
+		$query->select($db->quoteName('i.ordering').' AS i_house_ordering');
 
-		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS h ON '.$db->quoteName('h.id').' = '.$db->quoteName('a.id_house'));	
+		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS i ON '.$db->quoteName('i.id').' = '.$db->quoteName('a.id_house'));	
 		// Filter by and return name for id_user level.
 		$query->select($db->quoteName('u.name').' AS u_user_name');
 		$query->select($db->quoteName('u.id').' AS u_user_id');
@@ -229,13 +229,27 @@ class RemcaModelRents extends JModelList
 		{
 			// clean filter variable
 			$filter = JString::strtolower($filter);
+			$filter_words = $db->escape($filter, true);
 			$filter = $db->quote('%'.$db->escape($filter, true).'%', false);
 
 			switch ($params->get('show_rent_filter_field'))
 			{
 				case 'name':
 				default: // default to 'name' if parameter is not valid
-					$query->where('LOWER('.$db->quoteName('a.name').') LIKE '.$filter);
+$regex = '/\s+/';
+//$regex = '~\s+~';
+$words = preg_split($regex, $filter_words, -1, PREG_SPLIT_NO_EMPTY);
+$where = '( ';
+
+#name
+$where .= "\n\t( 1";
+foreach ($words AS $word){
+    $where .= "\n\t AND ".$db->quoteName('a.name')." LIKE '%{$word}%'";
+}
+$where .= "\n\t)";
+$where .= "\n)";
+
+					$query->where($where);
 					break;
 				
 			}

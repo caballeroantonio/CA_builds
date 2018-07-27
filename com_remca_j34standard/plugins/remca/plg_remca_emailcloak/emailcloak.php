@@ -38,15 +38,15 @@ class PlgRemcaEmailcloak extends JPlugin
 	 * Plugin that cloaks all emails in descripitons from spambots via Javascript.
 	 *
 	 * @param   string   $context  The context of the content being passed to the plugin.
-	 * @param   object   &$row     The house object.  Note $house->text is also available
-	 * @param   mixed    &$params  The house  params
+	 * @param   object   &$row     The inmueble object.  Note $house->text is also available
+	 * @param   mixed    &$params  The inmueble  params
 	 * @param   integer  $page     The 'page' number
 	 *
 	 * @return  mixed  Always returns void or true
 	 */
 	public function onHousePrepare($context, &$row, &$params, $page = 0)
 	{
-		// Don't run this plugin when the houses are  being indexed
+		// Don't run this plugin when the inmuebles are  being indexed
 		if ($context == 'com_finder.indexer')
 		{
 			return true;
