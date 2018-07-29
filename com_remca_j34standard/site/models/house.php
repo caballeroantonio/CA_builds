@@ -145,7 +145,7 @@ class RemcaModelHouse extends JModelItem
 		}
 		if (!empty($record->id))
 		{
-			return $user->authorise('core.delete', 'com_remca.house.'.(int) $record->id);
+			return $user->authorise('core.delete', 'com_remca');
 		}
 		return ;
 	}
@@ -159,25 +159,15 @@ class RemcaModelHouse extends JModelItem
 	protected function canEditState($record)
 	{
 		$user = JFactory::getUser();
+		
+		return 1
+//                    AND !empty($record->catid)
+//                    AND $user->authorise('core.edit.state', 'com_remca.category.'.(int) $record->catid);
+                    AND (
+                        $user->authorise('core.edit.state', 'com_remca')
+                    )
+		;
 
-		// Check against the id.
-		if (!empty($record->id))
-		{
-			return $user->authorise('core.edit.state', 'com_remca.house.'.(int) $record->id);
-		}
-		else
-		{
-			// New inmueble, so check against the category.		
-			if (!empty($record->catid))
-			{
-				return $user->authorise('core.edit.state', 'com_remca.category.'.(int) $record->catid);
-			}
-			else 
-			{
-			// Default to component settings.			
-				return $user->authorise('core.edit.state', 'com_remca');
-			}
-		}
 	}
 	/**
 	 * Method to auto-populate the model state.
@@ -319,7 +309,7 @@ class RemcaModelHouse extends JModelItem
 				$query->select('ROUND('.$db->quoteName('v.rating_sum').' / '.$db->quoteName('v.rating_count').', 0) AS rating, '.$db->quoteName('v.rating_count').' as rating_count');
 				$query->join('LEFT', $db->quoteName('#__rem_rating').' AS v ON '.$db->quoteName('a.id').' = '.$db->quoteName('v.content_id').' AND '.$db->quoteName('v.content_type').' = '.$db->quote('houses'));
 
-				$can_publish = $user->authorise('core.edit.state', 'com_remca.house.'.$pk);
+				$can_publish = $user->authorise('core.edit.state', 'com_remca');
 				//  Do not show unless today's date is within the publish up and down dates (or they are empty)
 				// Filter by published status.
 				$published = $this->getState('filter.published');
@@ -480,7 +470,7 @@ class RemcaModelHouse extends JModelItem
 				if (!$user->get('guest')) 
 				{
 					$user_id	= $user->get('id');
-					$asset	= 'com_remca.house.'.$item->id;
+					$asset	= 'com_remca';
 
 					// Check general edit permission first.
 					if ($user->authorise('core.edit', $asset)) 

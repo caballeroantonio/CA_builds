@@ -69,19 +69,19 @@ class RemcaControllerConst extends JControllerLegacy
                 
         /*
          * Function that allows download database information
-         * @ToDo implementar generación de código
+         * @ToDo implementar ACL
+         * from outside: $model = JModelLegacy::getInstance('WishlistForm','RemcaModel', array('ignore_request' => FALSE));	
          */
         public function export(){
-			//from outside:
-			//$model = JModelLegacy::getInstance('ConstForm','RemcaModel', array('ignore_request' => FALSE));
-			
-            $model = $this->getModel('Const','RemcaModel',array('ignore_request' => FALSE));
+			return false;
+            $model = $this->getModel = $this->getModel('Const','RemcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override
 //			$model->setState('list.direction', 'ASC');//override
 //			$model->setState('list.select', 'a.*');//override
             $query = $model->getListQuery4Export();
-            echo($query);
+            $remca_helper = new RemcaHelper();
+            $remca_helper->export('Const',$query);
         }
 }

@@ -34,7 +34,7 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'User',
+        'FIELD_NAME' => 'Usuario',
         'FIELD_CODE_NAME' => 'id_user',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
@@ -45,9 +45,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' User
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Usuario
 
-                FIELD_NAME_LATEX=User
+                FIELD_NAME_LATEX=Usuario
                 FIELD_CODE_NAME_LATEX=id\_user
                 FIELD_DBCOMMENT_LATEX=
 
@@ -147,7 +147,7 @@ function getFields(){
     $fields['order_date'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'House',
+        'FIELD_NAME' => 'Inmueble',
         'FIELD_CODE_NAME' => 'id_house',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
@@ -158,9 +158,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Inmueble
 
-                FIELD_NAME_LATEX=House
+                FIELD_NAME_LATEX=Inmueble
                 FIELD_CODE_NAME_LATEX=id\_house
                 FIELD_DBCOMMENT_LATEX=
 

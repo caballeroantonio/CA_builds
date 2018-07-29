@@ -64,7 +64,7 @@ class RemcaViewHouse extends JViewLegacy
 		$this->form		= $this->get('Form');
 		$this->item		= $this->get('Item');
 		$this->state	= $this->get('State');
-		$this->can_do = JHelperContent::getActions('com_remca', 'house', $this->item->id);
+		$this->can_do = JHelperContent::getActions('com_remca');
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))

@@ -207,7 +207,7 @@ class RemcaModelHouseForm extends RemcaModelHouse
 			$item->modified_by_name = $user->name;
 		}			
 		
-		$asset	= 'com_remca.house.'.$item->id;
+		$asset	= 'com_remca';
 
 		// Check general edit permission first.
 		if ($user->authorise('core.edit', $asset)) 

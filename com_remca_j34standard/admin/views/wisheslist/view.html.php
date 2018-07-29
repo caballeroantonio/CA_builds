@@ -38,6 +38,7 @@ class RemcaViewWisheslist extends JViewLegacy
 	protected $pagination;
 	protected $state;
 	protected $creators;
+	protected $can_do;
 
 	/**
 	 * Execute and display a template script.
@@ -55,6 +56,7 @@ class RemcaViewWisheslist extends JViewLegacy
 		$this->filterForm    = $this->get('FilterForm');
 		$this->activeFilters = $this->get('ActiveFilters');
 		
+		$this->can_do = JHelperContent::getActions('com_remca');
 				
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
@@ -84,9 +86,17 @@ class RemcaViewWisheslist extends JViewLegacy
 			
 		JToolbarHelper::title(JText::_('COM_REMCA_WISHESLIST_LIST_HEADER'), 'stack wisheslist');
 
-		JToolbarHelper::addNew('wishlist.add','JTOOLBAR_NEW');
+		if ($this->can_do->get('core.create')) 
+		{
+			JToolbarHelper::addNew('wishlist.add','JTOOLBAR_NEW');
+		}
 		
-		JToolbarHelper::editList('wishlist.edit','JTOOLBAR_EDIT');
+		if ($this->can_do->get('core.edit') OR $this->can_do->get('core.edit.own')) 
+		{
+			JToolbarHelper::editList('wishlist.edit','JTOOLBAR_EDIT');
+		}
+		if ($this->can_do->get('core.edit.state') ) 
+		{
 
 			if ($this->state->get('filter.state') != 2)
 			{
@@ -108,22 +118,32 @@ class RemcaViewWisheslist extends JViewLegacy
 					}
 				}
 			}
+		}
 		
 
 	
 		if ($this->state->get('filter.state') == -2)
 		{
-			JToolbarHelper::deleteList('', 'wisheslist.delete','JTOOLBAR_EMPTY_TRASH');
+			if ($this->can_do->get('core.delete'))
+			{
+				JToolbarHelper::deleteList('', 'wisheslist.delete','JTOOLBAR_EMPTY_TRASH');
+			}
 		}
 		else 
 		{
-			JToolbarHelper::trash('wisheslist.trash','JTOOLBAR_TRASH');
+			if ($this->can_do->get('core.edit.state')) 
+			{
+				JToolbarHelper::trash('wisheslist.trash','JTOOLBAR_TRASH');
+			}
 		}
                         
                 JToolbarHelper::custom('wisheslist.export', 'download','download', 'JTOOLBAR_EXPORT', FALSE);
 
 				
-		JToolbarHelper::preferences('com_remca');
+		if ($user->authorise('core.admin', 'com_remca') OR $user->authorise('core.options', 'com_remca')) 
+		{
+			JToolbarHelper::preferences('com_remca');
+		}
 		JToolbarHelper::help('JHELP_COMPONENTS_COM_REMCA_WISHLIST', true, null, 'com_remca');
 	}
 	/**

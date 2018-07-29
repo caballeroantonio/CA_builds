@@ -52,6 +52,8 @@ if ($lang->isRTL())
 $params		= &$this->item->params;
 $user		= JFactory::getUser();
 $info		= $this->item->params->get('wishlist_info_block_position', 0);
+$can_edit	= $params->get('access-edit');
+$can_delete	= $params->get('access-delete');
 // Get from global settings the text to use for an empty field
 $component = JComponentHelper::getComponent( 'com_remca' );
 $empty = $component->params->get('default_empty_field', '');
@@ -86,6 +88,8 @@ $use_def_list = (
 		<?php
 			if ($params->get('show_wishlist_print_icon') 
 					OR $params->get('show_wishlist_email_icon') 
+					OR $can_edit 
+					OR $can_delete 
 					):
 		?>
 			<?php if (!$this->print) : ?>
@@ -103,12 +107,16 @@ $use_def_list = (
 									<?php echo JHtml::_('wishlisticon.email',  $this->item, $params); ?>
 							</li>
 							<?php endif; ?>
+							<?php if ($can_edit) : ?>
 								<li class="edit-icon">
 									<?php echo JHtml::_('wishlisticon.edit', $this->item, $params); ?>
 								</li>
+							<?php endif; ?>
+							<?php if ($can_delete) : ?>
 								<li class="delete-icon">
 									<?php echo JHtml::_('wishlisticon.delete',$this->item, $params); ?>
 								</li>
+							<?php endif; ?>
 						</ul>
 					</div>
 			<?php else : ?>
@@ -134,7 +142,6 @@ $use_def_list = (
 		<?php
 			$dummy = false;
 			$use_fields_list = (
-						($params->get('show_wishlist_id_user')) OR 
 						($params->get('show_wishlist_id_house')) OR 
 						$dummy
 						);
@@ -144,14 +151,6 @@ $use_def_list = (
 			<dt class="info-title"><?php  echo JText::_('COM_REMCA_WISHESLIST_INFO'); ?></dt>
 		<?php endif; ?>		
 		
-			<?php if ($params->get('show_wishlist_id_user')) : ?>
-				<dd class="field">
-					<strong><?php echo JText::_('COM_REMCA_WISHESLIST_FIELD_ID_USER_LABEL'); ?></strong>
-					<?php
-						echo JString::trim($this->item->u_user_name);
-					?>
-				</dd>
-			<?php endif; ?>
 			<?php if ($params->get('show_wishlist_id_house')) : ?>
 				<dd class="field">
 					<strong><?php echo JText::_('COM_REMCA_WISHESLIST_FIELD_ID_HOUSE_LABEL'); ?></strong>

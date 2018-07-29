@@ -719,7 +719,7 @@ $where .= "\n)";
 				// Technically guest could edit an house, but lets not check that to improve performance a little.
 				if (!$guest) 
 				{
-					$asset	= 'com_remca.house.'.$item->id;
+					$asset	= 'com_remca';
 
 					// Check general edit permission first.
 					if ($user->authorise('core.edit', $asset))
@@ -985,7 +985,7 @@ $where .= "\n)";
 
 		// Setup the query
 		$db->setQuery($query);
-                
+
 		// Return the result
 		return $db->loadObjectList();
             }else{

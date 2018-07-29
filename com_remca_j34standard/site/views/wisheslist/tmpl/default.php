@@ -60,6 +60,7 @@ $list_dirn	= $this->state->get('list.direction');
 
 $layout		= $this->params->get('wishlist_layout', 'default');
 
+$can_create	= $user->authorise('core.create', 'com_remca');
 // Get from global settings the text to use for an empty field
 $component = JComponentHelper::getComponent( 'com_remca' );
 $empty = $component->params->get('default_empty_field', '');
@@ -135,11 +136,6 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_wishlist_id_user',1)) : ?>
-						<th class="list-id_user" id="tableOrderingid_user">
-							<?php echo JTEXT::_('COM_REMCA_WISHESLIST_HEADING_ID_USER'); ?>
-						</th>
-					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_wishlist_id_house',1)) : ?>
 						<th class="list-id_house" id="tableOrderingid_house">
 							<?php echo JTEXT::_('COM_REMCA_WISHESLIST_HEADING_ID_HOUSE'); ?>
@@ -158,6 +154,10 @@ $empty = $component->params->get('default_empty_field', '');
 
 				<?php foreach ($this->items as $i => $item) :
 				
+					$can_edit	= $item->params->get('access-edit');
+			
+					$can_delete	= $item->params->get('access-delete');
+
 							
 				?>			
 					<?php $params = $item->params; ?>		
@@ -198,17 +198,6 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_wishlist_id_user',1)) : ?>
-						<td class="list-id_user">
-							<?php 
-								if ($params->get('list_link_wishlist_id_user')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getUserRoute($item->id_user, 0)).'">'.JString::trim($item->u_user_name).'</a>';
-								else :
-									echo JString::trim($item->u_user_name);
-								endif; 
-							?>
-						</td>
-					<?php endif; ?>
 					<?php if ($this->params->get('list_show_wishlist_id_house',1)) : ?>
 						<td class="list-id_house">
 							<?php 
@@ -236,6 +225,16 @@ $empty = $component->params->get('default_empty_field', '');
 										<?php echo JHtml::_('wishlisticon.email',  $item, $params); ?>
 								</li>
 							<?php endif; ?>
+								<?php if ($can_edit ) : ?>
+                                    <li class="edit-icon">
+                                        <?php echo JHtml::_('wishlisticon.edit',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>					
+                                <?php if ($can_delete) : ?>
+                                    <li class="delete-icon">
+                                        <?php echo JHtml::_('wishlisticon.delete',$item, $params); ?>
+                                    </li>
+                                <?php endif; ?>
 							<?php if ($can_edit AND $params->get('save_history') AND $params->get('wishlist_save_history')) : ?>
 								<li class="version-icon">
 									<?php echo JHtml::_('wishlisticon.versions',$item, $params); ?>
@@ -275,13 +274,15 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php endif; ?>
 		<?php // Code to add a link to submit an wishlist. ?>
 		<?php if ($this->params->get('show_wishlist_add_link', 1)) : ?>
-			<?php echo JHtml::_('wishlisticon.create', $this->params); ?>
+			<?php if ($can_create) : ?>
+				<?php echo JHtml::_('wishlisticon.create', $this->params); ?>
+			<?php  endif; ?>
 		<?php endif; ?>		
 		<?php 
-//			if($user->id == 1){
-				//JHtml::_('[%%compobject%%]icon.create', $this->params); 
-	            echo '<span class="hasTooltip tip" title="Export"><a href="#" class="btn btn-primary"><span class="icon-download"></span>Export</a></span>';
-//			}
+			if(true){
+				//JHtml::_('wishlisticon.create', $this->params); 
+	            echo '<span class="hasTooltip tip" title="Export"><a href="index.php?task=wisheslist.export" class="btn btn-primary"><span class="icon-download"></span>Export</a></span>';
+			}
         ?>
 	</form>
 </div>

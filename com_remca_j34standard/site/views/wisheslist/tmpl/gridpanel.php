@@ -34,32 +34,7 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'User',
-        'FIELD_CODE_NAME' => 'id_user',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 13,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_USER
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' User
-
-                FIELD_NAME_LATEX=User
-                FIELD_CODE_NAME_LATEX=id\_user
-                FIELD_DBCOMMENT_LATEX=
-
-                    {FIELD_LINK}
-                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
-                    FIELD_FOREIGN_OBJECT_UPPER=USER
-
-    */
-    $fields['id_user'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'House',
+        'FIELD_NAME' => 'Inmueble',
         'FIELD_CODE_NAME' => 'id_house',
         'FIELD_DESCRIPTION' => '',//
         'FIELDTYPE_ID' => 13,
@@ -70,9 +45,9 @@ function getFields(){
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' House
+                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Inmueble
 
-                FIELD_NAME_LATEX=House
+                FIELD_NAME_LATEX=Inmueble
                 FIELD_CODE_NAME_LATEX=id\_house
                 FIELD_DBCOMMENT_LATEX=
 

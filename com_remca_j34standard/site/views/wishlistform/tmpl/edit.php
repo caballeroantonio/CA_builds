@@ -182,7 +182,9 @@ $params = $this->state->get('params');
 <?php /*?>			<ul class="nav nav-tabs">
 				<li class="active"><a href="#basic-details" data-toggle="tab"><?php echo JText::_('COM_REMCA_WISHESLIST_FIELDSET_DETAILS_LABEL');?></a></li>
 				<li><a href="#fieldset-users_wishlist_fs" data-toggle="tab"><?php echo JText::_('COM_REMCA_WISHESLIST_FIELDSET_USERS_WISHLIST_FS_LABEL');?></a></li>
+				<?php if ($this->item->params->get('access-change')): ?>
 				<li><a href="#publishing" data-toggle="tab"><?php echo JText::_('COM_REMCA_FIELDSET_PUBLISHING_LABEL');?></a></li>
+				<?php endif; ?>				
 			</ul>		<?php */?>
 		
 		
@@ -193,7 +195,9 @@ $params = $this->state->get('params');
 
 
 				
+				<?php if ($this->item->params->get('access-change')): ?>
 						
+				<?php endif; ?>
 				<input type="hidden" name="task" value="" />
 				<input type="hidden" name="form_id" id="form_id" value="wishlist-form" />
 				<input type="hidden" name="return" value="<?php echo $this->return_page;?>" />

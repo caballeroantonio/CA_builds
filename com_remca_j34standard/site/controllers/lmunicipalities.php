@@ -71,13 +71,12 @@ class RemcaControllerLmunicipalities extends JControllerLegacy
                 
         /*
          * Function that allows download database information
-         * @ToDo implementar generación de código
+         * @ToDo implementar ACL
+         * from outside: $model = JModelLegacy::getInstance('WishlistForm','RemcaModel', array('ignore_request' => FALSE));	
          */
         public function export(){
-			//from outside:
-			//$model = JModelLegacy::getInstance('LmunicipalityForm','RemcaModel', array('ignore_request' => FALSE));
-			
-            $model = $this->getModel('Lmunicipalities','RemcaModel',array('ignore_request' => FALSE));
+			return false;
+            $model = $this->getModel = $this->getModel('Lmunicipalities','RemcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override
@@ -85,6 +84,7 @@ class RemcaControllerLmunicipalities extends JControllerLegacy
 //			$model->setState('list.select', 'a.*');//override
 			$model->setState('filter.state', 1);
             $query = $model->getListQuery4Export();
-            echo($query);
+            $remca_helper = new RemcaHelper();
+            $remca_helper->export('Lmunicipalities',$query);
         }
 }

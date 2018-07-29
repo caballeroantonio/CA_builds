@@ -510,7 +510,6 @@ class Foo {
     $output .= $this->jtext2lyx('COM_REMCA_SHOW_CREATED_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WISHESLIST_SHOW_CREATED_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_SHOW_MODIFIED_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WISHESLIST_SHOW_MODIFIED_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_SHOW_ADMIN_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WISHESLIST_SHOW_ADMIN_DESC'). ' \tabularnewline\hline '. "\r\n";
-    $output .= $this->jtext2lyx('COM_REMCA_WISHESLIST_SHOW_FIELD_ID_USER_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WISHESLIST_SHOW_FIELD_ID_USER_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_WISHESLIST_SHOW_FIELD_ID_HOUSE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WISHESLIST_SHOW_FIELD_ID_HOUSE_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= '\textbf{' . $this->jtext2lyx('COM_REMCA_WISHESLIST_FIELD_CONFIG_BLOG_LIST_LABEL'). '} & \textbf{' . $this->jtext2lyx('COM_REMCA_WISHESLIST_FIELD_CONFIG_BLOG_LIST_DESC'). '} \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_WISHESLIST_NUM_LEADING_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WISHESLIST_NUM_LEADING_DESC'). ' \tabularnewline\hline '. "\r\n";

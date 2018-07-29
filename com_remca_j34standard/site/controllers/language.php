@@ -423,10 +423,10 @@ class RemcaControllerLanguage extends JControllerForm
 	public function delete()
 	{
 		// Check for request forgeries
-		$this->checkToken();
+		$this->checkToken('get');
 		
 		$app		= JFactory::getApplication();
-		$context	= "$this->option.delete.$this->context";
+		$context	= "{$this->option}.delete.{$this->context}";
 		$ids		= $this->input->get('cid', array(), 'array');
 
 		// Get the id of the group to edit.

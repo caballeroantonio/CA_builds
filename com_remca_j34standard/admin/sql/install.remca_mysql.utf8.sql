@@ -99,7 +99,6 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
   `hits` INT(10) UNSIGNED NOT NULL DEFAULT '0',
   `featured` TINYINT(3) UNSIGNED NOT NULL DEFAULT '0',
   `language` CHAR(7) NOT NULL DEFAULT '*',
-  `asset_id` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table',
   KEY `idx_checkout` (`checked_out`),
   KEY `idx_state` (`state`),
   KEY `idx_featured_catid` (`featured`,`catid`),
@@ -157,12 +156,12 @@ CREATE TABLE IF NOT EXISTS `#__rem_mls_for_delete` (
 CREATE TABLE IF NOT EXISTS `#__rem_orders` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL DEFAULT '',
-  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
+  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Usuario',
   `fk_houses_htitle` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'fk_houses_htitle',
   `email` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'email',
   `status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'status',
   `order_date` DATETIME DEFAULT NULL COMMENT 'order_date',
-  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Inmueble',
   `txn_type` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_type',
   `txn_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_id',
   `payer_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_id',
@@ -184,12 +183,12 @@ CREATE TABLE IF NOT EXISTS `#__rem_orders_details` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL DEFAULT '',
   `id_order` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Order',
-  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
+  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Usuario',
   `fk_houses_htitle` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'fk_houses_htitle',
   `email` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'email',
   `status` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'status',
   `order_date` DATETIME DEFAULT NULL COMMENT 'order_date',
-  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Inmueble',
   `txn_type` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_type',
   `txn_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'txn_id',
   `payer_id` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'payer_id',
@@ -245,8 +244,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_main_categories` (
 CREATE TABLE IF NOT EXISTS `#__rem_rents` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL DEFAULT '',
-  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
-  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Inmueble',
+  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Usuario',
   `rent_from` DATETIME DEFAULT NULL COMMENT 'rent_from',
   `rent_until` DATETIME DEFAULT NULL COMMENT 'rent_until',
   `rent_return` DATETIME DEFAULT NULL COMMENT 'rent_return',
@@ -267,8 +266,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_rents` (
 #DROP TABLE IF EXISTS `#__rem_rent_requests`;
 CREATE TABLE IF NOT EXISTS `#__rem_rent_requests` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
-  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Inmueble',
+  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Usuario',
   `rent_from` DATETIME DEFAULT NULL COMMENT 'rent_from',
   `rent_until` DATETIME DEFAULT NULL COMMENT 'rent_until',
   `rent_request` DATETIME DEFAULT NULL COMMENT 'rent_request',
@@ -290,7 +289,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_rent_requests` (
 #DROP TABLE IF EXISTS `#__rem_rent_sal`;
 CREATE TABLE IF NOT EXISTS `#__rem_rent_sal` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Inmueble',
   `monthW` INT(4) DEFAULT NULL COMMENT 'monthW',
   `yearW` INT(4) DEFAULT NULL COMMENT 'yearW',
   `week` VARCHAR(1250) DEFAULT NULL COMMENT 'week',
@@ -312,8 +311,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_rent_sal` (
 #DROP TABLE IF EXISTS `#__rem_reviews`;
 CREATE TABLE IF NOT EXISTS `#__rem_reviews` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
-  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Inmueble',
+  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Usuario',
   `user_name` VARCHAR(150) DEFAULT NULL COMMENT 'user_name',
   `user_email` VARCHAR(100) DEFAULT NULL COMMENT 'user_email',
   `date` DATETIME DEFAULT NULL COMMENT 'date',
@@ -333,7 +332,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_reviews` (
 #DROP TABLE IF EXISTS `#__rem_track_source`;
 CREATE TABLE IF NOT EXISTS `#__rem_track_source` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Inmueble',
   `sequence_number` INT(11) DEFAULT NULL COMMENT 'sequence_number',
   `src` VARCHAR(255) DEFAULT NULL COMMENT 'src',
   `kind` VARCHAR(255) DEFAULT NULL COMMENT 'kind',
@@ -350,8 +349,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_track_source` (
 #DROP TABLE IF EXISTS `#__rem_wisheslist`;
 CREATE TABLE IF NOT EXISTS `#__rem_wisheslist` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
-  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Inmueble',
   `state` TINYINT(1) NOT NULL DEFAULT '0',
   `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
@@ -374,7 +372,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_wisheslist` (
 #DROP TABLE IF EXISTS `#__rem_video_source`;
 CREATE TABLE IF NOT EXISTS `#__rem_video_source` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Inmueble',
   `sequence_number` INT(11) DEFAULT NULL COMMENT 'sequence_number',
   `src` VARCHAR(255) DEFAULT NULL COMMENT 'src',
   `type` VARCHAR(255) DEFAULT NULL COMMENT 'type',
@@ -391,8 +389,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_video_source` (
 #DROP TABLE IF EXISTS `#__rem_buying_requests`;
 CREATE TABLE IF NOT EXISTS `#__rem_buying_requests` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
-  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'User',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Inmueble',
+  `id_user` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Usuario',
   `buying_request` DATETIME DEFAULT NULL COMMENT 'buying_request',
   `customer_name` VARCHAR(250) DEFAULT NULL COMMENT 'customer_name',
   `customer_email` VARCHAR(100) DEFAULT NULL COMMENT 'customer_email',
@@ -470,7 +468,7 @@ CREATE TABLE IF NOT EXISTS `#__rem_feature` (
 #DROP TABLE IF EXISTS `#__rem_feature_houses`;
 CREATE TABLE IF NOT EXISTS `#__rem_feature_houses` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'House',
+  `id_house` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Inmueble',
   `id_featured` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Featured',
   `version` int(10) unsigned NOT NULL DEFAULT '1' COMMENT 'progressive version counter',
   PRIMARY KEY (`id`)
@@ -583,7 +581,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 'com_remca.house',
 '{"special":{"dbtable":"#__rem_houses","key":"id","type":"houses","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 '',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"modified","core_body":"description","core_hits":"hits","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"featured","core_metadata":"null","core_language":"language","core_images":"images","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"catid","core_xreference":"null","asset_id":"asset_id"}}',
+'{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"modified","core_body":"description","core_hits":"hits","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"featured","core_metadata":"null","core_language":"language","core_images":"images","core_urls":"null","core_version":"version","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"catid","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::gethouseRoute',
 '{"formFile":"administrator\/components\/com_remca\/models\/forms\/house.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_country","targetTable":"#__rem_countries","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_lstate","targetTable":"#__rem_lstates","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_lmunicipality","targetTable":"#__rem_lmunicipalities","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_rent","targetTable":"#__rem_rents","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_currency","targetTable":"#__rem_countries","targetColumn":"id","displayColumn":"currency"},{"sourceColumn":"owner_id","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
 );
@@ -729,7 +727,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"state","core_alias":"null","core_created_time":"created","core_modified_time":"modified","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
 'remcaHelperRoute::getwishlistRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/wishlist.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_user","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_house","targetTable":"#__rem_houses","targetColumn":"id","displayColumn":"name"}]}'
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/wishlist.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_house","targetTable":"#__rem_houses","targetColumn":"id","displayColumn":"name"}]}'
 );
         
 --

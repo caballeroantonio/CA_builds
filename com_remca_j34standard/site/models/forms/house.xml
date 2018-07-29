@@ -47,12 +47,6 @@
 			data-typeAlias="com_remca.house"
 		/>
         <field
-			id="asset_id"
-			name="asset_id"
-			type="hidden"
-			filter="unset"
-		/>
-        <field
 			id="name"
 			name="name"
 			type="text"

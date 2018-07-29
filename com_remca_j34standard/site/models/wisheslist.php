@@ -133,7 +133,15 @@ class RemcaModelWisheslist extends JModelList
 		$this->setState('list.direction', $list_order);
 		
 				
-		$this->setState('filter.published', 1);		
+		if ((!$user->authorise('core.edit.state', 'com_remca')) AND  (!$user->authorise('core.edit', 'com_remca')))
+		{
+			// filter on status of published for those who do not have edit or edit.state rights.
+			$this->setState('filter.published', 1);
+		}
+		else
+		{
+			$this->setState('filter.published', array(0, 1, 2));
+		}		
 
 		
 		if ($params->get('filter_wishlist_archived'))
@@ -186,7 +194,7 @@ class RemcaModelWisheslist extends JModelList
 		// Create a new query object.
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
-                $query->where("id_user = '{$user->id}'");
+                $query->where("created_by = '{$user->id}'");
 		// Set date values
 		$null_date = $db->quote($db->getNullDate());
 		$now_date = $db->quote(JFactory::getDate()->toSQL());
@@ -244,11 +252,6 @@ class RemcaModelWisheslist extends JModelList
 		}
 
 		
-		// Filter by and return name for id_user level.
-		$query->select($db->quoteName('u.name').' AS u_user_name');
-		$query->select($db->quoteName('u.id').' AS u_user_id');
-
-		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.id_user'));	
 		// Filter by and return name for id_house level.
 		$query->select($db->quoteName('i.name').' AS i_house_name');
 		$query->select($db->quoteName('i.ordering').' AS i_house_ordering');
@@ -439,7 +442,6 @@ class RemcaModelWisheslist extends JModelList
 
 				
 				
-				
 		
 							
 
@@ -500,6 +502,52 @@ class RemcaModelWisheslist extends JModelList
 						default:
 							$item->display_date = 0;
 							break;
+					}
+				}
+				// Compute the asset access permissions.
+				// Technically guest could edit an wishlist, but lets not check that to improve performance a little.
+				if (!$guest) 
+				{
+					$asset	= 'com_remca';
+
+					// Check general edit permission first.
+					if ($user->authorise('core.edit', $asset))
+					{
+						$item->params->set('access-edit', true);
+					}
+					// Now check if edit.own is available.
+					else
+					{ 
+						if (!empty($user_id) AND $user->authorise('core.edit.own', $asset)) 
+						{
+							// Check for a valid user and that they are the owner.
+							if ($user_id == $item->created_by) 
+							{
+								$item->params->set('access-edit', true);
+							}
+						}
+					}
+					if ($user->authorise('core.create', $asset))
+					{
+						$item->params->set('access-create', true);
+					}	
+						
+					
+					if ($user->authorise('core.delete', $asset)) 
+					{
+						$item->params->set('access-delete', true);
+					}
+					// Now check if delete.own is available.
+					else
+					{ 
+						if (!empty($user_id) AND $user->authorise('core.delete.own', $asset)) 
+						{
+							// Check for a valid user and that they are the owner.
+							if ($user_id == $item->created_by) 
+							{
+								$item->params->set('access-delete', true);
+							}
+						}
 					}
 				}
 

@@ -167,11 +167,11 @@ $assoc	= JLanguageAssociations::isEnabled();
 				$ordering	= ($list_order=='ordering' OR $list_order=='a.ordering');
 				$can_change = true;
 					$can_checkin	= $user->authorise('core.manage',		'com_checkin') OR $item->checked_out == $user_id OR $item->checked_out == 0;
-				$can_edit	= $user->authorise('core.edit',	'com_remca.house.'.$item->id);
+				$can_edit	= $user->authorise('core.edit',	'com_remca');
 		
-				$can_edit_own	= $user->authorise('core.edit.own',		'com_remca.house.'.$item->id) 
+				$can_edit_own	= $user->authorise('core.edit.own',		'com_remca') 
 								;
-				$can_change	= $user->authorise('core.edit.state',	'com_remca.house.'.$item->id) 
+				$can_change	= $user->authorise('core.edit.state',	'com_remca') 
 								AND $can_checkin
 								;
 				if ($item->language == '*'):

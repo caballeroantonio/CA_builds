@@ -322,8 +322,10 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php echo JHtml::_('countryicon.create', $this->params); ?>
 		<?php endif; ?>		
 		<?php 
-			if($user->id == 1)
-	            echo '<button>export</button>'//JHtml::_('countryicon.create', $this->params); 
+			if($user->id == 1){
+				//JHtml::_('countryicon.create', $this->params); 
+	            echo '<span class="hasTooltip tip" title="Export"><a href="index.php?task=countries.export" class="btn btn-primary"><span class="icon-download"></span>Export</a></span>';
+			}
         ?>
 	</form>
 </div>

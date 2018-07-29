@@ -31,10 +31,6 @@
 >
     <fieldset name="basic_details"
     >
-        <field name="asset_id"
-            type="hidden"
-            filter="unset"
-        />
         <field name="name"
 		    type="text"
 			label="COM_REMCA_FIELD_NAME_LABEL"
@@ -65,15 +61,6 @@
             buttons="true"
             hide="article"
         />
-        <field name="rules"
-            type="rules"
-            label="JFIELD_RULES_LABEL"
-     		translate_label="false"
-			filter="rules"
-			component="com_remca"
-			section="house"
-			validate="rules"
-		/>
         <field name="featured"
 			type="radio"
 			label="JFEATURED"

@@ -39,6 +39,8 @@ $params = &$this->item->params;
 $user		= JFactory::getUser();
 $layout		= $params->get('wishlist_layout', 'default');
 $info		= $this->item->params->get('wishlist_info_block_position', 0);
+$can_edit	= $params->get('access-edit');
+$can_delete = $params->get('access-delete');
 // Get from global settings the text to use for an empty field
 $component = JComponentHelper::getComponent( 'com_remca' );
 $empty = $component->params->get('default_empty_field', '');
@@ -54,6 +56,8 @@ $empty = $component->params->get('default_empty_field', '');
 <?php if ($params->get('show_wishlist_icons',-1) >= 0) : ?>
 	<?php if (($params->get('show_wishlist_print_icon') 
 		OR $params->get('show_wishlist_email_icon') 
+		OR $can_edit
+		OR $can_delete
 			)
 		) : ?>
 		<ul class="actions">
@@ -68,12 +72,16 @@ $empty = $component->params->get('default_empty_field', '');
 			</li>
 			<?php endif; ?>
 
+			<?php if ($can_edit) : ?>
 				<li class="edit-icon">
 					<?php echo JHtml::_('wishlisticon.edit', $this->item, $params); ?>
 				</li>
+			<?php endif; ?>
+			<?php if ($can_delete) : ?>
 				<li class="delete-icon">
 					<?php echo JHtml::_('wishlisticon.delete',$this->item, $params); ?>
 				</li>		
+			<?php endif; ?>
 		</ul>
 	<?php endif; ?>
 <?php endif; ?>

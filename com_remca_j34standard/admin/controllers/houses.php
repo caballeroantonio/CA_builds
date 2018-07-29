@@ -78,7 +78,7 @@ class RemcaControllerHouses extends JControllerAdmin
 		{
 			$item = $model->getItem($id);
 			if (!$user->authorise('core.edit.state', 'com_remca.category.'.(int) $item->catid) OR
-				!$user->authorise('core.edit.state', 'com_remca.house.'.$id))
+				!$user->authorise('core.edit.state', 'com_remca'))
 
 			{
 				// Prune items that you can't change.

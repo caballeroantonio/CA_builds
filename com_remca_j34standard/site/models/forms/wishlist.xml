@@ -117,17 +117,6 @@
     >
 
         <field
-            id="id_user"
-            name="id_user"
-            type="modal_jusers"
-            label="COM_REMCA_WISHESLIST_FIELD_ID_USER_LABEL"
-            description="COM_REMCA_WISHESLIST_FIELD_ID_USER_DESC"
-            class="modal"
-			default="0"
-			type_alias="com_remca.user" 
-        >
-        </field>  
-        <field
             id="id_house"
             name="id_house"
             type="modal_houses"

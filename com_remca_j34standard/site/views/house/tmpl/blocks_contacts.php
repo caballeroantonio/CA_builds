@@ -12,7 +12,7 @@ $user = JFactory::getUser();
   <div class="rem_buying_house" >
     <div id="rem_house_titlebox"> Send message </div>
     <div id="show_buying">
-      <form action="index.php?option=com_remca&task=house.contact_request" method="post" name="buying_request">
+      <form action="index.php?option=com_remca&task=remca.contact_request" method="post" name="buying_request">
         <div class="table_08">
           <div class="row_01">
             <div id="customer_name_warning"></div>

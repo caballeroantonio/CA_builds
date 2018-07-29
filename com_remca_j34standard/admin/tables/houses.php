@@ -245,8 +245,7 @@ class RemcaTableHouses extends JTable
 	 */
 	protected function _getAssetName()
 	{
-		$k = $this->_tbl_key;
-		return 'com_remca.house.'.(int) $this->$k;
+		return 'com_remca';
 	}
 	
 	/**

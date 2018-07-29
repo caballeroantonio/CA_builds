@@ -113,7 +113,7 @@ class RemcaControllerHouse extends JControllerForm
 			}
 		}
 		// Check general edit permission first.
-		if ($user->authorise('core.edit', 'com_remca.house.'.$record_id))
+		if ($user->authorise('core.edit', 'com_remca'))
 		{
 			return true;
 		}

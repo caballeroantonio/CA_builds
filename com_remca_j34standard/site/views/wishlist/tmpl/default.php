@@ -52,6 +52,8 @@ if ($lang->isRTL())
 $params		= &$this->item->params;
 $user		= JFactory::getUser();
 
+$can_edit	= $params->get('access-edit');
+$can_delete	= $params->get('access-delete');
 // Get from global settings the text to use for an empty field
 $component = JComponentHelper::getComponent( 'com_remca' );
 $empty = $component->params->get('default_empty_field', '');
@@ -72,6 +74,8 @@ $empty = $component->params->get('default_empty_field', '');
 	<?php if ($params->get('show_wishlist_icons',-1) >= 0) : ?>
 		<?php if ($params->get('show_wishlist_print_icon') 
 			OR $params->get('show_wishlist_email_icon') 
+			OR $can_edit 
+			OR $can_delete 
 			): ?>
 			<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span> <span class="caret"></span> </a>
@@ -88,12 +92,16 @@ $empty = $component->params->get('default_empty_field', '');
 										<?php echo JHtml::_('wishlisticon.email',  $this->item, $params); ?>
 								</li>
 							<?php endif; ?>
+							<?php if ($can_edit) : ?>
 								<li class="edit-icon">
 									<?php echo JHtml::_('wishlisticon.edit', $this->item, $params); ?>
 								</li>
+							<?php endif; ?>
+							<?php if ($can_delete) : ?>
 								<li class="delete-icon">
 									<?php echo JHtml::_('wishlisticon.delete',$this->item, $params); ?>
 								</li>					
+							<?php endif; ?>
 					<?php else : ?>
 						<li>
 							<?php echo JHtml::_('wishlisticon.print_screen',  $this->item, $params); ?>
@@ -114,7 +122,6 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="wishlistForm" id="wishlistForm">
 			<?php $dummy = false;
 					$display_fieldset = (
-								($params->get('show_wishlist_id_user')) OR 
 								($params->get('show_wishlist_id_house')) OR 
 								$dummy
 								);
@@ -124,18 +131,6 @@ $empty = $component->params->get('default_empty_field', '');
 					<legend><?php echo JText::_('COM_REMCA_WISHESLIST_FIELDSET_USERS_WISHLIST_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
-						<?php if ($params->get('show_wishlist_id_user')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_REMCA_WISHESLIST_FIELD_ID_USER_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo JString::trim($this->item->u_user_name);
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
 						<?php if ($params->get('show_wishlist_id_house')) : ?>
 						<div class="formelm">
 							<label>
@@ -214,6 +209,7 @@ $empty = $component->params->get('default_empty_field', '');
 					</time>
 				</div>
 			<?php endif; ?>	
+			<?php if ($params->get('access-change')): ?>
 				<?php if ($params->get('show_wishlist_admin')) : ?>
 				
 					<div class="formelm">
@@ -241,6 +237,7 @@ $empty = $component->params->get('default_empty_field', '');
 					</div>
 				<?php endif; ?>
 				
+			<?php endif; ?>
 			
 			<?php if ($display_fieldset) : ?>				
 					</fieldset>	

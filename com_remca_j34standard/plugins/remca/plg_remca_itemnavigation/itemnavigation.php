@@ -77,7 +77,7 @@ class PlgRemcaItemnavigation extends JPlugin
 
 			$uid	= $row->id;
 			$option	= 'com_remca';
-			$can_publish = $user->authorise('core.edit.state', $option.'.house.'.$row->id);
+			$can_publish = $user->authorise('core.edit.state', $option);
 			$query	= $db->getQuery(true);
 			
 

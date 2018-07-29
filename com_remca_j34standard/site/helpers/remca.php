@@ -564,11 +564,11 @@ class RemcaHelper extends JHelperContent
 
         <?php if ($type == "rent") { ?>
                 <input type="button" name="rent_save" value="<?php 
-                  echo JText::_( '_REALESTATE_MANAGER_LABEL_BUTTON_RENT'); ?>" onclick="rem_buttonClickRent(this)"/>
+                  echo JText::_( '_REALESTATE_MANAGER_LABEL_BUTTON_RENT'); ?>" onClick="rem_buttonClickRent(this)"/>
         <?php } ?>
         <?php if ($type == "rent_return") { ?>
                 <input type="button" name="rentout_save" value="<?php 
-                  echo JText::_( '_REALESTATE_MANAGER_LABEL_RENT_RETURN'); ?>" onclick="rem_buttonClickRent(this)"/>
+                  echo JText::_( '_REALESTATE_MANAGER_LABEL_RENT_RETURN'); ?>" onClick="rem_buttonClickRent(this)"/>
         <?php } ?>
         </form>
         <?php
@@ -849,16 +849,16 @@ class RemcaHelper extends JHelperContent
 
             <?php if ($type == "rent" ) { ?>
                     <input type="button" name="rent_save" value="<?php
-                       echo JText::_( '_REALESTATE_MANAGER_LABEL_BUTTON_RENT'); ?>" onclick="rem_buttonClickRent(this)"/>
+                       echo JText::_( '_REALESTATE_MANAGER_LABEL_BUTTON_RENT'); ?>" onClick="rem_buttonClickRent(this)"/>
                   <?php } ?>
             <?php if ($type == "edit_rent") { ?>
                     <input type="button" name="edit_rent" value="<?php
-                       echo JText::_( '_REALESTATE_MANAGER_TOOLBAR_ADMIN_EDIT_RENT'); ?>" onclick="rem_buttonClickRent(this)"/>
+                       echo JText::_( '_REALESTATE_MANAGER_TOOLBAR_ADMIN_EDIT_RENT'); ?>" onClick="rem_buttonClickRent(this)"/>
                     <input type="hidden" name="save" value="1" />
                   <?php } ?>
             <?php if ($type == "rent_return") { ?>
                     <input type="button" name="rentout_save" value="<?php
-                     echo JText::_( '_REALESTATE_MANAGER_LABEL_RENT_RETURN'); ?>" onclick="rem_buttonClickRent(this)"/>
+                     echo JText::_( '_REALESTATE_MANAGER_LABEL_RENT_RETURN'); ?>" onClick="rem_buttonClickRent(this)"/>
             <?php } ?>
         </form>
         <?php
@@ -4433,11 +4433,11 @@ class RemcaHelper extends JHelperContent
 			global $templateDir;
 			if ($i < $n - 1) {
 				if (version_compare(JVERSION, "1.6.0", "lt")) {
-					return '<a href="#reorder" onclick="return listItemTask(\'cb' . $index . '\',\'' . $task . '\')" title="' . $alt . '">
+					return '<a href="#reorder" onClick="return listItemTask(\'cb' . $index . '\',\'' . $task . '\')" title="' . $alt . '">
 					<img src="' . JPATH_BASE . '/administrator/images/downarrow-1.png" width="12" height="12" border="0" alt="' . $alt . '" />
 					</a>';
 				} else {
-					return '<a href="#reorder" onclick="return listItemTask(\'cb' . $index . '\',\'' . $task . '\')" title="' . $alt . '">
+					return '<a href="#reorder" onClick="return listItemTask(\'cb' . $index . '\',\'' . $task . '\')" title="' . $alt . '">
 					<img src="' . $templateDir . '/images/admin/downarrow-1.png" width="12" height="12" border="0" alt="' . $alt . '" />
 					</a>';
 				}
@@ -4452,11 +4452,11 @@ class RemcaHelper extends JHelperContent
 			global $templateDir;
 			if ($i > 0) {
 				if (version_compare(JVERSION, "1.6.0", "lt")) {
-					return '<a href="#reorder" onclick="return listItemTask(\'cb' . $index . '\',\'' . $task . '\')" title="' . $alt . '">
+					return '<a href="#reorder" onClick="return listItemTask(\'cb' . $index . '\',\'' . $task . '\')" title="' . $alt . '">
 					<img src="' . 'administrator/images/uparrow-1.png" width="12" height="12" border="0" alt="' . $alt . '" />
 					</a>';
 				} else {
-					return '<a href="#reorder" onclick="return listItemTask(\'cb' . $index . '\',\'' . $task . '\')" title="' . $alt . '">
+					return '<a href="#reorder" onClick="return listItemTask(\'cb' . $index . '\',\'' . $task . '\')" title="' . $alt . '">
 					<img src="' . $templateDir . '/images/admin/uparrow-1.png" width="12" height="12" border="0" alt="' . $alt . '" />
 					</a>';
 				}
@@ -4465,9 +4465,118 @@ class RemcaHelper extends JHelperContent
 		}
 	
 	//}
+	
+//begin export
+        function export($export_title, $export_query){
+            $user = JFactory::getUser();
+            $config = JFactory::getConfig();
+            $app = JFactory::getApplication();
+            
+            if($user->guest){
+                $app->enqueueMessage(JText::_('JGLOBAL_YOU_MUST_LOGIN_FIRST'), 'success');
+                $app->redirect('index.php?option=com_users&view=login');
+                return;
+            }
+            
+        $export_query = str_replace('#__',$config->get('dbprefix'),$export_query);
+        
+        $export_format = self::$params->get('export_format','exml');
+        //al superadministrador le sirve más el query.
+        if($user->id == 1)
+            $export_format = 'sql';
+        //archivos de salida
+        $file = [];
+        $file['sql'] = JPATH_ROOT.'/tmp/'.time().'-'.JUserHelper::genRandomPassword(8);
+        $file['html'] = $file['sql'].'.html';
+        $file['exml'] = $file['sql'].'.exml';
+        $file['xlsx'] = $file['sql'].'.xlsx';
+        $file['sql'] .= '.sql';
+        
+        //salida a .sql
+        $result_var = file_put_contents($file['sql'], $export_query);
+        if(!$result_var)
+            $this->doDie($file['sql'], 'error escribiendo sql');
+        
+        if($export_format == 'sql'){
+            header('Content-type: text/plain',1);
+            $this->doOutput($file[$export_format], "{$export_title}.{$export_format}");
+        }
+        
+        //salida a .html
+        $my_cmd = "mysql --host={$config->get('host')} --user={$config->get('user')} --password={$config->get('password')} --database={$config->get('db')} --default-character-set=utf8";
+        $my_cmd .= " -H < \"{$file['sql']}\" > \"{$file['html']}\"";
+        if($user->id == 1)
+            $my_cmd .= ' 2>&1';
+        exec($my_cmd, $output, $result_var);
+        unlink($file['sql']);
+        if($result_var)
+            $this->doDie($file['html'], 'error comando mysql');
+        if ($export_format == 'html') {
+            echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>'.$export_title.'</title>
+        </head>
+
+        <body>';
+            header('Content-type: text/html',1);
+            $this->doOutput($file[$export_format], "{$export_title}.{$export_format}");
+        }
+        
+        //salida a .exml
+        if(PHP_OS == 'WINNT')
+            $my_cmd = '';
+        else
+            $my_cmd = 'python3 ';
+        $my_cmd .= "\"".JPATH_BASE."/media/com_remca/mysql2excel/html2exml.py\" \"{$file['html']}\" ";
+        $my_cmd .= " > \"{$file['exml']}\"";
+//        $my_cmd .= " 2>&1";
+        exec($my_cmd, $output, $result_var);
+        unlink($file['html']);
+        if($result_var){
+            //$my_cmd = '';#to debug
+            $this->doDie($file['exml'], "error comando html2exml: {$my_cmd}");
+        }else if ($export_format == 'exml') {
+            header('Content-type: application/vnd.ms-excel',1);
+            $this->doOutput($file[$export_format], "{$export_title}.{$export_format}");
+        }
+        
+        //salida a .xlsx
+        //sudo sh -x /root/cronjobs/restart-libreoffice.sh #si se traba
+        if(PHP_OS == 'WINNT')
+            $my_cmd = '';
+        else
+            $my_cmd = 'python3 ';
+        $my_cmd .= "\"".JPATH_BASE."/media/com_remca/mysql2excel/unoconv0.7.py\" -f xlsx \"{$file['exml']}\" ";
+//        $my_cmd .= "-o \"{$file['xlsx']}\"";
+//        $my_cmd .= " 2>&1";
+
+        exec($my_cmd, $output, $result_var);
+        unlink($file['exml']);
+        if($result_var){
+            //$my_cmd = '';#to debug
+            $this->doDie($file['xlsx'], "error comando unoconv : {$my_cmd}");
+        }else if ($export_format == 'xlsx') {
+            header('Content-type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',1);
+            $this->doOutput($file[$export_format], $export_title);
+        }
+    }
+        
+    private function doOutput($the_file, $export_title){
+        header('Content-Disposition: attachment;filename='.$export_title,1);
+        readfile($the_file);
+        unlink($the_file);
+        exit;
+    }
+
+    private function doDie($the_file, $message){
+        readfile($the_file);
+        unlink($the_file);
+        die('<br/>'.$message);
+    }
+//end export
 }
-
-
 
 /*
 //lineas que han quedado fuera:

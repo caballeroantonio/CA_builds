@@ -69,19 +69,19 @@ class RemcaControllerPhotos extends JControllerLegacy
                 
         /*
          * Function that allows download database information
-         * @ToDo implementar generación de código
+         * @ToDo implementar ACL
+         * from outside: $model = JModelLegacy::getInstance('WishlistForm','RemcaModel', array('ignore_request' => FALSE));	
          */
         public function export(){
-			//from outside:
-			//$model = JModelLegacy::getInstance('PhotoForm','RemcaModel', array('ignore_request' => FALSE));
-			
-            $model = $this->getModel('Photos','RemcaModel',array('ignore_request' => FALSE));
+			return false;
+            $model = $this->getModel = $this->getModel('Photos','RemcaModel',array('ignore_request' => FALSE));
 			
 			//states
 //			$model->setState('list.ordering', 'a.ordering');//override
 //			$model->setState('list.direction', 'ASC');//override
 //			$model->setState('list.select', 'a.*');//override
             $query = $model->getListQuery4Export();
-            echo($query);
+            $remca_helper = new RemcaHelper();
+            $remca_helper->export('Photos',$query);
         }
 }

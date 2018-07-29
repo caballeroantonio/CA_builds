@@ -95,14 +95,7 @@ class RemcaModelHouse extends JModelAdmin
 		{
 			return false;
 		}
-		if (!empty($record->id))
-		{
-			return $user->authorise('core.delete', 'com_remca.house.'.(int) $record->id);
-		}
-		else
-		{
-			return $user->authorise('core.delete', 'com_remca');
-		}							
+		return $user->authorise('core.delete', 'com_remca');
 	}
 
 	/**
@@ -115,23 +108,15 @@ class RemcaModelHouse extends JModelAdmin
 	{
 		$user = JFactory::getUser();
 
-		// Check against the id.
-		if (!empty($record->id))
+		// New inmueble, so check against the category.		
+		if (!empty($record->catid))
 		{
-			return $user->authorise('core.edit.state', 'com_remca.house.'.(int) $record->id);
+			return $user->authorise('core.edit.state', 'com_remca.category.'.(int) $record->catid);
 		}
-		else
+		else 
 		{
-			// New inmueble, so check against the category.		
-			if (!empty($record->catid))
-			{
-				return $user->authorise('core.edit.state', 'com_remca.category.'.(int) $record->catid);
-			}
-			else 
-			{
-			// Default to component settings.			
-				return parent::canEditState($record);
-			}
+		// Default to component settings.			
+			return parent::canEditState($record);
 		}
 	}
 	/**

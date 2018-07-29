@@ -150,11 +150,6 @@ $input = $app->input;
 					<?php echo JLayoutHelper::render('joomla.edit.associations', $this); ?>
 				<?php echo JHtml::_('bootstrap.endTab'); ?>
 			<?php endif; ?>
-			<?php if ($this->can_do->get('core.admin')) : ?>
-				<?php echo JHtml::_('bootstrap.addTab', 'house-tabs', 'permissions', JText::_('COM_REMCA_HOUSES_FIELDSET_RULES', true)); ?>
-					<?php echo $this->form->getInput('rules'); ?>
-				<?php echo JHtml::_('bootstrap.endTab'); ?>
-			<?php endif; ?>
 		<?php echo JHtml::_('bootstrap.endTabSet'); ?>
 	</div>
 	<input type="hidden" name="task" value="" />

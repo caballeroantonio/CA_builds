@@ -357,7 +357,7 @@ $doc->addScript('media/com_remca/slick/slick.min.js');
                 url: "index.php",
                 method: 'POST',
                 data : { 
-                    'task' : 'wishlist.wish_request', 
+                    'task' : 'remca.wish_request', 
                     'jform[id_house]' : $(parent).data("id"),
                     'jform[state]': in_gallery & 1,
                 },

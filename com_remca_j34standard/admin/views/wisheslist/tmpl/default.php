@@ -122,6 +122,13 @@ $empty = $component->params->get('default_empty_field', '');
 			<?php foreach ($this->items as $i => $item) :
 
 				$can_change = true;
+				$can_edit	= $user->authorise('core.edit',	'com_remca');
+		
+				$can_edit_own	= $user->authorise('core.edit.own',		'com_remca') 
+								AND $item->created_by == $user_id
+								;
+				$can_change	= $user->authorise('core.edit.state',	'com_remca') 
+								;
 							
 				?>
 				<tr class="row<?php echo $i % 2; ?>">

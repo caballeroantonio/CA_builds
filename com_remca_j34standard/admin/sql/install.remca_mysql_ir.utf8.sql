@@ -222,10 +222,6 @@ ALTER TABLE `#__rem_lmunicipalities` ADD CONSTRAINT `fk3463_id_country`
 FOREIGN KEY (`id_country`) REFERENCES `#__rem_countries` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_wisheslist` ADD CONSTRAINT `fk3747_id_user`
-FOREIGN KEY (`id_user`) REFERENCES `#__users` (`id`)
-ON DELETE RESTRICT ON UPDATE CASCADE;
-										
 ALTER TABLE `#__rem_wisheslist` ADD CONSTRAINT `fk3748_id_house`
 FOREIGN KEY (`id_house`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;

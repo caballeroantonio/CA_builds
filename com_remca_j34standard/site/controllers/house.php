@@ -101,7 +101,7 @@ class RemcaControllerHouse extends JControllerForm
 	{
 		$record_id	= (int) isset($data[$key]) ? $data[$key] : 0;
 		$user		= JFactory::getUser();
-		$asset		= 'com_remca.house.'.$record_id;
+		$asset		= 'com_remca';
 		// Check general edit permission first.
 		if ($user->authorise('core.edit', $asset))
 		{
@@ -148,7 +148,7 @@ class RemcaControllerHouse extends JControllerForm
 	{
 		$record_id	= (int) isset($data[$key]) ? $data[$key] : 0;
 		$user		= JFactory::getUser();
-		$asset		= 'com_remca.house.'.$record_id;
+		$asset		= 'com_remca';
 
 		// Check general delete permission.
 		if ($user->authorise('core.delete', $asset))
@@ -164,20 +164,16 @@ class RemcaControllerHouse extends JControllerForm
 			if (empty($owner_id) AND $record_id)
 			{
 				// Need to do a lookup from the model.
-				$record		= $this->getModel('houseform')->getItem($record_id);
+				$table = $this->getModel('house')->getTable();
+				$table->load($record_id);
 
-				if (empty($record))
+				if (empty($table))
 				{
 					return false;
 				}
 
 			}
 
-			// If the owner matches 'me' then do the test.
-			if ($owner_id == $user_id)
-			{
-				return true;
-			}
 			// If the owner matches 'me' then do the test.
 			if ($owner_id == $user->id)
 			{
@@ -606,20 +602,22 @@ class RemcaControllerHouse extends JControllerForm
 	public function delete()
 	{
 		// Check for request forgeries
-		$this->checkToken();
+		$this->checkToken('get');
 		
 		$app		= JFactory::getApplication();
-		$context	= "$this->option.delete.$this->context";
+		$context	= "{$this->option}.delete.{$this->context}";
 		$ids		= $this->input->get('cid', array(), 'array');
 
 		// Get the id of the group to edit.
 		$id =  (int) (empty($ids) ? $this->input->getInt('id') : array_pop($ids));
 
 		// Access check
-		if (!$this->allowDelete(array('id' => $id))) 
-		{
+		if ($this->allowDelete(array('id' => $id))){
+			$trash_state = -2;
+		}elseif ($this->allowEdit(array('id' => $id))){
+			$trash_state = 0;
+		}else{
 			JError::raiseError(403, JText::_('JERROR_ALERTNOAUTHOR'));
-
 			return false;
 		}
 
@@ -709,55 +707,5 @@ class RemcaControllerHouse extends JControllerForm
             
             $this->setRedirect('index.php?option=com_contenthistory&view=history&layout=modal&tmpl=component'
                     . "&item_id={$item_id}&type_id={$typeId}&type_alias={$model->typeAlias}&{$token}=1");
-        }
-		
-        /**
-         * user check contact form
-         */
-        function contact_request(){
-            $data  = $this->input->post->get('jform', array(), 'array');
-            $house = $this->getModel('houseform')->getItem($data['id_house']);
-            $owneremail = $house->get('owneremail');
-            
-            if($owneremail){
-                $referer = $_SERVER['HTTP_REFERER'];
-                $house_name = $house->get('name');
-                $body = <<<EOD
-    {$data['customer_name']} visitó la publicación <a href="$referer">$house_name</a><br/>
-EOD;
-                foreach($data as $key=>$value){
-                    $label = strtoupper($key);
-                    $label = "COM_REMCA_BUYING_REQUESTS_FIELD_{$label}_LABEL";
-                    $label = JText::_($label);
-                    $body .= "{$label}: {$value} <br/>\n";
-                }
-                
-                $mailer = JFactory::getMailer();
-                $config = JFactory::getConfig();
-                $sender = array( 
-                    $config->get( 'mailfrom' ),
-                    $config->get( 'fromname' ) 
-                );
-                $mailer->setSender($sender);
-
-
-                $mailer->addRecipient($owneremail);
-                $mailer->setSubject('Has recibido una visita en ' .  $config->get( 'sitename' ) );
-                $mailer->setBody($body);
-                $mailer->isHtml(true);
-                $mailer->Encoding = 'base64';
-
-                $mailer->Send();
-                
-            }
-
-            $model = JModelLegacy::getInstance('BuyingRequestForm','RemcaModel', array('ignore_request' => FALSE));
-            if (!$model->save($data)) {
-                $this->setMessage(JText::sprintf('JLIB_APPLICATION_ERROR_SAVE_FAILED', $model->getError()), 'warning');
-                $this->setRedirect($_SERVER['HTTP_REFERER']);
-            }else{
-                $this->setMessage(JText::_('REMCA_RENT_REQUEST_THANKS'));
-                $this->setRedirect($_SERVER['HTTP_REFERER']);
-            }
         }
 }
