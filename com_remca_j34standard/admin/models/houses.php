@@ -56,6 +56,7 @@ class RemcaModelHouses extends JModelList
 			$config['filter_fields'] = array(
 				'id', 'a.id',
 				'name', 'a.name',
+				'site', 'a.site',
 				'id_country', 'a.id_country',
 				'c1_country_name', 'c1.name',				
 				'id_lstate', 'a.id_lstate',
@@ -122,6 +123,8 @@ class RemcaModelHouses extends JModelList
 		// Load the filter state.
 		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
 		$this->setState('filter.search', $search);
+		$site = $app->getUserStateFromRequest($this->context.'.filter.site', 'filter_site', '', 'string');
+		$this->setState('filter.site', $site);
 		$id_country = $app->getUserStateFromRequest($this->context.'.filter.id_country', 'filter_id_country', 0, 'int');
 		$this->setState('filter.id_country', $id_country);
 		$id_lstate = $app->getUserStateFromRequest($this->context.'.filter.id_lstate', 'filter_id_lstate', 0, 'int');
@@ -180,6 +183,7 @@ class RemcaModelHouses extends JModelList
 		$id	.= ':'.$this->getState('filter.category_id');
 		$id	.= ':'.$this->getState('filter.state');
 		$id	.= ':'.$this->getState('filter.language');
+		$id	.= ':'.$this->getState('filter.site');	
 		$id	.= ':'.$this->getState('filter.id_country');	
 		$id	.= ':'.$this->getState('filter.id_lstate');	
 		$id	.= ':'.$this->getState('filter.id_lmunicipality');	
@@ -293,12 +297,12 @@ class RemcaModelHouses extends JModelList
 		$query->select($db->quoteName('r.id').' AS r_rent_id');
 
 		$query->join('LEFT', $db->quoteName('#__rem_rents').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.id_rent'));	
-		// Filter by and return name for owner_id level. %@ToDo fix, if NOT INCLUDE_NAME then OBJECT_LABEL_FIELD = OBJECT_ORDERING_FIELD, then SELECT  is repeated, e.id AS e_expediente_id x 2
-		$query->select($db->quoteName('u.name').' AS u_user_name');
-		$query->select($db->quoteName('u.id').' AS u_user_id');
-
-		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.owner_id'));	
 		
+		if ($site = $this->getState('filter.site'))
+		{
+			$site = $db->escape(JString::strtolower($site), true);			
+			$query->where('LOWER('.$db->quoteName('a.site').') = ' . $db->quote($site));
+		}
 		if ($id_country = $this->getState('filter.id_country'))
 		{
 			$query->where($db->quoteName('a.id_country').' = ' . (int) $id_country);

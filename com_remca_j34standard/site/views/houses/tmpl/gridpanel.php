@@ -34,6 +34,31 @@ function getFields(){
     $fields = array();
     //{OBJECT_FIELD}
     $field = array(
+        'FIELD_NAME' => 'Site',
+        'FIELD_CODE_NAME' => 'site',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 7,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=COM_REMCA_HOUSES_SITE_VALUE_VIVANUNCIOS="vivanuncios"
+COM_REMCA_HOUSES_SITE_VALUE_BIENESONLINE="bienesonline"
+COM_REMCA_HOUSES_SITE_VALUE_LAMUDI="lamudi"
+
+                FIELD_CODE_NAME_UPPER=SITE
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` ENUM('www.vivanuncios.com.mx','www.bienesonline.mx','www.lamudi.com.mx') NOT NULL DEFAULT 'www.vivanuncios.com.mx' Site
+
+                FIELD_NAME_LATEX=Site
+                FIELD_CODE_NAME_LATEX=site
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['site'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
         'FIELD_NAME' => 'país',
         'FIELD_CODE_NAME' => 'id_country',
         'FIELD_DESCRIPTION' => '',//
@@ -106,28 +131,6 @@ function getFields(){
     $fields['sid'] = $field;
     //{OBJECT_FIELD}
     $field = array(
-        'FIELD_NAME' => 'associate_house',
-        'FIELD_CODE_NAME' => 'associate_house',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ASSOCIATE_HOUSE
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(255) DEFAULT NULL associate_house
-
-                FIELD_NAME_LATEX=associate\_house
-                FIELD_CODE_NAME_LATEX=associate\_house
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['associate_house'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
         'FIELD_NAME' => 'municipio',
         'FIELD_CODE_NAME' => 'id_lmunicipality',
         'FIELD_DESCRIPTION' => '',//
@@ -153,6 +156,28 @@ function getFields(){
     $fields['id_lmunicipality'] = $field;
     //{OBJECT_FIELD}
     $field = array(
+        'FIELD_NAME' => 'associate_house',
+        'FIELD_CODE_NAME' => 'associate_house',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 1,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=ASSOCIATE_HOUSE
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(255) DEFAULT NULL associate_house
+
+                FIELD_NAME_LATEX=associate\_house
+                FIELD_CODE_NAME_LATEX=associate\_house
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['associate_house'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
         'FIELD_NAME' => 'houseid',
         'FIELD_CODE_NAME' => 'houseid',
         'FIELD_DESCRIPTION' => '',//
@@ -173,28 +198,6 @@ function getFields(){
 
     */
     $fields['houseid'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'link',
-        'FIELD_CODE_NAME' => 'link',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=LINK
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(250) NOT NULL DEFAULT '' link
-
-                FIELD_NAME_LATEX=link
-                FIELD_CODE_NAME_LATEX=link
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['link'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'Rent',
@@ -220,6 +223,28 @@ function getFields(){
 
     */
     $fields['id_rent'] = $field;
+    //{OBJECT_FIELD}
+    $field = array(
+        'FIELD_NAME' => 'link',
+        'FIELD_CODE_NAME' => 'link',
+        'FIELD_DESCRIPTION' => '',//
+        'FIELDTYPE_ID' => 1,
+    );
+    /*
+                FIELD_OPTIONS_LANGUAGE_VARS=
+                FIELD_CODE_NAME_UPPER=LINK
+                FIELD_INTRO=
+                FIELD_DESCRIPTION_INI=
+
+                FIELD_DB=`` VARCHAR(250) NOT NULL DEFAULT '' link
+
+                FIELD_NAME_LATEX=link
+                FIELD_CODE_NAME_LATEX=link
+                FIELD_DBCOMMENT_LATEX=
+
+
+    */
+    $fields['link'] = $field;
     //{OBJECT_FIELD}
     $field = array(
         'FIELD_NAME' => 'listing_type',
@@ -1155,9 +1180,6 @@ COM_REMCA_HOUSES_BEDROOMS_VALUE_6="6+"
                 FIELD_CODE_NAME_LATEX=owner\_id
                 FIELD_DBCOMMENT_LATEX=
 
-                    {FIELD_LINK}
-                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
-                    FIELD_FOREIGN_OBJECT_UPPER=USER
 
     */
     $fields['owner_id'] = $field;

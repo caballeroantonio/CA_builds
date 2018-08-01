@@ -76,9 +76,6 @@ function getFields(){
                 FIELD_CODE_NAME_LATEX=id\_user
                 FIELD_DBCOMMENT_LATEX=
 
-                    {FIELD_LINK}
-                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=U
-                    FIELD_FOREIGN_OBJECT_UPPER=USER
 
     */
     $fields['id_user'] = $field;

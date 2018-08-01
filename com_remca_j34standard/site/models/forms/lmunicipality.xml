@@ -78,6 +78,7 @@
             label="COM_REMCA_LMUNICIPALITIES_FIELD_ID_LSTATE_LABEL"
             description="COM_REMCA_LMUNICIPALITIES_FIELD_ID_LSTATE_DESC"
             class="modal"
+			link="1"
 			default="0"
         >
         </field>  
@@ -88,6 +89,7 @@
             label="COM_REMCA_LMUNICIPALITIES_FIELD_ID_COUNTRY_LABEL"
             description="COM_REMCA_LMUNICIPALITIES_FIELD_ID_COUNTRY_DESC"
             class="modal"
+			link="1"
 			default="0"
         >
         </field>  

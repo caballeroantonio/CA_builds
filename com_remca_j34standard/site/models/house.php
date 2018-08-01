@@ -56,6 +56,7 @@ class RemcaModelHouse extends JModelItem
 			$config['house_filter_fields'] = array(
 				'id', 'a.id',
 				'name', 'a.name',
+				'site', 'a.site',
 				'id_country', 'a.id_country',
 				'c1_country_name', 'c1.country_name',
 				'id_lstate', 'a.id_lstate',
@@ -65,14 +66,15 @@ class RemcaModelHouse extends JModelItem
 				'price', 'a.price',
 				'bathrooms', 'a.bathrooms',
 				'bedrooms', 'a.bedrooms',
+				'site','a.site',
 				'id_country','a.id_country',
 				'id_lstate','a.id_lstate',
 				'sid','a.sid',
-				'associate_house','a.associate_house',
 				'id_lmunicipality','a.id_lmunicipality',
+				'associate_house','a.associate_house',
 				'houseid','a.houseid',
-				'link','a.link',
 				'id_rent','a.id_rent',
+				'link','a.link',
 				'listing_type','a.listing_type',
 				'price','a.price',
 				'id_currency','a.id_currency',
@@ -335,9 +337,6 @@ class RemcaModelHouse extends JModelItem
 				// Filter by and return name for id_rent level.
 				$query->select($db->quoteName('r.name').' AS r_rent_name');
 				$query->join('LEFT', $db->quoteName('#__rem_rents').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.id_rent'));	
-				// Filter by and return name for owner_id level.
-				$query->select($db->quoteName('u.name').' AS u_user_name');
-				$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.owner_id'));	
 																				
 				$db->setQuery($query);
 
@@ -356,6 +355,7 @@ class RemcaModelHouse extends JModelItem
 				$registry = null; //release memory	
 			
 
+				
 				
 				
 				

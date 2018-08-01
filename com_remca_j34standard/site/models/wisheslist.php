@@ -194,7 +194,7 @@ class RemcaModelWisheslist extends JModelList
 		// Create a new query object.
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
-                $query->where("created_by = '{$user->id}'");
+		$query->where("created_by = '{$user->id}'");
 		// Set date values
 		$null_date = $db->quote($db->getNullDate());
 		$now_date = $db->quote(JFactory::getDate()->toSQL());

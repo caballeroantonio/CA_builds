@@ -95,6 +95,11 @@ $empty = $component->params->get('default_empty_field', '');
 								<?php echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_HITS', 'a.hits', $list_dirn, $list_order); ?>
 							</th>
 						<?php endif; ?>
+						<?php if ($this->params->get('list_show_house_site',0)) : ?>
+							<th class="list-site" id="tableOrderingsite">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_SITE'); ?>
+							</th>
+						<?php endif; ?>	
 						<?php if ($this->params->get('list_show_house_id_country',0)) : ?>
 							<th class="list-id_country" id="tableOrderingid_country">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_COUNTRY'); ?>
@@ -179,6 +184,26 @@ $empty = $component->params->get('default_empty_field', '');
 								<?php echo JText::sprintf('JGLOBAL_HITS_COUNT', $item->hits); ?>
 							</span>
 						</td>
+						<?php endif; ?>
+						<?php if ($this->params->get('list_show_house_site',0)) : ?>
+							<td class="list-site">
+								<?php 
+									switch ($item->site) :
+									case 'www.vivanuncios.com.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_VIVANUNCIOS');
+										break;
+									case 'www.bienesonline.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_BIENESONLINE');
+										break;
+									case 'www.lamudi.com.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_LAMUDI');
+										break;
+									default :
+										echo $empty;
+										break;
+								endswitch; 
+								?>
+							</td>
 						<?php endif; ?>
 						<?php if ($this->params->get('list_show_house_id_country',0)) : ?>
 							<td class="list-id_country">

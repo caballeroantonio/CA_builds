@@ -200,11 +200,12 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="houseForm" id="houseForm">
 			<?php $dummy = false;
 					$display_fieldset = (
+								($params->get('show_house_site')) OR 
 								($params->get('show_house_id_country')) OR 
-								($params->get('show_house_sid')) OR 
 								($params->get('show_house_id_lstate')) OR 
-								($params->get('show_house_associate_house')) OR 
+								($params->get('show_house_sid')) OR 
 								($params->get('show_house_id_lmunicipality')) OR 
+								($params->get('show_house_associate_house')) OR 
 								($params->get('show_house_houseid')) OR 
 								($params->get('show_house_id_rent')) OR 
 								($params->get('show_house_link')) OR 
@@ -259,6 +260,31 @@ $empty = $component->params->get('default_empty_field', '');
 					<legend><?php echo JText::_('COM_REMCA_HOUSES_FIELDSET_HOUSES_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
+						<?php if ($params->get('show_house_site')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_SITE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									switch ($this->item->site) :
+									case 'www.vivanuncios.com.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_VIVANUNCIOS');
+										break;
+									case 'www.bienesonline.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_BIENESONLINE');
+										break;
+									case 'www.lamudi.com.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_LAMUDI');
+										break;
+									default :
+										echo $empty;
+										break;
+								endswitch;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
 						<?php if ($params->get('show_house_id_country')) : ?>
 						<div class="formelm">
 							<label>
@@ -267,18 +293,6 @@ $empty = $component->params->get('default_empty_field', '');
 							<span>
 								<?php
 									echo JString::trim($this->item->c1_country_name);
-								?>
-							</span>
-						</div>	
-						<?php endif; ?>
-						<?php if ($params->get('show_house_sid')) : ?>
-						<div class="formelm">
-							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_SID_LABEL'); ?>
-							</label>
-							<span>
-								<?php
-									echo $this->item->sid != '' ? $this->item->sid : $empty;
 								?>
 							</span>
 						</div>	
@@ -295,14 +309,14 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_house_associate_house')) : ?>
+						<?php if ($params->get('show_house_sid')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ASSOCIATE_HOUSE_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_SID_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->associate_house != '' ? $this->item->associate_house : $empty;
+									echo $this->item->sid != '' ? $this->item->sid : $empty;
 								?>
 							</span>
 						</div>	
@@ -315,6 +329,18 @@ $empty = $component->params->get('default_empty_field', '');
 							<span>
 								<?php
 									echo JString::trim($this->item->m_lmunicipality_name);
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
+						<?php if ($params->get('show_house_associate_house')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_REMCA_HOUSES_FIELD_ASSOCIATE_HOUSE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->associate_house != '' ? $this->item->associate_house : $empty;
 								?>
 							</span>
 						</div>	

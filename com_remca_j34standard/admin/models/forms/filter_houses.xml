@@ -33,6 +33,20 @@
 			hint="JSEARCH_FILTER"
 		/>
         <field
+			name="site"
+			type="sql"
+			label="COM_REMCA_FILTER_SITE_LABEL"
+			description="COM_REMCA_FILTER_SITE_DESC"
+			onchange="this.form.submit();"
+			query="SELECT DISTINCT `a`.`SITE` AS `value`, `a`.`SITE` AS `text`
+		            FROM `#__rem_houses` AS `a` 
+		            ORDER BY `a`.`SITE`"
+			key_field="value"
+			value_field="text"
+		>
+            <option value="">COM_REMCA_HOUSES_SELECT_SITE</option>
+        </field>
+        <field
 			name="id_country"
 			type="sql"
 			label="COM_REMCA_FILTER_ID_COUNTRY_LABEL"
@@ -165,6 +179,8 @@
 			<option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
             <option value="a.name ASC">COM_REMCA_FIELD_NAME_SORT_ASC_LABEL</option>
             <option value="a.name DESC">COM_REMCA_FIELD_NAME_SORT_DESC_LABEL</option>
+            <option value="a.site ASC">COM_REMCA_HOUSES_FIELD_SITE_SORT_ASC_LABEL</option>
+            <option value="a.site DESC">COM_REMCA_HOUSES_FIELD_SITE_SORT_DESC_LABEL</option>
             <option value="c1_country_name ASC">COM_REMCA_HOUSES_FIELD_ID_COUNTRY_SORT_ASC_LABEL</option>
             <option value="c1_country_name DESC">COM_REMCA_HOUSES_FIELD_ID_COUNTRY_SORT_DESC_LABEL</option>
             <option value="s_lstate_name ASC">COM_REMCA_HOUSES_FIELD_ID_LSTATE_SORT_ASC_LABEL</option>

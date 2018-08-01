@@ -124,6 +124,9 @@ $assoc	= JLanguageAssociations::isEnabled();
 						<?php echo JHtml::_('searchtools.sort',  'COM_REMCA_HEADING_NAME', 'a.name', $list_dirn, $list_order); ?>
 					</th>
 					<th width="10%" class="nowrap center hidden-phone">
+						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_SITE'); ?>						
+					</th>	
+					<th width="10%" class="nowrap center hidden-phone">
 						<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_COUNTRY'); ?>						
 					</th>	
 					<th width="10%" class="nowrap center hidden-phone">
@@ -238,6 +241,24 @@ $assoc	= JLanguageAssociations::isEnabled();
 							<?php endif; ?>
 						</div>
 					</td>
+					<td class="nowrap small center hidden-phone">
+						<?php 
+							switch ($item->site) :
+									case 'www.vivanuncios.com.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_VIVANUNCIOS');
+										break;
+									case 'www.bienesonline.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_BIENESONLINE');
+										break;
+									case 'www.lamudi.com.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_LAMUDI');
+										break;
+									default :
+										echo $empty;
+										break;
+								endswitch; 
+						?>				
+					</td>	
 					<td class="nowrap small center hidden-phone">
 						<?php 
 							echo JString::trim($item->c1_country_name); 

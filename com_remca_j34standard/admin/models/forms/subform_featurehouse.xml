@@ -46,6 +46,7 @@
             label="COM_REMCA_FEATURE_HOUSES_FIELD_ID_HOUSE_LABEL"
             description="COM_REMCA_FEATURE_HOUSES_FIELD_ID_HOUSE_DESC"
             class="modal"
+			link="1"
 			default="0"
 			type_alias="com_remca.house" 
         >
@@ -55,6 +56,7 @@
             label="COM_REMCA_FEATURE_HOUSES_FIELD_ID_FEATURED_LABEL"
             description="COM_REMCA_FEATURE_HOUSES_FIELD_ID_FEATURED_DESC"
             class="modal"
+			link="1"
 			default="0"
 			type_alias="com_remca.feature" 
         >

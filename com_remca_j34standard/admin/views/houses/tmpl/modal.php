@@ -64,6 +64,10 @@ $empty = $component->params->get('default_empty_field', '');
 		</div>
 		<hr class="hr-condensed">
 		<div class="filters pull-left">
+			<select name="filter_site" class="input-medium js-stools-field-order" onchange="this.form.submit()">
+				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_SITE');?></option>
+				<?php echo JHtml::_('select.options', $this->site_values, 'value', 'text', $this->state->get('filter.site'));?>
+			</select>	
 			<select name="filter_id_country" class="input-medium" onchange="this.form.submit()">
 				<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_C1_COUNTRY');?></option>
 				<?php echo JHtml::_('select.options', $this->countries, 'value', 'text', $this->state->get('filter.id_country'));?>
@@ -121,6 +125,9 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php echo JHtml::_('grid.sort',  'COM_REMCA_HEADING_NAME', 'a.name', $list_dirn, $list_order); ?>
 				</th>
 				<th width="10%" class="center nowrap">
+					<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_SITE'); ?>						
+				</th>	
+				<th width="10%" class="center nowrap">
 					<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_COUNTRY'); ?>						
 				</th>	
 				<th width="10%" class="center nowrap">
@@ -175,6 +182,26 @@ $empty = $component->params->get('default_empty_field', '');
 						<?php echo $this->escape($item->name); ?>
 					</a>		
 				</td>
+				<td class="center">
+					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
+						<?php 
+							switch ($item->site) :
+									case 'www.vivanuncios.com.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_VIVANUNCIOS');
+										break;
+									case 'www.bienesonline.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_BIENESONLINE');
+										break;
+									case 'www.lamudi.com.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_LAMUDI');
+										break;
+									default :
+										echo $empty;
+										break;
+								endswitch; 
+						?>					
+					</a>		
+				</td>	
 				<td class="center">
 					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>', '<?php echo $this->escape(addslashes($item->name)); ?>');">
 						<?php 

@@ -71,6 +71,7 @@ class RemcaViewHouses extends JViewLegacy
 		// PREPARE THE DATA
 		if ($app->input->getString('layout', 'default') != 'blog')
 		{			
+			$this->site_values	= $this->get('Sitevalues');
 			$this->countries	= $this->get('Countries');
 			$this->lstates	= $this->get('Lstates');
 			$this->lmunicipalities	= $this->get('Lmunicipalities');

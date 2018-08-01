@@ -46,6 +46,7 @@
             label="COM_REMCA_BUYING_REQUESTS_FIELD_ID_HOUSE_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_FIELD_ID_HOUSE_DESC"
             class="modal"
+			link="1"
 			default="0"
 			type_alias="com_remca.house" 
         >

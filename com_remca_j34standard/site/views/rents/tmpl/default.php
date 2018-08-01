@@ -224,11 +224,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_rent_id_user',1)) : ?>
 						<td class="list-id_user">
 							<?php 
-								if ($params->get('list_link_rent_id_user')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getUserRoute($item->id_user, 0)).'">'.JString::trim($item->u_user_name).'</a>';
-								else :
-									echo JString::trim($item->u_user_name);
-								endif; 
+								echo JString::trim($item->u_user_name);
 							?>
 						</td>
 					<?php endif; ?>

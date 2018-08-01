@@ -249,6 +249,17 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
+                name="list_show_house_site"
+                type="radio"
+                label="COM_REMCA_HOUSES_LIST_SITE_LABEL"
+				description="COM_REMCA_HOUSES_LIST_SITE_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
                 name="list_show_house_id_country"
                 type="radio"
                 label="COM_REMCA_HOUSES_LIST_ID_COUNTRY_LABEL"
@@ -282,10 +293,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="list_show_house_associate_house"
+                name="list_show_house_id_lmunicipality"
                 type="radio"
-                label="COM_REMCA_HOUSES_LIST_ASSOCIATE_HOUSE_LABEL"
-				description="COM_REMCA_HOUSES_LIST_ASSOCIATE_HOUSE_DESC"
+                label="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -293,10 +304,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="list_show_house_id_lmunicipality"
+                name="list_show_house_associate_house"
                 type="radio"
-                label="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_LABEL"
-				description="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_DESC"
+                label="COM_REMCA_HOUSES_LIST_ASSOCIATE_HOUSE_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ASSOCIATE_HOUSE_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -315,10 +326,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="list_show_house_link"
+                name="list_show_house_id_rent"
                 type="radio"
-                label="COM_REMCA_HOUSES_LIST_LINK_LABEL"
-				description="COM_REMCA_HOUSES_LIST_LINK_DESC"
+                label="COM_REMCA_HOUSES_LIST_ID_RENT_LABEL"
+				description="COM_REMCA_HOUSES_LIST_ID_RENT_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -326,10 +337,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="list_show_house_id_rent"
+                name="list_show_house_link"
                 type="radio"
-                label="COM_REMCA_HOUSES_LIST_ID_RENT_LABEL"
-				description="COM_REMCA_HOUSES_LIST_ID_RENT_DESC"
+                label="COM_REMCA_HOUSES_LIST_LINK_LABEL"
+				description="COM_REMCA_HOUSES_LIST_LINK_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -1128,6 +1139,17 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
+                name="show_house_site"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_SITE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_SITE_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
                 name="show_house_id_country"
                 type="radio"
                 label="COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_LABEL"
@@ -1161,10 +1183,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_house_associate_house"
+                name="show_house_id_lmunicipality"
                 type="radio"
-                label="COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_LABEL"
-                description="COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_DESC"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -1172,10 +1194,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_house_id_lmunicipality"
+                name="show_house_associate_house"
                 type="radio"
-                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_LABEL"
-                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_DESC"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -1194,10 +1216,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_house_link"
+                name="show_house_id_rent"
                 type="radio"
-                label="COM_REMCA_HOUSES_SHOW_FIELD_LINK_LABEL"
-                description="COM_REMCA_HOUSES_SHOW_FIELD_LINK_DESC"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -1205,10 +1227,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_house_id_rent"
+                name="show_house_link"
                 type="radio"
-                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_LABEL"
-                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_DESC"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_LINK_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_LINK_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>

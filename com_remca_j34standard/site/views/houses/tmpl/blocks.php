@@ -108,6 +108,12 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_remca'), 'value', 'text', $this->state->get('filter.category_id'));?>
 				</select>
 				<?php endif; ?>	
+				<?php if ($this->params->get('list_show_house_site',1)) : ?>
+					<select name="filter_site" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_SITE');?></option>
+					<?php echo JHtml::_('select.options', $this->site_values, 'value', 'text', $this->state->get('filter.site'));?>
+					</select>
+				<?php endif; ?>	
 				<?php if ($this->params->get('list_show_house_id_country',1)) : ?>
 					<select name="filter_id_country" onchange="this.form.submit()">
 					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_C1_COUNTRY');?></option>
@@ -321,6 +327,7 @@ function show_collapsibleModal(item_id){
 
 <?php
 //slick
+$doc = JFactory::getDocument();//@bug se que se repite pero sin él aveces marca error.
 $doc->addStyleSheet('media/com_remca/slick/slick.css');
 $doc->addStyleSheet('media/com_remca/slick/slick-theme.css');
 $doc->addScript('media/com_remca/slick/slick.min.js');

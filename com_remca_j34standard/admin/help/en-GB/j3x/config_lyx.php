@@ -93,14 +93,15 @@ class Foo {
     $output .= $this->jtext2lyx('COM_REMCA_SHOW_HITS_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_HITS_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_SHOW_ADMIN_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_ADMIN_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_SHOW_VOTE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_VOTE_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_SITE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_SITE_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ID_LSTATE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ID_LSTATE_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_SID_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_SID_DESC'). ' \tabularnewline\hline '. "\r\n";
-    $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HOUSEID_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_HOUSEID_DESC'). ' \tabularnewline\hline '. "\r\n";
-    $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_LINK_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_LINK_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_LINK_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_LINK_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_LISTING_TYPE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_LISTING_TYPE_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_PRICE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_PRICE_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ID_CURRENCY_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_HOUSES_SHOW_FIELD_ID_CURRENCY_DESC'). ' \tabularnewline\hline '. "\r\n";

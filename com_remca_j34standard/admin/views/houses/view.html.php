@@ -38,6 +38,7 @@ class RemcaViewHouses extends JViewLegacy
 	protected $pagination;
 	protected $state;
 	protected $can_do;
+	protected $site_values;
 	protected $countries;
 	protected $lstates;
 	protected $lmunicipalities;

@@ -114,12 +114,35 @@
         label="COM_REMCA_HOUSES_FIELDSET_HOUSES_FS_LABEL"
         description="COM_REMCA_HOUSES_FIELDSET_HOUSES_FS_DESC"
     >
+        <field name="site"
+            type="list"
+            label="COM_REMCA_HOUSES_FIELD_SITE_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_SITE_DESC"
+            class="inputbox"
+			size="1"
+			required="true"
+			readonly="true"
+        >
+            <option	value="www.vivanuncios.com.mx">COM_REMCA_HOUSES_SITE_VALUE_VIVANUNCIOS</option>
+			<option	value="www.bienesonline.mx">COM_REMCA_HOUSES_SITE_VALUE_BIENESONLINE</option>
+			<option	value="www.lamudi.com.mx">COM_REMCA_HOUSES_SITE_VALUE_LAMUDI</option>
+        </field>  
         <field name="id_country"
             type="modal_countries"
             label="COM_REMCA_HOUSES_FIELD_ID_COUNTRY_LABEL"
             description="COM_REMCA_HOUSES_FIELD_ID_COUNTRY_DESC"
             class="modal"
+			link="1"
 			required="true"
+			default="0"
+        >
+        </field>  
+        <field name="id_lstate"
+            type="modal_lstates"
+            label="COM_REMCA_HOUSES_FIELD_ID_LSTATE_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_ID_LSTATE_DESC"
+            class="modal"
+			link="1"
 			default="0"
         >
         </field>  
@@ -132,11 +155,12 @@
 			default="0"
         >
         </field>  
-        <field name="id_lstate"
-            type="modal_lstates"
-            label="COM_REMCA_HOUSES_FIELD_ID_LSTATE_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_ID_LSTATE_DESC"
+        <field name="id_lmunicipality"
+            type="modal_lmunicipalities"
+            label="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL"
+            description="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_DESC"
             class="modal"
+			link="1"
 			default="0"
         >
         </field>  
@@ -147,14 +171,6 @@
             class="inputbox"
 			size="50"
 			maxlength="255"
-        >
-        </field>  
-        <field name="id_lmunicipality"
-            type="modal_lmunicipalities"
-            label="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL"
-            description="COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_DESC"
-            class="modal"
-			default="0"
         >
         </field>  
         <field name="houseid"
@@ -171,6 +187,7 @@
             label="COM_REMCA_HOUSES_FIELD_ID_RENT_LABEL"
             description="COM_REMCA_HOUSES_FIELD_ID_RENT_DESC"
             class="modal"
+			link="1"
 			default="0"
 			type_alias="com_remca.rent" 
         >

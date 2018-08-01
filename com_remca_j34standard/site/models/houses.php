@@ -54,6 +54,7 @@ class RemcaModelHouses extends JModelList
 			$config['filter_fields'] = array(
 				'id', 'a.id',
 				'name', 'a.name',
+				'site','a.site',
 				'id_country','a.id_country',
 				'c1_country_name', 'c1.name',				
 				'id_lstate','a.id_lstate',
@@ -149,6 +150,8 @@ class RemcaModelHouses extends JModelList
 		}
 		$this->setState('list.direction', $list_order);
 		
+		$site = $app->getUserStateFromRequest($this->context.'.filter.site', 'filter_site', '', 'string');
+		$this->setState('filter.site', $site);
 		$id_country = $app->getUserStateFromRequest($this->context.'.filter.id_country', 'filter_id_country', 0, 'int');
 		$this->setState('filter.id_country', $id_country);
 		$id_lstate = $app->getUserStateFromRequest($this->context.'.filter.id_lstate', 'filter_id_lstate', 0, 'int');
@@ -216,6 +219,7 @@ class RemcaModelHouses extends JModelList
 		$id .= ':'.$this->getState('filter.featured');
 		$id .= ':'.serialize($this->getState('filter.category_id'));
 		$id .= ':'.serialize($this->getState('filter.category_id.include'));
+		$id	.= ':'.$this->getState('filter.site');	
 		$id	.= ':'.$this->getState('filter.id_country');	
 		$id	.= ':'.$this->getState('filter.id_lstate');	
 		$id	.= ':'.$this->getState('filter.id_lmunicipality');	
@@ -356,12 +360,12 @@ class RemcaModelHouses extends JModelList
 		$query->select($db->quoteName('r.id').' AS r_rent_id');
 
 		$query->join('LEFT', $db->quoteName('#__rem_rents').' AS r ON '.$db->quoteName('r.id').' = '.$db->quoteName('a.id_rent'));	
-		// Filter by and return name for owner_id level.
-		$query->select($db->quoteName('u.name').' AS u_user_name');
-		$query->select($db->quoteName('u.id').' AS u_user_id');
-
-		$query->join('LEFT', $db->quoteName('#__users').' AS u ON '.$db->quoteName('u.id').' = '.$db->quoteName('a.owner_id'));	
 					
+		if ($site = $this->getState('filter.site'))
+		{
+			$site = $db->escape(JString::strtolower($site), true);			
+			$query->where($db->quoteName('a.site').' = ' . $db->quote($site));
+		}	
 		if ($id_country = $this->getState('filter.id_country'))
 		{
 			$query->where($db->quoteName('a.id_country').' = ' . (int) $id_country);
@@ -608,6 +612,7 @@ $where .= "\n)";
 				
 				
 				
+				
 				if (isset($item->id_currency) AND $item->id_currency !='')
 				{
 					$sql = 'SELECT '.$db->quoteName('list.currency').' AS value FROM (SELECT id, currency FROM #__rem_countries WHERE published_cur) AS list';
@@ -744,6 +749,20 @@ $where .= "\n)";
 		return $items;
 	}
 	/**
+	 * Build a list of distinct values in the Site field
+	 *
+	 * @return	JDatabaseQuery
+	 */
+	public function getSitevalues()
+	{
+				$values = array();
+		$values[] = array('value' => 'www.vivanuncios.com.mx', 'text' => JText::_('COM_REMCA_HOUSES_SITE_VALUE_VIVANUNCIOS'));
+		$values[] = array('value' => 'www.bienesonline.mx', 'text' => JText::_('COM_REMCA_HOUSES_SITE_VALUE_BIENESONLINE'));
+		$values[] = array('value' => 'www.lamudi.com.mx', 'text' => JText::_('COM_REMCA_HOUSES_SITE_VALUE_LAMUDI'));
+		return $values;
+
+	}				
+	/**
 	 * Build a list of countries
 	 *
 	 * @return	JDatabaseQuery
@@ -860,11 +879,11 @@ $where .= "\n)";
 	 */
 	public function getLmunicipalities()
 	{
-		/**
-                 * No muestra valores si no se elige el catálogo encadenado superior.
-                 */
-		if (!$this->getState('filter.id_lstate'))
-			return;
+            /**
+            * No muestra valores si no se elige el catálogo encadenado superior.
+            */
+            if (!$this->getState('filter.id_lstate'))
+                return;
 		
 		// Create a new query object.
 		$db = $this->getDbo();
@@ -940,19 +959,94 @@ $where .= "\n)";
 		// Return the result
 		return $db->loadObjectList();
 	}
-	/**
-	 * Build a list of distinct values in the precio field
+        /**
+         * Build a list of distinct values in the precio field
+         * tx custom code, no quiero GROUP BY price
+         * @return	JDatabaseQuery
+         */
+	public function getPricevalues()
+	{
+            return;
+            /*
+				// Create a new query object.
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+
+		// Construct the query
+		$query->select('DISTINCT '.$db->quoteName('price').' AS value, '.$db->quoteName('price').' AS text');
+		$query->from($db->quoteName('#__rem_houses'));
+		$query->where($db->quoteName('price').' != \'\'');
+
+		$query->order($db->quoteName('price'));
+
+		// Setup the query
+		$db->setQuery($query);
+
+		// Return the result
+		return $db->loadObjectList();
+             */
+
+	}		
+        /**
+	 * Build a list of distinct values in the baños field
 	 *
 	 * @return	JDatabaseQuery
 	 */
-	public function getPricevalues()
+	public function getBathroomsvalues_bak()
 	{
-            /**
-             * custom code, no quiero GROUP BY price
-             */
-            return;
+				// Create a new query object.
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
 
-	}				
+		// Construct the query
+		$query->select('DISTINCT '.$db->quoteName('bathrooms').' AS value, '.$db->quoteName('bathrooms').' AS text');
+		$query->from($db->quoteName('#__rem_houses'));
+		$query->where($db->quoteName('bathrooms').' != \'\'');
+
+		$query->order($db->quoteName('bathrooms'));
+
+		// Setup the query
+		$db->setQuery($query);
+
+		// Return the result
+		return $db->loadObjectList();
+
+	}
+	/**
+	 * Build a list of distinct values in the dormitorios field
+	 *
+	 * @return	JDatabaseQuery
+	 */
+	public function getBedroomsvalues_bak()
+	{
+				// Create a new query object.
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+
+		// Construct the query
+		$query->select('DISTINCT '.$db->quoteName('bedrooms').' AS value, '.$db->quoteName('bedrooms').' AS text');
+		$query->from($db->quoteName('#__rem_houses'));
+		$query->where($db->quoteName('bedrooms').' != \'\'');
+
+		$query->order($db->quoteName('bedrooms'));
+
+		// Setup the query
+		$db->setQuery($query);
+
+		// Return the result
+		return $db->loadObjectList();
+
+	}
+	
+        /*
+         * Function that allows download database information
+         * @ToDo implementar generación de código
+         */
+        public function getListQuery4Export(){
+            $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));
+            return $this->getDbo()->getQuery();
+        }
+        
 	/**
 	 * Build a list of distinct values in the baños field
          * tx custom code
@@ -972,22 +1066,7 @@ $where .= "\n)";
                     (object) array('text' => '3', 'value' => '3'),
                     (object) array('text' => '+4', 'value' => '+4'),
                 ];*/
-				// Create a new query object.
-		$db = $this->getDbo();
-		$query = $db->getQuery(true);
-
-		// Construct the query
-		$query->select('DISTINCT '.$db->quoteName('bathrooms').' AS value, '.$db->quoteName('bathrooms').' AS text');
-		$query->from($db->quoteName('#__rem_houses'));
-		$query->where($db->quoteName('bathrooms').' != \'\'');
-
-		$query->order($db->quoteName('bathrooms'));
-
-		// Setup the query
-		$db->setQuery($query);
-
-		// Return the result
-		return $db->loadObjectList();
+		return $this->getBathroomsvalues_bak();
             }else{
 				// Create a new query object.
 		$db = $this->getDbo();
@@ -1046,7 +1125,8 @@ $where .= "\n)";
 
             }
 
-	}				
+	}	
+        
 	/**
 	 * Build a list of distinct values in the dormitorios field
 	 *
@@ -1068,22 +1148,7 @@ $where .= "\n)";
 		(object) array('text' => '5', 'value' => '5'),
 		(object) array('text' => '6+', 'value' => '6+'),
                 ];*/
-				// Create a new query object.
-		$db = $this->getDbo();
-		$query = $db->getQuery(true);
-
-		// Construct the query
-		$query->select('DISTINCT '.$db->quoteName('bedrooms').' AS value, '.$db->quoteName('bedrooms').' AS text');
-		$query->from($db->quoteName('#__rem_houses'));
-		$query->where($db->quoteName('bedrooms').' != \'\'');
-
-		$query->order($db->quoteName('bedrooms'));
-
-		// Setup the query
-		$db->setQuery($query);
-
-		// Return the result
-		return $db->loadObjectList();
+		return $this->getBedroomsvalues_bak();
             }else{
 				// Create a new query object.
 		$db = $this->getDbo();
@@ -1140,14 +1205,5 @@ $where .= "\n)";
 		// Return the result
 		return $db->loadObjectList();   
             }
-	}				
-	
-        /*
-         * Function that allows download database information
-         * @ToDo implementar generación de código
-         */
-        public function getListQuery4Export(){
-            $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));
-            return $this->getDbo()->getQuery();
-        }
+	}	
 }

@@ -108,6 +108,12 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_remca'), 'value', 'text', $this->state->get('filter.category_id'));?>
 				</select>
 				<?php endif; ?>	
+				<?php if ($this->params->get('list_show_house_site',1)) : ?>
+					<select name="filter_site" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_SITE');?></option>
+					<?php echo JHtml::_('select.options', $this->site_values, 'value', 'text', $this->state->get('filter.site'));?>
+					</select>
+				<?php endif; ?>	
 				<?php if ($this->params->get('list_show_house_id_country',1)) : ?>
 					<select name="filter_id_country" onchange="this.form.submit()">
 					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_C1_COUNTRY');?></option>
@@ -180,6 +186,11 @@ $empty = $component->params->get('default_empty_field', '');
 						<?php echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_HITS', 'a.hits', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_house_site',1)) : ?>
+						<th class="list-site" id="tableOrderingsite">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_SITE'); ?>
+						</th>
+					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_id_country',1)) : ?>
 						<th class="list-id_country" id="tableOrderingid_country">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_COUNTRY'); ?>
@@ -195,14 +206,14 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_SID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_associate_house',1)) : ?>
-						<th class="list-associate_house" id="tableOrderingassociate_house">
-							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ASSOCIATE_HOUSE'); ?>
-						</th>
-					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_id_lmunicipality',1)) : ?>
 						<th class="list-id_lmunicipality" id="tableOrderingid_lmunicipality">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_LMUNICIPALITY'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_house_associate_house',1)) : ?>
+						<th class="list-associate_house" id="tableOrderingassociate_house">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ASSOCIATE_HOUSE'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_houseid',1)) : ?>
@@ -210,14 +221,14 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_HOUSEID'); ?>
 						</th>
 					<?php endif; ?>	
-					<?php if ($this->params->get('list_show_house_link',1)) : ?>
-						<th class="list-link" id="tableOrderinglink">
-							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_LINK'); ?>
-						</th>
-					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_id_rent',1)) : ?>
 						<th class="list-id_rent" id="tableOrderingid_rent">
 							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_ID_RENT'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_house_link',1)) : ?>
+						<th class="list-link" id="tableOrderinglink">
+							<?php echo JTEXT::_('COM_REMCA_HOUSES_HEADING_LINK'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_house_listing_type',1)) : ?>
@@ -498,6 +509,26 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_house_site',1)) : ?>
+						<td class="list-site">
+							<?php 
+								switch ($item->site) :
+									case 'www.vivanuncios.com.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_VIVANUNCIOS');
+										break;
+									case 'www.bienesonline.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_BIENESONLINE');
+										break;
+									case 'www.lamudi.com.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_LAMUDI');
+										break;
+									default :
+										echo $empty;
+										break;
+								endswitch;
+							?>
+						</td>
+					<?php endif; ?>
 					<?php if ($this->params->get('list_show_house_id_country',1)) : ?>
 						<td class="list-id_country">
 							<?php 
@@ -527,13 +558,6 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_associate_house',1)) : ?>
-						<td class="list-associate_house">
-							<?php 
-								echo $item->associate_house != '' ? $item->associate_house : $empty;
-							?>
-						</td>
-					<?php endif; ?>
 					<?php if ($this->params->get('list_show_house_id_lmunicipality',1)) : ?>
 						<td class="list-id_lmunicipality">
 							<?php 
@@ -545,17 +569,17 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
+					<?php if ($this->params->get('list_show_house_associate_house',1)) : ?>
+						<td class="list-associate_house">
+							<?php 
+								echo $item->associate_house != '' ? $item->associate_house : $empty;
+							?>
+						</td>
+					<?php endif; ?>
 					<?php if ($this->params->get('list_show_house_houseid',1)) : ?>
 						<td class="list-houseid">
 							<?php 
 								echo $item->houseid != '' ? $item->houseid : $empty;
-							?>
-						</td>
-					<?php endif; ?>
-					<?php if ($this->params->get('list_show_house_link',1)) : ?>
-						<td class="list-link">
-							<?php 
-								echo $item->link != '' ? $item->link : $empty;
 							?>
 						</td>
 					<?php endif; ?>
@@ -567,6 +591,13 @@ $empty = $component->params->get('default_empty_field', '');
 								else :
 									echo JString::trim($item->r_rent_name);
 								endif; 
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_house_link',1)) : ?>
+						<td class="list-link">
+							<?php 
+								echo $item->link != '' ? $item->link : $empty;
 							?>
 						</td>
 					<?php endif; ?>
@@ -872,11 +903,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_house_owner_id',1)) : ?>
 						<td class="list-owner_id">
 							<?php 
-								if ($params->get('list_link_house_owner_id')) :
-									echo '<a href="'.JRoute::_(RemcaHelperRoute::getUserRoute($item->owner_id, 0, $item->language)).'">'.JString::trim($item->u_user_name).'</a>';
-								else :
-									echo JString::trim($item->u_user_name);
-								endif; 
+								echo JString::trim($item->u_user_name);
 							?>
 						</td>
 					<?php endif; ?>

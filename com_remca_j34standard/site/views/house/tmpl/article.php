@@ -215,14 +215,15 @@ $use_def_list = (
 		<?php
 			$dummy = false;
 			$use_fields_list = (
+						($params->get('show_house_site')) OR 
 						($params->get('show_house_id_country')) OR 
 						($params->get('show_house_id_lstate')) OR 
 						($params->get('show_house_sid')) OR 
-						($params->get('show_house_associate_house')) OR 
 						($params->get('show_house_id_lmunicipality')) OR 
+						($params->get('show_house_associate_house')) OR 
 						($params->get('show_house_houseid')) OR 
-						($params->get('show_house_link')) OR 
 						($params->get('show_house_id_rent')) OR 
+						($params->get('show_house_link')) OR 
 						($params->get('show_house_listing_type')) OR 
 						($params->get('show_house_price')) OR 
 						($params->get('show_house_id_currency')) OR 
@@ -274,6 +275,27 @@ $use_def_list = (
 			<dt class="info-title"><?php  echo JText::_('COM_REMCA_HOUSES_INFO'); ?></dt>
 		<?php endif; ?>		
 		
+			<?php if ($params->get('show_house_site')) : ?>
+				<dd class="field">
+					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_SITE_LABEL'); ?></strong>
+					<?php
+						switch ($this->item->site) :
+									case 'www.vivanuncios.com.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_VIVANUNCIOS');
+										break;
+									case 'www.bienesonline.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_BIENESONLINE');
+										break;
+									case 'www.lamudi.com.mx':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_LAMUDI');
+										break;
+									default :
+										echo $empty;
+										break;
+								endswitch;
+					?>
+				</dd>
+			<?php endif; ?>
 			<?php if ($params->get('show_house_id_country')) : ?>
 				<dd class="field">
 					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_COUNTRY_LABEL'); ?></strong>
@@ -298,19 +320,19 @@ $use_def_list = (
 					?>
 				</dd>
 			<?php endif; ?>
-			<?php if ($params->get('show_house_associate_house')) : ?>
-				<dd class="field">
-					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ASSOCIATE_HOUSE_LABEL'); ?></strong>
-					<?php
-						echo $this->item->associate_house != '' ? $this->item->associate_house : $empty;
-					?>
-				</dd>
-			<?php endif; ?>
 			<?php if ($params->get('show_house_id_lmunicipality')) : ?>
 				<dd class="field">
 					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_LMUNICIPALITY_LABEL'); ?></strong>
 					<?php
 						echo JString::trim($this->item->m_lmunicipality_name);
+					?>
+				</dd>
+			<?php endif; ?>
+			<?php if ($params->get('show_house_associate_house')) : ?>
+				<dd class="field">
+					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ASSOCIATE_HOUSE_LABEL'); ?></strong>
+					<?php
+						echo $this->item->associate_house != '' ? $this->item->associate_house : $empty;
 					?>
 				</dd>
 			<?php endif; ?>
@@ -322,19 +344,19 @@ $use_def_list = (
 					?>
 				</dd>
 			<?php endif; ?>
-			<?php if ($params->get('show_house_link')) : ?>
-				<dd class="field">
-					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_LINK_LABEL'); ?></strong>
-					<?php
-						echo $this->item->link != '' ? $this->item->link : $empty;
-					?>
-				</dd>
-			<?php endif; ?>
 			<?php if ($params->get('show_house_id_rent')) : ?>
 				<dd class="field">
 					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_ID_RENT_LABEL'); ?></strong>
 					<?php
 						echo JString::trim($this->item->r_rent_name);
+					?>
+				</dd>
+			<?php endif; ?>
+			<?php if ($params->get('show_house_link')) : ?>
+				<dd class="field">
+					<strong><?php echo JText::_('COM_REMCA_HOUSES_FIELD_LINK_LABEL'); ?></strong>
+					<?php
+						echo $this->item->link != '' ? $this->item->link : $empty;
 					?>
 				</dd>
 			<?php endif; ?>
