@@ -289,6 +289,12 @@ $use_def_list = (
 									case 'www.lamudi.com.mx':
 										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_LAMUDI');
 										break;
+									case 'www.metroscubicos.com':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_METROSCUBICOS');
+										break;
+									case 'friofriocalientecaliente.com':
+										echo JText::_('COM_REMCA_HOUSES_SITE_VALUE_FRIOFRIOCALIENTECALIENTE');
+										break;
 									default :
 										echo $empty;
 										break;

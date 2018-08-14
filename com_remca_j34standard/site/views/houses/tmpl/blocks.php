@@ -296,6 +296,12 @@ $doc->addScript('media/com_remca/fancybox/jquery.fancybox-1.3.4.pack.js');
 				<?php echo JHtml::_('houseicon.create', $this->params); ?>
 			<?php  endif; ?>
 		<?php endif; ?>		
+		<?php 
+			if(true){
+				//JHtml::_('houseicon.create', $this->params); 
+	            echo '<span class="hasTooltip tip" title="Export"><a href="index.php?task=houses.export" class="btn btn-primary"><span class="icon-download"></span>Export</a></span>';
+			}
+        ?>
 	</form>
 </div>
 

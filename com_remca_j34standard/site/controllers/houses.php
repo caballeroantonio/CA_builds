@@ -75,7 +75,7 @@ class RemcaControllerHouses extends JControllerLegacy
          * from outside: $model = JModelLegacy::getInstance('WishlistForm','RemcaModel', array('ignore_request' => FALSE));	
          */
         public function export(){
-			return false;
+            //return false;
             $model = $this->getModel = $this->getModel('Houses','RemcaModel',array('ignore_request' => FALSE));
 			
 			//states

@@ -4472,15 +4472,15 @@ class RemcaHelper extends JHelperContent
             $config = JFactory::getConfig();
             $app = JFactory::getApplication();
             
-            if($user->guest){
-                $app->enqueueMessage(JText::_('JGLOBAL_YOU_MUST_LOGIN_FIRST'), 'success');
-                $app->redirect('index.php?option=com_users&view=login');
-                return;
-            }
+//            if($user->guest){
+//                $app->enqueueMessage(JText::_('JGLOBAL_YOU_MUST_LOGIN_FIRST'), 'success');
+//                $app->redirect('index.php?option=com_users&view=login');
+//                return;
+//            }
             
         $export_query = str_replace('#__',$config->get('dbprefix'),$export_query);
         
-        $export_format = self::$params->get('export_format','exml');
+        $export_format = self::$params->get('export_format','exml');#exml, xlsx
         //al superadministrador le sirve más el query.
         if($user->id == 1)
             $export_format = 'sql';

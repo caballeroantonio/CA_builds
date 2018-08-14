@@ -196,6 +196,8 @@
             <option	value="www.vivanuncios.com.mx">COM_REMCA_HOUSES_SITE_VALUE_VIVANUNCIOS</option>
 			<option	value="www.bienesonline.mx">COM_REMCA_HOUSES_SITE_VALUE_BIENESONLINE</option>
 			<option	value="www.lamudi.com.mx">COM_REMCA_HOUSES_SITE_VALUE_LAMUDI</option>
+			<option	value="www.metroscubicos.com">COM_REMCA_HOUSES_SITE_VALUE_METROSCUBICOS</option>
+			<option	value="friofriocalientecaliente.com">COM_REMCA_HOUSES_SITE_VALUE_FRIOFRIOCALIENTECALIENTE</option>
         </field>  
         <field
             id="id_country"

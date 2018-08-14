@@ -43,12 +43,14 @@ function getFields(){
                 FIELD_OPTIONS_LANGUAGE_VARS=COM_REMCA_HOUSES_SITE_VALUE_VIVANUNCIOS="vivanuncios"
 COM_REMCA_HOUSES_SITE_VALUE_BIENESONLINE="bienesonline"
 COM_REMCA_HOUSES_SITE_VALUE_LAMUDI="lamudi"
+COM_REMCA_HOUSES_SITE_VALUE_METROSCUBICOS="metroscubicos"
+COM_REMCA_HOUSES_SITE_VALUE_FRIOFRIOCALIENTECALIENTE="friofriocalientecaliente"
 
                 FIELD_CODE_NAME_UPPER=SITE
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` ENUM('www.vivanuncios.com.mx','www.bienesonline.mx','www.lamudi.com.mx') NOT NULL DEFAULT 'www.vivanuncios.com.mx' Site
+                FIELD_DB=`` ENUM('www.vivanuncios.com.mx', 'www.bienesonline.mx', 'www.lamudi.com.mx', 'www.metroscubicos.com', 'www.inmuebles24.com', 'friofriocalientecaliente.com') NOT NULL DEFAULT 'www.vivanuncios.com.mx' Site
 
                 FIELD_NAME_LATEX=Site
                 FIELD_CODE_NAME_LATEX=site

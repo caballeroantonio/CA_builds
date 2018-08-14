@@ -73,7 +73,11 @@ class RemcaControllerWisheslist extends JControllerLegacy
          * from outside: $model = JModelLegacy::getInstance('WishlistForm','RemcaModel', array('ignore_request' => FALSE));	
          */
         public function export(){
+            $user = JFactory::getUser();
+            if($user->id == 0)
+                return;
             /*
+            else
             return false;
             $model = $this->getModel = $this->getModel('Wisheslist','RemcaModel',array('ignore_request' => FALSE));
 			
@@ -84,9 +88,9 @@ class RemcaControllerWisheslist extends JControllerLegacy
 			$model->setState('filter.state', 1);
             $query = $model->getListQuery4Export();
             */
-$query = <<<EOT 
+$query = <<<EOT
 SELECT
-h.`id`, c1.`title` 'CategorÃ­a', h.`name` 'TÃ­tulo', h.`description` 'DescripciÃ³n', c4.`name` 'municipio', c3.`name` 'estado', c2.`name` 'paÃ­s', h.`price` 'precio', c5.`currency` 'moneda', h.`hzipcode` 'cÃ³digo postal', h.`hlocation` 'ubicaciÃ³n', h.`rooms` 'habitaciones', h.`bathrooms`, h.`bedrooms` 'baÃ±os', h.`contacts` 'Contacts', h.`property_type`, h.`year` 'aÃ±o de construcciÃ³n', h.`agent` 'Agent', h.`area_unit`, h.`land_area`, h.`land_area_unit`, h.`expiration_date`, h.`lot_size` 'Ã¡rea del lote', h.`house_size` 'Ã¡rea de construcciÃ³n', h.`garages` 'cocheras', h.`date`, h.`edok_link`, h.`owneremail`
+h.`id`, c1.`title` 'Categoría', h.`name` 'Título', h.`description` 'Descripción', c4.`name` 'municipio', c3.`name` 'estado', c2.`name` 'país', h.`price` 'precio', c5.`currency` 'moneda', h.`hzipcode` 'código postal', h.`hlocation` 'ubicación', h.`rooms` 'habitaciones', h.`bathrooms`, h.`bedrooms` 'baños', h.`contacts` 'Contacts', h.`property_type`, h.`year` 'año de construcción', h.`agent` 'Agent', h.`area_unit`, h.`land_area`, h.`land_area_unit`, h.`expiration_date`, h.`lot_size` 'área del lote', h.`house_size` 'área de construcción', h.`garages` 'cocheras', h.`date`, h.`edok_link`, h.`owneremail`
 FROM 
 jos_rem_wisheslist w
 INNER JOIN jos_rem_houses h ON w.id_house = h.id
@@ -98,6 +102,7 @@ LEFT JOIN jos_rem_countries c5 ON h.id_currency = c5.id
 
 WHERE 1
 AND w.state = 1
+AND w.id_user = {$user->id}
 AND h.state = 1
 LIMIT 20;
 EOT;

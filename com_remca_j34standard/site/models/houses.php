@@ -488,6 +488,16 @@ class RemcaModelHouses extends JModelList
 $regex = '/\s+/';
 //$regex = '~\s+~';
 $words = preg_split($regex, $filter_words, -1, PREG_SPLIT_NO_EMPTY);
+
+//search by contact: contacts:(55)8526-4227
+foreach ($words AS $key => $word){
+    if (stripos($word, 'contacts:') === 0){
+        $contact = explode(':', $word);
+        $query->where("a.contacts = '{$contact[1]}'");
+        unset($words[$key]);
+    }
+}
+
 $where = '( ';
 
 #name
@@ -759,6 +769,8 @@ $where .= "\n)";
 		$values[] = array('value' => 'www.vivanuncios.com.mx', 'text' => JText::_('COM_REMCA_HOUSES_SITE_VALUE_VIVANUNCIOS'));
 		$values[] = array('value' => 'www.bienesonline.mx', 'text' => JText::_('COM_REMCA_HOUSES_SITE_VALUE_BIENESONLINE'));
 		$values[] = array('value' => 'www.lamudi.com.mx', 'text' => JText::_('COM_REMCA_HOUSES_SITE_VALUE_LAMUDI'));
+		$values[] = array('value' => 'www.metroscubicos.com', 'text' => JText::_('COM_REMCA_HOUSES_SITE_VALUE_METROSCUBICOS'));
+		$values[] = array('value' => 'friofriocalientecaliente.com', 'text' => JText::_('COM_REMCA_HOUSES_SITE_VALUE_FRIOFRIOCALIENTECALIENTE'));
 		return $values;
 
 	}				
@@ -959,11 +971,11 @@ $where .= "\n)";
 		// Return the result
 		return $db->loadObjectList();
 	}
-        /**
-         * Build a list of distinct values in the precio field
-         * tx custom code, no quiero GROUP BY price
-         * @return	JDatabaseQuery
-         */
+	/**
+	 * Build a list of distinct values in the precio field
+	 * tx custom code, no quiero GROUP BY price
+	 * @return	JDatabaseQuery
+	 */
 	public function getPricevalues()
 	{
             return;
@@ -986,8 +998,8 @@ $where .= "\n)";
 		return $db->loadObjectList();
              */
 
-	}		
-        /**
+	}				
+	/**
 	 * Build a list of distinct values in the baños field
 	 *
 	 * @return	JDatabaseQuery
@@ -1011,7 +1023,7 @@ $where .= "\n)";
 		// Return the result
 		return $db->loadObjectList();
 
-	}
+	}				
 	/**
 	 * Build a list of distinct values in the dormitorios field
 	 *
@@ -1036,15 +1048,29 @@ $where .= "\n)";
 		// Return the result
 		return $db->loadObjectList();
 
-	}
+	}				
 	
         /*
          * Function that allows download database information
          * @ToDo implementar generación de código
          */
         public function getListQuery4Export(){
-            $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));
-            return $this->getDbo()->getQuery();
+//            $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));
+//            return $this->getDbo()->getQuery();
+            
+            $query = $this->getListQuery();
+            $query->clear('select');
+            $query->clear('join');
+            $query->clear('order');
+            
+            $query->select("a.`id`, c1.`title` 'Categoría', a.`name` 'Título', a.`description` 'Descripción', c4.`name` 'municipio', c3.`name` 'estado', c2.`name` 'país', a.`price` 'precio', c5.`currency` 'moneda', a.`hzipcode` 'código postal', a.`hlocation` 'ubicación', a.`rooms` 'habitaciones', a.`bathrooms`, a.`bedrooms` 'baños', a.`contacts` 'Contacts', a.`property_type`, a.`year` 'año de construcción', a.`agent` 'Agent', a.`area_unit`, a.`land_area`, a.`land_area_unit`, a.`expiration_date`, a.`lot_size` 'área del lote', a.`house_size` 'área de construcción', a.`garages` 'cocheras', a.`date`, a.`edok_link`, a.`owneremail`");
+            $query->join('LEFT', '#__categories c1 ON a.catid = c1.id');
+            $query->join('LEFT', '#__rem_countries c2 ON a.id_country = c2.id');
+            $query->join('LEFT', '#__rem_lstates c3 ON a.id_lstate = c3.id');
+            $query->join('LEFT', '#__rem_lmunicipalities c4 ON a.id_lmunicipality = c4.id');
+            $query->join('LEFT', '#__rem_countries c5 ON a.id_currency = c5.id');
+            $query->setLimit('50');
+            return $query;
         }
         
 	/**
