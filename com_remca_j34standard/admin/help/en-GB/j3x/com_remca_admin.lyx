@@ -1208,6 +1208,184 @@ Configuraciones del despliegue de Inmueble en listas/Blog
 \begin_layout Standard
 \end_layout
 
+\begin_layout Subsection
+Configuración de Título De La Conversación Whatsapp
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/administrator_option=com_config&view=component&component=com_architectcomp_compobject_display.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuraciones del despliegue de Título De La Conversación Whatsapp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/administrator_option=com_config&view=component&component=com_architectcomp_compobjectplural_list_display.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuraciones del despliegue de Título De La Conversación Whatsapp en listas/Blog
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Subsection
+Configuración de Entrada De La Conversación Whatsapp
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/administrator_option=com_config&view=component&component=com_architectcomp_compobject_display.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuraciones del despliegue de Entrada De La Conversación Whatsapp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/administrator_option=com_config&view=component&component=com_architectcomp_compobjectplural_list_display.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuraciones del despliegue de Entrada De La Conversación Whatsapp en listas/Blog
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
 \begin_layout Standard
 \end_layout
 
@@ -3158,6 +3336,410 @@ Diagrama entidad relación
 \end_layout
 
 \begin_layout Subsection
+#__rem_wa_title_conversations
+\end_layout
+
+\begin_layout Subparagraph
+Descripción
+\end_layout
+
+\begin_layout Standard
+Es la tabla para almacenar Titulo Conversaciones Wtsapp 
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Subsubsection
+Diccionario de datos tx
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="40text%">
+<row endhead="true" endfirsthead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nombre 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DataType
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "wa_title_conversation_admin.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Lista de campos}
+\backslash
+
+\backslash
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename der_wa_title_conversations.svg
+	lyxscale 30
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama entidad relación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Subsection
+#__rem_wa_entry_conversations
+\end_layout
+
+\begin_layout Subparagraph
+Descripción
+\end_layout
+
+\begin_layout Standard
+Es la tabla para almacenar Entrada Conversaciones Wtsapp 
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Subsubsection
+Diccionario de datos tx
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="40text%">
+<row endhead="true" endfirsthead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nombre 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DataType
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "wa_entry_conversation_admin.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Lista de campos}
+\backslash
+
+\backslash
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename der_wa_entry_conversations.svg
+	lyxscale 30
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama entidad relación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Subsection
 #__rem_photos
 \end_layout
 
@@ -3423,7 +4005,7 @@ Descripción
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "mimetype_admin.tex"
+filename "mime_type_admin.tex"
 
 \end_inset
 
@@ -3625,7 +4207,7 @@ Descripción
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "mlsfordelete_admin.tex"
+filename "mls_for_delete_admin.tex"
 
 \end_inset
 
@@ -4029,7 +4611,7 @@ Descripción
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "ordersdetail_admin.tex"
+filename "orders_detail_admin.tex"
 
 \end_inset
 
@@ -4231,7 +4813,7 @@ Descripción
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "maincategory_admin.tex"
+filename "main_category_admin.tex"
 
 \end_inset
 
@@ -4635,7 +5217,7 @@ Descripción
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "rentrequest_admin.tex"
+filename "rent_request_admin.tex"
 
 \end_inset
 
@@ -4837,7 +5419,7 @@ Descripción
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "rentsal_admin.tex"
+filename "rent_sal_admin.tex"
 
 \end_inset
 
@@ -5241,7 +5823,7 @@ Descripción
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "tracksource_admin.tex"
+filename "track_source_admin.tex"
 
 \end_inset
 
@@ -5645,7 +6227,7 @@ Descripción
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "videosource_admin.tex"
+filename "video_source_admin.tex"
 
 \end_inset
 
@@ -5847,7 +6429,7 @@ Descripción
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "buyingrequest_admin.tex"
+filename "buying_request_admin.tex"
 
 \end_inset
 
@@ -6453,7 +7035,7 @@ Descripción
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "constlanguage_admin.tex"
+filename "const_language_admin.tex"
 
 \end_inset
 
@@ -6857,7 +7439,7 @@ Descripción
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "featurehouse_admin.tex"
+filename "feature_house_admin.tex"
 
 \end_inset
 
@@ -8284,6 +8866,818 @@ Create Inmueble
 \end_layout
 
 \begin_layout Subsubsection
+Título de la conversación whatsapp
+\end_layout
+
+\begin_layout Subparagraph
+Descripción
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="60text%">
+<row endhead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Nombre
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "wa_title_conversation_user.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Lista de campos en Título de la conversación whatsapp}
+\backslash
+
+\backslash
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "Titulo Conversaciones Wtsapp  - Grid Panel Layout"
+target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=gridpanel"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_wa_title_conversations.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Grid Panel Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "Titulo Conversaciones Wtsapp  - Default List Layout"
+target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectplural.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Default List Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "Titulo Conversaciones Wtsapp  - Blog Layout"
+target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=blog"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectplural&layout=blog.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Blog Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "Titulo Conversaciones Wtsapp  - Single Título De La Conversación Whatsapp Layout"
+target "SERVER?option=com_remca&view=wa_title_conversation&id=1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobject&id=1.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Single Título De La Conversación Whatsapp Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "Titulo Conversaciones Wtsapp  - Single Título De La Conversación Whatsapp Article Layout"
+target "SERVER?option=com_remca&view=wa_title_conversation&layout=article&id=1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobject&layout=article&id=1.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Single Título De La Conversación Whatsapp Article Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "Titulo Conversaciones Wtsapp  - Create Título De La Conversación Whatsapp"
+target "SERVER?option=com_remca&view=wa_title_conversationform&layout=edit&id=1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectform&layout=edit&id=1.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Create Título De La Conversación Whatsapp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Subsubsection
+Entrada de la conversación whatsapp
+\end_layout
+
+\begin_layout Subparagraph
+Descripción
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="60text%">
+<row endhead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Nombre
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "wa_entry_conversation_user.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Lista de campos en Entrada de la conversación whatsapp}
+\backslash
+
+\backslash
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "Entrada Conversaciones Wtsapp  - Grid Panel Layout"
+target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=gridpanel"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_wa_entry_conversations.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Grid Panel Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "Entrada Conversaciones Wtsapp  - Default List Layout"
+target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectplural.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Default List Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "Entrada Conversaciones Wtsapp  - Blog Layout"
+target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=blog"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectplural&layout=blog.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Blog Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "Entrada Conversaciones Wtsapp  - Single Entrada De La Conversación Whatsapp Layout"
+target "SERVER?option=com_remca&view=wa_entry_conversation&id=1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobject&id=1.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Single Entrada De La Conversación Whatsapp Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "Entrada Conversaciones Wtsapp  - Single Entrada De La Conversación Whatsapp Article Layout"
+target "SERVER?option=com_remca&view=wa_entry_conversation&layout=article&id=1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobject&layout=article&id=1.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Single Entrada De La Conversación Whatsapp Article Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset href
+LatexCommand href
+name "Entrada Conversaciones Wtsapp  - Create Entrada De La Conversación Whatsapp"
+target "SERVER?option=com_remca&view=wa_entry_conversationform&layout=edit&id=1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/lyx/option=com_architectcomp&view=compobjectform&layout=edit&id=1.jpg
+	lyxscale 30
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Create Entrada De La Conversación Whatsapp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Standard
+\end_layout
+
+\begin_layout Subsubsection
 Photo
 \end_layout
 
@@ -8738,7 +10132,7 @@ Descripción
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
-filename "mimetype_user.tex"
+filename "mime_type_user.tex"
 
 \end_inset
 
@@ -8952,7 +10346,7 @@ Blog Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Mime_types - Single Mime_type Layout"
-target "SERVER?option=com_remca&view=mimetype&id=1"
+target "SERVER?option=com_remca&view=mime_type&id=1"
 
 \end_inset
 
@@ -8998,7 +10392,7 @@ Single Mime_type Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Mime_types - Single Mime_type Article Layout"
-target "SERVER?option=com_remca&view=mimetype&layout=article&id=1"
+target "SERVER?option=com_remca&view=mime_type&layout=article&id=1"
 
 \end_inset
 
@@ -9044,7 +10438,7 @@ Single Mime_type Article Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Mime_types - Create Mime_type"
-target "SERVER?option=com_remca&view=mimetypeform&layout=edit&id=1"
+target "SERVER?option=com_remca&view=mime_typeform&layout=edit&id=1"
 
 \end_inset
 
@@ -9144,7 +10538,7 @@ Descripción
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
-filename "mlsfordelete_user.tex"
+filename "mls_for_delete_user.tex"
 
 \end_inset
 
@@ -9358,7 +10752,7 @@ Blog Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Mls_for_delete - Single Mls_for_delete Layout"
-target "SERVER?option=com_remca&view=mlsfordelete&id=1"
+target "SERVER?option=com_remca&view=mls_for_delete&id=1"
 
 \end_inset
 
@@ -9404,7 +10798,7 @@ Single Mls_for_delete Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Mls_for_delete - Single Mls_for_delete Article Layout"
-target "SERVER?option=com_remca&view=mlsfordelete&layout=article&id=1"
+target "SERVER?option=com_remca&view=mls_for_delete&layout=article&id=1"
 
 \end_inset
 
@@ -9450,7 +10844,7 @@ Single Mls_for_delete Article Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Mls_for_delete - Create Mls_for_delete"
-target "SERVER?option=com_remca&view=mlsfordeleteform&layout=edit&id=1"
+target "SERVER?option=com_remca&view=mls_for_deleteform&layout=edit&id=1"
 
 \end_inset
 
@@ -9956,7 +11350,7 @@ Descripción
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
-filename "ordersdetail_user.tex"
+filename "orders_detail_user.tex"
 
 \end_inset
 
@@ -10170,7 +11564,7 @@ Blog Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Orders_details - Single Orders_detail Layout"
-target "SERVER?option=com_remca&view=ordersdetail&id=1"
+target "SERVER?option=com_remca&view=orders_detail&id=1"
 
 \end_inset
 
@@ -10216,7 +11610,7 @@ Single Orders_detail Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Orders_details - Single Orders_detail Article Layout"
-target "SERVER?option=com_remca&view=ordersdetail&layout=article&id=1"
+target "SERVER?option=com_remca&view=orders_detail&layout=article&id=1"
 
 \end_inset
 
@@ -10262,7 +11656,7 @@ Single Orders_detail Article Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Orders_details - Create Orders_detail"
-target "SERVER?option=com_remca&view=ordersdetailform&layout=edit&id=1"
+target "SERVER?option=com_remca&view=orders_detailform&layout=edit&id=1"
 
 \end_inset
 
@@ -10362,7 +11756,7 @@ Descripción
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
-filename "maincategory_user.tex"
+filename "main_category_user.tex"
 
 \end_inset
 
@@ -10576,7 +11970,7 @@ Blog Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Main_categories - Single Main_category Layout"
-target "SERVER?option=com_remca&view=maincategory&id=1"
+target "SERVER?option=com_remca&view=main_category&id=1"
 
 \end_inset
 
@@ -10622,7 +12016,7 @@ Single Main_category Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Main_categories - Single Main_category Article Layout"
-target "SERVER?option=com_remca&view=maincategory&layout=article&id=1"
+target "SERVER?option=com_remca&view=main_category&layout=article&id=1"
 
 \end_inset
 
@@ -10668,7 +12062,7 @@ Single Main_category Article Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Main_categories - Create Main_category"
-target "SERVER?option=com_remca&view=maincategoryform&layout=edit&id=1"
+target "SERVER?option=com_remca&view=main_categoryform&layout=edit&id=1"
 
 \end_inset
 
@@ -11174,7 +12568,7 @@ Descripción
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
-filename "rentrequest_user.tex"
+filename "rent_request_user.tex"
 
 \end_inset
 
@@ -11388,7 +12782,7 @@ Blog Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Rent Requests - Single Rent Request Layout"
-target "SERVER?option=com_remca&view=rentrequest&id=1"
+target "SERVER?option=com_remca&view=rent_request&id=1"
 
 \end_inset
 
@@ -11434,7 +12828,7 @@ Single Rent Request Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Rent Requests - Single Rent Request Article Layout"
-target "SERVER?option=com_remca&view=rentrequest&layout=article&id=1"
+target "SERVER?option=com_remca&view=rent_request&layout=article&id=1"
 
 \end_inset
 
@@ -11480,7 +12874,7 @@ Single Rent Request Article Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Rent Requests - Create Rent Request"
-target "SERVER?option=com_remca&view=rentrequestform&layout=edit&id=1"
+target "SERVER?option=com_remca&view=rent_requestform&layout=edit&id=1"
 
 \end_inset
 
@@ -11580,7 +12974,7 @@ Descripción
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
-filename "rentsal_user.tex"
+filename "rent_sal_user.tex"
 
 \end_inset
 
@@ -11794,7 +13188,7 @@ Blog Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Rent_sal - Single Rent_sal Layout"
-target "SERVER?option=com_remca&view=rentsal&id=1"
+target "SERVER?option=com_remca&view=rent_sal&id=1"
 
 \end_inset
 
@@ -11840,7 +13234,7 @@ Single Rent_sal Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Rent_sal - Single Rent_sal Article Layout"
-target "SERVER?option=com_remca&view=rentsal&layout=article&id=1"
+target "SERVER?option=com_remca&view=rent_sal&layout=article&id=1"
 
 \end_inset
 
@@ -11886,7 +13280,7 @@ Single Rent_sal Article Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Rent_sal - Create Rent_sal"
-target "SERVER?option=com_remca&view=rentsalform&layout=edit&id=1"
+target "SERVER?option=com_remca&view=rent_salform&layout=edit&id=1"
 
 \end_inset
 
@@ -12392,7 +13786,7 @@ Descripción
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
-filename "tracksource_user.tex"
+filename "track_source_user.tex"
 
 \end_inset
 
@@ -12606,7 +14000,7 @@ Blog Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Track_source - Single Track_source Layout"
-target "SERVER?option=com_remca&view=tracksource&id=1"
+target "SERVER?option=com_remca&view=track_source&id=1"
 
 \end_inset
 
@@ -12652,7 +14046,7 @@ Single Track_source Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Track_source - Single Track_source Article Layout"
-target "SERVER?option=com_remca&view=tracksource&layout=article&id=1"
+target "SERVER?option=com_remca&view=track_source&layout=article&id=1"
 
 \end_inset
 
@@ -12698,7 +14092,7 @@ Single Track_source Article Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Track_source - Create Track_source"
-target "SERVER?option=com_remca&view=tracksourceform&layout=edit&id=1"
+target "SERVER?option=com_remca&view=track_sourceform&layout=edit&id=1"
 
 \end_inset
 
@@ -13204,7 +14598,7 @@ Descripción
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
-filename "videosource_user.tex"
+filename "video_source_user.tex"
 
 \end_inset
 
@@ -13418,7 +14812,7 @@ Blog Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Video_source - Single Video_source Layout"
-target "SERVER?option=com_remca&view=videosource&id=1"
+target "SERVER?option=com_remca&view=video_source&id=1"
 
 \end_inset
 
@@ -13464,7 +14858,7 @@ Single Video_source Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Video_source - Single Video_source Article Layout"
-target "SERVER?option=com_remca&view=videosource&layout=article&id=1"
+target "SERVER?option=com_remca&view=video_source&layout=article&id=1"
 
 \end_inset
 
@@ -13510,7 +14904,7 @@ Single Video_source Article Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Video_source - Create Video_source"
-target "SERVER?option=com_remca&view=videosourceform&layout=edit&id=1"
+target "SERVER?option=com_remca&view=video_sourceform&layout=edit&id=1"
 
 \end_inset
 
@@ -13610,7 +15004,7 @@ Descripción
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
-filename "buyingrequest_user.tex"
+filename "buying_request_user.tex"
 
 \end_inset
 
@@ -13824,7 +15218,7 @@ Blog Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Buying Requests - Single Buying Requests Layout"
-target "SERVER?option=com_remca&view=buyingrequest&id=1"
+target "SERVER?option=com_remca&view=buying_request&id=1"
 
 \end_inset
 
@@ -13870,7 +15264,7 @@ Single Buying Requests Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Buying Requests - Single Buying Requests Article Layout"
-target "SERVER?option=com_remca&view=buyingrequest&layout=article&id=1"
+target "SERVER?option=com_remca&view=buying_request&layout=article&id=1"
 
 \end_inset
 
@@ -13916,7 +15310,7 @@ Single Buying Requests Article Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Buying Requests - Create Buying Requests"
-target "SERVER?option=com_remca&view=buyingrequestform&layout=edit&id=1"
+target "SERVER?option=com_remca&view=buying_requestform&layout=edit&id=1"
 
 \end_inset
 
@@ -14828,7 +16222,7 @@ Descripción
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
-filename "constlanguage_user.tex"
+filename "const_language_user.tex"
 
 \end_inset
 
@@ -15042,7 +16436,7 @@ Blog Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Const_language - Single Const_language Layout"
-target "SERVER?option=com_remca&view=constlanguage&id=1"
+target "SERVER?option=com_remca&view=const_language&id=1"
 
 \end_inset
 
@@ -15088,7 +16482,7 @@ Single Const_language Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Const_language - Single Const_language Article Layout"
-target "SERVER?option=com_remca&view=constlanguage&layout=article&id=1"
+target "SERVER?option=com_remca&view=const_language&layout=article&id=1"
 
 \end_inset
 
@@ -15134,7 +16528,7 @@ Single Const_language Article Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Const_language - Create Const_language"
-target "SERVER?option=com_remca&view=constlanguageform&layout=edit&id=1"
+target "SERVER?option=com_remca&view=const_languageform&layout=edit&id=1"
 
 \end_inset
 
@@ -15640,7 +17034,7 @@ Descripción
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
-filename "featurehouse_user.tex"
+filename "feature_house_user.tex"
 
 \end_inset
 
@@ -15854,7 +17248,7 @@ Blog Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Feature_houses - Single Feature_house Layout"
-target "SERVER?option=com_remca&view=featurehouse&id=1"
+target "SERVER?option=com_remca&view=feature_house&id=1"
 
 \end_inset
 
@@ -15900,7 +17294,7 @@ Single Feature_house Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Feature_houses - Single Feature_house Article Layout"
-target "SERVER?option=com_remca&view=featurehouse&layout=article&id=1"
+target "SERVER?option=com_remca&view=feature_house&layout=article&id=1"
 
 \end_inset
 
@@ -15946,7 +17340,7 @@ Single Feature_house Article Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Feature_houses - Create Feature_house"
-target "SERVER?option=com_remca&view=featurehouseform&layout=edit&id=1"
+target "SERVER?option=com_remca&view=feature_houseform&layout=edit&id=1"
 
 \end_inset
 

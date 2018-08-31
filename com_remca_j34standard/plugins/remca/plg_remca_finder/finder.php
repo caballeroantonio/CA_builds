@@ -108,6 +108,79 @@ class PlgRemcaFinder extends JPlugin
 		$dispatcher->trigger('onFinderChangeState', array($context, $pks, $value));
 	}
 	/**
+	 * Smart Search after save entrada de la conversación whatsapp method
+	 * Entrada De La Conversación Whatsapp is passed by reference, but after the save, so no changes will be saved.
+	 * Method is called right after the entrada de la conversación whatsapp is saved
+	 *
+	 * @param	string		$context	The context of the item passed to the plugin
+	 * @param	object		$wa_entry_conversation	A JTableWa_entry_conversation object
+	 * @param	boolean		$is_new		If the entrada de la conversación whatsapp has just been created
+	 */
+	public function onWa_entry_conversationAfterSave($context, $wa_entry_conversation, $is_new)
+	{
+		$dispatcher	= JEventDispatcher::getInstance();
+		JPluginHelper::importPlugin('finder.wa_entry_conversations');
+
+		// Trigger the onFinderAfterSave event.
+		$dispatcher->trigger('onFinderAfterSave', array($context, $wa_entry_conversation, $is_new));
+
+	}
+	/**
+	 * Smart Search before save entrada de la conversación whatsapp method
+	 * Entrada De La Conversación Whatsapp is passed by reference, but after the save, so no changes will be saved.
+	 * Method is called right after the content is saved
+	 *
+	 * @param	string		$context	The context of the item passed to the plugin
+	 * @param	object		$wa_entry_conversation	A JTableWa_entry_conversation object
+	 * @param	boolean		$is_new		If the entrada de la conversación whatsapp has just been created
+	 */
+	public function onWa_entry_conversationBeforeSave($context, $wa_entry_conversation, $is_new)
+	{
+		$dispatcher	= JEventDispatcher::getInstance();
+		JPluginHelper::importPlugin('finder.wa_entry_conversations');
+
+		// Trigger the onFinderBeforeSave event.
+		$dispatcher->trigger('onFinderBeforeSave', array($context, $wa_entry_conversation, $is_new));
+
+	}
+	/**
+	 * Smart Search after delete entrada de la conversación whatsapp method
+	 * entrada de la conversación whatsapp is passed by reference, but after the save, so no changes will be saved.
+	 * Method is called right after the entrada de la conversación whatsapp is saved
+	 *
+	 * @param	string		$context	The context of the item passed to the plugin
+	 * @param	object		$wa_entry_conversation	A JTableWa_entry_conversation object
+	 * 
+	 */
+	public function onWa_entry_conversationAfterDelete($context, $wa_entry_conversation)
+	{
+		$dispatcher	= JEventDispatcher::getInstance();
+		JPluginHelper::importPlugin('finder.wa_entry_conversations');
+
+		// Trigger the onFinderAfterDelete event.
+		$dispatcher->trigger('onFinderAfterDelete', array($context, $wa_entry_conversation));
+
+	}
+	/**
+	 * Smart Search change state entrada de la conversación whatsapp method
+	 * Method to update the link information for items that have been changed
+	 * from outside the edit screen. This is fired when the item's state,
+	 * is changed from the list view.
+	 *
+	 * @param   string   $context  The context for the item passed to the plugin.
+	 * @param   array    $pks      A list of primary key ids of the records that have changed state.
+	 * @param   integer  $value    The value of the state that the records have been changed to.
+	 * 
+	 */
+	public function onWa_entry_conversationChangeState($context, $pks, $value)
+	{
+		$dispatcher	= JEventDispatcher::getInstance();
+		JPluginHelper::importPlugin('finder.wa_entry_conversations');
+
+		// Trigger the onFinderChangeState event.
+		$dispatcher->trigger('onFinderChangeState', array($context, $pks, $value));
+	}
+	/**
 	 * Smart Search change category state method
 	 *
 	 * @param   string   $extension  The extension whose category has been updated.

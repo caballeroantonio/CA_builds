@@ -37,6 +37,7 @@ class RemcaCategories extends JCategories
 	{
 
 		$options['table'] = '#__rem_houses';	
+		$options['table'] = '#__rem_wa_entry_conversations';	
 		$options['extension'] = 'com_remca';
 		$options['statefield'] = 'state';
 		parent::__construct($options);

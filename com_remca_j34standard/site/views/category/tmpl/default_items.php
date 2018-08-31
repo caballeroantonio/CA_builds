@@ -308,3 +308,178 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php echo JHtml::_('houseicon.create', $params); ?>
 	<?php  endif; ?>
 <?php  endif; ?>
+// Create some shortcuts.
+$params		= &$this->params;
+$user		= JFactory::getUser();
+
+$n			= count($this->wa_entry_conversations);
+$list_order	= $this->state->get('list.ordering');
+$list_dirn	= $this->state->get('list.direction');
+$layout		= str_replace('_:','',$params->get('wa_entry_conversation_layout'));
+$can_create	= $user->authorise('core.create', 'com_remca');
+// Get from global settings the text to use for an empty field
+$component = JComponentHelper::getComponent( 'com_remca' );
+$empty = $component->params->get('default_empty_field', '');	
+
+/*
+ *	Layout HTML
+ */
+?>
+
+<?php if (empty($this->wa_entry_conversations)) : ?>
+
+	<?php if ($this->params->get('show_no_wa_entry_conversations',1)) : ?>
+	<p><?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_CATEGORY_NO_ITEMS'); ?></p>
+	<?php endif; ?>
+
+<?php else : ?>
+<div class="wa_entry_conversations-list">
+	<form action="<?php echo htmlspecialchars(JUri::getInstance()->toString()); ?>" method="post" name="adminForm" id="adminForm">
+		<?php if (($this->params->get('show_wa_entry_conversation_filter_field') != '' AND $this->params->get('show_wa_entry_conversation_filter_field') != 'hide') OR $this->params->get('show_wa_entry_conversation_pagination_limit')) :?>
+			<div class="filter-search">
+				<?php if ($this->params->get('show_wa_entry_conversation_filter_field') != '' AND $this->params->get('show_wa_entry_conversation_filter_field') != 'hide') :?>
+                <div class="input-append">
+					<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_REMCA_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_REMCA_'.$this->params->get('show_wa_entry_conversation_filter_field').'_FILTER_LABEL'); ?>" />
+                    <button type="submit" class="btn hasTooltip" title="" data-original-title="<?= JText::_('JSEARCH_FILTER_SUBMIT') ?>"> <i class="icon-search"></i> </button>
+				</div>
+                <!--<button type="button" class="btn hasTooltip js-stools-btn-clear" title="" data-original-title="<?= JText::_('JSEARCH_FILTER_CLEAR') ?>"><?= JText::_('JSEARCH_FILTER_CLEAR') ?></button>-->
+				<?php endif; ?>						
+				<?php if ($this->params->get('show_wa_entry_conversation_pagination_limit')) : ?>
+					<div class="display-limit">
+						<?php echo $this->pagination->getLimitBox(); ?>
+					</div>
+				<?php endif; ?>
+			</div>						
+		<?php endif; ?>
+
+
+		<table class="wa_entry_conversations">
+			<?php if ($this->params->get('show_wa_entry_conversation_headings')) :?>
+				<thead>
+					<tr>
+						<?php if ($date = $this->params->get('list_show_wa_entry_conversation_date')) : ?>
+							<th class="list-date" id="tableOrderingdate">
+								<?php echo JHtml::_('grid.sort', 'COM_REMCA_FIELD_'.JString::strtoupper($date).'_LABEL', 'a.'.$date, $list_dirn, $list_order); ?>
+							</th>
+						<?php endif; ?>
+
+						<?php if ($this->params->get('list_show_wa_entry_conversation_created_by',0)) : ?>
+							<th class="list-creator" id="tableOrderingcreated_by">
+								<?php echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
+							</th>
+						<?php endif; ?>
+						<?php $show_actions = false;
+							foreach ($this->wa_entry_conversations as $item) : ?>
+							<?php if ($item->params->get('access-edit') 
+									OR $item->params->get('access-delete')) : ?>
+									<?php $show_actions = true;
+										  continue; ?>
+							<?php endif;?>
+							
+						<?php endforeach; ?>
+						<?php if ($show_actions) : ?>
+							<th width="12%" class="list-actions">
+								<?php echo JText::_('COM_REMCA_HEADING_ACTIONS'); ?>						
+							</th> 				
+						<?php endif; ?>
+					</tr>
+				</thead>
+			<?php endif; ?>
+
+			<tbody>
+
+			<?php foreach ($this->wa_entry_conversations as $i => $item) : ?>
+				<?php
+					$can_edit	= $item->params->get('access-edit');
+					$can_delete	= $item->params->get('access-delete');
+				?>
+
+				<?php if ($item->state == 0) : ?>
+					<tr class="system-unpublished cat-list-row<?php echo $i % 2; ?>">
+				<?php else: ?>
+					<tr class="cat-list-row<?php echo $i % 2; ?>" >
+				<?php endif; ?>
+
+						<?php if ($this->params->get('list_show_wa_entry_conversation_date')) : ?>
+						<td class="list-date">
+							<?php echo JHtml::_('date',$item->display_date, $this->escape(
+							$this->params->get('wa_entry_conversation_date_format', JText::_('DATE_FORMAT_LC3')))); ?>
+						</td>
+						<?php endif; ?>
+
+						<?php if ($this->params->get('list_show_wa_entry_conversation_created_by',0)) : ?>
+						<td class="createdby">
+							<?php $creator =  $item->created_by ?>
+							<?php $creator = ($item->created_by_name ? $item->created_by_name : $creator);?>
+							<?php $creator = ($item->created_by_alias ? $item->created_by_alias : $creator);?>
+
+							<?php if (!empty($item->created_by ) AND  $this->params->get('link_wa_entry_conversation_created_by') == 1):?>
+								<?php $creator = JHtml::_(
+										'link',
+										JRoute::_('index.php?option=com_users&view=profile&id='.$item->created_by),
+										$creator
+								); ?>
+
+							<?php endif;?>
+							<?php if ($this->params->get('show_wa_entry_conversation_headings')) :?>
+								<?php echo $creator; ?>
+							<?php else : ?>									
+								<?php echo JText::sprintf('COM_REMCA_CREATED_BY', $creator); ?>
+							<?php endif; ?>
+						</td>
+						<?php endif; ?>
+
+					<?php if ($show_actions) : ?>
+						<td class="list-actions">
+							<?php if ($can_edit OR $can_delete) : ?>
+								<ul class="actions">
+									<?php if ($can_edit ) : ?>
+										<li class="edit-icon">
+											<?php echo JHtml::_('wa_entry_conversationicon.edit',$item, $params); ?>
+										</li>
+									<?php endif; ?>					
+									<?php if ($can_delete) : ?>
+										<li class="delete-icon">
+											<?php echo JHtml::_('wa_entry_conversationicon.delete',$item, $params); ?>
+										</li>
+									<?php endif; ?>					
+								</ul>
+							<?php endif; ?>
+						</td>	
+					<?php endif; ?>
+				</tr>
+			<?php endforeach; ?>
+			</tbody>
+		</table>
+
+		<?php if (($this->params->def('show_wa_entry_conversation_pagination', 2) == 1  OR 
+				   ($this->params->get('show_wa_entry_conversation_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
+			<div class="pagination">
+
+				<?php if ($this->params->def('show_wa_entry_conversation_pagination_results', 0)) : ?>
+					<p class="counter">
+						<?php echo $this->pagination->getPagesCounter(); ?>
+					</p>
+				<?php endif; ?>
+
+				<?php echo $this->pagination->getPagesLinks(); ?>
+			</div>
+		<?php endif; ?>
+
+		<div>
+			<!-- @TODO add hidden inputs -->
+			<input type="hidden" name="task" value="" />
+			<input type="hidden" name="filter_order" value="" />
+			<input type="hidden" name="filter_order_Dir" value="" />
+			<input type="hidden" name="limitstart" value="" />
+			<?php echo JHtml::_('form.token'); ?>		
+		</div>
+	</form>
+</div>
+<?php endif; ?>
+<?php // Code to add a link to submit an wa_entry_conversation. ?>
+<?php if ($this->params->get('show_wa_entry_conversation_add_link',1)) : ?>
+	<?php if ($this->category->getParams()->get('access-create')) : ?>
+		<?php echo JHtml::_('wa_entry_conversationicon.create', $params); ?>
+	<?php  endif; ?>
+<?php  endif; ?>

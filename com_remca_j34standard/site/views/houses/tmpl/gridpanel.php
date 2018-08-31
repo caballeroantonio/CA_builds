@@ -238,7 +238,7 @@ COM_REMCA_HOUSES_SITE_VALUE_FRIOFRIOCALIENTECALIENTE="friofriocalientecaliente"
                 FIELD_INTRO=
                 FIELD_DESCRIPTION_INI=
 
-                FIELD_DB=`` VARCHAR(250) NOT NULL DEFAULT '' link
+                FIELD_DB=`` VARCHAR(255) NOT NULL DEFAULT '' link
 
                 FIELD_NAME_LATEX=link
                 FIELD_CODE_NAME_LATEX=link

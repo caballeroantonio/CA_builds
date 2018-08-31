@@ -27,7 +27,7 @@
 <extension type="plugin" version="3.4" group="remca" method="upgrade">
     <name>plg_remca_itemnavigation</name>
     <author>caballeroantonio</author>
-    <creationDate>August 2018</creationDate>
+    <creationDate>September 2018</creationDate>
     <copyright>
     </copyright>
     <license>
@@ -92,6 +92,38 @@
     			>
                     <option value="0">PLG_REMCA_ITEMNAVIGATION_FIELD_VALUE_NEXTPREV</option>
                     <option value="1">PLG_REMCA_HOUSES_ITEMNAVIGATION_FIELD_VALUE_NAME</option>
+                </field>
+			    <field
+			        name="wa_entry_conversation_position"
+			        type="radio"
+				    label="PLG_REMCA_WA_ENTRY_CONVERSATIONS_ITEMNAVIGATION_FIELD_POSITION_LABEL"
+				    description="PLG_REMCA_WA_ENTRY_CONVERSATIONS_ITEMNAVIGATION_FIELD_POSITION_DESC"
+                    class="btn-group"
+				    default="1"
+			    >
+			        <option value="1">PLG_REMCA_ITEMNAVIGATION_FIELD_VALUE_BELOW</option>
+			        <option value="0">PLG_REMCA_ITEMNAVIGATION_FIELD_VALUE_ABOVE</option>
+			    </field>
+			    <field name="wa_entry_conversation_relative"
+			        type="radio"
+			        description="PLG_REMCA_WA_ENTRY_CONVERSATIONS_ITEMNAVIGATION_FIELD_RELATIVE_DESC"
+			        label="PLG_REMCA_WA_ENTRY_CONVERSATIONS_ITEMNAVIGATION_FIELD_RELATIVE_LABEL"
+                    class="btn-group"    
+			        default="1"
+			    >
+			        <option value="1">PLG_REMCA_WA_ENTRY_CONVERSATIONS_ITEMNAVIGATION_FIELD_VALUE_WA_ENTRY_CONVERSATION</option>
+			        <option value="0">PLG_REMCA_ITEMNAVIGATION_FIELD_VALUE_TEXT</option>
+			    </field>
+			    <field
+			        name="keep_wa_entry_conversation_itemid"
+			        type="radio"
+			        label="PLG_REMCA_KEEP_ITEMID_LABEL"
+			        description="PLG_REMCA_WA_ENTRY_CONVERSATIONS_KEEP_ITEMID_DESC"
+                    class="btn-group"    
+			        default="1"
+			    >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
                 </field>
             </fieldset>
 		</fields>

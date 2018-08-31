@@ -27,7 +27,7 @@
 <extension type="plugin" version="3.4" group="remca" method="upgrade">
     <name>plg_remca_emailcloak</name>
     <author>caballeroantonio</author>
-    <creationDate>August 2018</creationDate>
+    <creationDate>September 2018</creationDate>
     <copyright>
     </copyright>
     <license>
@@ -53,6 +53,22 @@
             >
                 <field 
                     name="house_mode" 
+                    type="list"
+					label="PLG_REMCA_EMAILCLOAK_MODE_LABEL"
+					description="PLG_REMCA_EMAILCLOAK_MODE_DESC"
+					default="1"
+				>
+                    <option value="0">PLG_REMCA_EMAILCLOAK_NONLINKABLE</option>
+                    <option value="1">PLG_REMCA_EMAILCLOAK_LINKABLE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="wa_entry_conversation_settings"
+				label="PLG_REMCA_WA_ENTRY_CONVERSATIONS_EMAILCLOAK_FIELDSET_LABEL"
+                description="PLG_REMCA_WA_ENTRY_CONVERSATIONS_EMAILCLOAK_FIELDSET_DESC"
+            >
+                <field 
+                    name="wa_entry_conversation_mode" 
                     type="list"
 					label="PLG_REMCA_EMAILCLOAK_MODE_LABEL"
 					description="PLG_REMCA_EMAILCLOAK_MODE_DESC"

@@ -27,7 +27,7 @@
 <extension type="module" version="3.4" client="site" method="upgrade">
     <name>mod_remca</name>
     <author>caballeroantonio</author>
-    <creationDate>August 2018</creationDate>
+    <creationDate>September 2018</creationDate>
     <copyright>
     </copyright>
     <license>
@@ -62,6 +62,7 @@
                     required="true"
 		        >
                     <option value="House:Houses">Inmueble</option>
+                    <option value="Wa_entry_conversation:Wa_entry_conversations">Entrada De La Conversación Whatsapp</option>
                 </field>
                 <field
 					name="user_id"
@@ -88,6 +89,8 @@
                     <option value="houses n_asc">MOD_REMCA_HOUSES_VALUE_NAME_ALPHA</option>
                     <option value="houses n_dsc">MOD_REMCA_HOUSES_VALUE_NAME_RALPHA</option>
                     <option value="houses o_asc">MOD_REMCA_HOUSES_VALUE_ORDERING</option>
+                    <option value="wa_entry_conversations c_dsc">MOD_REMCA_WA_ENTRY_CONVERSATIONS_VALUE_RECENT_ADDED</option>
+                    <option value="wa_entry_conversations o_asc">MOD_REMCA_WA_ENTRY_CONVERSATIONS_VALUE_ORDERING</option>
                 </field>
                 <field
 					name="count"

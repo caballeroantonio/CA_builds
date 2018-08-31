@@ -77,7 +77,7 @@
         <field
             id="idcat"
             name="idcat"
-            type="modal_maincategories"
+            type="modal_main_categories"
             label="COM_REMCA_CATEGORIES_FIELD_IDCAT_LABEL"
             description="COM_REMCA_CATEGORIES_FIELD_IDCAT_DESC"
             class="modal"

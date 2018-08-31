@@ -78,7 +78,7 @@ class RemcaControllerWisheslist extends JControllerLegacy
                 return;
             /*
             else
-            return false;
+			return false;
             $model = $this->getModel = $this->getModel('Wisheslist','RemcaModel',array('ignore_request' => FALSE));
 			
 			//states

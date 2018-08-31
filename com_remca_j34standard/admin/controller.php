@@ -69,6 +69,30 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
+			case 'wa_title_conversation': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.wa_title_conversation', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=wa_title_conversations', false));
+
+					return false;
+				}
+				break;				
+			case 'wa_entry_conversation': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.wa_entry_conversation', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_remca&view=wa_entry_conversations', false));
+
+					return false;
+				}
+				break;				
 			case 'photo': 
 				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.photo', $id))
 				{
@@ -81,8 +105,8 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'mimetype': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.mimetype', $id))
+			case 'mime_type': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.mime_type', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
@@ -93,8 +117,8 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'mlsfordelete': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.mlsfordelete', $id))
+			case 'mls_for_delete': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.mls_for_delete', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
@@ -117,8 +141,8 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'ordersdetail': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.ordersdetail', $id))
+			case 'orders_detail': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.orders_detail', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
@@ -129,8 +153,8 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'maincategory': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.maincategory', $id))
+			case 'main_category': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.main_category', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
@@ -153,8 +177,8 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'rentrequest': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.rentrequest', $id))
+			case 'rent_request': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.rent_request', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
@@ -165,8 +189,8 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'rentsal': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.rentsal', $id))
+			case 'rent_sal': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.rent_sal', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
@@ -189,8 +213,8 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'tracksource': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.tracksource', $id))
+			case 'track_source': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.track_source', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
@@ -213,8 +237,8 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'videosource': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.videosource', $id))
+			case 'video_source': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.video_source', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
@@ -225,8 +249,8 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'buyingrequest': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.buyingrequest', $id))
+			case 'buying_request': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.buying_request', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
@@ -261,8 +285,8 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'constlanguage': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.constlanguage', $id))
+			case 'const_language': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.const_language', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
@@ -285,8 +309,8 @@ class RemcaController extends JControllerLegacy
 					return false;
 				}
 				break;				
-			case 'featurehouse': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.featurehouse', $id))
+			case 'feature_house': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_remca.edit.feature_house', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.

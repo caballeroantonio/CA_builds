@@ -70,17 +70,17 @@ abstract class RemcaHelperAssociation extends CategoryHelperAssociation
 				return $return;
 			}
 		}
-		if ($view == 'maincategory')
+		if ($view == 'main_category')
 		{
 			if ($id)
 			{
-				$associations = JLanguageAssociations::getAssociations('com_remca', '#__rem_main_categories', 'com_remca.maincategory.item', $id);
+				$associations = JLanguageAssociations::getAssociations('com_remca', '#__rem_main_categories', 'com_remca.main_category.item', $id);
 
 				$return = array();
 
 				foreach ($associations as $tag => $item)
 				{
-					$return[$tag] = RemcaHelperRoute::getMainCategoryRoute($item->id, $item->language);
+					$return[$tag] = RemcaHelperRoute::getMain_categoryRoute($item->id, $item->language);
 				}
 
 				return $return;

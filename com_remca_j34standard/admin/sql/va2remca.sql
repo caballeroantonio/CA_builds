@@ -1,68 +1,15 @@
-# Proceso para migrar datos de scraping vivanuncios a remca.houses
-CREATE TABLE `scrpng_vivanuncios2` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `link` varchar(255) DEFAULT NULL,
-  `html` longtext,
-  `ad_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `hlatitude` varchar(20) NOT NULL DEFAULT '0',
-  `hlongitude` varchar(20) NOT NULL DEFAULT '0',
-  `name` varchar(255) NOT NULL DEFAULT '',
-  `description` mediumtext NOT NULL,
-  `price` decimal(11,2) unsigned NOT NULL DEFAULT '0.00',
-  `currency` varchar(45) NOT NULL DEFAULT '',
-  `sellerlink` varchar(255) NOT NULL DEFAULT '',
-  `sellerpicture` varchar(255) NOT NULL DEFAULT '',
-  `is_pending` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `is_active` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `is_deleted` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `is_blocked` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `is_error` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `adphone` varchar(45) NOT NULL DEFAULT '',
-  `l1categoryname` varchar(45) NOT NULL DEFAULT '',
-  `dwellingtype` varchar(45) NOT NULL DEFAULT '',
-  `bedrooms` varchar(45) NOT NULL DEFAULT '0',
-  `bathrooms` varchar(45) NOT NULL DEFAULT '',
-  `garages` varchar(45) NOT NULL DEFAULT '0',
-  `availabilitystartdate` datetime DEFAULT NULL,
-  `dwellingforsaleby` varchar(45) NOT NULL DEFAULT '',
-  `lot_size` int(10) unsigned NOT NULL DEFAULT '0',
-  `area_unit` varchar(45) NOT NULL,
-  `id_cat` int(10) unsigned DEFAULT NULL,
-  `catname` varchar(45) NOT NULL DEFAULT '',
-  `id_location` int(10) unsigned NOT NULL DEFAULT '0',
-  `id_hcountry` int(10) unsigned NOT NULL DEFAULT '0',
-  `hcountry` varchar(255) NOT NULL DEFAULT '',
-  `id_lstate` int(10) unsigned NOT NULL DEFAULT '0',
-  `lstate` varchar(255) NOT NULL DEFAULT '',
-  `id_lmunicipality` int(10) unsigned NOT NULL DEFAULT '0',
-  `lmunicipality` varchar(255) NOT NULL DEFAULT '',
-  `id_hcolonia` int(10) unsigned NOT NULL DEFAULT '0',
-  `hcolonia` varchar(255) NOT NULL DEFAULT '',
-  `hlocation` varchar(255) NOT NULL DEFAULT '',
-  `hzipcode` varchar(50) NOT NULL DEFAULT '',
-  `hits` int(10) unsigned NOT NULL DEFAULT '0',
-  `fullbleedpics` mediumtext,
-  `r_status` int(10) unsigned NOT NULL DEFAULT '0',
-  `modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `need_update` tinyint(1) unsigned NOT NULL DEFAULT '1',
-  `id_remhouse` int(10) unsigned DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `uk_anuncio_idx` (`ad_id`),
-  UNIQUE KEY `idx_link` (`link`),
-  UNIQUE KEY `fk_va2house_idx` (`id_remhouse`),
-  KEY `idx_need_update` (`need_update`),
-  KEY `idx_is_active` (`is_active`),
-  KEY `idx_id_cat` (`id_cat`),
-  CONSTRAINT `fk_va2house_idx` FOREIGN KEY (`id_remhouse`) REFERENCES `jos_rem_houses` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=74263 DEFAULT CHARSET=utf8;
-
 
 #1 sincronizo categorias
+SET FOREIGN_KEY_CHECKS=0;
+DELETE FROM jos_categories 
+WHERE extension = 'com_remca'
+;
 INSERT IGNORE remca.jos_categories
 SELECT * FROM jpruebas.jos_categories
 WHERE 1
 AND extension = 'com_remca'
 ;
+SET FOREIGN_KEY_CHECKS=1;
 
 # actualizo categorias que coinciden
 

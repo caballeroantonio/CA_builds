@@ -115,6 +115,49 @@ CREATE TABLE IF NOT EXISTS `#__rem_houses` (
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
+-- Table structure for table `#__rem_wa_title_conversations`
+--
+
+#DROP TABLE IF EXISTS `#__rem_wa_title_conversations`;
+CREATE TABLE IF NOT EXISTS `#__rem_wa_title_conversations` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL DEFAULT '',
+  `state` TINYINT(1) NOT NULL DEFAULT '0',
+  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
+  KEY `idx_createdby` (`created_by`),
+  CONSTRAINT `remca_wa_title_conversation_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  `ordering` INT(11) NOT NULL DEFAULT '0',
+  KEY `idx_state` (`state`),
+  KEY `idx_ordering` (`ordering`),
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__rem_wa_entry_conversations`
+--
+
+#DROP TABLE IF EXISTS `#__rem_wa_entry_conversations`;
+CREATE TABLE IF NOT EXISTS `#__rem_wa_entry_conversations` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `description` MEDIUMTEXT NOT NULL,
+  `phone` VARCHAR(50) NOT NULL DEFAULT '' COMMENT 'Teléfono',
+  `id_wa_title_conversation` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Tema de la conversación Whatsapp',
+  `catid` INT(10) UNSIGNED DEFAULT NULL COMMENT 'FK to categories in #__categories', # NOT NULL DEFAULT '0'
+  KEY `idx_catid` (`catid`),
+  CONSTRAINT `remca_wa_entry_conversation_catid` FOREIGN KEY (`catid`) REFERENCES `#__categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  `state` TINYINT(1) NOT NULL DEFAULT '0',
+  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to user in #__users',
+  KEY `idx_createdby` (`created_by`),
+  CONSTRAINT `remca_wa_entry_conversation_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  `ordering` INT(11) NOT NULL DEFAULT '0',
+  KEY `idx_state` (`state`),
+  KEY `idx_ordering` (`ordering`),
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
 -- Table structure for table `#__rem_photos`
 --
 
@@ -577,7 +620,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 ('RealEstateManagerCA Category', 'com_remca.category', '{"special":{"dbtable":"#__categories","key":"id","type":"Category","prefix":"JTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}', '', '{"common":[{"core_content_item_id":"id","core_title":"title","core_state":"published","core_alias":"alias","core_created_time":"created_time","core_modified_time":"modified_time","core_body":"description", "core_hits":"hits","core_publish_up":"null","core_publish_down":"null","core_access":"access", "core_params":"params", "core_featured":"null", "core_metadata":"metadata", "core_language":"language", "core_images":"null", "core_urls":"null", "core_version":"version", "core_ordering":"null", "core_metakey":"metakey", "core_metadesc":"metadesc", "core_catid":"parent_id", "core_xreference":"null", "asset_id":"asset_id"}], "special": [{"parent_id":"parent_id","lft":"lft","rgt":"rgt","level":"level","path":"path","extension":"extension","note":"note"}]}','RemcaHelperRoute::getCategoryRoute');
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.house
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Inmueble',
 'com_remca.house',
@@ -589,19 +632,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
---
- INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('photo',
-'com_remca.photo',
-'{"special":{"dbtable":"#__rem_photos","key":"id","type":"photos","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"null","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'remcaHelperRoute::getphotoRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/photo.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
-);
-        
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.mime_type
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('mime_type',
 'com_remca.mime_type',
@@ -613,7 +644,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.mls_for_delete
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('mls_for_delete',
 'com_remca.mls_for_delete',
@@ -625,7 +656,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.order
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('order',
 'com_remca.order',
@@ -637,7 +668,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.orders_detail
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('orders_detail',
 'com_remca.orders_detail',
@@ -649,7 +680,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.main_category
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('main_category',
 'com_remca.main_category',
@@ -661,7 +692,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.rent
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Rent',
 'com_remca.rent',
@@ -673,7 +704,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.rent_request
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Rent request',
 'com_remca.rent_request',
@@ -685,7 +716,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.rent_sal
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('rent_sal',
 'com_remca.rent_sal',
@@ -697,7 +728,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.review
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Review',
 'com_remca.review',
@@ -709,7 +740,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.track_source
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('track_source',
 'com_remca.track_source',
@@ -721,7 +752,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.wishlist
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Favorito',
 'com_remca.wishlist',
@@ -733,7 +764,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.video_source
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('video_source',
 'com_remca.video_source',
@@ -745,7 +776,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.buying_request
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Buying requests',
 'com_remca.buying_request',
@@ -757,7 +788,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.category
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('category',
 'com_remca.category',
@@ -769,7 +800,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.const
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('const',
 'com_remca.const',
@@ -781,7 +812,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.const_language
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('const_language',
 'com_remca.const_language',
@@ -793,7 +824,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.feature
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('feature',
 'com_remca.feature',
@@ -805,7 +836,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.feature_house
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('feature_house',
 'com_remca.feature_house',
@@ -817,7 +848,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.language
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('language',
 'com_remca.language',
@@ -829,55 +860,7 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
---
- INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Municipality',
-'com_remca.lmunicipality',
-'{"special":{"dbtable":"#__rem_lmunicipalities","key":"id","type":"lmunicipalities","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"null","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'remcaHelperRoute::getlmunicipalityRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/lmunicipality.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_lstate","targetTable":"#__rem_lstates","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_country","targetTable":"#__rem_countries","targetColumn":"id","displayColumn":"name"}]}'
-);
-        
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
---
- INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('State',
-'com_remca.lstate',
-'{"special":{"dbtable":"#__rem_lstates","key":"id","type":"lstates","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"null","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'remcaHelperRoute::getlstateRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/lstate.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"id_country","targetTable":"#__rem_countries","targetColumn":"id","displayColumn":"name"}]}'
-);
-        
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
---
- INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('Country',
-'com_remca.country',
-'{"special":{"dbtable":"#__rem_countries","key":"id","type":"countries","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"name","core_state":"state","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"null","core_ordering":"ordering","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'remcaHelperRoute::getcountryRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/country.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
-);
-        
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
---
- INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('config',
-'com_remca.config',
-'{"special":{"dbtable":"#__rem_configs","key":"id","type":"configs","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
-'',
-'{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"null","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'remcaHelperRoute::getconfigRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/config.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'
-);
-        
---
--- Unified Content Model (UCM) Content History Options (CHO) Inserts to table `#__rem_configs`
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.category
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('RealEstateManagerCA Category',
 'com_remca.category',

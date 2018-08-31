@@ -55,6 +55,25 @@ if ($app->input->get('view') === 'houses' AND $app->input->get('layout') === 'mo
 		return;
 	}
 }
+if ($app->input->get('view') === 'wa_entry_conversation' AND $app->input->get('layout') === 'pagebreak')
+{
+	if (!$user->authorise('core.edit', 'com_remca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'wa_entry_conversations' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_remca'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
 
 if ($app->input->get('view') === 'wisheslist' AND $app->input->get('layout') === 'modal')
 {

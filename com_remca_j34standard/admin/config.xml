@@ -57,7 +57,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="mimetype_save_history"
+        <field name="mime_type_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
@@ -67,7 +67,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="mlsfordelete_save_history"
+        <field name="mls_for_delete_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
@@ -87,7 +87,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="ordersdetail_save_history"
+        <field name="orders_detail_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
@@ -97,7 +97,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="maincategory_save_history"
+        <field name="main_category_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
@@ -117,7 +117,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="rentrequest_save_history"
+        <field name="rent_request_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
@@ -127,7 +127,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="rentsal_save_history"
+        <field name="rent_sal_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
@@ -147,7 +147,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="tracksource_save_history"
+        <field name="track_source_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
@@ -167,7 +167,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="videosource_save_history"
+        <field name="video_source_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
@@ -177,7 +177,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="buyingrequest_save_history"
+        <field name="buying_request_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
@@ -207,7 +207,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="constlanguage_save_history"
+        <field name="const_language_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
@@ -227,7 +227,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="featurehouse_save_history"
+        <field name="feature_house_save_history"
 			type="radio"
 			class="btn-group btn-group-yesno"
 			default="1"
@@ -2380,24 +2380,24 @@
                 <option value="0">JHIDE</option>
             </field>
     </fieldset>
-    <fieldset name="mimetype_display"
-		label="COM_REMCA_MIME_TYPES_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
-		description="COM_REMCA_MIME_TYPES_FIELD_CONFIG_SINGLE_ITEM_DESC"
+    <fieldset name="wa_title_conversation_display"
+		label="COM_REMCA_WA_TITLE_CONVERSATIONS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+		description="COM_REMCA_WA_TITLE_CONVERSATIONS_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
-        <field name="mimetype_layout"
+        <field name="wa_title_conversation_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
-			description="COM_REMCA_MIME_TYPES_CHOOSE_LAYOUT_DESC"
+			description="COM_REMCA_WA_TITLE_CONVERSATIONS_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
-			view="mimetype"
+			view="wa_title_conversation"
             default="_:default"
 		/>
         <field name="spacer0"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_mimetype_icons"
+        <field name="show_wa_title_conversation_icons"
             type="radio"
             label="COM_REMCA_SHOW_ICONS_LABEL"
             description="COM_REMCA_SHOW_ICONS_DESC"
@@ -2408,7 +2408,7 @@
             <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
             <option	value="-1">JHIDE</option>
         </field>
-        <field name="show_mimetype_print_icon"
+        <field name="show_wa_title_conversation_print_icon"
             type="radio"
             label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
             description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -2418,7 +2418,839 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_mimetype_email_icon"
+        <field name="show_wa_title_conversation_email_icon"
+            type="radio"
+            label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_EMAIL_ICON_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="keep_wa_title_conversation_itemid"
+            type="radio"
+            label="COM_REMCA_KEEP_ITEMID_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_KEEP_ITEMID_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="show_wa_title_conversation_navigation"
+            type="radio"
+            label="COM_REMCA_SHOW_NAVIGATION_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_NAVIGATION_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="spacer1"
+            type="spacer"
+            hr="true"
+		/>
+        <field name="show_wa_title_conversation_readmore"
+            type="radio"
+            label="COM_REMCA_SHOW_READMORE_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_READMORE_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="wa_title_conversation_readmore_limit"
+            type="text"
+            label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_READMORE_LIMIT_DESC"
+            default="100"
+		/>
+        <field name="show_wa_title_conversation_readmore_name"
+            type="radio"
+            label="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_READMORE_NAME_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_READMORE_NAME_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="spacer2"
+            type="spacer"
+            hr="true"
+		/>
+        <field name="show_wa_title_conversation_name"
+            type="radio"
+            label="COM_REMCA_SHOW_NAME_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_NAME_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="link_wa_title_conversation_names"
+            type="radio"
+            label="COM_REMCA_LINKED_NAMES_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_LINKED_NAMES_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="show_wa_title_conversation_created_by"
+            type="radio"
+            label="COM_REMCA_SHOW_CREATED_BY_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_CREATED_BY_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="link_wa_title_conversation_created_by"
+            type="radio"
+            label="COM_REMCA_LINK_CREATED_BY_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_LINK_CREATED_BY_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="show_wa_title_conversation_created_by_alias"
+            type="radio"
+            label="COM_REMCA_SHOW_CREATED_BY_ALIAS_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_CREATED_BY_ALIAS_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+	    >
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>        
+        <field name="show_wa_title_conversation_created"
+            type="radio"
+            label="COM_REMCA_SHOW_CREATED_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_CREATED_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_title_conversation_admin"
+            type="radio"
+            label="COM_REMCA_SHOW_ADMIN_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_ADMIN_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+    </fieldset>
+    <fieldset name="wa_title_conversations_list_display"
+        label="COM_REMCA_WA_TITLE_CONVERSATIONS_FIELD_CONFIG_BLOG_LIST_LABEL"
+        description="COM_REMCA_WA_TITLE_CONVERSATIONS_FIELD_CONFIG_BLOG_LIST_DESC"
+	>
+        <field name="wa_title_conversation_initial_sort"
+            type="list"
+            label="COM_REMCA_WA_TITLE_CONVERSATIONS_ORDER_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_ORDER_DESC"
+			class="chzn-color"
+		>
+            <option value="created">JGLOBAL_CREATED</option>
+            <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+            <option value="created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
+            <option value="ordering">COM_REMCA_WA_TITLE_CONVERSATIONS_ORDER</option>
+        </field>
+        <field name="wa_title_conversation_initial_direction"
+            type="radio"
+            label="COM_REMCA_ORDER_DIRECTION_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_ORDER_DIRECTION_DESC"
+			class="btn-group"
+            default="ASC"
+		>
+            <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
+            <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
+        </field>
+        <field name="show_wa_title_conversation_filter_field"
+            type="list"
+            label="JGLOBAL_FILTER_FIELD_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_FILTER_FIELD_DESC"
+            class="chzn-color"
+            default="name"
+   		>
+            <option value="hide">JHIDE</option>
+            <option value="name">COM_REMCA_FIELD_VALUE_NAME</option>
+            <option value="created_by">COM_REMCA_FIELD_VALUE_CREATED_BY</option>
+        </field>        
+        <field name="show_wa_title_conversation_headings"
+            type="radio"
+            label="JGLOBAL_SHOW_HEADINGS_LABEL"
+            description="JGLOBAL_SHOW_HEADINGS_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_title_conversation_pagination"
+            type="radio"
+            label="JGLOBAL_PAGINATION_LABEL"
+            description="JGLOBAL_PAGINATION_DESC"
+            class="btn-group btn-group-yesno"
+            default="2"
+		>
+            <option value="2">JGLOBAL_AUTO</option>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_title_conversation_pagination_results"
+            type="radio"
+            label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+            description="JGLOBAL_PAGINATION_RESULTS_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_title_conversation_pagination_limit"
+            type="radio"
+			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
+			description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_PAGINATION_LIMIT_DESC"
+            class="btn-group btn-group-yesno"
+			default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="wa_title_conversation_num_per_page"
+            type="list"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_NUM_PER_PAGE_DESC"
+            label="COM_REMCA_WA_TITLE_CONVERSATIONS_NUM_PER_PAGE_LABEL"
+			class="chzn-color"
+            default="5"
+        >
+            <option value="5">J5</option>
+            <option value="10">J10</option>
+            <option value="15">J15</option>
+            <option value="20">J20</option>
+            <option value="25">J25</option>
+            <option value="30">J30</option>
+            <option value="50">J50</option>
+            <option value="100">J100</option>
+            <option value="0">JALL</option>
+        </field>
+        <field name="show_no_wa_title_conversations"
+            type="radio"
+            label="COM_REMCA_WA_TITLE_CONVERSATIONS_NO_ITEMS_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_NO_ITEMS_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+			>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_title_conversation_add_link"
+            type="radio"
+			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
+			description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_ADD_LINK_DESC"
+            class="btn-group btn-group-yesno"
+			default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="list_show_wa_title_conversation_date"
+            type="radio"
+			label="COM_REMCA_SHOW_DATE_LABEL"
+			description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_DATE_DESC"
+			class="btn-group"
+            default="0"
+		>
+            <option value="0">JHIDE</option>
+            <option value="created">JGLOBAL_CREATED</option>
+        </field>
+
+        <field name="wa_title_conversation_date_format"
+            type="text"
+            label="JGLOBAL_DATE_FORMAT_LABEL"
+            description="JGLOBAL_DATE_FORMAT_DESC"
+            size="15"
+		/>
+        <field name="list_show_wa_title_conversation_creator"
+            type="radio"
+            label="COM_REMCA_LIST_CREATED_BY_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_LIST_CREATED_BY_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="list_show_wa_title_conversation_ordering"
+            type="radio"
+            label="COM_REMCA_LIST_ORDERING_LABEL"
+            description="COM_REMCA_WA_TITLE_CONVERSATIONS_LIST_ORDERING_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+    </fieldset>
+    <fieldset name="wa_entry_conversation_display"
+		label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+		description="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_CONFIG_SINGLE_ITEM_DESC"
+	>
+        <field name="wa_entry_conversation_layout"
+			type="componentlayout"
+			label="JGLOBAL_FIELD_LAYOUT_LABEL"
+			description="COM_REMCA_WA_ENTRY_CONVERSATIONS_CHOOSE_LAYOUT_DESC"
+			menuitems="true"
+			extension="com_remca"
+			view="wa_entry_conversation"
+            default="_:default"
+		/>
+        <field name="spacer0"
+            type="spacer"
+            hr="true"
+		/>
+        <field name="show_wa_entry_conversation_icons"
+            type="radio"
+            label="COM_REMCA_SHOW_ICONS_LABEL"
+            description="COM_REMCA_SHOW_ICONS_DESC"
+			class="btn-group"
+            default="1"
+		>
+            <option	value="0">COM_REMCA_SHOW_ICONS_VALUE_TEXT</option>
+            <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
+            <option	value="-1">JHIDE</option>
+        </field>
+        <field name="show_wa_entry_conversation_print_icon"
+            type="radio"
+            label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
+            description="COM_REMCA_SHOW_PRINT_ICON_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_entry_conversation_email_icon"
+            type="radio"
+            label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_EMAIL_ICON_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="keep_wa_entry_conversation_itemid"
+            type="radio"
+            label="COM_REMCA_KEEP_ITEMID_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_KEEP_ITEMID_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="show_wa_entry_conversation_navigation"
+            type="radio"
+            label="COM_REMCA_SHOW_NAVIGATION_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_NAVIGATION_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_entry_conversation_category_breadcrumb"
+            type="radio"
+            label="COM_REMCA_SHOW_CATEGORY_BREADCRUMB_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CATEGORY_BREADCRUMB_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="limit_category_wa_entry_conversation_navigation"
+            type="radio"
+            label="COM_REMCA_LIMIT_CATEGORY_NAVIGATION_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIMIT_CATEGORY_NAVIGATION_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+        >
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="spacer1"
+            type="spacer"
+            hr="true"
+		/>
+        <field name="show_wa_entry_conversation_readmore"
+            type="radio"
+            label="COM_REMCA_SHOW_READMORE_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_READMORE_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="wa_entry_conversation_readmore_limit"
+            type="text"
+            label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_READMORE_LIMIT_DESC"
+            default="100"
+		/>
+        <field name="spacer2"
+            type="spacer"
+            hr="true"
+		/>
+        <field name="show_wa_entry_conversation_category"
+            type="radio"
+            label="COM_REMCA_SHOW_CATEGORY_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CATEGORY_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="link_wa_entry_conversation_category"
+            type="radio"
+            label="COM_REMCA_LINK_CATEGORY_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LINK_CATEGORY_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="show_wa_entry_conversation_parent_category"
+            type="radio"
+            label="COM_REMCA_SHOW_PARENT_CATEGORY_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_PARENT_CATEGORY_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="link_wa_entry_conversation_parent_category"
+            type="radio"
+            label="COM_REMCA_LINK_PARENT_CATEGORY_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LINK_PARENT_CATEGORY_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="show_wa_entry_conversation_created_by"
+            type="radio"
+            label="COM_REMCA_SHOW_CREATED_BY_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CREATED_BY_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="link_wa_entry_conversation_created_by"
+            type="radio"
+            label="COM_REMCA_LINK_CREATED_BY_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LINK_CREATED_BY_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option	value="1">JYES</option>
+            <option	value="0">JNO</option>
+        </field>
+        <field name="show_wa_entry_conversation_created_by_alias"
+            type="radio"
+            label="COM_REMCA_SHOW_CREATED_BY_ALIAS_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CREATED_BY_ALIAS_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+	    >
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>        
+        <field name="show_wa_entry_conversation_created"
+            type="radio"
+            label="COM_REMCA_SHOW_CREATED_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CREATED_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_entry_conversation_admin"
+            type="radio"
+            label="COM_REMCA_SHOW_ADMIN_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_ADMIN_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_entry_conversation_vote"
+            type="radio"
+            label="COM_REMCA_SHOW_VOTE_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_VOTE_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option	value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_entry_conversation_share"
+            type="radio"
+            label="COM_REMCA_SHOW_SHARE_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_SHARE_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option	value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_entry_conversation_phone"
+            type="radio"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option	value="1">JSHOW</option>
+            <option	value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_entry_conversation_id_wa_title_conversation"
+            type="radio"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option	value="1">JSHOW</option>
+            <option	value="0">JHIDE</option>
+        </field>
+    </fieldset>
+    <fieldset name="wa_entry_conversations_list_display"
+        label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_CONFIG_BLOG_LIST_LABEL"
+        description="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_CONFIG_BLOG_LIST_DESC"
+	>
+        <field name="wa_entry_conversation_num_leading"
+            type="text"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_LEADING_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_LEADING_DESC"
+            size="3"
+            default=""
+		/>
+        <field name="wa_entry_conversation_num_intro"
+            type="text"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_INTRO_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_INTRO_DESC"
+            size="3"
+            default=""
+		/>
+        <field name="wa_entry_conversation_num_columns"
+            type="text"
+            label="COM_REMCA_NUM_COLUMNS_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_COLUMNS_DESC"
+            size="3"
+            default=""
+		/>
+        <field name="wa_entry_conversation_num_links"
+            type="text"
+            label="COM_REMCA_NUM_LINKS_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_LINKS_DESC"
+            size="3"
+            default=""
+		/>
+        <field name="wa_entry_conversation_multi_column_order"
+            type="radio"
+            label="COM_REMCA_MULTI_COLUMN_ORDER_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_MULTI_COLUMN_ORDER_DESC"
+			class="btn-group"
+            default="0"
+		>
+            <option value="0">JGLOBAL_Down</option>
+            <option value="1">JGLOBAL_Across</option>
+        </field>
+        <field name="list_show_wa_entry_conversation_phone"
+		    type="radio"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_SHOW_PHONE_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_SHOW_PHONE_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+
+        <field name="list_show_wa_entry_conversation_id_wa_title_conversation"
+		    type="radio"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_SHOW_ID_WA_TITLE_CONVERSATION_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_SHOW_ID_WA_TITLE_CONVERSATION_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+
+        <field name="wa_entry_conversation_orderby_pri"
+            type="list"
+            label="COM_REMCA_CATEGORY_ORDER_LABEL"
+            description="COM_REMCA_CATEGORY_ORDER_DESC"
+			class="chzn-color"
+            default="none"
+		>
+            <option value="none">JGLOBAL_NO_ORDER</option>
+            <option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+            <option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+            <option value="order">JGLOBAL_CATEGORY_MANAGER_ORDER</option>
+        </field>
+        <field name="wa_entry_conversation_orderby_sec"
+            type="list"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_CATEGORY_ORDER_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_CATEGORY_ORDER_DESC"
+			class="chzn-color"
+            default="none"
+		>
+            <option value="none">JGLOBAL_NO_ORDER</option>
+            <option value="rdate">JGLOBAL_MOST_RECENT_FIRST</option>
+            <option value="date">JGLOBAL_OLDEST_FIRST</option>
+            <option value="created_by">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
+            <option value="rcreated_by">COM_REMCA_CREATED_BY_REVERSE_ALPHABETICAL</option>
+            <option value="ordering">COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER</option>
+        </field>
+        <field name="wa_entry_conversation_order_date"
+            type="list"
+            label="COM_REMCA_ORDERING_DATE_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDERING_DATE_DESC"
+			class="chzn-color"
+		>
+            <option value="created">JGLOBAL_CREATED</option>
+        </field>
+        <field name="wa_entry_conversation_initial_sort"
+            type="list"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER_DESC"
+			class="chzn-color"
+		>
+            <option value="created">JGLOBAL_CREATED</option>
+            <option value="created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
+            <option value="ordering">COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER</option>
+        </field>
+        <field name="wa_entry_conversation_initial_direction"
+            type="radio"
+            label="COM_REMCA_ORDER_DIRECTION_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER_DIRECTION_DESC"
+			class="btn-group"
+            default="ASC"
+		>
+            <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
+            <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
+        </field>
+        <field name="show_wa_entry_conversation_filter_field"
+            type="list"
+            label="JGLOBAL_FILTER_FIELD_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_FILTER_FIELD_DESC"
+            class="chzn-color"
+            default="created_by"
+   		>
+            <option value="hide">JHIDE</option>
+            <option value="created_by">COM_REMCA_FIELD_VALUE_CREATED_BY</option>
+        </field>        
+        <field name="show_wa_entry_conversation_headings"
+            type="radio"
+            label="JGLOBAL_SHOW_HEADINGS_LABEL"
+            description="JGLOBAL_SHOW_HEADINGS_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_entry_conversation_pagination"
+            type="radio"
+            label="JGLOBAL_PAGINATION_LABEL"
+            description="JGLOBAL_PAGINATION_DESC"
+            class="btn-group btn-group-yesno"
+            default="2"
+		>
+            <option value="2">JGLOBAL_AUTO</option>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_entry_conversation_pagination_results"
+            type="radio"
+            label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+            description="JGLOBAL_PAGINATION_RESULTS_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+        >
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_entry_conversation_pagination_limit"
+            type="radio"
+			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
+			description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_PAGINATION_LIMIT_DESC"
+            class="btn-group btn-group-yesno"
+			default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="wa_entry_conversation_num_per_page"
+            type="list"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_PER_PAGE_DESC"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_PER_PAGE_LABEL"
+			class="chzn-color"
+            default="5"
+        >
+            <option value="5">J5</option>
+            <option value="10">J10</option>
+            <option value="15">J15</option>
+            <option value="20">J20</option>
+            <option value="25">J25</option>
+            <option value="30">J30</option>
+            <option value="50">J50</option>
+            <option value="100">J100</option>
+            <option value="0">JALL</option>
+        </field>
+        <field name="show_no_wa_entry_conversations"
+            type="radio"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_NO_ITEMS_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_NO_ITEMS_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+			>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_wa_entry_conversation_add_link"
+            type="radio"
+			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
+			description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_ADD_LINK_DESC"
+            class="btn-group btn-group-yesno"
+			default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="list_show_wa_entry_conversation_date"
+            type="radio"
+			label="COM_REMCA_SHOW_DATE_LABEL"
+			description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_DATE_DESC"
+			class="btn-group"
+            default="0"
+		>
+            <option value="0">JHIDE</option>
+            <option value="created">JGLOBAL_CREATED</option>
+        </field>
+
+        <field name="wa_entry_conversation_date_format"
+            type="text"
+            label="JGLOBAL_DATE_FORMAT_LABEL"
+            description="JGLOBAL_DATE_FORMAT_DESC"
+            size="15"
+		/>
+        <field name="list_show_wa_entry_conversation_creator"
+            type="radio"
+            label="COM_REMCA_LIST_CREATED_BY_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_CREATED_BY_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="list_show_wa_entry_conversation_ordering"
+            type="radio"
+            label="COM_REMCA_LIST_ORDERING_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_ORDERING_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+            <field name="list_show_wa_entry_conversation_phone"
+                type="radio"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_PHONE_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_PHONE_DESC"
+				class="btn-group"
+				default="1"
+			>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="list_show_wa_entry_conversation_id_wa_title_conversation"
+                type="radio"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_ID_WA_TITLE_CONVERSATION_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_ID_WA_TITLE_CONVERSATION_DESC"
+				class="btn-group"
+				default="1"
+			>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+    </fieldset>
+    <fieldset name="mime_type_display"
+		label="COM_REMCA_MIME_TYPES_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+		description="COM_REMCA_MIME_TYPES_FIELD_CONFIG_SINGLE_ITEM_DESC"
+	>
+        <field name="mime_type_layout"
+			type="componentlayout"
+			label="JGLOBAL_FIELD_LAYOUT_LABEL"
+			description="COM_REMCA_MIME_TYPES_CHOOSE_LAYOUT_DESC"
+			menuitems="true"
+			extension="com_remca"
+			view="mime_type"
+            default="_:default"
+		/>
+        <field name="spacer0"
+            type="spacer"
+            hr="true"
+		/>
+        <field name="show_mime_type_icons"
+            type="radio"
+            label="COM_REMCA_SHOW_ICONS_LABEL"
+            description="COM_REMCA_SHOW_ICONS_DESC"
+			class="btn-group"
+            default="1"
+		>
+            <option	value="0">COM_REMCA_SHOW_ICONS_VALUE_TEXT</option>
+            <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
+            <option	value="-1">JHIDE</option>
+        </field>
+        <field name="show_mime_type_print_icon"
+            type="radio"
+            label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
+            description="COM_REMCA_SHOW_PRINT_ICON_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+		>
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field name="show_mime_type_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
             description="COM_REMCA_MIME_TYPES_SHOW_EMAIL_ICON_DESC"
@@ -2428,7 +3260,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="keep_mimetype_itemid"
+        <field name="keep_mime_type_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
             description="COM_REMCA_MIME_TYPES_KEEP_ITEMID_DESC"
@@ -2438,7 +3270,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_mimetype_navigation"
+        <field name="show_mime_type_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
             description="COM_REMCA_MIME_TYPES_SHOW_NAVIGATION_DESC"
@@ -2452,7 +3284,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_mimetype_readmore"
+        <field name="show_mime_type_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
             description="COM_REMCA_MIME_TYPES_SHOW_READMORE_DESC"
@@ -2462,7 +3294,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="mimetype_readmore_limit"
+        <field name="mime_type_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
             description="COM_REMCA_MIME_TYPES_SHOW_READMORE_LIMIT_DESC"
@@ -2472,7 +3304,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_mimetype_admin"
+        <field name="show_mime_type_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
             description="COM_REMCA_MIME_TYPES_SHOW_ADMIN_DESC"
@@ -2482,7 +3314,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_mimetype_mime_ext"
+        <field name="show_mime_type_mime_ext"
             type="radio"
             label="COM_REMCA_MIME_TYPES_SHOW_FIELD_MIME_EXT_LABEL"
             description="COM_REMCA_MIME_TYPES_SHOW_FIELD_MIME_EXT_DESC"
@@ -2492,7 +3324,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_mimetype_mime_type"
+        <field name="show_mime_type_mime_type"
             type="radio"
             label="COM_REMCA_MIME_TYPES_SHOW_FIELD_MIME_TYPE_LABEL"
             description="COM_REMCA_MIME_TYPES_SHOW_FIELD_MIME_TYPE_DESC"
@@ -2507,14 +3339,14 @@
         label="COM_REMCA_MIME_TYPES_FIELD_CONFIG_BLOG_LIST_LABEL"
         description="COM_REMCA_MIME_TYPES_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
-        <field name="mimetype_initial_sort"
+        <field name="mime_type_initial_sort"
             type="list"
             label="COM_REMCA_MIME_TYPES_ORDER_LABEL"
             description="COM_REMCA_MIME_TYPES_ORDER_DESC"
 			class="chzn-color"
 		>
         </field>
-        <field name="mimetype_initial_direction"
+        <field name="mime_type_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
             description="COM_REMCA_MIME_TYPES_ORDER_DIRECTION_DESC"
@@ -2524,7 +3356,7 @@
             <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
             <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
         </field>
-        <field name="show_mimetype_filter_field"
+        <field name="show_mime_type_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
             description="COM_REMCA_MIME_TYPES_FILTER_FIELD_DESC"
@@ -2533,7 +3365,7 @@
    		>
             <option value="hide">JHIDE</option>
         </field>        
-        <field name="show_mimetype_headings"
+        <field name="show_mime_type_headings"
             type="radio"
             label="JGLOBAL_SHOW_HEADINGS_LABEL"
             description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -2543,7 +3375,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_mimetype_pagination"
+        <field name="show_mime_type_pagination"
             type="radio"
             label="JGLOBAL_PAGINATION_LABEL"
             description="JGLOBAL_PAGINATION_DESC"
@@ -2554,7 +3386,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_mimetype_pagination_results"
+        <field name="show_mime_type_pagination_results"
             type="radio"
             label="JGLOBAL_PAGINATION_RESULTS_LABEL"
             description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -2564,7 +3396,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_mimetype_pagination_limit"
+        <field name="show_mime_type_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_MIME_TYPES_SHOW_PAGINATION_LIMIT_DESC"
@@ -2574,7 +3406,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="mimetype_num_per_page"
+        <field name="mime_type_num_per_page"
             type="list"
             description="COM_REMCA_MIME_TYPES_NUM_PER_PAGE_DESC"
             label="COM_REMCA_MIME_TYPES_NUM_PER_PAGE_LABEL"
@@ -2601,7 +3433,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_mimetype_add_link"
+        <field name="show_mime_type_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
 			description="COM_REMCA_MIME_TYPES_SHOW_ADD_LINK_DESC"
@@ -2611,7 +3443,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="list_show_mimetype_date"
+        <field name="list_show_mime_type_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
 			description="COM_REMCA_MIME_TYPES_SHOW_DATE_DESC"
@@ -2621,13 +3453,13 @@
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="mimetype_date_format"
+        <field name="mime_type_date_format"
             type="text"
             label="JGLOBAL_DATE_FORMAT_LABEL"
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_mimetype_mime_ext"
+            <field name="list_show_mime_type_mime_ext"
                 type="radio"
                 label="COM_REMCA_MIME_TYPES_LIST_MIME_EXT_LABEL"
 				description="COM_REMCA_MIME_TYPES_LIST_MIME_EXT_DESC"
@@ -2637,7 +3469,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_mimetype_mime_type"
+            <field name="list_show_mime_type_mime_type"
                 type="radio"
                 label="COM_REMCA_MIME_TYPES_LIST_MIME_TYPE_LABEL"
 				description="COM_REMCA_MIME_TYPES_LIST_MIME_TYPE_DESC"
@@ -2648,24 +3480,24 @@
                 <option value="0">JHIDE</option>
             </field>
     </fieldset>
-    <fieldset name="mlsfordelete_display"
+    <fieldset name="mls_for_delete_display"
 		label="COM_REMCA_MLS_FOR_DELETE_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
 		description="COM_REMCA_MLS_FOR_DELETE_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
-        <field name="mlsfordelete_layout"
+        <field name="mls_for_delete_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
 			description="COM_REMCA_MLS_FOR_DELETE_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
-			view="mlsfordelete"
+			view="mls_for_delete"
             default="_:default"
 		/>
         <field name="spacer0"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_mlsfordelete_icons"
+        <field name="show_mls_for_delete_icons"
             type="radio"
             label="COM_REMCA_SHOW_ICONS_LABEL"
             description="COM_REMCA_SHOW_ICONS_DESC"
@@ -2676,7 +3508,7 @@
             <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
             <option	value="-1">JHIDE</option>
         </field>
-        <field name="show_mlsfordelete_print_icon"
+        <field name="show_mls_for_delete_print_icon"
             type="radio"
             label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
             description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -2686,7 +3518,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_mlsfordelete_email_icon"
+        <field name="show_mls_for_delete_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
             description="COM_REMCA_MLS_FOR_DELETE_SHOW_EMAIL_ICON_DESC"
@@ -2696,7 +3528,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="keep_mlsfordelete_itemid"
+        <field name="keep_mls_for_delete_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
             description="COM_REMCA_MLS_FOR_DELETE_KEEP_ITEMID_DESC"
@@ -2706,7 +3538,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_mlsfordelete_navigation"
+        <field name="show_mls_for_delete_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
             description="COM_REMCA_MLS_FOR_DELETE_SHOW_NAVIGATION_DESC"
@@ -2720,7 +3552,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_mlsfordelete_readmore"
+        <field name="show_mls_for_delete_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
             description="COM_REMCA_MLS_FOR_DELETE_SHOW_READMORE_DESC"
@@ -2730,7 +3562,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="mlsfordelete_readmore_limit"
+        <field name="mls_for_delete_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
             description="COM_REMCA_MLS_FOR_DELETE_SHOW_READMORE_LIMIT_DESC"
@@ -2740,7 +3572,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_mlsfordelete_admin"
+        <field name="show_mls_for_delete_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
             description="COM_REMCA_MLS_FOR_DELETE_SHOW_ADMIN_DESC"
@@ -2750,7 +3582,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_mlsfordelete_mls"
+        <field name="show_mls_for_delete_mls"
             type="radio"
             label="COM_REMCA_MLS_FOR_DELETE_SHOW_FIELD_MLS_LABEL"
             description="COM_REMCA_MLS_FOR_DELETE_SHOW_FIELD_MLS_DESC"
@@ -2765,14 +3597,14 @@
         label="COM_REMCA_MLS_FOR_DELETE_FIELD_CONFIG_BLOG_LIST_LABEL"
         description="COM_REMCA_MLS_FOR_DELETE_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
-        <field name="mlsfordelete_initial_sort"
+        <field name="mls_for_delete_initial_sort"
             type="list"
             label="COM_REMCA_MLS_FOR_DELETE_ORDER_LABEL"
             description="COM_REMCA_MLS_FOR_DELETE_ORDER_DESC"
 			class="chzn-color"
 		>
         </field>
-        <field name="mlsfordelete_initial_direction"
+        <field name="mls_for_delete_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
             description="COM_REMCA_MLS_FOR_DELETE_ORDER_DIRECTION_DESC"
@@ -2782,7 +3614,7 @@
             <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
             <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
         </field>
-        <field name="show_mlsfordelete_filter_field"
+        <field name="show_mls_for_delete_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
             description="COM_REMCA_MLS_FOR_DELETE_FILTER_FIELD_DESC"
@@ -2791,7 +3623,7 @@
    		>
             <option value="hide">JHIDE</option>
         </field>        
-        <field name="show_mlsfordelete_headings"
+        <field name="show_mls_for_delete_headings"
             type="radio"
             label="JGLOBAL_SHOW_HEADINGS_LABEL"
             description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -2801,7 +3633,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_mlsfordelete_pagination"
+        <field name="show_mls_for_delete_pagination"
             type="radio"
             label="JGLOBAL_PAGINATION_LABEL"
             description="JGLOBAL_PAGINATION_DESC"
@@ -2812,7 +3644,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_mlsfordelete_pagination_results"
+        <field name="show_mls_for_delete_pagination_results"
             type="radio"
             label="JGLOBAL_PAGINATION_RESULTS_LABEL"
             description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -2822,7 +3654,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_mlsfordelete_pagination_limit"
+        <field name="show_mls_for_delete_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_MLS_FOR_DELETE_SHOW_PAGINATION_LIMIT_DESC"
@@ -2832,7 +3664,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="mlsfordelete_num_per_page"
+        <field name="mls_for_delete_num_per_page"
             type="list"
             description="COM_REMCA_MLS_FOR_DELETE_NUM_PER_PAGE_DESC"
             label="COM_REMCA_MLS_FOR_DELETE_NUM_PER_PAGE_LABEL"
@@ -2859,7 +3691,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_mlsfordelete_add_link"
+        <field name="show_mls_for_delete_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
 			description="COM_REMCA_MLS_FOR_DELETE_SHOW_ADD_LINK_DESC"
@@ -2869,7 +3701,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="list_show_mlsfordelete_date"
+        <field name="list_show_mls_for_delete_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
 			description="COM_REMCA_MLS_FOR_DELETE_SHOW_DATE_DESC"
@@ -2879,13 +3711,13 @@
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="mlsfordelete_date_format"
+        <field name="mls_for_delete_date_format"
             type="text"
             label="JGLOBAL_DATE_FORMAT_LABEL"
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_mlsfordelete_mls"
+            <field name="list_show_mls_for_delete_mls"
                 type="radio"
                 label="COM_REMCA_MLS_FOR_DELETE_LIST_MLS_LABEL"
 				description="COM_REMCA_MLS_FOR_DELETE_LIST_MLS_DESC"
@@ -3436,24 +4268,24 @@
                 <option value="0">JHIDE</option>
             </field>
     </fieldset>
-    <fieldset name="ordersdetail_display"
+    <fieldset name="orders_detail_display"
 		label="COM_REMCA_ORDERS_DETAILS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
 		description="COM_REMCA_ORDERS_DETAILS_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
-        <field name="ordersdetail_layout"
+        <field name="orders_detail_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
 			description="COM_REMCA_ORDERS_DETAILS_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
-			view="ordersdetail"
+			view="orders_detail"
             default="_:default"
 		/>
         <field name="spacer0"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_ordersdetail_icons"
+        <field name="show_orders_detail_icons"
             type="radio"
             label="COM_REMCA_SHOW_ICONS_LABEL"
             description="COM_REMCA_SHOW_ICONS_DESC"
@@ -3464,7 +4296,7 @@
             <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
             <option	value="-1">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_print_icon"
+        <field name="show_orders_detail_print_icon"
             type="radio"
             label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
             description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -3474,7 +4306,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_email_icon"
+        <field name="show_orders_detail_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_EMAIL_ICON_DESC"
@@ -3484,7 +4316,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="keep_ordersdetail_itemid"
+        <field name="keep_orders_detail_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_KEEP_ITEMID_DESC"
@@ -3494,7 +4326,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_ordersdetail_navigation"
+        <field name="show_orders_detail_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_NAVIGATION_DESC"
@@ -3508,7 +4340,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_ordersdetail_readmore"
+        <field name="show_orders_detail_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_READMORE_DESC"
@@ -3518,13 +4350,13 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="ordersdetail_readmore_limit"
+        <field name="orders_detail_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_READMORE_LIMIT_DESC"
             default="100"
 		/>
-        <field name="show_ordersdetail_readmore_name"
+        <field name="show_orders_detail_readmore_name"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_READMORE_NAME_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_READMORE_NAME_DESC"
@@ -3538,7 +4370,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_ordersdetail_name"
+        <field name="show_orders_detail_name"
             type="radio"
             label="COM_REMCA_SHOW_NAME_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_NAME_DESC"
@@ -3548,7 +4380,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="link_ordersdetail_names"
+        <field name="link_orders_detail_names"
             type="radio"
             label="COM_REMCA_LINKED_NAMES_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_LINKED_NAMES_DESC"
@@ -3558,7 +4390,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_ordersdetail_admin"
+        <field name="show_orders_detail_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_ADMIN_DESC"
@@ -3568,7 +4400,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_id_order"
+        <field name="show_orders_detail_id_order"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_ORDER_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_ORDER_DESC"
@@ -3578,7 +4410,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_id_user"
+        <field name="show_orders_detail_id_user"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_USER_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_USER_DESC"
@@ -3588,7 +4420,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_fk_houses_htitle"
+        <field name="show_orders_detail_fk_houses_htitle"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_HOUSES_HTITLE_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_FK_HOUSES_HTITLE_DESC"
@@ -3598,7 +4430,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_email"
+        <field name="show_orders_detail_email"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_EMAIL_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_EMAIL_DESC"
@@ -3608,7 +4440,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_status"
+        <field name="show_orders_detail_status"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_STATUS_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_STATUS_DESC"
@@ -3618,7 +4450,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_order_date"
+        <field name="show_orders_detail_order_date"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ORDER_DATE_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ORDER_DATE_DESC"
@@ -3628,7 +4460,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_id_house"
+        <field name="show_orders_detail_id_house"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_HOUSE_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ID_HOUSE_DESC"
@@ -3638,7 +4470,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_txn_type"
+        <field name="show_orders_detail_txn_type"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_TXN_TYPE_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_TXN_TYPE_DESC"
@@ -3648,7 +4480,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_txn_id"
+        <field name="show_orders_detail_txn_id"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_TXN_ID_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_TXN_ID_DESC"
@@ -3658,7 +4490,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_payer_id"
+        <field name="show_orders_detail_payer_id"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_PAYER_ID_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_PAYER_ID_DESC"
@@ -3668,7 +4500,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_payer_status"
+        <field name="show_orders_detail_payer_status"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_PAYER_STATUS_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_PAYER_STATUS_DESC"
@@ -3678,7 +4510,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_order_calculated_price"
+        <field name="show_orders_detail_order_calculated_price"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ORDER_CALCULATED_PRICE_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ORDER_CALCULATED_PRICE_DESC"
@@ -3688,7 +4520,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_order_price"
+        <field name="show_orders_detail_order_price"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ORDER_PRICE_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ORDER_PRICE_DESC"
@@ -3698,7 +4530,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_order_currency_code"
+        <field name="show_orders_detail_order_currency_code"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ORDER_CURRENCY_CODE_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_ORDER_CURRENCY_CODE_DESC"
@@ -3708,7 +4540,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_payment_details"
+        <field name="show_orders_detail_payment_details"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_PAYMENT_DETAILS_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_PAYMENT_DETAILS_DESC"
@@ -3718,7 +4550,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_paypal_paykay"
+        <field name="show_orders_detail_paypal_paykay"
             type="radio"
             label="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_PAYPAL_PAYKAY_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_SHOW_FIELD_PAYPAL_PAYKAY_DESC"
@@ -3733,7 +4565,7 @@
         label="COM_REMCA_ORDERS_DETAILS_FIELD_CONFIG_BLOG_LIST_LABEL"
         description="COM_REMCA_ORDERS_DETAILS_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
-        <field name="ordersdetail_initial_sort"
+        <field name="orders_detail_initial_sort"
             type="list"
             label="COM_REMCA_ORDERS_DETAILS_ORDER_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_ORDER_DESC"
@@ -3741,7 +4573,7 @@
 		>
             <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
         </field>
-        <field name="ordersdetail_initial_direction"
+        <field name="orders_detail_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_ORDER_DIRECTION_DESC"
@@ -3751,7 +4583,7 @@
             <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
             <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
         </field>
-        <field name="show_ordersdetail_filter_field"
+        <field name="show_orders_detail_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
             description="COM_REMCA_ORDERS_DETAILS_FILTER_FIELD_DESC"
@@ -3761,7 +4593,7 @@
             <option value="hide">JHIDE</option>
             <option value="name">COM_REMCA_FIELD_VALUE_NAME</option>
         </field>        
-        <field name="show_ordersdetail_headings"
+        <field name="show_orders_detail_headings"
             type="radio"
             label="JGLOBAL_SHOW_HEADINGS_LABEL"
             description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -3771,7 +4603,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_pagination"
+        <field name="show_orders_detail_pagination"
             type="radio"
             label="JGLOBAL_PAGINATION_LABEL"
             description="JGLOBAL_PAGINATION_DESC"
@@ -3782,7 +4614,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_pagination_results"
+        <field name="show_orders_detail_pagination_results"
             type="radio"
             label="JGLOBAL_PAGINATION_RESULTS_LABEL"
             description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -3792,7 +4624,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_pagination_limit"
+        <field name="show_orders_detail_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_ORDERS_DETAILS_SHOW_PAGINATION_LIMIT_DESC"
@@ -3802,7 +4634,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="ordersdetail_num_per_page"
+        <field name="orders_detail_num_per_page"
             type="list"
             description="COM_REMCA_ORDERS_DETAILS_NUM_PER_PAGE_DESC"
             label="COM_REMCA_ORDERS_DETAILS_NUM_PER_PAGE_LABEL"
@@ -3829,7 +4661,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_ordersdetail_add_link"
+        <field name="show_orders_detail_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
 			description="COM_REMCA_ORDERS_DETAILS_SHOW_ADD_LINK_DESC"
@@ -3839,7 +4671,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="list_show_ordersdetail_date"
+        <field name="list_show_orders_detail_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
 			description="COM_REMCA_ORDERS_DETAILS_SHOW_DATE_DESC"
@@ -3849,13 +4681,13 @@
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="ordersdetail_date_format"
+        <field name="orders_detail_date_format"
             type="text"
             label="JGLOBAL_DATE_FORMAT_LABEL"
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_ordersdetail_id_order"
+            <field name="list_show_orders_detail_id_order"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_ID_ORDER_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_ID_ORDER_DESC"
@@ -3865,7 +4697,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_id_user"
+            <field name="list_show_orders_detail_id_user"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_ID_USER_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_ID_USER_DESC"
@@ -3875,7 +4707,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_fk_houses_htitle"
+            <field name="list_show_orders_detail_fk_houses_htitle"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_FK_HOUSES_HTITLE_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_FK_HOUSES_HTITLE_DESC"
@@ -3885,7 +4717,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_email"
+            <field name="list_show_orders_detail_email"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_EMAIL_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_EMAIL_DESC"
@@ -3895,7 +4727,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_status"
+            <field name="list_show_orders_detail_status"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_STATUS_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_STATUS_DESC"
@@ -3905,7 +4737,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_order_date"
+            <field name="list_show_orders_detail_order_date"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_ORDER_DATE_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_ORDER_DATE_DESC"
@@ -3915,7 +4747,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_id_house"
+            <field name="list_show_orders_detail_id_house"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_ID_HOUSE_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_ID_HOUSE_DESC"
@@ -3925,7 +4757,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_txn_type"
+            <field name="list_show_orders_detail_txn_type"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_TXN_TYPE_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_TXN_TYPE_DESC"
@@ -3935,7 +4767,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_txn_id"
+            <field name="list_show_orders_detail_txn_id"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_TXN_ID_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_TXN_ID_DESC"
@@ -3945,7 +4777,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_payer_id"
+            <field name="list_show_orders_detail_payer_id"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_PAYER_ID_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_PAYER_ID_DESC"
@@ -3955,7 +4787,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_payer_status"
+            <field name="list_show_orders_detail_payer_status"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_PAYER_STATUS_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_PAYER_STATUS_DESC"
@@ -3965,7 +4797,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_order_calculated_price"
+            <field name="list_show_orders_detail_order_calculated_price"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_ORDER_CALCULATED_PRICE_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_ORDER_CALCULATED_PRICE_DESC"
@@ -3975,7 +4807,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_order_price"
+            <field name="list_show_orders_detail_order_price"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_ORDER_PRICE_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_ORDER_PRICE_DESC"
@@ -3985,7 +4817,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_order_currency_code"
+            <field name="list_show_orders_detail_order_currency_code"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_ORDER_CURRENCY_CODE_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_ORDER_CURRENCY_CODE_DESC"
@@ -3995,7 +4827,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_payment_details"
+            <field name="list_show_orders_detail_payment_details"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_PAYMENT_DETAILS_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_PAYMENT_DETAILS_DESC"
@@ -4005,7 +4837,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_ordersdetail_paypal_paykay"
+            <field name="list_show_orders_detail_paypal_paykay"
                 type="radio"
                 label="COM_REMCA_ORDERS_DETAILS_LIST_PAYPAL_PAYKAY_LABEL"
 				description="COM_REMCA_ORDERS_DETAILS_LIST_PAYPAL_PAYKAY_DESC"
@@ -4016,24 +4848,24 @@
                 <option value="0">JHIDE</option>
             </field>
     </fieldset>
-    <fieldset name="maincategory_display"
+    <fieldset name="main_category_display"
 		label="COM_REMCA_MAIN_CATEGORIES_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
 		description="COM_REMCA_MAIN_CATEGORIES_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
-        <field name="maincategory_layout"
+        <field name="main_category_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
 			description="COM_REMCA_MAIN_CATEGORIES_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
-			view="maincategory"
+			view="main_category"
             default="_:default"
 		/>
         <field name="spacer0"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_maincategory_icons"
+        <field name="show_main_category_icons"
             type="radio"
             label="COM_REMCA_SHOW_ICONS_LABEL"
             description="COM_REMCA_SHOW_ICONS_DESC"
@@ -4044,7 +4876,7 @@
             <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
             <option	value="-1">JHIDE</option>
         </field>
-        <field name="show_maincategory_print_icon"
+        <field name="show_main_category_print_icon"
             type="radio"
             label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
             description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -4054,7 +4886,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_email_icon"
+        <field name="show_main_category_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_EMAIL_ICON_DESC"
@@ -4064,7 +4896,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="keep_maincategory_itemid"
+        <field name="keep_main_category_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_KEEP_ITEMID_DESC"
@@ -4074,7 +4906,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_maincategory_navigation"
+        <field name="show_main_category_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_NAVIGATION_DESC"
@@ -4088,7 +4920,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_maincategory_readmore"
+        <field name="show_main_category_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_DESC"
@@ -4098,13 +4930,13 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="maincategory_readmore_limit"
+        <field name="main_category_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_LIMIT_DESC"
             default="100"
 		/>
-        <field name="show_maincategory_readmore_name"
+        <field name="show_main_category_readmore_name"
             type="radio"
             label="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_NAME_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_NAME_DESC"
@@ -4114,7 +4946,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_noauth"
+        <field name="show_main_category_noauth"
             type="radio"
             label="COM_REMCA_SHOW_UNAUTH_LINKS_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_UNAUTH_LINKS_DESC"
@@ -4128,7 +4960,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_maincategory_name"
+        <field name="show_main_category_name"
             type="radio"
             label="COM_REMCA_SHOW_NAME_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_NAME_DESC"
@@ -4138,7 +4970,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="link_maincategory_names"
+        <field name="link_main_category_names"
             type="radio"
             label="COM_REMCA_LINKED_NAMES_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_LINKED_NAMES_DESC"
@@ -4148,7 +4980,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_maincategory_admin"
+        <field name="show_main_category_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_ADMIN_DESC"
@@ -4158,7 +4990,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_parent_id"
+        <field name="show_main_category_parent_id"
             type="radio"
             label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARENT_ID_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARENT_ID_DESC"
@@ -4168,7 +5000,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_associate_category"
+        <field name="show_main_category_associate_category"
             type="radio"
             label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_ASSOCIATE_CATEGORY_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_ASSOCIATE_CATEGORY_DESC"
@@ -4178,7 +5010,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_title"
+        <field name="show_main_category_title"
             type="radio"
             label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_TITLE_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_TITLE_DESC"
@@ -4188,7 +5020,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_image"
+        <field name="show_main_category_image"
             type="radio"
             label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_DESC"
@@ -4198,7 +5030,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_section"
+        <field name="show_main_category_section"
             type="radio"
             label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_SECTION_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_SECTION_DESC"
@@ -4208,7 +5040,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_image_position"
+        <field name="show_main_category_image_position"
             type="radio"
             label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_POSITION_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_POSITION_DESC"
@@ -4218,7 +5050,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_editor"
+        <field name="show_main_category_editor"
             type="radio"
             label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_EDITOR_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_EDITOR_DESC"
@@ -4228,7 +5060,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_count"
+        <field name="show_main_category_count"
             type="radio"
             label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_COUNT_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_COUNT_DESC"
@@ -4238,7 +5070,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_params2"
+        <field name="show_main_category_params2"
             type="radio"
             label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARAMS2_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARAMS2_DESC"
@@ -4253,7 +5085,7 @@
         label="COM_REMCA_MAIN_CATEGORIES_FIELD_CONFIG_BLOG_LIST_LABEL"
         description="COM_REMCA_MAIN_CATEGORIES_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
-        <field name="maincategory_initial_sort"
+        <field name="main_category_initial_sort"
             type="list"
             label="COM_REMCA_MAIN_CATEGORIES_ORDER_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_ORDER_DESC"
@@ -4262,7 +5094,7 @@
             <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
             <option value="ordering">COM_REMCA_MAIN_CATEGORIES_ORDER</option>
         </field>
-        <field name="maincategory_initial_direction"
+        <field name="main_category_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_ORDER_DIRECTION_DESC"
@@ -4272,7 +5104,7 @@
             <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
             <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
         </field>
-        <field name="show_maincategory_filter_field"
+        <field name="show_main_category_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_FILTER_FIELD_DESC"
@@ -4282,7 +5114,7 @@
             <option value="hide">JHIDE</option>
             <option value="name">COM_REMCA_FIELD_VALUE_NAME</option>
         </field>        
-        <field name="show_maincategory_headings"
+        <field name="show_main_category_headings"
             type="radio"
             label="JGLOBAL_SHOW_HEADINGS_LABEL"
             description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -4292,7 +5124,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_pagination"
+        <field name="show_main_category_pagination"
             type="radio"
             label="JGLOBAL_PAGINATION_LABEL"
             description="JGLOBAL_PAGINATION_DESC"
@@ -4303,7 +5135,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_pagination_results"
+        <field name="show_main_category_pagination_results"
             type="radio"
             label="JGLOBAL_PAGINATION_RESULTS_LABEL"
             description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -4313,7 +5145,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_pagination_limit"
+        <field name="show_main_category_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_MAIN_CATEGORIES_SHOW_PAGINATION_LIMIT_DESC"
@@ -4323,7 +5155,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="maincategory_num_per_page"
+        <field name="main_category_num_per_page"
             type="list"
             description="COM_REMCA_MAIN_CATEGORIES_NUM_PER_PAGE_DESC"
             label="COM_REMCA_MAIN_CATEGORIES_NUM_PER_PAGE_LABEL"
@@ -4350,7 +5182,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_maincategory_add_link"
+        <field name="show_main_category_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
 			description="COM_REMCA_MAIN_CATEGORIES_SHOW_ADD_LINK_DESC"
@@ -4360,7 +5192,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="list_show_maincategory_date"
+        <field name="list_show_main_category_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
 			description="COM_REMCA_MAIN_CATEGORIES_SHOW_DATE_DESC"
@@ -4370,13 +5202,13 @@
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="maincategory_date_format"
+        <field name="main_category_date_format"
             type="text"
             label="JGLOBAL_DATE_FORMAT_LABEL"
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-        <field name="list_show_maincategory_ordering"
+        <field name="list_show_main_category_ordering"
             type="radio"
             label="COM_REMCA_LIST_ORDERING_LABEL"
             description="COM_REMCA_MAIN_CATEGORIES_LIST_ORDERING_DESC"
@@ -4386,7 +5218,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-            <field name="list_show_maincategory_parent_id"
+            <field name="list_show_main_category_parent_id"
                 type="radio"
                 label="COM_REMCA_MAIN_CATEGORIES_LIST_PARENT_ID_LABEL"
 				description="COM_REMCA_MAIN_CATEGORIES_LIST_PARENT_ID_DESC"
@@ -4396,7 +5228,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_maincategory_associate_category"
+            <field name="list_show_main_category_associate_category"
                 type="radio"
                 label="COM_REMCA_MAIN_CATEGORIES_LIST_ASSOCIATE_CATEGORY_LABEL"
 				description="COM_REMCA_MAIN_CATEGORIES_LIST_ASSOCIATE_CATEGORY_DESC"
@@ -4406,7 +5238,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_maincategory_title"
+            <field name="list_show_main_category_title"
                 type="radio"
                 label="COM_REMCA_MAIN_CATEGORIES_LIST_TITLE_LABEL"
 				description="COM_REMCA_MAIN_CATEGORIES_LIST_TITLE_DESC"
@@ -4416,7 +5248,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_maincategory_image"
+            <field name="list_show_main_category_image"
                 type="radio"
                 label="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_LABEL"
 				description="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_DESC"
@@ -4426,7 +5258,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_maincategory_section"
+            <field name="list_show_main_category_section"
                 type="radio"
                 label="COM_REMCA_MAIN_CATEGORIES_LIST_SECTION_LABEL"
 				description="COM_REMCA_MAIN_CATEGORIES_LIST_SECTION_DESC"
@@ -4436,7 +5268,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_maincategory_image_position"
+            <field name="list_show_main_category_image_position"
                 type="radio"
                 label="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_POSITION_LABEL"
 				description="COM_REMCA_MAIN_CATEGORIES_LIST_IMAGE_POSITION_DESC"
@@ -4446,7 +5278,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_maincategory_editor"
+            <field name="list_show_main_category_editor"
                 type="radio"
                 label="COM_REMCA_MAIN_CATEGORIES_LIST_EDITOR_LABEL"
 				description="COM_REMCA_MAIN_CATEGORIES_LIST_EDITOR_DESC"
@@ -4456,7 +5288,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_maincategory_count"
+            <field name="list_show_main_category_count"
                 type="radio"
                 label="COM_REMCA_MAIN_CATEGORIES_LIST_COUNT_LABEL"
 				description="COM_REMCA_MAIN_CATEGORIES_LIST_COUNT_DESC"
@@ -4466,7 +5298,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_maincategory_params2"
+            <field name="list_show_main_category_params2"
                 type="radio"
                 label="COM_REMCA_MAIN_CATEGORIES_LIST_PARAMS2_LABEL"
 				description="COM_REMCA_MAIN_CATEGORIES_LIST_PARAMS2_DESC"
@@ -4897,24 +5729,24 @@
                 <option value="0">JHIDE</option>
             </field>
     </fieldset>
-    <fieldset name="rentrequest_display"
+    <fieldset name="rent_request_display"
 		label="COM_REMCA_RENT_REQUESTS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
 		description="COM_REMCA_RENT_REQUESTS_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
-        <field name="rentrequest_layout"
+        <field name="rent_request_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
 			description="COM_REMCA_RENT_REQUESTS_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
-			view="rentrequest"
+			view="rent_request"
             default="_:default"
 		/>
         <field name="spacer0"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_rentrequest_icons"
+        <field name="show_rent_request_icons"
             type="radio"
             label="COM_REMCA_SHOW_ICONS_LABEL"
             description="COM_REMCA_SHOW_ICONS_DESC"
@@ -4925,7 +5757,7 @@
             <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
             <option	value="-1">JHIDE</option>
         </field>
-        <field name="show_rentrequest_print_icon"
+        <field name="show_rent_request_print_icon"
             type="radio"
             label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
             description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -4935,7 +5767,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_email_icon"
+        <field name="show_rent_request_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_EMAIL_ICON_DESC"
@@ -4945,7 +5777,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="keep_rentrequest_itemid"
+        <field name="keep_rent_request_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
             description="COM_REMCA_RENT_REQUESTS_KEEP_ITEMID_DESC"
@@ -4955,7 +5787,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_rentrequest_navigation"
+        <field name="show_rent_request_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_NAVIGATION_DESC"
@@ -4969,7 +5801,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_rentrequest_readmore"
+        <field name="show_rent_request_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_READMORE_DESC"
@@ -4979,7 +5811,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="rentrequest_readmore_limit"
+        <field name="rent_request_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_READMORE_LIMIT_DESC"
@@ -4989,7 +5821,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_rentrequest_admin"
+        <field name="show_rent_request_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_ADMIN_DESC"
@@ -4999,7 +5831,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_id_house"
+        <field name="show_rent_request_id_house"
             type="radio"
             label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_ID_HOUSE_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_ID_HOUSE_DESC"
@@ -5009,7 +5841,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_id_user"
+        <field name="show_rent_request_id_user"
             type="radio"
             label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_ID_USER_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_ID_USER_DESC"
@@ -5019,7 +5851,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_rent_from"
+        <field name="show_rent_request_rent_from"
             type="radio"
             label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_RENT_FROM_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_RENT_FROM_DESC"
@@ -5029,7 +5861,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_rent_until"
+        <field name="show_rent_request_rent_until"
             type="radio"
             label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_RENT_UNTIL_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_RENT_UNTIL_DESC"
@@ -5039,7 +5871,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_rent_request"
+        <field name="show_rent_request_rent_request"
             type="radio"
             label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_RENT_REQUEST_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_RENT_REQUEST_DESC"
@@ -5049,7 +5881,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_user_name"
+        <field name="show_rent_request_user_name"
             type="radio"
             label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_USER_NAME_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_USER_NAME_DESC"
@@ -5059,7 +5891,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_user_email"
+        <field name="show_rent_request_user_email"
             type="radio"
             label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_USER_EMAIL_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_USER_EMAIL_DESC"
@@ -5069,7 +5901,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_user_mailing"
+        <field name="show_rent_request_user_mailing"
             type="radio"
             label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_USER_MAILING_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_USER_MAILING_DESC"
@@ -5079,7 +5911,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_status"
+        <field name="show_rent_request_status"
             type="radio"
             label="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_STATUS_LABEL"
             description="COM_REMCA_RENT_REQUESTS_SHOW_FIELD_STATUS_DESC"
@@ -5094,14 +5926,14 @@
         label="COM_REMCA_RENT_REQUESTS_FIELD_CONFIG_BLOG_LIST_LABEL"
         description="COM_REMCA_RENT_REQUESTS_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
-        <field name="rentrequest_initial_sort"
+        <field name="rent_request_initial_sort"
             type="list"
             label="COM_REMCA_RENT_REQUESTS_ORDER_LABEL"
             description="COM_REMCA_RENT_REQUESTS_ORDER_DESC"
 			class="chzn-color"
 		>
         </field>
-        <field name="rentrequest_initial_direction"
+        <field name="rent_request_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
             description="COM_REMCA_RENT_REQUESTS_ORDER_DIRECTION_DESC"
@@ -5111,7 +5943,7 @@
             <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
             <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
         </field>
-        <field name="show_rentrequest_filter_field"
+        <field name="show_rent_request_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
             description="COM_REMCA_RENT_REQUESTS_FILTER_FIELD_DESC"
@@ -5120,7 +5952,7 @@
    		>
             <option value="hide">JHIDE</option>
         </field>        
-        <field name="show_rentrequest_headings"
+        <field name="show_rent_request_headings"
             type="radio"
             label="JGLOBAL_SHOW_HEADINGS_LABEL"
             description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -5130,7 +5962,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_pagination"
+        <field name="show_rent_request_pagination"
             type="radio"
             label="JGLOBAL_PAGINATION_LABEL"
             description="JGLOBAL_PAGINATION_DESC"
@@ -5141,7 +5973,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_pagination_results"
+        <field name="show_rent_request_pagination_results"
             type="radio"
             label="JGLOBAL_PAGINATION_RESULTS_LABEL"
             description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -5151,7 +5983,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_pagination_limit"
+        <field name="show_rent_request_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_RENT_REQUESTS_SHOW_PAGINATION_LIMIT_DESC"
@@ -5161,7 +5993,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="rentrequest_num_per_page"
+        <field name="rent_request_num_per_page"
             type="list"
             description="COM_REMCA_RENT_REQUESTS_NUM_PER_PAGE_DESC"
             label="COM_REMCA_RENT_REQUESTS_NUM_PER_PAGE_LABEL"
@@ -5188,7 +6020,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentrequest_add_link"
+        <field name="show_rent_request_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
 			description="COM_REMCA_RENT_REQUESTS_SHOW_ADD_LINK_DESC"
@@ -5198,7 +6030,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="list_show_rentrequest_date"
+        <field name="list_show_rent_request_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
 			description="COM_REMCA_RENT_REQUESTS_SHOW_DATE_DESC"
@@ -5208,13 +6040,13 @@
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="rentrequest_date_format"
+        <field name="rent_request_date_format"
             type="text"
             label="JGLOBAL_DATE_FORMAT_LABEL"
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_rentrequest_id_house"
+            <field name="list_show_rent_request_id_house"
                 type="radio"
                 label="COM_REMCA_RENT_REQUESTS_LIST_ID_HOUSE_LABEL"
 				description="COM_REMCA_RENT_REQUESTS_LIST_ID_HOUSE_DESC"
@@ -5224,7 +6056,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentrequest_id_user"
+            <field name="list_show_rent_request_id_user"
                 type="radio"
                 label="COM_REMCA_RENT_REQUESTS_LIST_ID_USER_LABEL"
 				description="COM_REMCA_RENT_REQUESTS_LIST_ID_USER_DESC"
@@ -5234,7 +6066,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentrequest_rent_from"
+            <field name="list_show_rent_request_rent_from"
                 type="radio"
                 label="COM_REMCA_RENT_REQUESTS_LIST_RENT_FROM_LABEL"
 				description="COM_REMCA_RENT_REQUESTS_LIST_RENT_FROM_DESC"
@@ -5244,7 +6076,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentrequest_rent_until"
+            <field name="list_show_rent_request_rent_until"
                 type="radio"
                 label="COM_REMCA_RENT_REQUESTS_LIST_RENT_UNTIL_LABEL"
 				description="COM_REMCA_RENT_REQUESTS_LIST_RENT_UNTIL_DESC"
@@ -5254,7 +6086,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentrequest_rent_request"
+            <field name="list_show_rent_request_rent_request"
                 type="radio"
                 label="COM_REMCA_RENT_REQUESTS_LIST_RENT_REQUEST_LABEL"
 				description="COM_REMCA_RENT_REQUESTS_LIST_RENT_REQUEST_DESC"
@@ -5264,7 +6096,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentrequest_user_name"
+            <field name="list_show_rent_request_user_name"
                 type="radio"
                 label="COM_REMCA_RENT_REQUESTS_LIST_USER_NAME_LABEL"
 				description="COM_REMCA_RENT_REQUESTS_LIST_USER_NAME_DESC"
@@ -5274,7 +6106,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentrequest_user_email"
+            <field name="list_show_rent_request_user_email"
                 type="radio"
                 label="COM_REMCA_RENT_REQUESTS_LIST_USER_EMAIL_LABEL"
 				description="COM_REMCA_RENT_REQUESTS_LIST_USER_EMAIL_DESC"
@@ -5284,7 +6116,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentrequest_user_mailing"
+            <field name="list_show_rent_request_user_mailing"
                 type="radio"
                 label="COM_REMCA_RENT_REQUESTS_LIST_USER_MAILING_LABEL"
 				description="COM_REMCA_RENT_REQUESTS_LIST_USER_MAILING_DESC"
@@ -5294,7 +6126,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentrequest_status"
+            <field name="list_show_rent_request_status"
                 type="radio"
                 label="COM_REMCA_RENT_REQUESTS_LIST_STATUS_LABEL"
 				description="COM_REMCA_RENT_REQUESTS_LIST_STATUS_DESC"
@@ -5305,24 +6137,24 @@
                 <option value="0">JHIDE</option>
             </field>
     </fieldset>
-    <fieldset name="rentsal_display"
+    <fieldset name="rent_sal_display"
 		label="COM_REMCA_RENT_SAL_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
 		description="COM_REMCA_RENT_SAL_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
-        <field name="rentsal_layout"
+        <field name="rent_sal_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
 			description="COM_REMCA_RENT_SAL_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
-			view="rentsal"
+			view="rent_sal"
             default="_:default"
 		/>
         <field name="spacer0"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_rentsal_icons"
+        <field name="show_rent_sal_icons"
             type="radio"
             label="COM_REMCA_SHOW_ICONS_LABEL"
             description="COM_REMCA_SHOW_ICONS_DESC"
@@ -5333,7 +6165,7 @@
             <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
             <option	value="-1">JHIDE</option>
         </field>
-        <field name="show_rentsal_print_icon"
+        <field name="show_rent_sal_print_icon"
             type="radio"
             label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
             description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -5343,7 +6175,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_email_icon"
+        <field name="show_rent_sal_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_EMAIL_ICON_DESC"
@@ -5353,7 +6185,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="keep_rentsal_itemid"
+        <field name="keep_rent_sal_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
             description="COM_REMCA_RENT_SAL_KEEP_ITEMID_DESC"
@@ -5363,7 +6195,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_rentsal_navigation"
+        <field name="show_rent_sal_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_NAVIGATION_DESC"
@@ -5377,7 +6209,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_rentsal_readmore"
+        <field name="show_rent_sal_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_READMORE_DESC"
@@ -5387,7 +6219,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="rentsal_readmore_limit"
+        <field name="rent_sal_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_READMORE_LIMIT_DESC"
@@ -5397,7 +6229,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_rentsal_admin"
+        <field name="show_rent_sal_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_ADMIN_DESC"
@@ -5407,7 +6239,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_id_house"
+        <field name="show_rent_sal_id_house"
             type="radio"
             label="COM_REMCA_RENT_SAL_SHOW_FIELD_ID_HOUSE_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_FIELD_ID_HOUSE_DESC"
@@ -5417,7 +6249,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_monthW"
+        <field name="show_rent_sal_monthW"
             type="radio"
             label="COM_REMCA_RENT_SAL_SHOW_FIELD_MONTHW_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_FIELD_MONTHW_DESC"
@@ -5427,7 +6259,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_yearW"
+        <field name="show_rent_sal_yearW"
             type="radio"
             label="COM_REMCA_RENT_SAL_SHOW_FIELD_YEARW_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_FIELD_YEARW_DESC"
@@ -5437,7 +6269,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_week"
+        <field name="show_rent_sal_week"
             type="radio"
             label="COM_REMCA_RENT_SAL_SHOW_FIELD_WEEK_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_FIELD_WEEK_DESC"
@@ -5447,7 +6279,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_weekend"
+        <field name="show_rent_sal_weekend"
             type="radio"
             label="COM_REMCA_RENT_SAL_SHOW_FIELD_WEEKEND_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_FIELD_WEEKEND_DESC"
@@ -5457,7 +6289,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_midweek"
+        <field name="show_rent_sal_midweek"
             type="radio"
             label="COM_REMCA_RENT_SAL_SHOW_FIELD_MIDWEEK_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_FIELD_MIDWEEK_DESC"
@@ -5467,7 +6299,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_price_from"
+        <field name="show_rent_sal_price_from"
             type="radio"
             label="COM_REMCA_RENT_SAL_SHOW_FIELD_PRICE_FROM_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_FIELD_PRICE_FROM_DESC"
@@ -5477,7 +6309,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_price_to"
+        <field name="show_rent_sal_price_to"
             type="radio"
             label="COM_REMCA_RENT_SAL_SHOW_FIELD_PRICE_TO_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_FIELD_PRICE_TO_DESC"
@@ -5487,7 +6319,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_special_price"
+        <field name="show_rent_sal_special_price"
             type="radio"
             label="COM_REMCA_RENT_SAL_SHOW_FIELD_SPECIAL_PRICE_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_FIELD_SPECIAL_PRICE_DESC"
@@ -5497,7 +6329,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_comment_price"
+        <field name="show_rent_sal_comment_price"
             type="radio"
             label="COM_REMCA_RENT_SAL_SHOW_FIELD_COMMENT_PRICE_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_FIELD_COMMENT_PRICE_DESC"
@@ -5507,7 +6339,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_priceunit"
+        <field name="show_rent_sal_priceunit"
             type="radio"
             label="COM_REMCA_RENT_SAL_SHOW_FIELD_PRICEUNIT_LABEL"
             description="COM_REMCA_RENT_SAL_SHOW_FIELD_PRICEUNIT_DESC"
@@ -5522,14 +6354,14 @@
         label="COM_REMCA_RENT_SAL_FIELD_CONFIG_BLOG_LIST_LABEL"
         description="COM_REMCA_RENT_SAL_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
-        <field name="rentsal_initial_sort"
+        <field name="rent_sal_initial_sort"
             type="list"
             label="COM_REMCA_RENT_SAL_ORDER_LABEL"
             description="COM_REMCA_RENT_SAL_ORDER_DESC"
 			class="chzn-color"
 		>
         </field>
-        <field name="rentsal_initial_direction"
+        <field name="rent_sal_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
             description="COM_REMCA_RENT_SAL_ORDER_DIRECTION_DESC"
@@ -5539,7 +6371,7 @@
             <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
             <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
         </field>
-        <field name="show_rentsal_filter_field"
+        <field name="show_rent_sal_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
             description="COM_REMCA_RENT_SAL_FILTER_FIELD_DESC"
@@ -5548,7 +6380,7 @@
    		>
             <option value="hide">JHIDE</option>
         </field>        
-        <field name="show_rentsal_headings"
+        <field name="show_rent_sal_headings"
             type="radio"
             label="JGLOBAL_SHOW_HEADINGS_LABEL"
             description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -5558,7 +6390,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_pagination"
+        <field name="show_rent_sal_pagination"
             type="radio"
             label="JGLOBAL_PAGINATION_LABEL"
             description="JGLOBAL_PAGINATION_DESC"
@@ -5569,7 +6401,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_pagination_results"
+        <field name="show_rent_sal_pagination_results"
             type="radio"
             label="JGLOBAL_PAGINATION_RESULTS_LABEL"
             description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -5579,7 +6411,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_pagination_limit"
+        <field name="show_rent_sal_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_RENT_SAL_SHOW_PAGINATION_LIMIT_DESC"
@@ -5589,7 +6421,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="rentsal_num_per_page"
+        <field name="rent_sal_num_per_page"
             type="list"
             description="COM_REMCA_RENT_SAL_NUM_PER_PAGE_DESC"
             label="COM_REMCA_RENT_SAL_NUM_PER_PAGE_LABEL"
@@ -5616,7 +6448,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_rentsal_add_link"
+        <field name="show_rent_sal_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
 			description="COM_REMCA_RENT_SAL_SHOW_ADD_LINK_DESC"
@@ -5626,7 +6458,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="list_show_rentsal_date"
+        <field name="list_show_rent_sal_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
 			description="COM_REMCA_RENT_SAL_SHOW_DATE_DESC"
@@ -5636,13 +6468,13 @@
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="rentsal_date_format"
+        <field name="rent_sal_date_format"
             type="text"
             label="JGLOBAL_DATE_FORMAT_LABEL"
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_rentsal_id_house"
+            <field name="list_show_rent_sal_id_house"
                 type="radio"
                 label="COM_REMCA_RENT_SAL_LIST_ID_HOUSE_LABEL"
 				description="COM_REMCA_RENT_SAL_LIST_ID_HOUSE_DESC"
@@ -5652,7 +6484,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentsal_monthW"
+            <field name="list_show_rent_sal_monthW"
                 type="radio"
                 label="COM_REMCA_RENT_SAL_LIST_MONTHW_LABEL"
 				description="COM_REMCA_RENT_SAL_LIST_MONTHW_DESC"
@@ -5662,7 +6494,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentsal_yearW"
+            <field name="list_show_rent_sal_yearW"
                 type="radio"
                 label="COM_REMCA_RENT_SAL_LIST_YEARW_LABEL"
 				description="COM_REMCA_RENT_SAL_LIST_YEARW_DESC"
@@ -5672,7 +6504,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentsal_week"
+            <field name="list_show_rent_sal_week"
                 type="radio"
                 label="COM_REMCA_RENT_SAL_LIST_WEEK_LABEL"
 				description="COM_REMCA_RENT_SAL_LIST_WEEK_DESC"
@@ -5682,7 +6514,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentsal_weekend"
+            <field name="list_show_rent_sal_weekend"
                 type="radio"
                 label="COM_REMCA_RENT_SAL_LIST_WEEKEND_LABEL"
 				description="COM_REMCA_RENT_SAL_LIST_WEEKEND_DESC"
@@ -5692,7 +6524,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentsal_midweek"
+            <field name="list_show_rent_sal_midweek"
                 type="radio"
                 label="COM_REMCA_RENT_SAL_LIST_MIDWEEK_LABEL"
 				description="COM_REMCA_RENT_SAL_LIST_MIDWEEK_DESC"
@@ -5702,7 +6534,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentsal_price_from"
+            <field name="list_show_rent_sal_price_from"
                 type="radio"
                 label="COM_REMCA_RENT_SAL_LIST_PRICE_FROM_LABEL"
 				description="COM_REMCA_RENT_SAL_LIST_PRICE_FROM_DESC"
@@ -5712,7 +6544,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentsal_price_to"
+            <field name="list_show_rent_sal_price_to"
                 type="radio"
                 label="COM_REMCA_RENT_SAL_LIST_PRICE_TO_LABEL"
 				description="COM_REMCA_RENT_SAL_LIST_PRICE_TO_DESC"
@@ -5722,7 +6554,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentsal_special_price"
+            <field name="list_show_rent_sal_special_price"
                 type="radio"
                 label="COM_REMCA_RENT_SAL_LIST_SPECIAL_PRICE_LABEL"
 				description="COM_REMCA_RENT_SAL_LIST_SPECIAL_PRICE_DESC"
@@ -5732,7 +6564,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentsal_comment_price"
+            <field name="list_show_rent_sal_comment_price"
                 type="radio"
                 label="COM_REMCA_RENT_SAL_LIST_COMMENT_PRICE_LABEL"
 				description="COM_REMCA_RENT_SAL_LIST_COMMENT_PRICE_DESC"
@@ -5742,7 +6574,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_rentsal_priceunit"
+            <field name="list_show_rent_sal_priceunit"
                 type="radio"
                 label="COM_REMCA_RENT_SAL_LIST_PRICEUNIT_LABEL"
 				description="COM_REMCA_RENT_SAL_LIST_PRICEUNIT_DESC"
@@ -6141,24 +6973,24 @@
                 <option value="0">JHIDE</option>
             </field>
     </fieldset>
-    <fieldset name="tracksource_display"
+    <fieldset name="track_source_display"
 		label="COM_REMCA_TRACK_SOURCE_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
 		description="COM_REMCA_TRACK_SOURCE_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
-        <field name="tracksource_layout"
+        <field name="track_source_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
 			description="COM_REMCA_TRACK_SOURCE_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
-			view="tracksource"
+			view="track_source"
             default="_:default"
 		/>
         <field name="spacer0"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_tracksource_icons"
+        <field name="show_track_source_icons"
             type="radio"
             label="COM_REMCA_SHOW_ICONS_LABEL"
             description="COM_REMCA_SHOW_ICONS_DESC"
@@ -6169,7 +7001,7 @@
             <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
             <option	value="-1">JHIDE</option>
         </field>
-        <field name="show_tracksource_print_icon"
+        <field name="show_track_source_print_icon"
             type="radio"
             label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
             description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -6179,7 +7011,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_tracksource_email_icon"
+        <field name="show_track_source_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
             description="COM_REMCA_TRACK_SOURCE_SHOW_EMAIL_ICON_DESC"
@@ -6189,7 +7021,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="keep_tracksource_itemid"
+        <field name="keep_track_source_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
             description="COM_REMCA_TRACK_SOURCE_KEEP_ITEMID_DESC"
@@ -6199,7 +7031,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_tracksource_navigation"
+        <field name="show_track_source_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
             description="COM_REMCA_TRACK_SOURCE_SHOW_NAVIGATION_DESC"
@@ -6213,7 +7045,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_tracksource_readmore"
+        <field name="show_track_source_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
             description="COM_REMCA_TRACK_SOURCE_SHOW_READMORE_DESC"
@@ -6223,7 +7055,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="tracksource_readmore_limit"
+        <field name="track_source_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
             description="COM_REMCA_TRACK_SOURCE_SHOW_READMORE_LIMIT_DESC"
@@ -6233,7 +7065,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_tracksource_admin"
+        <field name="show_track_source_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
             description="COM_REMCA_TRACK_SOURCE_SHOW_ADMIN_DESC"
@@ -6243,7 +7075,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_tracksource_id_house"
+        <field name="show_track_source_id_house"
             type="radio"
             label="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_ID_HOUSE_LABEL"
             description="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_ID_HOUSE_DESC"
@@ -6253,7 +7085,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_tracksource_sequence_number"
+        <field name="show_track_source_sequence_number"
             type="radio"
             label="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_SEQUENCE_NUMBER_LABEL"
             description="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_SEQUENCE_NUMBER_DESC"
@@ -6263,7 +7095,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_tracksource_src"
+        <field name="show_track_source_src"
             type="radio"
             label="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_SRC_LABEL"
             description="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_SRC_DESC"
@@ -6273,7 +7105,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_tracksource_kind"
+        <field name="show_track_source_kind"
             type="radio"
             label="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_KIND_LABEL"
             description="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_KIND_DESC"
@@ -6283,7 +7115,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_tracksource_scrlang"
+        <field name="show_track_source_scrlang"
             type="radio"
             label="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_SCRLANG_LABEL"
             description="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_SCRLANG_DESC"
@@ -6293,7 +7125,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_tracksource_label"
+        <field name="show_track_source_label"
             type="radio"
             label="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_LABEL_LABEL"
             description="COM_REMCA_TRACK_SOURCE_SHOW_FIELD_LABEL_DESC"
@@ -6308,14 +7140,14 @@
         label="COM_REMCA_TRACK_SOURCE_FIELD_CONFIG_BLOG_LIST_LABEL"
         description="COM_REMCA_TRACK_SOURCE_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
-        <field name="tracksource_initial_sort"
+        <field name="track_source_initial_sort"
             type="list"
             label="COM_REMCA_TRACK_SOURCE_ORDER_LABEL"
             description="COM_REMCA_TRACK_SOURCE_ORDER_DESC"
 			class="chzn-color"
 		>
         </field>
-        <field name="tracksource_initial_direction"
+        <field name="track_source_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
             description="COM_REMCA_TRACK_SOURCE_ORDER_DIRECTION_DESC"
@@ -6325,7 +7157,7 @@
             <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
             <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
         </field>
-        <field name="show_tracksource_filter_field"
+        <field name="show_track_source_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
             description="COM_REMCA_TRACK_SOURCE_FILTER_FIELD_DESC"
@@ -6334,7 +7166,7 @@
    		>
             <option value="hide">JHIDE</option>
         </field>        
-        <field name="show_tracksource_headings"
+        <field name="show_track_source_headings"
             type="radio"
             label="JGLOBAL_SHOW_HEADINGS_LABEL"
             description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -6344,7 +7176,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_tracksource_pagination"
+        <field name="show_track_source_pagination"
             type="radio"
             label="JGLOBAL_PAGINATION_LABEL"
             description="JGLOBAL_PAGINATION_DESC"
@@ -6355,7 +7187,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_tracksource_pagination_results"
+        <field name="show_track_source_pagination_results"
             type="radio"
             label="JGLOBAL_PAGINATION_RESULTS_LABEL"
             description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -6365,7 +7197,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_tracksource_pagination_limit"
+        <field name="show_track_source_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_TRACK_SOURCE_SHOW_PAGINATION_LIMIT_DESC"
@@ -6375,7 +7207,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="tracksource_num_per_page"
+        <field name="track_source_num_per_page"
             type="list"
             description="COM_REMCA_TRACK_SOURCE_NUM_PER_PAGE_DESC"
             label="COM_REMCA_TRACK_SOURCE_NUM_PER_PAGE_LABEL"
@@ -6402,7 +7234,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_tracksource_add_link"
+        <field name="show_track_source_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
 			description="COM_REMCA_TRACK_SOURCE_SHOW_ADD_LINK_DESC"
@@ -6412,7 +7244,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="list_show_tracksource_date"
+        <field name="list_show_track_source_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
 			description="COM_REMCA_TRACK_SOURCE_SHOW_DATE_DESC"
@@ -6422,13 +7254,13 @@
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="tracksource_date_format"
+        <field name="track_source_date_format"
             type="text"
             label="JGLOBAL_DATE_FORMAT_LABEL"
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_tracksource_id_house"
+            <field name="list_show_track_source_id_house"
                 type="radio"
                 label="COM_REMCA_TRACK_SOURCE_LIST_ID_HOUSE_LABEL"
 				description="COM_REMCA_TRACK_SOURCE_LIST_ID_HOUSE_DESC"
@@ -6438,7 +7270,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_tracksource_sequence_number"
+            <field name="list_show_track_source_sequence_number"
                 type="radio"
                 label="COM_REMCA_TRACK_SOURCE_LIST_SEQUENCE_NUMBER_LABEL"
 				description="COM_REMCA_TRACK_SOURCE_LIST_SEQUENCE_NUMBER_DESC"
@@ -6448,7 +7280,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_tracksource_src"
+            <field name="list_show_track_source_src"
                 type="radio"
                 label="COM_REMCA_TRACK_SOURCE_LIST_SRC_LABEL"
 				description="COM_REMCA_TRACK_SOURCE_LIST_SRC_DESC"
@@ -6458,7 +7290,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_tracksource_kind"
+            <field name="list_show_track_source_kind"
                 type="radio"
                 label="COM_REMCA_TRACK_SOURCE_LIST_KIND_LABEL"
 				description="COM_REMCA_TRACK_SOURCE_LIST_KIND_DESC"
@@ -6468,7 +7300,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_tracksource_scrlang"
+            <field name="list_show_track_source_scrlang"
                 type="radio"
                 label="COM_REMCA_TRACK_SOURCE_LIST_SCRLANG_LABEL"
 				description="COM_REMCA_TRACK_SOURCE_LIST_SCRLANG_DESC"
@@ -6478,7 +7310,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_tracksource_label"
+            <field name="list_show_track_source_label"
                 type="radio"
                 label="COM_REMCA_TRACK_SOURCE_LIST_LABEL_LABEL"
 				description="COM_REMCA_TRACK_SOURCE_LIST_LABEL_DESC"
@@ -6862,24 +7694,24 @@
                 <option value="0">JHIDE</option>
             </field>
     </fieldset>
-    <fieldset name="videosource_display"
+    <fieldset name="video_source_display"
 		label="COM_REMCA_VIDEO_SOURCE_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
 		description="COM_REMCA_VIDEO_SOURCE_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
-        <field name="videosource_layout"
+        <field name="video_source_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
 			description="COM_REMCA_VIDEO_SOURCE_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
-			view="videosource"
+			view="video_source"
             default="_:default"
 		/>
         <field name="spacer0"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_videosource_icons"
+        <field name="show_video_source_icons"
             type="radio"
             label="COM_REMCA_SHOW_ICONS_LABEL"
             description="COM_REMCA_SHOW_ICONS_DESC"
@@ -6890,7 +7722,7 @@
             <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
             <option	value="-1">JHIDE</option>
         </field>
-        <field name="show_videosource_print_icon"
+        <field name="show_video_source_print_icon"
             type="radio"
             label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
             description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -6900,7 +7732,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_videosource_email_icon"
+        <field name="show_video_source_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_SHOW_EMAIL_ICON_DESC"
@@ -6910,7 +7742,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="keep_videosource_itemid"
+        <field name="keep_video_source_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_KEEP_ITEMID_DESC"
@@ -6920,7 +7752,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_videosource_navigation"
+        <field name="show_video_source_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_SHOW_NAVIGATION_DESC"
@@ -6934,7 +7766,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_videosource_readmore"
+        <field name="show_video_source_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_SHOW_READMORE_DESC"
@@ -6944,7 +7776,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="videosource_readmore_limit"
+        <field name="video_source_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_SHOW_READMORE_LIMIT_DESC"
@@ -6954,7 +7786,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_videosource_admin"
+        <field name="show_video_source_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_SHOW_ADMIN_DESC"
@@ -6964,7 +7796,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_videosource_id_house"
+        <field name="show_video_source_id_house"
             type="radio"
             label="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_ID_HOUSE_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_ID_HOUSE_DESC"
@@ -6974,7 +7806,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_videosource_sequence_number"
+        <field name="show_video_source_sequence_number"
             type="radio"
             label="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_SEQUENCE_NUMBER_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_SEQUENCE_NUMBER_DESC"
@@ -6984,7 +7816,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_videosource_src"
+        <field name="show_video_source_src"
             type="radio"
             label="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_SRC_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_SRC_DESC"
@@ -6994,7 +7826,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_videosource_type"
+        <field name="show_video_source_type"
             type="radio"
             label="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_TYPE_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_TYPE_DESC"
@@ -7004,7 +7836,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_videosource_media"
+        <field name="show_video_source_media"
             type="radio"
             label="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_MEDIA_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_MEDIA_DESC"
@@ -7014,7 +7846,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_videosource_youtube"
+        <field name="show_video_source_youtube"
             type="radio"
             label="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_YOUTUBE_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_SHOW_FIELD_YOUTUBE_DESC"
@@ -7029,14 +7861,14 @@
         label="COM_REMCA_VIDEO_SOURCE_FIELD_CONFIG_BLOG_LIST_LABEL"
         description="COM_REMCA_VIDEO_SOURCE_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
-        <field name="videosource_initial_sort"
+        <field name="video_source_initial_sort"
             type="list"
             label="COM_REMCA_VIDEO_SOURCE_ORDER_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_ORDER_DESC"
 			class="chzn-color"
 		>
         </field>
-        <field name="videosource_initial_direction"
+        <field name="video_source_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_ORDER_DIRECTION_DESC"
@@ -7046,7 +7878,7 @@
             <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
             <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
         </field>
-        <field name="show_videosource_filter_field"
+        <field name="show_video_source_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
             description="COM_REMCA_VIDEO_SOURCE_FILTER_FIELD_DESC"
@@ -7055,7 +7887,7 @@
    		>
             <option value="hide">JHIDE</option>
         </field>        
-        <field name="show_videosource_headings"
+        <field name="show_video_source_headings"
             type="radio"
             label="JGLOBAL_SHOW_HEADINGS_LABEL"
             description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -7065,7 +7897,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_videosource_pagination"
+        <field name="show_video_source_pagination"
             type="radio"
             label="JGLOBAL_PAGINATION_LABEL"
             description="JGLOBAL_PAGINATION_DESC"
@@ -7076,7 +7908,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_videosource_pagination_results"
+        <field name="show_video_source_pagination_results"
             type="radio"
             label="JGLOBAL_PAGINATION_RESULTS_LABEL"
             description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -7086,7 +7918,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_videosource_pagination_limit"
+        <field name="show_video_source_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_VIDEO_SOURCE_SHOW_PAGINATION_LIMIT_DESC"
@@ -7096,7 +7928,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="videosource_num_per_page"
+        <field name="video_source_num_per_page"
             type="list"
             description="COM_REMCA_VIDEO_SOURCE_NUM_PER_PAGE_DESC"
             label="COM_REMCA_VIDEO_SOURCE_NUM_PER_PAGE_LABEL"
@@ -7123,7 +7955,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_videosource_add_link"
+        <field name="show_video_source_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
 			description="COM_REMCA_VIDEO_SOURCE_SHOW_ADD_LINK_DESC"
@@ -7133,7 +7965,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="list_show_videosource_date"
+        <field name="list_show_video_source_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
 			description="COM_REMCA_VIDEO_SOURCE_SHOW_DATE_DESC"
@@ -7143,13 +7975,13 @@
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="videosource_date_format"
+        <field name="video_source_date_format"
             type="text"
             label="JGLOBAL_DATE_FORMAT_LABEL"
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_videosource_id_house"
+            <field name="list_show_video_source_id_house"
                 type="radio"
                 label="COM_REMCA_VIDEO_SOURCE_LIST_ID_HOUSE_LABEL"
 				description="COM_REMCA_VIDEO_SOURCE_LIST_ID_HOUSE_DESC"
@@ -7159,7 +7991,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_videosource_sequence_number"
+            <field name="list_show_video_source_sequence_number"
                 type="radio"
                 label="COM_REMCA_VIDEO_SOURCE_LIST_SEQUENCE_NUMBER_LABEL"
 				description="COM_REMCA_VIDEO_SOURCE_LIST_SEQUENCE_NUMBER_DESC"
@@ -7169,7 +8001,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_videosource_src"
+            <field name="list_show_video_source_src"
                 type="radio"
                 label="COM_REMCA_VIDEO_SOURCE_LIST_SRC_LABEL"
 				description="COM_REMCA_VIDEO_SOURCE_LIST_SRC_DESC"
@@ -7179,7 +8011,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_videosource_type"
+            <field name="list_show_video_source_type"
                 type="radio"
                 label="COM_REMCA_VIDEO_SOURCE_LIST_TYPE_LABEL"
 				description="COM_REMCA_VIDEO_SOURCE_LIST_TYPE_DESC"
@@ -7189,7 +8021,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_videosource_media"
+            <field name="list_show_video_source_media"
                 type="radio"
                 label="COM_REMCA_VIDEO_SOURCE_LIST_MEDIA_LABEL"
 				description="COM_REMCA_VIDEO_SOURCE_LIST_MEDIA_DESC"
@@ -7199,7 +8031,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_videosource_youtube"
+            <field name="list_show_video_source_youtube"
                 type="radio"
                 label="COM_REMCA_VIDEO_SOURCE_LIST_YOUTUBE_LABEL"
 				description="COM_REMCA_VIDEO_SOURCE_LIST_YOUTUBE_DESC"
@@ -7210,24 +8042,24 @@
                 <option value="0">JHIDE</option>
             </field>
     </fieldset>
-    <fieldset name="buyingrequest_display"
+    <fieldset name="buying_request_display"
 		label="COM_REMCA_BUYING_REQUESTS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
 		description="COM_REMCA_BUYING_REQUESTS_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
-        <field name="buyingrequest_layout"
+        <field name="buying_request_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
 			description="COM_REMCA_BUYING_REQUESTS_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
-			view="buyingrequest"
+			view="buying_request"
             default="_:default"
 		/>
         <field name="spacer0"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_buyingrequest_icons"
+        <field name="show_buying_request_icons"
             type="radio"
             label="COM_REMCA_SHOW_ICONS_LABEL"
             description="COM_REMCA_SHOW_ICONS_DESC"
@@ -7238,7 +8070,7 @@
             <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
             <option	value="-1">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_print_icon"
+        <field name="show_buying_request_print_icon"
             type="radio"
             label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
             description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -7248,7 +8080,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_email_icon"
+        <field name="show_buying_request_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_SHOW_EMAIL_ICON_DESC"
@@ -7258,7 +8090,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="keep_buyingrequest_itemid"
+        <field name="keep_buying_request_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_KEEP_ITEMID_DESC"
@@ -7268,7 +8100,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_buyingrequest_navigation"
+        <field name="show_buying_request_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_SHOW_NAVIGATION_DESC"
@@ -7282,7 +8114,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_buyingrequest_readmore"
+        <field name="show_buying_request_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_SHOW_READMORE_DESC"
@@ -7292,7 +8124,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="buyingrequest_readmore_limit"
+        <field name="buying_request_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_SHOW_READMORE_LIMIT_DESC"
@@ -7302,7 +8134,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_buyingrequest_admin"
+        <field name="show_buying_request_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_SHOW_ADMIN_DESC"
@@ -7312,7 +8144,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_id_house"
+        <field name="show_buying_request_id_house"
             type="radio"
             label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_ID_HOUSE_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_ID_HOUSE_DESC"
@@ -7322,7 +8154,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_id_user"
+        <field name="show_buying_request_id_user"
             type="radio"
             label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_ID_USER_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_ID_USER_DESC"
@@ -7332,7 +8164,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_buying_request"
+        <field name="show_buying_request_buying_request"
             type="radio"
             label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_BUYING_REQUEST_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_BUYING_REQUEST_DESC"
@@ -7342,7 +8174,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_customer_name"
+        <field name="show_buying_request_customer_name"
             type="radio"
             label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_NAME_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_NAME_DESC"
@@ -7352,7 +8184,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_customer_email"
+        <field name="show_buying_request_customer_email"
             type="radio"
             label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_EMAIL_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_EMAIL_DESC"
@@ -7362,7 +8194,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_customer_phone"
+        <field name="show_buying_request_customer_phone"
             type="radio"
             label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_PHONE_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_PHONE_DESC"
@@ -7372,7 +8204,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_customer_comment"
+        <field name="show_buying_request_customer_comment"
             type="radio"
             label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_COMMENT_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_CUSTOMER_COMMENT_DESC"
@@ -7382,7 +8214,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_status"
+        <field name="show_buying_request_status"
             type="radio"
             label="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_STATUS_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_SHOW_FIELD_STATUS_DESC"
@@ -7397,14 +8229,14 @@
         label="COM_REMCA_BUYING_REQUESTS_FIELD_CONFIG_BLOG_LIST_LABEL"
         description="COM_REMCA_BUYING_REQUESTS_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
-        <field name="buyingrequest_initial_sort"
+        <field name="buying_request_initial_sort"
             type="list"
             label="COM_REMCA_BUYING_REQUESTS_ORDER_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_ORDER_DESC"
 			class="chzn-color"
 		>
         </field>
-        <field name="buyingrequest_initial_direction"
+        <field name="buying_request_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_ORDER_DIRECTION_DESC"
@@ -7414,7 +8246,7 @@
             <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
             <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
         </field>
-        <field name="show_buyingrequest_filter_field"
+        <field name="show_buying_request_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
             description="COM_REMCA_BUYING_REQUESTS_FILTER_FIELD_DESC"
@@ -7423,7 +8255,7 @@
    		>
             <option value="hide">JHIDE</option>
         </field>        
-        <field name="show_buyingrequest_headings"
+        <field name="show_buying_request_headings"
             type="radio"
             label="JGLOBAL_SHOW_HEADINGS_LABEL"
             description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -7433,7 +8265,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_pagination"
+        <field name="show_buying_request_pagination"
             type="radio"
             label="JGLOBAL_PAGINATION_LABEL"
             description="JGLOBAL_PAGINATION_DESC"
@@ -7444,7 +8276,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_pagination_results"
+        <field name="show_buying_request_pagination_results"
             type="radio"
             label="JGLOBAL_PAGINATION_RESULTS_LABEL"
             description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -7454,7 +8286,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_pagination_limit"
+        <field name="show_buying_request_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_BUYING_REQUESTS_SHOW_PAGINATION_LIMIT_DESC"
@@ -7464,7 +8296,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="buyingrequest_num_per_page"
+        <field name="buying_request_num_per_page"
             type="list"
             description="COM_REMCA_BUYING_REQUESTS_NUM_PER_PAGE_DESC"
             label="COM_REMCA_BUYING_REQUESTS_NUM_PER_PAGE_LABEL"
@@ -7491,7 +8323,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_buyingrequest_add_link"
+        <field name="show_buying_request_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
 			description="COM_REMCA_BUYING_REQUESTS_SHOW_ADD_LINK_DESC"
@@ -7501,7 +8333,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="list_show_buyingrequest_date"
+        <field name="list_show_buying_request_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
 			description="COM_REMCA_BUYING_REQUESTS_SHOW_DATE_DESC"
@@ -7511,13 +8343,13 @@
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="buyingrequest_date_format"
+        <field name="buying_request_date_format"
             type="text"
             label="JGLOBAL_DATE_FORMAT_LABEL"
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_buyingrequest_id_house"
+            <field name="list_show_buying_request_id_house"
                 type="radio"
                 label="COM_REMCA_BUYING_REQUESTS_LIST_ID_HOUSE_LABEL"
 				description="COM_REMCA_BUYING_REQUESTS_LIST_ID_HOUSE_DESC"
@@ -7527,7 +8359,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_buyingrequest_id_user"
+            <field name="list_show_buying_request_id_user"
                 type="radio"
                 label="COM_REMCA_BUYING_REQUESTS_LIST_ID_USER_LABEL"
 				description="COM_REMCA_BUYING_REQUESTS_LIST_ID_USER_DESC"
@@ -7537,7 +8369,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_buyingrequest_buying_request"
+            <field name="list_show_buying_request_buying_request"
                 type="radio"
                 label="COM_REMCA_BUYING_REQUESTS_LIST_BUYING_REQUEST_LABEL"
 				description="COM_REMCA_BUYING_REQUESTS_LIST_BUYING_REQUEST_DESC"
@@ -7547,7 +8379,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_buyingrequest_customer_name"
+            <field name="list_show_buying_request_customer_name"
                 type="radio"
                 label="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_NAME_LABEL"
 				description="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_NAME_DESC"
@@ -7557,7 +8389,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_buyingrequest_customer_email"
+            <field name="list_show_buying_request_customer_email"
                 type="radio"
                 label="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_EMAIL_LABEL"
 				description="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_EMAIL_DESC"
@@ -7567,7 +8399,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_buyingrequest_customer_phone"
+            <field name="list_show_buying_request_customer_phone"
                 type="radio"
                 label="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_PHONE_LABEL"
 				description="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_PHONE_DESC"
@@ -7577,7 +8409,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_buyingrequest_customer_comment"
+            <field name="list_show_buying_request_customer_comment"
                 type="radio"
                 label="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_COMMENT_LABEL"
 				description="COM_REMCA_BUYING_REQUESTS_LIST_CUSTOMER_COMMENT_DESC"
@@ -7587,7 +8419,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_buyingrequest_status"
+            <field name="list_show_buying_request_status"
                 type="radio"
                 label="COM_REMCA_BUYING_REQUESTS_LIST_STATUS_LABEL"
 				description="COM_REMCA_BUYING_REQUESTS_LIST_STATUS_DESC"
@@ -8166,24 +8998,24 @@
                 <option value="0">JHIDE</option>
             </field>
     </fieldset>
-    <fieldset name="constlanguage_display"
+    <fieldset name="const_language_display"
 		label="COM_REMCA_CONST_LANGUAGE_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
 		description="COM_REMCA_CONST_LANGUAGE_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
-        <field name="constlanguage_layout"
+        <field name="const_language_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
 			description="COM_REMCA_CONST_LANGUAGE_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
-			view="constlanguage"
+			view="const_language"
             default="_:default"
 		/>
         <field name="spacer0"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_constlanguage_icons"
+        <field name="show_const_language_icons"
             type="radio"
             label="COM_REMCA_SHOW_ICONS_LABEL"
             description="COM_REMCA_SHOW_ICONS_DESC"
@@ -8194,7 +9026,7 @@
             <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
             <option	value="-1">JHIDE</option>
         </field>
-        <field name="show_constlanguage_print_icon"
+        <field name="show_const_language_print_icon"
             type="radio"
             label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
             description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -8204,7 +9036,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_constlanguage_email_icon"
+        <field name="show_const_language_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_SHOW_EMAIL_ICON_DESC"
@@ -8214,7 +9046,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="keep_constlanguage_itemid"
+        <field name="keep_const_language_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_KEEP_ITEMID_DESC"
@@ -8224,7 +9056,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_constlanguage_navigation"
+        <field name="show_const_language_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_SHOW_NAVIGATION_DESC"
@@ -8238,7 +9070,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_constlanguage_readmore"
+        <field name="show_const_language_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_SHOW_READMORE_DESC"
@@ -8248,7 +9080,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="constlanguage_readmore_limit"
+        <field name="const_language_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_SHOW_READMORE_LIMIT_DESC"
@@ -8258,7 +9090,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_constlanguage_admin"
+        <field name="show_const_language_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_SHOW_ADMIN_DESC"
@@ -8268,7 +9100,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_constlanguage_fk_constid"
+        <field name="show_const_language_fk_constid"
             type="radio"
             label="COM_REMCA_CONST_LANGUAGE_SHOW_FIELD_FK_CONSTID_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_SHOW_FIELD_FK_CONSTID_DESC"
@@ -8278,7 +9110,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_constlanguage_fk_languagesid"
+        <field name="show_const_language_fk_languagesid"
             type="radio"
             label="COM_REMCA_CONST_LANGUAGE_SHOW_FIELD_FK_LANGUAGESID_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_SHOW_FIELD_FK_LANGUAGESID_DESC"
@@ -8288,7 +9120,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_constlanguage_value_const"
+        <field name="show_const_language_value_const"
             type="radio"
             label="COM_REMCA_CONST_LANGUAGE_SHOW_FIELD_VALUE_CONST_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_SHOW_FIELD_VALUE_CONST_DESC"
@@ -8303,14 +9135,14 @@
         label="COM_REMCA_CONST_LANGUAGE_FIELD_CONFIG_BLOG_LIST_LABEL"
         description="COM_REMCA_CONST_LANGUAGE_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
-        <field name="constlanguage_initial_sort"
+        <field name="const_language_initial_sort"
             type="list"
             label="COM_REMCA_CONST_LANGUAGE_ORDER_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_ORDER_DESC"
 			class="chzn-color"
 		>
         </field>
-        <field name="constlanguage_initial_direction"
+        <field name="const_language_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_ORDER_DIRECTION_DESC"
@@ -8320,7 +9152,7 @@
             <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
             <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
         </field>
-        <field name="show_constlanguage_filter_field"
+        <field name="show_const_language_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
             description="COM_REMCA_CONST_LANGUAGE_FILTER_FIELD_DESC"
@@ -8329,7 +9161,7 @@
    		>
             <option value="hide">JHIDE</option>
         </field>        
-        <field name="show_constlanguage_headings"
+        <field name="show_const_language_headings"
             type="radio"
             label="JGLOBAL_SHOW_HEADINGS_LABEL"
             description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -8339,7 +9171,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_constlanguage_pagination"
+        <field name="show_const_language_pagination"
             type="radio"
             label="JGLOBAL_PAGINATION_LABEL"
             description="JGLOBAL_PAGINATION_DESC"
@@ -8350,7 +9182,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_constlanguage_pagination_results"
+        <field name="show_const_language_pagination_results"
             type="radio"
             label="JGLOBAL_PAGINATION_RESULTS_LABEL"
             description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -8360,7 +9192,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_constlanguage_pagination_limit"
+        <field name="show_const_language_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_CONST_LANGUAGE_SHOW_PAGINATION_LIMIT_DESC"
@@ -8370,7 +9202,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="constlanguage_num_per_page"
+        <field name="const_language_num_per_page"
             type="list"
             description="COM_REMCA_CONST_LANGUAGE_NUM_PER_PAGE_DESC"
             label="COM_REMCA_CONST_LANGUAGE_NUM_PER_PAGE_LABEL"
@@ -8397,7 +9229,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_constlanguage_add_link"
+        <field name="show_const_language_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
 			description="COM_REMCA_CONST_LANGUAGE_SHOW_ADD_LINK_DESC"
@@ -8407,7 +9239,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="list_show_constlanguage_date"
+        <field name="list_show_const_language_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
 			description="COM_REMCA_CONST_LANGUAGE_SHOW_DATE_DESC"
@@ -8417,13 +9249,13 @@
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="constlanguage_date_format"
+        <field name="const_language_date_format"
             type="text"
             label="JGLOBAL_DATE_FORMAT_LABEL"
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_constlanguage_fk_constid"
+            <field name="list_show_const_language_fk_constid"
                 type="radio"
                 label="COM_REMCA_CONST_LANGUAGE_LIST_FK_CONSTID_LABEL"
 				description="COM_REMCA_CONST_LANGUAGE_LIST_FK_CONSTID_DESC"
@@ -8433,7 +9265,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_constlanguage_fk_languagesid"
+            <field name="list_show_const_language_fk_languagesid"
                 type="radio"
                 label="COM_REMCA_CONST_LANGUAGE_LIST_FK_LANGUAGESID_LABEL"
 				description="COM_REMCA_CONST_LANGUAGE_LIST_FK_LANGUAGESID_DESC"
@@ -8443,7 +9275,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_constlanguage_value_const"
+            <field name="list_show_const_language_value_const"
                 type="radio"
                 label="COM_REMCA_CONST_LANGUAGE_LIST_VALUE_CONST_LABEL"
 				description="COM_REMCA_CONST_LANGUAGE_LIST_VALUE_CONST_DESC"
@@ -8754,24 +9586,24 @@
                 <option value="0">JHIDE</option>
             </field>
     </fieldset>
-    <fieldset name="featurehouse_display"
+    <fieldset name="feature_house_display"
 		label="COM_REMCA_FEATURE_HOUSES_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
 		description="COM_REMCA_FEATURE_HOUSES_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	>
-        <field name="featurehouse_layout"
+        <field name="feature_house_layout"
 			type="componentlayout"
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
 			description="COM_REMCA_FEATURE_HOUSES_CHOOSE_LAYOUT_DESC"
 			menuitems="true"
 			extension="com_remca"
-			view="featurehouse"
+			view="feature_house"
             default="_:default"
 		/>
         <field name="spacer0"
             type="spacer"
             hr="true"
 		/>
-        <field name="show_featurehouse_icons"
+        <field name="show_feature_house_icons"
             type="radio"
             label="COM_REMCA_SHOW_ICONS_LABEL"
             description="COM_REMCA_SHOW_ICONS_DESC"
@@ -8782,7 +9614,7 @@
             <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
             <option	value="-1">JHIDE</option>
         </field>
-        <field name="show_featurehouse_print_icon"
+        <field name="show_feature_house_print_icon"
             type="radio"
             label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
             description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -8792,7 +9624,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_featurehouse_email_icon"
+        <field name="show_feature_house_email_icon"
             type="radio"
             label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
             description="COM_REMCA_FEATURE_HOUSES_SHOW_EMAIL_ICON_DESC"
@@ -8802,7 +9634,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="keep_featurehouse_itemid"
+        <field name="keep_feature_house_itemid"
             type="radio"
             label="COM_REMCA_KEEP_ITEMID_LABEL"
             description="COM_REMCA_FEATURE_HOUSES_KEEP_ITEMID_DESC"
@@ -8812,7 +9644,7 @@
             <option	value="1">JYES</option>
             <option	value="0">JNO</option>
         </field>
-        <field name="show_featurehouse_navigation"
+        <field name="show_feature_house_navigation"
             type="radio"
             label="COM_REMCA_SHOW_NAVIGATION_LABEL"
             description="COM_REMCA_FEATURE_HOUSES_SHOW_NAVIGATION_DESC"
@@ -8826,7 +9658,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_featurehouse_readmore"
+        <field name="show_feature_house_readmore"
             type="radio"
             label="COM_REMCA_SHOW_READMORE_LABEL"
             description="COM_REMCA_FEATURE_HOUSES_SHOW_READMORE_DESC"
@@ -8836,7 +9668,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="featurehouse_readmore_limit"
+        <field name="feature_house_readmore_limit"
             type="text"
             label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
             description="COM_REMCA_FEATURE_HOUSES_SHOW_READMORE_LIMIT_DESC"
@@ -8846,7 +9678,7 @@
             type="spacer"
             hr="true"
 		/>
-        <field name="show_featurehouse_admin"
+        <field name="show_feature_house_admin"
             type="radio"
             label="COM_REMCA_SHOW_ADMIN_LABEL"
             description="COM_REMCA_FEATURE_HOUSES_SHOW_ADMIN_DESC"
@@ -8856,7 +9688,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_featurehouse_id_house"
+        <field name="show_feature_house_id_house"
             type="radio"
             label="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_ID_HOUSE_LABEL"
             description="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_ID_HOUSE_DESC"
@@ -8866,7 +9698,7 @@
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_featurehouse_id_featured"
+        <field name="show_feature_house_id_featured"
             type="radio"
             label="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_ID_FEATURED_LABEL"
             description="COM_REMCA_FEATURE_HOUSES_SHOW_FIELD_ID_FEATURED_DESC"
@@ -8881,14 +9713,14 @@
         label="COM_REMCA_FEATURE_HOUSES_FIELD_CONFIG_BLOG_LIST_LABEL"
         description="COM_REMCA_FEATURE_HOUSES_FIELD_CONFIG_BLOG_LIST_DESC"
 	>
-        <field name="featurehouse_initial_sort"
+        <field name="feature_house_initial_sort"
             type="list"
             label="COM_REMCA_FEATURE_HOUSES_ORDER_LABEL"
             description="COM_REMCA_FEATURE_HOUSES_ORDER_DESC"
 			class="chzn-color"
 		>
         </field>
-        <field name="featurehouse_initial_direction"
+        <field name="feature_house_initial_direction"
             type="radio"
             label="COM_REMCA_ORDER_DIRECTION_LABEL"
             description="COM_REMCA_FEATURE_HOUSES_ORDER_DIRECTION_DESC"
@@ -8898,7 +9730,7 @@
             <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
             <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
         </field>
-        <field name="show_featurehouse_filter_field"
+        <field name="show_feature_house_filter_field"
             type="list"
             label="JGLOBAL_FILTER_FIELD_LABEL"
             description="COM_REMCA_FEATURE_HOUSES_FILTER_FIELD_DESC"
@@ -8907,7 +9739,7 @@
    		>
             <option value="hide">JHIDE</option>
         </field>        
-        <field name="show_featurehouse_headings"
+        <field name="show_feature_house_headings"
             type="radio"
             label="JGLOBAL_SHOW_HEADINGS_LABEL"
             description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -8917,7 +9749,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_featurehouse_pagination"
+        <field name="show_feature_house_pagination"
             type="radio"
             label="JGLOBAL_PAGINATION_LABEL"
             description="JGLOBAL_PAGINATION_DESC"
@@ -8928,7 +9760,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_featurehouse_pagination_results"
+        <field name="show_feature_house_pagination_results"
             type="radio"
             label="JGLOBAL_PAGINATION_RESULTS_LABEL"
             description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -8938,7 +9770,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_featurehouse_pagination_limit"
+        <field name="show_feature_house_pagination_limit"
             type="radio"
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_FEATURE_HOUSES_SHOW_PAGINATION_LIMIT_DESC"
@@ -8948,7 +9780,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="featurehouse_num_per_page"
+        <field name="feature_house_num_per_page"
             type="list"
             description="COM_REMCA_FEATURE_HOUSES_NUM_PER_PAGE_DESC"
             label="COM_REMCA_FEATURE_HOUSES_NUM_PER_PAGE_LABEL"
@@ -8975,7 +9807,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_featurehouse_add_link"
+        <field name="show_feature_house_add_link"
             type="radio"
 			label="COM_REMCA_SHOW_ADD_LINK_LABEL"
 			description="COM_REMCA_FEATURE_HOUSES_SHOW_ADD_LINK_DESC"
@@ -8985,7 +9817,7 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="list_show_featurehouse_date"
+        <field name="list_show_feature_house_date"
             type="radio"
 			label="COM_REMCA_SHOW_DATE_LABEL"
 			description="COM_REMCA_FEATURE_HOUSES_SHOW_DATE_DESC"
@@ -8995,13 +9827,13 @@
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="featurehouse_date_format"
+        <field name="feature_house_date_format"
             type="text"
             label="JGLOBAL_DATE_FORMAT_LABEL"
             description="JGLOBAL_DATE_FORMAT_DESC"
             size="15"
 		/>
-            <field name="list_show_featurehouse_id_house"
+            <field name="list_show_feature_house_id_house"
                 type="radio"
                 label="COM_REMCA_FEATURE_HOUSES_LIST_ID_HOUSE_LABEL"
 				description="COM_REMCA_FEATURE_HOUSES_LIST_ID_HOUSE_DESC"
@@ -9011,7 +9843,7 @@
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_featurehouse_id_featured"
+            <field name="list_show_feature_house_id_featured"
                 type="radio"
                 label="COM_REMCA_FEATURE_HOUSES_LIST_ID_FEATURED_LABEL"
 				description="COM_REMCA_FEATURE_HOUSES_LIST_ID_FEATURED_DESC"
@@ -9409,6 +10241,7 @@
 		>
             <option value="">JNONE</option>
             <option value="Inmuebles">COM_REMCA_HOUSES</option>
+            <option value="Entrada Conversaciones Wtsapp ">COM_REMCA_WA_ENTRY_CONVERSATIONS</option>
         </field>
         <field name="show_categories_num_items"
             type="radio"

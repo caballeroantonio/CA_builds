@@ -194,7 +194,7 @@ class RemcaModelCategories extends JModelList
 		$query->select($db->quoteName('m.name').' AS m_main_category_name');
 		$query->select($db->quoteName('m.ordering').' AS m_main_category_ordering');
 
-		$query->join('LEFT', $db->quoteName('#__rem_maincategories').' AS m ON '.$db->quoteName('m.id').' = '.$db->quoteName('a.idcat'));	
+		$query->join('LEFT', $db->quoteName('#__rem_main_categories').' AS m ON '.$db->quoteName('m.id').' = '.$db->quoteName('a.idcat'));	
 					
 
 		// Filter by a single or group of categories.

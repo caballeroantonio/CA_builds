@@ -63,6 +63,34 @@ class PlgRemcaEmailcloak extends JPlugin
 		return true;
 	}
 	/**
+	 * Plugin that cloaks all emails in descripitons from spambots via Javascript.
+	 *
+	 * @param   string   $context  The context of the content being passed to the plugin.
+	 * @param   object   &$row     The entrada de la conversación whatsapp object.  Note $wa_entry_conversation->text is also available
+	 * @param   mixed    &$params  The entrada de la conversación whatsapp  params
+	 * @param   integer  $page     The 'page' number
+	 *
+	 * @return  mixed  Always returns void or true
+	 */
+	public function onWa_entry_conversationPrepare($context, &$row, &$params, $page = 0)
+	{
+		// Don't run this plugin when the entrada conversaciones wtsapp  are  being indexed
+		if ($context == 'com_finder.indexer')
+		{
+			return true;
+		}
+
+		$mode = (int) $this->params->def('wa_entry_conversation_mode', 1);
+
+		if (is_object($row))
+		{
+			$this->_cloak($row->description, $mode);
+			return true;
+		}
+		$this->_cloak($row, $mode);
+		return true;
+	}
+	/**
 	 * Generate a search pattern based on link and text.
 	 *
 	 * @param   string  $link  The target of an email link.

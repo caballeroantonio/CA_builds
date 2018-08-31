@@ -137,6 +137,38 @@ input.order-input
 {
       background-image: url(../images/icon-48-houses.png);
 }
+.icon-16-wa_title_conversation
+{
+      background-image: url(../images/icon-16-wa_title_conversations.png);
+}
+.icon-16-wa_title_conversations
+{
+      background-image: url(../images/icon-16-wa_title_conversations.png);
+}
+.icon-48-wa_title_conversation
+{
+      background-image: url(../images/icon-48-wa_title_conversations.png);
+}
+.icon-48-wa_title_conversations
+{
+      background-image: url(../images/icon-48-wa_title_conversations.png);
+}
+.icon-16-wa_entry_conversation
+{
+      background-image: url(../images/icon-16-wa_entry_conversations.png);
+}
+.icon-16-wa_entry_conversations
+{
+      background-image: url(../images/icon-16-wa_entry_conversations.png);
+}
+.icon-48-wa_entry_conversation
+{
+      background-image: url(../images/icon-48-wa_entry_conversations.png);
+}
+.icon-48-wa_entry_conversations
+{
+      background-image: url(../images/icon-48-wa_entry_conversations.png);
+}
 .icon-16-photo
 {
       background-image: url(../images/icon-16-photos.png);
@@ -153,7 +185,7 @@ input.order-input
 {
       background-image: url(../images/icon-48-photos.png);
 }
-.icon-16-mimetype
+.icon-16-mime_type
 {
       background-image: url(../images/icon-16-mime_types.png);
 }
@@ -161,7 +193,7 @@ input.order-input
 {
       background-image: url(../images/icon-16-mime_types.png);
 }
-.icon-48-mimetype
+.icon-48-mime_type
 {
       background-image: url(../images/icon-48-mime_types.png);
 }
@@ -169,7 +201,7 @@ input.order-input
 {
       background-image: url(../images/icon-48-mime_types.png);
 }
-.icon-16-mlsfordelete
+.icon-16-mls_for_delete
 {
       background-image: url(../images/icon-16-mls_for_delete.png);
 }
@@ -177,7 +209,7 @@ input.order-input
 {
       background-image: url(../images/icon-16-mls_for_delete.png);
 }
-.icon-48-mlsfordelete
+.icon-48-mls_for_delete
 {
       background-image: url(../images/icon-48-mls_for_delete.png);
 }
@@ -201,7 +233,7 @@ input.order-input
 {
       background-image: url(../images/icon-48-orders.png);
 }
-.icon-16-ordersdetail
+.icon-16-orders_detail
 {
       background-image: url(../images/icon-16-orders_details.png);
 }
@@ -209,7 +241,7 @@ input.order-input
 {
       background-image: url(../images/icon-16-orders_details.png);
 }
-.icon-48-ordersdetail
+.icon-48-orders_detail
 {
       background-image: url(../images/icon-48-orders_details.png);
 }
@@ -217,7 +249,7 @@ input.order-input
 {
       background-image: url(../images/icon-48-orders_details.png);
 }
-.icon-16-maincategory
+.icon-16-main_category
 {
       background-image: url(../images/icon-16-main_categories.png);
 }
@@ -225,7 +257,7 @@ input.order-input
 {
       background-image: url(../images/icon-16-main_categories.png);
 }
-.icon-48-maincategory
+.icon-48-main_category
 {
       background-image: url(../images/icon-48-main_categories.png);
 }
@@ -249,7 +281,7 @@ input.order-input
 {
       background-image: url(../images/icon-48-rents.png);
 }
-.icon-16-rentrequest
+.icon-16-rent_request
 {
       background-image: url(../images/icon-16-rent_requests.png);
 }
@@ -257,7 +289,7 @@ input.order-input
 {
       background-image: url(../images/icon-16-rent_requests.png);
 }
-.icon-48-rentrequest
+.icon-48-rent_request
 {
       background-image: url(../images/icon-48-rent_requests.png);
 }
@@ -265,7 +297,7 @@ input.order-input
 {
       background-image: url(../images/icon-48-rent_requests.png);
 }
-.icon-16-rentsal
+.icon-16-rent_sal
 {
       background-image: url(../images/icon-16-rent_sal.png);
 }
@@ -273,7 +305,7 @@ input.order-input
 {
       background-image: url(../images/icon-16-rent_sal.png);
 }
-.icon-48-rentsal
+.icon-48-rent_sal
 {
       background-image: url(../images/icon-48-rent_sal.png);
 }
@@ -297,7 +329,7 @@ input.order-input
 {
       background-image: url(../images/icon-48-reviews.png);
 }
-.icon-16-tracksource
+.icon-16-track_source
 {
       background-image: url(../images/icon-16-track_source.png);
 }
@@ -305,7 +337,7 @@ input.order-input
 {
       background-image: url(../images/icon-16-track_source.png);
 }
-.icon-48-tracksource
+.icon-48-track_source
 {
       background-image: url(../images/icon-48-track_source.png);
 }
@@ -329,7 +361,7 @@ input.order-input
 {
       background-image: url(../images/icon-48-wisheslist.png);
 }
-.icon-16-videosource
+.icon-16-video_source
 {
       background-image: url(../images/icon-16-video_source.png);
 }
@@ -337,7 +369,7 @@ input.order-input
 {
       background-image: url(../images/icon-16-video_source.png);
 }
-.icon-48-videosource
+.icon-48-video_source
 {
       background-image: url(../images/icon-48-video_source.png);
 }
@@ -345,7 +377,7 @@ input.order-input
 {
       background-image: url(../images/icon-48-video_source.png);
 }
-.icon-16-buyingrequest
+.icon-16-buying_request
 {
       background-image: url(../images/icon-16-buying_requests.png);
 }
@@ -353,7 +385,7 @@ input.order-input
 {
       background-image: url(../images/icon-16-buying_requests.png);
 }
-.icon-48-buyingrequest
+.icon-48-buying_request
 {
       background-image: url(../images/icon-48-buying_requests.png);
 }
@@ -393,7 +425,7 @@ input.order-input
 {
       background-image: url(../images/icon-48-const.png);
 }
-.icon-16-constlanguage
+.icon-16-const_language
 {
       background-image: url(../images/icon-16-const_language.png);
 }
@@ -401,7 +433,7 @@ input.order-input
 {
       background-image: url(../images/icon-16-const_language.png);
 }
-.icon-48-constlanguage
+.icon-48-const_language
 {
       background-image: url(../images/icon-48-const_language.png);
 }
@@ -425,7 +457,7 @@ input.order-input
 {
       background-image: url(../images/icon-48-feature.png);
 }
-.icon-16-featurehouse
+.icon-16-feature_house
 {
       background-image: url(../images/icon-16-feature_houses.png);
 }
@@ -433,7 +465,7 @@ input.order-input
 {
       background-image: url(../images/icon-16-feature_houses.png);
 }
-.icon-48-featurehouse
+.icon-48-feature_house
 {
       background-image: url(../images/icon-48-feature_houses.png);
 }

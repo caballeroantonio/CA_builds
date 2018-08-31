@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- @version 			$Id:$ -->
+<!-- @name			    RealEstateManagerCA -->
+<!-- @author			caballeroantonio (caballeroantonio.com) -->
+<!-- @package			com_remca -->
+<!-- @subpackage		com_remca.site -->
+<!-- @copyright		     -->
+<!-- @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- The following Component Architect header section must remain in any distribution of this file -->
+
+<!-- @CAversion			Id: blog.xml 604 2016-01-14 13:05:26Z BrianWade $ -->
+<!-- @CAauthor		    Component Architect (www.componentarchitect.com) -->
+<!-- @CApackage		    architectcomp -->
+<!-- @CAsubpackage	    architectcomp.site -->
+<!-- @CAtemplate		joomla_3_4_standard (Release 1.0.1) -->
+<!-- @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved -->
+<!-- @Joomlacopyright   Copyright (c)2005 - 2016 Open Source Matters, Inc. All rights reserved. -->
+<!-- @CAlicense		    GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or (at your option) any later version. -->
+
+<!-- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of -->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. -->
+
+<metadata>
+	<layout
+	    title="COM_REMCA_WA_ENTRY_CONVERSATIONS_VIEW_BLOG_TITLE"
+	    option="COM_REMCA_WA_ENTRY_CONVERSATIONS_VIEW_BLOG_OPTION"
+	>
+        <message>
+			<![CDATA[COM_REMCA_WA_ENTRY_CONVERSATIONS_VIEW_BLOG_DESC]]>
+		</message>
+	</layout>
+    <!-- Add fields to the parameters object for the layout. -->
+    <fields
+        name="params"
+    >
+        <fieldset
+            name="wa_entry_conversation_filters"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELDSET_FILTERS"
+        >
+            <field
+                name="filter_wa_entry_conversation_categories"
+			    type="categoryedit"
+			    label="COM_REMCA_SELECTED_CATEGORIES_LABEL"
+			    description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SELECTED_CATEGORIES_DESC"
+			    extension="com_remca"
+                addfieldpath="/administrator/components/com_categories/models/fields"
+			    multiple="true"
+			    size="10"
+			    default=""
+	        >
+                <option value="">JOPTION_ALL_CATEGORIES</option>
+            </field>
+
+            <field
+                name="filter_wa_entry_conversation_archived"
+                type="radio"
+                label="COM_REMCA_ARCHIVED_FILTER_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_ARCHIVED_FILTER_DESC"
+				class="btn-group btn-group-yesno"
+				default="0"
+ 		    >
+                <option	value="2">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+        </fieldset>
+        <fieldset
+            name="wa_entry_conversation_blog_settings"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_BLOG_LAYOUT_OPTIONS"
+        >
+            <field
+                name="wa_entry_conversation_num_leading"
+                type="text"
+				label="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_LEADING_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_LEADING_DESC"
+				size="3"
+			/>
+            <field
+                name="wa_entry_conversation_num_intro"
+                type="text"
+				label="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_INTRO_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_INTRO_DESC"
+				size="3"
+			/>
+            <field
+                name="wa_entry_conversation_num_columns"
+                type="text"
+				label="COM_REMCA_NUM_COLUMNS_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_COLUMNS_DESC"
+				size="3"
+			/>
+            <field
+                name="wa_entry_conversation_num_links"
+                type="text"
+				label="COM_REMCA_NUM_LINKS_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_LINKS_DESC"
+				size="3"
+			/>
+            <field
+                name="wa_entry_conversation_multi_column_order"
+                type="radio"
+				label="COM_REMCA_MULTI_COLUMN_ORDER_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_MULTI_COLUMN_ORDER_DESC"
+                class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JGLOBAL_Down</option>
+                <option value="1">JGLOBAL_Across</option>
+            </field>
+            <field
+                name="wa_entry_conversation_initial_sort"
+                type="list"
+				label="COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER_DESC"
+			    class="chzn-color"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="created">JGLOBAL_CREATED</option>
+                <option value="created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
+                <option value="ordering">COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER</option>
+            </field>
+            <field
+                name="wa_entry_conversation_initial_direction"
+                type="radio"
+                label="COM_REMCA_ORDER_DIRECTION_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER_DIRECTION_DESC"
+				class="btn-group"
+                default="ASC"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
+                <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
+            </field>
+            <field
+                name="wa_entry_conversation_date_format"
+                type="text"
+				label="JGLOBAL_DATE_FORMAT_LABEL"
+				description="JGLOBAL_DATE_FORMAT_DESC"
+				size="15"
+			/>
+            <field
+                name="show_wa_entry_conversation_pagination"
+                type="radio"
+			    label="JGLOBAL_PAGINATION_LABEL"
+			    description="JGLOBAL_PAGINATION_DESC"
+                class="btn-group"
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+                <option value="2">JGLOBAL_AUTO</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_pagination_results"
+                type="radio"
+			    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+			    description="JGLOBAL_PAGINATION_RESULTS_DESC"
+				class="btn-group"
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_no_wa_entry_conversations"
+                type="radio"
+				label="COM_REMCA_WA_ENTRY_CONVERSATIONS_NO_ITEMS_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_NO_ITEMS_DESC"
+				class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+        </fieldset>
+        <fieldset
+            name="wa_entry_conversation_layout_settings"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELDSET_LAYOUT"
+        >
+            <field
+                name="wa_entry_conversation_layout"
+                type="componentlayout"
+                label="JGLOBAL_FIELD_LAYOUT_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_CHOOSE_LAYOUT_DESC"
+                menuitems="true"
+                extension="com_remca"
+                view="wa_entry_conversation"
+                default="_:article"
+		    />
+            <field
+                name="spacer1"
+                type="spacer"
+                hr="true"
+			/>
+            <field
+                name="show_wa_entry_conversation_icons"
+                type="radio"
+                label="COM_REMCA_SHOW_ICONS_LABEL"
+                description="COM_REMCA_SHOW_ICONS_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">COM_REMCA_SHOW_ICONS_VALUE_TEXT</option>
+                <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
+                <option	value="-1">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_print_icon"
+                type="radio"
+                label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
+                description="COM_REMCA_SHOW_PRINT_ICON_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_email_icon"
+                type="radio"
+                label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_EMAIL_ICON_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+		        name="wa_entry_conversation_info_block_position"
+		        type="radio"
+		        label="COM_REMCA_WA_ENTRY_CONVERSATIONS_INFOBLOCK_POSITION_LABEL"
+		        description="COM_REMCA_WA_ENTRY_CONVERSATIONS_INFOBLOCK_POSITION_DESC"
+                class="btn-group"            
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">COM_REMCA_VALUE_ABOVE</option>
+                <option value="1">COM_REMCA_VALUE_BELOW</option>
+            </field>            
+            <field
+                name="keep_wa_entry_conversation_itemid"
+                type="radio"
+                label="COM_REMCA_KEEP_ITEMID_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_KEEP_ITEMID_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_navigation"
+                type="radio"
+                label="COM_REMCA_SHOW_NAVIGATION_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_NAVIGATION_DESC"
+                class="btn-group"            
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_category_breadcrumb"
+                type="radio"
+                label="COM_REMCA_SHOW_CATEGORY_BREADCRUMB_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CATEGORY_BREADCRUMB_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="limit_category_wa_entry_conversation_navigation"
+                type="radio"
+                label="COM_REMCA_LIMIT_CATEGORY_NAVIGATION_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIMIT_CATEGORY_NAVIGATION_DESC"
+                class="btn-group"            
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="spacer2"
+                type="spacer"
+                hr="true"
+			/>
+            <field
+                name="show_wa_entry_conversation_readmore"
+                type="radio"
+                label="COM_REMCA_SHOW_READMORE_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_READMORE_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="wa_entry_conversation_readmore_limit"
+                type="text"
+                label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_READMORE_LIMIT_DESC"
+                default="100"
+	        />
+        </fieldset>
+        <fieldset
+            name="wa_entry_conversation_field_settings"
+	        label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELDSET_FIELDS"
+	    >
+            <field
+                name="spacer3"
+                type="spacer"
+                hr="true"
+	        />
+            <field
+                name="show_wa_entry_conversation_category"
+                type="radio"
+                label="COM_REMCA_SHOW_CATEGORY_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CATEGORY_DESC"
+                class="btn-group"
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="link_wa_entry_conversation_category"
+                type="radio"
+                label="COM_REMCA_LINK_CATEGORY_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LINK_CATEGORY_DESC"
+                class="btn-group"
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_parent_category"
+                type="radio"
+                label="COM_REMCA_SHOW_PARENT_CATEGORY_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_PARENT_CATEGORY_DESC"
+                class="btn-group"
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="link_wa_entry_conversation_parent_category"
+                type="radio"
+                label="COM_REMCA_LINK_PARENT_CATEGORY_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LINK_PARENT_CATEGORY_DESC"
+                class="btn-group"
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="spacer4"
+                type="spacer"
+                hr="true"
+			/>
+            <field
+                name="show_wa_entry_conversation_created_by"
+                type="radio"
+                label="COM_REMCA_SHOW_CREATED_BY_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CREATED_BY_DESC"
+                class="btn-group"
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="link_wa_entry_conversation_created_by"
+                type="radio"
+                label="COM_REMCA_LINK_CREATED_BY_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LINK_CREATED_BY_DESC"
+                class="btn-group"
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_created_by_alias"
+                type="radio"
+		        label="COM_REMCA_SHOW_CREATED_BY_ALIAS_LABEL"
+		        description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CREATED_BY_ALIAS_DESC"
+		        class="btn-group"
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_created"
+                type="radio"
+                label="COM_REMCA_SHOW_CREATED_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CREATED_DESC"
+                class="btn-group"
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_admin"
+                type="radio"
+                label="COM_REMCA_SHOW_ADMIN_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_ADMIN_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_vote"
+                type="radio"
+                label="COM_REMCA_SHOW_VOTE_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_VOTE_DESC"
+                class="btn-group"
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_share"
+                type="radio"
+                label="COM_REMCA_SHOW_SHARE_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_SHARE_DESC"
+                class="btn-group"
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_phone"
+                type="radio"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_id_wa_title_conversation"
+                type="radio"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_DESC"
+                class="btn-group"
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+        </fieldset>
+        <fieldset
+	        name="integration"
+            label="JGLOBAL_INTEGRATION_LABEL"
+	    >
+            <field
+		        name="show_feed_link"
+		        type="radio"
+			    label="COM_REMCA_SHOW_FEED_LINK_LABEL"
+			    description="COM_REMCA_SHOW_FEED_LINK_DESC"
+                class="btn-group"
+			    default="1"
+		    >
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

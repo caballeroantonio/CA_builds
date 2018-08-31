@@ -414,4 +414,364 @@ class PlgRemcaPagebreak extends JPlugin
 
 		$row->description .= '<ul><li>' . $prev . ' </li><li>' . $next . '</li></ul>';
 	}
+	/**
+	 * Plugin that adds a pagebreak into the text and truncates text at that point
+	 *
+	 * @param   string   $context  The context of the content being passed to the plugin.
+	 * @param   object   &$row     The entrada de la conversación whatsapp object.  Note $wa_entry_conversation->text is also available
+	 * @param   mixed    &$params  The entrada de la conversación whatsapp  params
+	 * @param   integer  $page     The 'page' number
+	 *
+	 * @return  mixed  Always returns void or true
+	 */
+	public function onWa_entry_conversationPrepare($context, &$row, &$params, $page = 0)
+	{
+		$can_proceed = $context == 'com_remca.wa_entry_conversation';
+
+		if (!$can_proceed)
+		{
+			return;
+		}
+
+		$style = $this->params->get('wa_entry_conversation_style', 'pages');
+
+		// Expression to search for.
+		$regex = '#<hr(.*)class="system-pagebreak"(.*)\/>#iU';
+
+		$input = JFactory::getApplication()->input;
+
+		$print = $input->getBool('print');
+		$show_all = $input->getBool('showall');
+
+		if (!$this->params->get('enabled', 1))
+		{
+			$print = true;
+		}
+
+		if ($print)
+		{
+			$row->description = preg_replace($regex, '<br />', $row->description);
+			return true;
+		}
+
+		// Simple performance check to determine whether bot should process further.
+		if (JString::strpos($row->description, 'class="system-pagebreak') === false)
+		{
+			return true;
+		}
+
+		$view = $input->getString('view');
+		$full = $input->getBool('fullview');
+
+		if (!$page)
+		{
+			$page = 0;
+		}
+
+		if ($params->get('popup') OR $full OR $view != 'wa_entry_conversation')
+		{
+			$row->description = preg_replace($regex, '', $row->description);
+
+			return;
+		}
+
+		// Find all instances of plugin and put in $matches.
+		$matches = array();
+		preg_match_all($regex, $row->description, $matches, PREG_SET_ORDER);
+		if (($show_all AND $this->params->get('wa_entry_conversation_showall', 1)))
+		{
+			$has_toc = $this->params->get('wa_entry_conversation_multipage_toc', 1);
+
+			if ($has_toc)
+			{
+				// Display TOC.
+				$page = 1;
+				$this->_createWa_entry_conversationTOC($row, $matches, $page);
+			}
+			else
+			{
+				$row->toc = '';
+			}
+
+			$row->description = preg_replace($regex, '<br />', $row->description);
+			return true;
+		}
+
+		// Split the text around the plugin.
+		$text = preg_split($regex, $row->description);
+		// Count the number of pages.
+		$n = count($text);
+
+		// We have found at least one plugin, therefore at least 2 pages.
+		if ($n > 1)
+		{
+			$title	= $this->params->get('wa_entry_conversation_title', 1);
+			$has_toc = $this->params->get('wa_entry_conversation_multipage_toc', 1);
+
+			// Adds heading or title to <site> Title.
+			if ($title)
+			{
+				if ($page)
+				{
+					if ($page AND @$matches[$page - 1][2])
+					{
+						$attrs = JUtility::parseAttributes($matches[$page - 1][1]);
+
+						if (@$attrs['title'])
+						{
+							$row->page_title = $attrs['title'];
+						}
+					}
+				}
+			}
+
+			// Reset the text, we already hold it in the $text array.
+			$row->description = '';
+			if ($style == 'pages')
+			{
+				// Display TOC.
+				if ($has_toc)
+				{
+					$this->_createWa_entry_conversationTOC($row, $matches, $page);
+				}
+				else
+				{
+					$row->toc = '';
+				}
+
+				// Traditional mos page navigation
+				$page_nav = new JPagination($n, $page, 1);
+
+				// Page counter.
+				$row->description .= '<div class="pagenavcounter">';
+				$row->description .= $page_nav->getPagesCounter();
+				$row->description .= '</div>';
+			
+				// Page text.
+				$text[$page] = str_replace('<hr id="system-readmore" />', '', $text[$page]);
+				$row->description .= $text[$page];
+
+				// $row->description .= '<br />';
+				$row->description .= '<div class="pager">';
+
+				// Adds navigation between pages to bottom of text.
+				if ($has_toc)
+				{
+					$this->_createWa_entry_conversationNavigation($row, $page, $n);
+				}
+
+				// Page links shown at bottom of page if TOC disabled.
+				if (!$has_toc)
+				{
+					$row->description .= $page_nav->getPagesLinks();
+				}
+
+				$row->description .= '</div>';
+			}
+			else
+			{
+				$t[] = $text[0];
+
+				$t[] = (string) JHtml::_($style . '.start', 'wa_entry_conversation' . $row->id . '-' . $style);
+
+				foreach ($text as $key => $subtext)
+				{
+					if ($key >= 1)
+					{
+						$match = $matches[$key - 1];
+						$match = (array) JUtility::parseAttributes($match[0]);
+
+						if (isset($match['alt']))
+						{
+							$title	= stripslashes($match['alt']);
+						}
+						elseif (isset($match['title']))
+						{
+							$title	= stripslashes($match['title']);
+						}
+						else
+						{
+							$title	= JText::sprintf('PLG_REMCA_PAGEBREAK_PAGE_NUM', $key + 1);
+						}
+
+						$t[] = (string) JHtml::_($style . '.panel', $title, 'wa_entry_conversation' . $row->id . '-' . $style . $key);
+					}
+
+					$t[] = (string) $subtext;
+				}
+
+				$t[] = (string) JHtml::_($style . '.end');
+
+				$row->description = implode(' ', $t);
+			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * Creates a Table of Contents for the pagebreak
+	 *
+	 * @param   object   &$row      The entrada de la conversación whatsapp object.  Note $wa_entry_conversation->text is also available
+	 * @param   array    &$matches  Array of matches of a regex in onWa_entry_conversationPrepare
+	 * @param   integer  &$page     The 'page' number
+	 *
+	 * @return  void
+	 */
+	protected function _createWa_entry_conversationTOC(&$row, &$matches, &$page)
+	{
+		$heading = JText::_('PLG_REMCA_PAGEBREAK_NO_TITLE');
+		$input = JFactory::getApplication()->input;
+		$limitstart = $input->getUInt('limitstart', 0);
+		$show_all = $input->getInt('showall', 0);
+		$layout = $input->getString('layout', '');
+		if ($layout != '')
+		{
+			$layout = '&layout='.$layout;	
+		}
+		
+		
+
+		// TOC header.
+		$row->toc = '<div class="pull-right wa_entry_conversation-index">';
+
+		if ($this->params->get('wa_entry_conversation_index') == 1)
+		{
+			$headingtext = JText::_('PLG_REMCA_PAGEBREAK_INDEX_LABEL');
+
+			if ($this->params->get('wa_entry_conversation_index_text'))
+			{
+				$headingtext = htmlspecialchars($this->params->get('wa_entry_conversation_index_text'), ENT_QUOTES, 'UTF-8');
+			}
+
+			$row->toc .= '<h3>' . $headingtext . '</h3>';
+		}
+
+		// TOC first Page link.
+		$class = ($limitstart === 0 AND $show_all === 0) ? 'toclink active' : 'toclink';
+		$row->toc .= '<ul class="nav nav-tabs nav-stacked">
+		<li class="' . $class . '">
+
+			<a href="' . JRoute::_(RemcaHelperRoute::getWa_entry_conversationRoute($row->slug, $row->catid) .  $layout . '&showall=&limitstart=') . '" class="' . $class . '">'
+				. $heading .
+			'</a>
+
+		</li>
+		';
+
+		$i = 2;
+
+		foreach ($matches as $bot)
+		{
+			$link = JRoute::_(RemcaHelperRoute::getWa_entry_conversationRoute($row->slug, $row->catid) .  $layout . '&showall=&limitstart=' . ($i - 1));
+						
+			if (@$bot[0])
+			{
+				$attrs2 = JUtility::parseAttributes($bot[0]);
+
+				if (@$attrs2['alt'])
+				{
+					$title	= stripslashes($attrs2['alt']);
+				}
+				elseif (@$attrs2['title'])
+				{
+					$title	= stripslashes($attrs2['title']);
+				}
+				else
+				{
+					$title	= JText::sprintf('PLG_REMCA_PAGEBREAK_PAGE_NUM', $i);
+				}
+			}
+			else
+			{
+				$title	= JText::sprintf('PLG_REMCA_PAGEBREAK_PAGE_NUM', $i);
+			}
+
+			$class = ($limitstart == $i - 1) ? 'toclink active' : 'toclink';
+			$row->toc .= '
+				<li>
+
+					<a href="' . $link . '" class="' . $class . '">'
+					. $title .
+					'</a>
+
+				</li>
+				';
+			$i++;
+		}
+
+		if ($this->params->get('wa_entry_conversation_showall'))
+		{
+			$link = JRoute::_(RemcaHelperRoute::getWa_entry_conversationRoute($row->slug, $row->catid) .  $layout . '&showall=1&limitstart=');
+										
+			$class = ($show_all == 1) ? 'toclink active' : 'toclink';
+			$row->toc .= '
+			<li>
+
+					<a href="' . $link . '" class="' . $class . '">'
+					. JText::_('PLG_REMCA_PAGEBREAK_ALL_PAGES') .
+					'</a>
+
+			</li>
+			';
+		}
+
+		$row->toc .= '</ul></div>';
+	}
+
+	/**
+	 * Creates the navigation for the item
+	 *
+	 * @param   object  &$row  The entrada de la conversación whatsapp object.  Note $wa_entry_conversation->text is also available
+	 * @param   int     $page  The total number of pages
+	 * @param   int     $n     The page number
+	 *
+	 * @return  void
+	 */
+	protected function _createWa_entry_conversationNavigation(&$row, $page, $n)
+	{
+		
+		$input = JFactory::getApplication()->input;
+		$layout = $input->getString('layout', '');
+		if ($layout != '')
+		{
+			$layout = '&layout='.$layout;	
+		}
+		
+		$space = '';
+
+		if (JText::_('JGLOBAL_LT') OR JText::_('JGLOBAL_LT'))
+		{
+			$space = ' ';
+		}
+
+		if ($page < $n - 1)
+		{
+			$page_next = $page + 1;
+
+			$link_next = JRoute::_(RemcaHelperRoute::getWa_entry_conversationRoute($row->slug, $row->catid) .  $layout . '&showall=&limitstart=' . ($page_next));
+			// Next >>
+			$next = '<a href="' . $link_next . '">' . JText::_('JNEXT') . $space . JText::_('JGLOBAL_GT') . JText::_('JGLOBAL_GT') . '</a>';
+		}
+		else
+		{
+			$next = JText::_('JNEXT');
+		}
+
+		if ($page > 0)
+		{
+			$page_prev = $page - 1 == 0 ? '' : $page - 1;
+
+			$link_prev = JRoute::_(RemcaHelperRoute::getWa_entry_conversationRoute($row->slug, $row->catid) .  $layout . '&showall=&limitstart=' . ($page_prev));
+			
+			// << Prev
+			$prev = '<a href="' . $link_prev . '">' . JText::_('JGLOBAL_LT') . JText::_('JGLOBAL_LT') . $space . JText::_('JPREV') . '</a>';
+		}
+		else
+		{
+			$prev = JText::_('JPREV');
+		}
+
+		$row->description .= '<ul><li>' . $prev . ' </li><li>' . $next . '</li></ul>';
+	}
 }

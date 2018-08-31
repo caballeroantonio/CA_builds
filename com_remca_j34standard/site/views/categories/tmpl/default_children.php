@@ -50,6 +50,7 @@ defined('_JEXEC') or die;
 			<li <?php echo $class; ?>>
 			<?php $class = ''; ?>
 				<span class="item-title"><a href="<?php echo JRoute::_(RemcaHelperRoute::getCategoryRoute($child->id, $this->params->get('keep_house_itemid'), $child->language));?>">
+				<span class="item-title"><a href="<?php echo JRoute::_(RemcaHelperRoute::getCategoryRoute($child->id, $this->params->get('keep_wa_entry_conversation_itemid')));?>">
 					<?php echo $this->escape($child->title); ?></a>
 				</span>
 				<?php if ($this->params->get('show_subcategories_desc') == 1) :?>

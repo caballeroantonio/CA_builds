@@ -222,6 +222,73 @@ class plgRemcaEmailit extends JPlugin {
             $row->description = str_replace('{emailit}', $this->emailit_createButton($this->arrParamValues, $link, $title), $row->description);
         }
     }
+    /*
+     * onRemcaPrepare
+     */
+
+    public function onWa_entry_conversationPrepare($context, &$row, &$params, $limitstart) {
+        $app = JFactory::getApplication();
+        $doc = JFactory::getDocument();
+        $menu = $app->getMenu();
+        
+        $front_page = ((JRequest::getVar('view')=='featured'));
+        
+        $share = true;
+        // If no text or no title
+        if (!isset($row->description) || !isset($row->name)){
+            $share = false;
+        }elseif ($this->arrParamValues["filter_art"] != "") {
+            $filter_artArray = explode(",", str_replace(" ", "", trim($this->arrParamValues["filter_art"]))); // array with excluded articles
+            if (in_array($row->id, $filter_artArray))
+                $share = false;
+        }elseif ($this->params->get('show_content', '1') != '1') {
+            $share = false;
+        }elseif (strpos($row->description, '{no_emailit}') !== false) {
+            $share = false;
+            $row->description = str_replace('{no_emailit}', '', $row->description);
+        }elseif ($front_page && $this->params->get('show_frontpage', '1') != '1') {
+            $share = false;
+        }elseif ($app->input->get('view') == 'category' &&!$front_page && $this->params->get('show_categories', '1') != '1') {
+            $share = false;
+        }elseif ($this->params->get('filter_cat', 0) != 0) {
+            if (in_array($row->catid, $this->params->get('filter_cat', array()))) {
+                $share = false;
+            }
+        }
+
+//like wa_entry_conversationicon->email
+		$uri	= JUri::getInstance();
+		$base	= $uri->toString(array('scheme', 'host', 'port'));
+		$app	= JFactory::getApplication();
+		
+		$layout = $app->input->getString('layout', 'default');
+
+		$link	= $base.JRoute::_(RemcaHelperRoute::getWa_entry_conversationRoute($row->slug,
+									$row->catid,
+									$layout,
+									$params->get('keep_wa_entry_conversation_itemid')) , false);
+        
+        
+        $title = 
+                '';
+        if($share){
+            $outputValue = $this->emailit_createButton($this->arrParamValues, $link, $title);
+
+            //Positioning button according to the position chosen
+            if (isset($row->description)) {
+                if ("top" == $this->arrParamValues["position"]) {
+                    $row->description = $outputValue . $row->description;
+                } elseif ("bottom" == $this->arrParamValues["position"]) {
+                    $row->description = $row->description . $outputValue;
+                } else {
+                    $row->description = $outputValue . $row->description . $outputValue;
+                }
+            }
+        }
+        if(strpos($row->description, '{emailit}') !== false){
+            $row->description = str_replace('{emailit}', $this->emailit_createButton($this->arrParamValues, $link, $title), $row->description);
+        }
+    }
 
     private function emailit_createButton($emailit_options, $url = null, $title = null) {
 

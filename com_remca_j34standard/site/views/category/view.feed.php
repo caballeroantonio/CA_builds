@@ -95,5 +95,48 @@ class RemcaViewCategory extends JViewLegacy
 			// loads item info into rss array
 			$doc->addItem($item);
 		}
+		$doc->link = JRoute::_(RemcaHelperRoute::getCategoryRoute($category->id, $params->get('keep_wa_entry_conversation_itemid')));
+
+		foreach ($rows as $row)
+		{
+			// strip html from feed item title
+			$title = $this->escape($row->id);
+			
+			$title = html_entity_decode($title, ENT_COMPAT, 'UTF-8');
+
+			// Compute the slug
+			$row->slug = $row->id;
+
+			// url link to wa_entry_conversation
+			// & used instead of &amp; as this is converted by feed creator
+			$link = JRoute::_(RemcaHelperRoute::getWa_entry_conversationRoute($row->slug, 
+																						$row->catid,
+																						'default',								
+																						$params->get('keep_wa_entry_conversation_itemid')), false);
+			
+			$description = $row->description;
+			$creator		= $row->created_by_alias ? $row->created_by_alias : $row->creator;
+			@$date			= ($row->created ? date('r', strtotime($row->created)) : '');
+
+			// load individual item creator class
+			$item = new JFeedItem;
+			$item->title		= $title;
+			$item->link			= $link;
+			$item->description	= $description;
+			$item->date			= $date;
+			$item->category		= $row->category;
+			$item->creator		= $creator;
+			if ($feed_email == 'site')
+			{
+				$item->creatorEmail = $site_email;
+			}
+			else
+			{
+				$item->creatorEmail = $row->creator_email;
+			}
+
+			// loads item info into rss array
+			$doc->addItem($item);
+		}
 	}
 }

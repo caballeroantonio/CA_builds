@@ -105,6 +105,22 @@ class RemcaHelper extends JHelperContent
 			$active
 		);
 	
+		$active = $view_name == 'wa_title_conversations'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_REMCA_WA_TITLE_CONVERSATIONS_SUBMENU'),
+			'index.php?option=com_remca&view=wa_title_conversations',
+			$view_name == 'wa_title_conversations',
+			$active
+		);
+	
+		$active = $view_name == 'wa_entry_conversations'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_SUBMENU'),
+			'index.php?option=com_remca&view=wa_entry_conversations',
+			$view_name == 'wa_entry_conversations',
+			$active
+		);
+	
 		$active = $view_name == 'photos'? true : false;
 		JHtmlSidebar::addEntry(
 			JText::_('COM_REMCA_PHOTOS_SUBMENU'),

@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- @version 			$Id:$ -->
+<!-- @name			    RealEstateManagerCA -->
+<!-- @author			caballeroantonio (caballeroantonio.com) -->
+<!-- @package			com_remca -->
+<!-- @subpackage		com_remca.admin -->
+<!-- @copyright		     -->
+<!-- @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- The following Component Architect header section must remain in any distribution of this file -->
+
+<!-- @CAversion			Id: compobject.xml 604 2016-01-14 13:05:26Z BrianWade $ -->
+<!-- @CAauthor		    Component Architect (www.componentarchitect.com) -->
+<!-- @CApackage		    architectcomp -->
+<!-- @CAsubpackage	    architectcomp.admin -->
+<!-- @CAtemplate		joomla_3_4_standard (Release 1.0.1) -->
+<!-- @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved -->
+<!-- @Joomlacopyright   Copyright (c)2005 - 2016 Open Source Matters, Inc. All rights reserved. -->
+<!-- @CAlicense		    GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or (at your option) any later version. -->
+
+<!-- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of -->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. -->
+
+<form
+    addfieldpath="/administrator/components/com_remca/models/fields"
+    addrulepath="/administrator/components/com_remca/models/rules"
+
+>
+    <fieldset name="basic_details"
+    >
+        <field name="id"
+		    type="text"
+            label="JGLOBAL_FIELD_ID_LABEL"
+            description ="JGLOBAL_FIELD_ID_DESC"
+			readonly="true"
+			class="readonly"
+            default="0"
+		/>
+        <field name="name"
+		    type="text"
+			label="COM_REMCA_FIELD_NAME_LABEL"
+			description="COM_REMCA_MAIN_CATEGORIES_FIELD_NAME_DESC"
+			size="50"
+			required="true"
+		/>
+        <field name="alias"
+		    type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="COM_REMCA_FIELD_ALIAS_DESC"
+			size="50"
+         />
+        <field name="version_note"
+            type="text"
+            label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
+			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
+			class="span12"
+			size="45"
+		/>
+        <field name="state"
+    		type="list"
+			label="JSTATUS"
+			description="COM_REMCA_MAIN_CATEGORIES_FIELD_STATUS_DESC"
+			class="chzn-color-state"
+			size="1"
+			default="1"
+		>
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASH</option>
+        </field>
+        <field name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC"
+			size="1"
+			default="1"
+		/>
+        <field name="buttonspacer"
+            type="spacer"
+            label="JGLOBAL_ACTION_PERMISSIONS_LABEL"
+            description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
+        />
+
+        <field name="ordering"
+			label="JFIELD_ORDERING_LABEL"
+			description="JFIELD_ORDERING_DESC"
+			type="remcaordering"
+			table="#__rem_main_categories"
+		/>
+        <field
+		    name="description"
+            type="editor"
+			label="JGLOBAL_DESCRIPTION"
+            description="COM_REMCA_MAIN_CATEGORIES_FIELD_DESCRIPTION_DESC"
+            filter="JComponentHelper::filterText"
+            buttons="true"
+            hide="article,pagebreak"                
+        />
+        <field name="language"
+            type="contentlanguage"
+            label="JFIELD_LANGUAGE_LABEL"
+		    description="COM_REMCA_MAIN_CATEGORIES_FIELD_LANGUAGE_DESC"
+			default="*"
+		>
+            <option value="*">JALL</option>
+        </field>
+    </fieldset>
+    <fieldset name="fieldset_main_categories_fs"
+        label="COM_REMCA_MAIN_CATEGORIES_FIELDSET_MAIN_CATEGORIES_FS_LABEL"
+        description="COM_REMCA_MAIN_CATEGORIES_FIELDSET_MAIN_CATEGORIES_FS_DESC"
+    >
+        <field name="parent_id"
+            type="integer"
+            label="COM_REMCA_MAIN_CATEGORIES_FIELD_PARENT_ID_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_FIELD_PARENT_ID_DESC"
+            class="inputbox"
+			size="1"
+			default="0"
+        >
+        </field>  
+        <field name="associate_category"
+            type="text"
+            label="COM_REMCA_MAIN_CATEGORIES_FIELD_ASSOCIATE_CATEGORY_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_FIELD_ASSOCIATE_CATEGORY_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field name="title"
+            type="text"
+            label="COM_REMCA_MAIN_CATEGORIES_FIELD_TITLE_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_FIELD_TITLE_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field name="image"
+            type="text"
+            label="COM_REMCA_MAIN_CATEGORIES_FIELD_IMAGE_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_FIELD_IMAGE_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field name="section"
+            type="text"
+            label="COM_REMCA_MAIN_CATEGORIES_FIELD_SECTION_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_FIELD_SECTION_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field name="image_position"
+            type="text"
+            label="COM_REMCA_MAIN_CATEGORIES_FIELD_IMAGE_POSITION_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_FIELD_IMAGE_POSITION_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field name="editor"
+            type="text"
+            label="COM_REMCA_MAIN_CATEGORIES_FIELD_EDITOR_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_FIELD_EDITOR_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field name="count"
+            type="integer"
+            label="COM_REMCA_MAIN_CATEGORIES_FIELD_COUNT_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_FIELD_COUNT_DESC"
+            class="inputbox"
+			size="1"
+			default="0"
+        >
+        </field>  
+        <field name="params2"
+            type="editor"
+            label="COM_REMCA_MAIN_CATEGORIES_FIELD_PARAMS2_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_FIELD_PARAMS2_DESC"
+            width="100%"
+			height="250"
+			cols="50"
+			rows="5"
+			buttons="*"
+			hide_buttons="*"
+			default=""
+        >
+        </field>  
+    </fieldset>
+    <fieldset name="publishing"
+		label="COM_REMCA_FIELDSET_PUBLISHING_LABEL"
+    >
+        <field name="version"
+            type="text"
+			label="COM_REMCA_FIELD_VERSION_LABEL"
+            description="COM_REMCA_MAIN_CATEGORIES_FIELD_VERSION_DESC"
+			class="readonly"
+			size="6"
+			readonly="true"
+			filter="unset"
+		/>
+        <field name="checked_out"
+			type="hidden"
+			filter="unset"
+		/>
+        <field name="checked_out_time"
+			type="hidden"
+			filter="unset"
+		 />
+    </fieldset>
+    <fields name="params"
+        label="COM_REMCA_MAIN_CATEGORIES_PARAMS_OPTIONS"        
+    >
+        <fieldset name="basic"
+            label="COM_REMCA_MAIN_CATEGORIES_FIELDSET_LAYOUT"
+        >
+            <field name="show_main_category_icons"
+				type="radio"
+				label="COM_REMCA_SHOW_ICONS_LABEL"
+				description="COM_REMCA_SHOW_ICONS_DESC"
+                class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">COM_REMCA_SHOW_ICONS_VALUE_TEXT</option>
+                <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
+                <option	value="-1">JHIDE</option>
+            </field>
+            <field name="show_main_category_print_icon"
+				type="radio"
+				label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
+				description="COM_REMCA_SHOW_PRINT_ICON_DESC"
+                class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+            <field name="show_main_category_email_icon"
+				type="radio"
+				label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_SHOW_EMAIL_ICON_DESC"
+                class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+            <field name="main_category_info_block_position"
+				type="radio"
+				label="COM_REMCA_MAIN_CATEGORIES_INFOBLOCK_POSITION_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_INFOBLOCK_POSITION_DESC"
+                class="btn-group"
+				default=""
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">COM_REMCA_VALUE_ABOVE</option>
+                <option value="1">COM_REMCA_VALUE_BELOW</option>
+            </field>
+            <field name="show_main_category_navigation"
+			     type="radio"
+                 label="COM_REMCA_SHOW_NAVIGATION_LABEL"
+                 description="COM_REMCA_MAIN_CATEGORIES_SHOW_NAVIGATION_DESC"
+                 class="btn-group"
+            >
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="spacer4"
+				type="spacer"
+				hr="true"
+			/>
+            <field name="show_main_category_readmore"
+				type="radio"
+				label="COM_REMCA_SHOW_READMORE_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_DESC"
+                class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="show_main_category_readmore_name"
+				type="radio"
+				label="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_NAME_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_NAME_DESC"
+                class="btn-group"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="main_category_readmore_limit"
+                type="text"
+                label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
+                description="COM_REMCA_MAIN_CATEGORIES_SHOW_READMORE_LIMIT_DESC"
+                default="100"
+		    />
+            <field
+                name="main_category_alternative_readmore"
+                type="text"
+				label="JFIELD_READMORE_LABEL"
+				description="JFIELD_READMORE_DESC"
+				size="25"
+			/>
+            <field name="show_main_category_noauth"
+				type="radio"
+				label="COM_REMCA_SHOW_UNAUTH_LINKS_LABEL"
+				description="COM_REMCA_MAIN_CATEGORIES_SHOW_UNAUTH_LINKS_DESC"
+                class="btn-group"
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+        </fieldset>
+        <fieldset name="fields"
+			label="COM_REMCA_MAIN_CATEGORIES_FIELDSET_FIELDS"
+		>
+            <field
+                name="show_main_category_name"
+				type="radio"
+			    label="COM_REMCA_SHOW_NAME_LABEL"
+			    description="COM_REMCA_MAIN_CATEGORIES_SHOW_NAME_DESC"
+                class="btn-group"
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="link_main_category_names"
+                type="radio"
+			    label="COM_REMCA_LINKED_NAMES_LABEL"
+			    description="COM_REMCA_MAIN_CATEGORIES_LINKED_NAMES_DESC"
+                class="btn-group"
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field name="spacer3"
+				type="spacer"
+				hr="true"
+			/>
+            <field
+                name="show_main_category_admin"
+                type="radio"
+			    label="COM_REMCA_SHOW_ADMIN_LABEL"
+			    description="COM_REMCA_MAIN_CATEGORIES_SHOW_ADMIN_DESC"
+				class="btn-group"
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_main_category_parent_id"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARENT_ID_LABEL"
+                description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARENT_ID_DESC"
+				class="btn-group"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_main_category_associate_category"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_ASSOCIATE_CATEGORY_LABEL"
+                description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_ASSOCIATE_CATEGORY_DESC"
+				class="btn-group"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_main_category_title"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_TITLE_LABEL"
+                description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_TITLE_DESC"
+				class="btn-group"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_main_category_image"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_LABEL"
+                description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_DESC"
+				class="btn-group"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_main_category_section"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_SECTION_LABEL"
+                description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_SECTION_DESC"
+				class="btn-group"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_main_category_image_position"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_POSITION_LABEL"
+                description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_IMAGE_POSITION_DESC"
+				class="btn-group"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_main_category_editor"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_EDITOR_LABEL"
+                description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_EDITOR_DESC"
+				class="btn-group"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_main_category_count"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_COUNT_LABEL"
+                description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_COUNT_DESC"
+				class="btn-group"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_main_category_params2"
+                type="radio"
+                label="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARAMS2_LABEL"
+                description="COM_REMCA_MAIN_CATEGORIES_SHOW_FIELD_PARAMS2_DESC"
+				class="btn-group"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+        </fieldset>
+    </fields>
+</form>

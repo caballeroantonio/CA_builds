@@ -23,6 +23,11 @@
         <delete file="${link_dir}/language/en-GB/en-GB.mod_remca_houses.sys.ini" />
         <delete file="${link_dir}/language/es-ES/es-ES.mod_remca_houses.ini" />
         <delete file="${link_dir}/language/es-ES/es-ES.mod_remca_houses.sys.ini" />
+        <delete dir="${link_dir}/modules/mod_remca_wa_entry_conversations" />
+        <delete file="${link_dir}/language/en-GB/en-GB.mod_remca_wa_entry_conversations.ini" />
+        <delete file="${link_dir}/language/en-GB/en-GB.mod_remca_wa_entry_conversations.sys.ini" />
+        <delete file="${link_dir}/language/es-ES/es-ES.mod_remca_wa_entry_conversations.ini" />
+        <delete file="${link_dir}/language/es-ES/es-ES.mod_remca_wa_entry_conversations.sys.ini" />
         
         <delete dir="${link_dir}/plugins/remca/finder" />
         <delete dir="${link_dir}/plugins/finder/houses" />
@@ -34,11 +39,26 @@
         <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_finder_houses.sys.ini" />
         <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_finder_houses.ini" />
         <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_finder_houses.sys.ini" />
+        <delete dir="${link_dir}/plugins/remca/finder" />
+        <delete dir="${link_dir}/plugins/finder/wa_entry_conversations" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_finder.ini" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_finder.sys.ini" />
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_remca_finder.ini" />
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_remca_finder.sys.ini" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_finder_wa_entry_conversations.ini" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_finder_wa_entry_conversations.sys.ini" />
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_finder_wa_entry_conversations.ini" />
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_finder_wa_entry_conversations.sys.ini" />
         <delete dir="${link_dir}/plugins/search/houses" />
         <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_search_houses.ini" />
         <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_search_houses.sys.ini" />
         <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_search_houses.ini" />
         <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_search_houses.sys.ini" />
+        <delete dir="${link_dir}/plugins/search/wa_entry_conversations" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_search_wa_entry_conversations.ini" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_search_wa_entry_conversations.sys.ini" />
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_search_wa_entry_conversations.ini" />
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_search_wa_entry_conversations.sys.ini" />
         <delete dir="${link_dir}/plugins/remca/emailcloak" />
         <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailcloak.ini" />
         <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_emailcloak.sys.ini" />
@@ -137,6 +157,21 @@
         <exec executable="cmd" >
             <arg value='/c mklink "${link_dir}/language/es-ES/es-ES.mod_remca_houses.sys.ini" "${basedir}\modules\mod_remca_houses\language\es-ES\es-ES.mod_remca_houses.sys.ini"'/>
         </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/modules/mod_remca_wa_entry_conversations" "${basedir}\modules\mod_remca_wa_entry_conversations"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/language/en-GB/en-GB.mod_remca_wa_entry_conversations.ini" "${basedir}\modules\mod_remca_wa_entry_conversations\language\en-GB\en-GB.mod_remca_wa_entry_conversations.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/language/en-GB/en-GB.mod_remca_wa_entry_conversations.sys.ini" "${basedir}\modules\mod_remca_wa_entry_conversations\language\en-GB\en-GB.mod_remca_wa_entry_conversations.sys.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/language/es-ES/es-ES.mod_remca_wa_entry_conversations.ini" "${basedir}\modules\mod_remca_wa_entry_conversations\language\es-ES\es-ES.mod_remca_wa_entry_conversations.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/language/es-ES/es-ES.mod_remca_wa_entry_conversations.sys.ini" "${basedir}\modules\mod_remca_wa_entry_conversations\language\es-ES\es-ES.mod_remca_wa_entry_conversations.sys.ini"'/>
+        </exec>
         
         <mkdir dir="${link_dir}/plugins/remca/"/>
         <exec executable="cmd" >
@@ -169,6 +204,37 @@
         <exec executable="cmd" >
             <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.plg_finder_houses.sys.ini" "${basedir}\plugins\finder\plg_finder_houses\language\es-ES\es-ES.plg_finder_houses.sys.ini"'/>
         </exec>	
+        <mkdir dir="${link_dir}/plugins/remca/"/>
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/plugins/remca/finder" "${basedir}\plugins\remca\plg_remca_finder"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/plugins/finder/wa_entry_conversations" "${basedir}\plugins\finder\plg_finder_wa_entry_conversations"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_finder.ini" "${basedir}\plugins\remca\plg_remca_finder\language\en-GB\en-GB.plg_remca_finder.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_remca_finder.sys.ini" "${basedir}\plugins\remca\plg_remca_finder\language\en-GB\en-GB.plg_remca_finder.sys.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_finder_wa_entry_conversations.ini" "${basedir}\plugins\finder\plg_finder_wa_entry_conversations\language\en-GB\en-GB.plg_finder_wa_entry_conversations.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_finder_wa_entry_conversations.sys.ini" "${basedir}\plugins\finder\plg_finder_wa_entry_conversations\language\en-GB\en-GB.plg_finder_wa_entry_conversations.sys.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.plg_remca_finder.ini" "${basedir}\plugins\remca\plg_remca_finder\language\es-ES\es-ES.plg_remca_finder.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.plg_remca_finder.sys.ini" "${basedir}\plugins\remca\plg_remca_finder\language\es-ES\es-ES.plg_remca_finder.sys.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.plg_finder_wa_entry_conversations.ini" "${basedir}\plugins\finder\plg_finder_wa_entry_conversations\language\es-ES\es-ES.plg_finder_wa_entry_conversations.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.plg_finder_wa_entry_conversations.sys.ini" "${basedir}\plugins\finder\plg_finder_wa_entry_conversations\language\es-ES\es-ES.plg_finder_wa_entry_conversations.sys.ini"'/>
+        </exec>	
         <exec executable="cmd" >
             <arg value='/c mklink /d "${link_dir}/plugins/search/houses" "${basedir}\plugins\search\plg_search_houses"'/>
         </exec>
@@ -183,6 +249,21 @@
         </exec>
         <exec executable="cmd" >
             <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.plg_search_houses.sys.ini" "${basedir}\plugins\search\plg_search_houses\language\es-ES\es-ES.plg_search_houses.sys.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/plugins/search/wa_entry_conversations" "${basedir}\plugins\search\plg_search_wa_entry_conversations"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_search_wa_entry_conversations.ini" "${basedir}\plugins\search\plg_search_wa_entry_conversations\language\en-GB\en-GB.plg_search_wa_entry_conversations.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.plg_search_wa_entry_conversations.sys.ini" "${basedir}\plugins\search\plg_search_wa_entry_conversations\language\en-GB\en-GB.plg_search_wa_entry_conversations.sys.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.plg_search_wa_entry_conversations.ini" "${basedir}\plugins\search\plg_search_wa_entry_conversations\language\es-ES\es-ES.plg_search_wa_entry_conversations.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.plg_search_wa_entry_conversations.sys.ini" "${basedir}\plugins\search\plg_search_wa_entry_conversations\language\es-ES\es-ES.plg_search_wa_entry_conversations.sys.ini"'/>
         </exec>
         <exec executable="cmd" >
             <arg value='/c mklink /d "${link_dir}/plugins/remca/emailcloak" "${basedir}\plugins\remca\plg_remca_emailcloak"'/>
@@ -308,6 +389,13 @@
         <delete file="${link_dir}/language/en-GB/en-GB.mod_remca_houses.sys.ini"/>
         <delete file="${link_dir}/language/es-ES/es-ES.mod_remca_houses.ini"/>
         <delete file="${link_dir}/language/es-ES/es-ES.mod_remca_houses.sys.ini"/>
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/modules/mod_remca_wa_entry_conversations"'/>
+        </exec>
+        <delete file="${link_dir}/language/en-GB/en-GB.mod_remca_wa_entry_conversations.ini"/>
+        <delete file="${link_dir}/language/en-GB/en-GB.mod_remca_wa_entry_conversations.sys.ini"/>
+        <delete file="${link_dir}/language/es-ES/es-ES.mod_remca_wa_entry_conversations.ini"/>
+        <delete file="${link_dir}/language/es-ES/es-ES.mod_remca_wa_entry_conversations.sys.ini"/>
         
         <exec executable="cmd" >
             <arg value='/c rmdir "${link_dir}/plugins/remca/finder"'/>
@@ -324,12 +412,33 @@
         <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_finder_houses.ini"/>
         <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_finder_houses.sys.ini"/>
         <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/plugins/remca/finder"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/plugins/finder/wa_entry_conversations"'/>
+        </exec>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_finder.ini"/>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_remca_finder.sys.ini"/>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_finder_wa_entry_conversations.ini"/>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_finder_wa_entry_conversations.sys.ini"/>
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_remca_finder.ini"/>
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_remca_finder.sys.ini"/>
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_finder_wa_entry_conversations.ini"/>
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_finder_wa_entry_conversations.sys.ini"/>
+        <exec executable="cmd" >
             <arg value='/c rmdir "${link_dir}/plugins/search/houses"'/>
         </exec>
         <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_search_houses.ini"/>
         <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_search_houses.sys.ini"/>
         <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_search_houses.ini"/>
         <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_search_houses.sys.ini"/>
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/plugins/search/wa_entry_conversations"'/>
+        </exec>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_search_wa_entry_conversations.ini"/>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.plg_search_wa_entry_conversations.sys.ini"/>
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_search_wa_entry_conversations.ini"/>
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.plg_search_wa_entry_conversations.sys.ini"/>
         <exec executable="cmd" >
             <arg value='/c rmdir "${link_dir}/plugins/remca/emailcloak"'/>
         </exec>

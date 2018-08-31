@@ -97,6 +97,8 @@ abstract class ModRemcaHelper
 				'houses n_asc' => 'a.name',
 				'houses n_dsc' => 'a.name',
 				'houses o_asc' => 'a.ordering',
+				'wa_entry_conversations c_dsc' => 'a.created',
+				'wa_entry_conversations o_asc' => 'a.ordering',
 			);
 			$ordering = JArrayHelper::getValue($order_map, $params->get('ordering'));
 		}

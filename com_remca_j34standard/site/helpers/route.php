@@ -86,6 +86,80 @@ abstract class RemcaHelperRoute
 		return $link;
 	}
 	/**
+	 * @param	integer	The route of the Título De La Conversación Whatsapp
+	 */
+	public static function getWa_title_conversationRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'wa_title_conversation'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_remca&view=wa_title_conversation&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_remca&view=wa_title_conversation&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Entrada De La Conversación Whatsapp
+	 */
+	public static function getWa_entry_conversationRoute($id, $cat_id = 0, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'wa_entry_conversation'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_remca&view=wa_entry_conversation&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_remca&view=wa_entry_conversation&layout='.$layout.'&id='. $id;
+		}
+
+		if ($cat_id > 1)
+		{
+			$options['countItems'] = false;
+			$options['table'] = '#__rem_wa_entry_conversations';		
+			$categories = JCategories::getInstance('Remca', $options);
+		
+			$category = $categories->get($cat_id);
+			if ($category)
+			{
+				$needles['category'] = array_reverse($category->getPath());
+				$needles['categories'] = $needles['category'];
+				$link .= '&catid='.$cat_id;
+			}
+		}
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
 	 * @param	integer	The route of the Photo
 	 */
 	public static function getPhotoRoute($id, $layout = 'default', $keep_item_id = false)
@@ -118,10 +192,10 @@ abstract class RemcaHelperRoute
 	/**
 	 * @param	integer	The route of the Mime_type
 	 */
-	public static function getMimeTypeRoute($id, $layout = 'default', $keep_item_id = false)
+	public static function getMime_typeRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'mimetype'  => array((int) $id)
+			'mime_type'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -129,12 +203,12 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=mimetype&id='. $id;
+			$link = 'index.php?option=com_remca&view=mime_type&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=mimetype&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=mime_type&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -148,10 +222,10 @@ abstract class RemcaHelperRoute
 	/**
 	 * @param	integer	The route of the Mls_for_delete
 	 */
-	public static function getMlsForDeleteRoute($id, $layout = 'default', $keep_item_id = false)
+	public static function getMls_for_deleteRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'mlsfordelete'  => array((int) $id)
+			'mls_for_delete'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -159,12 +233,12 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=mlsfordelete&id='. $id;
+			$link = 'index.php?option=com_remca&view=mls_for_delete&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=mlsfordelete&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=mls_for_delete&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -208,10 +282,10 @@ abstract class RemcaHelperRoute
 	/**
 	 * @param	integer	The route of the Orders_detail
 	 */
-	public static function getOrdersDetailRoute($id, $layout = 'default', $keep_item_id = false)
+	public static function getOrders_detailRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'ordersdetail'  => array((int) $id)
+			'orders_detail'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -219,12 +293,12 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=ordersdetail&id='. $id;
+			$link = 'index.php?option=com_remca&view=orders_detail&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=ordersdetail&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=orders_detail&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -238,10 +312,10 @@ abstract class RemcaHelperRoute
 	/**
 	 * @param	integer	The route of the Main_category
 	 */
-	public static function getMainCategoryRoute($id, $language = 0, $layout = 'default', $keep_item_id = false)
+	public static function getMain_categoryRoute($id, $language = 0, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'maincategory'  => array((int) $id)
+			'main_category'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -249,12 +323,12 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=maincategory&id='. $id;
+			$link = 'index.php?option=com_remca&view=main_category&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=maincategory&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=main_category&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -303,10 +377,10 @@ abstract class RemcaHelperRoute
 	/**
 	 * @param	integer	The route of the Rent Request
 	 */
-	public static function getRentRequestRoute($id, $layout = 'default', $keep_item_id = false)
+	public static function getRent_requestRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'rentrequest'  => array((int) $id)
+			'rent_request'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -314,12 +388,12 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=rentrequest&id='. $id;
+			$link = 'index.php?option=com_remca&view=rent_request&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=rentrequest&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=rent_request&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -333,10 +407,10 @@ abstract class RemcaHelperRoute
 	/**
 	 * @param	integer	The route of the Rent_sal
 	 */
-	public static function getRentSalRoute($id, $layout = 'default', $keep_item_id = false)
+	public static function getRent_salRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'rentsal'  => array((int) $id)
+			'rent_sal'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -344,12 +418,12 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=rentsal&id='. $id;
+			$link = 'index.php?option=com_remca&view=rent_sal&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=rentsal&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=rent_sal&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -393,10 +467,10 @@ abstract class RemcaHelperRoute
 	/**
 	 * @param	integer	The route of the Track_source
 	 */
-	public static function getTrackSourceRoute($id, $layout = 'default', $keep_item_id = false)
+	public static function getTrack_sourceRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'tracksource'  => array((int) $id)
+			'track_source'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -404,12 +478,12 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=tracksource&id='. $id;
+			$link = 'index.php?option=com_remca&view=track_source&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=tracksource&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=track_source&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -453,10 +527,10 @@ abstract class RemcaHelperRoute
 	/**
 	 * @param	integer	The route of the Video_source
 	 */
-	public static function getVideoSourceRoute($id, $layout = 'default', $keep_item_id = false)
+	public static function getVideo_sourceRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'videosource'  => array((int) $id)
+			'video_source'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -464,12 +538,12 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=videosource&id='. $id;
+			$link = 'index.php?option=com_remca&view=video_source&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=videosource&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=video_source&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -483,10 +557,10 @@ abstract class RemcaHelperRoute
 	/**
 	 * @param	integer	The route of the Buying Requests
 	 */
-	public static function getBuyingRequestRoute($id, $layout = 'default', $keep_item_id = false)
+	public static function getBuying_requestRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'buyingrequest'  => array((int) $id)
+			'buying_request'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -494,12 +568,12 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=buyingrequest&id='. $id;
+			$link = 'index.php?option=com_remca&view=buying_request&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=buyingrequest&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=buying_request&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -573,10 +647,10 @@ abstract class RemcaHelperRoute
 	/**
 	 * @param	integer	The route of the Const_language
 	 */
-	public static function getConstLanguageRoute($id, $layout = 'default', $keep_item_id = false)
+	public static function getConst_languageRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'constlanguage'  => array((int) $id)
+			'const_language'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -584,12 +658,12 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=constlanguage&id='. $id;
+			$link = 'index.php?option=com_remca&view=const_language&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=constlanguage&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=const_language&layout='.$layout.'&id='. $id;
 		}
 
 		
@@ -633,10 +707,10 @@ abstract class RemcaHelperRoute
 	/**
 	 * @param	integer	The route of the Feature_house
 	 */
-	public static function getFeatureHouseRoute($id, $layout = 'default', $keep_item_id = false)
+	public static function getFeature_houseRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'featurehouse'  => array((int) $id)
+			'feature_house'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -644,12 +718,12 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=featurehouse&id='. $id;
+			$link = 'index.php?option=com_remca&view=feature_house&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=featurehouse&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=feature_house&layout='.$layout.'&id='. $id;
 		}
 
 		

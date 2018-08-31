@@ -52,6 +52,7 @@ defined('_JEXEC') or die;
 				<?php $class = ''; ?>
 
 				<h3 class="page-header item-title"><a href="<?php echo JRoute::_(RemcaHelperRoute::getCategoryRoute($child->id, $this->params->get('keep_house_itemid')));?>">
+				<h3 class="page-header item-title"><a href="<?php echo JRoute::_(RemcaHelperRoute::getCategoryRoute($child->id, $this->params->get('keep_wa_entry_conversation_itemid')));?>">
 					<?php echo $this->escape($child->title); ?></a>
 					<?php if ($this->params->get('items_to_display') AND 
 								$this->params->get('items_to_display') !='' AND 

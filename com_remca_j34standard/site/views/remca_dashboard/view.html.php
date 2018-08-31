@@ -85,6 +85,18 @@ class RemcaViewRemca_Dashboard extends JViewLegacy
                     'desc'=>JText::_('COM_REMCA_HOUSE_DESCRIPTION')
                 );
 		$buttons[] = array(
+                    'link'=>'index.php?option=com_remca&view=wa_title_conversations&layout=gridpanel&tmpl=component',
+                    'object'=>'wa_title_conversations',
+                    'text'=>'Titulo Conversaciones Wtsapp ',//JText::_('REMCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_REMCA_WA_TITLE_CONVERSATION_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_remca&view=wa_entry_conversations&layout=gridpanel&tmpl=component',
+                    'object'=>'wa_entry_conversations',
+                    'text'=>'Entrada Conversaciones Wtsapp ',//JText::_('REMCA_COMPONENT_WIZARD'),
+                    'desc'=>JText::_('COM_REMCA_WA_ENTRY_CONVERSATION_DESCRIPTION')
+                );
+		$buttons[] = array(
                     'link'=>'index.php?option=com_remca&view=wisheslist&layout=gridpanel&tmpl=component',
                     'object'=>'wisheslist',
                     'text'=>'Favoritos',//JText::_('REMCA_COMPONENT_WIZARD'),

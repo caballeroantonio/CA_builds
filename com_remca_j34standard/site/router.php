@@ -230,6 +230,96 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
+				case 'wa_title_conversation':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'wa_title_conversations':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'wa_entry_conversation':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if (isset($query['catid']))
+						{
+							$cat_id = $query['catid'];
+						}
+						else
+						{
+							if(isset($query['id']))
+							{
+								$cat_id = $query['id'];
+							}
+							else
+							{
+								$cat_id = null;
+							}
+						}	
+
+						$menu_cat_id = $menu_id;
+						$options['countItems'] = false;
+						$options['table'] = '';				
+						$categories = JCategories::getInstance('Remca',$options);
+						$category = $categories->get($cat_id);
+						if($category)
+						{
+							//TODO Throw error that the category either not exists or is unpublished
+							$path = array_reverse($category->getPath());
+
+							$array = array();
+							foreach($path as $id)
+							{
+								if((int) $id == (int)$menu_cat_id)
+								{
+									break;
+								}
+								if($advanced)
+								{
+									list($tmp, $id) = explode(':', $id, 2);
+								}
+								$array[] = $id;
+							}
+							$segments = array_merge($segments, array_reverse($array));
+						}
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					unset($query['catid']);
+					break;
+				case 'wa_entry_conversations':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
 				case 'photo':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
@@ -254,7 +344,7 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'mimetype':
+				case 'mime_type':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						if($advanced)
@@ -278,7 +368,7 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'mlsfordelete':
+				case 'mls_for_delete':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						if($advanced)
@@ -326,7 +416,7 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'ordersdetail':
+				case 'orders_detail':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						if($advanced)
@@ -350,7 +440,7 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'maincategory':
+				case 'main_category':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						
@@ -411,7 +501,7 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'rentrequest':
+				case 'rent_request':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						if($advanced)
@@ -435,7 +525,7 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'rentsal':
+				case 'rent_sal':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						if($advanced)
@@ -483,7 +573,7 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'tracksource':
+				case 'track_source':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						if($advanced)
@@ -531,7 +621,7 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'videosource':
+				case 'video_source':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						if($advanced)
@@ -555,7 +645,7 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'buyingrequest':
+				case 'buying_request':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						if($advanced)
@@ -627,7 +717,7 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'constlanguage':
+				case 'const_language':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						if($advanced)
@@ -675,7 +765,7 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'featurehouse':
+				case 'feature_house':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						if($advanced)
@@ -924,6 +1014,55 @@ class RemcaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
+				if ($item->query['view'] == 'wa_title_conversation' OR $view == 'wa_title_conversation')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('#__rem_wa_title_conversations'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'wa_title_conversations'OR $view == 'wa_title_conversations')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'wa_entry_conversation' OR $view == 'wa_entry_conversation')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('#__rem_wa_entry_conversations'));
+						$query->where($db->quoteName('catid') . ' = ' . (int) $vars['catid']);
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'wa_entry_conversations'OR $view == 'wa_entry_conversations')
+				{
+					$vars['view'] = $view;
+				}				
 				if ($item->query['view'] == 'photo' OR $view == 'photo')
 				{
 					if($advanced)
@@ -948,7 +1087,7 @@ class RemcaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
-				if ($item->query['view'] == 'mimetype' OR $view == 'mimetype')
+				if ($item->query['view'] == 'mime_type' OR $view == 'mime_type')
 				{
 					if($advanced)
 					{
@@ -972,7 +1111,7 @@ class RemcaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
-				if ($item->query['view'] == 'mlsfordelete' OR $view == 'mlsfordelete')
+				if ($item->query['view'] == 'mls_for_delete' OR $view == 'mls_for_delete')
 				{
 					if($advanced)
 					{
@@ -1020,7 +1159,7 @@ class RemcaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
-				if ($item->query['view'] == 'ordersdetail' OR $view == 'ordersdetail')
+				if ($item->query['view'] == 'orders_detail' OR $view == 'orders_detail')
 				{
 					if($advanced)
 					{
@@ -1044,7 +1183,7 @@ class RemcaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
-				if ($item->query['view'] == 'maincategory' OR $view == 'maincategory')
+				if ($item->query['view'] == 'main_category' OR $view == 'main_category')
 				{
 					if($advanced)
 					{
@@ -1093,7 +1232,7 @@ class RemcaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
-				if ($item->query['view'] == 'rentrequest' OR $view == 'rentrequest')
+				if ($item->query['view'] == 'rent_request' OR $view == 'rent_request')
 				{
 					if($advanced)
 					{
@@ -1117,7 +1256,7 @@ class RemcaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
-				if ($item->query['view'] == 'rentsal' OR $view == 'rentsal')
+				if ($item->query['view'] == 'rent_sal' OR $view == 'rent_sal')
 				{
 					if($advanced)
 					{
@@ -1165,7 +1304,7 @@ class RemcaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
-				if ($item->query['view'] == 'tracksource' OR $view == 'tracksource')
+				if ($item->query['view'] == 'track_source' OR $view == 'track_source')
 				{
 					if($advanced)
 					{
@@ -1213,7 +1352,7 @@ class RemcaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
-				if ($item->query['view'] == 'videosource' OR $view == 'videosource')
+				if ($item->query['view'] == 'video_source' OR $view == 'video_source')
 				{
 					if($advanced)
 					{
@@ -1237,7 +1376,7 @@ class RemcaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
-				if ($item->query['view'] == 'buyingrequest' OR $view == 'buyingrequest')
+				if ($item->query['view'] == 'buying_request' OR $view == 'buying_request')
 				{
 					if($advanced)
 					{
@@ -1309,7 +1448,7 @@ class RemcaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
-				if ($item->query['view'] == 'constlanguage' OR $view == 'constlanguage')
+				if ($item->query['view'] == 'const_language' OR $view == 'const_language')
 				{
 					if($advanced)
 					{
@@ -1357,7 +1496,7 @@ class RemcaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
-				if ($item->query['view'] == 'featurehouse' OR $view == 'featurehouse')
+				if ($item->query['view'] == 'feature_house' OR $view == 'feature_house')
 				{
 					if($advanced)
 					{
