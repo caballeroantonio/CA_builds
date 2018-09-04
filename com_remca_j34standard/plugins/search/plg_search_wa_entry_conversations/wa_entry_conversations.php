@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 require_once JPATH_SITE.'/components/com_remca/router.php';
 
 /**
- * Entrada Conversaciones Wtsapp  Search plugin
+ * wa_entry_conversations Search plugin
  *
  */
 class PlgSearchWa_entry_conversations extends JPlugin
@@ -74,7 +74,7 @@ class PlgSearchWa_entry_conversations extends JPlugin
 	}
 
 	/**
-	 * Entrada Conversaciones Wtsapp  Search method
+	 * wa_entry_conversations Search method
 	 * The sql must return the following fields that are used in a common display
 	 * routine: href, title, section, created, text, browsernav
 	 * @param string Target search string
@@ -180,7 +180,7 @@ class PlgSearchWa_entry_conversations extends JPlugin
 		$query	= $db->getQuery(true);
 
 		$search_section = JText::_('PLG_SEARCH_WA_ENTRY_CONVERSATIONS_WA_ENTRY_CONVERSATIONS');
-		// search entrada conversaciones wtsapp 
+		// search entradas conversaciones wtsapp 
 		if ($sWa_entry_conversation AND $limit > 0)
 		{
 			$query->clear();
@@ -231,7 +231,7 @@ class PlgSearchWa_entry_conversations extends JPlugin
 			$rows[] = $list;
 		}
 
-		// search archived entrada conversaciones wtsapp 
+		// search archived entradas conversaciones wtsapp 
 		if ($sWa_entry_conversationArchived AND $limit > 0)
 		{
 			$query->clear();

@@ -256,7 +256,7 @@ class RemcaModelLmunicipalityForm extends RemcaModelLmunicipality
 			return false;
 		}
 
-		// Reorder the municipalities so the new municipality is first
+		// Reorder the lmunicipalities so the new municipality is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);

@@ -277,7 +277,7 @@ class RemcaModelWa_title_conversationForm extends RemcaModelWa_title_conversatio
 			return false;
 		}
 
-		// Reorder the titulo conversaciones wtsapp  so the new título de la conversación whatsapp is first
+		// Reorder the wa_title_conversations so the new título de la conversación whatsapp is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);

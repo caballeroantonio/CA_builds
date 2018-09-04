@@ -176,7 +176,7 @@ class RemcaModelWa_entry_conversation extends JModelAdmin
 			$id = $this->getState('wa_entry_conversation.id');		
 			// Existing record. Can only edit in selected categories.
 			$form->setFieldAttribute('catid', 'action', 'core.edit');
-			// Existing record. Can only edit own entrada conversaciones wtsapp  in selected categories.
+			// Existing record. Can only edit own wa_entry_conversations in selected categories.
 			$form->setFieldAttribute('catid', 'action', 'core.edit.own');
 		}
 		else

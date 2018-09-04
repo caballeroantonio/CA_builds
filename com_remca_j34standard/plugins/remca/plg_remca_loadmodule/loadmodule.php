@@ -147,7 +147,7 @@ class PlgRemcaLoadmodule extends JPlugin
 	 */
 	public function onWa_entry_conversationPrepare($context, &$row, &$params, $page = 0)
 	{
-		// Don't run this plugin when the entrada conversaciones wtsapp  are being indexed
+		// Don't run this plugin when the entradas conversaciones wtsapp  are being indexed
 		if ($context == 'com_finder.indexer')
 		{
 			return true;

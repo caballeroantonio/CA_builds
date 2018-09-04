@@ -26,7 +26,7 @@
 
 <metadata>
 	<view
-		title="Entrada Conversaciones Wtsapp ">
+		title="Entradas Conversaciones Wtsapp ">
 		<message><![CDATA[COM_REMCA_WA_ENTRY_CONVERSATIONS_LAYOUT_DESC]]></message>
 	</view>
 </metadata>

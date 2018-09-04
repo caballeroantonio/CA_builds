@@ -239,9 +239,6 @@ class RemcaModelWa_entry_conversation extends JModelItem
 				$sub_query .= ' AND '.$db->quoteName('parent.published').' <= 0 GROUP BY '.$db->quoteName('cat.id').')';
 				$query->join('LEFT OUTER', $sub_query . ' AS badcats ON '.$db->quoteName('badcats.id').' = '.$db->quoteName('c.id'));
 					
-				// Join on vote rating table
-				$query->select('ROUND('.$db->quoteName('v.rating_sum').' / '.$db->quoteName('v.rating_count').', 0) AS rating, '.$db->quoteName('v.rating_count').' as rating_count');
-				$query->join('LEFT', $db->quoteName('#__rem_rating').' AS v ON '.$db->quoteName('a.id').' = '.$db->quoteName('v.content_id').' AND '.$db->quoteName('v.content_type').' = '.$db->quote('wa_entry_conversations'));
 
 				$can_publish = $user->authorise('core.edit.state', 'com_remca');
 				//  Do not show unless today's date is within the publish up and down dates (or they are empty)
@@ -690,77 +687,4 @@ class RemcaModelWa_entry_conversation extends JModelItem
 
 		return true;
 	}
-	/**
-	 * Update the vote rating for the entrada de la conversación whatsapp.
-	 *
-	 * @pk		int		Optional primary key of the entrada de la conversación whatsapp to rate.
-	 * @rate	int		Optional rating for the entrada de la conversación whatsapp.
-	 *
-	 * @return	boolean	True if successful; false otherwise and internal error set.
-	 */	
-    public function storeVote($pk = 0, $rate = 0)
-    {
-        if ( $rate >= 1 AND $rate <= 5 AND $pk > 0 )
-        {
-            $user_ip = $_SERVER['REMOTE_ADDR'];
-            $db = $this->getDbo();
-
-            $db->setQuery(
-                    'SELECT *' .
-                    ' FROM '.$db->quoteName('#__rem_rating') .
-                    ' WHERE '.$db->quoteName('content_id').' = '.(int) $pk .
-                    ' AND '.$db->quoteName('content_type').' = '.$db->quote('wa_entry_conversations')
-            );
-
-            $rating = $db->loadObject();
-
-            if (!$rating)
-            {
-                // There are no ratings yet, so lets insert our rating
-                $db->setQuery(
-                        'INSERT INTO '.$db->quoteName('#__rem_rating').' ( '.$db->quoteName('content_type').', '.$db->quoteName('content_id').', '.$db->quoteName('lastip').', '.$db->quoteName('rating_sum').', '.$db->quoteName('rating_count').' )' .
-                        ' VALUES ( '.$db->quote('wa_entry_conversations').', '.(int) $pk.', '.$db->quote($user_ip).', '.(int) $rate.', 1 )'
-                );
-
-				try
-				{
-					$db->execute();
-				}
-				catch (RuntimeException $e)
-				{
-					$this->setError($e->getMessage);
-					return false;
-				}
-            }
-            else
-            {
-                if ($user_ip != ($rating->lastip))
-                {
-                    $db->setQuery(
-                            'UPDATE '.$db->quoteName('#__rem_rating') .
-                            ' SET '.$db->quoteName('rating_count').' = '.$db->quoteName('rating_count').' + 1, '.$db->quoteName('rating_sum').' = '.$db->quoteName('rating_sum').' + '.(int) $rate.', '.$db->quoteName('lastip').' = '.$db->quote($user_ip) .
-                            ' WHERE '.$db->quoteName('content_id').' = '.(int) $pk.
-							' AND '.$db->quoteName('content_type').' = wa_entry_conversations'
-                    );
-                    
-					try
-					{
-						$db->execute();
-					}
-					catch (RuntimeException $e)
-					{
-						$this->setError($e->getMessage);
-						return false;
-					}
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-        JError::raiseWarning( 'SOME_ERROR_CODE', JText::sprintf('COM_REMCA_WA_ENTRY_CONVERSATIONS_INVALID_RATING', $rate), "RemcaModelWa_entry_conversation::storeVote($rate)");
-        return false;
-    }
 }

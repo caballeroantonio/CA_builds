@@ -30,7 +30,7 @@ defined('_JEXEC') or die;
 
 JLoader::register('ContentHelper', JPATH_ADMINISTRATOR . '/components/com_remca/helpers/remca.php');
 /**
- * Favoritos component helper.
+ * wisheslist component helper.
  *
  */
 abstract class JHtmlWishlistAdministrator

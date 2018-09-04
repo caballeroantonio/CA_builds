@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * Video_source list controller class.
+ * video_source list controller class.
  *
  */
 class RemcaControllerVideo_source extends JControllerLegacy
@@ -70,16 +70,16 @@ class RemcaControllerVideo_source extends JControllerLegacy
         /*
          * Function that allows download database information
          * @ToDo implementar ACL
-         * from outside: $model = JModelLegacy::getInstance('WishlistForm','RemcaModel', array('ignore_request' => FALSE));	
+         * from outside: $model = JModelLegacy::getInstance('video_sourceForm','RemcaModel', array('ignore_request' => FALSE));	
          */
         public function export(){
-			return false;
+            //die('not allowed');
             $model = $this->getModel = $this->getModel('Video_source','RemcaModel',array('ignore_request' => FALSE));
 			
-			//states
-//			$model->setState('list.ordering', 'a.ordering');//override
-//			$model->setState('list.direction', 'ASC');//override
-//			$model->setState('list.select', 'a.*');//override
+//            states
+//            $model->setState('list.ordering', 'a.ordering');//override
+//            $model->setState('list.direction', 'ASC');//override
+//            $model->setState('list.select', 'a.*');//override
             $query = $model->getListQuery4Export();
             $remca_helper = new RemcaHelper();
             $remca_helper->export('Video_source',$query);

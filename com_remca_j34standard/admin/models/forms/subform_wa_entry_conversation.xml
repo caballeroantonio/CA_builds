@@ -72,12 +72,11 @@
             type="tel"
             label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_PHONE_LABEL"
             description="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_PHONE_DESC"
-            class="inputbox validate-tel"
+            class="inputbox"
 			size="25"
 			maxlength="50"
 			filter="tel"
 			required="true"
-			validate="tel"
         >
         </field>  
     </fieldset>

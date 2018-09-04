@@ -30,7 +30,7 @@ defined('_JEXEC') or die;
 
 JLoader::register('ContentHelper', JPATH_ADMINISTRATOR . '/components/com_remca/helpers/remca.php');
 /**
- * Mls_for_delete component helper.
+ * mls_for_delete component helper.
  *
  */
 abstract class JHtmlMls_for_deleteAdministrator

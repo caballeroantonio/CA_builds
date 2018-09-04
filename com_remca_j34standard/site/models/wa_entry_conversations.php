@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * This models supports retrieving lists of entrada conversaciones wtsapp .
+ * This models supports retrieving lists of entradas conversaciones wtsapp .
  *
  */
 class RemcaModelWa_entry_conversations extends JModelList
@@ -57,7 +57,6 @@ class RemcaModelWa_entry_conversations extends JModelList
 				'created', 'a.created',
 				'created_by', 'a.created_by',
 				'created_by_name', 'ua.name',
-				'rating',
 				'ordering', 'a.ordering',
 				);
 		}
@@ -239,9 +238,6 @@ class RemcaModelWa_entry_conversations extends JModelList
 
 		
 		
-		// Join on vote rating table
-		$query->select('ROUND('.$db->quoteName('v.rating_sum').' / '.$db->quoteName('v.rating_count').', 0) AS rating, '.$db->quoteName('v.rating_count').' as rating_count');
-		$query->join('LEFT', $db->quoteName('#__rem_rating').' AS v ON '.$db->quoteName('a.id').' = '.$db->quoteName('v.content_id').' AND '.$db->quoteName('v.content_type').' = '.$db->quote('wa_entry_conversations'));
 
 
 
@@ -480,7 +476,7 @@ class RemcaModelWa_entry_conversations extends JModelList
 	}
 
 	/**
-	 * Method to get a list of entrada conversaciones wtsapp .
+	 * Method to get a list of entradas conversaciones wtsapp .
 	 *
 	 * Overriden to inject convert the params fields into an object.
 	 *
@@ -626,10 +622,10 @@ class RemcaModelWa_entry_conversations extends JModelList
 	
         /*
          * Function that allows download database information
-         * @ToDo implementar generación de código
          */
-        public function getListQuery4Export(){
-            $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));
-            return $this->getDbo()->getQuery();
+        public function getListQuery4Export($limit = 50, $offset = 0){
+            $query = $this->getListQuery();
+            $query->setLimit($limit, $offset);
+            return $query;
         }
 }

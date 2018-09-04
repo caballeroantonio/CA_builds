@@ -630,36 +630,6 @@ class RemcaControllerWa_entry_conversation extends JControllerForm
 		return true;
 	}	
 	/**
-	 * Method to save a vote.
-	 *
-	 * @return	void
-	 * 
-	 */
-	public function vote()
-	{
-		// Check for request forgeries.
-		JSession::checkToken() or jexit(JText::_('JINVALID_TOKEN'));
-		
-		$user_rating = $this->input->getInt('user_rating', -1);
-
-		if ( $user_rating > -1 )
-		{
-			$url = $this->input->getString('url', '');
-			$id = $this->input->getInt('id', 0);
-			$view_name = $this->input->getString('view', $this->default_view);
-			$model = $this->getModel($view_name);
-
-			if ($model->storeVote($id, $user_rating))
-			{
-				$this->setRedirect($url, JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_VOTE_SUCCESS'));
-			}
-			else
-			{
-				$this->setRedirect($url, JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_VOTE_FAILURE'));
-			}
-		}
-	}
-	/**
 	 * Function that allows child controller access to model data after the data has been saved.
 	 *
 	 * @param   JModelLegacy  $model  The data model object.

@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 require_once JPATH_SITE.'/components/com_remca/router.php';
 
 /**
- * Inmuebles Search plugin
+ * houses Search plugin
  *
  */
 class PlgSearchHouses extends JPlugin
@@ -74,7 +74,7 @@ class PlgSearchHouses extends JPlugin
 	}
 
 	/**
-	 * Inmuebles Search method
+	 * houses Search method
 	 * The sql must return the following fields that are used in a common display
 	 * routine: href, title, section, created, text, browsernav
 	 * @param string Target search string

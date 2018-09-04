@@ -30,7 +30,7 @@ defined('_JEXEC') or die;
 
 JLoader::register('ContentHelper', JPATH_ADMINISTRATOR . '/components/com_remca/helpers/remca.php');
 /**
- * States component helper.
+ * lstates component helper.
  *
  */
 abstract class JHtmlLstateAdministrator

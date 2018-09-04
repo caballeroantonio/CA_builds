@@ -46,7 +46,7 @@ abstract class ModWa_entry_conversationsHelper
 		// Get the dbo
 		$db = JFactory::getDbo();
 
-		// Get an instance of the generic entrada conversaciones wtsapp  model
+		// Get an instance of the generic entradas conversaciones wtsapp  model
 		$model = JModelLegacy::getInstance('Wa_entry_conversations', 'RemcaModel', array('ignore_request' => true));
 
 		// Set application parameters in model

@@ -62,7 +62,7 @@ class PlgFinderHouses extends FinderIndexerAdapter
 	/**
 	 * @var    $type_title	string	The type of content that the adapter indexes.
 	 */
-	protected $type_title = 'Inmuebles';
+	protected $type_title = JText::_('COM_REMCA_HOUSES');
 
 	/**
 	 * @var    $table	string	The table name.

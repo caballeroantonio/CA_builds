@@ -355,7 +355,7 @@ class RemcaModelHouseForm extends RemcaModelHouse
 			return false;
 		}
 
-		// Reorder the inmuebles so the new inmueble is first
+		// Reorder the houses so the new inmueble is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);

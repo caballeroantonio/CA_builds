@@ -481,10 +481,10 @@ $where .= "\n)";
 	
         /*
          * Function that allows download database information
-         * @ToDo implementar generación de código
          */
-        public function getListQuery4Export(){
-            $this->getDbo()->setQuery($this->getListQuery(), $this->getStart(), $this->getState('list.limit'));
-            return $this->getDbo()->getQuery();
+        public function getListQuery4Export($limit = 50, $offset = 0){
+            $query = $this->getListQuery();
+            $query->setLimit($limit, $offset);
+            return $query;
         }
 }

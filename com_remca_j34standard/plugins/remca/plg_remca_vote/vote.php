@@ -91,58 +91,6 @@ class PlgRemcaVote extends JPlugin
 		return $html;
 	}	
 	/**
-	 * On Before Display event procedure for Voting
-	 * 
-	 * @param	string			$context	Context of the paging
-	 * @param	array			&$row		Passed by reference and row updated with html for prev and/or next buttons
-	 * @param	json/registry	&$params	Item navigation parameters	
-	 * @param	integer			$page		Current Item page		
-	 * 
-	 * @return  string			$html		HTML to be output
-	 */			
-	public function onWa_entry_conversationBeforeDisplay($context, &$row, &$params, $page=0)
-	{
-		$parts = explode(".", $context);
-		if ($parts[0] != 'com_remca')
-		{
-			return false;
-		}	
-		$html = '';
-
-		if (!empty($params) AND $params->get('show_wa_entry_conversation_vote', null) AND $this->params->get('wa_entry_conversation_position', '1') == '0')
-		{
-			$html = $this->OutputRating($context, $row, $params, $page=0,'wa_entry_conversation');
-		}
-
-		return $html;
-	}
-	/**
-	 * On After Display event procedure for Voting
-	 * 
-	 * @param	string			$context	Context of the paging
-	 * @param	array			&$row		Passed by reference and row updated with html for prev and/or next buttons
-	 * @param	json/registry	&$params	Item navigation parameters	
-	 * @param	integer			$page		Current Item page		
-	 * 
-	 * @return  string			$html		HTML to be output
-	 */		
-	public function onWa_entry_conversationAfterDisplay($context, &$row, &$params, $page=0)
-	{
-		$parts = explode(".", $context);
-		if ($parts[0] != 'com_remca')
-		{
-			return false;
-		}	
-		$html = '';
-
-		if (!empty($params) AND $params->get('show_wa_entry_conversation_vote') AND $this->params->get('wa_entry_conversation_position', '1') == '1')
-		{
-			$html = $this->OutputRating($context, $row, $params, $page=0,'wa_entry_conversation');
-		}
-
-		return $html;
-	}	
-	/**
 	 * Create the rating information to be output
 	 * 
 	 * @param	string			$context	Context of the paging

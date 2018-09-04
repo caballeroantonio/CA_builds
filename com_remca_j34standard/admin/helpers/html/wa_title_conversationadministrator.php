@@ -30,7 +30,7 @@ defined('_JEXEC') or die;
 
 JLoader::register('ContentHelper', JPATH_ADMINISTRATOR . '/components/com_remca/helpers/remca.php');
 /**
- * Titulo Conversaciones Wtsapp  component helper.
+ * wa_title_conversations component helper.
  *
  */
 abstract class JHtmlWa_title_conversationAdministrator

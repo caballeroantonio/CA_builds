@@ -27,166 +27,134 @@
  */
 
 defined('_JEXEC') or die;
-
 JHtml::_('behavior.keepalive');
-
-function getFields(){
-    $fields = array();
-    return $fields;
-}
-
-function getColumns(){
-    $fields = getFields();
-    $columns = [];
-    foreach ($fields as $key => $field) {
-        switch ($field['FIELDTYPE_ID']) {
-        default:
-            $columns[] = $field;
-            break;
-        case 35:
-        case 34:
-            break;
-        }
-    }
-    return $columns;
-}
+JLoader::register('ExtJSHelper', JPATH_COMPONENT.'/helpers/ExtJSHelper.php');
+$extJSHelper = new ExtJSHelper;
+$extJSHelper->parse('wa_title_conversation');
 ?>
-<?php /*?>
-<?php
-if ($this->params->get('save_history') AND $this->params->get('wa_title_conversation_save_history'))
-{
-//	JHtml::_('behavior.modal', 'a.modal_jform_contenthistory');//creo que se carga con el botón versiones
-	
-	//hacer parametrizable data_id para que funcione versiones
-	
-	//$model	= JModelLegacy::getInstance('[%CompObject%]Form','[%ArchitectComp%]Model', array('ignore_request' => FALSE));
-	$model	= JModelLegacy::getInstance('Wa_title_conversationForm','RemcaModel', array('ignore_request' => FALSE));
-	$data = array();
-	$data['id'] = 1;
-	$this->form	= $model->getForm($data, false);
-	//D:\www\htdocs\JPruebas\libraries\cms\form\field\contenthistory.php
-	$itemId = $this->form->getValue('id');
-	
-	echo $this->form->getInput('contenthistory');
-	
-				echo JHtml::_(
-					'bootstrap.renderModal', //atajo
-					'collapseModal', //selector jQuery('#collapseModal')
-					array(
-						'title'  => 'titulo',
-						'height' => 450,
-						'url' => new JUri('index.php?option=com_remca&view=wa_title_conversationform&layout=edit&layout=edit&tmpl=component&id=1&function=on_collapseModal')
-					)
-				);
-}
-
-
-?>
-<ul>
-	<li>@ToDo grid column versiones, necesito poder pasarle itemId al FORM o generar manualmente el código equivalente = {$itemId} y hace botón oculto</li>
-    <li>@bug codificación a español, acentos y ñ en CA</li>
-    <li>Personalidades relacionadas en el asunto</li>
-    <li>Añadir registro - Ejemplo modal código FRAMEWORK
-    <li>Se le da a los usuarios el botón borrar, PUBLISHED = FALSE quitando esa actividad al CAT</li>
-</ul>
-
-<?php */?>
-	<script>
-		/**
-		* resuelve problemas de compatibilidad entre Mootools vs ExtJs
-		*/
-		MOOTOOLS_DOCUMENT_ID_VALUE = document.id;
-    </script>
-    <link rel="stylesheet" type="text/css" href="http://localhost/Sencha/ExtJS/ext-6.2.0/build/classic/theme-classic/resources/theme-classic-all.css"/>
-    <script type="text/javascript" src="http://localhost/Sencha/ExtJS/ext-6.2.0/build/ext-all.js"></script>
-
+<link rel="stylesheet" type="text/css" href="libraries/extjs/classic/theme-classic/resources/theme-classic-all.css"/>
+<script type="text/javascript" src="libraries/extjs/ext-all.js"></script>
 <script language="javascript">
-Ext.onReady(function(){
-Ext.documentId = MOOTOOLS_DOCUMENT_ID_VALUE;
-document.id = Ext.documentId;
+    /**
+    * resuelve problemas de compatibilidad entre Mootools vs ExtJs
+    */
+    //MOOTOOLS_DOCUMENT_ID_VALUE = document.id;
+    Ext.define('remca.model.wa_title_conversation', {
+        extend: 'Ext.data.Model',
+        proxy: {
+            type: 'ajax',
+            listeners: {
+                exception: function(proxy, response, operation){
+                    Ext.MessageBox.show({
+                        title: 'REMOTE EXCEPTION',
+                        msg: operation.getError(),
+                        icon: Ext.MessageBox.ERROR,
+                        buttons: Ext.Msg.OK
+                    });
+                }
+            },
+            api: {
+                read: 'index.php?task=json_read',
+                update: 'index.php?task=json_save',
+            },
+            reader: {
+                type: 'json',
+                messageProperty: 'message',
+                root: 'data'
+            },
+            writer: {
+                "type": "json",
+                rootProperty: 'data',//extjs 4.2 and before name is root
+                "encode": true,
+                "writeAllFields": true,
+//                "allowSingle": false,//todavía no veo cómo retornar valores con errores.
+            },
+            extraParams: {
+                '<?= JSession::getFormToken() ?>' : 1,
+                'option': 'com_remca',
+                'model': 'wa_title_conversation',
+                'store': 'wa_title_conversations',
+            },
+        },
+        fields: <?= $extJSHelper->encode($extJSHelper->fields) ?>,
+    });
+        Ext.define('remca.store.wa_title_conversations', {
+            extend: 'Ext.data.Store',
+            remoteSort: true,
+            storeId: 'wa_title_conversations',
+            model: 'remca.model.wa_title_conversation',
+            autoSync: true,
+        });
 
-	Ext.create('Ext.data.Store', {
-		storeId:'simpsonsStore',
-		fields:['name', 'address', 'personalidad', 'icon'],
-		data:{'items':[
-			{ 'name': 'Lisa',  "address":"Calle Palma",  "personalidad":"Actor", icon: 'user_green'  },
-			{ 'name': 'Bart',  "address":"Calle Pino",  "personalidad":"Actor", icon: 'user_green'  },
-			{ 'name': 'Homer', "address":"Calle Arce",  "personalidad":"Demandado", icon: 'user_red'  },
-			{ 'name': 'Marge', "address":"Calle Sauce", "personalidad":"Victima", icon: 'user_orange'  },
-		]},
-		proxy: {
-			type: 'memory',
-			reader: {
-				type: 'json',
-				root: 'items'
-			}
-		}
-	});
-        
-        var pathImg = 'http://localhost/resources/images/fatcow-hosting-icons-2000/16x16/';
-	
-	Ext.create('Ext.grid.Panel', {
-		title: 'Titulo Conversaciones Wtsapp ',
-		store: Ext.data.StoreManager.lookup('simpsonsStore'),
-		columns: [
-                    
-			//columna para mostrar versiones
-			{
-				xtype:'actioncolumn',
-				maxWidth: 25,
-				hideable : false,
-				menuDisabled: true,
-				resizable: false,
-				header: '<img src="'+pathImg+'box_front.png" alt="<?= JText::_('JTOOLBAR_VERSIONS') ?>" />',
-				iconCls: 'icon-archive',
-				width:50,
-				tooltip: '<?= JText::_('JTOOLBAR_VERSIONS') ?>',
-					handler: function(grid, rowIndex, colIndex) {
-						jQuery('#versionsModal').modal('show')
-					}
-	
-			},          
-                    
-			//columna con personalidades representadas por iconos
-			{ 
-				xtype: 'gridcolumn',
-				width: 30,
-				hidden: true,//hideable : false,
-				menuDisabled: true,
-				resizable: false,
-				dataIndex: 'icon',
-				header: '<img src="'+pathImg+'user.png" alt="Personalidad" />',
-				renderer: function(value, metaData, record, rowIndex, colIndex, store, view ){
-					return '<img src="'+pathImg+value+'.png"/>';
-				},
-			},
-			//columnas con personalidades
-			{ hidden: true,text: 'Personalidad',  dataIndex: 'personalidad' },
-			{ hidden: true,text: 'Nombre', dataIndex: 'name', flex: 1 },
-			{ hidden: true,text: 'Dirección', dataIndex: 'address' },
-			
-			
-<?php
-    $columns = getColumns();
-    foreach ($columns as $key => $column) {
-        echo "{text: '{$column['FIELD_NAME']}', dataIndex: '{$column['FIELD_CODE_NAME']}',},";
-    }
-?>
-		],
-                tbar: [
-                  { 
-                      xtype: 'button', 
-                      text: 'Añadir nuevo registro',
-                      icon: 'http://localhost/gpcb/resources_20170226/tsjdf_libros/images/add.png',
-					  handler: function(grid, rowIndex, colIndex) {
-						  jQuery('#collapseModal').modal('show');
-					  }
+Ext.application({
+    name: 'remca',
+    stores: [
+        'categories',//if categories
+        'wa_title_conversations',//each modal
+        'wa_title_conversations',//current store
+    ],
+    paths: {
+        'remca': 'media/com_remca/extjs',
+    },
+    launch: function() {
+	for(i = 0; i < this.stores.length; i++ ){
+		Ext.create(this.stores[i]).load({
+                scope: this,
+                callback: this.onStoresReady
+            });
+	}
+    },
+    onStoresReady: function(){
+        for(i = 0; i < this.stores.length; i++ ){
+            store = this.stores[i].replace('remca.store.','');
+            if(Ext.StoreManager.get(store).isLoading())
+                return;
+        }
+            //if states no ponerlo en Ext.application porque ya tiene datos cargados y pintaría 2 grid
+            Ext.create('remca.store.states');
+            
+            Ext.create('Ext.grid.Panel', {
+            title: '<?= JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS') ?>',
+            store: 'wa_title_conversations',
+            sortableColumns: false,
+            columns: <?= $extJSHelper->encode($extJSHelper->columns) ?>,
+           _tbar_: [
+              { 
+                xtype: 'button', 
+                text: 'Añadir nuevo registro',
+                icon: 'http://localhost/gpcb/resources_20170226/tsjdf_libros/images/add.png',
+                  handler: function(grid, rowIndex, colIndex) {
+                    jQuery('#collapseModal').modal('show');
                   }
-                ],
-"height": 300,
-width: '100%',
-		renderTo: 'extjs-content',
-	});
+              }
+            ],
+            bbar: {
+                xtype: 'pagingtoolbar',
+                displayInfo: true,
+                store: 'wa_title_conversations',
+                _listeners_: {
+                    beforechange: function( pagingtoolbar, page, eOpts){
+                        this.setActiveRecord(null);
+                    },
+                    scope: this
+                },
+                _items_:[
+                    {
+                        xtype: 'printbookbutton',
+                        scope: this,
+                    }
+                ]
+            },
+            selType: 'rowmodel',
+            plugins: [
+                Ext.create('Ext.grid.plugin.RowEditing')
+            ],
+            height: 300,
+            width: '100%',
+            renderTo: 'extjs-content',
+        });
+    },
 });
 </script>
 <div id="extjs-content"></div>
+<a href="remca/index.php?task=wa_title_conversations.export&amp;option=com_remca&amp;Itemid=129" class="btn btn-primary"><span class="icon-download"></span>Export</a>

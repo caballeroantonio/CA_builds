@@ -2907,26 +2907,6 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_wa_entry_conversation_vote"
-            type="radio"
-            label="COM_REMCA_SHOW_VOTE_LABEL"
-            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_VOTE_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-		>
-            <option	value="1">JSHOW</option>
-            <option value="0">JHIDE</option>
-        </field>
-        <field name="show_wa_entry_conversation_share"
-            type="radio"
-            label="COM_REMCA_SHOW_SHARE_LABEL"
-            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_SHARE_DESC"
-            class="btn-group btn-group-yesno"
-            default="1"
-		>
-            <option	value="1">JSHOW</option>
-            <option value="0">JHIDE</option>
-        </field>
         <field name="show_wa_entry_conversation_phone"
             type="radio"
             label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_LABEL"
@@ -10241,7 +10221,7 @@
 		>
             <option value="">JNONE</option>
             <option value="Inmuebles">COM_REMCA_HOUSES</option>
-            <option value="Entrada Conversaciones Wtsapp ">COM_REMCA_WA_ENTRY_CONVERSATIONS</option>
+            <option value="Entradas Conversaciones Wtsapp ">COM_REMCA_WA_ENTRY_CONVERSATIONS</option>
         </field>
         <field name="show_categories_num_items"
             type="radio"

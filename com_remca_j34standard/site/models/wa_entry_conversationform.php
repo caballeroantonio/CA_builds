@@ -370,7 +370,7 @@ class RemcaModelWa_entry_conversationForm extends RemcaModelWa_entry_conversatio
 			return false;
 		}
 
-		// Reorder the entrada conversaciones wtsapp  so the new entrada de la conversación whatsapp is first
+		// Reorder the wa_entry_conversations so the new entrada de la conversación whatsapp is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);

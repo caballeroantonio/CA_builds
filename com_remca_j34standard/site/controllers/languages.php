@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * Languages list controller class.
+ * languages list controller class.
  *
  */
 class RemcaControllerLanguages extends JControllerLegacy
@@ -70,16 +70,16 @@ class RemcaControllerLanguages extends JControllerLegacy
         /*
          * Function that allows download database information
          * @ToDo implementar ACL
-         * from outside: $model = JModelLegacy::getInstance('WishlistForm','RemcaModel', array('ignore_request' => FALSE));	
+         * from outside: $model = JModelLegacy::getInstance('languageForm','RemcaModel', array('ignore_request' => FALSE));	
          */
         public function export(){
-			return false;
+            //die('not allowed');
             $model = $this->getModel = $this->getModel('Languages','RemcaModel',array('ignore_request' => FALSE));
 			
-			//states
-//			$model->setState('list.ordering', 'a.ordering');//override
-//			$model->setState('list.direction', 'ASC');//override
-//			$model->setState('list.select', 'a.*');//override
+//            states
+//            $model->setState('list.ordering', 'a.ordering');//override
+//            $model->setState('list.direction', 'ASC');//override
+//            $model->setState('list.select', 'a.*');//override
             $query = $model->getListQuery4Export();
             $remca_helper = new RemcaHelper();
             $remca_helper->export('Languages',$query);

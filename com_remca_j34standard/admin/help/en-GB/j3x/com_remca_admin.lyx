@@ -3546,7 +3546,7 @@ Descripción
 \end_layout
 
 \begin_layout Standard
-Es la tabla para almacenar Entrada Conversaciones Wtsapp 
+Es la tabla para almacenar Entradas Conversaciones Wtsapp 
 \end_layout
 
 \begin_layout Standard
@@ -9395,7 +9395,7 @@ status collapsed
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Entrada Conversaciones Wtsapp  - Grid Panel Layout"
+name "Entradas Conversaciones Wtsapp  - Grid Panel Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=gridpanel"
 
 \end_inset
@@ -9441,7 +9441,7 @@ Grid Panel Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Entrada Conversaciones Wtsapp  - Default List Layout"
+name "Entradas Conversaciones Wtsapp  - Default List Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]"
 
 \end_inset
@@ -9487,7 +9487,7 @@ Default List Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Entrada Conversaciones Wtsapp  - Blog Layout"
+name "Entradas Conversaciones Wtsapp  - Blog Layout"
 target "SERVER?option=com_remca&view=[%%ccompobjectplural%%]&layout=blog"
 
 \end_inset
@@ -9533,7 +9533,7 @@ Blog Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Entrada Conversaciones Wtsapp  - Single Entrada De La Conversación Whatsapp Layout"
+name "Entradas Conversaciones Wtsapp  - Single Entrada De La Conversación Whatsapp Layout"
 target "SERVER?option=com_remca&view=wa_entry_conversation&id=1"
 
 \end_inset
@@ -9579,7 +9579,7 @@ Single Entrada De La Conversación Whatsapp Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Entrada Conversaciones Wtsapp  - Single Entrada De La Conversación Whatsapp Article Layout"
+name "Entradas Conversaciones Wtsapp  - Single Entrada De La Conversación Whatsapp Article Layout"
 target "SERVER?option=com_remca&view=wa_entry_conversation&layout=article&id=1"
 
 \end_inset
@@ -9625,7 +9625,7 @@ Single Entrada De La Conversación Whatsapp Article Layout
 \begin_layout Paragraph
 \begin_inset CommandInset href
 LatexCommand href
-name "Entrada Conversaciones Wtsapp  - Create Entrada De La Conversación Whatsapp"
+name "Entradas Conversaciones Wtsapp  - Create Entrada De La Conversación Whatsapp"
 target "SERVER?option=com_remca&view=wa_entry_conversationform&layout=edit&id=1"
 
 \end_inset

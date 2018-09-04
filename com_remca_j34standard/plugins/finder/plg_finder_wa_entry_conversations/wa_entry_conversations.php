@@ -62,7 +62,7 @@ class PlgFinderWa_entry_conversations extends FinderIndexerAdapter
 	/**
 	 * @var    $type_title	string	The type of content that the adapter indexes.
 	 */
-	protected $type_title = 'Entrada Conversaciones Wtsapp ';
+	protected $type_title = JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS');
 
 	/**
 	 * @var    $table	string	The table name.
@@ -153,7 +153,7 @@ class PlgFinderWa_entry_conversations extends FinderIndexerAdapter
 	 */
 	public function onFinderAfterSave($context, $row, $is_new)
 	{
-		// We only want to handle entrada conversaciones wtsapp  here
+		// We only want to handle entradas conversaciones wtsapp  here
 		if ($context == 'com_remca.wa_entry_conversation' OR $context == 'com_remca.wa_entry_conversationform')
 		{
 
@@ -217,7 +217,7 @@ class PlgFinderWa_entry_conversations extends FinderIndexerAdapter
 	 */
 	public function onFinderChangeState($context, $pks, $value)
 	{
-		// We only want to handle entrada conversaciones wtsapp  here
+		// We only want to handle entradas conversaciones wtsapp  here
 		if ($context == 'com_remca.wa_entry_conversation' OR $context == 'com_remca.wa_entry_conversationform')
 		{
 			$this->itemStateChange($pks, $value);

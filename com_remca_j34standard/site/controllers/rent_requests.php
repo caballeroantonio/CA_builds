@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * Rent Requests list controller class.
+ * rent_requests list controller class.
  *
  */
 class RemcaControllerRent_requests extends JControllerLegacy
@@ -70,16 +70,16 @@ class RemcaControllerRent_requests extends JControllerLegacy
         /*
          * Function that allows download database information
          * @ToDo implementar ACL
-         * from outside: $model = JModelLegacy::getInstance('WishlistForm','RemcaModel', array('ignore_request' => FALSE));	
+         * from outside: $model = JModelLegacy::getInstance('rent_requestForm','RemcaModel', array('ignore_request' => FALSE));	
          */
         public function export(){
-			return false;
+            //die('not allowed');
             $model = $this->getModel = $this->getModel('Rent_requests','RemcaModel',array('ignore_request' => FALSE));
 			
-			//states
-//			$model->setState('list.ordering', 'a.ordering');//override
-//			$model->setState('list.direction', 'ASC');//override
-//			$model->setState('list.select', 'a.*');//override
+//            states
+//            $model->setState('list.ordering', 'a.ordering');//override
+//            $model->setState('list.direction', 'ASC');//override
+//            $model->setState('list.select', 'a.*');//override
             $query = $model->getListQuery4Export();
             $remca_helper = new RemcaHelper();
             $remca_helper->export('Rent_requests',$query);

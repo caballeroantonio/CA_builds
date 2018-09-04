@@ -27,345 +27,134 @@
  */
 
 defined('_JEXEC') or die;
-
 JHtml::_('behavior.keepalive');
-
-function getFields(){
-    $fields = array();
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'Inmueble',
-        'FIELD_CODE_NAME' => 'id_house',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 13,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_HOUSE
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Inmueble
-
-                FIELD_NAME_LATEX=Inmueble
-                FIELD_CODE_NAME_LATEX=id\_house
-                FIELD_DBCOMMENT_LATEX=
-
-                    {FIELD_LINK}
-                    FIELD_FOREIGN_OBJECT_ACRONYM_UPPER=I
-                    FIELD_FOREIGN_OBJECT_UPPER=HOUSE
-
-    */
-    $fields['id_house'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'Usuario',
-        'FIELD_CODE_NAME' => 'id_user',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 13,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=ID_USER
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(10) UNSIGNED  NOT NULL DEFAULT '0' Usuario
-
-                FIELD_NAME_LATEX=Usuario
-                FIELD_CODE_NAME_LATEX=id\_user
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['id_user'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'user_name',
-        'FIELD_CODE_NAME' => 'user_name',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=USER_NAME
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(150) DEFAULT NULL user_name
-
-                FIELD_NAME_LATEX=user\_name
-                FIELD_CODE_NAME_LATEX=user\_name
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['user_name'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'user_email',
-        'FIELD_CODE_NAME' => 'user_email',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=USER_EMAIL
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(100) DEFAULT NULL user_email
-
-                FIELD_NAME_LATEX=user\_email
-                FIELD_CODE_NAME_LATEX=user\_email
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['user_email'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'date',
-        'FIELD_CODE_NAME' => 'date',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 5,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=DATE
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` DATETIME DEFAULT NULL date
-
-                FIELD_NAME_LATEX=date
-                FIELD_CODE_NAME_LATEX=date
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['date'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'rating',
-        'FIELD_CODE_NAME' => 'rating',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 22,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=RATING
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` INT(2) DEFAULT NULL rating
-
-                FIELD_NAME_LATEX=rating
-                FIELD_CODE_NAME_LATEX=rating
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['rating'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'title',
-        'FIELD_CODE_NAME' => 'title',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 1,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=TITLE
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` VARCHAR(250) DEFAULT NULL title
-
-                FIELD_NAME_LATEX=title
-                FIELD_CODE_NAME_LATEX=title
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['title'] = $field;
-    //{OBJECT_FIELD}
-    $field = array(
-        'FIELD_NAME' => 'comment',
-        'FIELD_CODE_NAME' => 'comment',
-        'FIELD_DESCRIPTION' => '',//
-        'FIELDTYPE_ID' => 4,
-    );
-    /*
-                FIELD_OPTIONS_LANGUAGE_VARS=
-                FIELD_CODE_NAME_UPPER=COMMENT
-                FIELD_INTRO=
-                FIELD_DESCRIPTION_INI=
-
-                FIELD_DB=`` TEXT DEFAULT NULL comment
-
-                FIELD_NAME_LATEX=comment
-                FIELD_CODE_NAME_LATEX=comment
-                FIELD_DBCOMMENT_LATEX=
-
-
-    */
-    $fields['comment'] = $field;
-    return $fields;
-}
-
-function getColumns(){
-    $fields = getFields();
-    $columns = [];
-    foreach ($fields as $key => $field) {
-        switch ($field['FIELDTYPE_ID']) {
-        default:
-            $columns[] = $field;
-            break;
-        case 35:
-        case 34:
-            break;
-        }
-    }
-    return $columns;
-}
+JLoader::register('ExtJSHelper', JPATH_COMPONENT.'/helpers/ExtJSHelper.php');
+$extJSHelper = new ExtJSHelper;
+$extJSHelper->parse('review');
 ?>
-<?php /*?>
-<?php
-if ($this->params->get('save_history') AND $this->params->get('review_save_history'))
-{
-//	JHtml::_('behavior.modal', 'a.modal_jform_contenthistory');//creo que se carga con el botón versiones
-	
-	//hacer parametrizable data_id para que funcione versiones
-	
-	//$model	= JModelLegacy::getInstance('[%CompObject%]Form','[%ArchitectComp%]Model', array('ignore_request' => FALSE));
-	$model	= JModelLegacy::getInstance('ReviewForm','RemcaModel', array('ignore_request' => FALSE));
-	$data = array();
-	$data['id'] = 1;
-	$this->form	= $model->getForm($data, false);
-	//D:\www\htdocs\JPruebas\libraries\cms\form\field\contenthistory.php
-	$itemId = $this->form->getValue('id');
-	
-	echo $this->form->getInput('contenthistory');
-	
-				echo JHtml::_(
-					'bootstrap.renderModal', //atajo
-					'collapseModal', //selector jQuery('#collapseModal')
-					array(
-						'title'  => 'titulo',
-						'height' => 450,
-						'url' => new JUri('index.php?option=com_remca&view=reviewform&layout=edit&layout=edit&tmpl=component&id=1&function=on_collapseModal')
-					)
-				);
-}
-
-
-?>
-<ul>
-	<li>@ToDo grid column versiones, necesito poder pasarle itemId al FORM o generar manualmente el código equivalente = {$itemId} y hace botón oculto</li>
-    <li>@bug codificación a español, acentos y ñ en CA</li>
-    <li>Personalidades relacionadas en el asunto</li>
-    <li>Añadir registro - Ejemplo modal código FRAMEWORK
-    <li>Se le da a los usuarios el botón borrar, PUBLISHED = FALSE quitando esa actividad al CAT</li>
-</ul>
-
-<?php */?>
-	<script>
-		/**
-		* resuelve problemas de compatibilidad entre Mootools vs ExtJs
-		*/
-		MOOTOOLS_DOCUMENT_ID_VALUE = document.id;
-    </script>
-    <link rel="stylesheet" type="text/css" href="http://localhost/Sencha/ExtJS/ext-6.2.0/build/classic/theme-classic/resources/theme-classic-all.css"/>
-    <script type="text/javascript" src="http://localhost/Sencha/ExtJS/ext-6.2.0/build/ext-all.js"></script>
-
+<link rel="stylesheet" type="text/css" href="libraries/extjs/classic/theme-classic/resources/theme-classic-all.css"/>
+<script type="text/javascript" src="libraries/extjs/ext-all.js"></script>
 <script language="javascript">
-Ext.onReady(function(){
-Ext.documentId = MOOTOOLS_DOCUMENT_ID_VALUE;
-document.id = Ext.documentId;
+    /**
+    * resuelve problemas de compatibilidad entre Mootools vs ExtJs
+    */
+    //MOOTOOLS_DOCUMENT_ID_VALUE = document.id;
+    Ext.define('remca.model.review', {
+        extend: 'Ext.data.Model',
+        proxy: {
+            type: 'ajax',
+            listeners: {
+                exception: function(proxy, response, operation){
+                    Ext.MessageBox.show({
+                        title: 'REMOTE EXCEPTION',
+                        msg: operation.getError(),
+                        icon: Ext.MessageBox.ERROR,
+                        buttons: Ext.Msg.OK
+                    });
+                }
+            },
+            api: {
+                read: 'index.php?task=json_read',
+                update: 'index.php?task=json_save',
+            },
+            reader: {
+                type: 'json',
+                messageProperty: 'message',
+                root: 'data'
+            },
+            writer: {
+                "type": "json",
+                rootProperty: 'data',//extjs 4.2 and before name is root
+                "encode": true,
+                "writeAllFields": true,
+//                "allowSingle": false,//todavía no veo cómo retornar valores con errores.
+            },
+            extraParams: {
+                '<?= JSession::getFormToken() ?>' : 1,
+                'option': 'com_remca',
+                'model': 'review',
+                'store': 'reviews',
+            },
+        },
+        fields: <?= $extJSHelper->encode($extJSHelper->fields) ?>,
+    });
+        Ext.define('remca.store.reviews', {
+            extend: 'Ext.data.Store',
+            remoteSort: true,
+            storeId: 'reviews',
+            model: 'remca.model.review',
+            autoSync: true,
+        });
 
-	Ext.create('Ext.data.Store', {
-		storeId:'simpsonsStore',
-		fields:['name', 'address', 'personalidad', 'icon'],
-		data:{'items':[
-			{ 'name': 'Lisa',  "address":"Calle Palma",  "personalidad":"Actor", icon: 'user_green'  },
-			{ 'name': 'Bart',  "address":"Calle Pino",  "personalidad":"Actor", icon: 'user_green'  },
-			{ 'name': 'Homer', "address":"Calle Arce",  "personalidad":"Demandado", icon: 'user_red'  },
-			{ 'name': 'Marge', "address":"Calle Sauce", "personalidad":"Victima", icon: 'user_orange'  },
-		]},
-		proxy: {
-			type: 'memory',
-			reader: {
-				type: 'json',
-				root: 'items'
-			}
-		}
-	});
-        
-        var pathImg = 'http://localhost/resources/images/fatcow-hosting-icons-2000/16x16/';
-	
-	Ext.create('Ext.grid.Panel', {
-		title: 'Reviews',
-		store: Ext.data.StoreManager.lookup('simpsonsStore'),
-		columns: [
-                    
-			//columna para mostrar versiones
-			{
-				xtype:'actioncolumn',
-				maxWidth: 25,
-				hideable : false,
-				menuDisabled: true,
-				resizable: false,
-				header: '<img src="'+pathImg+'box_front.png" alt="<?= JText::_('JTOOLBAR_VERSIONS') ?>" />',
-				iconCls: 'icon-archive',
-				width:50,
-				tooltip: '<?= JText::_('JTOOLBAR_VERSIONS') ?>',
-					handler: function(grid, rowIndex, colIndex) {
-						jQuery('#versionsModal').modal('show')
-					}
-	
-			},          
-                    
-			//columna con personalidades representadas por iconos
-			{ 
-				xtype: 'gridcolumn',
-				width: 30,
-				hidden: true,//hideable : false,
-				menuDisabled: true,
-				resizable: false,
-				dataIndex: 'icon',
-				header: '<img src="'+pathImg+'user.png" alt="Personalidad" />',
-				renderer: function(value, metaData, record, rowIndex, colIndex, store, view ){
-					return '<img src="'+pathImg+value+'.png"/>';
-				},
-			},
-			//columnas con personalidades
-			{ hidden: true,text: 'Personalidad',  dataIndex: 'personalidad' },
-			{ hidden: true,text: 'Nombre', dataIndex: 'name', flex: 1 },
-			{ hidden: true,text: 'Dirección', dataIndex: 'address' },
-			
-			
-<?php
-    $columns = getColumns();
-    foreach ($columns as $key => $column) {
-        echo "{text: '{$column['FIELD_NAME']}', dataIndex: '{$column['FIELD_CODE_NAME']}',},";
-    }
-?>
-		],
-                tbar: [
-                  { 
-                      xtype: 'button', 
-                      text: 'Añadir nuevo registro',
-                      icon: 'http://localhost/gpcb/resources_20170226/tsjdf_libros/images/add.png',
-					  handler: function(grid, rowIndex, colIndex) {
-						  jQuery('#collapseModal').modal('show');
-					  }
+Ext.application({
+    name: 'remca',
+    stores: [
+        'categories',//if categories
+        'wa_title_conversations',//each modal
+        'reviews',//current store
+    ],
+    paths: {
+        'remca': 'media/com_remca/extjs',
+    },
+    launch: function() {
+	for(i = 0; i < this.stores.length; i++ ){
+		Ext.create(this.stores[i]).load({
+                scope: this,
+                callback: this.onStoresReady
+            });
+	}
+    },
+    onStoresReady: function(){
+        for(i = 0; i < this.stores.length; i++ ){
+            store = this.stores[i].replace('remca.store.','');
+            if(Ext.StoreManager.get(store).isLoading())
+                return;
+        }
+            //if states no ponerlo en Ext.application porque ya tiene datos cargados y pintaría 2 grid
+            Ext.create('remca.store.states');
+            
+            Ext.create('Ext.grid.Panel', {
+            title: '<?= JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS') ?>',
+            store: 'reviews',
+            sortableColumns: false,
+            columns: <?= $extJSHelper->encode($extJSHelper->columns) ?>,
+           _tbar_: [
+              { 
+                xtype: 'button', 
+                text: 'Añadir nuevo registro',
+                icon: 'http://localhost/gpcb/resources_20170226/tsjdf_libros/images/add.png',
+                  handler: function(grid, rowIndex, colIndex) {
+                    jQuery('#collapseModal').modal('show');
                   }
-                ],
-"height": 300,
-width: '100%',
-		renderTo: 'extjs-content',
-	});
+              }
+            ],
+            bbar: {
+                xtype: 'pagingtoolbar',
+                displayInfo: true,
+                store: 'reviews',
+                _listeners_: {
+                    beforechange: function( pagingtoolbar, page, eOpts){
+                        this.setActiveRecord(null);
+                    },
+                    scope: this
+                },
+                _items_:[
+                    {
+                        xtype: 'printbookbutton',
+                        scope: this,
+                    }
+                ]
+            },
+            selType: 'rowmodel',
+            plugins: [
+                Ext.create('Ext.grid.plugin.RowEditing')
+            ],
+            height: 300,
+            width: '100%',
+            renderTo: 'extjs-content',
+        });
+    },
 });
 </script>
 <div id="extjs-content"></div>
+<a href="remca/index.php?task=reviews.export&amp;option=com_remca&amp;Itemid=129" class="btn btn-primary"><span class="icon-download"></span>Export</a>

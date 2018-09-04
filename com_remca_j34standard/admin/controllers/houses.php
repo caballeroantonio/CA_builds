@@ -55,7 +55,7 @@ class RemcaControllerHouses extends JControllerAdmin
 	}
 
 	/**
-	 * Method to toggle the featured setting of a list of inmuebles.
+	 * Method to toggle the featured setting of a list of houses.
 	 *
 	 * @return	void
 	 * 

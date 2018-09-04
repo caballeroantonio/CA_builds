@@ -256,7 +256,7 @@ class RemcaModelLstateForm extends RemcaModelLstate
 			return false;
 		}
 
-		// Reorder the states so the new state is first
+		// Reorder the lstates so the new state is first
 		if (empty($table->id))
 		{
 			$conditions_array = $this->getReorderConditions($table);

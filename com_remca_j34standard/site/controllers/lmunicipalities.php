@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * Municipalities list controller class.
+ * lmunicipalities list controller class.
  *
  */
 class RemcaControllerLmunicipalities extends JControllerLegacy
@@ -72,17 +72,17 @@ class RemcaControllerLmunicipalities extends JControllerLegacy
         /*
          * Function that allows download database information
          * @ToDo implementar ACL
-         * from outside: $model = JModelLegacy::getInstance('WishlistForm','RemcaModel', array('ignore_request' => FALSE));	
+         * from outside: $model = JModelLegacy::getInstance('lmunicipalityForm','RemcaModel', array('ignore_request' => FALSE));	
          */
         public function export(){
-			return false;
+            //die('not allowed');
             $model = $this->getModel = $this->getModel('Lmunicipalities','RemcaModel',array('ignore_request' => FALSE));
 			
-			//states
-//			$model->setState('list.ordering', 'a.ordering');//override
-//			$model->setState('list.direction', 'ASC');//override
-//			$model->setState('list.select', 'a.*');//override
-			$model->setState('filter.state', 1);
+//            states
+//            $model->setState('list.ordering', 'a.ordering');//override
+//            $model->setState('list.direction', 'ASC');//override
+//            $model->setState('list.select', 'a.*');//override
+            $model->setState('filter.state', 1);
             $query = $model->getListQuery4Export();
             $remca_helper = new RemcaHelper();
             $remca_helper->export('Lmunicipalities',$query);

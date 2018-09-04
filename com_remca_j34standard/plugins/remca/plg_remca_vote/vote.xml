@@ -63,16 +63,6 @@
                     <option value="1">PLG_REMCA_VOTE_FIELD_VALUE_BELOW</option>
                     <option value="0">PLG_REMCA_VOTE_FIELD_VALUE_ABOVE</option>
                 </field>
-                <field
-                    name="wa_entry_conversation_position"
-                    type="radio"
-					label="PLG_REMCA_WA_ENTRY_CONVERSATIONS_VOTE_FIELD_POSITION_LABEL"
-					description="PLG_REMCA_WA_ENTRY_CONVERSATIONS_VOTE_FIELD_POSITION_DESC"
-					default="1"
-				>
-                    <option value="1">PLG_REMCA_VOTE_FIELD_VALUE_BELOW</option>
-                    <option value="0">PLG_REMCA_VOTE_FIELD_VALUE_ABOVE</option>
-                </field>
             </fieldset>
 
         </fields>

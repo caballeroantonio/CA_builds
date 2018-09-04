@@ -30,7 +30,7 @@ defined('_JEXEC') or die;
 
 JLoader::register('ContentHelper', JPATH_ADMINISTRATOR . '/components/com_remca/helpers/remca.php');
 /**
- * Video_source component helper.
+ * video_source component helper.
  *
  */
 abstract class JHtmlVideo_sourceAdministrator

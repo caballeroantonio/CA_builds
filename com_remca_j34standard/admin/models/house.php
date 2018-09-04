@@ -204,7 +204,7 @@ class RemcaModelHouse extends JModelAdmin
 			$id = $this->getState('house.id');		
 			// Existing record. Can only edit in selected categories.
 			$form->setFieldAttribute('catid', 'action', 'core.edit');
-			// Existing record. Can only edit own inmuebles in selected categories.
+			// Existing record. Can only edit own houses in selected categories.
 			$form->setFieldAttribute('catid', 'action', 'core.edit.own');
 		}
 		else
@@ -467,7 +467,7 @@ class RemcaModelHouse extends JModelAdmin
 
 
 	/**
-	 * Method to toggle the featured setting of inmuebles.
+	 * Method to toggle the featured setting of houses.
 	 *
 	 * @param	array	$pks	The ids of the items to toggle.
 	 * @param	integer		$value	The value to toggle to.
@@ -529,7 +529,7 @@ class RemcaModelHouse extends JModelAdmin
 
 	}
 	/**
-	 * Pre process the form to pick up inmuebles associated by language
+	 * Pre process the form to pick up houses associated by language
 	 *
 	 * @param   object  $form		A form object
 	 * @param   array	$data		The record data

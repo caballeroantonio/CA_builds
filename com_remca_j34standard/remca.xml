@@ -71,7 +71,7 @@
             <menu link="option=com_remca&amp;view=wa_title_conversations" alias="wa_title_conversations" img="../media/com_remca/images/remca-wa_title_conversations.png"
                     alt="RealEstateManagerCA/Titulo Conversaciones Wtsapp ">COM_REMCA_WA_TITLE_CONVERSATIONS</menu>
             <menu link="option=com_remca&amp;view=wa_entry_conversations" alias="wa_entry_conversations" img="../media/com_remca/images/remca-wa_entry_conversations.png"
-                    alt="RealEstateManagerCA/Entrada Conversaciones Wtsapp ">COM_REMCA_WA_ENTRY_CONVERSATIONS</menu>
+                    alt="RealEstateManagerCA/Entradas Conversaciones Wtsapp ">COM_REMCA_WA_ENTRY_CONVERSATIONS</menu>
             <menu link="option=com_remca&amp;view=photos" alias="photos" img="../media/com_remca/images/remca-photos.png"
                     alt="RealEstateManagerCA/Photos">COM_REMCA_PHOTOS</menu>
             <menu link="option=com_remca&amp;view=mime_types" alias="mime_types" img="../media/com_remca/images/remca-mime_types.png"
@@ -2127,28 +2127,6 @@
                     default="1"
 		        >
                     <option value="1">JSHOW</option>
-                    <option value="0">JHIDE</option>
-                </field>
-                <field
-                    name="show_wa_entry_conversation_vote"
-                    type="radio"
-                    label="COM_REMCA_SHOW_VOTE_LABEL"
-                    description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_VOTE_DESC"
-                    class="btn-group btn-group-yesno"
-                    default="1"
-		        >
-                    <option	value="1">JSHOW</option>
-                    <option value="0">JHIDE</option>
-                </field>
-                <field
-                    name="show_wa_entry_conversation_share"
-                    type="radio"
-                    label="COM_REMCA_SHOW_SHARE_LABEL"
-                    description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_SHARE_DESC"
-                    class="btn-group btn-group-yesno"
-                    default="1"
-		        >
-                    <option	value="1">JSHOW</option>
                     <option value="0">JHIDE</option>
                 </field>
                 <field
@@ -8925,7 +8903,7 @@
 		        >
                     <option value="">JNONE</option>
                     <option value="Inmuebles">COM_REMCA_HOUSES</option>
-                    <option value="Entrada Conversaciones Wtsapp ">COM_REMCA_WA_ENTRY_CONVERSATIONS</option>
+                    <option value="Entradas Conversaciones Wtsapp ">COM_REMCA_WA_ENTRY_CONVERSATIONS</option>
                 </field>
                 <field
                     name="show_categories_num_items"

@@ -30,7 +30,7 @@ defined('_JEXEC') or die;
 
 JLoader::register('ContentHelper', JPATH_ADMINISTRATOR . '/components/com_remca/helpers/remca.php');
 /**
- * Languages component helper.
+ * languages component helper.
  *
  */
 abstract class JHtmlLanguageAdministrator

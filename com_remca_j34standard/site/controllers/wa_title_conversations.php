@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * Titulo Conversaciones Wtsapp  list controller class.
+ * wa_title_conversations list controller class.
  *
  */
 class RemcaControllerWa_title_conversations extends JControllerLegacy
@@ -72,17 +72,17 @@ class RemcaControllerWa_title_conversations extends JControllerLegacy
         /*
          * Function that allows download database information
          * @ToDo implementar ACL
-         * from outside: $model = JModelLegacy::getInstance('WishlistForm','RemcaModel', array('ignore_request' => FALSE));	
+         * from outside: $model = JModelLegacy::getInstance('wa_title_conversationForm','RemcaModel', array('ignore_request' => FALSE));	
          */
         public function export(){
-			return false;
+            //die('not allowed');
             $model = $this->getModel = $this->getModel('Wa_title_conversations','RemcaModel',array('ignore_request' => FALSE));
 			
-			//states
-//			$model->setState('list.ordering', 'a.ordering');//override
-//			$model->setState('list.direction', 'ASC');//override
-//			$model->setState('list.select', 'a.*');//override
-			$model->setState('filter.state', 1);
+//            states
+//            $model->setState('list.ordering', 'a.ordering');//override
+//            $model->setState('list.direction', 'ASC');//override
+//            $model->setState('list.select', 'a.*');//override
+            $model->setState('filter.state', 1);
             $query = $model->getListQuery4Export();
             $remca_helper = new RemcaHelper();
             $remca_helper->export('Wa_title_conversations',$query);

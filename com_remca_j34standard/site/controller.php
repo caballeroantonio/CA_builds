@@ -79,7 +79,7 @@ class RemcaController extends JControllerLegacy
 		$user = JFactory::getUser();
 /*
 @ToDo encontrar la forma de parametrizar el Itemid
-edité el menú login para que hiciera redirect a este componente
+editÃ© el menÃº login para que hiciera redirect a este componente
   "login_redirect_menuitem": "544",
 */
         if(!$user->authorise('core.site', 'com_remca')){
@@ -129,4 +129,119 @@ edité el menú login para que hiciera redirect a este componente
 
 		return $this;
 	}
+        
+        /*        
+         * Function that allows download database information
+         * @ToDo implementar ACL
+         */
+        public function json_read(){
+            //die('not allowed');
+            $code_name_plural = JRequest::getCmd('store');
+            //states WITH ignore_request
+            $model = $this->getModel = $this->getModel($code_name_plural,'RemcaModel',array('ignore_request' => TRUE));
+			
+            $input = JFactory::getApplication()->input;
+            $offset = $input->get('start', 0, 'uint');
+            $limit = $input->get('limit', 25, 'uint');
+            $model->setState('filter.state', 1);
+            $query = $model->getListQuery4Export($limit, $offset);
+            
+            $result = array('data'=> array(), 'success' => true, 'warning' => false, 'message' => '');
+            $db = JFactory::getDBO();
+            $db->setQuery($query);
+            $db->query();
+            $result['data'] = $db->loadAssocList();
+            
+            $query->clear('limit');
+            $query->clear('select');
+            $query->select('COUNT(*)');            
+            $db->setQuery($query);
+            $db->query();	
+            $result['total'] = $db->loadResult();
+
+            echo json_encode($result);
+            exit();
+        }
+        
+        /*        
+         * Function that allows download database information
+         * @ToDo implementar ACL
+         */
+        public function json_save(){
+            //die('not allowed');
+            $result = array('data'=> array(), 'success' => true, 'warning' => false, 'message' => '');
+            
+            $code_name = JRequest::getCmd('model');
+            
+            $model = JModelLegacy::getInstance("{$code_name}Form",'RemcaModel', array('ignore_request' => FALSE));
+            
+            
+            $record = json_decode(rawurldecode($_POST['data']),1);
+            
+            // Validate the posted data.
+            $form	= $model->getForm();
+            if (!$form) 
+            {
+                $result['message'] = $model->getError();
+                $this->finish_extjs($result);
+            }
+            
+            $result['success'] = $model->save($record);
+            $errors	= $model->getErrors();
+            
+            foreach ($errors as $key => $error) {
+                if (JError::isError($error)) 
+                {
+                    $result['message'] = $error->getMessage();
+                }
+                else 
+                {
+                    $result['message'] = $error;
+                }
+                break;
+            }
+            $this->finish_extjs($result);
+        }
+
+        public function finish_extjs($result){
+            echo json_encode($result);
+            exit();     
+        }
+        
+        /*        
+         * Function that allows download database information
+         * @ToDo implementar ACL
+         */
+        public function json_read_categories(){
+            //die('not allowed');
+            
+            $result = array('data'=> array(), 'success' => true, 'warning' => false, 'message' => '');
+            $db = JFactory::getDBO();
+            $query = $dbQuery = $db->getQuery(true);
+            $query->select('id, parent_id, lft, rgt, level, title')#concat(level, " - ", title) "title"
+            ->from($db->quoteName('#__categories'))
+            ->where('extension = "com_remca"')
+            ->where('published')
+            ->order('lft')
+            ;
+            
+            $db->setQuery($query);
+            $db->query();
+            $result['data'] = $db->loadAssocList();
+            
+            foreach ($result['data'] as $key => &$value) {
+                for($i=0; $i< $value['level']; $i++){
+                    $value['title'] = ' - ' . $value['title'];
+                }
+            }            
+
+            $query->clear('limit');
+            $query->clear('select');
+            $query->select('COUNT(*)');            
+            $db->setQuery($query);
+            $db->query();	
+            $result['total'] = $db->loadResult();
+
+            $this->finish_extjs($result);
+        }
 }
