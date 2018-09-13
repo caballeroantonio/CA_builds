@@ -107,18 +107,6 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_remca'), 'value', 'text', $this->state->get('filter.category_id'));?>
 				</select>
 				<?php endif; ?>	
-				<?php if ($this->params->get('list_show_wa_entry_conversation_id_wa_title_conversation',1)) : ?>
-					<select name="filter_id_wa_title_conversation" onchange="this.form.submit()">
-					<option value=""><?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_SELECT_ID_WA_TITLE_CONVERSATION');?></option>
-					<?php echo JHtml::_('select.options', $this->id_wa_title_conversation_values, 'value', 'text', $this->state->get('filter.id_wa_title_conversation'));?>
-					</select>
-				<?php endif; ?>	
-				<?php if ($this->params->get('list_show_wa_entry_conversation_phone',1)) : ?>
-					<select name="filter_phone" onchange="this.form.submit()">
-					<option value=""><?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_SELECT_PHONE');?></option>
-					<?php echo JHtml::_('select.options', $this->phone_values, 'value', 'text', $this->state->get('filter.phone'));?>
-					</select>
-				<?php endif; ?>	
 			</div>
 		<?php endif; ?>
 
@@ -154,14 +142,14 @@ $empty = $component->params->get('default_empty_field', '');
 							<?php echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
 						</th>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_wa_entry_conversation_id_wa_title_conversation',1)) : ?>
-						<th class="list-id_wa_title_conversation" id="tableOrderingid_wa_title_conversation">
-							<?php echo JTEXT::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_HEADING_ID_WA_TITLE_CONVERSATION'); ?>
-						</th>
-					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_wa_entry_conversation_phone',1)) : ?>
 						<th class="list-phone" id="tableOrderingphone">
 							<?php echo JTEXT::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_HEADING_PHONE'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_wa_entry_conversation_id_wa_title_conversation',1)) : ?>
+						<th class="list-id_wa_title_conversation" id="tableOrderingid_wa_title_conversation">
+							<?php echo JTEXT::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_HEADING_ID_WA_TITLE_CONVERSATION'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_wa_entry_conversation_ordering',0)) : ?>
@@ -237,17 +225,17 @@ $empty = $component->params->get('default_empty_field', '');
 							?>
 						</td>
 					<?php endif; ?>
-					<?php if ($this->params->get('list_show_wa_entry_conversation_id_wa_title_conversation',1)) : ?>
-						<td class="list-id_wa_title_conversation">
-							<?php 
-								echo JString::trim($item->tdlcw_wa_title_conversation_name);
-							?>
-						</td>
-					<?php endif; ?>
 					<?php if ($this->params->get('list_show_wa_entry_conversation_phone',1)) : ?>
 						<td class="list-phone">
 							<?php 
 								echo $item->phone != '' ? $item->phone : $empty;
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_wa_entry_conversation_id_wa_title_conversation',1)) : ?>
+						<td class="list-id_wa_title_conversation">
+							<?php 
+								echo JString::trim($item->tdlcw_wa_title_conversation_name);
 							?>
 						</td>
 					<?php endif; ?>

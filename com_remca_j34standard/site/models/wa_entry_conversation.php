@@ -55,10 +55,8 @@ class RemcaModelWa_entry_conversation extends JModelItem
 		{
 			$config['wa_entry_conversation_filter_fields'] = array(
 				'id', 'a.id',
-				'id_wa_title_conversation', 'a.id_wa_title_conversation',
-				'phone', 'a.phone',
-				'id_wa_title_conversation','a.id_wa_title_conversation',
 				'phone','a.phone',
+				'id_wa_title_conversation','a.id_wa_title_conversation',
 				'catid', 'a.catid', 'category_title',
 				'state', 'a.state',
 				'created', 'a.created',

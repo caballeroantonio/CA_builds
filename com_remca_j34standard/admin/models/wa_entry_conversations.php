@@ -55,8 +55,6 @@ class RemcaModelWa_entry_conversations extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
-				'id_wa_title_conversation', 'a.id_wa_title_conversation',
-				'phone', 'a.phone',
 				'catid', 'a.catid', 'category_title', 'category_id',
 				'state', 'a.state',
 				'created', 'a.created',
@@ -111,10 +109,6 @@ class RemcaModelWa_entry_conversations extends JModelList
 		// Load the filter state.
 		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
 		$this->setState('filter.search', $search);
-		$id_wa_title_conversation = $app->getUserStateFromRequest($this->context.'.filter.id_wa_title_conversation', 'filter_id_wa_title_conversation', 0, 'string');
-		$this->setState('filter.id_wa_title_conversation', $id_wa_title_conversation);
-		$phone = $app->getUserStateFromRequest($this->context.'.filter.phone', 'filter_phone', '', 'string');
-		$this->setState('filter.phone', $phone);
 		$category_id = $app->getUserStateFromRequest($this->context.'.filter.category_id', 'filter_category_id');
 		$this->setState('filter.category_id', $category_id);		
 		
@@ -161,8 +155,6 @@ class RemcaModelWa_entry_conversations extends JModelList
 		$id	.= ':'.$this->getState('filter.category_id');
 		$id	.= ':'.$this->getState('filter.state');
 		$id	.= ':'.$this->getState('filter.created_by');	
-		$id	.= ':'.$this->getState('filter.id_wa_title_conversation');	
-		$id	.= ':'.$this->getState('filter.phone');	
 		return parent::getStoreId($id);
 	}	
 	/**
@@ -230,16 +222,6 @@ class RemcaModelWa_entry_conversations extends JModelList
 		}	
 
 		
-		if ($id_wa_title_conversation = $this->getState('filter.id_wa_title_conversation'))
-		{
-			$id_wa_title_conversation = $db->escape(JString::strtolower($id_wa_title_conversation), true);			
-			$query->where('LOWER('.$db->quoteName('a.id_wa_title_conversation').') = ' . $db->quote($id_wa_title_conversation));
-		}
-		if ($phone = $this->getState('filter.phone'))
-		{
-			$phone = $db->escape(JString::strtolower($phone), true);			
-			$query->where('LOWER('.$db->quoteName('a.phone').') = ' . $db->quote($phone));
-		}
 				
 		// Filter by a single or group of categories.
 		$baselevel = 1;

@@ -368,16 +368,6 @@ $empty = $component->params->get('default_empty_field', '');
 								<?php echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
 							</th>
 						<?php endif; ?>
-						<?php if ($this->params->get('list_show_wa_entry_conversation_id_wa_title_conversation',0)) : ?>
-							<th class="list-id_wa_title_conversation" id="tableOrderingid_wa_title_conversation">
-							<?php echo JTEXT::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_HEADING_ID_WA_TITLE_CONVERSATION'); ?>
-							</th>
-						<?php endif; ?>	
-						<?php if ($this->params->get('list_show_wa_entry_conversation_phone',0)) : ?>
-							<th class="list-phone" id="tableOrderingphone">
-							<?php echo JTEXT::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_HEADING_PHONE'); ?>
-							</th>
-						<?php endif; ?>	
 						<?php $show_actions = false;
 							foreach ($this->wa_entry_conversations as $item) : ?>
 							<?php if ($item->params->get('access-edit') 
@@ -437,20 +427,6 @@ $empty = $component->params->get('default_empty_field', '');
 								<?php echo JText::sprintf('COM_REMCA_CREATED_BY', $creator); ?>
 							<?php endif; ?>
 						</td>
-						<?php endif; ?>
-						<?php if ($this->params->get('list_show_wa_entry_conversation_id_wa_title_conversation',0)) : ?>
-							<td class="list-id_wa_title_conversation">
-								<?php 
-									echo JString::trim($item->tdlcw_wa_title_conversation_name); 
-								?>
-							</td>
-						<?php endif; ?>
-						<?php if ($this->params->get('list_show_wa_entry_conversation_phone',0)) : ?>
-							<td class="list-phone">
-								<?php 
-									echo $item->phone != '' ? $item->phone : $empty; 
-								?>
-							</td>
 						<?php endif; ?>
 
 					<?php if ($show_actions) : ?>

@@ -217,29 +217,32 @@ class RemcaModelConst extends JModelList
 		{
 			// clean filter variable
 			$filter = JString::strtolower($filter);
-			$filter_words = $db->escape($filter, true);
+
+                        $filter_words = $db->escape($filter, true);
 			$filter = $db->quote('%'.$db->escape($filter, true).'%', false);
 
 			switch ($params->get('show_const_filter_field'))
 			{
-				case 'name':
+				
 				default: // default to 'name' if parameter is not valid
 $regex = '/\s+/';
 //$regex = '~\s+~';
 $words = preg_split($regex, $filter_words, -1, PREG_SPLIT_NO_EMPTY);
 $where = '( ';
 
-#name
-$where .= "\n\t( 1";
-foreach ($words AS $word){
-    $where .= "\n\t AND ".$db->quoteName('a.name')." LIKE '%{$word}%'";
-}
-$where .= "\n\t)";
-$where .= "\n)";
+				case 'name':
+                                    #name
+                                    $where .= "\n\t( 1";
+                                    foreach ($words AS $word){
+                                        $where .= "\n\t AND ".$db->quoteName('a.name')." LIKE '%{$word}%'";
+                                    }
+                                    $where .= "\n\t)";
 
-					$query->where($where);
-					break;
-				
+
+
+                            $where .= "\n)";
+                            $query->where($where);
+                            break;				
 			}
 		}
 

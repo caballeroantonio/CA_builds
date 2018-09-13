@@ -1780,7 +1780,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_HOUSES_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -2625,7 +2625,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_WA_TITLE_CONVERSATIONS_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -2907,20 +2907,20 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-        <field name="show_wa_entry_conversation_id_wa_title_conversation"
+        <field name="show_wa_entry_conversation_phone"
             type="radio"
-            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_LABEL"
-            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_DESC"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
             <option	value="1">JSHOW</option>
             <option	value="0">JHIDE</option>
         </field>
-        <field name="show_wa_entry_conversation_phone"
+        <field name="show_wa_entry_conversation_id_wa_title_conversation"
             type="radio"
-            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_LABEL"
-            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_DESC"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_DESC"
             class="btn-group btn-group-yesno"
             default="1"
         >
@@ -2970,10 +2970,10 @@
             <option value="0">JGLOBAL_Down</option>
             <option value="1">JGLOBAL_Across</option>
         </field>
-        <field name="list_show_wa_entry_conversation_id_wa_title_conversation"
+        <field name="list_show_wa_entry_conversation_phone"
 		    type="radio"
-            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_SHOW_ID_WA_TITLE_CONVERSATION_LABEL"
-            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_SHOW_ID_WA_TITLE_CONVERSATION_DESC"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_SHOW_PHONE_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_SHOW_PHONE_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -2981,10 +2981,10 @@
             <option value="0">JHIDE</option>
         </field>
 
-        <field name="list_show_wa_entry_conversation_phone"
+        <field name="list_show_wa_entry_conversation_id_wa_title_conversation"
 		    type="radio"
-            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_SHOW_PHONE_LABEL"
-            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_SHOW_PHONE_DESC"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_SHOW_ID_WA_TITLE_CONVERSATION_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_SHOW_ID_WA_TITLE_CONVERSATION_DESC"
             class="btn-group btn-group-yesno"
             default="1"
 		>
@@ -3092,7 +3092,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -3171,20 +3171,20 @@
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
         </field>
-            <field name="list_show_wa_entry_conversation_id_wa_title_conversation"
+            <field name="list_show_wa_entry_conversation_phone"
                 type="radio"
-                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_ID_WA_TITLE_CONVERSATION_LABEL"
-				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_ID_WA_TITLE_CONVERSATION_DESC"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_PHONE_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_PHONE_DESC"
 				class="btn-group"
 				default="1"
 			>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
-            <field name="list_show_wa_entry_conversation_phone"
+            <field name="list_show_wa_entry_conversation_id_wa_title_conversation"
                 type="radio"
-                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_PHONE_LABEL"
-				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_PHONE_DESC"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_ID_WA_TITLE_CONVERSATION_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_ID_WA_TITLE_CONVERSATION_DESC"
 				class="btn-group"
 				default="1"
 			>
@@ -3381,7 +3381,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_MIME_TYPES_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -3639,7 +3639,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_MLS_FOR_DELETE_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -4049,7 +4049,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_ORDERS_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -4609,7 +4609,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_ORDERS_DETAILS_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -5130,7 +5130,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_MAIN_CATEGORIES_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -5570,7 +5570,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_RENTS_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -5968,7 +5968,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_RENT_REQUESTS_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -6396,7 +6396,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_RENT_SAL_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -6814,7 +6814,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_REVIEWS_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -7182,7 +7182,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_TRACK_SOURCE_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -7593,7 +7593,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_WISHESLIST_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -7903,7 +7903,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_VIDEO_SOURCE_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -8271,7 +8271,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_BUYING_REQUESTS_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -8599,7 +8599,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_CATEGORIES_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -8899,7 +8899,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_CONST_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -9177,7 +9177,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_CONST_LANGUAGE_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -9487,7 +9487,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_FEATURE_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -9755,7 +9755,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_FEATURE_HOUSES_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>
@@ -10065,7 +10065,7 @@
 			label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
 			description="COM_REMCA_LANGUAGES_SHOW_PAGINATION_LIMIT_DESC"
             class="btn-group btn-group-yesno"
-			default="1"
+			default="0"
 		>
             <option value="1">JSHOW</option>
             <option value="0">JHIDE</option>

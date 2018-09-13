@@ -358,16 +358,26 @@ class RemcaModelWisheslist extends JModelList
 		{
 			// clean filter variable
 			$filter = JString::strtolower($filter);
+
+                        $filter_words = $db->escape($filter, true);
 			$filter = $db->quote('%'.$db->escape($filter, true).'%', false);
 
 			switch ($params->get('show_wishlist_filter_field'))
 			{
-				case 'created_by':
-					$query->where('LOWER('.$db->quoteName('ua.name').') LIKE '.$filter.' ');
-					break;	
-				default:
-					break;
 				
+				default: // default to 'name' if parameter is not valid
+$regex = '/\s+/';
+//$regex = '~\s+~';
+$words = preg_split($regex, $filter_words, -1, PREG_SPLIT_NO_EMPTY);
+$where = '( ';
+
+                                    $where .= "\n\tFALSE";
+
+
+
+                            $where .= "\n)";
+                            $query->where($where);
+                            break;				
 			}
 		}
 

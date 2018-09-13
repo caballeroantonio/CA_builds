@@ -236,10 +236,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="list_show_wa_entry_conversation_id_wa_title_conversation"
+                name="list_show_wa_entry_conversation_phone"
                 type="radio"
-                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_ID_WA_TITLE_CONVERSATION_LABEL"
-				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_ID_WA_TITLE_CONVERSATION_DESC"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_PHONE_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_PHONE_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -247,10 +247,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="list_show_wa_entry_conversation_phone"
+                name="list_show_wa_entry_conversation_id_wa_title_conversation"
                 type="radio"
-                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_PHONE_LABEL"
-				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_PHONE_DESC"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_ID_WA_TITLE_CONVERSATION_LABEL"
+				description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_ID_WA_TITLE_CONVERSATION_DESC"
 				class="btn-group"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -504,10 +504,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="show_wa_entry_conversation_id_wa_title_conversation"
+                name="show_wa_entry_conversation_phone"
                 type="radio"
-                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_LABEL"
-                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_DESC"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -515,10 +515,10 @@
                 <option	value="0">JHIDE</option>
             </field>
             <field
-                name="show_wa_entry_conversation_phone"
+                name="show_wa_entry_conversation_id_wa_title_conversation"
                 type="radio"
-                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_LABEL"
-                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_DESC"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_DESC"
                 class="btn-group"
            >
                 <option value="">JGLOBAL_USE_GLOBAL</option>

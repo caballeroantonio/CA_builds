@@ -27,6 +27,91 @@
  */
 
 defined('_JEXEC') or die;
+
+/*
+ *	Add style sheets, javascript and behaviours here in the layout so they can be overridden, if required, in a template override 
+ */
+
+// Add css files for the remca component and categories if they exist
+$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_remca.css');
+$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_rent_requests.css');
+
+if ($lang->isRTL())
+{
+	$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_remca-rtl.css');
+	$this->document->addStyleSheet(JUri::root().'media/com_remca/css/site_rent_requests-rtl.css');
+}
+
+// Add Javscript functions for field display
+JHtml::_('bootstrap.tooltip');
+JHtml::_('behavior.multiselect');
+JHtml::_('dropdown.init');
+JHtml::_('formbehavior.chosen', 'select');	
+
+/*
+ *	Initialise values for the layout 
+ */	
+ 
+// Create some shortcuts.
+$user		= JFactory::getUser();
+$n			= count($this->items);
+$list_order	= $this->state->get('list.ordering');
+$list_dirn	= $this->state->get('list.direction');
+
+$layout		= $this->params->get('rent_request_layout', 'default');
+
+// Get from global settings the text to use for an empty field
+$component = JComponentHelper::getComponent( 'com_remca' );
+$empty = $component->params->get('default_empty_field', '');
+
+/*
+ *	Layout HTML
+ */
+?>
+<noscript>
+<p style="color: red;"><?php echo JText::_('COM_REMCA_WARNING_NOSCRIPT'); ?><p>
+</noscript>
+<div class="remca rent_requests-list<?php echo $this->params->get('pageclass_sfx');?>">
+	<?php if ($this->params->get('show_page_heading')): ?>
+		<div class="page-header">
+			<h1><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
+		</div>
+	<?php endif; ?>
+
+	<?php
+		$can_edit = 0;$can_delete = 0;
+		$show_actions = false;
+		if ($this->params->get('show_rent_request_icons',1) >= 0) :
+			foreach ($this->items as $i => $item) :
+				if ($item->params->get('access-edit',1) OR $item->params->get('access-delete',1)) :
+					$show_actions = true;
+					continue;
+				endif;
+			endforeach;
+		endif;
+	?>
+	<form action="<?php echo htmlspecialchars(JUri::getInstance()->toString()); ?>" method="post" name="adminForm" id="adminForm">
+		<?php if (($this->params->get('show_rent_request_filter_field') != '' AND $this->params->get('show_rent_request_filter_field') != 'hide')) :?>
+			<div class="filter-search">
+				<?php if ($this->params->get('show_rent_request_filter_field') != '' AND $this->params->get('show_rent_request_filter_field') != 'hide') :?>
+                <div class="input-append">
+					<input type="text" name="filter_search" id="filter_search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_REMCA_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_REMCA_'.$this->params->get('show_rent_request_filter_field').'_FILTER_LABEL'); ?>" />
+                    <button type="submit" class="btn hasTooltip" title="" data-original-title="<?= JText::_('JSEARCH_FILTER_SUBMIT') ?>"> <i class="icon-search"></i> </button>
+				</div>
+                <!--<button type="button" class="btn hasTooltip js-stools-btn-clear" title="" data-original-title="<?= JText::_('JSEARCH_FILTER_CLEAR') ?>"><?= JText::_('JSEARCH_FILTER_CLEAR') ?></button>-->
+				<?php endif; ?>	
+			</div>
+		<?php endif; ?>
+
+		<?php if ($this->params->get('show_rent_request_pagination_limit')) : ?>
+			<div class="display-limit">
+				<?php echo JText::_('JGLOBAL_DISPLAY_NUM'); ?>&#160;
+				<?php echo $this->pagination->getLimitBox(); ?>
+			</div>
+		<?php endif; ?>	
+		<div style="clear:both;"></div>
+        
+<?php
 JHtml::_('behavior.keepalive');
 JLoader::register('ExtJSHelper', JPATH_COMPONENT.'/helpers/ExtJSHelper.php');
 $extJSHelper = new ExtJSHelper;
@@ -157,4 +242,50 @@ Ext.application({
 });
 </script>
 <div id="extjs-content"></div>
-<a href="remca/index.php?task=rent_requests.export&amp;option=com_remca&amp;Itemid=129" class="btn btn-primary"><span class="icon-download"></span>Export</a>
+			<div>
+				<!-- @TODO add hidden inputs -->
+				<input type="hidden" name="task" value="" />
+				<input type="hidden" name="boxchecked" value="0" />			
+				<input type="hidden" name="filter_order" value="" />
+				<input type="hidden" name="filter_order_Dir" value="" />
+				<input type="hidden" name="limitstart" value="" />
+				<?php echo JHtml::_('form.token'); ?>
+			</div>
+		<?php // Code to add a link to submit an rent_request. ?>
+		<?php if ($this->params->get('show_rent_request_add_link', 1)) : ?>
+			<?php echo JHtml::_('rent_requesticon.create', $this->params); ?>
+		<?php endif; ?>		
+		<?php 
+			if($user->id == 1){
+				//JHtml::_('rent_requesticon.create', $this->params); 
+	            echo '<span class="hasTooltip tip" title="Export"><a href="index.php?task=rent_requests.export" class="btn btn-primary"><span class="icon-download"></span>Export</a></span>';
+			}
+        ?>
+	</form>
+</div>
+
+<?php if ($can_edit AND $params->get('save_history') AND $params->get('rent_request_save_history')) : ?>
+<script>
+jQuery(document).ready(function($) {
+   $('#collapsibleModal')
+   .on('hide.bs.modal', function () {
+        $(this).removeData('modal');
+   });
+});
+
+function show_collapsibleModal(item_id){
+	jQuery('#collapsibleModal').modal('show');
+	var modalBody = jQuery(document).find('.modal-body');
+	modalBody.find('iframe').remove();
+	modalBody.prepend('<iframe class="iframe" src="index.php?option=com_remca&task=rent_request.showHistory&item_id='+item_id+'" name="titulo" height="450"></iframe>');
+	return;
+}
+</script>
+<div id="collapsibleModal" tabindex="-1" class="modal hide fade">
+	<div class="modal-header">
+			<button type="button" class="close novalidate" data-dismiss="modal">×</button>
+				<h3><?= JText::_('JTOOLBAR_VERSIONS'); ?></h3>
+	</div>
+	<div class="modal-body"></div>
+</div>
+<?php endif; ?>	

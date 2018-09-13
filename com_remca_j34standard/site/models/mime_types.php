@@ -216,13 +216,26 @@ class RemcaModelMime_types extends JModelList
 		{
 			// clean filter variable
 			$filter = JString::strtolower($filter);
+
+                        $filter_words = $db->escape($filter, true);
 			$filter = $db->quote('%'.$db->escape($filter, true).'%', false);
 
 			switch ($params->get('show_mime_type_filter_field'))
 			{
-				default:
-					break;
 				
+				default: // default to 'name' if parameter is not valid
+$regex = '/\s+/';
+//$regex = '~\s+~';
+$words = preg_split($regex, $filter_words, -1, PREG_SPLIT_NO_EMPTY);
+$where = '( ';
+
+                                    $where .= "\n\tFALSE";
+
+
+
+                            $where .= "\n)";
+                            $query->where($where);
+                            break;				
 			}
 		}
 

@@ -220,8 +220,8 @@ class Foo {
     $output .= $this->jtext2lyx('COM_REMCA_SHOW_CREATED_BY_ALIAS_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CREATED_BY_ALIAS_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_SHOW_CREATED_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CREATED_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_SHOW_ADMIN_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_ADMIN_DESC'). ' \tabularnewline\hline '. "\r\n";
-    $output .= $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_DESC'). ' \tabularnewline\hline '. "\r\n";
+    $output .= $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= '\textbf{' . $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_CONFIG_BLOG_LIST_LABEL'). '} & \textbf{' . $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_CONFIG_BLOG_LIST_DESC'). '} \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_LEADING_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_LEADING_DESC'). ' \tabularnewline\hline '. "\r\n";
     $output .= $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_INTRO_LABEL'). ' & ' . $this->jtext2lyx('COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_INTRO_DESC'). ' \tabularnewline\hline '. "\r\n";

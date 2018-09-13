@@ -141,8 +141,8 @@ CREATE TABLE IF NOT EXISTS `#__rem_wa_title_conversations` (
 CREATE TABLE IF NOT EXISTS `#__rem_wa_entry_conversations` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `description` MEDIUMTEXT NOT NULL,
-  `id_wa_title_conversation` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Tema de la conversación Whatsapp',
   `phone` VARCHAR(50) NOT NULL DEFAULT '' COMMENT 'Teléfono',
+  `id_wa_title_conversation` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'Tema de la conversación Whatsapp',
   `catid` INT(10) UNSIGNED DEFAULT NULL COMMENT 'FK to categories in #__categories', # NOT NULL DEFAULT '0'
   KEY `idx_catid` (`catid`),
   CONSTRAINT `remca_wa_entry_conversation_catid` FOREIGN KEY (`catid`) REFERENCES `#__categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -153,8 +153,6 @@ CREATE TABLE IF NOT EXISTS `#__rem_wa_entry_conversations` (
   CONSTRAINT `remca_wa_entry_conversation_createdby` FOREIGN KEY (`created_by`) REFERENCES `#__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_state` (`state`),
-  KEY `idx_id_wa_title_conversation` (`id_wa_title_conversation`),
-  KEY `idx_phone` (`phone`),
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)
 

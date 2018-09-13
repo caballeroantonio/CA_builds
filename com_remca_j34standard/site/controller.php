@@ -135,10 +135,11 @@ edité el menú login para que hiciera redirect a este componente
          * @ToDo implementar ACL
          */
         public function json_read(){
+            $user = JFactory::getUser();
             //die('not allowed');
             $code_name_plural = JRequest::getCmd('store');
-            //states WITH ignore_request
-            $model = $this->getModel = $this->getModel($code_name_plural,'RemcaModel',array('ignore_request' => TRUE));
+            //no recuerdo porqué habia puesto ignore_request = TRUE
+            $model = $this->getModel = $this->getModel($code_name_plural,'RemcaModel',array('ignore_request' => FALSE));
 			
             $input = JFactory::getApplication()->input;
             $offset = $input->get('start', 0, 'uint');
@@ -151,6 +152,9 @@ edité el menú login para que hiciera redirect a este componente
             $db->setQuery($query);
             $db->query();
             $result['data'] = $db->loadAssocList();
+            if($user->id == 1){
+                $result['query'] = (string)$query;
+            }
             
             $query->clear('limit');
             $query->clear('select');

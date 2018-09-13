@@ -158,6 +158,7 @@ class RemcaModelHouses extends JModelList
 		$this->setState('filter.id_lstate', $id_lstate);
 		$id_lmunicipality = $app->getUserStateFromRequest($this->context.'.filter.id_lmunicipality', 'filter_id_lmunicipality', 0, 'int');
 		$this->setState('filter.id_lmunicipality', $id_lmunicipality);
+		//tx
 		$price_lt = $app->getUserStateFromRequest($this->context.'.filter.price_lt', 'filter_price_lt', '', 'string');
 		$this->setState('filter.price_lt', $price_lt);
 		$price_gt = $app->getUserStateFromRequest($this->context.'.filter.price_gt', 'filter_price_gt', '', 'string');
@@ -223,6 +224,7 @@ class RemcaModelHouses extends JModelList
 		$id	.= ':'.$this->getState('filter.id_country');	
 		$id	.= ':'.$this->getState('filter.id_lstate');	
 		$id	.= ':'.$this->getState('filter.id_lmunicipality');	
+		//tx
 		$id	.= ':'.$this->getState('filter.price_lt');	
 		$id	.= ':'.$this->getState('filter.price_lg');	
 		$id	.= ':'.$this->getState('filter.bathrooms');	
@@ -475,7 +477,8 @@ class RemcaModelHouses extends JModelList
 			// clean filter variable
 			$filter = JString::strtolower($filter);
 			$hits_filter = (int) $filter;
-			$filter_words = $db->escape($filter, true);
+
+                        $filter_words = $db->escape($filter, true);
 			$filter = $db->quote('%'.$db->escape($filter, true).'%', false);
 
 			switch ($params->get('show_house_filter_field'))
@@ -483,7 +486,7 @@ class RemcaModelHouses extends JModelList
 				case 'hits':
 					$query->where($db->quoteName('a.hits').' >= '.(int) $hits_filter.' ');
 					break;
-				case 'name':
+				
 				default: // default to 'name' if parameter is not valid
 $regex = '/\s+/';
 //$regex = '~\s+~';
@@ -500,25 +503,26 @@ foreach ($words AS $key => $word){
 
 $where = '( ';
 
-#name
-$where .= "\n\t( 1";
-foreach ($words AS $word){
-    $where .= "\n\t AND ".$db->quoteName('a.name')." LIKE '%{$word}%'";
-}
-$where .= "\n\t)";
-$where .= "\n OR";
-#description
-$where .= "\n\t( 1 ";
-foreach ($words AS $word){
-    $where .= "\n\t AND ".$db->quoteName('a.description')." LIKE '%{$word}%'";
-}
-$where .= "\n\t)";
+				case 'name':
+                                    #name
+                                    $where .= "\n\t( 1";
+                                    foreach ($words AS $word){
+                                        $where .= "\n\t AND ".$db->quoteName('a.name')." LIKE '%{$word}%'";
+                                    }
+                                    $where .= "\n\t)";
+                                    $where .= "\n OR";
+                                    #description
+                                    $where .= "\n\t( 1 ";
+                                    foreach ($words AS $word){
+                                        $where .= "\n\t AND ".$db->quoteName('a.description')." LIKE '%{$word}%'";
+                                    }
+                                    $where .= "\n\t)";
 
-$where .= "\n)";
 
-					$query->where($where);
-					break;
-				
+
+                            $where .= "\n)";
+                            $query->where($where);
+                            break;				
 			}
 		}
 		// Filter by language
