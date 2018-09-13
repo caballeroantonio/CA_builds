@@ -33,6 +33,34 @@
 			hint="JSEARCH_FILTER"
 		/>
         <field
+			name="id_wa_title_conversation"
+			type="sql"
+			label="COM_REMCA_FILTER_ID_WA_TITLE_CONVERSATION_LABEL"
+			description="COM_REMCA_FILTER_ID_WA_TITLE_CONVERSATION_DESC"
+			onchange="this.form.submit();"
+			query="SELECT DISTINCT `a`.`ID_WA_TITLE_CONVERSATION` AS `value`, `a`.`ID_WA_TITLE_CONVERSATION` AS `text`
+		            FROM `#__rem_wa_entry_conversations` AS `a` 
+		            ORDER BY `a`.`ID_WA_TITLE_CONVERSATION`"
+			key_field="value"
+			value_field="text"
+		>
+            <option value="">COM_REMCA_WA_ENTRY_CONVERSATIONS_SELECT_ID_WA_TITLE_CONVERSATION</option>
+        </field>
+        <field
+			name="phone"
+			type="sql"
+			label="COM_REMCA_FILTER_PHONE_LABEL"
+			description="COM_REMCA_FILTER_PHONE_DESC"
+			onchange="this.form.submit();"
+			query="SELECT DISTINCT `a`.`PHONE` AS `value`, `a`.`PHONE` AS `text`
+		            FROM `#__rem_wa_entry_conversations` AS `a` 
+		            ORDER BY `a`.`PHONE`"
+			key_field="value"
+			value_field="text"
+		>
+            <option value="">COM_REMCA_WA_ENTRY_CONVERSATIONS_SELECT_PHONE</option>
+        </field>
+        <field
 			name="state"
 			type="status"
 			label="COM_REMCA_FILTER_STATUS_LABEL"
@@ -79,6 +107,10 @@
 			<option value="">JGLOBAL_SORT_BY</option>
 			<option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
 			<option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+            <option value="a.id_wa_title_conversation ASC">COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ID_WA_TITLE_CONVERSATION_SORT_ASC_LABEL</option>
+            <option value="a.id_wa_title_conversation DESC">COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ID_WA_TITLE_CONVERSATION_SORT_DESC_LABEL</option>
+            <option value="a.phone ASC">COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_PHONE_SORT_ASC_LABEL</option>
+            <option value="a.phone DESC">COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_PHONE_SORT_DESC_LABEL</option>
 			<option value="a.state ASC">JSTATUS_ASC</option>
 			<option value="a.state DESC">JSTATUS_DESC</option>
             <option value="created_by_name ASC">COM_REMCA_FIELD_CREATED_BY_SORT_ASC_LABEL</option>

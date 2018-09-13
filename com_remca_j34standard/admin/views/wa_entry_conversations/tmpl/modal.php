@@ -64,6 +64,14 @@ $empty = $component->params->get('default_empty_field', '');
 		</div>
 		<hr class="hr-condensed">
 		<div class="filters pull-left">
+			<select name="filter_id_wa_title_conversation" class="input-medium js-stools-field-order" onchange="this.form.submit()">
+				<option value=""><?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_SELECT_ID_WA_TITLE_CONVERSATION');?></option>
+				<?php echo JHtml::_('select.options', $this->id_wa_title_conversation_values, 'value', 'text', $this->state->get('filter.id_wa_title_conversation'));?>
+			</select>	
+			<select name="filter_phone" class="input-medium js-stools-field-order" onchange="this.form.submit()">
+				<option value=""><?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_SELECT_PHONE');?></option>
+				<?php echo JHtml::_('select.options', $this->phone_values, 'value', 'text', $this->state->get('filter.phone'));?>
+			</select>	
 
 			<select name="filter_state" class="input-medium" onchange="this.form.submit()">
 				<option value=""><?php echo JText::_('COM_REMCA_SELECT_STATUS');?></option>
@@ -84,6 +92,12 @@ $empty = $component->params->get('default_empty_field', '');
 	<table class="table table-striped table-condensed">
 		<thead>
 			<tr>
+				<th width="10%" class="center nowrap">
+					<?php echo JTEXT::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_HEADING_ID_WA_TITLE_CONVERSATION'); ?>						
+				</th>	
+				<th width="10%" class="center nowrap">
+					<?php echo JTEXT::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_HEADING_PHONE'); ?>						
+				</th>	
 				<th width="20%" class="center nowrap">
 					<?php echo JHtml::_('grid.sort', 'JCATEGORY', 'category_title', $list_dirn, $list_order); ?>
 				</th>
@@ -99,6 +113,20 @@ $empty = $component->params->get('default_empty_field', '');
 		<tbody>
 		<?php foreach ($this->items as $i => $item) : ?>
 			<tr class="row<?php echo $i % 2; ?>">
+				<td class="center">
+					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
+						<?php 
+							echo JString::trim($item->tdlcw_wa_title_conversation_name); 
+						?>					
+					</a>		
+				</td>	
+				<td class="center">
+					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
+						<?php 
+							echo $item->phone != '' ? $item->phone : $empty; 
+						?>					
+					</a>		
+				</td>	
 				<td class="center">
 					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
 						<?php echo $this->escape($item->category_title); ?>
