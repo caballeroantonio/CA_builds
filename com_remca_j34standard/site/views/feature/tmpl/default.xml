@@ -65,7 +65,7 @@
 			    class="chzn-color"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+                <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
             </field>
             <field
                 name="feature_initial_direction"

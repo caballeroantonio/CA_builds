@@ -78,9 +78,9 @@
 			    class="chzn-color"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="created">JGLOBAL_CREATED</option>
-                <option value="created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
-                <option value="ordering">COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER</option>
+                <option value="a.created">JGLOBAL_CREATED</option>
+                <option value="a.created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
+                <option value="a.ordering">COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER</option>
             </field>
             <field
                 name="wa_entry_conversation_initial_direction"

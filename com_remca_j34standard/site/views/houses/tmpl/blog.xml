@@ -129,10 +129,10 @@
 			    class="chzn-color"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="modified">JGLOBAL_MODIFIED</option>
-                <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
-                <option value="hits">JGLOBAL_MOST_HITS</option>
-                <option value="ordering">COM_REMCA_HOUSES_ORDER</option>
+                <option value="a.modified">JGLOBAL_MODIFIED</option>
+                <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
+                <option value="a.hits">JGLOBAL_MOST_HITS</option>
+                <option value="a.ordering">COM_REMCA_HOUSES_ORDER</option>
             </field>
             <field
                 name="house_initial_direction"

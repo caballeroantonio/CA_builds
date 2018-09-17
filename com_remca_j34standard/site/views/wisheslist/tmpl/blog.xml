@@ -105,9 +105,9 @@
 			    class="chzn-color"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="created">JGLOBAL_CREATED</option>
-                <option value="modified">JGLOBAL_MODIFIED</option>
-                <option value="created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
+                <option value="a.created">JGLOBAL_CREATED</option>
+                <option value="a.modified">JGLOBAL_MODIFIED</option>
+                <option value="a.created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
             </field>
             <field
                 name="wishlist_initial_direction"

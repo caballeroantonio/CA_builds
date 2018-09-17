@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+f<?xml version="1.0" encoding="utf-8"?>
 <!-- @version 			$Id:$ -->
 <!-- @name			    RealEstateManagerCA -->
 <!-- @author			caballeroantonio (caballeroantonio.com) -->
@@ -1718,10 +1718,10 @@
             description="COM_REMCA_HOUSES_ORDER_DESC"
 			class="chzn-color"
 		>
-            <option value="modified">JGLOBAL_MODIFIED</option>
-            <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
-            <option value="hits">JGLOBAL_MOST_HITS</option>
-            <option value="ordering">COM_REMCA_HOUSES_ORDER</option>
+            <option value="a.modified">JGLOBAL_MODIFIED</option>
+            <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
+            <option value="a.hits">JGLOBAL_MOST_HITS</option>
+            <option value="a.ordering">COM_REMCA_HOUSES_ORDER</option>
         </field>
         <field name="house_initial_direction"
             type="radio"
@@ -2563,10 +2563,10 @@
             description="COM_REMCA_WA_TITLE_CONVERSATIONS_ORDER_DESC"
 			class="chzn-color"
 		>
-            <option value="created">JGLOBAL_CREATED</option>
-            <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
-            <option value="created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
-            <option value="ordering">COM_REMCA_WA_TITLE_CONVERSATIONS_ORDER</option>
+            <option value="a.created">JGLOBAL_CREATED</option>
+            <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
+            <option value="a.created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
+            <option value="a.ordering">COM_REMCA_WA_TITLE_CONVERSATIONS_ORDER</option>
         </field>
         <field name="wa_title_conversation_initial_direction"
             type="radio"
@@ -3032,9 +3032,9 @@
             description="COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER_DESC"
 			class="chzn-color"
 		>
-            <option value="created">JGLOBAL_CREATED</option>
-            <option value="created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
-            <option value="ordering">COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER</option>
+            <option value="a.created">JGLOBAL_CREATED</option>
+            <option value="a.created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
+            <option value="a.ordering">COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER</option>
         </field>
         <field name="wa_entry_conversation_initial_direction"
             type="radio"
@@ -3991,7 +3991,7 @@
             description="COM_REMCA_ORDERS_ORDER_DESC"
 			class="chzn-color"
 		>
-            <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+            <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
         </field>
         <field name="order_initial_direction"
             type="radio"
@@ -4551,7 +4551,7 @@
             description="COM_REMCA_ORDERS_DETAILS_ORDER_DESC"
 			class="chzn-color"
 		>
-            <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+            <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
         </field>
         <field name="orders_detail_initial_direction"
             type="radio"
@@ -5071,8 +5071,8 @@
             description="COM_REMCA_MAIN_CATEGORIES_ORDER_DESC"
 			class="chzn-color"
 		>
-            <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
-            <option value="ordering">COM_REMCA_MAIN_CATEGORIES_ORDER</option>
+            <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
+            <option value="a.ordering">COM_REMCA_MAIN_CATEGORIES_ORDER</option>
         </field>
         <field name="main_category_initial_direction"
             type="radio"
@@ -5512,7 +5512,7 @@
             description="COM_REMCA_RENTS_ORDER_DESC"
 			class="chzn-color"
 		>
-            <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+            <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
         </field>
         <field name="rent_initial_direction"
             type="radio"
@@ -7533,9 +7533,9 @@
             description="COM_REMCA_WISHESLIST_ORDER_DESC"
 			class="chzn-color"
 		>
-            <option value="created">JGLOBAL_CREATED</option>
-            <option value="modified">JGLOBAL_MODIFIED</option>
-            <option value="created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
+            <option value="a.created">JGLOBAL_CREATED</option>
+            <option value="a.modified">JGLOBAL_MODIFIED</option>
+            <option value="a.created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
         </field>
         <field name="wishlist_initial_direction"
             type="radio"
@@ -8841,7 +8841,7 @@
             description="COM_REMCA_CONST_ORDER_DESC"
 			class="chzn-color"
 		>
-            <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+            <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
         </field>
         <field name="const_initial_direction"
             type="radio"
@@ -9429,7 +9429,7 @@
             description="COM_REMCA_FEATURE_ORDER_DESC"
 			class="chzn-color"
 		>
-            <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+            <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
         </field>
         <field name="feature_initial_direction"
             type="radio"
@@ -10007,7 +10007,7 @@
             description="COM_REMCA_LANGUAGES_ORDER_DESC"
 			class="chzn-color"
 		>
-            <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+            <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
         </field>
         <field name="language_initial_direction"
             type="radio"
@@ -10361,62 +10361,3 @@
 			section="component"
 		/>
     </fieldset>
-    <fieldset
-        name="fieldset_config_fs"
-        label="COM_REMCA_CONFIGS_FIELDSET_CONFIG_FS_LABEL"
-    >
-
-        <field
-            id="group_filters"
-            name="group_filters"
-            type="radio"
-            label="COM_REMCA_CONFIGS_FIELD_GROUP_FILTERS_LABEL"
-            description="COM_REMCA_CONFIGS_FIELD_GROUP_FILTERS_DESC"
-            class="btn-group"
-			required="true"
-			default="1"
-        >
-            <option	value="1">JYES</option>
-			<option	value="0">JNO</option>
-        </field>  
-        <field
-            id="gmaps_api_key"
-            name="gmaps_api_key"
-            type="text"
-            label="COM_REMCA_CONFIGS_FIELD_GMAPS_API_KEY_LABEL"
-            description="COM_REMCA_CONFIGS_FIELD_GMAPS_API_KEY_DESC"
-            class="inputbox"
-			size="50"
-			maxlength="255"
-			required="true"
-			default="AIzaSyD4ZY-54e-nzN0-KejXHkUh-D7bbexDMKk"
-        >
-        </field>  
-        <field
-            id="show_location"
-            name="show_location"
-            type="radio"
-            label="COM_REMCA_CONFIGS_FIELD_SHOW_LOCATION_LABEL"
-            description="COM_REMCA_CONFIGS_FIELD_SHOW_LOCATION_DESC"
-            class="btn-group"
-			required="true"
-			default="1"
-        >
-            <option	value="1">JYES</option>
-			<option	value="0">JNO</option>
-        </field>  
-        <field
-            id="show_street_view"
-            name="show_street_view"
-            type="radio"
-            label="COM_REMCA_CONFIGS_FIELD_SHOW_STREET_VIEW_LABEL"
-            description="COM_REMCA_CONFIGS_FIELD_SHOW_STREET_VIEW_DESC"
-            class="btn-group"
-			required="true"
-			default="1"
-        >
-            <option	value="1">JYES</option>
-			<option	value="0">JNO</option>
-        </field>  
-    </fieldset>
-</config>

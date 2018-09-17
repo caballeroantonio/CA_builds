@@ -1391,10 +1391,10 @@
                     description="COM_REMCA_HOUSES_ORDER_DESC"
 			        class="chzn-color"
 		        >
-                    <option value="modified">JGLOBAL_MODIFIED</option>
-                    <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
-                    <option value="hits">JGLOBAL_MOST_HITS</option>
-                    <option value="ordering">COM_REMCA_HOUSES_ORDER</option>
+                    <option value="a.modified">JGLOBAL_MODIFIED</option>
+                    <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
+                    <option value="a.hits">JGLOBAL_MOST_HITS</option>
+                    <option value="a.ordering">COM_REMCA_HOUSES_ORDER</option>
                 </field>
                 <field
                     name="house_initial_direction"
@@ -1750,10 +1750,10 @@
                     description="COM_REMCA_WA_TITLE_CONVERSATIONS_ORDER_DESC"
 			        class="chzn-color"
 		        >
-                    <option value="created">JGLOBAL_CREATED</option>
-                    <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
-                    <option value="created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
-                    <option value="ordering">COM_REMCA_WA_TITLE_CONVERSATIONS_ORDER</option>
+                    <option value="a.created">JGLOBAL_CREATED</option>
+                    <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
+                    <option value="a.created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
+                    <option value="a.ordering">COM_REMCA_WA_TITLE_CONVERSATIONS_ORDER</option>
                 </field>
                 <field
                     name="wa_title_conversation_initial_direction"
@@ -2244,9 +2244,9 @@
                     description="COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER_DESC"
 			        class="chzn-color"
 		        >
-                    <option value="created">JGLOBAL_CREATED</option>
-                    <option value="created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
-                    <option value="ordering">COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER</option>
+                    <option value="a.created">JGLOBAL_CREATED</option>
+                    <option value="a.created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
+                    <option value="a.ordering">COM_REMCA_WA_ENTRY_CONVERSATIONS_ORDER</option>
                 </field>
                 <field
                     name="wa_entry_conversation_initial_direction"
@@ -3250,7 +3250,7 @@
                     description="COM_REMCA_ORDERS_ORDER_DESC"
 			        class="chzn-color"
 		        >
-                    <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+                    <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
                 </field>
                 <field
                     name="order_initial_direction"
@@ -3714,7 +3714,7 @@
                     description="COM_REMCA_ORDERS_DETAILS_ORDER_DESC"
 			        class="chzn-color"
 		        >
-                    <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+                    <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
                 </field>
                 <field
                     name="orders_detail_initial_direction"
@@ -4112,8 +4112,8 @@
                     description="COM_REMCA_MAIN_CATEGORIES_ORDER_DESC"
 			        class="chzn-color"
 		        >
-                    <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
-                    <option value="ordering">COM_REMCA_MAIN_CATEGORIES_ORDER</option>
+                    <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
+                    <option value="a.ordering">COM_REMCA_MAIN_CATEGORIES_ORDER</option>
                 </field>
                 <field
                     name="main_category_initial_direction"
@@ -4500,7 +4500,7 @@
                     description="COM_REMCA_RENTS_ORDER_DESC"
 			        class="chzn-color"
 		        >
-                    <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+                    <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
                 </field>
                 <field
                     name="rent_initial_direction"
@@ -6250,9 +6250,9 @@
                     description="COM_REMCA_WISHESLIST_ORDER_DESC"
 			        class="chzn-color"
 		        >
-                    <option value="created">JGLOBAL_CREATED</option>
-                    <option value="modified">JGLOBAL_MODIFIED</option>
-                    <option value="created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
+                    <option value="a.created">JGLOBAL_CREATED</option>
+                    <option value="a.modified">JGLOBAL_MODIFIED</option>
+                    <option value="a.created_by_name">COM_REMCA_CREATED_BY_ALPHABETICAL</option>
                 </field>
                 <field
                     name="wishlist_initial_direction"
@@ -7510,7 +7510,7 @@
                     description="COM_REMCA_CONST_ORDER_DESC"
 			        class="chzn-color"
 		        >
-                    <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+                    <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
                 </field>
                 <field
                     name="const_initial_direction"
@@ -8106,7 +8106,7 @@
                     description="COM_REMCA_FEATURE_ORDER_DESC"
 			        class="chzn-color"
 		        >
-                    <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+                    <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
                 </field>
                 <field
                     name="feature_initial_direction"
@@ -8702,7 +8702,7 @@
                     description="COM_REMCA_LANGUAGES_ORDER_DESC"
 			        class="chzn-color"
 		        >
-                    <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
+                    <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
                 </field>
                 <field
                     name="language_initial_direction"

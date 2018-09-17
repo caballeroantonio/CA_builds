@@ -65,8 +65,8 @@
 			    class="chzn-color"
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="name">COM_REMCA_NAME_ALPHABETICAL</option>
-                <option value="ordering">COM_REMCA_MAIN_CATEGORIES_ORDER</option>
+                <option value="a.name">COM_REMCA_NAME_ALPHABETICAL</option>
+                <option value="a.ordering">COM_REMCA_MAIN_CATEGORIES_ORDER</option>
             </field>
             <field
                 name="main_category_initial_direction"
