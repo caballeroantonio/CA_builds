@@ -171,6 +171,18 @@ $extJSHelper->parse('wishlist');
             model: 'remca.model.wishlist',
             autoSync: true,
         });
+		
+		//if type = list
+        Ext.define('remca.store.action', {
+            extend: 'Ext.data.Store',
+            storeId: 'action',
+            fields: ['id', 'value'],
+            data : [
+                {'id':'', 'value':''},
+                {'id':'Pide', 'value':'Pide'},
+                {'id':'Ofrece', 'value':'Ofrece'},
+            ]
+        });
 
 Ext.application({
     name: 'remca',
@@ -183,6 +195,11 @@ Ext.application({
         'remca': 'media/com_remca/extjs',
     },
     launch: function() {
+		//if states no ponerlo en Ext.application porque ya tiene datos cargados y pintaría 2 grid
+		Ext.create('remca.store.states');
+		//if type
+        Ext.create('remca.store.action');
+
 	for(i = 0; i < this.stores.length; i++ ){
 		Ext.create(this.stores[i]).load({
                 scope: this,
@@ -195,14 +212,11 @@ Ext.application({
             store = this.stores[i].replace('remca.store.','');
             if(Ext.StoreManager.get(store).isLoading())
                 return;
-        }
-            //if states no ponerlo en Ext.application porque ya tiene datos cargados y pintaría 2 grid
-            Ext.create('remca.store.states');
+            }
             
             Ext.create('Ext.grid.Panel', {
             title: '<?= JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS') ?>',
             store: 'wisheslist',
-            sortableColumns: false,
             columns: <?= $extJSHelper->encode($extJSHelper->columns) ?>,
            _tbar_: [
               { 

@@ -145,8 +145,9 @@ $empty = $component->params->get('default_empty_field', '');
 			<form action="" name="wa_entry_conversationForm" id="wa_entry_conversationForm">
 			<?php $dummy = false;
 					$display_fieldset = (
-								($params->get('show_wa_entry_conversation_id_wa_title_conversation')) OR 
 								($params->get('show_wa_entry_conversation_phone')) OR 
+								($params->get('show_wa_entry_conversation_id_wa_title_conversation')) OR 
+								($params->get('show_wa_entry_conversation_action')) OR 
 								$dummy
 								);
 			?>
@@ -155,6 +156,18 @@ $empty = $component->params->get('default_empty_field', '');
 					<legend><?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELDSET_WA_ENTRY_CONVERSATIONS_FS_LABEL'); ?></legend>
 			<?php endif; ?>
 					<div style="padding-top: 10px;">			
+						<?php if ($params->get('show_wa_entry_conversation_phone')) : ?>
+						<div class="formelm">
+							<label>
+								<?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_PHONE_LABEL'); ?>
+							</label>
+							<span>
+								<?php
+									echo $this->item->phone != '' ? $this->item->phone : $empty;
+								?>
+							</span>
+						</div>	
+						<?php endif; ?>
 						<?php if ($params->get('show_wa_entry_conversation_id_wa_title_conversation')) : ?>
 						<div class="formelm">
 							<label>
@@ -167,14 +180,14 @@ $empty = $component->params->get('default_empty_field', '');
 							</span>
 						</div>	
 						<?php endif; ?>
-						<?php if ($params->get('show_wa_entry_conversation_phone')) : ?>
+						<?php if ($params->get('show_wa_entry_conversation_action')) : ?>
 						<div class="formelm">
 							<label>
-								<?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_PHONE_LABEL'); ?>
+								<?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ACTION_LABEL'); ?>
 							</label>
 							<span>
 								<?php
-									echo $this->item->phone != '' ? $this->item->phone : $empty;
+									echo $this->item->action != '' ? $this->item->action : $empty;
 								?>
 							</span>
 						</div>	

@@ -102,6 +102,19 @@
     >
 
         <field
+            id="phone"
+            name="phone"
+            type="tel"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_PHONE_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_PHONE_DESC"
+            class="inputbox"
+			size="25"
+			maxlength="50"
+			filter="tel"
+			required="true"
+        >
+        </field>  
+        <field
             id="id_wa_title_conversation"
             name="id_wa_title_conversation"
             type="modal_wa_title_conversations"
@@ -113,16 +126,11 @@
         >
         </field>  
         <field
-            id="phone"
-            name="phone"
-            type="tel"
-            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_PHONE_LABEL"
-            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_PHONE_DESC"
-            class="inputbox"
-			size="25"
-			maxlength="50"
-			filter="tel"
-			required="true"
+            id="action"
+            name="action"
+            type="combo_suggest"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ACTION_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ACTION_DESC"
         >
         </field>  
     </fieldset>

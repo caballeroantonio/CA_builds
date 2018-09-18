@@ -283,30 +283,26 @@ class RemcaModelLmunicipalities extends JModelList
 
                         $filter_words = $db->escape($filter, true);
 			$filter = $db->quote('%'.$db->escape($filter, true).'%', false);
-
+                        $regex = '/\s+/';
+                        //$regex = '~\s+~';
+                        $words = preg_split($regex, $filter_words, -1, PREG_SPLIT_NO_EMPTY);
+                        $where = '('; #comienza where
 			switch ($params->get('show_lmunicipality_filter_field'))
 			{
 				
 				default: // default to 'name' if parameter is not valid
-$regex = '/\s+/';
-//$regex = '~\s+~';
-$words = preg_split($regex, $filter_words, -1, PREG_SPLIT_NO_EMPTY);
-$where = '( ';
-
 				case 'name':
                                     #name
-                                    $where .= "\n\t( 1";
+                                    $where .= "\n\t( 1"; #begin word in name
                                     foreach ($words AS $word){
                                         $where .= "\n\t AND ".$db->quoteName('a.name')." LIKE '%{$word}%'";
                                     }
-                                    $where .= "\n\t)";
+                                    $where .= "\n\t)"; #end word in name
 
-
-
-                            $where .= "\n)";
-                            $query->where($where);
                             break;				
 			}
+                        $where .= "\n)"; #termina where
+                        $query->where($where);
 		}
 
 		// Add the list ordering clause.
@@ -343,7 +339,7 @@ $where = '( ';
 				$order_col = is_string($this->getState('list.ordering')) ? $db->quoteName($this->getState('list.ordering')) : $db->quoteName('a.ordering');
 				$order_col .= ' '.$order_dirn;
 			}
-			$query->order($db->escape($order_col));			
+			$query->order($db->escape($order_col));
 					
 		}
 		else

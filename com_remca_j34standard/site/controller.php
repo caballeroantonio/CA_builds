@@ -146,6 +146,11 @@ edité el menú login para que hiciera redirect a este componente
             $limit = $input->get('limit', 25, 'uint');
             $model->setState('filter.state', 1);
             $query = $model->getListQuery4Export($limit, $offset);
+            $sort = json_decode(JRequest::getVar('sort'),0);
+            if($sort){
+                $query->clear('order');
+                $query->order("a.{$sort[0]->property} {$sort[0]->direction}");
+            }
             
             $result = array('data'=> array(), 'success' => true, 'warning' => false, 'message' => '');
             $db = JFactory::getDBO();
@@ -225,7 +230,7 @@ edité el menú login para que hiciera redirect a este componente
             $query->select('id, parent_id, lft, rgt, level, title')#concat(level, " - ", title) "title"
             ->from($db->quoteName('#__categories'))
             ->where('extension = "com_remca"')
-            ->where('published')
+            #->where('published')
             ->order('lft')
             ;
             

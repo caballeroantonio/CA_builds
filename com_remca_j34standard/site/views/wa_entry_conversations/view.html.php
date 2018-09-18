@@ -71,6 +71,7 @@ class RemcaViewWa_entry_conversations extends JViewLegacy
 		// PREPARE THE DATA
 		if ($app->input->getString('layout', 'default') != 'blog')
 		{			
+			$this->action_values	= $this->get('Actionvalues');
 		}	
 		// Compute the wa_entry_conversation slugs and set the trigger events.
 		foreach ($items as $i => &$item)

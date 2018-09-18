@@ -368,6 +368,11 @@ $empty = $component->params->get('default_empty_field', '');
 								<?php echo JHtml::_('grid.sort', 'COM_REMCA_HEADING_CREATED_BY', 'created_by_name', $list_dirn, $list_order); ?>
 							</th>
 						<?php endif; ?>
+						<?php if ($this->params->get('list_show_wa_entry_conversation_action',0)) : ?>
+							<th class="list-action" id="tableOrderingaction">
+							<?php echo JTEXT::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_HEADING_ACTION'); ?>
+							</th>
+						<?php endif; ?>	
 						<?php $show_actions = false;
 							foreach ($this->wa_entry_conversations as $item) : ?>
 							<?php if ($item->params->get('access-edit') 
@@ -427,6 +432,13 @@ $empty = $component->params->get('default_empty_field', '');
 								<?php echo JText::sprintf('COM_REMCA_CREATED_BY', $creator); ?>
 							<?php endif; ?>
 						</td>
+						<?php endif; ?>
+						<?php if ($this->params->get('list_show_wa_entry_conversation_action',0)) : ?>
+							<td class="list-action">
+								<?php 
+									echo $item->action != '' ? $item->action : $empty; 
+								?>
+							</td>
 						<?php endif; ?>
 
 					<?php if ($show_actions) : ?>

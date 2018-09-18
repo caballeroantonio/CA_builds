@@ -107,6 +107,12 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_remca'), 'value', 'text', $this->state->get('filter.category_id'));?>
 				</select>
 				<?php endif; ?>	
+				<?php if ($this->params->get('list_show_wa_entry_conversation_action',1)) : ?>
+					<select name="filter_action" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_SELECT_ACTION');?></option>
+					<?php echo JHtml::_('select.options', $this->action_values, 'value', 'text', $this->state->get('filter.action'));?>
+					</select>
+				<?php endif; ?>	
 			</div>
 		<?php endif; ?>
 
@@ -150,6 +156,11 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_wa_entry_conversation_id_wa_title_conversation',1)) : ?>
 						<th class="list-id_wa_title_conversation" id="tableOrderingid_wa_title_conversation">
 							<?php echo JTEXT::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_HEADING_ID_WA_TITLE_CONVERSATION'); ?>
+						</th>
+					<?php endif; ?>	
+					<?php if ($this->params->get('list_show_wa_entry_conversation_action',1)) : ?>
+						<th class="list-action" id="tableOrderingaction">
+							<?php echo JTEXT::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_HEADING_ACTION'); ?>
 						</th>
 					<?php endif; ?>	
 					<?php if ($this->params->get('list_show_wa_entry_conversation_ordering',0)) : ?>
@@ -236,6 +247,13 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-id_wa_title_conversation">
 							<?php 
 								echo JString::trim($item->tdlcw_wa_title_conversation_name);
+							?>
+						</td>
+					<?php endif; ?>
+					<?php if ($this->params->get('list_show_wa_entry_conversation_action',1)) : ?>
+						<td class="list-action">
+							<?php 
+								echo $item->action != '' ? $item->action : $empty;
 							?>
 						</td>
 					<?php endif; ?>

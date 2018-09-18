@@ -76,6 +76,10 @@ $empty = $component->params->get('default_empty_field', '');
 				<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_remca'), 'value', 'text', $this->state->get('filter.category_id'));?>
 			</select>
 				<?php endif; ?>	
+			<select name="filter_action" onchange="this.form.submit()">
+				<option value=""><?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_SELECT_ACTION');?></option>
+				<?php echo JHtml::_('select.options', $this->action_values, 'value', 'text', $this->state->get('filter.action'));?>
+			</select>	
 			<div class="display-limit">
 				<?php echo $this->pagination->getLimitBox(); ?>
 			</div>
@@ -84,6 +88,9 @@ $empty = $component->params->get('default_empty_field', '');
 		<table class="wa_entry_conversations">
 			<thead>
 				<tr>
+					<th width="10%">
+						<?php echo JTEXT::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_HEADING_ACTION'); ?>
+					</th>	
 					<th width="10%">
 						<?php echo JHtml::_('grid.sort', 'JCATEGORY', 'category_title', $list_dirn, $list_order); ?>
 					</th>
@@ -96,6 +103,13 @@ $empty = $component->params->get('default_empty_field', '');
 			<tbody>
 			<?php foreach ($this->items as $i => $item) : ?>
 				<tr class="row<?php echo $i % 2; ?>">
+					<td class="center">
+						<a class="pointer" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
+							<?php 
+								echo $item->action != '' ? $item->action : $empty; 
+							?>
+						</a>	
+					</td>	
 					<td class="center">
 						<a class="pointer" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
 							<?php echo $this->escape($item->category_title); ?>

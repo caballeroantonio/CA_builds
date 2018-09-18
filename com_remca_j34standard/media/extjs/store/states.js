@@ -8,10 +8,10 @@ Ext.define('remca.store.states', {
             storeId: 'states',
             fields:['id', 'value'],
             data:{'items':[
-                {'id': 1, 'value': 'JPUBLISHED'},
-                {'id': 0, 'value': 'JUNPUBLISHED'},
-                {'id': 2, 'value': 'JARCHIVED'},
-                {'id': -2, 'value': 'JTRASH'},
+                {'id': 1, 'value': 'Publicado'},
+                {'id': 0, 'value': 'Despublicado'},
+                {'id': 2, 'value': 'Archivado'},
+                {'id': -2, 'value': 'Papelera'},
             ]},
             proxy: {
                 type: 'memory',

@@ -53,6 +53,7 @@ class RemcaModelWa_entry_conversations extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
+				'action','a.action',
 				'catid', 'a.catid', 'category_title',
 				'created', 'a.created',
 				'created_by', 'a.created_by',
@@ -133,6 +134,8 @@ class RemcaModelWa_entry_conversations extends JModelList
 		}
 		$this->setState('list.direction', $list_order);
 		
+		$action = $app->getUserStateFromRequest($this->context.'.filter.action', 'filter_action', '', 'string');
+		$this->setState('filter.action', $action);
 				
 		if ((!$user->authorise('core.edit.state', 'com_remca')) AND  (!$user->authorise('core.edit', 'com_remca')))
 		{
@@ -183,6 +186,7 @@ class RemcaModelWa_entry_conversations extends JModelList
 		$id .= ':'.$this->getState('filter.created_by_id.include');
 		$id .= ':'.$this->getState('filter.created_by_name');
 		$id .= ':'.$this->getState('filter.created_by_name.include');	
+		$id	.= ':'.$this->getState('filter.action');	
 		$id .= ':'.serialize($this->getState('filter.wa_entry_conversation_id'));
 		$id .= ':'.$this->getState('filter.wa_entry_conversation_id.include');				
 		
@@ -270,6 +274,11 @@ class RemcaModelWa_entry_conversations extends JModelList
 
 		
 					
+		if ($action = $this->getState('filter.action'))
+		{
+			$action = $db->escape(JString::strtolower($action), true);			
+			$query->where($db->quoteName('a.action').' = ' . $db->quote($action));
+		}	
 
 		// Filter by a single or group of wa_entry_conversations.
 		$wa_entry_conversation_id = $this->getState('filter.wa_entry_conversation_id');
@@ -416,45 +425,41 @@ class RemcaModelWa_entry_conversations extends JModelList
 
                         $filter_words = $db->escape($filter, true);
 			$filter = $db->quote('%'.$db->escape($filter, true).'%', false);
-
+                        $regex = '/\s+/';
+                        //$regex = '~\s+~';
+                        $words = preg_split($regex, $filter_words, -1, PREG_SPLIT_NO_EMPTY);
+                        $where = '('; #comienza where
 			switch ($params->get('show_wa_entry_conversation_filter_field'))
 			{
 				
 				default: // default to 'name' if parameter is not valid
-$regex = '/\s+/';
-//$regex = '~\s+~';
-$words = preg_split($regex, $filter_words, -1, PREG_SPLIT_NO_EMPTY);
-$where = '( ';
-
                                     $where .= "\n\tFALSE";
                                     $where .= "\n OR";
                                     #description
-                                    $where .= "\n\t( 1 ";
+                                    $where .= "\n\t( 1"; #begin word in description
                                     foreach ($words AS $word){
                                         $where .= "\n\t AND ".$db->quoteName('a.description')." LIKE '%{$word}%'";
                                     }
-                                    $where .= "\n\t)";
+                                    $where .= "\n\t)"; #end word in description
 
                                     $where .= "\n OR";
                                     #phone
-                                    $where .= "\n\t( 1 ";
+                                    $where .= "\n\t( 1"; #begin word in phone
                                     foreach ($words AS $word){
                                         $where .= "\n\t AND ".$db->quoteName('a.phone')." LIKE '%{$word}%'";
                                     }
-                                    $where .= "\n\t)";
+                                    $where .= "\n\t)"; #end word in phone
                                     $where .= "\n OR";
                                     #id_wa_title_conversation
-                                    $where .= "\n\t( 1 ";
+                                    $where .= "\n\t( 1"; #begin word in id_wa_title_conversation
                                     foreach ($words AS $word){
                                         $where .= "\n\t AND ".$db->quoteName('a.id_wa_title_conversation')." LIKE '%{$word}%'";
                                     }
-                                    $where .= "\n\t)";
-
-
-                            $where .= "\n)";
-                            $query->where($where);
+                                    $where .= "\n\t)"; #end word in id_wa_title_conversation
                             break;				
 			}
+                        $where .= "\n)"; #termina where
+                        $query->where($where);
 		}
 
 		// Add the list ordering clause.
@@ -495,7 +500,7 @@ $where = '( ';
 				$order_col = is_string($this->getState('list.ordering')) ? $db->quoteName($this->getState('list.ordering')) : $db->quoteName('a.ordering');
 				$order_col .= ' '.$order_dirn;
 			}
-			$query->order($db->escape($order_col));			
+			$query->order($db->escape($order_col));
 					
 		}
 		else
@@ -536,6 +541,7 @@ $where = '( ';
 				$wa_entry_conversation_params = new Registry;
 
 
+				
 				
 				
 				
@@ -650,6 +656,31 @@ $where = '( ';
 		}
 		return $items;
 	}
+	/**
+	 * Build a list of distinct values in the acción field
+	 *
+	 * @return	JDatabaseQuery
+	 */
+	public function getActionvalues()
+	{
+				// Create a new query object.
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+
+		// Construct the query
+		$query->select('DISTINCT '.$db->quoteName('action').' AS value, '.$db->quoteName('action').' AS text');
+		$query->from($db->quoteName('#__rem_wa_entry_conversations'));
+		$query->where($db->quoteName('action').' != \'\'');
+
+		$query->order($db->quoteName('action'));
+
+		// Setup the query
+		$db->setQuery($query);
+
+		// Return the result
+		return $db->loadObjectList();
+
+	}				
 	
         /*
          * Function that allows download database information

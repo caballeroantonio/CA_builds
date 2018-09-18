@@ -45,16 +45,18 @@ class ExtJSHelper
                 $type = (string)$attributes->type;
                 $name = (string)$attributes->name;
                 $required = (string)$attributes->required?1:0;
+                $label = JText::_((string)$attributes->label);
+                $description = JText::_((string)$attributes->description);
                 
                 $column = array(
                     'xtype' => 'gridcolumn',
-                    'dataIndex' => (string)$attributes->name,
-                    'text' => JText::_((string)$attributes->label),
-                    'tooltip'=> JText::_((string)$attributes->description),
+                    'dataIndex' => $name,
+                    'text' => $label,
+                    'tooltip'=> $description,
                 );
                 
                 $field = array(
-                    'name' => (string)$attributes->name,
+                    'name' => $name,
                 );
                 
                 
@@ -66,7 +68,7 @@ class ExtJSHelper
                         $field['type'] = 'string';
                         $column['editor'] = array(
                             'xtype' => 'textareafield',
-                            'allowBlank' => $required,
+                            'allowBlank' => !$required,
                         );
                         break;
                     case 'calendar':
@@ -78,13 +80,13 @@ class ExtJSHelper
                             'xtype' => 'datefield',
                             'format' => 'Y-m-d',
                             'dateFormat' => 'Y-m-d',
-                            'allowBlank' => $required,
+                            'allowBlank' => !$required,
                         );
                         break;
                     case 'tel':
                         $column['editor'] = array(
                             'xtype' => 'textfield',
-                            'allowBlank' => $required,
+                            'allowBlank' => !$required,
                         );
                         break;
                     case 'categoryedit':
@@ -95,15 +97,29 @@ class ExtJSHelper
                             }");
                         $column['editor'] = array(
                             'xtype' => 'combobox',
+                            'fieldCls' => 'Ext.form.field.ComboBox',
                             'emptyText' => 'Select',
                             'forceSelection' => true,
                             'queryMode' => 'local',
                             'store' => 'categories',
                             'displayField' => 'title',
                             'valueField' => 'id',
-                            'allowBlank' => $required,
+                            'allowBlank' => !$required,
                         );
                         $field['type'] = 'int';
+                        break;
+                    case 'list':
+                        $column['editor'] = array(
+                            'xtype' => 'combobox',
+                            'fieldCls' => 'Ext.form.field.ComboBox',
+                            'emptyText' => 'Select',
+                            'forceSelection' => true,
+                            'queryMode' => 'local',
+                            'store' => $name,
+                            'displayField' => 'value',
+                            'valueField' => 'id',
+                            'allowBlank' => !$required,
+                        );
                         break;
                     default :
                         $vars = explode('_', $type, 2);
@@ -115,18 +131,18 @@ class ExtJSHelper
                                 }");
                             $column['editor'] = array(
                                 'xtype' => 'combobox',
+                                'fieldCls' => 'Ext.form.field.ComboBox',
                                 'emptyText' => 'Select',
                                 'forceSelection' => true,
                                 'queryMode' => 'local',
                                 'store' => $vars[1],
                                 'displayField' => 'name',
                                 'valueField' => 'id',
-                                'allowBlank' => $required,
+                                'allowBlank' => !$required,
                             );
                             $field['type'] = 'int';
                             break;
                         }
-                            
                         break;
                 }
                 
@@ -159,13 +175,14 @@ class ExtJSHelper
                         $column['hidden'] = TRUE;                        
                         $column['editor'] = array(
                             'xtype' => 'combobox',
+                            'fieldCls' => 'Ext.form.field.ComboBox',
                             'emptyText' => 'Select',
                             'forceSelection' => true,
                             'queryMode' => 'local',
                             'store' => 'states',
                             'displayField' => 'value',
                             'valueField' => 'id',
-                            'allowBlank' => $required,
+                            'allowBlank' => !$required,
                         );
                         $field['type'] = 'int';
                         break;

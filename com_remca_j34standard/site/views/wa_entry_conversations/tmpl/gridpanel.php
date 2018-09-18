@@ -107,6 +107,12 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_remca'), 'value', 'text', $this->state->get('filter.category_id'));?>
 				</select>
 				<?php endif; ?>	
+				<?php if ($this->params->get('list_show_wa_entry_conversation_action',1)) : ?>
+					<select name="filter_action" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_SELECT_ACTION');?></option>
+					<?php echo JHtml::_('select.options', $this->action_values, 'value', 'text', $this->state->get('filter.action'));?>
+					</select>
+				<?php endif; ?>	
 			</div>
 		<?php endif; ?>
 
@@ -177,6 +183,18 @@ $extJSHelper->parse('wa_entry_conversation');
             model: 'remca.model.wa_entry_conversation',
             autoSync: true,
         });
+		
+		//if type = list
+        Ext.define('remca.store.action', {
+            extend: 'Ext.data.Store',
+            storeId: 'action',
+            fields: ['id', 'value'],
+            data : [
+                {'id':'', 'value':''},
+                {'id':'Pide', 'value':'Pide'},
+                {'id':'Ofrece', 'value':'Ofrece'},
+            ]
+        });
 
 Ext.application({
     name: 'remca',
@@ -189,6 +207,11 @@ Ext.application({
         'remca': 'media/com_remca/extjs',
     },
     launch: function() {
+		//if states no ponerlo en Ext.application porque ya tiene datos cargados y pintaría 2 grid
+		Ext.create('remca.store.states');
+		//if type
+        Ext.create('remca.store.action');
+
 	for(i = 0; i < this.stores.length; i++ ){
 		Ext.create(this.stores[i]).load({
                 scope: this,
@@ -201,14 +224,11 @@ Ext.application({
             store = this.stores[i].replace('remca.store.','');
             if(Ext.StoreManager.get(store).isLoading())
                 return;
-        }
-            //if states no ponerlo en Ext.application porque ya tiene datos cargados y pintaría 2 grid
-            Ext.create('remca.store.states');
+            }
             
             Ext.create('Ext.grid.Panel', {
             title: '<?= JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS') ?>',
             store: 'wa_entry_conversations',
-            sortableColumns: false,
             columns: <?= $extJSHelper->encode($extJSHelper->columns) ?>,
            _tbar_: [
               { 

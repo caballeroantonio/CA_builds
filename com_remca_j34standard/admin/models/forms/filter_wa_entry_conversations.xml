@@ -33,6 +33,20 @@
 			hint="JSEARCH_FILTER"
 		/>
         <field
+			name="action"
+			type="sql"
+			label="COM_REMCA_FILTER_ACTION_LABEL"
+			description="COM_REMCA_FILTER_ACTION_DESC"
+			onchange="this.form.submit();"
+			query="SELECT DISTINCT `a`.`ACTION` AS `value`, `a`.`ACTION` AS `text`
+		            FROM `#__rem_wa_entry_conversations` AS `a` 
+		            ORDER BY `a`.`ACTION`"
+			key_field="value"
+			value_field="text"
+		>
+            <option value="">COM_REMCA_WA_ENTRY_CONVERSATIONS_SELECT_ACTION</option>
+        </field>
+        <field
 			name="state"
 			type="status"
 			label="COM_REMCA_FILTER_STATUS_LABEL"
@@ -79,6 +93,8 @@
 			<option value="">JGLOBAL_SORT_BY</option>
 			<option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
 			<option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+            <option value="a.action ASC">COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ACTION_SORT_ASC_LABEL</option>
+            <option value="a.action DESC">COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ACTION_SORT_DESC_LABEL</option>
 			<option value="a.state ASC">JSTATUS_ASC</option>
 			<option value="a.state DESC">JSTATUS_DESC</option>
             <option value="created_by_name ASC">COM_REMCA_FIELD_CREATED_BY_SORT_ASC_LABEL</option>

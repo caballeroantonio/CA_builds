@@ -39,6 +39,7 @@ class RemcaViewWa_entry_conversations extends JViewLegacy
 	protected $state;
 	protected $creators;
 	protected $can_do;
+	protected $action_values;
 
 	/**
 	 * Execute and display a template script.

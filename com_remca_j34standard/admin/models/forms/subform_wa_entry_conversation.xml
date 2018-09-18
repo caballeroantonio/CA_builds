@@ -59,15 +59,6 @@
         label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELDSET_WA_ENTRY_CONVERSATIONS_FS_LABEL"
         description="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELDSET_WA_ENTRY_CONVERSATIONS_FS_DESC"
     >
-        <field name="id_wa_title_conversation"
-            type="modal_wa_title_conversations"
-            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ID_WA_TITLE_CONVERSATION_LABEL"
-            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ID_WA_TITLE_CONVERSATION_DESC"
-            class="modal"
-			required="true"
-			default="0"
-        >
-        </field>  
         <field name="phone"
             type="tel"
             label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_PHONE_LABEL"
@@ -77,6 +68,21 @@
 			maxlength="50"
 			filter="tel"
 			required="true"
+        >
+        </field>  
+        <field name="id_wa_title_conversation"
+            type="modal_wa_title_conversations"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ID_WA_TITLE_CONVERSATION_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ID_WA_TITLE_CONVERSATION_DESC"
+            class="modal"
+			required="true"
+			default="0"
+        >
+        </field>  
+        <field name="action"
+            type="combo_suggest"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ACTION_LABEL"
+            description="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ACTION_DESC"
         >
         </field>  
     </fieldset>

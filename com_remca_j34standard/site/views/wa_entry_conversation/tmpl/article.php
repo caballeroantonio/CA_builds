@@ -168,6 +168,7 @@ $use_def_list = (
 			$use_fields_list = (
 						($params->get('show_wa_entry_conversation_phone')) OR 
 						($params->get('show_wa_entry_conversation_id_wa_title_conversation')) OR 
+						($params->get('show_wa_entry_conversation_action')) OR 
 						$dummy
 						);
 		?>
@@ -189,6 +190,14 @@ $use_def_list = (
 					<strong><?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ID_WA_TITLE_CONVERSATION_LABEL'); ?></strong>
 					<?php
 						echo JString::trim($this->item->tdlcw_wa_title_conversation_name);
+					?>
+				</dd>
+			<?php endif; ?>
+			<?php if ($params->get('show_wa_entry_conversation_action')) : ?>
+				<dd class="field">
+					<strong><?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ACTION_LABEL'); ?></strong>
+					<?php
+						echo $this->item->action != '' ? $this->item->action : $empty;
 					?>
 				</dd>
 			<?php endif; ?>

@@ -55,6 +55,7 @@ class RemcaModelWa_entry_conversations extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
+				'action', 'a.action',
 				'catid', 'a.catid', 'category_title', 'category_id',
 				'state', 'a.state',
 				'created', 'a.created',
@@ -109,6 +110,8 @@ class RemcaModelWa_entry_conversations extends JModelList
 		// Load the filter state.
 		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
 		$this->setState('filter.search', $search);
+		$action = $app->getUserStateFromRequest($this->context.'.filter.action', 'filter_action', '', 'string');
+		$this->setState('filter.action', $action);
 		$category_id = $app->getUserStateFromRequest($this->context.'.filter.category_id', 'filter_category_id');
 		$this->setState('filter.category_id', $category_id);		
 		
@@ -155,6 +158,7 @@ class RemcaModelWa_entry_conversations extends JModelList
 		$id	.= ':'.$this->getState('filter.category_id');
 		$id	.= ':'.$this->getState('filter.state');
 		$id	.= ':'.$this->getState('filter.created_by');	
+		$id	.= ':'.$this->getState('filter.action');	
 		return parent::getStoreId($id);
 	}	
 	/**
@@ -222,6 +226,11 @@ class RemcaModelWa_entry_conversations extends JModelList
 		}	
 
 		
+		if ($action = $this->getState('filter.action'))
+		{
+			$action = $db->escape(JString::strtolower($action), true);			
+			$query->where('LOWER('.$db->quoteName('a.action').') = ' . $db->quote($action));
+		}
 				
 		// Filter by a single or group of categories.
 		$baselevel = 1;

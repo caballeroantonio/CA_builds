@@ -119,6 +119,9 @@ if ($save_order)
 					<th width="1%" style="min-width:55px" class="nowrap center">
 						<?php echo JHtml::_('searchtools.sort', 'JSTATUS', 'a.state', $list_dirn, $list_order); ?>
 					</th>
+					<th width="10%" class="nowrap center hidden-phone">
+						<?php echo JTEXT::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_HEADING_ACTION'); ?>						
+					</th>	
 					<th width="10%" class="center hidden-phone">
 						<?php echo JHtml::_('searchtools.sort', 'JCATEGORY', 'category_title', $list_dirn, $list_order); ?>
 					</th>
@@ -190,6 +193,11 @@ if ($save_order)
 								echo JHtml::_('actionsdropdown.render');
 							?>
 						</div>
+					</td>	
+					<td class="nowrap small center hidden-phone">
+						<?php 
+							echo $item->action != '' ? $item->action : $empty; 
+						?>				
 					</td>	
 					<td class="nowrap small center hidden-phone">
 						<?php echo $this->escape($item->category_title); ?>

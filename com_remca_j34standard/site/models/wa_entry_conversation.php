@@ -55,8 +55,10 @@ class RemcaModelWa_entry_conversation extends JModelItem
 		{
 			$config['wa_entry_conversation_filter_fields'] = array(
 				'id', 'a.id',
+				'action', 'a.action',
 				'phone','a.phone',
 				'id_wa_title_conversation','a.id_wa_title_conversation',
+				'action','a.action',
 				'catid', 'a.catid', 'category_title',
 				'state', 'a.state',
 				'created', 'a.created',
@@ -267,6 +269,7 @@ class RemcaModelWa_entry_conversation extends JModelItem
 				// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
 			
 
+				
 				
 				
 		

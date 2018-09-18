@@ -262,7 +262,7 @@ class RemcaModelHouses extends JModelList
 				);
 
 
-		$query->from($db->quoteName('#__rem_houses').' AS a');
+		$query->from($db->quoteName('borrame').' AS a');
 		// Join over the categories.
 		$query->select($db->quoteName('c.title').' AS category_title, '.
 						$db->quoteName('c.alias').' AS category_alias, '.	
@@ -480,19 +480,10 @@ class RemcaModelHouses extends JModelList
 
                         $filter_words = $db->escape($filter, true);
 			$filter = $db->quote('%'.$db->escape($filter, true).'%', false);
-
-			switch ($params->get('show_house_filter_field'))
-			{
-				case 'hits':
-					$query->where($db->quoteName('a.hits').' >= '.(int) $hits_filter.' ');
-					break;
-				
-				default: // default to 'name' if parameter is not valid
-$regex = '/\s+/';
-//$regex = '~\s+~';
-$words = preg_split($regex, $filter_words, -1, PREG_SPLIT_NO_EMPTY);
-
-//search by contact: contacts:(55)8526-4227
+                        $regex = '/\s+/';
+                        //$regex = '~\s+~';
+                        $words = preg_split($regex, $filter_words, -1, PREG_SPLIT_NO_EMPTY);
+//tx search by contact: contacts:(55)8526-4227
 foreach ($words AS $key => $word){
     if (stripos($word, 'contacts:') === 0){
         $contact = explode(':', $word);
@@ -500,30 +491,33 @@ foreach ($words AS $key => $word){
         unset($words[$key]);
     }
 }
-
-$where = '( ';
-
+                        $where = '('; #comienza where
+			switch ($params->get('show_house_filter_field'))
+			{
+				case 'hits':
+					$query->where($db->quoteName('a.hits').' >= '.(int) $hits_filter.' ');
+					break;
+				
+				default: // default to 'name' if parameter is not valid
 				case 'name':
                                     #name
-                                    $where .= "\n\t( 1";
+                                    $where .= "\n\t( 1"; #begin word in name
                                     foreach ($words AS $word){
                                         $where .= "\n\t AND ".$db->quoteName('a.name')." LIKE '%{$word}%'";
                                     }
-                                    $where .= "\n\t)";
+                                    $where .= "\n\t)"; #end word in name
                                     $where .= "\n OR";
                                     #description
-                                    $where .= "\n\t( 1 ";
+                                    $where .= "\n\t( 1"; #begin word in description
                                     foreach ($words AS $word){
                                         $where .= "\n\t AND ".$db->quoteName('a.description')." LIKE '%{$word}%'";
                                     }
-                                    $where .= "\n\t)";
+                                    $where .= "\n\t)"; #end word in description
 
-
-
-                            $where .= "\n)";
-                            $query->where($where);
                             break;				
 			}
+                        $where .= "\n)"; #termina where
+                        $query->where($where);
 		}
 		// Filter by language
 		if ($this->getState('filter.language'))
@@ -569,7 +563,7 @@ $where = '( ';
 				$order_col = is_string($this->getState('list.ordering')) ? $db->quoteName($this->getState('list.ordering')) : $db->quoteName('a.ordering');
 				$order_col .= ' '.$order_dirn;
 			}
-			$query->order($db->escape($order_col));			
+			$query->order($db->escape($order_col));
 					
 		}
 		else
@@ -816,7 +810,7 @@ $where = '( ';
 				$query->where($db->quoteName('a.language').' IN ('.$db->quote(JFactory::getLanguage()->getTag()).','.$db->quote('*').')');
 			}
 		$query->where('a.state = 1');
-			$query->join('INNER', $db->quoteName('#__rem_houses').' AS a ON '.$db->quoteName('a.id_country').' = '.$db->quoteName('c1.id'));
+			$query->join('INNER', $db->quoteName('borrame').' AS a ON '.$db->quoteName('a.id_country').' = '.$db->quoteName('c1.id'));
 			$query->group($db->quoteName('c1.id').', '.
 				$db->quoteName('c1.name'));
 		}
@@ -866,7 +860,7 @@ $where = '( ';
 				$query->where($db->quoteName('a.language').' IN ('.$db->quote(JFactory::getLanguage()->getTag()).','.$db->quote('*').')');
 			}
 		$query->where('a.state = 1');
-			$query->join('INNER', $db->quoteName('#__rem_houses').' AS a ON '.$db->quoteName('a.id_lstate').' = '.$db->quoteName('s.id'));
+			$query->join('INNER', $db->quoteName('borrame').' AS a ON '.$db->quoteName('a.id_lstate').' = '.$db->quoteName('s.id'));
 			$query->group($db->quoteName('s.id').', '.
 				$db->quoteName('s.name'));
 		}
@@ -930,7 +924,7 @@ $where = '( ';
 				$query->where($db->quoteName('a.language').' IN ('.$db->quote(JFactory::getLanguage()->getTag()).','.$db->quote('*').')');
 			}
 		$query->where('a.state = 1');
-			$query->join('INNER', $db->quoteName('#__rem_houses').' AS a ON '.$db->quoteName('a.id_lmunicipality').' = '.$db->quoteName('m.id'));
+			$query->join('INNER', $db->quoteName('borrame').' AS a ON '.$db->quoteName('a.id_lmunicipality').' = '.$db->quoteName('m.id'));
 			$query->group($db->quoteName('m.id').', '.
 				$db->quoteName('m.name'));
 		}
@@ -988,7 +982,7 @@ $where = '( ';
 
 		// Construct the query
 		$query->select('DISTINCT '.$db->quoteName('price').' AS value, '.$db->quoteName('price').' AS text');
-		$query->from($db->quoteName('#__rem_houses'));
+		$query->from($db->quoteName('borrame'));
 		$query->where($db->quoteName('price').' != \'\'');
 
 		$query->order($db->quoteName('price'));
@@ -1014,7 +1008,7 @@ $where = '( ';
 
 		// Construct the query
 		$query->select('DISTINCT '.$db->quoteName('bathrooms').' AS value, '.$db->quoteName('bathrooms').' AS text');
-		$query->from($db->quoteName('#__rem_houses'));
+		$query->from($db->quoteName('borrame'));
 		$query->where($db->quoteName('bathrooms').' != \'\'');
 
 		$query->order($db->quoteName('bathrooms'));
@@ -1039,7 +1033,7 @@ $where = '( ';
 
 		// Construct the query
 		$query->select('DISTINCT '.$db->quoteName('bedrooms').' AS value, '.$db->quoteName('bedrooms').' AS text');
-		$query->from($db->quoteName('#__rem_houses'));
+		$query->from($db->quoteName('borrame'));
 		$query->where($db->quoteName('bedrooms').' != \'\'');
 
 		$query->order($db->quoteName('bedrooms'));
@@ -1089,7 +1083,7 @@ $where = '( ';
 		$query->select($db->quoteName('bathrooms').' AS value, CONCAT('.$db->quoteName('bathrooms').', " (", count(*), ")") AS text');
                 $query->group($db->quoteName('bathrooms'));
                 
-		$query->from($db->quoteName('#__rem_houses').' AS a');
+		$query->from($db->quoteName('borrame').' AS a');
 		$query->where($db->quoteName('bathrooms').' != \'\'');
 
 		if ($id_country = $this->getState('filter.id_country'))
@@ -1171,7 +1165,7 @@ $where = '( ';
 		$query->select($db->quoteName('bedrooms').' AS value, CONCAT('.$db->quoteName('bedrooms').', " (", count(*), ")") AS text');
                 $query->group($db->quoteName('bedrooms'));
                 
-		$query->from($db->quoteName('#__rem_houses').' AS a');
+		$query->from($db->quoteName('borrame').' AS a');
 		$query->where($db->quoteName('bedrooms').' != \'\'');
 
 		if ($id_country = $this->getState('filter.id_country'))
