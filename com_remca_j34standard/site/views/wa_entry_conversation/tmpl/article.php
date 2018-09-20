@@ -197,7 +197,17 @@ $use_def_list = (
 				<dd class="field">
 					<strong><?php echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ACTION_LABEL'); ?></strong>
 					<?php
-						echo $this->item->action != '' ? $this->item->action : $empty;
+						switch ($this->item->action) :
+									case 'Pide':
+										echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_PIDE');
+										break;
+									case 'Ofrece':
+										echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_OFRECE');
+										break;
+									default :
+										echo $empty;
+										break;
+								endswitch;
 					?>
 				</dd>
 			<?php endif; ?>

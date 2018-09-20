@@ -31,6 +31,14 @@ defined('_JEXEC') or die;
 class ExtJSHelper
 {
 
+    public function getViewColumns(){
+        return $this->_columns;
+    }
+    
+    public function getModelFields(){
+        return $this->_fields;
+    }
+
     public function parse($object_name){
         $columns = array();
         $fields = array();
@@ -191,14 +199,13 @@ class ExtJSHelper
 						
                 }
                 
-                
-                $columns[] = $column;
-                $fields[] = $field;
+                $columns[$name] = $column;
+                $fields[$name] = $field;
             }
         }
         
-        $this->columns = $columns;
-        $this->fields = $fields;
+        $this->_columns = $columns;
+        $this->_fields = $fields;
     }
     
     

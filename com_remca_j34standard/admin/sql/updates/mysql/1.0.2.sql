@@ -29,3 +29,6 @@ revisar que jos_rem_configs no genere tablas sino XML
 ALTER TABLE jos_rem_wa_entry_conversations 
 ADD COLUMN action ENUM('', 'Pide', 'Ofrece') NOT NULL DEFAULT '' COMMENT 'acción' AFTER id_wa_title_conversation,
 ADD INDEX idx_action (action ASC);
+
+ALTER TABLE `jos_rem_wa_entry_conversations` 
+CHANGE COLUMN `action` `action` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'acción' ;

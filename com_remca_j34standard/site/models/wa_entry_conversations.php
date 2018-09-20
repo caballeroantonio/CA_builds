@@ -663,22 +663,10 @@ class RemcaModelWa_entry_conversations extends JModelList
 	 */
 	public function getActionvalues()
 	{
-				// Create a new query object.
-		$db = $this->getDbo();
-		$query = $db->getQuery(true);
-
-		// Construct the query
-		$query->select('DISTINCT '.$db->quoteName('action').' AS value, '.$db->quoteName('action').' AS text');
-		$query->from($db->quoteName('#__rem_wa_entry_conversations'));
-		$query->where($db->quoteName('action').' != \'\'');
-
-		$query->order($db->quoteName('action'));
-
-		// Setup the query
-		$db->setQuery($query);
-
-		// Return the result
-		return $db->loadObjectList();
+				$values = array();
+		$values[] = array('value' => 'Pide', 'text' => JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_PIDE'));
+		$values[] = array('value' => 'Ofrece', 'text' => JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_OFRECE'));
+		return $values;
 
 	}				
 	

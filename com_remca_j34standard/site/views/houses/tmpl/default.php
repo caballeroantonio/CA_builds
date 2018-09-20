@@ -133,9 +133,10 @@ $empty = $component->params->get('default_empty_field', '');
 					</select>
 				<?php endif; ?>	
 				<?php if ($this->params->get('list_show_house_price',1)) : ?>
-				<!--tx-->
-					<input name="filter_price_lt" id="filter_price_lt" value="<?= $this->state->get('filter.price_lt') ?>" title="<?php echo JText::_('COM_REMCA_HOUSES_SELECT_PRICE');?>" placeholder="min" type="number">
-					<input name="filter_price_gt" id="filter_price_gt" value="<?= $this->state->get('filter.price_gt') ?>" title="<?php echo JText::_('COM_REMCA_HOUSES_SELECT_PRICE');?>" placeholder="max" type="number">
+					<select name="filter_price" onchange="this.form.submit()">
+					<option value=""><?php echo JText::_('COM_REMCA_HOUSES_SELECT_PRICE');?></option>
+					<?php echo JHtml::_('select.options', $this->price_values, 'value', 'text', $this->state->get('filter.price'));?>
+					</select>
 				<?php endif; ?>	
 				<?php if ($this->params->get('list_show_house_bathrooms',1)) : ?>
 					<select name="filter_bathrooms" onchange="this.form.submit()">

@@ -73,10 +73,7 @@ class RemcaControllerWisheslist extends JControllerLegacy
          * from outside: $model = JModelLegacy::getInstance('wishlistForm','RemcaModel', array('ignore_request' => FALSE));	
          */
         public function export(){
-            $user = JFactory::getUser();
-            if($user->id == 0)
-                die('not allowed without login');
-            /*
+            //die('not allowed');
             $model = $this->getModel = $this->getModel('Wisheslist','RemcaModel',array('ignore_request' => FALSE));
 			
 //            states
@@ -85,25 +82,6 @@ class RemcaControllerWisheslist extends JControllerLegacy
 //            $model->setState('list.select', 'a.*');//override
             $model->setState('filter.state', 1);
             $query = $model->getListQuery4Export();
-            */
-$query = <<<EOT
-SELECT
-h.`id`, c1.`title` 'Categoría', h.`name` 'Título', h.`description` 'Descripción', c4.`name` 'municipio', c3.`name` 'estado', c2.`name` 'país', h.`price` 'precio', c5.`currency` 'moneda', h.`hzipcode` 'código postal', h.`hlocation` 'ubicación', h.`rooms` 'habitaciones', h.`bathrooms`, h.`bedrooms` 'baños', h.`contacts` 'Contacts', h.`property_type`, h.`year` 'año de construcción', h.`agent` 'Agent', h.`area_unit`, h.`land_area`, h.`land_area_unit`, h.`expiration_date`, h.`lot_size` 'área del lote', h.`house_size` 'área de construcción', h.`garages` 'cocheras', h.`date`, h.`edok_link`, h.`owneremail`
-FROM 
-jos_rem_wisheslist w
-INNER JOIN jos_rem_houses h ON w.id_house = h.id
-LEFT JOIN jos_categories c1 ON h.catid = c1.id
-LEFT JOIN jos_rem_countries c2 ON h.id_country = c2.id
-LEFT JOIN jos_rem_lstates c3 ON h.id_lstate = c3.id
-LEFT JOIN jos_rem_lmunicipalities c4 ON h.id_lmunicipality = c4.id
-LEFT JOIN jos_rem_countries c5 ON h.id_currency = c5.id
-
-WHERE 1
-AND w.state = 1
-AND w.id_user = {$user->id}
-AND h.state = 1
-LIMIT 20;
-EOT;
             $remca_helper = new RemcaHelper();
             $remca_helper->export('Wisheslist',$query);
         }

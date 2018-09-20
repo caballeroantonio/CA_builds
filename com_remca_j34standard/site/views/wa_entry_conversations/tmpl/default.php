@@ -253,7 +253,17 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_wa_entry_conversation_action',1)) : ?>
 						<td class="list-action">
 							<?php 
-								echo $item->action != '' ? $item->action : $empty;
+								switch ($item->action) :
+									case 'Pide':
+										echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_PIDE');
+										break;
+									case 'Ofrece':
+										echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_OFRECE');
+										break;
+									default :
+										echo $empty;
+										break;
+								endswitch;
 							?>
 						</td>
 					<?php endif; ?>

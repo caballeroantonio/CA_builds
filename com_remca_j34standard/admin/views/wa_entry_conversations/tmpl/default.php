@@ -196,7 +196,17 @@ if ($save_order)
 					</td>	
 					<td class="nowrap small center hidden-phone">
 						<?php 
-							echo $item->action != '' ? $item->action : $empty; 
+							switch ($item->action) :
+									case 'Pide':
+										echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_PIDE');
+										break;
+									case 'Ofrece':
+										echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_OFRECE');
+										break;
+									default :
+										echo $empty;
+										break;
+								endswitch; 
 						?>				
 					</td>	
 					<td class="nowrap small center hidden-phone">

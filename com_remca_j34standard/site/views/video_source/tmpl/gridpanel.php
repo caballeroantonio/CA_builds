@@ -114,7 +114,10 @@ $empty = $component->params->get('default_empty_field', '');
 <?php
 JHtml::_('behavior.keepalive');
 JLoader::register('ExtJSHelper', JPATH_COMPONENT.'/helpers/ExtJSHelper.php');
-$extJSHelper = new ExtJSHelper;
+class video_sourceApp extends ExtJSHelper{
+    
+}
+$extJSHelper = new video_sourceApp();
 $extJSHelper->parse('video_source');
 ?>
 <link rel="stylesheet" type="text/css" href="libraries/extjs/classic/theme-classic/resources/theme-classic-all.css"/>
@@ -161,7 +164,7 @@ $extJSHelper->parse('video_source');
                 'store': 'video_source',
             },
         },
-        fields: <?= $extJSHelper->encode($extJSHelper->fields) ?>,
+        fields: <?= $extJSHelper->encode(array_values($extJSHelper->getModelFields())) ?>,
     });
         Ext.define('remca.store.video_source', {
             extend: 'Ext.data.Store',
@@ -216,7 +219,7 @@ Ext.application({
             Ext.create('Ext.grid.Panel', {
             title: '<?= JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS') ?>',
             store: 'video_source',
-            columns: <?= $extJSHelper->encode($extJSHelper->columns) ?>,
+            columns: <?= $extJSHelper->encode(array_values($extJSHelper->getViewColumns())) ?>,
            _tbar_: [
               { 
                 xtype: 'button', 
