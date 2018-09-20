@@ -187,7 +187,20 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo $this->item->action != '' ? $this->item->action : $empty;
+									switch ($this->item->action) :
+									case 'Pide':
+										echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_PIDE');
+										break;
+									case 'Ofrece':
+										echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_OFRECE');
+										break;
+									case 'say':
+										echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_DICE');
+										break;
+									default :
+										echo $empty;
+										break;
+								endswitch;
 								?>
 							</span>
 						</div>	

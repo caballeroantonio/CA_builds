@@ -128,10 +128,16 @@
         <field
             id="action"
             name="action"
-            type="combo_suggest"
+            type="list"
             label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ACTION_LABEL"
             description="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELD_ACTION_DESC"
+            class="inputbox"
+			size="1"
+			required="true"
         >
+            <option	value="Pide">COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_PIDE</option>
+			<option	value="Ofrece">COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_OFRECE</option>
+			<option	value="say">COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_DICE</option>
         </field>  
     </fieldset>
 </form>

@@ -114,7 +114,10 @@ $empty = $component->params->get('default_empty_field', '');
 <?php
 JHtml::_('behavior.keepalive');
 JLoader::register('ExtJSHelper', JPATH_COMPONENT.'/helpers/ExtJSHelper.php');
-$extJSHelper = new ExtJSHelper;
+class orders_detailsApp extends ExtJSHelper{
+    
+}
+$extJSHelper = new orders_detailsApp();
 $extJSHelper->parse('orders_detail');
 ?>
 <link rel="stylesheet" type="text/css" href="libraries/extjs/classic/theme-classic/resources/theme-classic-all.css"/>
@@ -161,7 +164,7 @@ $extJSHelper->parse('orders_detail');
                 'store': 'orders_details',
             },
         },
-        fields: <?= $extJSHelper->encode($extJSHelper->fields) ?>,
+        fields: <?= $extJSHelper->encode(array_values($extJSHelper->getModelFields())) ?>,
     });
         Ext.define('remca.store.orders_details', {
             extend: 'Ext.data.Store',
@@ -216,7 +219,7 @@ Ext.application({
             Ext.create('Ext.grid.Panel', {
             title: '<?= JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS') ?>',
             store: 'orders_details',
-            columns: <?= $extJSHelper->encode($extJSHelper->columns) ?>,
+            columns: <?= $extJSHelper->encode(array_values($extJSHelper->getViewColumns())) ?>,
            _tbar_: [
               { 
                 xtype: 'button', 

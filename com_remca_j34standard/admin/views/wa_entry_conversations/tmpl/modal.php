@@ -109,7 +109,20 @@ $empty = $component->params->get('default_empty_field', '');
 				<td class="center">
 					<a class="pointer" href="javascript:void(0)" onclick="if (window.parent) window.parent.<?php echo $this->escape($function);?>('<?php echo $item->id; ?>');">
 						<?php 
-							echo $item->action != '' ? $item->action : $empty; 
+							switch ($item->action) :
+									case 'Pide':
+										echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_PIDE');
+										break;
+									case 'Ofrece':
+										echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_OFRECE');
+										break;
+									case 'say':
+										echo JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS_ACTION_VALUE_DICE');
+										break;
+									default :
+										echo $empty;
+										break;
+								endswitch; 
 						?>					
 					</a>		
 				</td>	

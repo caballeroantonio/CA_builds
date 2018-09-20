@@ -127,7 +127,16 @@ $empty = $component->params->get('default_empty_field', '');
 <?php
 JHtml::_('behavior.keepalive');
 JLoader::register('ExtJSHelper', JPATH_COMPONENT.'/helpers/ExtJSHelper.php');
-$extJSHelper = new ExtJSHelper;
+class wa_entry_conversationsApp extends ExtJSHelper{
+    function getViewColumns() {
+        $columns = parent::getViewColumns();
+        $columns['action']['editor']['forceSelection'] = 0;
+        $columns['action']['editor']['allowBlank'] = 0;
+        return $columns;
+    }
+    
+}
+$extJSHelper = new wa_entry_conversationsApp();
 $extJSHelper->parse('wa_entry_conversation');
 ?>
 <link rel="stylesheet" type="text/css" href="libraries/extjs/classic/theme-classic/resources/theme-classic-all.css"/>
@@ -174,7 +183,7 @@ $extJSHelper->parse('wa_entry_conversation');
                 'store': 'wa_entry_conversations',
             },
         },
-        fields: <?= $extJSHelper->encode($extJSHelper->fields) ?>,
+        fields: <?= $extJSHelper->encode(array_values($extJSHelper->getModelFields())) ?>,
     });
         Ext.define('remca.store.wa_entry_conversations', {
             extend: 'Ext.data.Store',
@@ -229,7 +238,7 @@ Ext.application({
             Ext.create('Ext.grid.Panel', {
             title: '<?= JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS') ?>',
             store: 'wa_entry_conversations',
-            columns: <?= $extJSHelper->encode($extJSHelper->columns) ?>,
+            columns: <?= $extJSHelper->encode(array_values($extJSHelper->getViewColumns())) ?>,
            _tbar_: [
               { 
                 xtype: 'button', 
