@@ -1,0 +1,80 @@
+<project name="boletin" default="dist" basedir=".">
+    <property name="link_dir" description="vinculo simbolico de JPATH_BASE" value="D:/www/htdocs/JPruebas" /> 
+    
+    <target name="remove-package" description="Warning, delete directory follow symlinks. When uninstall Joomla extension or delete directory that has symlinks you loose your src code.">
+        <delete dir="${link_dir}/administrator/components/com_boletin" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.com_boletin.ini" />
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.com_boletin.sys.ini" />
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.com_boletin.ini" />
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.com_boletin.sys.ini" />
+        <delete dir="${link_dir}/components/com_boletin"  />
+        <delete file="${link_dir}/language/en-GB/en-GB.com_boletin.ini" />
+		<delete file="${link_dir}/language/es-ES/es-ES.com_boletin.ini" />
+        <delete dir="${link_dir}/media/com_boletin" />
+        
+
+        
+        
+    </target>
+
+    <target name="copy-symlinks-win" description="copy symlynks to joomla to test directy on development directory">
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/administrator/components/com_boletin" "${basedir}\admin"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/components/com_boletin" "${basedir}\site"'/>
+        </exec>
+        
+		<!--admin language-->
+		<exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.com_boletin.ini" "${basedir}\admin\language\en-GB\en-GB.com_boletin.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/en-GB/en-GB.com_boletin.sys.ini" "${basedir}\admin\language\en-GB\en-GB.com_boletin.sys.ini"'/>
+        </exec>
+        <mkdir dir="${link_dir}/administrator/language/es-ES/"/>
+		<exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.com_boletin.ini" "${basedir}\admin\language\es-ES\es-ES.com_boletin.ini"'/>
+        </exec>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/administrator/language/es-ES/es-ES.com_boletin.sys.ini" "${basedir}\admin\language\es-ES\es-ES.com_boletin.sys.ini"'/>
+        </exec>
+		<!--site language-->
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/language/en-GB/en-GB.com_boletin.ini" "${basedir}\site\language\en-GB\en-GB.com_boletin.ini"'/>
+        </exec>
+        <mkdir dir="${link_dir}/language/es-ES/"/>
+        <exec executable="cmd" >
+            <arg value='/c mklink "${link_dir}/language/es-ES/es-ES.com_boletin.ini" "${basedir}\site\language\es-ES\es-ES.com_boletin.ini"'/>
+        </exec>
+		
+        <exec executable="cmd" >
+            <arg value='/c mklink /d "${link_dir}/media/com_boletin" "${basedir}\media"'/>
+        </exec>
+
+        
+        
+    </target>   
+     
+    <target name="remove-symlinks-win" description="remove test symlinks">
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/administrator/components/com_boletin"'/>
+        </exec>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.com_boletin.ini"/>
+        <delete file="${link_dir}/administrator/language/en-GB/en-GB.com_boletin.sys.ini"/>
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.com_boletin.ini"/>
+        <delete file="${link_dir}/administrator/language/es-ES/es-ES.com_boletin.sys.ini"/>
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/components/com_boletin"'/>
+        </exec>
+        <delete file="${link_dir}/language/en-GB/en-GB.com_boletin.ini"/>
+        <delete file="${link_dir}/language/es-ES/es-ES.com_boletin.ini"/>
+        <exec executable="cmd" >
+            <arg value='/c rmdir "${link_dir}/media/com_boletin"'/>
+        </exec>
+
+        
+        
+    </target>    
+
+</project>

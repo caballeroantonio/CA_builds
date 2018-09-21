@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- @version 			$Id:$ -->
+<!-- @name			    Boletines -->
+<!-- @author			caballeroantonio (caballeroantonio.com) -->
+<!-- @package			com_boletin -->
+<!-- @subpackage		com_boletin.admin -->
+<!-- @copyright		     -->
+<!-- @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- The following Component Architect header section must remain in any distribution of this file -->
+
+<!-- @CAversion			Id: architectcomp.xml 604 2016-01-14 13:05:26Z BrianWade $ -->
+<!-- @CAauthor		    Component Architect (www.componentarchitect.com) -->
+<!-- @CApackage		    architectcomp -->
+<!-- @CAsubpackage	    architectcomp.admin -->
+<!-- @CAtemplate		joomla_3_4_standard (Release 1.0.1) -->
+<!-- @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved -->
+<!-- @Joomlacopyright   Copyright (c)2005 - 2016 Open Source Matters, Inc. All rights reserved. -->
+<!-- @CAlicense		    GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or (at your option) any later version. -->
+
+<!-- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of -->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. -->
+
+<extension type="component" version="3.4" method="upgrade">
+    <name>com_boletin</name>
+    <author>caballeroantonio</author>
+    <creationDate>September 2018</creationDate>
+    <copyright>
+    </copyright>
+    <license>
+        GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html
+    </license>
+    <authorEmail>caballeroantonio@hotmail.com</authorEmail>
+    <authorUrl>caballeroantonio.com</authorUrl>
+    <version>1.0.0</version>
+    <description>COM_BOLETIN_XML_DESCRIPTION</description>
+    <files folder="site">
+        <filename>boletin.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>language</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+    <languages folder="site/language">
+			<language tag="en-GB">en-GB/en-GB.com_boletin.ini</language>
+			<language tag="es-ES">es-ES/es-ES.com_boletin.ini</language>
+    </languages>
+    <media destination="com_boletin" folder="media">
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+    </media>
+
+    <administration>
+        <!--
+				Note that all & must be escaped to &amp; for the file to be valid
+				XML and be parsed by the installer
+			-->
+        <menu img="../media/com_boletin/images/boletin.png"
+              alt="Boletines">COM_BOLETIN</menu>
+        <submenu>
+            <menu link="option=com_boletin&amp;view=facuerdos" alias="facuerdos" img="../media/com_boletin/images/boletin-facuerdos.png"
+                    alt="Boletines/Acuerdos Fiscales">COM_BOLETIN_FACUERDOS</menu>
+<!--            <menu link="option=com_categories&amp;extension=com_boletin" view="categories" img="../media/com_boletin/images/boletin-categories.png"
+                    alt="Boletines/Categories">COM_BOLETIN_[%%COMPOBJECTPLURAL%%]_CATEGORIES</menu>-->
+        </submenu>
+
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>boletin.php</filename>
+            <filename>controller.php</filename>
+            <filename>boletin_uninstall.html</filename>
+            <filename>gpl-3.0.txt</filename>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>language</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>sql</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="admin/language">
+            <language tag="en-GB">en-GB/en-GB.com_boletin.sys.ini</language>
+        </languages>
+    </administration>
+
+    <!-- Runs on install/uninstall/update; -->
+    <scriptfile>boletin_install.php</scriptfile>
+          
+    <install>
+        <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.boletin_mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.boletin_mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update>
+        <!-- Runs on update; -->
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+    <config>  
+        <fields name="params">
+            <fieldset
+                name="versioncontrol"
+                label="COM_BOLETIN_FIELDSET_VERSION_CONTROL_LABEL"
+		        description="COM_BOLETIN_FIELDSET_VERSION_CONTROL_DESC"
+	        >
+                <field
+			        name="history_limit"
+			        type="text"
+			        label="JGLOBAL_HISTORY_LIMIT_OPTIONS_LABEL"
+			        description="JGLOBAL_HISTORY_LIMIT_OPTIONS_DESC"
+			        default="10"
+			        filter="integer"
+		        />
+                <field
+                    name="save_history"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    label="JGLOBAL_SAVE_HISTORY_OPTIONS_LABEL"
+                    description="COM_BOLETIN_SAVE_HISTORY_OPTIONS_DESC"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>		        
+            </fieldset>
+            <fieldset
+                name="facuerdo_display"
+                label="COM_BOLETIN_FACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+                description="COM_BOLETIN_FACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DESC"
+	        >
+                <field
+                    name="facuerdo_layout"
+                    type="componentlayout"
+                    label="JGLOBAL_FIELD_LAYOUT_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_CHOOSE_LAYOUT_DESC"
+                    menuitems="true"
+                    extension="com_boletin"
+                    view="facuerdo"
+                    default="_:default"
+		        />
+                <field
+                    name="spacer0"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_facuerdo_icons"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ICONS_LABEL"
+                    description="COM_BOLETIN_SHOW_ICONS_DESC"
+                    class="btn-group"
+                    default="1"
+		        >
+                    <option	value="0">COM_BOLETIN_SHOW_ICONS_VALUE_TEXT</option>
+                    <option	value="1">COM_BOLETIN_SHOW_ICONS_VALUE_ICONS</option>
+                    <option	value="-1">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_print_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PRINT_ICON_LABEL"
+                    description="COM_BOLETIN_SHOW_PRINT_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_email_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_EMAIL_ICON_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_EMAIL_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="keep_facuerdo_itemid"
+                    type="radio"
+                    label="COM_BOLETIN_KEEP_ITEMID_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_KEEP_ITEMID_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_facuerdo_navigation"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_NAVIGATION_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_NAVIGATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_category_breadcrumb"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_CATEGORY_BREADCRUMB_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_CATEGORY_BREADCRUMB_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="limit_category_facuerdo_navigation"
+                    type="radio"
+                    label="COM_BOLETIN_LIMIT_CATEGORY_NAVIGATION_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_LIMIT_CATEGORY_NAVIGATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="spacer1"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_facuerdo_readmore"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_READMORE_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_READMORE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="facuerdo_readmore_limit"
+                    type="text"
+                    label="COM_BOLETIN_SHOW_READMORE_LIMIT_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_READMORE_LIMIT_DESC"
+                    default="100"
+		        />
+                <field
+                    name="spacer2"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_facuerdo_category"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_CATEGORY_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_CATEGORY_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="link_facuerdo_category"
+                    type="radio"
+                    label="COM_BOLETIN_LINK_CATEGORY_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_LINK_CATEGORY_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_facuerdo_parent_category"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PARENT_CATEGORY_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_PARENT_CATEGORY_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="link_facuerdo_parent_category"
+                    type="radio"
+                    label="COM_BOLETIN_LINK_PARENT_CATEGORY_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_LINK_PARENT_CATEGORY_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_facuerdo_admin"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADMIN_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_ADMIN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_fecha_boletin"
+                    type="radio"
+                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_FECHA_BOLETIN_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_FECHA_BOLETIN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_region"
+                    type="radio"
+                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_REGION_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_REGION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_instancia"
+                    type="radio"
+                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_INSTANCIA_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_INSTANCIA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_expediente"
+                    type="radio"
+                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_EXPEDIENTE_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_EXPEDIENTE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_actor"
+                    type="radio"
+                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_ACTOR_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_ACTOR_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_parte_a_notificar"
+                    type="radio"
+                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_PARTE_A_NOTIFICAR_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_PARTE_A_NOTIFICAR_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_auto_o_resolucion"
+                    type="radio"
+                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_AUTO_O_RESOLUCION_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_AUTO_O_RESOLUCION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="facuerdos_list_display"
+                label="COM_BOLETIN_FACUERDOS_FIELD_CONFIG_BLOG_LIST_LABEL"
+                description="COM_BOLETIN_FACUERDOS_FIELD_CONFIG_BLOG_LIST_DESC"
+	        >
+                <field
+                    name="facuerdo_num_leading"
+                    type="text"
+                    label="COM_BOLETIN_FACUERDOS_NUM_LEADING_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_NUM_LEADING_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="facuerdo_num_intro"
+                    type="text"
+                    label="COM_BOLETIN_FACUERDOS_NUM_INTRO_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_NUM_INTRO_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="facuerdo_num_columns"
+                    type="text"
+                    label="COM_BOLETIN_NUM_COLUMNS_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_NUM_COLUMNS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="facuerdo_num_links"
+                    type="text"
+                    label="COM_BOLETIN_NUM_LINKS_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_NUM_LINKS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="facuerdo_multi_column_order"
+                    type="radio"
+                    label="COM_BOLETIN_MULTI_COLUMN_ORDER_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_MULTI_COLUMN_ORDER_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JGLOBAL_DOWN</option>
+                    <option value="1">JGLOBAL_ACROSS</option>
+                </field>
+                <field
+                    name="facuerdo_orderby_pri"
+                    type="list"
+                    label="COM_BOLETIN_CATEGORY_ORDER_LABEL"
+                    description="COM_BOLETIN_CATEGORY_ORDER_DESC"
+			        class="chzn-color"
+                    default="none"
+		        >
+                    <option value="none">JGLOBAL_NO_ORDER</option>
+                    <option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+                    <option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+                    <option value="order">JGLOBAL_CATEGORY_MANAGER_ORDER</option>
+                </field>
+                <field
+                    name="facuerdo_orderby_sec"
+                    type="list"
+                    label="COM_BOLETIN_FACUERDOS_CATEGORY_ORDER_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_CATEGORY_ORDER_DESC"
+			        class="chzn-color"
+                    default="none"
+		        >
+                    <option value="none">JGLOBAL_NO_ORDER</option>
+                    <option value="ordering">COM_BOLETIN_FACUERDOS_ORDER</option>
+                </field>
+                <field
+                    name="facuerdo_order_date"
+                    type="list"
+                    label="COM_BOLETIN_ORDERING_DATE_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_ORDERING_DATE_DESC"
+			        class="chzn-color"
+		        >
+                </field>
+                <field
+                    name="facuerdo_initial_sort"
+                    type="list"
+                    label="COM_BOLETIN_FACUERDOS_ORDER_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_ORDER_DESC"
+			        class="chzn-color"
+		        >
+                    <option value="a.ordering">COM_BOLETIN_FACUERDOS_ORDER</option>
+                </field>
+                <field
+                    name="facuerdo_initial_direction"
+                    type="radio"
+                    label="COM_BOLETIN_ORDER_DIRECTION_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_ORDER_DIRECTION_DESC"
+                    class="btn-group"
+                    default="ASC"
+		        >
+                    <option value="DESC">COM_BOLETIN_ORDER_DIRECTION_DESCENDING_LABEL</option>
+                    <option value="ASC">COM_BOLETIN_ORDER_DIRECTION_ASCENDING_LABEL</option>
+                </field>
+                <field
+                    name="show_facuerdo_filter_field"
+                    type="list"
+                    label="JGLOBAL_FILTER_FIELD_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_FILTER_FIELD_DESC"
+                    class="chzn-color"
+                    default="hide"
+			    >
+                    <option value="hide">JHIDE</option>
+                </field>                
+                <field
+                    name="show_facuerdo_headings"
+                    type="radio"
+                    label="JGLOBAL_SHOW_HEADINGS_LABEL"
+                    description="JGLOBAL_SHOW_HEADINGS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_pagination"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_LABEL"
+                    description="JGLOBAL_PAGINATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="2"
+		        >
+                    <option value="2">JGLOBAL_AUTO</option>
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_pagination_results"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+                    description="JGLOBAL_PAGINATION_RESULTS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_pagination_limit"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PAGINATION_LIMIT_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_PAGINATION_LIMIT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="facuerdo_num_per_page"
+                    type="list"
+                    description="COM_BOLETIN_FACUERDOS_NUM_PER_PAGE_DESC"
+                    label="COM_BOLETIN_FACUERDOS_NUM_PER_PAGE_LABEL"
+			        class="chzn-color"
+                    default="5"
+                >
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="50">J50</option>
+                    <option value="100">J100</option>
+                    <option value="0">JALL</option>
+                </field>
+                <field
+                    name="show_no_facuerdos"
+                    type="radio"
+                    label="COM_BOLETIN_FACUERDOS_NO_ITEMS_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_NO_ITEMS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+			    >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_facuerdo_add_link"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADD_LINK_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_ADD_LINK_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="list_show_facuerdo_date"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_DATE_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_SHOW_DATE_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="facuerdo_date_format"
+                    type="text"
+                    label="JGLOBAL_DATE_FORMAT_LABEL"
+                    description="JGLOBAL_DATE_FORMAT_DESC"
+                    size="15"
+		        />
+                <field
+                    name="list_show_facuerdo_ordering"
+                    type="radio"
+                    label="COM_BOLETIN_LIST_ORDERING_LABEL"
+                    description="COM_BOLETIN_FACUERDOS_LIST_ORDERING_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="categories"
+                label="JCATEGORIES"
+                description="COM_BOLETIN_FIELD_CONFIG_CATEGORIES_DESC"
+	        >
+                <field
+                    name="show_base_description"
+                    type="radio"
+                    label="JGLOBAL_FIELD_SHOW_BASE_DESCRIPTION_LABEL"
+                    description="JGLOBAL_FIELD_SHOW_BASE_DESCRIPTION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_empty_categories"
+                    type="radio"
+                    label="JGLOBAL_SHOW_EMPTY_CATEGORIES_LABEL"
+                    description="COM_BOLETIN_SHOW_EMPTY_CATEGORIES_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_subcategories_desc"
+                    type="radio"
+                    label="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_LABEL"
+                    description="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_categories_max_level"
+                    type="list"
+                    label="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_LABEL"
+                    description="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_DESC"
+			        class="chzn-color"
+                    default="-1"
+		        >
+                    <option value="-1">JALL</option>
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                    <option value="5">J5</option>
+                </field>
+                <field
+                    name="show_categories_noauth"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_UNAUTH_LINKS_LABEL"
+                    description="COM_BOLETIN_SHOW_CATEGORY_UNAUTH_LINKS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="items_to_display"
+                    type="list"
+                    label="COM_BOLETIN_CATEGORY_ITEMS_TO_DISPLAY_LABEL"
+                    description="COM_BOLETIN_CATEGORY_ITEMS_TO_DISPLAY_DESC"
+			        class="chzn-color"
+                default=""
+		        >
+                    <option value="">JNONE</option>
+                    <option value="Acuerdos Fiscales">COM_BOLETIN_FACUERDOS</option>
+                </field>
+                <field
+                    name="show_categories_num_items"
+                    type="radio"
+                    label="COM_BOLETIN_NUMBER_CATEGORY_ITEMS_LABEL"
+                    description="COM_BOLETIN_NUMBER_CATEGORY_ITEMS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="Category"
+                label="JCATEGORY"
+                description="COM_BOLETIN_FIELD_CONFIG_CATEGORY_DESC"
+	        >
+                <field
+                    id="category_component"
+                    name="category_component"
+                    type="component"
+                    label="COM_BOLETIN_FIELD_CATEGORY_COMPONENT_LABEL"
+                    description="COM_BOLETIN_FIELD_CATEGORY_COMPONENT_DESC"
+                    extension="com_boletin"
+                />
+                <field
+                    name="show_cat_title"
+                    type="radio"
+                    label="JGLOBAL_SHOW_CATEGORY_TITLE"
+                    description="JGLOBAL_SHOW_CATEGORY_TITLE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_cat_description"
+                    type="radio"
+                    label="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_LABEL"
+                    description="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_cat_description_image"
+                    type="radio"
+                    label="JGLOBAL_SHOW_CATEGORY_IMAGE_LABEL"
+                    description="JGLOBAL_SHOW_CATEGORY_IMAGE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_cat_subcat_heading"
+                    type="radio"
+                    label="JGLOBAL_SHOW_CATEGORY_HEADING_TITLE_TEXT_LABEL"
+                    description="JGLOBAL_SHOW_CATEGORY_HEADING_TITLE_TEXT_DESC"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>                
+                <field
+                    name="show_empty_cat"
+                    type="radio"
+                    label="JGLOBAL_SHOW_EMPTY_CATEGORIES_LABEL"
+                    description="COM_BOLETIN_SHOW_EMPTY_CATEGORIES_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_subcat_desc"
+                    type="radio"
+                    label="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_LABEL"
+                    description="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_category_max_level"
+                    type="list"
+                    label="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_LABEL"
+                    description="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_DESC"
+			        class="chzn-color"
+                    default="-1"
+		        >
+                    <option value="-1">JALL</option>
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                    <option value="5">J5</option>
+                </field>
+                <field
+                    name="show_cat_noauth"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_UNAUTH_LINKS_LABEL"
+                    description="COM_BOLETIN_SHOW_CATEGORY_UNAUTH_LINKS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_cat_num_items"
+                    type="radio"
+                    label="COM_BOLETIN_NUMBER_CATEGORY_ITEMS_LABEL"
+                    description="COM_BOLETIN_NUMBER_CATEGORY_ITEMS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="global-permissions"
+                label="COM_BOLETIN_PERMISSIONS_LABEL"
+                description="COM_BOLETIN_PERMISSIONS_DESC"
+	        >
+                <field
+                    name="rules"
+                    type="rules"
+                    label="COM_BOLETIN_PERMISSIONS_LABEL"
+                    filter="rules"
+                    validate="rules"
+                    component="com_boletin"
+                    section="component"
+		        />
+            </fieldset>
+        </fields>
+    </config>    
+</extension>
+
