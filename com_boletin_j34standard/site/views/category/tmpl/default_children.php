@@ -51,7 +51,7 @@ defined('_JEXEC') or die;
 			<div<?php echo $class; ?>>
 				<?php $class = ''; ?>
 
-				<h3 class="page-header item-title"><a href="<?php echo JRoute::_(BoletinHelperRoute::getCategoryRoute($child->id, $this->params->get('keep_facuerdo_itemid')));?>">
+				<h3 class="page-header item-title"><a href="<?php echo JRoute::_(BoletinHelperRoute::getCategoryRoute($child->id, $this->params->get('keep_tfjfa_bacuerdo_itemid')));?>">
 					<?php echo $this->escape($child->title); ?></a>
 					<?php if ($this->params->get('items_to_display') AND 
 								$this->params->get('items_to_display') !='' AND 

@@ -1,0 +1,347 @@
+/**
+ * @version 		$Id:$
+ * @name			Boletines
+ * @author			caballeroantonio (caballeroantonio.com)
+ * @package			com_boletin
+ * @subpackage		com_boletin.site
+ * @copyright		
+ * @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html 
+ * 
+ * The following Component Architect header section must remain in any distribution of this file
+ *
+ * @CAversion		Id: site_compobjectplural.css 604 2016-01-14 13:05:26Z BrianWade $
+ * @CAauthor		Component Architect (www.componentarchitect.com)
+ * @CApackage		architectcomp
+ * @CAsubpackage	architectcomp.site
+ * @CAtemplate		joomla_3_4_standard (Release 0.5.0)
+ * @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved
+ * @Joomlacopyright Copyright (c)2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @CAlicense		GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html
+ * 
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ */
+/*#################### pjf_bacuerdos list table with grid settings ############################ */
+.pjf_bacuerdos-list table.pjf_bacuerdos
+{
+        font-size:1em;
+        margin:10px 10px 20px 0px;
+        width:99%;
+}
+.pjf_bacuerdos-list table.pjf_bacuerdos td
+{
+        padding:7px;
+}
+.pjf_bacuerdos-list table.pjf_bacuerdos th
+{
+        padding:7px;
+}
+.pjf_bacuerdos .display-limit
+{
+    float: right;
+    display: inline;
+}
+/*#################### pjf_bacuerdos list grid settings ############################ */
+.pjf_bacuerdos-list a.jgrid:hover
+{
+    text-decoration: none;
+}
+
+.pjf_bacuerdos-list .jgrid span.state
+{
+	    display: inline-block;
+	    height: 16px;
+	    width: 16px;
+}
+.pjf_bacuerdos-list .jgrid span.text 
+{
+        display:none;
+}
+.pjf_bacuerdos-list .jgrid span.downarrow				
+{
+        background-image: url(../images/downarrow.png);
+}
+.pjf_bacuerdos-list .jgrid span.downarrow_disabled
+{
+       background-image: url(../images/downarrow0.png);
+       background-position: 0 -12px;
+}
+.pjf_bacuerdos-list .jgrid span.uparrow	
+{
+        background-image: url(../images/uparrow.png);
+}
+.pjf_bacuerdos-list .jgrid span.uparrow_disabled
+{
+        background-image: url(../images/uparrow0.png);
+        background-position: 0 -12px;
+}
+/*#################### pjf_bacuerdos list actions icons ############################ */
+.pjf_bacuerdos-list ul.actions
+{
+        padding:0 ;
+        width:100%;
+        margin:0;
+        list-style-type: none;
+}
+.pjf_bacuerdos-list ul.actions a
+{
+        text-decoration:none
+}
+/*#################### pjf_bacuerdos list pagination ############################ */
+.pjf_bacuerdos-list .pagination p.counter
+{
+        text-align: center;
+        margin: 0 auto 0 auto; 
+}
+/*#################### pjf_bacuerdos modal list ############################ */
+.pjf_bacuerdos-modal
+{
+        width: 760px;
+}
+/*#################### pjf_bacuerdos modal list tables ############################ */
+.pjf_bacuerdos-modal table.pjf_bacuerdos th a {
+}
+.pjf_bacuerdos-modal table.pjf_bacuerdos th  a img {
+	    border:solid 0px ;
+}
+.pjf_bacuerdos-modal table.pjf_bacuerdos
+{
+        font-size:1em;
+        margin:10px 10px 20px 0px;
+        width:99%;
+}
+.pjf_bacuerdos-modal table.pjf_bacuerdos td
+{
+        padding:7px;
+}
+.pjf_bacuerdos-modal table.pjf_bacuerdos th
+{
+        padding:7px;
+        text-align:left;
+	    background:#444 ;        
+}
+.pjf_bacuerdos-modal table.pjf_bacuerdos th
+{
+	    color:#fff
+}
+/*#################### pjf_bacuerdos modal list pagination ############################ */
+
+.pjf_bacuerdos-modal .pagination p.counter
+{
+        text-align: center;
+        margin: 0 auto 0 auto; 
+}
+
+/*#################### pjf_bacuerdos blog ############################ */
+.pjf_bacuerdos-blog h1
+{
+        margin:0 0px 10px 0px
+}
+/*#################### pjf_bacuerdos blog actions icons ############################ */
+.pjf_bacuerdos-blog ul.actions
+{
+        text-align:right;
+        padding:0 ;
+        width:100%;
+        margin:0
+}
+.pjf_bacuerdos-blog ul.actions li
+{
+        display:inline
+}
+.pjf_bacuerdos-blog ul.actions a
+{
+        text-decoration:none
+}
+/*#################### pjf_bacuerdos blog items more ############################ */
+.pjf_bacuerdos-blog .items-more
+{
+        padding-top:10px;
+}
+.pjf_bacuerdos-blog .items-more h3
+{
+        font-weight:normal;
+        margin:0;
+        padding:5px 5px 5px 5px;
+        font-size:1.4em
+}
+.pjf_bacuerdos-blog .items-more ol
+{
+        line-height:1.3em;
+        list-style-type:none;
+        margin:0;
+        padding:10px 0 10px 2px;
+}
+.pjf_bacuerdos-blog .items-more ol li
+{
+        padding:2px;
+}
+.pjf_bacuerdos-blog .items-more ol li a
+{
+        display:inline;
+        margin:0;
+        font-weight:normal;
+        padding:5px 5px 5px 20px;
+}
+.pjf_bacuerdos-blog .items-more ol li a:hover,
+.pjf_bacuerdos-blog .items-more ol li a:active,
+.pjf_bacuerdos-blog .items-more ol li a:focus
+{
+        font-weight:normal;
+        padding:5px 5px 5px 20px;
+        text-decoration:none
+}
+/*#################### pjf_bacuerdos blog pagination ############################ */
+.pjf_bacuerdos-blog .pagination p.counter
+{
+        text-align: center;
+        margin: 0 auto 0 auto; 
+}
+
+/*#################### pjf_bacuerdo view ############################ */
+.pjf_bacuerdo-view
+{
+        padding:0 5px;
+        display:block;
+        overflow:hidden
+}
+.pjf_bacuerdo-view .formelm label,
+{
+    width: 200px;
+}
+/* #main required */
+#main .pjf_bacuerdo-view .formelm ul
+{
+        list-style-type: none;
+        margin-top: 0px;
+        margin-left: 0px;
+        padding-left: 0px;
+}
+#main .pjf_bacuerdo-view .formelm ul label
+{
+         font-weight: normal;
+}
+.pjf_bacuerdo-view .formelm fieldset
+{
+        padding: 0;
+        margin: 0;
+        margin-top: 5px;
+        display: inline;
+}
+.pjf_bacuerdo-view .formelm label,
+.pjf_bacuerdo-view .formelm-area label  
+{
+        font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: 5px;    
+}
+.pjf_bacuerdo-view .formelm span  
+{
+        margin-bottom: 5px;    
+}
+.pjf_bacuerdo-view fieldset legend
+{
+        font-weight: bold;
+        font-size: 120%;
+}
+/*#################### pjf_bacuerdo view actions icons ############################ */
+.pjf_bacuerdo-view ul.actions
+{
+        text-align:right;
+        padding:0 ;
+        width:100%;
+        margin:0
+}
+.pjf_bacuerdo-view ul.actions li
+{
+        display:inline
+}
+.pjf_bacuerdo-view ul.actions a
+{
+        text-decoration:none
+}
+/*#################### pjf_bacuerdo article ############################ */
+.pjf_bacuerdo-article
+{
+        padding:0 5px;
+        display:block;
+        overflow:hidden
+}
+.pjf_bacuerdo-article dt.info-title,
+.pjf_bacuerdo-article dt.fields-title
+{
+        font-weight: bold;
+        font-size: 120%;
+		margin-top: 10px;
+}
+#main .pjf_bacuerdo-article dd ul
+{
+        list-style-type: none;
+        margin-top: 0px;
+        margin-left: 0px;
+        padding-left: 0px;
+}
+#main .pjf_bacuerdo-article dd.field label
+{
+         font-weight: bold;
+         margin-top: 10px;
+}
+#main .pjf_bacuerdo-article dd ul label
+{
+         font-weight: bold;
+         margin-top: 10px;
+}
+.pjf_bacuerdo-article dd fieldset
+{
+        padding: 0;
+        margin: 0;
+        margin-top: 5px;
+        display: inline;
+}
+/*#################### pjf_bacuerdo article actions icons ############################ */
+.pjf_bacuerdo-article ul.actions
+{
+        text-align:right;
+        padding:0 ;
+        width:100%;
+        margin:0
+}
+.pjf_bacuerdo-article ul.actions li
+{
+        display:inline
+}
+.pjf_bacuerdo-article ul.actions a
+{
+        text-decoration:none
+}
+
+
+/*#################### pjf_bacuerdo edit form ############################ */
+.pjf_bacuerdo-edit
+{
+        padding:0 5px;
+        display:block;
+        overflow:hidden
+}
+.pjf_bacuerdo-edit .button2-left,
+.pjf_bacuerdo-edit .button2-left div,
+.pjf_bacuerdo-edit .button2-left a
+{
+        float: none;
+        display: inline;
+}
+.pjf_bacuerdo-edit .control-group .control-label
+{
+        display: inline-block !important; 
+}
+.pjf_bacuerdo-edit .control-group .controls
+{
+        display: inline-block !important;      
+}
+.pjf_bacuerdo-edit .control-group .control-label
+{
+        width: 150px !important;      
+}

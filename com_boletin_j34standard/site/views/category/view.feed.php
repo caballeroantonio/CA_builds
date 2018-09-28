@@ -54,7 +54,7 @@ class BoletinViewCategory extends JViewLegacy
 		$category	= $this->get('Category');
 		$rows		= $this->get('Items');
 
-		$doc->link = JRoute::_(BoletinHelperRoute::getCategoryRoute($category->id, $params->get('keep_facuerdo_itemid')));
+		$doc->link = JRoute::_(BoletinHelperRoute::getCategoryRoute($category->id, $params->get('keep_tfjfa_bacuerdo_itemid')));
 
 		foreach ($rows as $row)
 		{
@@ -66,12 +66,12 @@ class BoletinViewCategory extends JViewLegacy
 			// Compute the slug
 			$row->slug = $row->id;
 
-			// url link to facuerdo
+			// url link to tfjfa_bacuerdo
 			// & used instead of &amp; as this is converted by feed creator
-			$link = JRoute::_(BoletinHelperRoute::getFacuerdoRoute($row->slug, 
+			$link = JRoute::_(BoletinHelperRoute::getTfjfa_bacuerdoRoute($row->slug, 
 																						$row->catid,
 																						'default',								
-																						$params->get('keep_facuerdo_itemid')), false);
+																						$params->get('keep_tfjfa_bacuerdo_itemid')), false);
 			
 
 			// load individual item creator class

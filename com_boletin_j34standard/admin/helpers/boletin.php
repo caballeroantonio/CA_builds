@@ -97,11 +97,75 @@ class BoletinHelper extends JHelperContent
 		$config = JComponentHelper::getParams(JText::_('COM_BOLETIN_FIELD_CATEGORY_COMPONENT_DEFAULT'));
 		$category_component = $config->get('category_component', JText::_('COM_BOLETIN_FIELD_CATEGORY_COMPONENT_DEFAULT'));	
 
-		$active = $view_name == 'facuerdos'? true : false;
+		$active = $view_name == 'tsjcdmx_juzgado_acuerdos'? true : false;
 		JHtmlSidebar::addEntry(
-			JText::_('COM_BOLETIN_FACUERDOS_SUBMENU'),
-			'index.php?option=com_boletin&view=facuerdos',
-			$view_name == 'facuerdos',
+			JText::_('COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SUBMENU'),
+			'index.php?option=com_boletin&view=tsjcdmx_juzgado_acuerdos',
+			$view_name == 'tsjcdmx_juzgado_acuerdos',
+			$active
+		);
+	
+		$active = $view_name == 'tsjcdmx_sala_acuerdos'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SUBMENU'),
+			'index.php?option=com_boletin&view=tsjcdmx_sala_acuerdos',
+			$view_name == 'tsjcdmx_sala_acuerdos',
+			$active
+		);
+	
+		$active = $view_name == 'prodecon_bacuerdos'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_BOLETIN_PRODECON_BACUERDOS_SUBMENU'),
+			'index.php?option=com_boletin&view=prodecon_bacuerdos',
+			$view_name == 'prodecon_bacuerdos',
+			$active
+		);
+	
+		$active = $view_name == 'profeco_proveedores'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_BOLETIN_PROFECO_PROVEEDORES_SUBMENU'),
+			'index.php?option=com_boletin&view=profeco_proveedores',
+			$view_name == 'profeco_proveedores',
+			$active
+		);
+	
+		$active = $view_name == 'srsps_bacuerdos'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_BOLETIN_SRSPS_BACUERDOS_SUBMENU'),
+			'index.php?option=com_boletin&view=srsps_bacuerdos',
+			$view_name == 'srsps_bacuerdos',
+			$active
+		);
+	
+		$active = $view_name == 'rsps_bacuerdos'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_BOLETIN_RSPS_BACUERDOS_SUBMENU'),
+			'index.php?option=com_boletin&view=rsps_bacuerdos',
+			$view_name == 'rsps_bacuerdos',
+			$active
+		);
+	
+		$active = $view_name == 'pjf_bacuerdos'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_BOLETIN_PJF_BACUERDOS_SUBMENU'),
+			'index.php?option=com_boletin&view=pjf_bacuerdos',
+			$view_name == 'pjf_bacuerdos',
+			$active
+		);
+	
+		$active = $view_name == 'tfca_bacuerdos'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_BOLETIN_TFCA_BACUERDOS_SUBMENU'),
+			'index.php?option=com_boletin&view=tfca_bacuerdos',
+			$view_name == 'tfca_bacuerdos',
+			$active
+		);
+	
+		$active = $view_name == 'tfjfa_bacuerdos'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_BOLETIN_TFJFA_BACUERDOS_SUBMENU'),
+			'index.php?option=com_boletin&view=tfjfa_bacuerdos',
+			$view_name == 'tfjfa_bacuerdos',
 			$active
 		);
 	

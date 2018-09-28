@@ -79,10 +79,58 @@ class BoletinViewBoletin_Dashboard extends JViewLegacy
 	{
 		$buttons = array();
 		$buttons[] = array(
-                    'link'=>'index.php?option=com_boletin&view=facuerdos&layout=gridpanel&tmpl=component',
-                    'object'=>'facuerdos',
-                    'text'=>JText::_('COM_BOLETIN_FACUERDOS'),
-                    'desc'=>JText::_('COM_BOLETIN_FACUERDO_DESCRIPTION')
+                    'link'=>'index.php?option=com_boletin&view=tsjcdmx_juzgado_acuerdos&layout=gridpanel&tmpl=component',
+                    'object'=>'tsjcdmx_juzgado_acuerdos',
+                    'text'=>JText::_('COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS'),
+                    'desc'=>JText::_('COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDO_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_boletin&view=tsjcdmx_sala_acuerdos&layout=gridpanel&tmpl=component',
+                    'object'=>'tsjcdmx_sala_acuerdos',
+                    'text'=>JText::_('COM_BOLETIN_TSJCDMX_SALA_ACUERDOS'),
+                    'desc'=>JText::_('COM_BOLETIN_TSJCDMX_SALA_ACUERDO_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_boletin&view=prodecon_bacuerdos&layout=gridpanel&tmpl=component',
+                    'object'=>'prodecon_bacuerdos',
+                    'text'=>JText::_('COM_BOLETIN_PRODECON_BACUERDOS'),
+                    'desc'=>JText::_('COM_BOLETIN_PRODECON_BACUERDO_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_boletin&view=profeco_proveedores&layout=gridpanel&tmpl=component',
+                    'object'=>'profeco_proveedores',
+                    'text'=>JText::_('COM_BOLETIN_PROFECO_PROVEEDORES'),
+                    'desc'=>JText::_('COM_BOLETIN_PROFECO_PROVEEDOR_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_boletin&view=srsps_bacuerdos&layout=gridpanel&tmpl=component',
+                    'object'=>'srsps_bacuerdos',
+                    'text'=>JText::_('COM_BOLETIN_SRSPS_BACUERDOS'),
+                    'desc'=>JText::_('COM_BOLETIN_SRSPS_BACUERDO_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_boletin&view=rsps_bacuerdos&layout=gridpanel&tmpl=component',
+                    'object'=>'rsps_bacuerdos',
+                    'text'=>JText::_('COM_BOLETIN_RSPS_BACUERDOS'),
+                    'desc'=>JText::_('COM_BOLETIN_RSPS_BACUERDO_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_boletin&view=pjf_bacuerdos&layout=gridpanel&tmpl=component',
+                    'object'=>'pjf_bacuerdos',
+                    'text'=>JText::_('COM_BOLETIN_PJF_BACUERDOS'),
+                    'desc'=>JText::_('COM_BOLETIN_PJF_BACUERDO_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_boletin&view=tfca_bacuerdos&layout=gridpanel&tmpl=component',
+                    'object'=>'tfca_bacuerdos',
+                    'text'=>JText::_('COM_BOLETIN_TFCA_BACUERDOS'),
+                    'desc'=>JText::_('COM_BOLETIN_TFCA_BACUERDO_DESCRIPTION')
+                );
+		$buttons[] = array(
+                    'link'=>'index.php?option=com_boletin&view=tfjfa_bacuerdos&layout=gridpanel&tmpl=component',
+                    'object'=>'tfjfa_bacuerdos',
+                    'text'=>JText::_('COM_BOLETIN_TFJFA_BACUERDOS'),
+                    'desc'=>JText::_('COM_BOLETIN_TFJFA_BACUERDO_DESCRIPTION')
                 );
 
 		return $buttons;

@@ -36,10 +36,10 @@ defined('_JEXEC') or die;
 $params		= &$this->params;
 $user		= JFactory::getUser();
 
-$n			= count($this->facuerdos);
+$n			= count($this->tfjfa_bacuerdos);
 $list_order	= $this->state->get('list.ordering');
 $list_dirn	= $this->state->get('list.direction');
-$layout		= str_replace('_:','',$params->get('facuerdo_layout'));
+$layout		= str_replace('_:','',$params->get('tfjfa_bacuerdo_layout'));
 // Get from global settings the text to use for an empty field
 $component = JComponentHelper::getComponent( 'com_boletin' );
 $empty = $component->params->get('default_empty_field', '');	
@@ -49,25 +49,25 @@ $empty = $component->params->get('default_empty_field', '');
  */
 ?>
 
-<?php if (empty($this->facuerdos)) : ?>
+<?php if (empty($this->tfjfa_bacuerdos)) : ?>
 
-	<?php if ($this->params->get('show_no_facuerdos',1)) : ?>
-	<p><?php echo JText::_('COM_BOLETIN_FACUERDOS_CATEGORY_NO_ITEMS'); ?></p>
+	<?php if ($this->params->get('show_no_tfjfa_bacuerdos',1)) : ?>
+	<p><?php echo JText::_('COM_BOLETIN_TFJFA_BACUERDOS_CATEGORY_NO_ITEMS'); ?></p>
 	<?php endif; ?>
 
 <?php else : ?>
-<div class="facuerdos-list">
+<div class="tfjfa_bacuerdos-list">
 	<form action="<?php echo htmlspecialchars(JUri::getInstance()->toString()); ?>" method="post" name="adminForm" id="adminForm">
-		<?php if (($this->params->get('show_facuerdo_filter_field') != '' AND $this->params->get('show_facuerdo_filter_field') != 'hide') OR $this->params->get('show_facuerdo_pagination_limit')) :?>
+		<?php if (($this->params->get('show_tfjfa_bacuerdo_filter_field') != '' AND $this->params->get('show_tfjfa_bacuerdo_filter_field') != 'hide') OR $this->params->get('show_tfjfa_bacuerdo_pagination_limit')) :?>
 			<div class="filter-search">
-				<?php if ($this->params->get('show_facuerdo_filter_field') != '' AND $this->params->get('show_facuerdo_filter_field') != 'hide') :?>
+				<?php if ($this->params->get('show_tfjfa_bacuerdo_filter_field') != '' AND $this->params->get('show_tfjfa_bacuerdo_filter_field') != 'hide') :?>
                 <div class="input-append">
-					<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_BOLETIN_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_BOLETIN_'.$this->params->get('show_facuerdo_filter_field').'_FILTER_LABEL'); ?>" />
+					<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_BOLETIN_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_BOLETIN_'.$this->params->get('show_tfjfa_bacuerdo_filter_field').'_FILTER_LABEL'); ?>" />
                     <button type="submit" class="btn hasTooltip" title="" data-original-title="<?= JText::_('JSEARCH_FILTER_SUBMIT') ?>"> <i class="icon-search"></i> </button>
 				</div>
                 <!--<button type="button" class="btn hasTooltip js-stools-btn-clear" title="" data-original-title="<?= JText::_('JSEARCH_FILTER_CLEAR') ?>"><?= JText::_('JSEARCH_FILTER_CLEAR') ?></button>-->
 				<?php endif; ?>						
-				<?php if ($this->params->get('show_facuerdo_pagination_limit')) : ?>
+				<?php if ($this->params->get('show_tfjfa_bacuerdo_pagination_limit')) : ?>
 					<div class="display-limit">
 						<?php echo $this->pagination->getLimitBox(); ?>
 					</div>
@@ -76,11 +76,11 @@ $empty = $component->params->get('default_empty_field', '');
 		<?php endif; ?>
 
 
-		<table class="facuerdos">
-			<?php if ($this->params->get('show_facuerdo_headings')) :?>
+		<table class="tfjfa_bacuerdos">
+			<?php if ($this->params->get('show_tfjfa_bacuerdo_headings')) :?>
 				<thead>
 					<tr>
-						<?php if ($date = $this->params->get('list_show_facuerdo_date')) : ?>
+						<?php if ($date = $this->params->get('list_show_tfjfa_bacuerdo_date')) : ?>
 							<th class="list-date" id="tableOrderingdate">
 								<?php echo JHtml::_('grid.sort', 'COM_BOLETIN_FIELD_'.JString::strtoupper($date).'_LABEL', 'a.'.$date, $list_dirn, $list_order); ?>
 							</th>
@@ -95,14 +95,14 @@ $empty = $component->params->get('default_empty_field', '');
 
 			<tbody>
 
-			<?php foreach ($this->facuerdos as $i => $item) : ?>
+			<?php foreach ($this->tfjfa_bacuerdos as $i => $item) : ?>
 
 					<tr class="cat-list-row<?php echo $i % 2; ?>" >
 
-						<?php if ($this->params->get('list_show_facuerdo_date')) : ?>
+						<?php if ($this->params->get('list_show_tfjfa_bacuerdo_date')) : ?>
 						<td class="list-date">
 							<?php echo JHtml::_('date',$item->display_date, $this->escape(
-							$this->params->get('facuerdo_date_format', JText::_('DATE_FORMAT_LC3')))); ?>
+							$this->params->get('tfjfa_bacuerdo_date_format', JText::_('DATE_FORMAT_LC3')))); ?>
 						</td>
 						<?php endif; ?>
 
@@ -110,10 +110,10 @@ $empty = $component->params->get('default_empty_field', '');
 						<td class="list-actions">
 								<ul class="actions">
 										<li class="edit-icon">
-											<?php echo JHtml::_('facuerdoicon.edit',$item, $params); ?>
+											<?php echo JHtml::_('tfjfa_bacuerdoicon.edit',$item, $params); ?>
 										</li>
 										<li class="delete-icon">
-											<?php echo JHtml::_('facuerdoicon.delete',$item, $params); ?>
+											<?php echo JHtml::_('tfjfa_bacuerdoicon.delete',$item, $params); ?>
 										</li>
 								</ul>
 						</td>	
@@ -122,11 +122,11 @@ $empty = $component->params->get('default_empty_field', '');
 			</tbody>
 		</table>
 
-		<?php if (($this->params->def('show_facuerdo_pagination', 2) == 1  OR 
-				   ($this->params->get('show_facuerdo_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
+		<?php if (($this->params->def('show_tfjfa_bacuerdo_pagination', 2) == 1  OR 
+				   ($this->params->get('show_tfjfa_bacuerdo_pagination') == 2)) AND ($this->pagination->get('pages.total') > 1)) : ?>
 			<div class="pagination">
 
-				<?php if ($this->params->def('show_facuerdo_pagination_results', 0)) : ?>
+				<?php if ($this->params->def('show_tfjfa_bacuerdo_pagination_results', 0)) : ?>
 					<p class="counter">
 						<?php echo $this->pagination->getPagesCounter(); ?>
 					</p>
@@ -147,7 +147,7 @@ $empty = $component->params->get('default_empty_field', '');
 	</form>
 </div>
 <?php endif; ?>
-<?php // Code to add a link to submit an facuerdo. ?>
-<?php if ($this->params->get('show_facuerdo_add_link',1)) : ?>
-		<?php echo JHtml::_('facuerdoicon.create', $params); ?>
+<?php // Code to add a link to submit an tfjfa_bacuerdo. ?>
+<?php if ($this->params->get('show_tfjfa_bacuerdo_add_link',1)) : ?>
+		<?php echo JHtml::_('tfjfa_bacuerdoicon.create', $params); ?>
 <?php  endif; ?>

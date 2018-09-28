@@ -66,8 +66,24 @@
         <menu img="../media/com_boletin/images/boletin.png"
               alt="Boletines">COM_BOLETIN</menu>
         <submenu>
-            <menu link="option=com_boletin&amp;view=facuerdos" alias="facuerdos" img="../media/com_boletin/images/boletin-facuerdos.png"
-                    alt="Boletines/Acuerdos Fiscales">COM_BOLETIN_FACUERDOS</menu>
+            <menu link="option=com_boletin&amp;view=tsjcdmx_juzgado_acuerdos" alias="tsjcdmx_juzgado_acuerdos" img="../media/com_boletin/images/boletin-tsjcdmx_juzgado_acuerdos.png"
+                    alt="Boletines/Acuerdos De Juzgados Del TSJCDMX">COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS</menu>
+            <menu link="option=com_boletin&amp;view=tsjcdmx_sala_acuerdos" alias="tsjcdmx_sala_acuerdos" img="../media/com_boletin/images/boletin-tsjcdmx_sala_acuerdos.png"
+                    alt="Boletines/Acuerdos De Salas Del TSJCDMX">COM_BOLETIN_TSJCDMX_SALA_ACUERDOS</menu>
+            <menu link="option=com_boletin&amp;view=prodecon_bacuerdos" alias="prodecon_bacuerdos" img="../media/com_boletin/images/boletin-prodecon_bacuerdos.png"
+                    alt="Boletines/Quejas En La PRODECON">COM_BOLETIN_PRODECON_BACUERDOS</menu>
+            <menu link="option=com_boletin&amp;view=profeco_proveedores" alias="profeco_proveedores" img="../media/com_boletin/images/boletin-profeco_proveedores.png"
+                    alt="Boletines/Proveedores De La PROFECO">COM_BOLETIN_PROFECO_PROVEEDORES</menu>
+            <menu link="option=com_boletin&amp;view=srsps_bacuerdos" alias="srsps_bacuerdos" img="../media/com_boletin/images/boletin-srsps_bacuerdos.png"
+                    alt="Boletines/Acuerdos De La SHCP">COM_BOLETIN_SRSPS_BACUERDOS</menu>
+            <menu link="option=com_boletin&amp;view=rsps_bacuerdos" alias="rsps_bacuerdos" img="../media/com_boletin/images/boletin-rsps_bacuerdos.png"
+                    alt="Boletines/Acuerdos De La SFP">COM_BOLETIN_RSPS_BACUERDOS</menu>
+            <menu link="option=com_boletin&amp;view=pjf_bacuerdos" alias="pjf_bacuerdos" img="../media/com_boletin/images/boletin-pjf_bacuerdos.png"
+                    alt="Boletines/Acuerdos Del PJF">COM_BOLETIN_PJF_BACUERDOS</menu>
+            <menu link="option=com_boletin&amp;view=tfca_bacuerdos" alias="tfca_bacuerdos" img="../media/com_boletin/images/boletin-tfca_bacuerdos.png"
+                    alt="Boletines/Acuerdos Laborales Del TFCA">COM_BOLETIN_TFCA_BACUERDOS</menu>
+            <menu link="option=com_boletin&amp;view=tfjfa_bacuerdos" alias="tfjfa_bacuerdos" img="../media/com_boletin/images/boletin-tfjfa_bacuerdos.png"
+                    alt="Boletines/Acuerdos Fiscales Del TFJFA">COM_BOLETIN_TFJFA_BACUERDOS</menu>
 <!--            <menu link="option=com_categories&amp;extension=com_boletin" view="categories" img="../media/com_boletin/images/boletin-categories.png"
                     alt="Boletines/Categories">COM_BOLETIN_[%%COMPOBJECTPLURAL%%]_CATEGORIES</menu>-->
         </submenu>
@@ -116,43 +132,18 @@
     <config>  
         <fields name="params">
             <fieldset
-                name="versioncontrol"
-                label="COM_BOLETIN_FIELDSET_VERSION_CONTROL_LABEL"
-		        description="COM_BOLETIN_FIELDSET_VERSION_CONTROL_DESC"
+                name="tsjcdmx_juzgado_acuerdo_display"
+                label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+                description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	        >
                 <field
-			        name="history_limit"
-			        type="text"
-			        label="JGLOBAL_HISTORY_LIMIT_OPTIONS_LABEL"
-			        description="JGLOBAL_HISTORY_LIMIT_OPTIONS_DESC"
-			        default="10"
-			        filter="integer"
-		        />
-                <field
-                    name="save_history"
-                    type="radio"
-                    class="btn-group btn-group-yesno"
-                    default="1"
-                    label="JGLOBAL_SAVE_HISTORY_OPTIONS_LABEL"
-                    description="COM_BOLETIN_SAVE_HISTORY_OPTIONS_DESC"
-		        >
-                    <option	value="1">JYES</option>
-                    <option	value="0">JNO</option>
-                </field>		        
-            </fieldset>
-            <fieldset
-                name="facuerdo_display"
-                label="COM_BOLETIN_FACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
-                description="COM_BOLETIN_FACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DESC"
-	        >
-                <field
-                    name="facuerdo_layout"
+                    name="tsjcdmx_juzgado_acuerdo_layout"
                     type="componentlayout"
                     label="JGLOBAL_FIELD_LAYOUT_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_CHOOSE_LAYOUT_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_CHOOSE_LAYOUT_DESC"
                     menuitems="true"
                     extension="com_boletin"
-                    view="facuerdo"
+                    view="tsjcdmx_juzgado_acuerdo"
                     default="_:default"
 		        />
                 <field
@@ -161,7 +152,7 @@
                     hr="true"
 		        />
                 <field
-                    name="show_facuerdo_icons"
+                    name="show_tsjcdmx_juzgado_acuerdo_icons"
                     type="radio"
                     label="COM_BOLETIN_SHOW_ICONS_LABEL"
                     description="COM_BOLETIN_SHOW_ICONS_DESC"
@@ -173,7 +164,7 @@
                     <option	value="-1">JHIDE</option>
                 </field>
                 <field
-                    name="show_facuerdo_print_icon"
+                    name="show_tsjcdmx_juzgado_acuerdo_print_icon"
                     type="radio"
                     label="COM_BOLETIN_SHOW_PRINT_ICON_LABEL"
                     description="COM_BOLETIN_SHOW_PRINT_ICON_DESC"
@@ -184,10 +175,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_facuerdo_email_icon"
+                    name="show_tsjcdmx_juzgado_acuerdo_email_icon"
                     type="radio"
                     label="COM_BOLETIN_SHOW_EMAIL_ICON_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_EMAIL_ICON_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_EMAIL_ICON_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 		        >
@@ -195,10 +186,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="keep_facuerdo_itemid"
+                    name="keep_tsjcdmx_juzgado_acuerdo_itemid"
                     type="radio"
                     label="COM_BOLETIN_KEEP_ITEMID_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_KEEP_ITEMID_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_KEEP_ITEMID_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 		        >
@@ -206,37 +197,15 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
-                    name="show_facuerdo_navigation"
+                    name="show_tsjcdmx_juzgado_acuerdo_navigation"
                     type="radio"
                     label="COM_BOLETIN_SHOW_NAVIGATION_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_NAVIGATION_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_NAVIGATION_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
                 >
                     <option value="1">JSHOW</option>
                     <option value="0">JHIDE</option>
-                </field>
-                <field
-                    name="show_facuerdo_category_breadcrumb"
-                    type="radio"
-                    label="COM_BOLETIN_SHOW_CATEGORY_BREADCRUMB_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_CATEGORY_BREADCRUMB_DESC"
-                    class="btn-group btn-group-yesno"
-                    default="1"
-		        >
-                    <option value="1">JSHOW</option>
-                    <option value="0">JHIDE</option>
-                </field>
-                <field
-                    name="limit_category_facuerdo_navigation"
-                    type="radio"
-                    label="COM_BOLETIN_LIMIT_CATEGORY_NAVIGATION_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_LIMIT_CATEGORY_NAVIGATION_DESC"
-                    class="btn-group btn-group-yesno"
-                    default="1"
-                >
-                    <option	value="1">JYES</option>
-                    <option	value="0">JNO</option>
                 </field>
                 <field
                     name="spacer1"
@@ -244,10 +213,10 @@
                     hr="true"
 		        />
                 <field
-                    name="show_facuerdo_readmore"
+                    name="show_tsjcdmx_juzgado_acuerdo_readmore"
                     type="radio"
                     label="COM_BOLETIN_SHOW_READMORE_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_READMORE_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_READMORE_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 		        >
@@ -255,10 +224,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="facuerdo_readmore_limit"
+                    name="tsjcdmx_juzgado_acuerdo_readmore_limit"
                     type="text"
                     label="COM_BOLETIN_SHOW_READMORE_LIMIT_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_READMORE_LIMIT_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_READMORE_LIMIT_DESC"
                     default="100"
 		        />
                 <field
@@ -267,54 +236,10 @@
                     hr="true"
 		        />
                 <field
-                    name="show_facuerdo_category"
-                    type="radio"
-                    label="COM_BOLETIN_SHOW_CATEGORY_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_CATEGORY_DESC"
-                    class="btn-group btn-group-yesno"
-                    default="1"
-		        >
-                    <option value="1">JSHOW</option>
-                    <option value="0">JHIDE</option>
-                </field>
-                <field
-                    name="link_facuerdo_category"
-                    type="radio"
-                    label="COM_BOLETIN_LINK_CATEGORY_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_LINK_CATEGORY_DESC"
-                    class="btn-group btn-group-yesno"
-                    default="1"
-		        >
-                    <option	value="1">JYES</option>
-                    <option	value="0">JNO</option>
-                </field>
-                <field
-                    name="show_facuerdo_parent_category"
-                    type="radio"
-                    label="COM_BOLETIN_SHOW_PARENT_CATEGORY_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_PARENT_CATEGORY_DESC"
-                    class="btn-group btn-group-yesno"
-                    default="1"
-		        >
-                    <option value="1">JSHOW</option>
-                    <option value="0">JHIDE</option>
-                </field>
-                <field
-                    name="link_facuerdo_parent_category"
-                    type="radio"
-                    label="COM_BOLETIN_LINK_PARENT_CATEGORY_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_LINK_PARENT_CATEGORY_DESC"
-                    class="btn-group btn-group-yesno"
-                    default="1"
-		        >
-                    <option	value="1">JYES</option>
-                    <option	value="0">JNO</option>
-                </field>
-                <field
-                    name="show_facuerdo_admin"
+                    name="show_tsjcdmx_juzgado_acuerdo_admin"
                     type="radio"
                     label="COM_BOLETIN_SHOW_ADMIN_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_ADMIN_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_ADMIN_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 		        >
@@ -322,10 +247,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_facuerdo_fecha_boletin"
+                    name="show_tsjcdmx_juzgado_acuerdo_fecha_acuerdo"
                     type="radio"
-                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_FECHA_BOLETIN_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_FECHA_BOLETIN_DESC"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_FECHA_ACUERDO_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_FECHA_ACUERDO_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
                 >
@@ -333,10 +258,10 @@
                     <option	value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_facuerdo_region"
+                    name="show_tsjcdmx_juzgado_acuerdo_fecha_boletin"
                     type="radio"
-                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_REGION_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_REGION_DESC"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_FECHA_BOLETIN_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_FECHA_BOLETIN_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
                 >
@@ -344,10 +269,10 @@
                     <option	value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_facuerdo_instancia"
+                    name="show_tsjcdmx_juzgado_acuerdo_juzgado"
                     type="radio"
-                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_INSTANCIA_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_INSTANCIA_DESC"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_JUZGADO_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_JUZGADO_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
                 >
@@ -355,10 +280,10 @@
                     <option	value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_facuerdo_expediente"
+                    name="show_tsjcdmx_juzgado_acuerdo_actor"
                     type="radio"
-                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_EXPEDIENTE_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_EXPEDIENTE_DESC"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_ACTOR_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_ACTOR_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
                 >
@@ -366,10 +291,10 @@
                     <option	value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_facuerdo_actor"
+                    name="show_tsjcdmx_juzgado_acuerdo_demandado"
                     type="radio"
-                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_ACTOR_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_ACTOR_DESC"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_DEMANDADO_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_DEMANDADO_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
                 >
@@ -377,10 +302,10 @@
                     <option	value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_facuerdo_parte_a_notificar"
+                    name="show_tsjcdmx_juzgado_acuerdo_terceria"
                     type="radio"
-                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_PARTE_A_NOTIFICAR_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_PARTE_A_NOTIFICAR_DESC"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_TERCERIA_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_TERCERIA_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
                 >
@@ -388,10 +313,43 @@
                     <option	value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_facuerdo_auto_o_resolucion"
+                    name="show_tsjcdmx_juzgado_acuerdo_tipo_juicio"
                     type="radio"
-                    label="COM_BOLETIN_FACUERDOS_SHOW_FIELD_AUTO_O_RESOLUCION_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_FIELD_AUTO_O_RESOLUCION_DESC"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_TIPO_JUICIO_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_TIPO_JUICIO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_juzgado_acuerdo_toca"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_TOCA_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_TOCA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_juzgado_acuerdo_anio"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_ANIO_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_ANIO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_juzgado_acuerdo_tipo_resolucion"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_TIPO_RESOLUCION_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_FIELD_TIPO_RESOLUCION_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
                 >
@@ -400,47 +358,47 @@
                 </field>
             </fieldset>
             <fieldset
-                name="facuerdos_list_display"
-                label="COM_BOLETIN_FACUERDOS_FIELD_CONFIG_BLOG_LIST_LABEL"
-                description="COM_BOLETIN_FACUERDOS_FIELD_CONFIG_BLOG_LIST_DESC"
+                name="tsjcdmx_juzgado_acuerdos_list_display"
+                label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_CONFIG_BLOG_LIST_LABEL"
+                description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_CONFIG_BLOG_LIST_DESC"
 	        >
                 <field
-                    name="facuerdo_num_leading"
+                    name="tsjcdmx_juzgado_acuerdo_num_leading"
                     type="text"
-                    label="COM_BOLETIN_FACUERDOS_NUM_LEADING_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_NUM_LEADING_DESC"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_NUM_LEADING_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_NUM_LEADING_DESC"
                     size="3"
                     default=""
 		        />
                 <field
-                    name="facuerdo_num_intro"
+                    name="tsjcdmx_juzgado_acuerdo_num_intro"
                     type="text"
-                    label="COM_BOLETIN_FACUERDOS_NUM_INTRO_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_NUM_INTRO_DESC"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_NUM_INTRO_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_NUM_INTRO_DESC"
                     size="3"
                     default=""
 		        />
                 <field
-                    name="facuerdo_num_columns"
+                    name="tsjcdmx_juzgado_acuerdo_num_columns"
                     type="text"
                     label="COM_BOLETIN_NUM_COLUMNS_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_NUM_COLUMNS_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_NUM_COLUMNS_DESC"
                     size="3"
                     default=""
 		        />
                 <field
-                    name="facuerdo_num_links"
+                    name="tsjcdmx_juzgado_acuerdo_num_links"
                     type="text"
                     label="COM_BOLETIN_NUM_LINKS_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_NUM_LINKS_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_NUM_LINKS_DESC"
                     size="3"
                     default=""
 		        />
                 <field
-                    name="facuerdo_multi_column_order"
+                    name="tsjcdmx_juzgado_acuerdo_multi_column_order"
                     type="radio"
                     label="COM_BOLETIN_MULTI_COLUMN_ORDER_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_MULTI_COLUMN_ORDER_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_MULTI_COLUMN_ORDER_DESC"
                     class="btn-group"
                     default="0"
 		        >
@@ -448,51 +406,18 @@
                     <option value="1">JGLOBAL_ACROSS</option>
                 </field>
                 <field
-                    name="facuerdo_orderby_pri"
+                    name="tsjcdmx_juzgado_acuerdo_initial_sort"
                     type="list"
-                    label="COM_BOLETIN_CATEGORY_ORDER_LABEL"
-                    description="COM_BOLETIN_CATEGORY_ORDER_DESC"
-			        class="chzn-color"
-                    default="none"
-		        >
-                    <option value="none">JGLOBAL_NO_ORDER</option>
-                    <option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
-                    <option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
-                    <option value="order">JGLOBAL_CATEGORY_MANAGER_ORDER</option>
-                </field>
-                <field
-                    name="facuerdo_orderby_sec"
-                    type="list"
-                    label="COM_BOLETIN_FACUERDOS_CATEGORY_ORDER_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_CATEGORY_ORDER_DESC"
-			        class="chzn-color"
-                    default="none"
-		        >
-                    <option value="none">JGLOBAL_NO_ORDER</option>
-                    <option value="ordering">COM_BOLETIN_FACUERDOS_ORDER</option>
-                </field>
-                <field
-                    name="facuerdo_order_date"
-                    type="list"
-                    label="COM_BOLETIN_ORDERING_DATE_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_ORDERING_DATE_DESC"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_ORDER_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_ORDER_DESC"
 			        class="chzn-color"
 		        >
                 </field>
                 <field
-                    name="facuerdo_initial_sort"
-                    type="list"
-                    label="COM_BOLETIN_FACUERDOS_ORDER_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_ORDER_DESC"
-			        class="chzn-color"
-		        >
-                    <option value="a.ordering">COM_BOLETIN_FACUERDOS_ORDER</option>
-                </field>
-                <field
-                    name="facuerdo_initial_direction"
+                    name="tsjcdmx_juzgado_acuerdo_initial_direction"
                     type="radio"
                     label="COM_BOLETIN_ORDER_DIRECTION_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_ORDER_DIRECTION_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_ORDER_DIRECTION_DESC"
                     class="btn-group"
                     default="ASC"
 		        >
@@ -500,17 +425,17 @@
                     <option value="ASC">COM_BOLETIN_ORDER_DIRECTION_ASCENDING_LABEL</option>
                 </field>
                 <field
-                    name="show_facuerdo_filter_field"
+                    name="show_tsjcdmx_juzgado_acuerdo_filter_field"
                     type="list"
                     label="JGLOBAL_FILTER_FIELD_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_FILTER_FIELD_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FILTER_FIELD_DESC"
                     class="chzn-color"
                     default="hide"
 			    >
                     <option value="hide">JHIDE</option>
                 </field>                
                 <field
-                    name="show_facuerdo_headings"
+                    name="show_tsjcdmx_juzgado_acuerdo_headings"
                     type="radio"
                     label="JGLOBAL_SHOW_HEADINGS_LABEL"
                     description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -521,7 +446,7 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_facuerdo_pagination"
+                    name="show_tsjcdmx_juzgado_acuerdo_pagination"
                     type="radio"
                     label="JGLOBAL_PAGINATION_LABEL"
                     description="JGLOBAL_PAGINATION_DESC"
@@ -533,7 +458,7 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_facuerdo_pagination_results"
+                    name="show_tsjcdmx_juzgado_acuerdo_pagination_results"
                     type="radio"
                     label="JGLOBAL_PAGINATION_RESULTS_LABEL"
                     description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -544,10 +469,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_facuerdo_pagination_limit"
+                    name="show_tsjcdmx_juzgado_acuerdo_pagination_limit"
                     type="radio"
                     label="COM_BOLETIN_SHOW_PAGINATION_LIMIT_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_PAGINATION_LIMIT_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_PAGINATION_LIMIT_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 		        >
@@ -555,10 +480,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="facuerdo_num_per_page"
+                    name="tsjcdmx_juzgado_acuerdo_num_per_page"
                     type="list"
-                    description="COM_BOLETIN_FACUERDOS_NUM_PER_PAGE_DESC"
-                    label="COM_BOLETIN_FACUERDOS_NUM_PER_PAGE_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_NUM_PER_PAGE_DESC"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_NUM_PER_PAGE_LABEL"
 			        class="chzn-color"
                     default="5"
                 >
@@ -573,10 +498,10 @@
                     <option value="0">JALL</option>
                 </field>
                 <field
-                    name="show_no_facuerdos"
+                    name="show_no_tsjcdmx_juzgado_acuerdos"
                     type="radio"
-                    label="COM_BOLETIN_FACUERDOS_NO_ITEMS_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_NO_ITEMS_DESC"
+                    label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_NO_ITEMS_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_NO_ITEMS_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 			    >
@@ -584,10 +509,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_facuerdo_add_link"
+                    name="show_tsjcdmx_juzgado_acuerdo_add_link"
                     type="radio"
                     label="COM_BOLETIN_SHOW_ADD_LINK_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_ADD_LINK_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_ADD_LINK_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 		        >
@@ -595,27 +520,3187 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="list_show_facuerdo_date"
+                    name="list_show_tsjcdmx_juzgado_acuerdo_date"
                     type="radio"
                     label="COM_BOLETIN_SHOW_DATE_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_SHOW_DATE_DESC"
+                    description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SHOW_DATE_DESC"
                     class="btn-group"
                     default="0"
 		        >
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="facuerdo_date_format"
+                    name="tsjcdmx_juzgado_acuerdo_date_format"
+                    type="text"
+                    label="JGLOBAL_DATE_FORMAT_LABEL"
+                    description="JGLOBAL_DATE_FORMAT_DESC"
+                    size="15"
+		        />
+            </fieldset>
+            <fieldset
+                name="tsjcdmx_sala_acuerdo_display"
+                label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+                description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DESC"
+	        >
+                <field
+                    name="tsjcdmx_sala_acuerdo_layout"
+                    type="componentlayout"
+                    label="JGLOBAL_FIELD_LAYOUT_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_CHOOSE_LAYOUT_DESC"
+                    menuitems="true"
+                    extension="com_boletin"
+                    view="tsjcdmx_sala_acuerdo"
+                    default="_:default"
+		        />
+                <field
+                    name="spacer0"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_icons"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ICONS_LABEL"
+                    description="COM_BOLETIN_SHOW_ICONS_DESC"
+                    class="btn-group"
+                    default="1"
+		        >
+                    <option	value="0">COM_BOLETIN_SHOW_ICONS_VALUE_TEXT</option>
+                    <option	value="1">COM_BOLETIN_SHOW_ICONS_VALUE_ICONS</option>
+                    <option	value="-1">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_print_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PRINT_ICON_LABEL"
+                    description="COM_BOLETIN_SHOW_PRINT_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_email_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_EMAIL_ICON_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_EMAIL_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="keep_tsjcdmx_sala_acuerdo_itemid"
+                    type="radio"
+                    label="COM_BOLETIN_KEEP_ITEMID_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_KEEP_ITEMID_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_navigation"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_NAVIGATION_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_NAVIGATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="spacer1"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_readmore"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_READMORE_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_READMORE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="tsjcdmx_sala_acuerdo_readmore_limit"
+                    type="text"
+                    label="COM_BOLETIN_SHOW_READMORE_LIMIT_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_READMORE_LIMIT_DESC"
+                    default="100"
+		        />
+                <field
+                    name="spacer2"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_admin"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADMIN_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_ADMIN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_fecha_acuerdo"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_FECHA_ACUERDO_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_FECHA_ACUERDO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_fecha_boletin"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_FECHA_BOLETIN_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_FECHA_BOLETIN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_sala"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_SALA_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_SALA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_actor"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_ACTOR_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_ACTOR_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_demandado"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_DEMANDADO_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_DEMANDADO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_terceria"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_TERCERIA_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_TERCERIA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_tipo_juicio"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_TIPO_JUICIO_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_TIPO_JUICIO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_toca"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_TOCA_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_TOCA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_anio"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_ANIO_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_ANIO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_asunto"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_ASUNTO_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_ASUNTO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_tipo_resolucion"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_TIPO_RESOLUCION_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_FIELD_TIPO_RESOLUCION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="tsjcdmx_sala_acuerdos_list_display"
+                label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_FIELD_CONFIG_BLOG_LIST_LABEL"
+                description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_FIELD_CONFIG_BLOG_LIST_DESC"
+	        >
+                <field
+                    name="tsjcdmx_sala_acuerdo_num_leading"
+                    type="text"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_NUM_LEADING_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_NUM_LEADING_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="tsjcdmx_sala_acuerdo_num_intro"
+                    type="text"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_NUM_INTRO_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_NUM_INTRO_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="tsjcdmx_sala_acuerdo_num_columns"
+                    type="text"
+                    label="COM_BOLETIN_NUM_COLUMNS_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_NUM_COLUMNS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="tsjcdmx_sala_acuerdo_num_links"
+                    type="text"
+                    label="COM_BOLETIN_NUM_LINKS_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_NUM_LINKS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="tsjcdmx_sala_acuerdo_multi_column_order"
+                    type="radio"
+                    label="COM_BOLETIN_MULTI_COLUMN_ORDER_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_MULTI_COLUMN_ORDER_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JGLOBAL_DOWN</option>
+                    <option value="1">JGLOBAL_ACROSS</option>
+                </field>
+                <field
+                    name="tsjcdmx_sala_acuerdo_initial_sort"
+                    type="list"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_ORDER_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_ORDER_DESC"
+			        class="chzn-color"
+		        >
+                </field>
+                <field
+                    name="tsjcdmx_sala_acuerdo_initial_direction"
+                    type="radio"
+                    label="COM_BOLETIN_ORDER_DIRECTION_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_ORDER_DIRECTION_DESC"
+                    class="btn-group"
+                    default="ASC"
+		        >
+                    <option value="DESC">COM_BOLETIN_ORDER_DIRECTION_DESCENDING_LABEL</option>
+                    <option value="ASC">COM_BOLETIN_ORDER_DIRECTION_ASCENDING_LABEL</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_filter_field"
+                    type="list"
+                    label="JGLOBAL_FILTER_FIELD_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_FILTER_FIELD_DESC"
+                    class="chzn-color"
+                    default="hide"
+			    >
+                    <option value="hide">JHIDE</option>
+                </field>                
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_headings"
+                    type="radio"
+                    label="JGLOBAL_SHOW_HEADINGS_LABEL"
+                    description="JGLOBAL_SHOW_HEADINGS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_pagination"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_LABEL"
+                    description="JGLOBAL_PAGINATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="2"
+		        >
+                    <option value="2">JGLOBAL_AUTO</option>
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_pagination_results"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+                    description="JGLOBAL_PAGINATION_RESULTS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_pagination_limit"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PAGINATION_LIMIT_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_PAGINATION_LIMIT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="tsjcdmx_sala_acuerdo_num_per_page"
+                    type="list"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_NUM_PER_PAGE_DESC"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_NUM_PER_PAGE_LABEL"
+			        class="chzn-color"
+                    default="5"
+                >
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="50">J50</option>
+                    <option value="100">J100</option>
+                    <option value="0">JALL</option>
+                </field>
+                <field
+                    name="show_no_tsjcdmx_sala_acuerdos"
+                    type="radio"
+                    label="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_NO_ITEMS_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_NO_ITEMS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+			    >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tsjcdmx_sala_acuerdo_add_link"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADD_LINK_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_ADD_LINK_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="list_show_tsjcdmx_sala_acuerdo_date"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_DATE_LABEL"
+                    description="COM_BOLETIN_TSJCDMX_SALA_ACUERDOS_SHOW_DATE_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="tsjcdmx_sala_acuerdo_date_format"
+                    type="text"
+                    label="JGLOBAL_DATE_FORMAT_LABEL"
+                    description="JGLOBAL_DATE_FORMAT_DESC"
+                    size="15"
+		        />
+            </fieldset>
+            <fieldset
+                name="prodecon_bacuerdo_display"
+                label="COM_BOLETIN_PRODECON_BACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+                description="COM_BOLETIN_PRODECON_BACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DESC"
+	        >
+                <field
+                    name="prodecon_bacuerdo_layout"
+                    type="componentlayout"
+                    label="JGLOBAL_FIELD_LAYOUT_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_CHOOSE_LAYOUT_DESC"
+                    menuitems="true"
+                    extension="com_boletin"
+                    view="prodecon_bacuerdo"
+                    default="_:default"
+		        />
+                <field
+                    name="spacer0"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_prodecon_bacuerdo_icons"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ICONS_LABEL"
+                    description="COM_BOLETIN_SHOW_ICONS_DESC"
+                    class="btn-group"
+                    default="1"
+		        >
+                    <option	value="0">COM_BOLETIN_SHOW_ICONS_VALUE_TEXT</option>
+                    <option	value="1">COM_BOLETIN_SHOW_ICONS_VALUE_ICONS</option>
+                    <option	value="-1">JHIDE</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_print_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PRINT_ICON_LABEL"
+                    description="COM_BOLETIN_SHOW_PRINT_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_email_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_EMAIL_ICON_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_EMAIL_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="keep_prodecon_bacuerdo_itemid"
+                    type="radio"
+                    label="COM_BOLETIN_KEEP_ITEMID_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_KEEP_ITEMID_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_navigation"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_NAVIGATION_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_NAVIGATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="spacer1"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_prodecon_bacuerdo_readmore"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_READMORE_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_READMORE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="prodecon_bacuerdo_readmore_limit"
+                    type="text"
+                    label="COM_BOLETIN_SHOW_READMORE_LIMIT_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_READMORE_LIMIT_DESC"
+                    default="100"
+		        />
+                <field
+                    name="spacer2"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_prodecon_bacuerdo_admin"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADMIN_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_ADMIN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_id_delegacion"
+                    type="radio"
+                    label="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_FIELD_ID_DELEGACION_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_FIELD_ID_DELEGACION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_expediente"
+                    type="radio"
+                    label="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_FIELD_EXPEDIENTE_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_FIELD_EXPEDIENTE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_promovente"
+                    type="radio"
+                    label="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_FIELD_PROMOVENTE_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_FIELD_PROMOVENTE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_destinatario"
+                    type="radio"
+                    label="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_FIELD_DESTINATARIO_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_FIELD_DESTINATARIO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_autoridades"
+                    type="radio"
+                    label="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_FIELD_AUTORIDADES_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_FIELD_AUTORIDADES_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_fecha"
+                    type="radio"
+                    label="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_FIELD_FECHA_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_FIELD_FECHA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="prodecon_bacuerdos_list_display"
+                label="COM_BOLETIN_PRODECON_BACUERDOS_FIELD_CONFIG_BLOG_LIST_LABEL"
+                description="COM_BOLETIN_PRODECON_BACUERDOS_FIELD_CONFIG_BLOG_LIST_DESC"
+	        >
+                <field
+                    name="prodecon_bacuerdo_num_leading"
+                    type="text"
+                    label="COM_BOLETIN_PRODECON_BACUERDOS_NUM_LEADING_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_NUM_LEADING_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="prodecon_bacuerdo_num_intro"
+                    type="text"
+                    label="COM_BOLETIN_PRODECON_BACUERDOS_NUM_INTRO_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_NUM_INTRO_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="prodecon_bacuerdo_num_columns"
+                    type="text"
+                    label="COM_BOLETIN_NUM_COLUMNS_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_NUM_COLUMNS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="prodecon_bacuerdo_num_links"
+                    type="text"
+                    label="COM_BOLETIN_NUM_LINKS_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_NUM_LINKS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="prodecon_bacuerdo_multi_column_order"
+                    type="radio"
+                    label="COM_BOLETIN_MULTI_COLUMN_ORDER_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_MULTI_COLUMN_ORDER_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JGLOBAL_DOWN</option>
+                    <option value="1">JGLOBAL_ACROSS</option>
+                </field>
+                <field
+                    name="prodecon_bacuerdo_initial_sort"
+                    type="list"
+                    label="COM_BOLETIN_PRODECON_BACUERDOS_ORDER_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_ORDER_DESC"
+			        class="chzn-color"
+		        >
+                </field>
+                <field
+                    name="prodecon_bacuerdo_initial_direction"
+                    type="radio"
+                    label="COM_BOLETIN_ORDER_DIRECTION_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_ORDER_DIRECTION_DESC"
+                    class="btn-group"
+                    default="ASC"
+		        >
+                    <option value="DESC">COM_BOLETIN_ORDER_DIRECTION_DESCENDING_LABEL</option>
+                    <option value="ASC">COM_BOLETIN_ORDER_DIRECTION_ASCENDING_LABEL</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_filter_field"
+                    type="list"
+                    label="JGLOBAL_FILTER_FIELD_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_FILTER_FIELD_DESC"
+                    class="chzn-color"
+                    default="hide"
+			    >
+                    <option value="hide">JHIDE</option>
+                </field>                
+                <field
+                    name="show_prodecon_bacuerdo_headings"
+                    type="radio"
+                    label="JGLOBAL_SHOW_HEADINGS_LABEL"
+                    description="JGLOBAL_SHOW_HEADINGS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_pagination"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_LABEL"
+                    description="JGLOBAL_PAGINATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="2"
+		        >
+                    <option value="2">JGLOBAL_AUTO</option>
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_pagination_results"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+                    description="JGLOBAL_PAGINATION_RESULTS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_pagination_limit"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PAGINATION_LIMIT_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_PAGINATION_LIMIT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="prodecon_bacuerdo_num_per_page"
+                    type="list"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_NUM_PER_PAGE_DESC"
+                    label="COM_BOLETIN_PRODECON_BACUERDOS_NUM_PER_PAGE_LABEL"
+			        class="chzn-color"
+                    default="5"
+                >
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="50">J50</option>
+                    <option value="100">J100</option>
+                    <option value="0">JALL</option>
+                </field>
+                <field
+                    name="show_no_prodecon_bacuerdos"
+                    type="radio"
+                    label="COM_BOLETIN_PRODECON_BACUERDOS_NO_ITEMS_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_NO_ITEMS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+			    >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_prodecon_bacuerdo_add_link"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADD_LINK_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_ADD_LINK_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="list_show_prodecon_bacuerdo_date"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_DATE_LABEL"
+                    description="COM_BOLETIN_PRODECON_BACUERDOS_SHOW_DATE_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="prodecon_bacuerdo_date_format"
+                    type="text"
+                    label="JGLOBAL_DATE_FORMAT_LABEL"
+                    description="JGLOBAL_DATE_FORMAT_DESC"
+                    size="15"
+		        />
+            </fieldset>
+            <fieldset
+                name="profeco_proveedor_display"
+                label="COM_BOLETIN_PROFECO_PROVEEDORES_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+                description="COM_BOLETIN_PROFECO_PROVEEDORES_FIELD_CONFIG_SINGLE_ITEM_DESC"
+	        >
+                <field
+                    name="profeco_proveedor_layout"
+                    type="componentlayout"
+                    label="JGLOBAL_FIELD_LAYOUT_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_CHOOSE_LAYOUT_DESC"
+                    menuitems="true"
+                    extension="com_boletin"
+                    view="profeco_proveedor"
+                    default="_:default"
+		        />
+                <field
+                    name="spacer0"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_profeco_proveedor_icons"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ICONS_LABEL"
+                    description="COM_BOLETIN_SHOW_ICONS_DESC"
+                    class="btn-group"
+                    default="1"
+		        >
+                    <option	value="0">COM_BOLETIN_SHOW_ICONS_VALUE_TEXT</option>
+                    <option	value="1">COM_BOLETIN_SHOW_ICONS_VALUE_ICONS</option>
+                    <option	value="-1">JHIDE</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_print_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PRINT_ICON_LABEL"
+                    description="COM_BOLETIN_SHOW_PRINT_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_email_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_EMAIL_ICON_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_EMAIL_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="keep_profeco_proveedor_itemid"
+                    type="radio"
+                    label="COM_BOLETIN_KEEP_ITEMID_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_KEEP_ITEMID_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_navigation"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_NAVIGATION_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_NAVIGATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="spacer1"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_profeco_proveedor_readmore"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_READMORE_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_READMORE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="profeco_proveedor_readmore_limit"
+                    type="text"
+                    label="COM_BOLETIN_SHOW_READMORE_LIMIT_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_READMORE_LIMIT_DESC"
+                    default="100"
+		        />
+                <field
+                    name="spacer2"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_profeco_proveedor_admin"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADMIN_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_ADMIN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_nombre"
+                    type="radio"
+                    label="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_FIELD_NOMBRE_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_FIELD_NOMBRE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_marca"
+                    type="radio"
+                    label="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_FIELD_MARCA_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_FIELD_MARCA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_porcentaje"
+                    type="radio"
+                    label="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_FIELD_PORCENTAJE_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_FIELD_PORCENTAJE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_is_concilianet"
+                    type="radio"
+                    label="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_FIELD_IS_CONCILIANET_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_FIELD_IS_CONCILIANET_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_is_conciliaexpres"
+                    type="radio"
+                    label="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_FIELD_IS_CONCILIAEXPRES_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_FIELD_IS_CONCILIAEXPRES_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_id_giro"
+                    type="radio"
+                    label="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_FIELD_ID_GIRO_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_FIELD_ID_GIRO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="profeco_proveedores_list_display"
+                label="COM_BOLETIN_PROFECO_PROVEEDORES_FIELD_CONFIG_BLOG_LIST_LABEL"
+                description="COM_BOLETIN_PROFECO_PROVEEDORES_FIELD_CONFIG_BLOG_LIST_DESC"
+	        >
+                <field
+                    name="profeco_proveedor_num_leading"
+                    type="text"
+                    label="COM_BOLETIN_PROFECO_PROVEEDORES_NUM_LEADING_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_NUM_LEADING_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="profeco_proveedor_num_intro"
+                    type="text"
+                    label="COM_BOLETIN_PROFECO_PROVEEDORES_NUM_INTRO_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_NUM_INTRO_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="profeco_proveedor_num_columns"
+                    type="text"
+                    label="COM_BOLETIN_NUM_COLUMNS_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_NUM_COLUMNS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="profeco_proveedor_num_links"
+                    type="text"
+                    label="COM_BOLETIN_NUM_LINKS_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_NUM_LINKS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="profeco_proveedor_multi_column_order"
+                    type="radio"
+                    label="COM_BOLETIN_MULTI_COLUMN_ORDER_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_MULTI_COLUMN_ORDER_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JGLOBAL_DOWN</option>
+                    <option value="1">JGLOBAL_ACROSS</option>
+                </field>
+                <field
+                    name="profeco_proveedor_initial_sort"
+                    type="list"
+                    label="COM_BOLETIN_PROFECO_PROVEEDORES_ORDER_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_ORDER_DESC"
+			        class="chzn-color"
+		        >
+                </field>
+                <field
+                    name="profeco_proveedor_initial_direction"
+                    type="radio"
+                    label="COM_BOLETIN_ORDER_DIRECTION_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_ORDER_DIRECTION_DESC"
+                    class="btn-group"
+                    default="ASC"
+		        >
+                    <option value="DESC">COM_BOLETIN_ORDER_DIRECTION_DESCENDING_LABEL</option>
+                    <option value="ASC">COM_BOLETIN_ORDER_DIRECTION_ASCENDING_LABEL</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_filter_field"
+                    type="list"
+                    label="JGLOBAL_FILTER_FIELD_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_FILTER_FIELD_DESC"
+                    class="chzn-color"
+                    default="hide"
+			    >
+                    <option value="hide">JHIDE</option>
+                </field>                
+                <field
+                    name="show_profeco_proveedor_headings"
+                    type="radio"
+                    label="JGLOBAL_SHOW_HEADINGS_LABEL"
+                    description="JGLOBAL_SHOW_HEADINGS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_pagination"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_LABEL"
+                    description="JGLOBAL_PAGINATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="2"
+		        >
+                    <option value="2">JGLOBAL_AUTO</option>
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_pagination_results"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+                    description="JGLOBAL_PAGINATION_RESULTS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_pagination_limit"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PAGINATION_LIMIT_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_PAGINATION_LIMIT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="profeco_proveedor_num_per_page"
+                    type="list"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_NUM_PER_PAGE_DESC"
+                    label="COM_BOLETIN_PROFECO_PROVEEDORES_NUM_PER_PAGE_LABEL"
+			        class="chzn-color"
+                    default="5"
+                >
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="50">J50</option>
+                    <option value="100">J100</option>
+                    <option value="0">JALL</option>
+                </field>
+                <field
+                    name="show_no_profeco_proveedores"
+                    type="radio"
+                    label="COM_BOLETIN_PROFECO_PROVEEDORES_NO_ITEMS_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_NO_ITEMS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+			    >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_profeco_proveedor_add_link"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADD_LINK_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_ADD_LINK_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="list_show_profeco_proveedor_date"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_DATE_LABEL"
+                    description="COM_BOLETIN_PROFECO_PROVEEDORES_SHOW_DATE_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="profeco_proveedor_date_format"
+                    type="text"
+                    label="JGLOBAL_DATE_FORMAT_LABEL"
+                    description="JGLOBAL_DATE_FORMAT_DESC"
+                    size="15"
+		        />
+            </fieldset>
+            <fieldset
+                name="srsps_bacuerdo_display"
+                label="COM_BOLETIN_SRSPS_BACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+                description="COM_BOLETIN_SRSPS_BACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DESC"
+	        >
+                <field
+                    name="srsps_bacuerdo_layout"
+                    type="componentlayout"
+                    label="JGLOBAL_FIELD_LAYOUT_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_CHOOSE_LAYOUT_DESC"
+                    menuitems="true"
+                    extension="com_boletin"
+                    view="srsps_bacuerdo"
+                    default="_:default"
+		        />
+                <field
+                    name="spacer0"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_srsps_bacuerdo_icons"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ICONS_LABEL"
+                    description="COM_BOLETIN_SHOW_ICONS_DESC"
+                    class="btn-group"
+                    default="1"
+		        >
+                    <option	value="0">COM_BOLETIN_SHOW_ICONS_VALUE_TEXT</option>
+                    <option	value="1">COM_BOLETIN_SHOW_ICONS_VALUE_ICONS</option>
+                    <option	value="-1">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_print_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PRINT_ICON_LABEL"
+                    description="COM_BOLETIN_SHOW_PRINT_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_email_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_EMAIL_ICON_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_EMAIL_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="keep_srsps_bacuerdo_itemid"
+                    type="radio"
+                    label="COM_BOLETIN_KEEP_ITEMID_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_KEEP_ITEMID_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_navigation"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_NAVIGATION_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_NAVIGATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="spacer1"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_srsps_bacuerdo_readmore"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_READMORE_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_READMORE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="srsps_bacuerdo_readmore_limit"
+                    type="text"
+                    label="COM_BOLETIN_SHOW_READMORE_LIMIT_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_READMORE_LIMIT_DESC"
+                    default="100"
+		        />
+                <field
+                    name="spacer2"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_srsps_bacuerdo_admin"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADMIN_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_ADMIN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_rfc"
+                    type="radio"
+                    label="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_RFC_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_RFC_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_nombre"
+                    type="radio"
+                    label="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_NOMBRE_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_NOMBRE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_oficio"
+                    type="radio"
+                    label="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_OFICIO_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_OFICIO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_fecha_oficio"
+                    type="radio"
+                    label="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_FECHA_OFICIO_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_FECHA_OFICIO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_emisor"
+                    type="radio"
+                    label="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_EMISOR_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_EMISOR_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_id_medio_notificacion"
+                    type="radio"
+                    label="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_ID_MEDIO_NOTIFICACION_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_ID_MEDIO_NOTIFICACION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_fecha_notificacion"
+                    type="radio"
+                    label="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_FECHA_NOTIFICACION_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_FECHA_NOTIFICACION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_fecha_surte"
+                    type="radio"
+                    label="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_FECHA_SURTE_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_FIELD_FECHA_SURTE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="srsps_bacuerdos_list_display"
+                label="COM_BOLETIN_SRSPS_BACUERDOS_FIELD_CONFIG_BLOG_LIST_LABEL"
+                description="COM_BOLETIN_SRSPS_BACUERDOS_FIELD_CONFIG_BLOG_LIST_DESC"
+	        >
+                <field
+                    name="srsps_bacuerdo_num_leading"
+                    type="text"
+                    label="COM_BOLETIN_SRSPS_BACUERDOS_NUM_LEADING_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_NUM_LEADING_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="srsps_bacuerdo_num_intro"
+                    type="text"
+                    label="COM_BOLETIN_SRSPS_BACUERDOS_NUM_INTRO_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_NUM_INTRO_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="srsps_bacuerdo_num_columns"
+                    type="text"
+                    label="COM_BOLETIN_NUM_COLUMNS_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_NUM_COLUMNS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="srsps_bacuerdo_num_links"
+                    type="text"
+                    label="COM_BOLETIN_NUM_LINKS_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_NUM_LINKS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="srsps_bacuerdo_multi_column_order"
+                    type="radio"
+                    label="COM_BOLETIN_MULTI_COLUMN_ORDER_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_MULTI_COLUMN_ORDER_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JGLOBAL_DOWN</option>
+                    <option value="1">JGLOBAL_ACROSS</option>
+                </field>
+                <field
+                    name="srsps_bacuerdo_initial_sort"
+                    type="list"
+                    label="COM_BOLETIN_SRSPS_BACUERDOS_ORDER_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_ORDER_DESC"
+			        class="chzn-color"
+		        >
+                </field>
+                <field
+                    name="srsps_bacuerdo_initial_direction"
+                    type="radio"
+                    label="COM_BOLETIN_ORDER_DIRECTION_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_ORDER_DIRECTION_DESC"
+                    class="btn-group"
+                    default="ASC"
+		        >
+                    <option value="DESC">COM_BOLETIN_ORDER_DIRECTION_DESCENDING_LABEL</option>
+                    <option value="ASC">COM_BOLETIN_ORDER_DIRECTION_ASCENDING_LABEL</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_filter_field"
+                    type="list"
+                    label="JGLOBAL_FILTER_FIELD_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_FILTER_FIELD_DESC"
+                    class="chzn-color"
+                    default="hide"
+			    >
+                    <option value="hide">JHIDE</option>
+                </field>                
+                <field
+                    name="show_srsps_bacuerdo_headings"
+                    type="radio"
+                    label="JGLOBAL_SHOW_HEADINGS_LABEL"
+                    description="JGLOBAL_SHOW_HEADINGS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_pagination"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_LABEL"
+                    description="JGLOBAL_PAGINATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="2"
+		        >
+                    <option value="2">JGLOBAL_AUTO</option>
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_pagination_results"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+                    description="JGLOBAL_PAGINATION_RESULTS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_pagination_limit"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PAGINATION_LIMIT_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_PAGINATION_LIMIT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="srsps_bacuerdo_num_per_page"
+                    type="list"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_NUM_PER_PAGE_DESC"
+                    label="COM_BOLETIN_SRSPS_BACUERDOS_NUM_PER_PAGE_LABEL"
+			        class="chzn-color"
+                    default="5"
+                >
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="50">J50</option>
+                    <option value="100">J100</option>
+                    <option value="0">JALL</option>
+                </field>
+                <field
+                    name="show_no_srsps_bacuerdos"
+                    type="radio"
+                    label="COM_BOLETIN_SRSPS_BACUERDOS_NO_ITEMS_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_NO_ITEMS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+			    >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_srsps_bacuerdo_add_link"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADD_LINK_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_ADD_LINK_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="list_show_srsps_bacuerdo_date"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_DATE_LABEL"
+                    description="COM_BOLETIN_SRSPS_BACUERDOS_SHOW_DATE_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="srsps_bacuerdo_date_format"
+                    type="text"
+                    label="JGLOBAL_DATE_FORMAT_LABEL"
+                    description="JGLOBAL_DATE_FORMAT_DESC"
+                    size="15"
+		        />
+            </fieldset>
+            <fieldset
+                name="rsps_bacuerdo_display"
+                label="COM_BOLETIN_RSPS_BACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+                description="COM_BOLETIN_RSPS_BACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DESC"
+	        >
+                <field
+                    name="rsps_bacuerdo_layout"
+                    type="componentlayout"
+                    label="JGLOBAL_FIELD_LAYOUT_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_CHOOSE_LAYOUT_DESC"
+                    menuitems="true"
+                    extension="com_boletin"
+                    view="rsps_bacuerdo"
+                    default="_:default"
+		        />
+                <field
+                    name="spacer0"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_rsps_bacuerdo_icons"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ICONS_LABEL"
+                    description="COM_BOLETIN_SHOW_ICONS_DESC"
+                    class="btn-group"
+                    default="1"
+		        >
+                    <option	value="0">COM_BOLETIN_SHOW_ICONS_VALUE_TEXT</option>
+                    <option	value="1">COM_BOLETIN_SHOW_ICONS_VALUE_ICONS</option>
+                    <option	value="-1">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_print_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PRINT_ICON_LABEL"
+                    description="COM_BOLETIN_SHOW_PRINT_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_email_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_EMAIL_ICON_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_EMAIL_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="keep_rsps_bacuerdo_itemid"
+                    type="radio"
+                    label="COM_BOLETIN_KEEP_ITEMID_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_KEEP_ITEMID_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_navigation"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_NAVIGATION_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_NAVIGATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="spacer1"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_rsps_bacuerdo_readmore"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_READMORE_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_READMORE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="rsps_bacuerdo_readmore_limit"
+                    type="text"
+                    label="COM_BOLETIN_SHOW_READMORE_LIMIT_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_READMORE_LIMIT_DESC"
+                    default="100"
+		        />
+                <field
+                    name="spacer2"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_rsps_bacuerdo_admin"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADMIN_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_ADMIN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_expediente"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_EXPEDIENTE_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_EXPEDIENTE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_sancionadora"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_SANCIONADORA_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_SANCIONADORA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_f_resolucion"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_F_RESOLUCION_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_F_RESOLUCION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_sancion"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_SANCION_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_SANCION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_duracion"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_DURACION_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_DURACION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_f_inicio"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_F_INICIO_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_F_INICIO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_f_fin"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_F_FIN_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_F_FIN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_dependencia"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_DEPENDENCIA_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_DEPENDENCIA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_causa"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_CAUSA_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_CAUSA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_origen"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_ORIGEN_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_ORIGEN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_paterno"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_PATERNO_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_PATERNO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_materno"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_MATERNO_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_MATERNO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_nombre"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_NOMBRE_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_FIELD_NOMBRE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="rsps_bacuerdos_list_display"
+                label="COM_BOLETIN_RSPS_BACUERDOS_FIELD_CONFIG_BLOG_LIST_LABEL"
+                description="COM_BOLETIN_RSPS_BACUERDOS_FIELD_CONFIG_BLOG_LIST_DESC"
+	        >
+                <field
+                    name="rsps_bacuerdo_num_leading"
+                    type="text"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_NUM_LEADING_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_NUM_LEADING_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="rsps_bacuerdo_num_intro"
+                    type="text"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_NUM_INTRO_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_NUM_INTRO_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="rsps_bacuerdo_num_columns"
+                    type="text"
+                    label="COM_BOLETIN_NUM_COLUMNS_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_NUM_COLUMNS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="rsps_bacuerdo_num_links"
+                    type="text"
+                    label="COM_BOLETIN_NUM_LINKS_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_NUM_LINKS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="rsps_bacuerdo_multi_column_order"
+                    type="radio"
+                    label="COM_BOLETIN_MULTI_COLUMN_ORDER_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_MULTI_COLUMN_ORDER_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JGLOBAL_DOWN</option>
+                    <option value="1">JGLOBAL_ACROSS</option>
+                </field>
+                <field
+                    name="rsps_bacuerdo_initial_sort"
+                    type="list"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_ORDER_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_ORDER_DESC"
+			        class="chzn-color"
+		        >
+                </field>
+                <field
+                    name="rsps_bacuerdo_initial_direction"
+                    type="radio"
+                    label="COM_BOLETIN_ORDER_DIRECTION_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_ORDER_DIRECTION_DESC"
+                    class="btn-group"
+                    default="ASC"
+		        >
+                    <option value="DESC">COM_BOLETIN_ORDER_DIRECTION_DESCENDING_LABEL</option>
+                    <option value="ASC">COM_BOLETIN_ORDER_DIRECTION_ASCENDING_LABEL</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_filter_field"
+                    type="list"
+                    label="JGLOBAL_FILTER_FIELD_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_FILTER_FIELD_DESC"
+                    class="chzn-color"
+                    default="hide"
+			    >
+                    <option value="hide">JHIDE</option>
+                </field>                
+                <field
+                    name="show_rsps_bacuerdo_headings"
+                    type="radio"
+                    label="JGLOBAL_SHOW_HEADINGS_LABEL"
+                    description="JGLOBAL_SHOW_HEADINGS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_pagination"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_LABEL"
+                    description="JGLOBAL_PAGINATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="2"
+		        >
+                    <option value="2">JGLOBAL_AUTO</option>
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_pagination_results"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+                    description="JGLOBAL_PAGINATION_RESULTS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_pagination_limit"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PAGINATION_LIMIT_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_PAGINATION_LIMIT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="rsps_bacuerdo_num_per_page"
+                    type="list"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_NUM_PER_PAGE_DESC"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_NUM_PER_PAGE_LABEL"
+			        class="chzn-color"
+                    default="5"
+                >
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="50">J50</option>
+                    <option value="100">J100</option>
+                    <option value="0">JALL</option>
+                </field>
+                <field
+                    name="show_no_rsps_bacuerdos"
+                    type="radio"
+                    label="COM_BOLETIN_RSPS_BACUERDOS_NO_ITEMS_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_NO_ITEMS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+			    >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_rsps_bacuerdo_add_link"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADD_LINK_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_ADD_LINK_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="list_show_rsps_bacuerdo_date"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_DATE_LABEL"
+                    description="COM_BOLETIN_RSPS_BACUERDOS_SHOW_DATE_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="rsps_bacuerdo_date_format"
+                    type="text"
+                    label="JGLOBAL_DATE_FORMAT_LABEL"
+                    description="JGLOBAL_DATE_FORMAT_DESC"
+                    size="15"
+		        />
+            </fieldset>
+            <fieldset
+                name="pjf_bacuerdo_display"
+                label="COM_BOLETIN_PJF_BACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+                description="COM_BOLETIN_PJF_BACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DESC"
+	        >
+                <field
+                    name="pjf_bacuerdo_layout"
+                    type="componentlayout"
+                    label="JGLOBAL_FIELD_LAYOUT_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_CHOOSE_LAYOUT_DESC"
+                    menuitems="true"
+                    extension="com_boletin"
+                    view="pjf_bacuerdo"
+                    default="_:default"
+		        />
+                <field
+                    name="spacer0"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_pjf_bacuerdo_icons"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ICONS_LABEL"
+                    description="COM_BOLETIN_SHOW_ICONS_DESC"
+                    class="btn-group"
+                    default="1"
+		        >
+                    <option	value="0">COM_BOLETIN_SHOW_ICONS_VALUE_TEXT</option>
+                    <option	value="1">COM_BOLETIN_SHOW_ICONS_VALUE_ICONS</option>
+                    <option	value="-1">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_print_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PRINT_ICON_LABEL"
+                    description="COM_BOLETIN_SHOW_PRINT_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_email_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_EMAIL_ICON_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_EMAIL_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="keep_pjf_bacuerdo_itemid"
+                    type="radio"
+                    label="COM_BOLETIN_KEEP_ITEMID_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_KEEP_ITEMID_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_navigation"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_NAVIGATION_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_NAVIGATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="spacer1"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_pjf_bacuerdo_readmore"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_READMORE_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_READMORE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="pjf_bacuerdo_readmore_limit"
+                    type="text"
+                    label="COM_BOLETIN_SHOW_READMORE_LIMIT_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_READMORE_LIMIT_DESC"
+                    default="100"
+		        />
+                <field
+                    name="spacer2"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_pjf_bacuerdo_admin"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADMIN_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_ADMIN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_id_instancia"
+                    type="radio"
+                    label="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_ID_INSTANCIA_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_ID_INSTANCIA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_id_asunto"
+                    type="radio"
+                    label="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_ID_ASUNTO_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_ID_ASUNTO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_neun"
+                    type="radio"
+                    label="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_NEUN_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_NEUN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_expediente"
+                    type="radio"
+                    label="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_EXPEDIENTE_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_EXPEDIENTE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_ncocc"
+                    type="radio"
+                    label="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_NCOCC_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_NCOCC_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_fecha_auto"
+                    type="radio"
+                    label="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_FECHA_AUTO_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_FECHA_AUTO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_id_cuaderno"
+                    type="radio"
+                    label="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_ID_CUADERNO_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_ID_CUADERNO_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_fecha_publicacion"
+                    type="radio"
+                    label="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_FECHA_PUBLICACION_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_FIELD_FECHA_PUBLICACION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="pjf_bacuerdos_list_display"
+                label="COM_BOLETIN_PJF_BACUERDOS_FIELD_CONFIG_BLOG_LIST_LABEL"
+                description="COM_BOLETIN_PJF_BACUERDOS_FIELD_CONFIG_BLOG_LIST_DESC"
+	        >
+                <field
+                    name="pjf_bacuerdo_num_leading"
+                    type="text"
+                    label="COM_BOLETIN_PJF_BACUERDOS_NUM_LEADING_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_NUM_LEADING_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="pjf_bacuerdo_num_intro"
+                    type="text"
+                    label="COM_BOLETIN_PJF_BACUERDOS_NUM_INTRO_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_NUM_INTRO_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="pjf_bacuerdo_num_columns"
+                    type="text"
+                    label="COM_BOLETIN_NUM_COLUMNS_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_NUM_COLUMNS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="pjf_bacuerdo_num_links"
+                    type="text"
+                    label="COM_BOLETIN_NUM_LINKS_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_NUM_LINKS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="pjf_bacuerdo_multi_column_order"
+                    type="radio"
+                    label="COM_BOLETIN_MULTI_COLUMN_ORDER_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_MULTI_COLUMN_ORDER_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JGLOBAL_DOWN</option>
+                    <option value="1">JGLOBAL_ACROSS</option>
+                </field>
+                <field
+                    name="pjf_bacuerdo_initial_sort"
+                    type="list"
+                    label="COM_BOLETIN_PJF_BACUERDOS_ORDER_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_ORDER_DESC"
+			        class="chzn-color"
+		        >
+                </field>
+                <field
+                    name="pjf_bacuerdo_initial_direction"
+                    type="radio"
+                    label="COM_BOLETIN_ORDER_DIRECTION_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_ORDER_DIRECTION_DESC"
+                    class="btn-group"
+                    default="ASC"
+		        >
+                    <option value="DESC">COM_BOLETIN_ORDER_DIRECTION_DESCENDING_LABEL</option>
+                    <option value="ASC">COM_BOLETIN_ORDER_DIRECTION_ASCENDING_LABEL</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_filter_field"
+                    type="list"
+                    label="JGLOBAL_FILTER_FIELD_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_FILTER_FIELD_DESC"
+                    class="chzn-color"
+                    default="hide"
+			    >
+                    <option value="hide">JHIDE</option>
+                </field>                
+                <field
+                    name="show_pjf_bacuerdo_headings"
+                    type="radio"
+                    label="JGLOBAL_SHOW_HEADINGS_LABEL"
+                    description="JGLOBAL_SHOW_HEADINGS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_pagination"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_LABEL"
+                    description="JGLOBAL_PAGINATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="2"
+		        >
+                    <option value="2">JGLOBAL_AUTO</option>
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_pagination_results"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+                    description="JGLOBAL_PAGINATION_RESULTS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_pagination_limit"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PAGINATION_LIMIT_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_PAGINATION_LIMIT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="pjf_bacuerdo_num_per_page"
+                    type="list"
+                    description="COM_BOLETIN_PJF_BACUERDOS_NUM_PER_PAGE_DESC"
+                    label="COM_BOLETIN_PJF_BACUERDOS_NUM_PER_PAGE_LABEL"
+			        class="chzn-color"
+                    default="5"
+                >
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="50">J50</option>
+                    <option value="100">J100</option>
+                    <option value="0">JALL</option>
+                </field>
+                <field
+                    name="show_no_pjf_bacuerdos"
+                    type="radio"
+                    label="COM_BOLETIN_PJF_BACUERDOS_NO_ITEMS_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_NO_ITEMS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+			    >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_pjf_bacuerdo_add_link"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADD_LINK_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_ADD_LINK_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="list_show_pjf_bacuerdo_date"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_DATE_LABEL"
+                    description="COM_BOLETIN_PJF_BACUERDOS_SHOW_DATE_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="pjf_bacuerdo_date_format"
+                    type="text"
+                    label="JGLOBAL_DATE_FORMAT_LABEL"
+                    description="JGLOBAL_DATE_FORMAT_DESC"
+                    size="15"
+		        />
+            </fieldset>
+            <fieldset
+                name="tfca_bacuerdo_display"
+                label="COM_BOLETIN_TFCA_BACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+                description="COM_BOLETIN_TFCA_BACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DESC"
+	        >
+                <field
+                    name="tfca_bacuerdo_layout"
+                    type="componentlayout"
+                    label="JGLOBAL_FIELD_LAYOUT_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_CHOOSE_LAYOUT_DESC"
+                    menuitems="true"
+                    extension="com_boletin"
+                    view="tfca_bacuerdo"
+                    default="_:default"
+		        />
+                <field
+                    name="spacer0"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_tfca_bacuerdo_icons"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ICONS_LABEL"
+                    description="COM_BOLETIN_SHOW_ICONS_DESC"
+                    class="btn-group"
+                    default="1"
+		        >
+                    <option	value="0">COM_BOLETIN_SHOW_ICONS_VALUE_TEXT</option>
+                    <option	value="1">COM_BOLETIN_SHOW_ICONS_VALUE_ICONS</option>
+                    <option	value="-1">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfca_bacuerdo_print_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PRINT_ICON_LABEL"
+                    description="COM_BOLETIN_SHOW_PRINT_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfca_bacuerdo_email_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_EMAIL_ICON_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_SHOW_EMAIL_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="keep_tfca_bacuerdo_itemid"
+                    type="radio"
+                    label="COM_BOLETIN_KEEP_ITEMID_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_KEEP_ITEMID_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_tfca_bacuerdo_navigation"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_NAVIGATION_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_SHOW_NAVIGATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="spacer1"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_tfca_bacuerdo_readmore"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_READMORE_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_SHOW_READMORE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="tfca_bacuerdo_readmore_limit"
+                    type="text"
+                    label="COM_BOLETIN_SHOW_READMORE_LIMIT_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_SHOW_READMORE_LIMIT_DESC"
+                    default="100"
+		        />
+                <field
+                    name="spacer2"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_tfca_bacuerdo_admin"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADMIN_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_SHOW_ADMIN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfca_bacuerdo_instancia"
+                    type="radio"
+                    label="COM_BOLETIN_TFCA_BACUERDOS_SHOW_FIELD_INSTANCIA_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_SHOW_FIELD_INSTANCIA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfca_bacuerdo_fecha"
+                    type="radio"
+                    label="COM_BOLETIN_TFCA_BACUERDOS_SHOW_FIELD_FECHA_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_SHOW_FIELD_FECHA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfca_bacuerdo_expediente"
+                    type="radio"
+                    label="COM_BOLETIN_TFCA_BACUERDOS_SHOW_FIELD_EXPEDIENTE_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_SHOW_FIELD_EXPEDIENTE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfca_bacuerdo_actor"
+                    type="radio"
+                    label="COM_BOLETIN_TFCA_BACUERDOS_SHOW_FIELD_ACTOR_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_SHOW_FIELD_ACTOR_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="tfca_bacuerdos_list_display"
+                label="COM_BOLETIN_TFCA_BACUERDOS_FIELD_CONFIG_BLOG_LIST_LABEL"
+                description="COM_BOLETIN_TFCA_BACUERDOS_FIELD_CONFIG_BLOG_LIST_DESC"
+	        >
+                <field
+                    name="tfca_bacuerdo_num_leading"
+                    type="text"
+                    label="COM_BOLETIN_TFCA_BACUERDOS_NUM_LEADING_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_NUM_LEADING_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="tfca_bacuerdo_num_intro"
+                    type="text"
+                    label="COM_BOLETIN_TFCA_BACUERDOS_NUM_INTRO_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_NUM_INTRO_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="tfca_bacuerdo_num_columns"
+                    type="text"
+                    label="COM_BOLETIN_NUM_COLUMNS_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_NUM_COLUMNS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="tfca_bacuerdo_num_links"
+                    type="text"
+                    label="COM_BOLETIN_NUM_LINKS_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_NUM_LINKS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="tfca_bacuerdo_multi_column_order"
+                    type="radio"
+                    label="COM_BOLETIN_MULTI_COLUMN_ORDER_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_MULTI_COLUMN_ORDER_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JGLOBAL_DOWN</option>
+                    <option value="1">JGLOBAL_ACROSS</option>
+                </field>
+                <field
+                    name="tfca_bacuerdo_initial_sort"
+                    type="list"
+                    label="COM_BOLETIN_TFCA_BACUERDOS_ORDER_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_ORDER_DESC"
+			        class="chzn-color"
+		        >
+                </field>
+                <field
+                    name="tfca_bacuerdo_initial_direction"
+                    type="radio"
+                    label="COM_BOLETIN_ORDER_DIRECTION_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_ORDER_DIRECTION_DESC"
+                    class="btn-group"
+                    default="ASC"
+		        >
+                    <option value="DESC">COM_BOLETIN_ORDER_DIRECTION_DESCENDING_LABEL</option>
+                    <option value="ASC">COM_BOLETIN_ORDER_DIRECTION_ASCENDING_LABEL</option>
+                </field>
+                <field
+                    name="show_tfca_bacuerdo_filter_field"
+                    type="list"
+                    label="JGLOBAL_FILTER_FIELD_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_FILTER_FIELD_DESC"
+                    class="chzn-color"
+                    default="hide"
+			    >
+                    <option value="hide">JHIDE</option>
+                </field>                
+                <field
+                    name="show_tfca_bacuerdo_headings"
+                    type="radio"
+                    label="JGLOBAL_SHOW_HEADINGS_LABEL"
+                    description="JGLOBAL_SHOW_HEADINGS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfca_bacuerdo_pagination"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_LABEL"
+                    description="JGLOBAL_PAGINATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="2"
+		        >
+                    <option value="2">JGLOBAL_AUTO</option>
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfca_bacuerdo_pagination_results"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+                    description="JGLOBAL_PAGINATION_RESULTS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfca_bacuerdo_pagination_limit"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PAGINATION_LIMIT_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_SHOW_PAGINATION_LIMIT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="tfca_bacuerdo_num_per_page"
+                    type="list"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_NUM_PER_PAGE_DESC"
+                    label="COM_BOLETIN_TFCA_BACUERDOS_NUM_PER_PAGE_LABEL"
+			        class="chzn-color"
+                    default="5"
+                >
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="50">J50</option>
+                    <option value="100">J100</option>
+                    <option value="0">JALL</option>
+                </field>
+                <field
+                    name="show_no_tfca_bacuerdos"
+                    type="radio"
+                    label="COM_BOLETIN_TFCA_BACUERDOS_NO_ITEMS_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_NO_ITEMS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+			    >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfca_bacuerdo_add_link"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADD_LINK_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_SHOW_ADD_LINK_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="list_show_tfca_bacuerdo_date"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_DATE_LABEL"
+                    description="COM_BOLETIN_TFCA_BACUERDOS_SHOW_DATE_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="tfca_bacuerdo_date_format"
+                    type="text"
+                    label="JGLOBAL_DATE_FORMAT_LABEL"
+                    description="JGLOBAL_DATE_FORMAT_DESC"
+                    size="15"
+		        />
+            </fieldset>
+            <fieldset
+                name="tfjfa_bacuerdo_display"
+                label="COM_BOLETIN_TFJFA_BACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+                description="COM_BOLETIN_TFJFA_BACUERDOS_FIELD_CONFIG_SINGLE_ITEM_DESC"
+	        >
+                <field
+                    name="tfjfa_bacuerdo_layout"
+                    type="componentlayout"
+                    label="JGLOBAL_FIELD_LAYOUT_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_CHOOSE_LAYOUT_DESC"
+                    menuitems="true"
+                    extension="com_boletin"
+                    view="tfjfa_bacuerdo"
+                    default="_:default"
+		        />
+                <field
+                    name="spacer0"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_tfjfa_bacuerdo_icons"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ICONS_LABEL"
+                    description="COM_BOLETIN_SHOW_ICONS_DESC"
+                    class="btn-group"
+                    default="1"
+		        >
+                    <option	value="0">COM_BOLETIN_SHOW_ICONS_VALUE_TEXT</option>
+                    <option	value="1">COM_BOLETIN_SHOW_ICONS_VALUE_ICONS</option>
+                    <option	value="-1">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_print_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PRINT_ICON_LABEL"
+                    description="COM_BOLETIN_SHOW_PRINT_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_email_icon"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_EMAIL_ICON_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_EMAIL_ICON_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="keep_tfjfa_bacuerdo_itemid"
+                    type="radio"
+                    label="COM_BOLETIN_KEEP_ITEMID_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_KEEP_ITEMID_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_navigation"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_NAVIGATION_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_NAVIGATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_category_breadcrumb"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_CATEGORY_BREADCRUMB_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_CATEGORY_BREADCRUMB_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="limit_category_tfjfa_bacuerdo_navigation"
+                    type="radio"
+                    label="COM_BOLETIN_LIMIT_CATEGORY_NAVIGATION_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_LIMIT_CATEGORY_NAVIGATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="spacer1"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_tfjfa_bacuerdo_readmore"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_READMORE_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_READMORE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="tfjfa_bacuerdo_readmore_limit"
+                    type="text"
+                    label="COM_BOLETIN_SHOW_READMORE_LIMIT_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_READMORE_LIMIT_DESC"
+                    default="100"
+		        />
+                <field
+                    name="spacer2"
+                    type="spacer"
+                    hr="true"
+		        />
+                <field
+                    name="show_tfjfa_bacuerdo_category"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_CATEGORY_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_CATEGORY_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="link_tfjfa_bacuerdo_category"
+                    type="radio"
+                    label="COM_BOLETIN_LINK_CATEGORY_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_LINK_CATEGORY_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_parent_category"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PARENT_CATEGORY_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_PARENT_CATEGORY_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="link_tfjfa_bacuerdo_parent_category"
+                    type="radio"
+                    label="COM_BOLETIN_LINK_PARENT_CATEGORY_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_LINK_PARENT_CATEGORY_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option	value="1">JYES</option>
+                    <option	value="0">JNO</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_admin"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADMIN_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_ADMIN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_fecha_boletin"
+                    type="radio"
+                    label="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_FECHA_BOLETIN_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_FECHA_BOLETIN_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_region"
+                    type="radio"
+                    label="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_REGION_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_REGION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_instancia"
+                    type="radio"
+                    label="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_INSTANCIA_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_INSTANCIA_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_expediente"
+                    type="radio"
+                    label="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_EXPEDIENTE_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_EXPEDIENTE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_actor"
+                    type="radio"
+                    label="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_ACTOR_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_ACTOR_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_parte_a_notificar"
+                    type="radio"
+                    label="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_PARTE_A_NOTIFICAR_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_PARTE_A_NOTIFICAR_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_auto_o_resolucion"
+                    type="radio"
+                    label="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_AUTO_O_RESOLUCION_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_FIELD_AUTO_O_RESOLUCION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option	value="1">JSHOW</option>
+                    <option	value="0">JHIDE</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="tfjfa_bacuerdos_list_display"
+                label="COM_BOLETIN_TFJFA_BACUERDOS_FIELD_CONFIG_BLOG_LIST_LABEL"
+                description="COM_BOLETIN_TFJFA_BACUERDOS_FIELD_CONFIG_BLOG_LIST_DESC"
+	        >
+                <field
+                    name="tfjfa_bacuerdo_num_leading"
+                    type="text"
+                    label="COM_BOLETIN_TFJFA_BACUERDOS_NUM_LEADING_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_NUM_LEADING_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="tfjfa_bacuerdo_num_intro"
+                    type="text"
+                    label="COM_BOLETIN_TFJFA_BACUERDOS_NUM_INTRO_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_NUM_INTRO_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="tfjfa_bacuerdo_num_columns"
+                    type="text"
+                    label="COM_BOLETIN_NUM_COLUMNS_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_NUM_COLUMNS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="tfjfa_bacuerdo_num_links"
+                    type="text"
+                    label="COM_BOLETIN_NUM_LINKS_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_NUM_LINKS_DESC"
+                    size="3"
+                    default=""
+		        />
+                <field
+                    name="tfjfa_bacuerdo_multi_column_order"
+                    type="radio"
+                    label="COM_BOLETIN_MULTI_COLUMN_ORDER_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_MULTI_COLUMN_ORDER_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JGLOBAL_DOWN</option>
+                    <option value="1">JGLOBAL_ACROSS</option>
+                </field>
+                <field
+                    name="tfjfa_bacuerdo_orderby_pri"
+                    type="list"
+                    label="COM_BOLETIN_CATEGORY_ORDER_LABEL"
+                    description="COM_BOLETIN_CATEGORY_ORDER_DESC"
+			        class="chzn-color"
+                    default="none"
+		        >
+                    <option value="none">JGLOBAL_NO_ORDER</option>
+                    <option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+                    <option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+                    <option value="order">JGLOBAL_CATEGORY_MANAGER_ORDER</option>
+                </field>
+                <field
+                    name="tfjfa_bacuerdo_orderby_sec"
+                    type="list"
+                    label="COM_BOLETIN_TFJFA_BACUERDOS_CATEGORY_ORDER_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_CATEGORY_ORDER_DESC"
+			        class="chzn-color"
+                    default="none"
+		        >
+                    <option value="none">JGLOBAL_NO_ORDER</option>
+                    <option value="ordering">COM_BOLETIN_TFJFA_BACUERDOS_ORDER</option>
+                </field>
+                <field
+                    name="tfjfa_bacuerdo_order_date"
+                    type="list"
+                    label="COM_BOLETIN_ORDERING_DATE_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_ORDERING_DATE_DESC"
+			        class="chzn-color"
+		        >
+                </field>
+                <field
+                    name="tfjfa_bacuerdo_initial_sort"
+                    type="list"
+                    label="COM_BOLETIN_TFJFA_BACUERDOS_ORDER_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_ORDER_DESC"
+			        class="chzn-color"
+		        >
+                    <option value="a.ordering">COM_BOLETIN_TFJFA_BACUERDOS_ORDER</option>
+                </field>
+                <field
+                    name="tfjfa_bacuerdo_initial_direction"
+                    type="radio"
+                    label="COM_BOLETIN_ORDER_DIRECTION_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_ORDER_DIRECTION_DESC"
+                    class="btn-group"
+                    default="ASC"
+		        >
+                    <option value="DESC">COM_BOLETIN_ORDER_DIRECTION_DESCENDING_LABEL</option>
+                    <option value="ASC">COM_BOLETIN_ORDER_DIRECTION_ASCENDING_LABEL</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_filter_field"
+                    type="list"
+                    label="JGLOBAL_FILTER_FIELD_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_FILTER_FIELD_DESC"
+                    class="chzn-color"
+                    default="hide"
+			    >
+                    <option value="hide">JHIDE</option>
+                </field>                
+                <field
+                    name="show_tfjfa_bacuerdo_headings"
+                    type="radio"
+                    label="JGLOBAL_SHOW_HEADINGS_LABEL"
+                    description="JGLOBAL_SHOW_HEADINGS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_pagination"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_LABEL"
+                    description="JGLOBAL_PAGINATION_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="2"
+		        >
+                    <option value="2">JGLOBAL_AUTO</option>
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_pagination_results"
+                    type="radio"
+                    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+                    description="JGLOBAL_PAGINATION_RESULTS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_pagination_limit"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_PAGINATION_LIMIT_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_PAGINATION_LIMIT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="tfjfa_bacuerdo_num_per_page"
+                    type="list"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_NUM_PER_PAGE_DESC"
+                    label="COM_BOLETIN_TFJFA_BACUERDOS_NUM_PER_PAGE_LABEL"
+			        class="chzn-color"
+                    default="5"
+                >
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="50">J50</option>
+                    <option value="100">J100</option>
+                    <option value="0">JALL</option>
+                </field>
+                <field
+                    name="show_no_tfjfa_bacuerdos"
+                    type="radio"
+                    label="COM_BOLETIN_TFJFA_BACUERDOS_NO_ITEMS_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_NO_ITEMS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+			    >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="show_tfjfa_bacuerdo_add_link"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_ADD_LINK_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_ADD_LINK_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+		        >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="list_show_tfjfa_bacuerdo_date"
+                    type="radio"
+                    label="COM_BOLETIN_SHOW_DATE_LABEL"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_SHOW_DATE_DESC"
+                    class="btn-group"
+                    default="0"
+		        >
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                    name="tfjfa_bacuerdo_date_format"
                     type="text"
                     label="JGLOBAL_DATE_FORMAT_LABEL"
                     description="JGLOBAL_DATE_FORMAT_DESC"
                     size="15"
 		        />
                 <field
-                    name="list_show_facuerdo_ordering"
+                    name="list_show_tfjfa_bacuerdo_ordering"
                     type="radio"
                     label="COM_BOLETIN_LIST_ORDERING_LABEL"
-                    description="COM_BOLETIN_FACUERDOS_LIST_ORDERING_DESC"
+                    description="COM_BOLETIN_TFJFA_BACUERDOS_LIST_ORDERING_DESC"
                     class="btn-group btn-group-yesno"
                     default="0"
 		        >
@@ -696,7 +3781,7 @@
                 default=""
 		        >
                     <option value="">JNONE</option>
-                    <option value="Acuerdos Fiscales">COM_BOLETIN_FACUERDOS</option>
+                    <option value="Acuerdos Fiscales Del TFJFA">COM_BOLETIN_TFJFA_BACUERDOS</option>
                 </field>
                 <field
                     name="show_categories_num_items"

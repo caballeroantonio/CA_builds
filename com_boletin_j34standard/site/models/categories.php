@@ -144,7 +144,7 @@ class BoletinModelCategories extends JModelList
 			
 			if ($params->get('items_to_display') AND $params->get('items_to_display') !='')
 			{
-				$options['table'] = '#__rem_'.JString::strtolower(str_replace(' ','',$params->get('items_to_display')));
+				$options['table'] = '#__boletin_'.JString::strtolower(str_replace(' ','',$params->get('items_to_display')));
 			}
 			else
 			{

@@ -37,7 +37,7 @@ class BoletinController extends JControllerLegacy
 	/**
 	 * @var		string	$default_view	The default view.
 	 */
-	protected $default_view = 'facuerdos';
+	protected $default_view = 'tsjcdmx_juzgado_acuerdos';
 	
 	/**
 	 * Constructor
@@ -91,7 +91,15 @@ edité el menú login para que hiciera redirect a este componente
 			'id'=>'INT','year'=>'INT','month'=>'INT','limit'=>'uINT',
 			'limitstart'=>'uINT','showall'=>'INT','return'=>'BASE64',
 			'filter'=>'STRING','filter_order'=>'CMD','filter_order_Dir'=>'CMD','filter-search'=>'STRING',
-			'filter_facuerdo_order'=>'CMD','filter_facuerdo_order_Dir'=>'CMD','facuerdo-filter-search'=>'STRING',
+			'filter_tsjcdmx_juzgado_acuerdo_order'=>'CMD','filter_tsjcdmx_juzgado_acuerdo_order_Dir'=>'CMD','tsjcdmx_juzgado_acuerdo-filter-search'=>'STRING',
+			'filter_tsjcdmx_sala_acuerdo_order'=>'CMD','filter_tsjcdmx_sala_acuerdo_order_Dir'=>'CMD','tsjcdmx_sala_acuerdo-filter-search'=>'STRING',
+			'filter_prodecon_bacuerdo_order'=>'CMD','filter_prodecon_bacuerdo_order_Dir'=>'CMD','prodecon_bacuerdo-filter-search'=>'STRING',
+			'filter_profeco_proveedor_order'=>'CMD','filter_profeco_proveedor_order_Dir'=>'CMD','profeco_proveedor-filter-search'=>'STRING',
+			'filter_srsps_bacuerdo_order'=>'CMD','filter_srsps_bacuerdo_order_Dir'=>'CMD','srsps_bacuerdo-filter-search'=>'STRING',
+			'filter_rsps_bacuerdo_order'=>'CMD','filter_rsps_bacuerdo_order_Dir'=>'CMD','rsps_bacuerdo-filter-search'=>'STRING',
+			'filter_pjf_bacuerdo_order'=>'CMD','filter_pjf_bacuerdo_order_Dir'=>'CMD','pjf_bacuerdo-filter-search'=>'STRING',
+			'filter_tfca_bacuerdo_order'=>'CMD','filter_tfca_bacuerdo_order_Dir'=>'CMD','tfca_bacuerdo-filter-search'=>'STRING',
+			'filter_tfjfa_bacuerdo_order'=>'CMD','filter_tfjfa_bacuerdo_order_Dir'=>'CMD','tfjfa_bacuerdo-filter-search'=>'STRING',
 			'print'=>'BOOLEAN','lang'=>'CMD', 'Itemid'=>'INT');
 
 		parent::display($cachable,$safe_url_params);
@@ -180,9 +188,8 @@ edité el menú login para que hiciera redirect a este componente
             $this->finish_extjs($result);
         }
 
-        public function finish_extjs($result){            
-            $callback = $_REQUEST['callback'];
-            //start output
+        public function finish_extjs($result){
+            $callback = JRequest::getCmd('callback');
             if ($callback) {
                 header('Content-Type: text/javascript');
                 echo $callback . '(' . json_encode($result) . ');';
@@ -191,7 +198,7 @@ edité el menú login para que hiciera redirect a este componente
                 echo json_encode($result);
             }
             
-            exit();     
+            exit();    
         }
         
         /*        

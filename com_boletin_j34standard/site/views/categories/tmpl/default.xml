@@ -125,7 +125,7 @@
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="">JNONE</option>
-                <option value="Acuerdos Fiscales">COM_BOLETIN_FACUERDOS</option>
+                <option value="Acuerdos Fiscales Del TFJFA">COM_BOLETIN_TFJFA_BACUERDOS</option>
 
             </field>
             <field

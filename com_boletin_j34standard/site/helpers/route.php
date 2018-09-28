@@ -37,12 +37,12 @@ abstract class BoletinHelperRoute
 	protected static $lookup = array();
 			
 	/**
-	 * @param	integer	The route of the Acuerdos Fiscales
+	 * @param	integer	The route of the Tribunal Superior De Justicia De La Ciudad De México - Juzgados
 	 */
-	public static function getFacuerdoRoute($id, $cat_id = 0, $layout = 'default', $keep_item_id = false)
+	public static function getTsjcdmx_juzgado_acuerdoRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'facuerdo'  => array((int) $id)
+			'tsjcdmx_juzgado_acuerdo'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -50,18 +50,258 @@ abstract class BoletinHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_boletin&view=facuerdo&id='. $id;
+			$link = 'index.php?option=com_boletin&view=tsjcdmx_juzgado_acuerdo&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_boletin&view=facuerdo&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_boletin&view=tsjcdmx_juzgado_acuerdo&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Tribunal Superior De Justicia De La Ciudad De México - Salas
+	 */
+	public static function getTsjcdmx_sala_acuerdoRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'tsjcdmx_sala_acuerdo'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_boletin&view=tsjcdmx_sala_acuerdo&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_boletin&view=tsjcdmx_sala_acuerdo&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Procuraduría De La Defensa Del Contribuyente 
+	 */
+	public static function getProdecon_bacuerdoRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'prodecon_bacuerdo'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_boletin&view=prodecon_bacuerdo&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_boletin&view=prodecon_bacuerdo&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Procuraduría Federal Del Consumidor - Buró Comercial
+	 */
+	public static function getProfeco_proveedorRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'profeco_proveedor'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_boletin&view=profeco_proveedor&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_boletin&view=profeco_proveedor&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Secretaría De Hacienda Y Crédito Público - Sistema Del Registro De Servidores Públicos Sancionados
+	 */
+	public static function getSrsps_bacuerdoRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'srsps_bacuerdo'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_boletin&view=srsps_bacuerdo&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_boletin&view=srsps_bacuerdo&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Secretaría De La Función Pública - Servidores Publicos Sancionados
+	 */
+	public static function getRsps_bacuerdoRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'rsps_bacuerdo'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_boletin&view=rsps_bacuerdo&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_boletin&view=rsps_bacuerdo&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Poder Judicial De La Federación
+	 */
+	public static function getPjf_bacuerdoRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'pjf_bacuerdo'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_boletin&view=pjf_bacuerdo&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_boletin&view=pjf_bacuerdo&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Tribunal Federal De Conciliación Y Arbitraje - Boletín Laboral
+	 */
+	public static function getTfca_bacuerdoRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'tfca_bacuerdo'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_boletin&view=tfca_bacuerdo&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_boletin&view=tfca_bacuerdo&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Tribunal Federal De Justicia Administrativa - Boletín Jurisdiccional
+	 */
+	public static function getTfjfa_bacuerdoRoute($id, $cat_id = 0, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'tfjfa_bacuerdo'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_boletin&view=tfjfa_bacuerdo&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_boletin&view=tfjfa_bacuerdo&layout='.$layout.'&id='. $id;
 		}
 
 		if ($cat_id > 1)
 		{
 			$options['countItems'] = false;
-			$options['table'] = '#__rem_facuerdos';		
+			$options['table'] = '#__boletin_tfjfa_bacuerdos';		
 			$categories = JCategories::getInstance('Boletin', $options);
 		
 			$category = $categories->get($cat_id);

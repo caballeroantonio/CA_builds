@@ -30,7 +30,7 @@ defined('_JEXEC') or die;
 
 use Joomla\Registry\Registry;
 
-require_once __DIR__ . '/facuerdos.php';
+require_once __DIR__ . '/tfjfa_bacuerdos.php';
 
 class BoletinModelCategory extends JModelList
 {
@@ -192,8 +192,8 @@ class BoletinModelCategory extends JModelList
 
 		switch ($params->get('items_to_display',''))
 		{
-			case 'Acuerdos Fiscales' :
-				$object_lower_case = 'facuerdo_';
+			case 'Acuerdos Fiscales Del TFJFA' :
+				$object_lower_case = 'tfjfa_bacuerdo_';
 				break;
 			default :
 				$object_lower_case = '';
@@ -284,10 +284,10 @@ class BoletinModelCategory extends JModelList
 		}
 		switch ($params->get('items_to_display',''))
 		{
-			case 'Acuerdos Fiscales' :
-				$secondary_order_by	= $params->get('facuerdo_orderby_sec', 'none');
-				$order_date			= $params->get('facuerdo_order_date');
-				$category_order_by	= $params->def('facuerdo_orderby_pri', '');
+			case 'Acuerdos Fiscales Del TFJFA' :
+				$secondary_order_by	= $params->get('tfjfa_bacuerdo_orderby_sec', 'none');
+				$order_date			= $params->get('tfjfa_bacuerdo_order_date');
+				$category_order_by	= $params->def('tfjfa_bacuerdo_orderby_pri', '');
 				
 				$primary			= BoletinHelperQuery::orderbyPrimary($category_order_by);	
 				$secondary			= BoletinHelperQuery::orderbySecondary($secondary_order_by, $order_date, 'ordering');
@@ -345,7 +345,7 @@ class BoletinModelCategory extends JModelList
 			
 			if ($params->get('items_to_display') AND $params->get('items_to_display') !='')
 			{
-				$options['table'] = '#__rem_'.JString::strtolower(str_replace(' ','',$params->get('items_to_display')));
+				$options['table'] = '#__boletin_'.JString::strtolower(str_replace(' ','',$params->get('items_to_display')));
 			}
 			else
 			{

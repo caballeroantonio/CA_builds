@@ -36,7 +36,7 @@ class BoletinCategories extends JCategories
 	public function __construct($options = array())
 	{
 
-		$options['table'] = '#__rem_facuerdos';	
+		$options['table'] = '#__boletin_tfjfa_bacuerdos';	
 		$options['extension'] = 'com_boletin';
 		$options['statefield'] = 'state';
 		parent::__construct($options);

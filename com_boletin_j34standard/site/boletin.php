@@ -37,6 +37,86 @@ $app = JFactory::getApplication();
 $user  = JFactory::getUser();
 
 
+if ($app->input->get('view') === 'tsjcdmx_juzgado_acuerdos' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_boletin'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'tsjcdmx_sala_acuerdos' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_boletin'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'prodecon_bacuerdos' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_boletin'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'profeco_proveedores' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_boletin'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'srsps_bacuerdos' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_boletin'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'rsps_bacuerdos' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_boletin'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'pjf_bacuerdos' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_boletin'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'tfca_bacuerdos' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_boletin'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
 $controller = JControllerLegacy::getInstance('Boletin');
 
 $controller->execute($app->input->get('task'));

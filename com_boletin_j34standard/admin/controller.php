@@ -34,7 +34,7 @@ class BoletinController extends JControllerLegacy
 	 * @var		string	The default view.
 	 * 
 	 */
-	protected $default_view = 'facuerdos';
+	protected $default_view = 'tsjcdmx_juzgado_acuerdos';
 
 	/**
 	 * Method to display a view.
@@ -57,14 +57,110 @@ class BoletinController extends JControllerLegacy
 		// Check for edit form.
 		switch ($view)
 		{
-			case 'facuerdo': 
-				if ($layout == 'edit' AND !$this->checkEditId('com_boletin.edit.facuerdo', $id))
+			case 'tsjcdmx_juzgado_acuerdo': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_boletin.edit.tsjcdmx_juzgado_acuerdo', $id))
 				{
 
 					// Somehow the person just went to the form - we don't allow that.
 					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 					$this->setMessage($this->getError(), 'error');
-					$this->setRedirect(JRoute::_('index.php?option=com_boletin&view=facuerdos', false));
+					$this->setRedirect(JRoute::_('index.php?option=com_boletin&view=tsjcdmx_juzgado_acuerdos', false));
+
+					return false;
+				}
+				break;				
+			case 'tsjcdmx_sala_acuerdo': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_boletin.edit.tsjcdmx_sala_acuerdo', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_boletin&view=tsjcdmx_sala_acuerdos', false));
+
+					return false;
+				}
+				break;				
+			case 'prodecon_bacuerdo': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_boletin.edit.prodecon_bacuerdo', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_boletin&view=prodecon_bacuerdos', false));
+
+					return false;
+				}
+				break;				
+			case 'profeco_proveedor': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_boletin.edit.profeco_proveedor', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_boletin&view=profeco_proveedores', false));
+
+					return false;
+				}
+				break;				
+			case 'srsps_bacuerdo': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_boletin.edit.srsps_bacuerdo', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_boletin&view=srsps_bacuerdos', false));
+
+					return false;
+				}
+				break;				
+			case 'rsps_bacuerdo': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_boletin.edit.rsps_bacuerdo', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_boletin&view=rsps_bacuerdos', false));
+
+					return false;
+				}
+				break;				
+			case 'pjf_bacuerdo': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_boletin.edit.pjf_bacuerdo', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_boletin&view=pjf_bacuerdos', false));
+
+					return false;
+				}
+				break;				
+			case 'tfca_bacuerdo': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_boletin.edit.tfca_bacuerdo', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_boletin&view=tfca_bacuerdos', false));
+
+					return false;
+				}
+				break;				
+			case 'tfjfa_bacuerdo': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_boletin.edit.tfjfa_bacuerdo', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_boletin&view=tfjfa_bacuerdos', false));
 
 					return false;
 				}

@@ -23,22 +23,173 @@
 -- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 -- --------------------------------------------------------
 --
--- Table structure for table `#__rem_facuerdos`
+-- Table structure for table `#__boletin_tsjcdmx_juzgado_acuerdos`
 --
 
-#DROP TABLE IF EXISTS `#__rem_facuerdos`;
-CREATE TABLE IF NOT EXISTS `#__rem_facuerdos` (
+#DROP TABLE IF EXISTS `#__boletin_tsjcdmx_juzgado_acuerdos`;
+CREATE TABLE IF NOT EXISTS `#__boletin_tsjcdmx_juzgado_acuerdos` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fecha_boletin` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'fecha_boletin',
-  `region` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'region',
+  `description` MEDIUMTEXT NOT NULL,
+  `fecha_acuerdo` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha del acuerdo',
+  `fecha_boletin` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha de publicación',
+  `juzgado` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Juzgado',
+  `actor` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Actor',
+  `demandado` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Demandado',
+  `terceria` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Tercería',
+  `tipo_juicio` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Tipo de juicio',
+  `toca` INT(10) NOT NULL DEFAULT '0' COMMENT 'Toca',
+  `anio` INT(10) NOT NULL DEFAULT '0' COMMENT 'Año judicial',
+  `tipo_resolucion` VARCHAR(50) NOT NULL DEFAULT '' COMMENT 'Tipo de resolución',
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__boletin_tsjcdmx_sala_acuerdos`
+--
+
+#DROP TABLE IF EXISTS `#__boletin_tsjcdmx_sala_acuerdos`;
+CREATE TABLE IF NOT EXISTS `#__boletin_tsjcdmx_sala_acuerdos` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `description` MEDIUMTEXT NOT NULL,
+  `fecha_acuerdo` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha del acuerdo',
+  `fecha_boletin` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha de publicación',
+  `sala` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Instancia',
+  `actor` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Actor',
+  `demandado` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Demandado',
+  `terceria` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Tercería',
+  `tipo_juicio` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Tipo de juicio',
+  `toca` INT(10) NOT NULL DEFAULT '0' COMMENT 'Toca',
+  `anio` INT(10) NOT NULL DEFAULT '0' COMMENT 'Año Judicial',
+  `asunto` INT(10) NOT NULL DEFAULT '0' COMMENT 'Asunto',
+  `tipo_resolucion` VARCHAR(50) NOT NULL DEFAULT '' COMMENT 'Tipo de resolución',
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__boletin_prodecon_bacuerdos`
+--
+
+#DROP TABLE IF EXISTS `#__boletin_prodecon_bacuerdos`;
+CREATE TABLE IF NOT EXISTS `#__boletin_prodecon_bacuerdos` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `description` MEDIUMTEXT NOT NULL,
+  `id_delegacion` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'DELEGACIÓN',
+  `expediente` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'EXPEDIENTE PRODECON',
+  `promovente` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'PROMOVENTE',
+  `destinatario` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'DESTINATARIO',
+  `autoridades` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'AUTORIDADES INVOLUCRADAS',
+  `fecha` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'FECHA DEL ACTO A NOTIFICAR',
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__boletin_profeco_proveedores`
+--
+
+#DROP TABLE IF EXISTS `#__boletin_profeco_proveedores`;
+CREATE TABLE IF NOT EXISTS `#__boletin_profeco_proveedores` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Nombre',
+  `marca` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Nombre Comercial',
+  `porcentaje` INT(10) NOT NULL DEFAULT '0' COMMENT 'Porcentaje de Conciliación',
+  `is_concilianet` TINYINT(1) NOT NULL DEFAULT '0' COMMENT 'Concilianet',
+  `is_conciliaexpres` TINYINT(1) NOT NULL DEFAULT '0' COMMENT 'Conciliaexpres o Conciliación Inmediata',
+  `id_giro` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Giros dentro del Sector',
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__boletin_srsps_bacuerdos`
+--
+
+#DROP TABLE IF EXISTS `#__boletin_srsps_bacuerdos`;
+CREATE TABLE IF NOT EXISTS `#__boletin_srsps_bacuerdos` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `rfc` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'R.F.C.',
+  `nombre` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Nombre del Contribuyente',
+  `oficio` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Número de oficio individual de presunción',
+  `fecha_oficio` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'fecha de oficio individual de presunción',
+  `emisor` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Autoridad emisora del oficio individual de presunción',
+  `id_medio_notificacion` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Medio de notificación al contribuyente',
+  `fecha_notificacion` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha de notificación',
+  `fecha_surte` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha en que surtió efectos la notificación',
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__boletin_rsps_bacuerdos`
+--
+
+#DROP TABLE IF EXISTS `#__boletin_rsps_bacuerdos`;
+CREATE TABLE IF NOT EXISTS `#__boletin_rsps_bacuerdos` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `expediente` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Expediente',
+  `sancionadora` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Autoridad Sancionadora',
+  `f_resolucion` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha resolución',
+  `sancion` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Sanción',
+  `duracion` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Duración',
+  `f_inicio` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha inicio',
+  `f_fin` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha fin',
+  `dependencia` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Dependencia',
+  `causa` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Causa',
+  `origen` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Origen',
+  `paterno` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Paterno',
+  `materno` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Materno',
+  `nombre` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Nombre',
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__boletin_pjf_bacuerdos`
+--
+
+#DROP TABLE IF EXISTS `#__boletin_pjf_bacuerdos`;
+CREATE TABLE IF NOT EXISTS `#__boletin_pjf_bacuerdos` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `description` MEDIUMTEXT NOT NULL,
+  `id_instancia` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'instancia',
+  `id_asunto` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'asunto',
+  `neun` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Número de Expediente Único Nacional',
+  `expediente` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Número de Expediente Asignado',
+  `ncocc` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Número de control Oficina de Correspondencia Común',
+  `fecha_auto` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha del Auto',
+  `id_cuaderno` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Tipo Cuaderno',
+  `fecha_publicacion` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha de publicación',
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__boletin_tfca_bacuerdos`
+--
+
+#DROP TABLE IF EXISTS `#__boletin_tfca_bacuerdos`;
+CREATE TABLE IF NOT EXISTS `#__boletin_tfca_bacuerdos` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `description` MEDIUMTEXT NOT NULL,
   `instancia` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'instancia',
-  `expediente` VARCHAR(50) NOT NULL DEFAULT '' COMMENT 'expediente',
+  `fecha` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'fecha del acuerdo',
+  `expediente` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'expediente',
   `actor` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'actor',
-  `parte_a_notificar` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'parte_a_notificar',
-  `auto_o_resolucion` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'auto_o_resolucion',
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__boletin_tfjfa_bacuerdos`
+--
+
+#DROP TABLE IF EXISTS `#__boletin_tfjfa_bacuerdos`;
+CREATE TABLE IF NOT EXISTS `#__boletin_tfjfa_bacuerdos` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `fecha_boletin` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha del boletín',
+  `region` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Región',
+  `instancia` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Instancia',
+  `expediente` VARCHAR(50) NOT NULL DEFAULT '' COMMENT 'Expediente',
+  `actor` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Actor',
+  `parte_a_notificar` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Parte a notificar',
+  `auto_o_resolucion` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Auto o resolución a notificar',
   `catid` INT(10) UNSIGNED DEFAULT NULL COMMENT 'FK to categories in #__categories', # NOT NULL DEFAULT '0'
   KEY `idx_catid` (`catid`),
-  CONSTRAINT `boletin_facuerdo_catid` FOREIGN KEY (`catid`) REFERENCES `#__categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `boletin_tfjfa_bacuerdo_catid` FOREIGN KEY (`catid`) REFERENCES `#__categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   `ordering` INT(11) NOT NULL DEFAULT '0',
   KEY `idx_ordering` (`ordering`),
   PRIMARY KEY (`id`)

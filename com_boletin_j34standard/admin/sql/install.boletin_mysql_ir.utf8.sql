@@ -31,8 +31,8 @@ INSERT INTO `#__categories` (`asset_id`,`parent_id`,`lft`,`rgt`,`level`,`path`,`
 `alias`,`note`,`description`,
 `published`,`checked_out`,`checked_out_time`,`access`,`params`,
 `metadesc`,`metakey`,`metadata`,`created_user_id`,`created_time`,`modified_user_id`,`modified_time`,`hits`,`language`,`version`) VALUES 
-(0,1,1,2,1,'boletin-facuerdo-categories','com_boletin','uncategorised',
-'boletin-facuerdo-uncategorised','','Root Boletin Facuerdo uncategorised',
+(0,1,1,2,1,'boletin-tfjfa_bacuerdo-categories','com_boletin','uncategorised',
+'boletin-tfjfa_bacuerdo-uncategorised','','Root Boletin Tfjfa_bacuerdo uncategorised',
 2,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}','','','{\"author\":\"\",\"robots\":\"\"}',1,'2011-01-01 00:00:01',0,'0000-00-00 00:00:00',0,'*',0);
 
 SET FOREIGN_KEY_CHECKS=0;

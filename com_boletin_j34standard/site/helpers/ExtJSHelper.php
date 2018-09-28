@@ -40,6 +40,7 @@ class ExtJSHelper
     }
 
     public function parse($object_name, $object_plural_name){
+        $this->_object_plural_name = $object_plural_name;
         $columns = [];
         $fields = [];
         $app = [
@@ -241,7 +242,7 @@ EOD
         $grid = [
             
             'title' => JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS'),
-            'store' => 'facuerdos',
+            'store' => $this->_object_plural_name,
             'columns' => array_values($this->getViewColumns()),
 /*
            _tbar_: [
@@ -258,7 +259,7 @@ EOD
             'bbar' => [
                 'xtype' => 'pagingtoolbar',
                 'displayInfo' => true,
-                'store' => 'facuerdos',
+                'store' => $this->_object_plural_name,
                 /*_listeners_: {
                     beforechange: function( pagingtoolbar, page, eOpts){
                         this.setActiveRecord(null);

@@ -185,18 +185,18 @@ class BoletinViewCategory extends JViewLegacy
 		$id = (int) @$menu->query['id'];
 
 		if ($menu AND ($menu->query['option'] != 'com_boletin' OR
-					 $menu->query['view'] == 'facuerdo' OR 
+					 $menu->query['view'] == 'tfjfa_bacuerdo' OR 
 					 $id != $this->category->id))
 		{
 			$path = array(array('title' => $this->category->title, 'link' => ''));
 			$category = $this->category->getParent();
 
 			while (($menu->query['option'] != 'com_boletin' OR
-					$menu->query['view'] == 'facuerdo' OR
+					$menu->query['view'] == 'tfjfa_bacuerdo' OR
 					$id != $category->id) AND $category->id > 1)
 			{
 
-				$path[] = array('title' => $category->title, 'link' => BoletinHelperRoute::getCategoryRoute($category->id, $this->params->get('keep_facuerdo_itemid')));
+				$path[] = array('title' => $category->title, 'link' => BoletinHelperRoute::getCategoryRoute($category->id, $this->params->get('keep_tfjfa_bacuerdo_itemid')));
 				$category = $category->getParent();
 			}
 

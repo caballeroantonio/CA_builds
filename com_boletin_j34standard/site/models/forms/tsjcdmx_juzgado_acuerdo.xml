@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- @version 			$Id:$ -->
+<!-- @name			    Boletines -->
+<!-- @author			caballeroantonio (caballeroantonio.com) -->
+<!-- @package			com_boletin -->
+<!-- @subpackage		com_boletin.site -->
+<!-- @copyright		     -->
+<!-- @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- The following Component Architect header section must remain in any distribution of this file -->
+
+<!-- @CAversion			Id: compobject.xml 571 2016-01-04 15:03:02Z BrianWade $ -->
+<!-- @CAauthor		    Component Architect (www.componentarchitect.com) -->
+<!-- @CApackage		    architectcomp -->
+<!-- @CAsubpackage	    architectcomp.site -->
+<!-- @CAtemplate		joomla_3_4_standard (Release 1.0.1) -->
+<!-- @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved -->
+<!-- @Joomlacopyright   Copyright (c)2005 - 2016 Open Source Matters, Inc. All rights reserved. -->
+<!-- @CAlicense		    GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or (at your option) any later version. -->
+
+<!-- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of -->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. -->
+
+<form
+    addfieldpath="/components/com_boletin/models/fields"
+    addrulepath="/components/com_boletin/models/rules"
+>
+    <fieldset>
+        <field
+			id="id"
+			name="id"
+			type="hidden"
+			label="COM_BOLETIN_ID_LABEL"
+			class="readonly"
+			default="0"
+			readonly="true"
+		/>
+
+
+        <field
+		    id="description"
+		    name="description"
+			type="editor"
+			label="JGLOBAL_DESCRIPTION"
+			description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_DESCRIPTION_DESC"
+			class="inputbox"
+            filter="JComponentHelper::filterText"
+			buttons="true"
+            hide="article,pagebreak"                
+		/>
+    </fieldset>
+    <fieldset
+        name="fieldset_tsjcdmx_juzgado_acuerdo_fs"
+        label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELDSET_TSJCDMX_JUZGADO_ACUERDO_FS_LABEL"
+    >
+
+        <field
+            id="fecha_acuerdo"
+            name="fecha_acuerdo"
+            type="calendar"
+            label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_FECHA_ACUERDO_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_FECHA_ACUERDO_DESC"
+            class="inputbox"
+			size="22"
+			maxlength="25"
+			format="Y-m-d"
+			filter="user_utc"
+			required="true"
+        >
+        </field>  
+        <field
+            id="fecha_boletin"
+            name="fecha_boletin"
+            type="calendar"
+            label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_FECHA_BOLETIN_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_FECHA_BOLETIN_DESC"
+            class="inputbox"
+			size="22"
+			maxlength="25"
+			format="Y-m-d"
+			filter="user_utc"
+			required="true"
+        >
+        </field>  
+        <field
+            id="juzgado"
+            name="juzgado"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_JUZGADO_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_JUZGADO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="actor"
+            name="actor"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_ACTOR_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_ACTOR_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="demandado"
+            name="demandado"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_DEMANDADO_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_DEMANDADO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="terceria"
+            name="terceria"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_TERCERIA_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_TERCERIA_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="tipo_juicio"
+            name="tipo_juicio"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_TIPO_JUICIO_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_TIPO_JUICIO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="toca"
+            name="toca"
+            type="integer"
+            label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_TOCA_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_TOCA_DESC"
+            class="inputbox"
+			size="1"
+			default="0"
+        >
+        </field>  
+        <field
+            id="anio"
+            name="anio"
+            type="integer"
+            label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_ANIO_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_ANIO_DESC"
+            class="inputbox"
+			size="1"
+			default="0"
+        >
+        </field>  
+        <field
+            id="tipo_resolucion"
+            name="tipo_resolucion"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_TIPO_RESOLUCION_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_FIELD_TIPO_RESOLUCION_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+    </fieldset>
+</form>

@@ -28,9 +28,33 @@
 
 SET FOREIGN_KEY_CHECKS=0;
 
-DROP TABLE IF EXISTS `#__rem_facuerdos`;
-DELETE FROM `#__content_types` WHERE `type_alias` = 'com_boletin.facuerdo';
-DELETE FROM `#__menu` WHERE `title`='COM_BOLETIN_FACUERDOS' AND `type`='component';
+DROP TABLE IF EXISTS `#__boletin_tsjcdmx_juzgado_acuerdos`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_boletin.tsjcdmx_juzgado_acuerdo';
+DELETE FROM `#__menu` WHERE `title`='COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS' AND `type`='component';
+DROP TABLE IF EXISTS `#__boletin_tsjcdmx_sala_acuerdos`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_boletin.tsjcdmx_sala_acuerdo';
+DELETE FROM `#__menu` WHERE `title`='COM_BOLETIN_TSJCDMX_SALA_ACUERDOS' AND `type`='component';
+DROP TABLE IF EXISTS `#__boletin_prodecon_bacuerdos`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_boletin.prodecon_bacuerdo';
+DELETE FROM `#__menu` WHERE `title`='COM_BOLETIN_PRODECON_BACUERDOS' AND `type`='component';
+DROP TABLE IF EXISTS `#__boletin_profeco_proveedores`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_boletin.profeco_proveedor';
+DELETE FROM `#__menu` WHERE `title`='COM_BOLETIN_PROFECO_PROVEEDORES' AND `type`='component';
+DROP TABLE IF EXISTS `#__boletin_srsps_bacuerdos`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_boletin.srsps_bacuerdo';
+DELETE FROM `#__menu` WHERE `title`='COM_BOLETIN_SRSPS_BACUERDOS' AND `type`='component';
+DROP TABLE IF EXISTS `#__boletin_rsps_bacuerdos`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_boletin.rsps_bacuerdo';
+DELETE FROM `#__menu` WHERE `title`='COM_BOLETIN_RSPS_BACUERDOS' AND `type`='component';
+DROP TABLE IF EXISTS `#__boletin_pjf_bacuerdos`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_boletin.pjf_bacuerdo';
+DELETE FROM `#__menu` WHERE `title`='COM_BOLETIN_PJF_BACUERDOS' AND `type`='component';
+DROP TABLE IF EXISTS `#__boletin_tfca_bacuerdos`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_boletin.tfca_bacuerdo';
+DELETE FROM `#__menu` WHERE `title`='COM_BOLETIN_TFCA_BACUERDOS' AND `type`='component';
+DROP TABLE IF EXISTS `#__boletin_tfjfa_bacuerdos`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_boletin.tfjfa_bacuerdo';
+DELETE FROM `#__menu` WHERE `title`='COM_BOLETIN_TFJFA_BACUERDOS' AND `type`='component';
 
 
 DELETE FROM `#__assets` WHERE `name` LIKE '%com_boletin%';
