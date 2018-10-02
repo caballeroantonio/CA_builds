@@ -164,6 +164,54 @@ class BoletinRouter extends JComponentRouterBase
 					unset($query['catid']);
 													
 					break;			
+				case 'tsjcdmx_juzgados_familiares_antiguo':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'tsjcdmx_juzgados_familiares_antiguos':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
+				case 'tsjcdmx_juzgados_civiles_antiguo':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						if($advanced)
+						{
+							list($tmp, $id) = explode(':', $query['id'], 2);
+						}
+						else
+						{
+							$id = isset($query['id']) ? $query['id'] : null;
+						}
+						$segments[] = $view;					
+						$segments[] = $id;
+					}
+					unset($query['view']);				
+					unset($query['id']);
+					break;
+				case 'tsjcdmx_juzgados_civiles_antiguos':
+					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
+					{
+						$segments[] = $view;											
+					}
+					unset($query['view']);				
+					break;					
 				case 'tsjcdmx_juzgado_acuerdo':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
@@ -526,6 +574,54 @@ class BoletinRouter extends JComponentRouterBase
 
 			if ($found == 0)
 			{
+				if ($item->query['view'] == 'tsjcdmx_juzgados_familiares_antiguo' OR $view == 'tsjcdmx_juzgados_familiares_antiguo')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('#__boletin_tsjcdmx_juzgados_familiares_antiguos'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'tsjcdmx_juzgados_familiares_antiguos'OR $view == 'tsjcdmx_juzgados_familiares_antiguos')
+				{
+					$vars['view'] = $view;
+				}				
+				if ($item->query['view'] == 'tsjcdmx_juzgados_civiles_antiguo' OR $view == 'tsjcdmx_juzgados_civiles_antiguo')
+				{
+					if($advanced)
+					{
+						$db = JFactory::getDbo();
+							
+						$query = $db->getQuery(true);
+						$query->select($db->quoteName('id'));
+						$query->from($db->quoteName('#__boletin_tsjcdmx_juzgados_civiles_antiguos'));
+								
+						$db->setQuery($query);
+						$nid = $db->loadResult();
+					}
+					else
+					{
+						$nid = $segment;
+					}
+					$vars['id'] = $nid;
+					$vars['view'] = $view;
+				}
+				if ($item->query['view'] == 'tsjcdmx_juzgados_civiles_antiguos'OR $view == 'tsjcdmx_juzgados_civiles_antiguos')
+				{
+					$vars['view'] = $view;
+				}				
 				if ($item->query['view'] == 'tsjcdmx_juzgado_acuerdo' OR $view == 'tsjcdmx_juzgado_acuerdo')
 				{
 					if($advanced)

@@ -37,6 +37,66 @@ abstract class BoletinHelperRoute
 	protected static $lookup = array();
 			
 	/**
+	 * @param	integer	The route of the Tsjcdmx_juzgados_familiares_antiguos
+	 */
+	public static function getTsjcdmx_juzgados_familiares_antiguoRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'tsjcdmx_juzgados_familiares_antiguo'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_boletin&view=tsjcdmx_juzgados_familiares_antiguo&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_boletin&view=tsjcdmx_juzgados_familiares_antiguo&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
+	 * @param	integer	The route of the Tsjcdmx_juzgados_civiles_antiguos
+	 */
+	public static function getTsjcdmx_juzgados_civiles_antiguoRoute($id, $layout = 'default', $keep_item_id = false)
+	{
+		$needles = array(
+			'tsjcdmx_juzgados_civiles_antiguo'  => array((int) $id)
+		);
+		// Remove lead string from the form field value
+		$layout = str_replace('_:', '', $layout);	
+				
+		if ($layout == '' OR $layout == 'default')
+		{
+			//Create the link
+			$link = 'index.php?option=com_boletin&view=tsjcdmx_juzgados_civiles_antiguo&id='. $id;
+		}
+		else
+		{
+			//Create the link with a layout
+			$link = 'index.php?option=com_boletin&view=tsjcdmx_juzgados_civiles_antiguo&layout='.$layout.'&id='. $id;
+		}
+
+		
+		if ($item = self::findItem($needles, $keep_item_id, $layout))
+		{
+			$link .= '&Itemid='.$item;
+		}
+
+		return $link;
+	}
+	/**
 	 * @param	integer	The route of the Tribunal Superior De Justicia De La Ciudad De México - Juzgados
 	 */
 	public static function getTsjcdmx_juzgado_acuerdoRoute($id, $layout = 'default', $keep_item_id = false)

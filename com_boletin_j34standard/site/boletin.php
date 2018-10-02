@@ -37,6 +37,26 @@ $app = JFactory::getApplication();
 $user  = JFactory::getUser();
 
 
+if ($app->input->get('view') === 'tsjcdmx_juzgados_familiares_antiguos' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_boletin'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
+if ($app->input->get('view') === 'tsjcdmx_juzgados_civiles_antiguos' AND $app->input->get('layout') === 'modal')
+{
+	if (!$user->authorise('core.edit', 'com_boletin'))
+	{
+		$app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'warning');
+
+		return;
+	}
+}
+
 if ($app->input->get('view') === 'tsjcdmx_juzgado_acuerdos' AND $app->input->get('layout') === 'modal')
 {
 	if (!$user->authorise('core.edit', 'com_boletin'))

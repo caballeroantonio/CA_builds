@@ -97,6 +97,22 @@ class BoletinHelper extends JHelperContent
 		$config = JComponentHelper::getParams(JText::_('COM_BOLETIN_FIELD_CATEGORY_COMPONENT_DEFAULT'));
 		$category_component = $config->get('category_component', JText::_('COM_BOLETIN_FIELD_CATEGORY_COMPONENT_DEFAULT'));	
 
+		$active = $view_name == 'tsjcdmx_juzgados_familiares_antiguos'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_SUBMENU'),
+			'index.php?option=com_boletin&view=tsjcdmx_juzgados_familiares_antiguos',
+			$view_name == 'tsjcdmx_juzgados_familiares_antiguos',
+			$active
+		);
+	
+		$active = $view_name == 'tsjcdmx_juzgados_civiles_antiguos'? true : false;
+		JHtmlSidebar::addEntry(
+			JText::_('COM_BOLETIN_TSJCDMX_JUZGADOS_CIVILES_ANTIGUOS_SUBMENU'),
+			'index.php?option=com_boletin&view=tsjcdmx_juzgados_civiles_antiguos',
+			$view_name == 'tsjcdmx_juzgados_civiles_antiguos',
+			$active
+		);
+	
 		$active = $view_name == 'tsjcdmx_juzgado_acuerdos'? true : false;
 		JHtmlSidebar::addEntry(
 			JText::_('COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS_SUBMENU'),

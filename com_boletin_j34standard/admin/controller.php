@@ -34,7 +34,7 @@ class BoletinController extends JControllerLegacy
 	 * @var		string	The default view.
 	 * 
 	 */
-	protected $default_view = 'tsjcdmx_juzgado_acuerdos';
+	protected $default_view = 'tsjcdmx_juzgados_familiares_antiguos';
 
 	/**
 	 * Method to display a view.
@@ -57,6 +57,30 @@ class BoletinController extends JControllerLegacy
 		// Check for edit form.
 		switch ($view)
 		{
+			case 'tsjcdmx_juzgados_familiares_antiguo': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_boletin.edit.tsjcdmx_juzgados_familiares_antiguo', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_boletin&view=tsjcdmx_juzgados_familiares_antiguos', false));
+
+					return false;
+				}
+				break;				
+			case 'tsjcdmx_juzgados_civiles_antiguo': 
+				if ($layout == 'edit' AND !$this->checkEditId('com_boletin.edit.tsjcdmx_juzgados_civiles_antiguo', $id))
+				{
+
+					// Somehow the person just went to the form - we don't allow that.
+					$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+					$this->setMessage($this->getError(), 'error');
+					$this->setRedirect(JRoute::_('index.php?option=com_boletin&view=tsjcdmx_juzgados_civiles_antiguos', false));
+
+					return false;
+				}
+				break;				
 			case 'tsjcdmx_juzgado_acuerdo': 
 				if ($layout == 'edit' AND !$this->checkEditId('com_boletin.edit.tsjcdmx_juzgado_acuerdo', $id))
 				{

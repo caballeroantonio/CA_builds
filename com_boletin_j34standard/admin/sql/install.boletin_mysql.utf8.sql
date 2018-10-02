@@ -23,6 +23,64 @@
 -- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 -- --------------------------------------------------------
 --
+-- Table structure for table `#__boletin_tsjcdmx_juzgados_familiares_antiguos`
+--
+
+#DROP TABLE IF EXISTS `#__boletin_tsjcdmx_juzgados_familiares_antiguos`;
+CREATE TABLE IF NOT EXISTS `#__boletin_tsjcdmx_juzgados_familiares_antiguos` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id_acuerdo` INT(20) NOT NULL DEFAULT '0' COMMENT 'Acuerdo',
+  `juzgado` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Juzgado',
+  `expediente` INT(11) NOT NULL DEFAULT '0' COMMENT 'Expediente',
+  `anio` INT(11) NOT NULL DEFAULT '0' COMMENT 'Año judicial',
+  `bis` INT(11) NOT NULL DEFAULT '0' COMMENT 'Bis',
+  `tipo` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Tipo de juicio',
+  `actor` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Actor',
+  `demandado` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Demandado',
+  `terceria` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Tercería',
+  `juicio` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Juicio',
+  `accion` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Acción',
+  `materia` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Materia',
+  `resolucion` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Resolución',
+  `fecha_acuerdo` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha del acuerdo',
+  `fecha_publicacion` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha de publicación',
+  `tipo_acuerdo` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Tipo de acuerdo',
+  `visibilidad` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Visibilidad',
+  `especial` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Datos condensados de publicaciones en juzgados',
+  KEY `idx_id_acuerdo` (`id_acuerdo`),
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
+-- Table structure for table `#__boletin_tsjcdmx_juzgados_civiles_antiguos`
+--
+
+#DROP TABLE IF EXISTS `#__boletin_tsjcdmx_juzgados_civiles_antiguos`;
+CREATE TABLE IF NOT EXISTS `#__boletin_tsjcdmx_juzgados_civiles_antiguos` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id_acuerdo` INT(20) NOT NULL DEFAULT '0' COMMENT 'Acuerdo',
+  `juzgado` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Juzgado',
+  `expediente` INT(11) NOT NULL DEFAULT '0' COMMENT 'Expediente',
+  `anio` INT(11) NOT NULL DEFAULT '0' COMMENT 'Año judicial',
+  `bis` INT(11) NOT NULL DEFAULT '0' COMMENT 'Bis',
+  `tipo` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Tipo de juicio',
+  `actor` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Actor',
+  `demandado` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Demandado',
+  `terceria` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Tercería',
+  `juicio` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Juicio',
+  `accion` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Acción',
+  `materia` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Materia',
+  `resolucion` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Resolución',
+  `fecha_acuerdo` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha del acuerdo',
+  `fecha_publicacion` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Fecha de publicación',
+  `tipo_acuerdo` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Tipo de acuerdo',
+  `visibilidad` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Visibilidad',
+  `especial` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Datos condensados de publicaciones en juzgados',
+  KEY `idx_id_acuerdo` (`id_acuerdo`),
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+--
 -- Table structure for table `#__boletin_tsjcdmx_juzgado_acuerdos`
 --
 

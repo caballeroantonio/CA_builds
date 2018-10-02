@@ -37,7 +37,7 @@ class BoletinController extends JControllerLegacy
 	/**
 	 * @var		string	$default_view	The default view.
 	 */
-	protected $default_view = 'tsjcdmx_juzgado_acuerdos';
+	protected $default_view = 'tsjcdmx_juzgados_familiares_antiguos';
 	
 	/**
 	 * Constructor
@@ -91,6 +91,8 @@ edité el menú login para que hiciera redirect a este componente
 			'id'=>'INT','year'=>'INT','month'=>'INT','limit'=>'uINT',
 			'limitstart'=>'uINT','showall'=>'INT','return'=>'BASE64',
 			'filter'=>'STRING','filter_order'=>'CMD','filter_order_Dir'=>'CMD','filter-search'=>'STRING',
+			'filter_tsjcdmx_juzgados_familiares_antiguo_order'=>'CMD','filter_tsjcdmx_juzgados_familiares_antiguo_order_Dir'=>'CMD','tsjcdmx_juzgados_familiares_antiguo-filter-search'=>'STRING',
+			'filter_tsjcdmx_juzgados_civiles_antiguo_order'=>'CMD','filter_tsjcdmx_juzgados_civiles_antiguo_order_Dir'=>'CMD','tsjcdmx_juzgados_civiles_antiguo-filter-search'=>'STRING',
 			'filter_tsjcdmx_juzgado_acuerdo_order'=>'CMD','filter_tsjcdmx_juzgado_acuerdo_order_Dir'=>'CMD','tsjcdmx_juzgado_acuerdo-filter-search'=>'STRING',
 			'filter_tsjcdmx_sala_acuerdo_order'=>'CMD','filter_tsjcdmx_sala_acuerdo_order_Dir'=>'CMD','tsjcdmx_sala_acuerdo-filter-search'=>'STRING',
 			'filter_prodecon_bacuerdo_order'=>'CMD','filter_prodecon_bacuerdo_order_Dir'=>'CMD','prodecon_bacuerdo-filter-search'=>'STRING',

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- @version 			$Id:$ -->
+<!-- @name			    Boletines -->
+<!-- @author			caballeroantonio (caballeroantonio.com) -->
+<!-- @package			com_boletin -->
+<!-- @subpackage		com_boletin.site -->
+<!-- @copyright		     -->
+<!-- @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- The following Component Architect header section must remain in any distribution of this file -->
+
+<!-- @CAversion			Id: compobject.xml 571 2016-01-04 15:03:02Z BrianWade $ -->
+<!-- @CAauthor		    Component Architect (www.componentarchitect.com) -->
+<!-- @CApackage		    architectcomp -->
+<!-- @CAsubpackage	    architectcomp.site -->
+<!-- @CAtemplate		joomla_3_4_standard (Release 1.0.1) -->
+<!-- @CAcopyright		Copyright (c)2013 - 2016  Simply Open Source Ltd. (trading as Component Architect). All Rights Reserved -->
+<!-- @Joomlacopyright   Copyright (c)2005 - 2016 Open Source Matters, Inc. All rights reserved. -->
+<!-- @CAlicense		    GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html -->
+
+<!-- This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or (at your option) any later version. -->
+
+<!-- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of -->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. -->
+
+<form
+    addfieldpath="/components/com_boletin/models/fields"
+    addrulepath="/components/com_boletin/models/rules"
+>
+    <fieldset>
+        <field
+			id="id"
+			name="id"
+			type="hidden"
+			label="COM_BOLETIN_ID_LABEL"
+			class="readonly"
+			default="0"
+			readonly="true"
+		/>
+
+
+    </fieldset>
+    <fieldset
+        name="fieldset_tsjcdmx_jfamiliarold_fs"
+        label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELDSET_TSJCDMX_JFAMILIAROLD_FS_LABEL"
+    >
+
+        <field
+            id="id_acuerdo"
+            name="id_acuerdo"
+            type="integer"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_ID_ACUERDO_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_ID_ACUERDO_DESC"
+            class="inputbox"
+			size="1"
+			required="true"
+			default="0"
+        >
+        </field>  
+        <field
+            id="juzgado"
+            name="juzgado"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_JUZGADO_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_JUZGADO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="expediente"
+            name="expediente"
+            type="integer"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_EXPEDIENTE_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_EXPEDIENTE_DESC"
+            class="inputbox"
+			size="1"
+			default="0"
+        >
+        </field>  
+        <field
+            id="anio"
+            name="anio"
+            type="integer"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_ANIO_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_ANIO_DESC"
+            class="inputbox"
+			size="1"
+			default="0"
+        >
+        </field>  
+        <field
+            id="bis"
+            name="bis"
+            type="integer"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_BIS_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_BIS_DESC"
+            class="inputbox"
+			size="1"
+			default="0"
+        >
+        </field>  
+        <field
+            id="tipo"
+            name="tipo"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_TIPO_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_TIPO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="actor"
+            name="actor"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_ACTOR_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_ACTOR_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="demandado"
+            name="demandado"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_DEMANDADO_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_DEMANDADO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="terceria"
+            name="terceria"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_TERCERIA_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_TERCERIA_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="juicio"
+            name="juicio"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_JUICIO_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_JUICIO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="accion"
+            name="accion"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_ACCION_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_ACCION_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="materia"
+            name="materia"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_MATERIA_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_MATERIA_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="resolucion"
+            name="resolucion"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_RESOLUCION_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_RESOLUCION_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="fecha_acuerdo"
+            name="fecha_acuerdo"
+            type="calendar"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_FECHA_ACUERDO_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_FECHA_ACUERDO_DESC"
+            class="inputbox"
+			size="22"
+			maxlength="25"
+			format="Y-m-d"
+			filter="user_utc"
+        >
+        </field>  
+        <field
+            id="fecha_publicacion"
+            name="fecha_publicacion"
+            type="calendar"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_FECHA_PUBLICACION_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_FECHA_PUBLICACION_DESC"
+            class="inputbox"
+			size="22"
+			maxlength="25"
+			format="Y-m-d"
+			filter="user_utc"
+        >
+        </field>  
+        <field
+            id="tipo_acuerdo"
+            name="tipo_acuerdo"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_TIPO_ACUERDO_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_TIPO_ACUERDO_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="visibilidad"
+            name="visibilidad"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_VISIBILIDAD_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_VISIBILIDAD_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+        <field
+            id="especial"
+            name="especial"
+            type="text"
+            label="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_ESPECIAL_LABEL"
+            description="COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS_FIELD_ESPECIAL_DESC"
+            class="inputbox"
+			size="50"
+			maxlength="255"
+        >
+        </field>  
+    </fieldset>
+</form>

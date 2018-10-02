@@ -78,6 +78,16 @@ class BoletinViewBoletin_Dashboard extends JViewLegacy
 	protected function prepareButtons()
 	{
 		$buttons = array();
+		$buttons[] = array('link'=>'index.php?option=com_boletin&view=tsjcdmx_juzgados_familiares_antiguos',
+			'object'=>'tsjcdmx_juzgados_familiares_antiguos',
+			'text'=>JText::_('COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS'),
+			'desc'=>JText::_('COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUO_DESCRIPTION')
+			);
+		$buttons[] = array('link'=>'index.php?option=com_boletin&view=tsjcdmx_juzgados_civiles_antiguos',
+			'object'=>'tsjcdmx_juzgados_civiles_antiguos',
+			'text'=>JText::_('COM_BOLETIN_TSJCDMX_JUZGADOS_CIVILES_ANTIGUOS'),
+			'desc'=>JText::_('COM_BOLETIN_TSJCDMX_JUZGADOS_CIVILES_ANTIGUO_DESCRIPTION')
+			);
 		$buttons[] = array('link'=>'index.php?option=com_boletin&view=tsjcdmx_juzgado_acuerdos',
 			'object'=>'tsjcdmx_juzgado_acuerdos',
 			'text'=>JText::_('COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS'),

@@ -28,6 +28,12 @@
 
 SET FOREIGN_KEY_CHECKS=0;
 
+DROP TABLE IF EXISTS `#__boletin_tsjcdmx_juzgados_familiares_antiguos`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_boletin.tsjcdmx_juzgados_familiares_antiguo';
+DELETE FROM `#__menu` WHERE `title`='COM_BOLETIN_TSJCDMX_JUZGADOS_FAMILIARES_ANTIGUOS' AND `type`='component';
+DROP TABLE IF EXISTS `#__boletin_tsjcdmx_juzgados_civiles_antiguos`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_boletin.tsjcdmx_juzgados_civiles_antiguo';
+DELETE FROM `#__menu` WHERE `title`='COM_BOLETIN_TSJCDMX_JUZGADOS_CIVILES_ANTIGUOS' AND `type`='component';
 DROP TABLE IF EXISTS `#__boletin_tsjcdmx_juzgado_acuerdos`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_boletin.tsjcdmx_juzgado_acuerdo';
 DELETE FROM `#__menu` WHERE `title`='COM_BOLETIN_TSJCDMX_JUZGADO_ACUERDOS' AND `type`='component';
