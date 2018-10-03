@@ -121,9 +121,9 @@ class RemcaModelLmunicipalityForm extends RemcaModelLmunicipality
 	/**
 	 * Method to get municipality data.
 	 *
-	 * @param	integer	$item_id	The id of the municipality.
+	 * @param	integer	$item_id	The id of the lmunicipality.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Municipality item data object on success, false on failure.
+	 * @return	mixed	lmunicipality item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

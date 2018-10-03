@@ -123,7 +123,7 @@ class RemcaModelVideo_sourceForm extends RemcaModelVideo_source
 	 *
 	 * @param	integer	$item_id	The id of the video_source.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Video_source item data object on success, false on failure.
+	 * @return	mixed	video_source item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

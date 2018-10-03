@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Feature_house View class for the RealEstateManagerCA component
+ * HTML feature_house View class for the realestatemanagerca component
  *
  */
 class RemcaViewFeature_houseForm extends JViewLegacy

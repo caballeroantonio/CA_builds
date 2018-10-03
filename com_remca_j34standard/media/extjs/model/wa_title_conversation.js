@@ -19,13 +19,13 @@
             reader: {
                 type: 'json',
                 messageProperty: 'message',
-                root: 'data'
+                rootProperty: 'data',//extjs 4.2 and before name is root
             },
             writer: {
                 type: 'json',
                 allowSingle: false,
                 encode: true,
-                root: 'data',
+                rootProperty: 'data',//extjs 4.2 and before name is root
             },
             extraParams: {
                 'option': 'com_remca',

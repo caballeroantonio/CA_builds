@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Mime_type View class for the RealEstateManagerCA component
+ * HTML mime_type View class for the realestatemanagerca component
  *
  */
 class RemcaViewMime_typeForm extends JViewLegacy

@@ -115,20 +115,20 @@ class RemcaViewHouses extends JViewLegacy
 			$num_intro   = (int) $params->def('house_num_intro', 4);
 			$num_links   = (int) $params->def('house_num_links', 4);
 		
-			// Preprocess the breakdown of leading, intro and linked inmuebles.
+			// Preprocess the breakdown of leading, intro and linked houses.
 			// This makes it much easier for the designer to just interogate the arrays.
 			$max = count($items);
 
-			// The first group is the leading inmuebles.
+			// The first group is the leading houses.
 			$limit = $num_leading;
 			for ($i = 0; $i < $limit AND $i < $max; $i++)
 			{
 				$this->lead_items[$i] = &$items[$i];
 			}
 
-			// The second group is the intro inmuebles.
+			// The second group is the intro houses.
 			$limit = $num_leading + $num_intro;
-			// Order inmuebles across, then down (or single column mode)
+			// Order houses across, then down (or single column mode)
 			for ($i = $num_leading; $i < $limit AND $i < $max; $i++)
 			{
 				$this->intro_items[$i] = &$items[$i];

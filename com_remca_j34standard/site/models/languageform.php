@@ -123,7 +123,7 @@ class RemcaModelLanguageForm extends RemcaModelLanguage
 	 *
 	 * @param	integer	$item_id	The id of the language.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Language item data object on success, false on failure.
+	 * @return	mixed	language item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

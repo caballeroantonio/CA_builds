@@ -123,7 +123,7 @@ class RemcaModelConstForm extends RemcaModelConst
 	 *
 	 * @param	integer	$item_id	The id of the const.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Const item data object on success, false on failure.
+	 * @return	mixed	const item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

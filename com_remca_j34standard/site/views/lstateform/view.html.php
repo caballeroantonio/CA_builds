@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML State View class for the RealEstateManagerCA component
+ * HTML lstate View class for the realestatemanagerca component
  *
  */
 class RemcaViewLstateForm extends JViewLegacy

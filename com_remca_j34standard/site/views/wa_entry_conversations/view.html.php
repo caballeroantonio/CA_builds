@@ -107,20 +107,20 @@ class RemcaViewWa_entry_conversations extends JViewLegacy
 			$num_intro   = (int) $params->def('wa_entry_conversation_num_intro', 4);
 			$num_links   = (int) $params->def('wa_entry_conversation_num_links', 4);
 		
-			// Preprocess the breakdown of leading, intro and linked entradas conversaciones wtsapp .
+			// Preprocess the breakdown of leading, intro and linked wa_entry_conversations.
 			// This makes it much easier for the designer to just interogate the arrays.
 			$max = count($items);
 
-			// The first group is the leading entradas conversaciones wtsapp .
+			// The first group is the leading wa_entry_conversations.
 			$limit = $num_leading;
 			for ($i = 0; $i < $limit AND $i < $max; $i++)
 			{
 				$this->lead_items[$i] = &$items[$i];
 			}
 
-			// The second group is the intro entradas conversaciones wtsapp .
+			// The second group is the intro wa_entry_conversations.
 			$limit = $num_leading + $num_intro;
-			// Order entradas conversaciones wtsapp  across, then down (or single column mode)
+			// Order wa_entry_conversations across, then down (or single column mode)
 			for ($i = $num_leading; $i < $limit AND $i < $max; $i++)
 			{
 				$this->intro_items[$i] = &$items[$i];

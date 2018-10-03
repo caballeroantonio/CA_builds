@@ -123,7 +123,7 @@ class RemcaModelCategoryForm extends RemcaModelCategory
 	 *
 	 * @param	integer	$item_id	The id of the category.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Category item data object on success, false on failure.
+	 * @return	mixed	category item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

@@ -123,7 +123,7 @@ class RemcaModelFeature_houseForm extends RemcaModelFeature_house
 	 *
 	 * @param	integer	$item_id	The id of the feature_house.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Feature_house item data object on success, false on failure.
+	 * @return	mixed	feature_house item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

@@ -129,8 +129,9 @@ $empty = $component->params->get('default_empty_field', '');
 				</div>
 			<?php //optional teaser intro text for guests ?>
 		<?php elseif ($params->get('show_main_category_noauth') == true AND  $user->get('guest') ) : ?>
-			<?php //Optional link to let them register to see the whole main_category. ?>
-			<?php if ($params->get('show_main_category_readmore')) :
+			<?php
+            //Optional link to let them register to see the whole main_category.
+			if ($params->get('show_main_category_readmore')) :
 				$menu = JFactory::getApplication()->getMenu();
 				$active = $menu->getActive();
 				$item_id = $active->id;

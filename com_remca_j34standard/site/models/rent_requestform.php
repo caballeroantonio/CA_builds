@@ -121,9 +121,9 @@ class RemcaModelRent_requestForm extends RemcaModelRent_request
 	/**
 	 * Method to get rent request data.
 	 *
-	 * @param	integer	$item_id	The id of the rent request.
+	 * @param	integer	$item_id	The id of the rent_request.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Rent Request item data object on success, false on failure.
+	 * @return	mixed	rent_request item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

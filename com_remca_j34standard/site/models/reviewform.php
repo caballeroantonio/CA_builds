@@ -123,7 +123,7 @@ class RemcaModelReviewForm extends RemcaModelReview
 	 *
 	 * @param	integer	$item_id	The id of the review.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Review item data object on success, false on failure.
+	 * @return	mixed	review item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

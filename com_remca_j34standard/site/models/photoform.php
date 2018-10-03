@@ -123,7 +123,7 @@ class RemcaModelPhotoForm extends RemcaModelPhoto
 	 *
 	 * @param	integer	$item_id	The id of the photo.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Photo item data object on success, false on failure.
+	 * @return	mixed	photo item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

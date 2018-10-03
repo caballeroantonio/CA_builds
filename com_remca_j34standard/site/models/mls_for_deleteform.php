@@ -123,7 +123,7 @@ class RemcaModelMls_for_deleteForm extends RemcaModelMls_for_delete
 	 *
 	 * @param	integer	$item_id	The id of the mls_for_delete.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Mls_for_delete item data object on success, false on failure.
+	 * @return	mixed	mls_for_delete item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

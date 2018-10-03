@@ -104,20 +104,20 @@ class RemcaViewWisheslist extends JViewLegacy
 			$num_intro   = (int) $params->def('wishlist_num_intro', 4);
 			$num_links   = (int) $params->def('wishlist_num_links', 4);
 		
-			// Preprocess the breakdown of leading, intro and linked favoritos.
+			// Preprocess the breakdown of leading, intro and linked wisheslist.
 			// This makes it much easier for the designer to just interogate the arrays.
 			$max = count($items);
 
-			// The first group is the leading favoritos.
+			// The first group is the leading wisheslist.
 			$limit = $num_leading;
 			for ($i = 0; $i < $limit AND $i < $max; $i++)
 			{
 				$this->lead_items[$i] = &$items[$i];
 			}
 
-			// The second group is the intro favoritos.
+			// The second group is the intro wisheslist.
 			$limit = $num_leading + $num_intro;
-			// Order favoritos across, then down (or single column mode)
+			// Order wisheslist across, then down (or single column mode)
 			for ($i = $num_leading; $i < $limit AND $i < $max; $i++)
 			{
 				$this->intro_items[$i] = &$items[$i];

@@ -123,7 +123,7 @@ class RemcaModelConst_languageForm extends RemcaModelConst_language
 	 *
 	 * @param	integer	$item_id	The id of the const_language.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Const_language item data object on success, false on failure.
+	 * @return	mixed	const_language item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

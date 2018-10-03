@@ -10392,7 +10392,7 @@
 			section="component"
 		/>
     </fieldset>
-    <fieldset
+    <!--<fieldset
         name="fieldset_config_fs"
         label="COM_REMCA_CONFIGS_FIELDSET_CONFIG_FS_LABEL"
     >
@@ -10450,4 +10450,3 @@
 			<option	value="0">JNO</option>
         </field>  
     </fieldset>
-</config>

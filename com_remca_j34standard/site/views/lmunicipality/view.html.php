@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Municipality View class for the RealEstateManagerCA component
+ * HTML lmunicipality View class for the realestatemanagerca component
  *
  */
 class RemcaViewLmunicipality extends JViewLegacy

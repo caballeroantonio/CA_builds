@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Track_source View class for the RealEstateManagerCA component
+ * HTML track_source View class for the realestatemanagerca component
  *
  */
 class RemcaViewTrack_sourceForm extends JViewLegacy

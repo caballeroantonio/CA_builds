@@ -123,8 +123,9 @@ $empty = $component->params->get('default_empty_field', '');
 			echo $this->loadTemplate('item_info');
 		endif;
 	?>			
-	<?php //Optional link to let them register to see the whole favorito. ?>
-	<?php if ($params->get('show_wishlist_readmore')) :
+	<?php 
+        //Optional link to let them register to see the whole wishlist.
+		if ($params->get('show_wishlist_readmore')) :
 				$link = JRoute::_(RemcaHelperRoute::getWishlistRoute($this->item->slug, 
 																							$layout,									
 																							$params->get('keep_wishlist_itemid')));

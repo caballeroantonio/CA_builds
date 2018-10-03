@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Buying Requests View class for the RealEstateManagerCA component
+ * HTML buying_request View class for the realestatemanagerca component
  *
  */
 class RemcaViewBuying_request extends JViewLegacy

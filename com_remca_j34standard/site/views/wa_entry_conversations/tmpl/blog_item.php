@@ -125,8 +125,9 @@ $empty = $component->params->get('default_empty_field', '');
 			echo $this->loadTemplate('item_info');
 		endif;
 	?>			
-	<?php //Optional link to let them register to see the whole entrada de la conversación whatsapp. ?>
-	<?php if ($params->get('show_wa_entry_conversation_readmore')) :
+	<?php 
+        //Optional link to let them register to see the whole wa_entry_conversation.
+		if ($params->get('show_wa_entry_conversation_readmore')) :
 				$link = JRoute::_(RemcaHelperRoute::getWa_entry_conversationRoute($this->item->slug, 
 																							$this->item->catid,								
 																							$layout,									

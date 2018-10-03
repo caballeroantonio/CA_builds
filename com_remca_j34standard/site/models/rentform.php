@@ -123,7 +123,7 @@ class RemcaModelRentForm extends RemcaModelRent
 	 *
 	 * @param	integer	$item_id	The id of the rent.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Rent item data object on success, false on failure.
+	 * @return	mixed	rent item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

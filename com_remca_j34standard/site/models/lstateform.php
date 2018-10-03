@@ -121,9 +121,9 @@ class RemcaModelLstateForm extends RemcaModelLstate
 	/**
 	 * Method to get state data.
 	 *
-	 * @param	integer	$item_id	The id of the state.
+	 * @param	integer	$item_id	The id of the lstate.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	State item data object on success, false on failure.
+	 * @return	mixed	lstate item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

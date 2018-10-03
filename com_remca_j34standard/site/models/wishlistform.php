@@ -121,9 +121,9 @@ class RemcaModelWishlistForm extends RemcaModelWishlist
 	/**
 	 * Method to get favorito data.
 	 *
-	 * @param	integer	$item_id	The id of the favorito.
+	 * @param	integer	$item_id	The id of the wishlist.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Favorito item data object on success, false on failure.
+	 * @return	mixed	wishlist item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

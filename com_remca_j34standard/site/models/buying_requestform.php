@@ -121,9 +121,9 @@ class RemcaModelBuying_requestForm extends RemcaModelBuying_request
 	/**
 	 * Method to get buying requests data.
 	 *
-	 * @param	integer	$item_id	The id of the buying requests.
+	 * @param	integer	$item_id	The id of the buying_request.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Buying Requests item data object on success, false on failure.
+	 * @return	mixed	buying_request item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

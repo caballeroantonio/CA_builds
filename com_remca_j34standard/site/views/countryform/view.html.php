@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Country View class for the RealEstateManagerCA component
+ * HTML country View class for the realestatemanagerca component
  *
  */
 class RemcaViewCountryForm extends JViewLegacy

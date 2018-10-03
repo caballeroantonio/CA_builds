@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Mls_for_delete View class for the RealEstateManagerCA component
+ * HTML mls_for_delete View class for the realestatemanagerca component
  *
  */
 class RemcaViewMls_for_deleteForm extends JViewLegacy

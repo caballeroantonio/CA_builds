@@ -39,9 +39,81 @@ class ExtJSHelper
         return $this->_fields;
     }
 
-    public function parse($object_name){
-        $columns = array();
-        $fields = array();
+    public function parse($object_name, $object_plural_name){
+        $this->_object_plural_name = $object_plural_name;
+        $columns = [];
+        $fields = [];
+        $grid = [
+            'title' => JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS'),
+            'store' => $this->_object_plural_name,
+/*
+           _tbar_: [
+              { 
+                xtype: 'button', 
+                text: 'Añadir nuevo registro',
+                icon: 'http://localhost/gpcb/resources_20170226/tsjdf_libros/images/add.png',
+                  handler: function(grid, rowIndex, colIndex) {
+                    jQuery('#collapseModal').modal('show');
+                  }
+              }
+            ],
+ */
+            'bbar' => [
+                'xtype' => 'pagingtoolbar',
+                'displayInfo' => true,
+                'store' => $this->_object_plural_name,
+                /*_listeners_: {
+                    beforechange: function( pagingtoolbar, page, eOpts){
+                        this.setActiveRecord(null);
+                    },
+                    scope: this
+                },
+                _items_:[
+                    {
+                        xtype: 'printbookbutton',
+                        scope: this,
+                    }
+                ]*/
+            ],
+            'selType' => 'rowmodel',
+            'plugins' => [
+                [
+                    'ptype' => 'rowediting',
+                ],
+            ],
+            'height' => 300,
+            'width' => '100%',
+            'renderTo' => 'extjs-content',
+            'viewConfig' => [
+                    'loadingText' => 'Espere un momento...',
+            ],
+            
+            'id' => 'myGrid',
+        ];
+        
+        $app = [
+            'name' => 'remca',
+            'stores' => [],
+            'static_stores' => [],
+            'paths' => [
+                'remca' => 'media/com_remca/extjs',
+            ],
+            'launch' => $this->insertAs_Is(<<<EOD
+    function() {
+		Ext.getBody().mask("Loading...");
+        for(i = 0; i < this.static_stores.length; i++ ){
+            Ext.create("remca.store."+this.static_stores[i]);
+        }
+        for(i = 0; i < this.stores.length; i++ ){
+                Ext.create(this.stores[i]).load({
+                scope: this,
+                callback: this.onStoresReady
+            });
+        }
+    }
+EOD
+),
+        ];
         
         $path = JPATH_COMPONENT."/models/forms/{$object_name}.xml";
         $form = simplexml_load_file($path) or die("Error: Can not create {$object_name} object");
@@ -56,16 +128,16 @@ class ExtJSHelper
                 $label = JText::_((string)$attributes->label);
                 $description = JText::_((string)$attributes->description);
                 
-                $column = array(
+                $column = [
                     'xtype' => 'gridcolumn',
                     'dataIndex' => $name,
                     'text' => $label,
                     'tooltip'=> $description,
-                );
+                ];
                 
-                $field = array(
+                $field = [
                     'name' => $name,
-                );
+                ];
                 
                 
                 switch ($type){
@@ -74,28 +146,59 @@ class ExtJSHelper
                         break;
                     case 'editor':
                         $field['type'] = 'string';
-                        $column['editor'] = array(
+                        $column['editor'] = [
                             'xtype' => 'textareafield',
                             'allowBlank' => !$required,
-                        );
+                        ];
+                        $column['flex'] = 1;
+                        
+                        $grid['plugins'][] = [
+                    'ptype' => 'rowexpander',
+                    'expandOnDblClick' => false,
+                    'rowBodyTpl' => $this->insertAs_Is(<<<EOD
+new Ext.XTemplate(
+    '{{$name}}',
+    {
+        insertBreaks: function(value){
+            if(!value)
+                return;
+            return value.replace(/\\n/g, '</br>');
+        },
+        formatDate: function(value){
+            return Ext.Date.format(value, 'Y-m-d');
+        },
+        formatDateTime: function(value){
+            return Ext.Date.format(value, 'd-m-Y g:i A');
+        },
+        getStoreValue: function(store,value, labelField){
+            row = Ext.StoreMgr.get(store).getById(value);
+            if(row !== null)
+                return row.get(labelField);
+        },
+    }
+)
+EOD
+                    ),
+                ];
+                        
                         break;
                     case 'calendar':
                         $field['type'] = 'date';
                         $field['dateFormat'] = 'Y-m-d H:i:s';
                         $column['xtype'] = 'datecolumn';
                         $column['format'] = 'Y-m-d H:i:s';
-                        $column['editor'] = array(
+                        $column['editor'] = [
                             'xtype' => 'datefield',
                             'format' => 'Y-m-d',
                             'dateFormat' => 'Y-m-d',
                             'allowBlank' => !$required,
-                        );
+                        ];
                         break;
                     case 'tel':
-                        $column['editor'] = array(
+                        $column['editor'] = [
                             'xtype' => 'textfield',
                             'allowBlank' => !$required,
-                        );
+                        ];
                         break;
                     case 'categoryedit':
                         $column['renderer'] = $this->insertAs_Is("function(value, metaData, record, rowIndex, colIndex, store, view) {
@@ -103,7 +206,7 @@ class ExtJSHelper
                                 if(value !== null)
                                     return value.get('title');
                             }");
-                        $column['editor'] = array(
+                        $column['editor'] = [
                             'xtype' => 'combobox',
                             'fieldCls' => 'Ext.form.field.ComboBox',
                             'emptyText' => 'Select',
@@ -113,11 +216,22 @@ class ExtJSHelper
                             'displayField' => 'title',
                             'valueField' => 'id',
                             'allowBlank' => !$required,
-                        );
+                        ];
                         $field['type'] = 'int';
+                        
+                        $app['stores'][] = 'categories';
                         break;
                     case 'list':
-                        $column['editor'] = array(
+                        $column['renderer'] = $this->insertAs_Is("function(value, metaData, record, rowIndex, colIndex, store, view) {
+                                try{
+                                    value = Ext.StoreMgr.get('{$name}').getById(value);
+                                    if(value !== null)
+                                        return value.get('value');
+                                }catch(e){
+                                    return value;
+                                }
+                            }");
+                        $column['editor'] = [
                             'xtype' => 'combobox',
                             'fieldCls' => 'Ext.form.field.ComboBox',
                             'emptyText' => 'Select',
@@ -127,7 +241,8 @@ class ExtJSHelper
                             'displayField' => 'value',
                             'valueField' => 'id',
                             'allowBlank' => !$required,
-                        );
+                        ];
+                        $app['static_stores'][] = $name;
                         break;
                     default :
                         $vars = explode('_', $type, 2);
@@ -137,7 +252,7 @@ class ExtJSHelper
                                     if(value !== null)
                                         return value.get('name');
                                 }");
-                            $column['editor'] = array(
+                            $column['editor'] = [
                                 'xtype' => 'combobox',
                                 'fieldCls' => 'Ext.form.field.ComboBox',
                                 'emptyText' => 'Select',
@@ -147,8 +262,9 @@ class ExtJSHelper
                                 'displayField' => 'name',
                                 'valueField' => 'id',
                                 'allowBlank' => !$required,
-                            );
+                            ];
                             $field['type'] = 'int';
+                            $app['stores'][] = $vars[1];
                             break;
                         }
                         break;
@@ -171,32 +287,9 @@ class ExtJSHelper
                         unset($column['editor']);
                         break;
                     case 'state':
-                        $column['renderer'] = $this->insertAs_Is("function(value, metaData, record, rowIndex, colIndex, store, view) {
-                                try{
-                                    value = Ext.StoreMgr.get('states').getById(value);
-                                    if(value !== null)
-                                        return value.get('value');
-                                }catch(e){
-                                    return value;
-                                }
-                            }");
-                        $column['hidden'] = TRUE;                        
-                        $column['editor'] = array(
-                            'xtype' => 'combobox',
-                            'fieldCls' => 'Ext.form.field.ComboBox',
-                            'emptyText' => 'Select',
-                            'forceSelection' => true,
-                            'queryMode' => 'local',
-                            'store' => 'states',
-                            'displayField' => 'value',
-                            'valueField' => 'id',
-                            'allowBlank' => !$required,
-                        );
+                        $column['hidden'] = TRUE;
                         $field['type'] = 'int';
                         break;
-                    
-                    
-						
                 }
                 
                 $columns[$name] = $column;
@@ -204,10 +297,39 @@ class ExtJSHelper
             }
         }
         
+        $app['stores'][] = $object_plural_name;
+        
+        
         $this->_columns = $columns;
         $this->_fields = $fields;
+        $this->_grid = $grid;
+        $this->_app = $app;
     }
     
+    public function getAppConfiguration(){
+        $app = $this->_app;
+        $gridConfiguration = $this->encode($this->getGridConfiguration());
+        $app['onStoresReady'] = $this->insertAs_Is(<<<EOD
+    function() {
+        for(i = 0; i < this.stores.length; i++ ){
+            store = this.stores[i].replace('remca.store.','');
+            if(Ext.StoreManager.get(store).isLoading())
+                return;
+        }
+         Ext.create('Ext.grid.Panel', {$gridConfiguration});
+		Ext.getBody().unmask();        
+        window.dispatchEvent(new Event('resize'));
+    }
+EOD
+);
+        return $app;
+    }
+    
+    public function getGridConfiguration(){
+        $grid = $this->_grid;
+        $grid['columns'] = array_values($this->getViewColumns());
+        return $grid;
+    }
     
     private $escapers = [];
     private $replacements = [];

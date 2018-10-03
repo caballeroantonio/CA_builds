@@ -123,7 +123,7 @@ class RemcaModelOrders_detailForm extends RemcaModelOrders_detail
 	 *
 	 * @param	integer	$item_id	The id of the orders_detail.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Orders_detail item data object on success, false on failure.
+	 * @return	mixed	orders_detail item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

@@ -123,7 +123,7 @@ class RemcaModelMain_categoryForm extends RemcaModelMain_category
 	 *
 	 * @param	integer	$item_id	The id of the main_category.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Main_category item data object on success, false on failure.
+	 * @return	mixed	main_category item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

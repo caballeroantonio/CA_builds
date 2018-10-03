@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Review View class for the RealEstateManagerCA component
+ * HTML review View class for the realestatemanagerca component
  *
  */
 class RemcaViewReview extends JViewLegacy

@@ -124,7 +124,8 @@ class lstatesApp extends ExtJSHelper{
     
 }
 $extJSHelper = new lstatesApp();
-$extJSHelper->parse('lstate');
+$extJSHelper->parse('lstate', 'lstates');
+$app = $extJSHelper->getAppConfiguration();
 ?>
 <link rel="stylesheet" type="text/css" href="libraries/extjs/classic/theme-classic/resources/theme-classic-all.css"/>
 <script type="text/javascript" src="libraries/extjs/ext-all.js"></script>
@@ -172,97 +173,14 @@ $extJSHelper->parse('lstate');
         },
         fields: <?= $extJSHelper->encode(array_values($extJSHelper->getModelFields())) ?>,
     });
-        Ext.define('remca.store.lstates', {
-            extend: 'Ext.data.Store',
-            remoteSort: true,
-            storeId: 'lstates',
-            model: 'remca.model.lstate',
-            autoSync: true,
-        });
-		
-		//if type = list
-        Ext.define('remca.store.action', {
-            extend: 'Ext.data.Store',
-            storeId: 'action',
-            fields: ['id', 'value'],
-            data : [
-                {'id':'', 'value':''},
-                {'id':'Pide', 'value':'Pide'},
-                {'id':'Ofrece', 'value':'Ofrece'},
-            ]
-        });
-
-Ext.application({
-    name: 'remca',
-    stores: [
-        'categories',//if categories
-        'wa_title_conversations',//each modal
-        'lstates',//current store
-    ],
-    paths: {
-        'remca': 'media/com_remca/extjs',
-    },
-    launch: function() {
-		//if states no ponerlo en Ext.application porque ya tiene datos cargados y pintaría 2 grid
-		Ext.create('remca.store.states');
-		//if type
-        Ext.create('remca.store.action');
-
-	for(i = 0; i < this.stores.length; i++ ){
-		Ext.create(this.stores[i]).load({
-                scope: this,
-                callback: this.onStoresReady
-            });
-	}
-    },
-    onStoresReady: function(){
-        for(i = 0; i < this.stores.length; i++ ){
-            store = this.stores[i].replace('remca.store.','');
-            if(Ext.StoreManager.get(store).isLoading())
-                return;
-            }
-            
-            Ext.create('Ext.grid.Panel', {
-            title: '<?= JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS') ?>',
-            store: 'lstates',
-            columns: <?= $extJSHelper->encode(array_values($extJSHelper->getViewColumns())) ?>,
-           _tbar_: [
-              { 
-                xtype: 'button', 
-                text: 'Añadir nuevo registro',
-                icon: 'http://localhost/gpcb/resources_20170226/tsjdf_libros/images/add.png',
-                  handler: function(grid, rowIndex, colIndex) {
-                    jQuery('#collapseModal').modal('show');
-                  }
-              }
-            ],
-            bbar: {
-                xtype: 'pagingtoolbar',
-                displayInfo: true,
-                store: 'lstates',
-                _listeners_: {
-                    beforechange: function( pagingtoolbar, page, eOpts){
-                        this.setActiveRecord(null);
-                    },
-                    scope: this
-                },
-                _items_:[
-                    {
-                        xtype: 'printbookbutton',
-                        scope: this,
-                    }
-                ]
-            },
-            selType: 'rowmodel',
-            plugins: [
-                Ext.create('Ext.grid.plugin.RowEditing')
-            ],
-            height: 300,
-            width: '100%',
-            renderTo: 'extjs-content',
-        });
-    },
-});
+    Ext.define('remca.store.lstates', {
+        extend: 'Ext.data.Store',
+        remoteSort: true,
+        storeId: 'lstates',
+        model: 'remca.model.lstate',
+        autoSync: true,
+    });
+Ext.application(<?= $extJSHelper->encode($app) ?>);
 </script>
 <div id="extjs-content"></div>
 			<div>

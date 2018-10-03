@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Const View class for the RealEstateManagerCA component
+ * HTML const View class for the realestatemanagerca component
  *
  */
 class RemcaViewConstForm extends JViewLegacy

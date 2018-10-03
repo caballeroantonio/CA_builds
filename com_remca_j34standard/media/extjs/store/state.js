@@ -1,11 +1,11 @@
-Ext.define('remca.store.states', {
+Ext.define('remca.store.state', {
     extend: 'Ext.data.Store',
 
     constructor: function(cfg) {
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({
-            storeId: 'states',
+            storeId: 'state',
             fields:['id', 'value'],
             data:{'items':[
                 {'id': 1, 'value': 'Publicado'},
@@ -17,7 +17,7 @@ Ext.define('remca.store.states', {
                 type: 'memory',
                 reader: {
                     type: 'json',
-                    root: 'items'
+                    rootProperty: 'items',//extjs 4.2 and before name is root
                 }
             }
         }, cfg)]);

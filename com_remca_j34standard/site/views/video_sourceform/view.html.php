@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Video_source View class for the RealEstateManagerCA component
+ * HTML video_source View class for the realestatemanagerca component
  *
  */
 class RemcaViewVideo_sourceForm extends JViewLegacy

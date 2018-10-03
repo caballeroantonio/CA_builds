@@ -123,7 +123,7 @@ class RemcaModelCountryForm extends RemcaModelCountry
 	 *
 	 * @param	integer	$item_id	The id of the country.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Country item data object on success, false on failure.
+	 * @return	mixed	country item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

@@ -123,7 +123,7 @@ class RemcaModelMime_typeForm extends RemcaModelMime_type
 	 *
 	 * @param	integer	$item_id	The id of the mime_type.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Mime_type item data object on success, false on failure.
+	 * @return	mixed	mime_type item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

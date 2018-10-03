@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Título De La Conversación Whatsapp View class for the RealEstateManagerCA component
+ * HTML wa_title_conversation View class for the realestatemanagerca component
  *
  */
 class RemcaViewWa_title_conversationForm extends JViewLegacy

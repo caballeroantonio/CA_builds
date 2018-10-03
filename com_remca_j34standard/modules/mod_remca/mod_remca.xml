@@ -27,7 +27,7 @@
 <extension type="module" version="3.4" client="site" method="upgrade">
     <name>mod_remca</name>
     <author>caballeroantonio</author>
-    <creationDate>September 2018</creationDate>
+    <creationDate>October 2018</creationDate>
     <copyright>
     </copyright>
     <license>

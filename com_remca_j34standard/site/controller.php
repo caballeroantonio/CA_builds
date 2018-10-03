@@ -168,8 +168,7 @@ edité el menú login para que hiciera redirect a este componente
             $db->query();	
             $result['total'] = $db->loadResult();
 
-            echo json_encode($result);
-            exit();
+            $this->finish_extjs($result);
         }
         
         /*        
@@ -213,8 +212,16 @@ edité el menú login para que hiciera redirect a este componente
         }
 
         public function finish_extjs($result){
-            echo json_encode($result);
-            exit();     
+            $callback = JRequest::getCmd('callback');
+            if ($callback) {
+                header('Content-Type: text/javascript');
+                echo $callback . '(' . json_encode($result) . ');';
+            } else {
+                header('Content-Type: application/x-json');
+                echo json_encode($result);
+            }
+            
+            exit();    
         }
         
         /*        

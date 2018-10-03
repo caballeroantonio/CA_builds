@@ -123,7 +123,7 @@ class RemcaModelTrack_sourceForm extends RemcaModelTrack_source
 	 *
 	 * @param	integer	$item_id	The id of the track_source.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Track_source item data object on success, false on failure.
+	 * @return	mixed	track_source item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

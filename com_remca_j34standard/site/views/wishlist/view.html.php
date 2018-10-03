@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Favorito View class for the RealEstateManagerCA component
+ * HTML wishlist View class for the realestatemanagerca component
  *
  */
 class RemcaViewWishlist extends JViewLegacy

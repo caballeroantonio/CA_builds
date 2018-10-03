@@ -134,9 +134,9 @@ class RemcaModelWa_entry_conversationForm extends RemcaModelWa_entry_conversatio
 	/**
 	 * Method to get entrada de la conversación whatsapp data.
 	 *
-	 * @param	integer	$item_id	The id of the entrada de la conversación whatsapp.
+	 * @param	integer	$item_id	The id of the wa_entry_conversation.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Entrada De La Conversación Whatsapp item data object on success, false on failure.
+	 * @return	mixed	wa_entry_conversation item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{

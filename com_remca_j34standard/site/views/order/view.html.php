@@ -29,7 +29,7 @@
 defined('_JEXEC') or die;
 
 /**
- * HTML Order View class for the RealEstateManagerCA component
+ * HTML order View class for the realestatemanagerca component
  *
  */
 class RemcaViewOrder extends JViewLegacy

@@ -25,7 +25,7 @@ Ext.define('remca.store.categories', {
                 reader: {
                     type: 'json',
                     messageProperty: 'message',
-                    root: 'data'
+                    rootProperty: 'data',//extjs 4.2 and before name is root
                 }
             },
             fields: [

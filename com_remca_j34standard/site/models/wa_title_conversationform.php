@@ -121,9 +121,9 @@ class RemcaModelWa_title_conversationForm extends RemcaModelWa_title_conversatio
 	/**
 	 * Method to get título de la conversación whatsapp data.
 	 *
-	 * @param	integer	$item_id	The id of the título de la conversación whatsapp.
+	 * @param	integer	$item_id	The id of the wa_title_conversation.
 	 * @param	boolean		Get recursively item children - true or false
-	 * @return	mixed	Título De La Conversación Whatsapp item data object on success, false on failure.
+	 * @return	mixed	wa_title_conversation item data object on success, false on failure.
 	 */
 	public function getItem($item_id = null, $recursive = false)
 	{
