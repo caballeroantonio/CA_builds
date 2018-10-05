@@ -1,24 +1,18 @@
 Ext.define('boletin.store.id_medio_notificacion', {
     extend: 'Ext.data.Store',
+    storeId: 'id_medio_notificacion',
 
-    constructor: function(cfg) {
-        var me = this;
-        cfg = cfg || {};
-        me.callParent([Ext.apply({
-            storeId: 'id_medio_notificacion',
-            fields:['id', 'value'],
-            data:{'items':[
-                {'id': 'Estrados de la autoridad', 'value': 'Estrados de la autoridad'},
-                {'id': 'Notificaci髇 personal', 'value': 'Notificaci髇 personal'},
-                {'id': 'Notificaci髇 por Buz髇 Tributario', 'value': 'Notificaci髇 por Buz髇 Tributario'},
-            ]},
-            proxy: {
-                type: 'memory',
-                reader: {
-                    type: 'json',
-                    root: 'items'
-                }
-            }
-        }, cfg)]);
+    fields:['id', 'value'],
+    data:{'items':[
+        {'id': 'Estrados de la autoridad', 'value': 'Estrados de la autoridad'},
+        {'id': 'Notificaci贸n personal', 'value': 'Notificaci贸n personal'},
+        {'id': 'Notificaci贸n por Buz贸n Tributario', 'value': 'Notificaci贸n por Buz贸n Tributario'},
+    ]},
+    proxy: {
+        type: 'memory',
+        reader: {
+            type: 'json',
+            rootProperty: 'items',//extjs 4.2 and before name is root
+        }
     }
 });

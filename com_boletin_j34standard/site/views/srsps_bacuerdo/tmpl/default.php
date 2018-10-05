@@ -181,7 +181,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo ($this->item->fecha_oficio != '' AND $this->item->fecha_oficio != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_oficio, 'Y-m-d', true) : $empty;
+									echo ($this->item->fecha_oficio != '' AND $this->item->fecha_oficio != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_oficio, '%Y-%m-%d', true) : $empty;
 								?>
 							</span>
 						</div>	
@@ -230,7 +230,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo ($this->item->fecha_notificacion != '' AND $this->item->fecha_notificacion != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_notificacion, 'Y-m-d', true) : $empty;
+									echo ($this->item->fecha_notificacion != '' AND $this->item->fecha_notificacion != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_notificacion, '%Y-%m-%d', true) : $empty;
 								?>
 							</span>
 						</div>	
@@ -242,7 +242,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo ($this->item->fecha_surte != '' AND $this->item->fecha_surte != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_surte, 'Y-m-d', true) : $empty;
+									echo ($this->item->fecha_surte != '' AND $this->item->fecha_surte != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_surte, '%Y-%m-%d', true) : $empty;
 								?>
 							</span>
 						</div>	

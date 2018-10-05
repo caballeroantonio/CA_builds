@@ -43,6 +43,23 @@ class ExtJSHelper
         $this->_object_plural_name = $object_plural_name;
         $columns = [];
         $fields = [];
+        $grid = [
+            'title' => JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS'),
+            'store' => $this->_object_plural_name,
+            'plugins' => [
+                [
+                    'ptype' => 'gridfilters',
+                ],
+                [
+                    'ptype' => 'rowediting',
+                ],
+            ],
+            'height' => 300,
+            'width' => '100%',
+            'renderTo' => 'extjs-content',
+            'id' => 'myGrid',
+        ];
+        
         $app = [
             'name' => 'boletin',
             'stores' => [],
@@ -51,12 +68,14 @@ class ExtJSHelper
             ],
             'launch' => $this->insertAs_Is(<<<EOD
     function() {
+		Ext.getBody().mask("Loading...");
         for(i = 0; i < this.stores.length; i++ ){
-                    
-                Ext.create(this.stores[i]).load({
-                scope: this,
-                callback: this.onStoresReady
-            });
+                store = Ext.create(this.stores[i]);
+				if(!store.data.length)
+					store.load({
+						scope: this,
+						callback: this.onStoresReady
+					});
         }
     }
 EOD
@@ -81,6 +100,7 @@ EOD
                     'dataIndex' => $name,
                     'text' => $label,
                     'tooltip'=> $description,
+                    'filter' => [],
                 ];
                 
                 $field = [
@@ -98,6 +118,37 @@ EOD
                             'xtype' => 'textareafield',
                             'allowBlank' => !$required,
                         ];
+                        $column['flex'] = 1;
+                        
+                        $grid['plugins'][] = [
+                    'ptype' => 'rowexpander',
+                    'expandOnDblClick' => false,
+                    'rowBodyTpl' => $this->insertAs_Is(<<<EOD
+new Ext.XTemplate(
+    '{{$name}}',
+    {
+        insertBreaks: function(value){
+            if(!value)
+                return;
+            return value.replace(/\\n/g, '</br>');
+        },
+        formatDate: function(value){
+            return Ext.Date.format(value, 'Y-m-d');
+        },
+        formatDateTime: function(value){
+            return Ext.Date.format(value, 'd-m-Y g:i A');
+        },
+        getStoreValue: function(store,value, labelField){
+            row = Ext.StoreMgr.get(store).getById(value);
+            if(row !== null)
+                return row.get(labelField);
+        },
+    }
+)
+EOD
+                    ),
+                ];
+                        
                         break;
                     case 'calendar':
                         $field['type'] = 'date';
@@ -141,7 +192,7 @@ EOD
                     case 'list':
                         $column['renderer'] = $this->insertAs_Is("function(value, metaData, record, rowIndex, colIndex, store, view) {
                                 try{
-                                    value = Ext.StoreMgr.get('states').getById(value);
+                                    value = Ext.StoreMgr.get('{$name}').getById(value);
                                     if(value !== null)
                                         return value.get('value');
                                 }catch(e){
@@ -181,6 +232,7 @@ EOD
                                 'allowBlank' => !$required,
                             ];
                             $field['type'] = 'int';
+                            $app['stores'][] = $vars[1];
                             break;
                         }
                         break;
@@ -218,6 +270,7 @@ EOD
         
         $this->_columns = $columns;
         $this->_fields = $fields;
+        $this->_grid = $grid;
         $this->_app = $app;
     }
     
@@ -232,6 +285,8 @@ EOD
                 return;
         }
          Ext.create('Ext.grid.Panel', {$gridConfiguration});
+		Ext.getBody().unmask();        
+        window.dispatchEvent(new Event('resize'));
     }
 EOD
 );
@@ -239,48 +294,8 @@ EOD
     }
     
     public function getGridConfiguration(){
-        $grid = [
-            
-            'title' => JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS'),
-            'store' => $this->_object_plural_name,
-            'columns' => array_values($this->getViewColumns()),
-/*
-           _tbar_: [
-              { 
-                xtype: 'button', 
-                text: 'Añadir nuevo registro',
-                icon: 'http://localhost/gpcb/resources_20170226/tsjdf_libros/images/add.png',
-                  handler: function(grid, rowIndex, colIndex) {
-                    jQuery('#collapseModal').modal('show');
-                  }
-              }
-            ],
- */
-            'bbar' => [
-                'xtype' => 'pagingtoolbar',
-                'displayInfo' => true,
-                'store' => $this->_object_plural_name,
-                /*_listeners_: {
-                    beforechange: function( pagingtoolbar, page, eOpts){
-                        this.setActiveRecord(null);
-                    },
-                    scope: this
-                },
-                _items_:[
-                    {
-                        xtype: 'printbookbutton',
-                        scope: this,
-                    }
-                ]*/
-            ],
-            'selType' => 'rowmodel',
-            'plugins' => [
-                $this->insertAs_Is('Ext.create("Ext.grid.plugin.RowEditing")'),
-            ],
-            'height' => 300,
-            'width' => '100%',
-            'renderTo' => 'extjs-content',
-        ];
+        $grid = $this->_grid;
+        $grid['columns'] = array_values($this->getViewColumns());
         return $grid;
     }
     

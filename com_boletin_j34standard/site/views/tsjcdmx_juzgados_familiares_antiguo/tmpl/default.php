@@ -311,7 +311,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo ($this->item->fecha_acuerdo != '' AND $this->item->fecha_acuerdo != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_acuerdo, 'Y-m-d', true) : $empty;
+									echo ($this->item->fecha_acuerdo != '' AND $this->item->fecha_acuerdo != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_acuerdo, '%Y-%m-%d', true) : $empty;
 								?>
 							</span>
 						</div>	
@@ -323,7 +323,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo ($this->item->fecha_publicacion != '' AND $this->item->fecha_publicacion != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_publicacion, 'Y-m-d', true) : $empty;
+									echo ($this->item->fecha_publicacion != '' AND $this->item->fecha_publicacion != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_publicacion, '%Y-%m-%d', true) : $empty;
 								?>
 							</span>
 						</div>	

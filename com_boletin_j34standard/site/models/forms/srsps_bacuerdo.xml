@@ -88,7 +88,7 @@
             class="inputbox"
 			size="22"
 			maxlength="25"
-			format="Y-m-d"
+			format="%Y-%m-%d"
 			filter="user_utc"
 			required="true"
         >
@@ -126,7 +126,7 @@
             class="inputbox"
 			size="22"
 			maxlength="25"
-			format="Y-m-d"
+			format="%Y-%m-%d"
 			filter="user_utc"
 			required="true"
         >
@@ -140,7 +140,7 @@
             class="inputbox"
 			size="22"
 			maxlength="25"
-			format="Y-m-d"
+			format="%Y-%m-%d"
 			filter="user_utc"
 			required="true"
         >

@@ -174,7 +174,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo ($this->item->f_resolucion != '' AND $this->item->f_resolucion != '0000-00-00 00:00:00') ? JHtml::date($this->item->f_resolucion, 'Y-m-d', true) : $empty;
+									echo ($this->item->f_resolucion != '' AND $this->item->f_resolucion != '0000-00-00 00:00:00') ? JHtml::date($this->item->f_resolucion, '%Y-%m-%d', true) : $empty;
 								?>
 							</span>
 						</div>	
@@ -210,7 +210,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo ($this->item->f_inicio != '' AND $this->item->f_inicio != '0000-00-00 00:00:00') ? JHtml::date($this->item->f_inicio, 'Y-m-d', true) : $empty;
+									echo ($this->item->f_inicio != '' AND $this->item->f_inicio != '0000-00-00 00:00:00') ? JHtml::date($this->item->f_inicio, '%Y-%m-%d', true) : $empty;
 								?>
 							</span>
 						</div>	
@@ -222,7 +222,7 @@ $empty = $component->params->get('default_empty_field', '');
 							</label>
 							<span>
 								<?php
-									echo ($this->item->f_fin != '' AND $this->item->f_fin != '0000-00-00 00:00:00') ? JHtml::date($this->item->f_fin, 'Y-m-d', true) : $empty;
+									echo ($this->item->f_fin != '' AND $this->item->f_fin != '0000-00-00 00:00:00') ? JHtml::date($this->item->f_fin, '%Y-%m-%d', true) : $empty;
 								?>
 							</span>
 						</div>	

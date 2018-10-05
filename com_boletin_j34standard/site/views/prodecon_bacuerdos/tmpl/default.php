@@ -232,7 +232,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_prodecon_bacuerdo_fecha',1)) : ?>
 						<td class="list-fecha">
 							<?php 
-								echo ($item->fecha != '' AND $item->fecha != '0000-00-00 00:00:00') ? JHtml::date($item->fecha, 'Y-m-d', true) : $empty;
+								echo ($item->fecha != '' AND $item->fecha != '0000-00-00 00:00:00') ? JHtml::date($item->fecha, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>

@@ -354,14 +354,14 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_tsjcdmx_juzgados_civiles_antiguo_fecha_acuerdo',1)) : ?>
 						<td class="list-fecha_acuerdo">
 							<?php 
-								echo ($item->fecha_acuerdo != '' AND $item->fecha_acuerdo != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_acuerdo, 'Y-m-d', true) : $empty;
+								echo ($item->fecha_acuerdo != '' AND $item->fecha_acuerdo != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_acuerdo, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
 					<?php if ($this->params->get('list_show_tsjcdmx_juzgados_civiles_antiguo_fecha_publicacion',1)) : ?>
 						<td class="list-fecha_publicacion">
 							<?php 
-								echo ($item->fecha_publicacion != '' AND $item->fecha_publicacion != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_publicacion, 'Y-m-d', true) : $empty;
+								echo ($item->fecha_publicacion != '' AND $item->fecha_publicacion != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_publicacion, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>

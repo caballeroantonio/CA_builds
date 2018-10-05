@@ -200,7 +200,7 @@ $use_def_list = (
 				<dd class="field">
 					<strong><?php echo JText::_('COM_BOLETIN_PRODECON_BACUERDOS_FIELD_FECHA_LABEL'); ?></strong>
 					<?php
-						echo ($this->item->fecha != '' AND $this->item->fecha != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha, 'Y-m-d', true) : $empty;
+						echo ($this->item->fecha != '' AND $this->item->fecha != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha, '%Y-%m-%d', true) : $empty;
 					?>
 				</dd>
 			<?php endif; ?>

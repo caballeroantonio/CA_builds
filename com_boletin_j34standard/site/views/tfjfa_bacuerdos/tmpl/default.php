@@ -219,7 +219,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_tfjfa_bacuerdo_fecha_boletin',1)) : ?>
 						<td class="list-fecha_boletin">
 							<?php 
-								echo ($item->fecha_boletin != '' AND $item->fecha_boletin != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_boletin, 'Y-m-d', true) : $empty;
+								echo ($item->fecha_boletin != '' AND $item->fecha_boletin != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_boletin, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>

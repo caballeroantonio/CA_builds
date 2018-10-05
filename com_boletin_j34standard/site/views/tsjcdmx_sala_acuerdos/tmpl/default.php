@@ -222,14 +222,14 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_tsjcdmx_sala_acuerdo_fecha_acuerdo',1)) : ?>
 						<td class="list-fecha_acuerdo">
 							<?php 
-								echo ($item->fecha_acuerdo != '' AND $item->fecha_acuerdo != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_acuerdo, 'Y-m-d', true) : $empty;
+								echo ($item->fecha_acuerdo != '' AND $item->fecha_acuerdo != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_acuerdo, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
 					<?php if ($this->params->get('list_show_tsjcdmx_sala_acuerdo_fecha_boletin',1)) : ?>
 						<td class="list-fecha_boletin">
 							<?php 
-								echo ($item->fecha_boletin != '' AND $item->fecha_boletin != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_boletin, 'Y-m-d', true) : $empty;
+								echo ($item->fecha_boletin != '' AND $item->fecha_boletin != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_boletin, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>

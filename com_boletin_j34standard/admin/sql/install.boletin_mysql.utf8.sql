@@ -29,11 +29,11 @@
 #DROP TABLE IF EXISTS `#__boletin_tsjcdmx_juzgados_familiares_antiguos`;
 CREATE TABLE IF NOT EXISTS `#__boletin_tsjcdmx_juzgados_familiares_antiguos` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_acuerdo` INT(20) NOT NULL DEFAULT '0' COMMENT 'Acuerdo',
+  `id_acuerdo` bigint(20) NOT NULL DEFAULT '0' COMMENT 'Acuerdo',
   `juzgado` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Juzgado',
   `expediente` INT(11) NOT NULL DEFAULT '0' COMMENT 'Expediente',
   `anio` INT(11) NOT NULL DEFAULT '0' COMMENT 'Año judicial',
-  `bis` INT(11) NOT NULL DEFAULT '0' COMMENT 'Bis',
+  `bis` INT(11) DEFAULT NULL COMMENT 'Bis',
   `tipo` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Tipo de juicio',
   `actor` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Actor',
   `demandado` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Demandado',
@@ -58,11 +58,11 @@ CREATE TABLE IF NOT EXISTS `#__boletin_tsjcdmx_juzgados_familiares_antiguos` (
 #DROP TABLE IF EXISTS `#__boletin_tsjcdmx_juzgados_civiles_antiguos`;
 CREATE TABLE IF NOT EXISTS `#__boletin_tsjcdmx_juzgados_civiles_antiguos` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_acuerdo` INT(20) NOT NULL DEFAULT '0' COMMENT 'Acuerdo',
+  `id_acuerdo` bigint(20) NOT NULL DEFAULT '0' COMMENT 'Acuerdo',
   `juzgado` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Juzgado',
   `expediente` INT(11) NOT NULL DEFAULT '0' COMMENT 'Expediente',
   `anio` INT(11) NOT NULL DEFAULT '0' COMMENT 'Año judicial',
-  `bis` INT(11) NOT NULL DEFAULT '0' COMMENT 'Bis',
+  `bis` INT(11) DEFAULT NULL COMMENT 'Bis',
   `tipo` VARCHAR(45) NOT NULL DEFAULT '' COMMENT 'Tipo de juicio',
   `actor` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Actor',
   `demandado` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'Demandado',

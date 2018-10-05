@@ -246,7 +246,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_rsps_bacuerdo_f_resolucion',1)) : ?>
 						<td class="list-f_resolucion">
 							<?php 
-								echo ($item->f_resolucion != '' AND $item->f_resolucion != '0000-00-00 00:00:00') ? JHtml::date($item->f_resolucion, 'Y-m-d', true) : $empty;
+								echo ($item->f_resolucion != '' AND $item->f_resolucion != '0000-00-00 00:00:00') ? JHtml::date($item->f_resolucion, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
@@ -267,14 +267,14 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_rsps_bacuerdo_f_inicio',1)) : ?>
 						<td class="list-f_inicio">
 							<?php 
-								echo ($item->f_inicio != '' AND $item->f_inicio != '0000-00-00 00:00:00') ? JHtml::date($item->f_inicio, 'Y-m-d', true) : $empty;
+								echo ($item->f_inicio != '' AND $item->f_inicio != '0000-00-00 00:00:00') ? JHtml::date($item->f_inicio, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
 					<?php if ($this->params->get('list_show_rsps_bacuerdo_f_fin',1)) : ?>
 						<td class="list-f_fin">
 							<?php 
-								echo ($item->f_fin != '' AND $item->f_fin != '0000-00-00 00:00:00') ? JHtml::date($item->f_fin, 'Y-m-d', true) : $empty;
+								echo ($item->f_fin != '' AND $item->f_fin != '0000-00-00 00:00:00') ? JHtml::date($item->f_fin, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>

@@ -273,7 +273,7 @@ $use_def_list = (
 				<dd class="field">
 					<strong><?php echo JText::_('COM_BOLETIN_TSJCDMX_JUZGADOS_CIVILES_ANTIGUOS_FIELD_FECHA_ACUERDO_LABEL'); ?></strong>
 					<?php
-						echo ($this->item->fecha_acuerdo != '' AND $this->item->fecha_acuerdo != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_acuerdo, 'Y-m-d', true) : $empty;
+						echo ($this->item->fecha_acuerdo != '' AND $this->item->fecha_acuerdo != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_acuerdo, '%Y-%m-%d', true) : $empty;
 					?>
 				</dd>
 			<?php endif; ?>
@@ -281,7 +281,7 @@ $use_def_list = (
 				<dd class="field">
 					<strong><?php echo JText::_('COM_BOLETIN_TSJCDMX_JUZGADOS_CIVILES_ANTIGUOS_FIELD_FECHA_PUBLICACION_LABEL'); ?></strong>
 					<?php
-						echo ($this->item->fecha_publicacion != '' AND $this->item->fecha_publicacion != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_publicacion, 'Y-m-d', true) : $empty;
+						echo ($this->item->fecha_publicacion != '' AND $this->item->fecha_publicacion != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_publicacion, '%Y-%m-%d', true) : $empty;
 					?>
 				</dd>
 			<?php endif; ?>

@@ -183,7 +183,7 @@ $use_def_list = (
 				<dd class="field">
 					<strong><?php echo JText::_('COM_BOLETIN_SRSPS_BACUERDOS_FIELD_FECHA_OFICIO_LABEL'); ?></strong>
 					<?php
-						echo ($this->item->fecha_oficio != '' AND $this->item->fecha_oficio != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_oficio, 'Y-m-d', true) : $empty;
+						echo ($this->item->fecha_oficio != '' AND $this->item->fecha_oficio != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_oficio, '%Y-%m-%d', true) : $empty;
 					?>
 				</dd>
 			<?php endif; ?>
@@ -220,7 +220,7 @@ $use_def_list = (
 				<dd class="field">
 					<strong><?php echo JText::_('COM_BOLETIN_SRSPS_BACUERDOS_FIELD_FECHA_NOTIFICACION_LABEL'); ?></strong>
 					<?php
-						echo ($this->item->fecha_notificacion != '' AND $this->item->fecha_notificacion != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_notificacion, 'Y-m-d', true) : $empty;
+						echo ($this->item->fecha_notificacion != '' AND $this->item->fecha_notificacion != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_notificacion, '%Y-%m-%d', true) : $empty;
 					?>
 				</dd>
 			<?php endif; ?>
@@ -228,7 +228,7 @@ $use_def_list = (
 				<dd class="field">
 					<strong><?php echo JText::_('COM_BOLETIN_SRSPS_BACUERDOS_FIELD_FECHA_SURTE_LABEL'); ?></strong>
 					<?php
-						echo ($this->item->fecha_surte != '' AND $this->item->fecha_surte != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_surte, 'Y-m-d', true) : $empty;
+						echo ($this->item->fecha_surte != '' AND $this->item->fecha_surte != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_surte, '%Y-%m-%d', true) : $empty;
 					?>
 				</dd>
 			<?php endif; ?>

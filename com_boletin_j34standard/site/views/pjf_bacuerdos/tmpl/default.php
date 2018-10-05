@@ -242,7 +242,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_pjf_bacuerdo_fecha_auto',1)) : ?>
 						<td class="list-fecha_auto">
 							<?php 
-								echo ($item->fecha_auto != '' AND $item->fecha_auto != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_auto, 'Y-m-d', true) : $empty;
+								echo ($item->fecha_auto != '' AND $item->fecha_auto != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_auto, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
@@ -256,7 +256,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_pjf_bacuerdo_fecha_publicacion',1)) : ?>
 						<td class="list-fecha_publicacion">
 							<?php 
-								echo ($item->fecha_publicacion != '' AND $item->fecha_publicacion != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_publicacion, 'Y-m-d', true) : $empty;
+								echo ($item->fecha_publicacion != '' AND $item->fecha_publicacion != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_publicacion, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>

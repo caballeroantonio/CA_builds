@@ -228,7 +228,7 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_srsps_bacuerdo_fecha_oficio',1)) : ?>
 						<td class="list-fecha_oficio">
 							<?php 
-								echo ($item->fecha_oficio != '' AND $item->fecha_oficio != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_oficio, 'Y-m-d', true) : $empty;
+								echo ($item->fecha_oficio != '' AND $item->fecha_oficio != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_oficio, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
@@ -262,14 +262,14 @@ $empty = $component->params->get('default_empty_field', '');
 					<?php if ($this->params->get('list_show_srsps_bacuerdo_fecha_notificacion',1)) : ?>
 						<td class="list-fecha_notificacion">
 							<?php 
-								echo ($item->fecha_notificacion != '' AND $item->fecha_notificacion != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_notificacion, 'Y-m-d', true) : $empty;
+								echo ($item->fecha_notificacion != '' AND $item->fecha_notificacion != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_notificacion, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>
 					<?php if ($this->params->get('list_show_srsps_bacuerdo_fecha_surte',1)) : ?>
 						<td class="list-fecha_surte">
 							<?php 
-								echo ($item->fecha_surte != '' AND $item->fecha_surte != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_surte, 'Y-m-d', true) : $empty;
+								echo ($item->fecha_surte != '' AND $item->fecha_surte != '0000-00-00 00:00:00') ? JHtml::date($item->fecha_surte, '%Y-%m-%d', true) : $empty;
 							?>
 						</td>
 					<?php endif; ?>

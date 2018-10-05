@@ -202,7 +202,7 @@ $use_def_list = (
 				<dd class="field">
 					<strong><?php echo JText::_('COM_BOLETIN_PJF_BACUERDOS_FIELD_FECHA_AUTO_LABEL'); ?></strong>
 					<?php
-						echo ($this->item->fecha_auto != '' AND $this->item->fecha_auto != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_auto, 'Y-m-d', true) : $empty;
+						echo ($this->item->fecha_auto != '' AND $this->item->fecha_auto != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_auto, '%Y-%m-%d', true) : $empty;
 					?>
 				</dd>
 			<?php endif; ?>
@@ -218,7 +218,7 @@ $use_def_list = (
 				<dd class="field">
 					<strong><?php echo JText::_('COM_BOLETIN_PJF_BACUERDOS_FIELD_FECHA_PUBLICACION_LABEL'); ?></strong>
 					<?php
-						echo ($this->item->fecha_publicacion != '' AND $this->item->fecha_publicacion != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_publicacion, 'Y-m-d', true) : $empty;
+						echo ($this->item->fecha_publicacion != '' AND $this->item->fecha_publicacion != '0000-00-00 00:00:00') ? JHtml::date($this->item->fecha_publicacion, '%Y-%m-%d', true) : $empty;
 					?>
 				</dd>
 			<?php endif; ?>

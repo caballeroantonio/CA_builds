@@ -54,7 +54,7 @@ class BoletinViewBoletin_Dashboard extends JViewLegacy
 		$dispatcher	= JEventDispatcher::getInstance();		
 
 		// Check for errors.
-                $errors = $this->get('Errors');
+        $errors = $this->get('Errors');
 		if ($errors && count($errors))
 		{
 			JError::raiseWarning(500, implode("\n", $errors));

@@ -127,10 +127,26 @@ class tsjcdmx_juzgados_familiares_antiguosApp extends ExtJSHelper{
 $extJSHelper = new tsjcdmx_juzgados_familiares_antiguosApp();
 $extJSHelper->parse('tsjcdmx_juzgados_familiares_antiguo', 'tsjcdmx_juzgados_familiares_antiguos');
 $app = $extJSHelper->getAppConfiguration();
+
+$this->document->addStyleSheet('libraries/extjs/classic/theme-classic/resources/theme-classic-all.css');
+//$this->document->addScript('libraries/extjs/ext-all.js');
+$this->document->addScript('libraries/extjs/ext-all-debug.js');
+$this->document->addScript('libraries/extjs/classic/locale/locale-es.js');
 ?>
-<link rel="stylesheet" type="text/css" href="libraries/extjs/classic/theme-classic/resources/theme-classic-all.css"/>
-<script type="text/javascript" src="libraries/extjs/ext-all.js"></script>
 <script language="javascript">
+Ext.Loader.setConfig({
+    disableCaching: true,
+    enabled: true,
+    paths: {
+        'Ext.tx': 'libraries/extjs/tx',
+//        'Ext.ux': 'https://extjs.cachefly.net/ext/gpl/4.2.1/examples/ux/',
+    },
+});
+Ext.Loader.require(
+    [
+        'Ext.tx.grid.Panel',
+    ]		
+);
     /**
     * resuelve problemas de compatibilidad entre Mootools vs ExtJs
     */
@@ -156,7 +172,7 @@ $app = $extJSHelper->getAppConfiguration();
             reader: {
                 type: 'json',
                 messageProperty: 'message',
-                root: 'data'
+                rootProperty: 'data',//extjs 4.2 and before name is root
             },
             writer: {
                 "type": "json",
@@ -174,25 +190,6 @@ $app = $extJSHelper->getAppConfiguration();
         },
         fields: <?= $extJSHelper->encode(array_values($extJSHelper->getModelFields())) ?>,
     });
-        Ext.define('boletin.store.tsjcdmx_juzgados_familiares_antiguos', {
-            extend: 'Ext.data.Store',
-            remoteSort: true,
-            storeId: 'tsjcdmx_juzgados_familiares_antiguos',
-            model: 'boletin.model.tsjcdmx_juzgados_familiares_antiguo',
-            autoSync: true,
-        });
-		
-		//if type = list
-        Ext.define('remca.store.action', {
-            extend: 'Ext.data.Store',
-            storeId: 'action',
-            fields: ['id', 'value'],
-            data : [
-                {'id':'', 'value':''},
-                {'id':'Pide', 'value':'Pide'},
-                {'id':'Ofrece', 'value':'Ofrece'},
-            ]
-        });
 Ext.application(<?= $extJSHelper->encode($app) ?>);
 </script>
 <div id="extjs-content"></div>
