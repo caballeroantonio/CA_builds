@@ -10,7 +10,7 @@
  * 
  * The following Component Architect header section must remain in any distribution of this file
  *
- * @CAversion		Id: compobjectplural.php 571 2016-01-04 15:03:02Z BrianWade $
+ * @CAversion		Id: categories.php 571 2016-01-04 15:03:02Z BrianWade $
  * @CAauthor		Component Architect (www.componentarchitect.com)
  * @CApackage		architectcomp
  * @CAsubpackage	architectcomp.site
@@ -31,47 +31,50 @@ defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 
 /**
- * This models supports retrieving lists of categories.
+ * This models supports retrieving lists of remca categories.
  *
  */
 class RemcaModelCategories extends JModelList
 {
 	/**
-	 * @var    string	$context	Context string for the model type.  This is used to handle uniqueness within sessions data.
+	 * Model context string.
+	 *
+	 * @var		string
 	 */
-	protected $context = 'com_remca.categories';
+	public $_context = 'com_remca.categories';
 
 	/**
-	 * Constructor.
+	 * The category context (allows other extensions to derived from this model).
 	 *
-	 * @param	array	An optional associative array of configuration settings.
-	 * 
+	 * @var		string
 	 */
-	public function __construct($config = array())
-	{
-		if (empty($config['filter_fields']))
-		{
-			$config['filter_fields'] = array(
-				'id', 'a.id',
-				);
-		}
+	protected $_extension = 'com_remca';
 
-		parent::__construct($config);
-	}
+	private $_parent = null;
+
+	private $_children = null;
+
 	/**
 	 * Method to auto-populate the model state.
 	 *
+	 * @param	string		$ordering	Field used for order by clause
+	 * @param	string		$direction	Direction of order
+	 * 	
 	 * Note. Calling getState in this method will result in recursion.
 	 *
-	 * @return	void
-	 * 
 	 */
 	protected function populateState($ordering = null, $direction = null)
 	{
 		$app = JFactory::getApplication();
+		$this->setState('filter.extension', $this->_extension);
+
+		// Get the parent id if defined.
+		$parent_id = $app->input->getInt('id');
+		$this->setState('filter.parentId', $parent_id);
+
 		// Load the parameters. Merge Global and Menu Item params into new object
 		$params = $app->getParams();
-		$menu_params = new JRegistry;
+		$menu_params = new Registry;
 
 		if ($menu = $app->getMenu()->getActive())
 		{
@@ -83,46 +86,20 @@ class RemcaModelCategories extends JModelList
 
 		$this->setState('params', $merged_params);
 
-		$params = $this->state->params;	
+		$params = $merged_params;
 		
-		$user		= JFactory::getUser();
-		
-		$item_id = $app->input->getInt('id', 0) . ':' .$app->input->getInt('Itemid', 0);
-
-		// Check to see if a single category has been specified either as a parameter or in the url Request
-		$pk = $params->get('category_id', '') == '' ? $app->input->getInt('id', '') : $params->get('category_id');
-		$this->setState('filter.category_id', $pk);
-		
-		// List state information
-			$limit = $app->getUserStateFromRequest($this->context.'.list.' . $item_id . '.limit', 'limit', $params->get('category_num_per_page'),'integer');
-		$this->setState('list.limit', $limit);
-
-		$value = $app->input->get('limitstart', 0, 'uint');
-		$this->setState('list.start', $value);
-
-		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
-		$this->setState('filter.search', $search);
-		
-
-		$order_col = $app->getUserStateFromRequest($this->context. '.filter_order', 'filter_order', $params->get('category_initial_sort','a.id'), 'string');
-		if (!in_array($order_col, $this->filter_fields))
+		$this->setState('filter.published',	1);
+		$this->setState('filter.language',	$app->getLanguageFilter());
+	
+		// process show_category_noauth parameter
+		if (!$params->get('show_category_noauth'))
 		{
-			$order_col = $params->get('category_initial_sort','a.id');
+			$this->setState('filter.access', true);
 		}
-
-		$this->setState('list.ordering', $order_col);
-
-		$list_order = $app->getUserStateFromRequest($this->context. '.filter_order_Dir', 'filter_order_Dir',  $params->get('category_initial_direction','ASC'), 'cmd');
-		if (!in_array(JString::strtoupper($list_order), array('ASC', 'DESC', '')))
+		else
 		{
-			$list_order =  $params->get('category_initial_direction','ASC');
+			$this->setState('filter.access', false);
 		}
-		$this->setState('list.direction', $list_order);
-		
-				
-
-		
-		$this->setState('layout', $app->input->getString('layout'));
 	}
 
 	/**
@@ -135,257 +112,66 @@ class RemcaModelCategories extends JModelList
 	 * @param	string		$id	A prefix for the store id.
 	 *
 	 * @return	string		A store id.
-	 * 
 	 */
 	protected function getStoreId($id = '')
 	{
 		// Compile the store id.
-		$id .= ':'.$this->getState('filter.search');				
-		$id .= ':'.serialize($this->getState('filter.category_id'));
-		$id .= ':'.$this->getState('filter.category_id.include');				
-		
+		$id	.= ':'.$this->getState('filter.extension');
+		$id	.= ':'.$this->getState('filter.published');
+		$id	.= ':'.$this->getState('filter.access');
+		$id	.= ':'.$this->getState('filter.parentId');
+		$id	.= ':'.$this->getState('filter.language');
 
 		return parent::getStoreId($id);
 	}
 
 	/**
-	 * Get the main query for retrieving a list of categories subject to the model state.
+	 * Get the child sub-categories for a category
 	 *
-	 * @return	JDatabaseQuery
-	 * 
+	 * @return mixed An array of data items on success, false on failure.
 	 */
-	protected function getListQuery()
+	public function getChildren()
 	{
-		// Get the current user for authorisation checks
-		$user	= JFactory::getUser();
-		// Create a new query object.
-		$db = $this->getDbo();
-		$query = $db->getQuery(true);
-		// Set date values
-		$null_date = $db->quote($db->getNullDate());
-		$now_date = $db->quote(JFactory::getDate()->toSQL());
-		
-		// Select the required fields from the table.
-		$query->select(
-			$this->getState(
-					'list.select',
-					'a.*'
-					)
-				);
-
-
-		$query->from($db->quoteName('#__rem_categories').' AS a');
-
-
-
-		
-		
-
-
-
-
-		
-		// Filter by and return name for iditem level.
-		$query->select($db->quoteName('i.name').' AS i_house_name');
-		$query->select($db->quoteName('i.ordering').' AS i_house_ordering');
-
-		$query->join('LEFT', $db->quoteName('#__rem_houses').' AS i ON '.$db->quoteName('i.id').' = '.$db->quoteName('a.iditem'));	
-		// Filter by and return name for idcat level.
-		$query->select($db->quoteName('m.name').' AS m_main_category_name');
-		$query->select($db->quoteName('m.ordering').' AS m_main_category_ordering');
-
-		$query->join('LEFT', $db->quoteName('#__rem_main_categories').' AS m ON '.$db->quoteName('m.id').' = '.$db->quoteName('a.idcat'));	
-					
-
-		// Filter by a single or group of categories.
-		$category_id = $this->getState('filter.category_id');
-		if ($category_id != '')
+		if(!count($this->_children))
 		{
-			if (is_numeric($category_id))
+			$params = $this->getState()->get('params');
+			
+			$options = array();
+			
+			$options['access'] = $this->getState('filter.access');
+			$options['published'] = $this->getState('filter.published');
+			$options['countItems'] = true;
+			
+			if ($params->get('items_to_display') AND $params->get('items_to_display') !='')
 			{
-				$type = $this->getState('filter.category_id.include', true) ? '= ' : '<> ';
-				$query->where($db->quoteName('a.id').' '.$type.(int) $category_id);
+				$options['table'] = '#__rem_'.JString::strtolower(str_replace(' ','',$params->get('items_to_display')));
 			}
 			else
 			{
-				if (is_array($category_id))
-				{
-					JArrayHelper::toInteger($category_id);
-					$category_id = implode(',', $category_id);
-					$type = $this->getState('filter.category_id.include', true) ? 'IN' : 'NOT IN';
-					$query->where($db->quoteName('a.id').' '.$type.' ('.$category_id.')');
-				}
+				$options['table'] = '';
+			}
+							
+			$categories = JCategories::getInstance('Remca', $options);
+			$this->_parent = $categories->get($this->getState('filter.parentId', 'root'));
+			if(is_object($this->_parent))
+			{
+				$this->_children = $this->_parent->getChildren();
+			}
+			else
+			{
+				$this->_children = false;
 			}
 		}
-		
 
-		// process the filter for list views with user-entered filters
-		$params = $this->getState('params');
-
-		if ((is_object($params)) AND ($params->get('show_category_filter_field') != 'hide') AND ($filter = $this->getState('filter.search')))
-		{
-			// clean filter variable
-			$filter = JString::strtolower($filter);
-
-                        $filter_words = $db->escape($filter, true);
-			$filter = $db->quote('%'.$db->escape($filter, true).'%', false);
-                        $regex = '/\s+/';
-                        //$regex = '~\s+~';
-                        $words = preg_split($regex, $filter_words, -1, PREG_SPLIT_NO_EMPTY);
-                        $where = '('; #comienza where
-			switch ($params->get('show_category_filter_field'))
-			{
-				
-				default: // default to 'name' if parameter is not valid
-                                    $where .= "\n\tFALSE";
-
-                            break;				
-			}
-                        $where .= "\n)"; #termina where
-                        $query->where($where);
-		}
-
-		// Add the list ordering clause.
-		if (is_object($params))
-		{
-			$initial_sort = $params->get('field_initial_sort');
-		}
-		else
-		{
-			$initial_sort = '';
-		}
-		// Fall back to old style if the parameter hasn't been set yet.
-		if (empty($initial_sort) OR $this->getState('list.ordering') != '')
-		{
-			$order_col	= '';
-			$order_dirn	= $this->getState('list.direction');
-
-			// Allow for multi field order (routines defining these must cater for quotes on field names	
-			if (strpos($this->getState('list.ordering'),',') !== False)
-			{
-				$order_col = trim($this->getState('list.ordering'));
-			}			
-		
-
-
-			if ($order_col == '')
-			{
-				$order_col = is_string($this->getState('list.ordering')) ? $db->quoteName($this->getState('list.ordering')) : $db->quoteName('a.id');
-				$order_col .= ' '.$order_dirn;
-			}
-			$query->order($db->escape($order_col));
-					
-		}
-		else
-		{
-			$query->order($db->quoteName('a.'.$initial_sort).' '.$db->escape($this->getState('list.direction', 'ASC')));
-			
-		}	
-		return $query;
+		return $this->_children;
 	}
 
-	/**
-	 * Method to get a list of categories.
-	 *
-	 * Overriden to inject convert the params fields into an object.
-	 *
-	 * @return	mixed	An array of objects on success, false on failure.
-	 * 
-	 */
-	public function getItems()
+	public function getParent()
 	{
-		$db = $this->getDbo();
-  		$query = $db->getQuery(true);
-		
-		$user	= JFactory::getUser();
-		$user_id	= $user->get('id');
-		$guest	= $user->get('guest');
-
-		// Get the global params
-		$global_params = JComponentHelper::getParams('com_remca', true);
-		
-		if ($items = parent::getItems())
+		if(!is_object($this->_parent))
 		{
-			// Convert the parameter fields into objects.
-			foreach ($items as &$item)
-			{
-				$query->clear();
-
-				$category_params = new Registry;
-
-
-				
-				
-				
-		
-							
-
-				
-							
-				if (!is_object($this->getState('params')))
-				{
-					$item->params = $category_params;
-				}
-				else
-				{
-					$item->params = clone $this->getState('params');
-
-					// Category params override menu item params only if menu param = 'use_category'
-					// Otherwise, menu item params control the layout
-					// If menu item is 'use_category' and there is no category param, use global
-
-					// create an array of just the params set to 'use_category'
-					$menu_params_array = $this->getState('params')->toArray();
-					$category_array = array();
-
-					foreach ($menu_params_array as $key => $value)
-					{
-						if ($value === 'use_category')
-						{
-							// if the category has a value, use it
-							if ($category_params->get($key) != '')
-							{
-								// get the value from the category
-								$category_array[$key] = $category_params->get($key);
-							}
-							else
-							{
-								// otherwise, use the global value
-								$category_array[$key] = $global_params->get($key);
-							}
-						}
-					}
-
-					// merge the selected category params
-					if (count($category_array) > 0)
-					{
-						$category_params = new Registry;
-						$category_params->loadArray($category_array);
-						$item->params->merge($category_params);
-					}
-
-
-					// get display date
-					switch ($item->params->get('list_show_category_date'))
-					{
-						default:
-							$item->display_date = 0;
-							break;
-					}
-				}
-
-
-			}
+			$this->getChildren();
 		}
-		return $items;
+		return $this->_parent;
 	}
-	
-        /*
-         * Function that allows download database information
-         */
-        public function getListQuery4Export($limit = 50, $offset = 0){
-            $query = $this->getListQuery();
-            $query->setLimit($limit, $offset);
-            return $query;
-        }
 }

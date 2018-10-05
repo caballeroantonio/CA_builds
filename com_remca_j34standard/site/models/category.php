@@ -10,7 +10,7 @@
  * 
  * The following Component Architect header section must remain in any distribution of this file
  *
- * @CAversion		Id: compobject.php 571 2016-01-04 15:03:02Z BrianWade $
+ * @CAversion		Id: category.php 571 2016-01-04 15:03:02Z BrianWade $
  * @CAauthor		Component Architect (www.componentarchitect.com)
  * @CApackage		architectcomp
  * @CAsubpackage	architectcomp.site
@@ -30,36 +30,87 @@ defined('_JEXEC') or die;
 
 use Joomla\Registry\Registry;
 
-/**
- * RealEstateManagerCA Component Category Model
- *
- */
-class RemcaModelCategory extends JModelItem
+require_once __DIR__ . '/houses.php';
+require_once __DIR__ . '/wa_entry_conversations.php';
+
+class RemcaModelCategory extends JModelList
 {
 	/**
-	 * Model context string.  Used in setting the store id for the session
-	 *
-	 * @var		string
+	 * @var array	array	$_item		The category item
 	 */
-	protected $context = 'com_remca.category';
+	protected $_item = null;
+	/**
+	 * @var		array	$_siblings	The sibling categeories for this category.
+	 */
+	protected $_siblings = null;
+	
+	/**
+	 * @var		array	$_children	The children categeories for this category.
+	 */
+	protected $_children = null;
+
+	/**
+	 * @var		object	$_parent	The parent category for this category.
+	 */
+	protected $_parent = null;
+	
+	/**
+	 * @var		array	$_items		The set of items with this category
+	 */
+	protected $_items = null;
+	
+	/**
+	 * @var		object	$_pagination	The pagination object for the set of items with this category
+	 */
+	protected $_pagination = null;	
+		
+	/**
+	 * @var		object	$_category	The category that applies.
+	 */
+	protected $_category = null;
+
+	/**
+	 * @var		array	$_categories	The set of categories.
+	 */
+	protected $_categories = null;
+
 
 	/**
 	 * Constructor.
 	 *
-	 * @param	array	An optional associative array of configuration settings.
-	 * 
 	 */
 	public function __construct($config = array())
 	{
-		if (empty($config['category_filter_fields']))
+	
+		if (empty($config['filter_fields']))
 		{
-			$config['category_filter_fields'] = array(
+			$config['filter_fields'] = array(
 				'id', 'a.id',
-				'iditem','a.iditem',
-				'idcat','a.idcat',
+				'name', 'a.name',
+				'checked_out', 'a.checked_out',
+				'checked_out_time', 'a.checked_out_time',
+				'catid', 'a.catid', 'category_title',
+				'state', 'a.state',
+				'modified', 'a.modified',
+				'modified_by', 'a.modified_by',
+				'featured', 'a.featured',
+				'language', 'a.language',
+				'hits', 'a.hits',
+				'ordering', 'a.ordering'	
 				);
 		}
-
+	
+		if (empty($config['filter_fields']))
+		{
+			$config['filter_fields'] = array(
+				'id', 'a.id',
+				'catid', 'a.catid', 'category_title',
+				'state', 'a.state',
+				'created', 'a.created',
+				'created_by', 'a.created_by',
+				'ordering', 'a.ordering'	
+				);
+		}
 		parent::__construct($config);
 	}
 	/**
@@ -68,17 +119,15 @@ class RemcaModelCategory extends JModelItem
 	 * Note. Calling getState in this method will result in recursion.
 	 *
 	 */
-	protected function populateState()
+	protected function populateState($ordering = null, $direction = null)
 	{
-		$app = JFactory::getApplication('site');
-
-		// Load state from the request.
-		$pk = $app->input->getInt('id');
-		$this->setState('category.id', $pk);
-
-		$offset = $app->input->getInt('limitstart');
-		$this->setState('list.offset', $offset);
-
+		
+		$app		= JFactory::getApplication();
+		$item_id	= $app->input->getInt('id', 0) . ':' . $app->input->getInt('Itemid', 0);
+		$id			= $app->input->get('id', 0, '', 'int');
+		$format = $app->input->getWord('format');
+		$this->setState('category.id', $id);
+		
 		// Load the parameters. Merge Global and Menu Item params into new object
 		$params = $app->getParams();
 		$menu_params = new Registry;
@@ -93,204 +142,443 @@ class RemcaModelCategory extends JModelItem
 
 		$this->setState('params', $merged_params);
 
-		// TODO: Tune these values based on other permissions.
-		$user		= JFactory::getUser();
-			
-	}
-	/**
-	 * Returns a Table object, always creating it
-	 *
-	 * @param	type	The table type to instantiate
-	 * @param	string	A prefix for the table class name. Optional.
-	 * @param	array	Configuration array for model. Optional.
-	 * @return	JTable	A database object
-	*/
-	public function getTable($type = 'Categories', $prefix = 'RemcaTable', $config = array())
-	{
-		return JTable::getInstance($type, $prefix, $config);
-	}
-	/**
-	 * Method to get Category data.
-	 *
-	 * @param	integer	$pk	The id of the category.
-	 *
-	 * @return	mixed	Menu item data object on success, false on failure.
-	 */
-	public function getItem($pk = null)
-	{
-		// Get current user for authorisation checks
-		$user	= JFactory::getUser();
+		$params = $merged_params;
 		
-		$pk = (!empty($pk)) ? $pk : (int) $this->getState('category.id');
-		// Get the global params
-		$global_params = JComponentHelper::getParams('com_remca', true);
+		$user = JFactory::getUser();
+		
+		// set the depth of the category query based on parameter
 
-		if ($this->_item === null)
+		if (!$params->get('show_categories_max_level'))
 		{
-			$this->_item = array();
+			$show_sub_categories = $params->get('show_categories_max_level');
+
+			if ($show_sub_categories)
+			{
+				$this->setState('filter.max_category_levels', $params->get('show_categories_max_level', '1'));
+				$this->setState('filter.subcategories', true);
+			}
+		}
+				
+		// process show_category_noauth parameter
+		if (!$params->get('show_category_noauth'))
+		{
+			$this->setState('filter.access', true);
+		}
+		else
+		{
+			$this->setState('filter.access', false);
+		}
+		
+		$object_lower_case = JString::strtolower(str_replace(' ','',$params->get('items_to_display')));
+		// Optional filter text
+
+		if ((!$user->authorise('core.edit.state', 'com_remca')) AND  (!$user->authorise('core.edit', 'com_remca')))
+		{
+			// limit to published for people who can't edit or edit.state.
+			$this->setState('filter.published', 1);
+		}
+		else
+		{
+			$this->setState('filter.published', array(0, 1, 2));
+		}		
+						
+		$this->setState('filter.search', $app->input->getString('filter-search'));
+		// List state information
+
+		$order_col	= $app->input->get('filter_order', 'id');
+
+		$this->setState('list.ordering', $order_col);
+
+		if ($format=='feed')
+		{
+			$limit = $app->get('feed_limit');
+		}
+		else
+		{
+			$limit = $app->getUserStateFromRequest('com_remca.category.list.' . $item_id . '.limit', 'limit', $app->get('list_limit'));
+		}
+		$this->setState('list.limit', $limit);	
+						
+		$limitstart = $app->input->get('limitstart', 0, 'uint');
+		$this->setState('list.start', $limitstart);	
+
+		$list_order	=  JString::strtoupper($app->input->get('filter_order_Dir', 'ASC'));
+		if (!in_array($list_order, array('ASC', 'DESC', '')))
+		{
+			$list_order = 'ASC';
+		}		
+		$this->setState('list.direction', $list_order);
+		
+		$this->setState('filter.language', JLanguageMultilang::isEnabled());			
+
+		$this->setState('layout', $app->input->getString('layout'));
+
+		switch ($params->get('items_to_display',''))
+		{
+			case 'Inmuebles' :
+				$object_lower_case = 'house_';
+				if ($params->get('filter_'.$object_lower_case.'featured') <> "")
+				{
+					$this->setState('filterfeatured', $params->get('filter_'.$object_lower_case.'featured'));
+					
+				}
+				if ($params->get('filter_'.$object_lower_case.'archived'))
+				{
+					$this->setState('filter.archived', 2);
+					
+				}
+				break;
+			case 'Entradas Conversaciones Wtsapp ' :
+				$object_lower_case = 'wa_entry_conversation_';
+				if ($params->get('filter_'.$object_lower_case.'archived'))
+				{
+					$this->setState('filter.archived', 2);
+					
+				}
+				break;
+			default :
+				$object_lower_case = '';
+				$this->setState('filter.access', true);
+				
+				break;
 		}
 
-		if (!isset($this->_item[$pk]))
+	}
+	/**
+	 * Method to get a list of items.
+	 *
+	 * @return	mixed	An array of objects on success, false on failure.
+	 */
+	public function getItems()
+	{
+
+		$params = $this->getState()->get('params');
+		$limit = $this->getState('list.limit');
+
+		if ($params->get('items_to_display') AND $params->get('items_to_display') !='')
 		{
-			try
-			{
-				$db = $this->getDbo();
-				$query = $db->getQuery(true);
-
-				$query->select($this->getState(
-					'item.select',
-					'a.*'
-
-					)
-				);
-				$query->from($db->quoteName('#__rem_categories').' AS a');
-				
-				
-				$query->where($db->quoteName('a.id').' = ' . (int) $pk);
-				
-					
-
-				//  Do not show unless today's date is within the publish up and down dates (or they are empty)
-				
-					
-				// Filter by and return name for iditem level.
-				$query->select($db->quoteName('i.name').' AS i_house_name');
-				$query->join('LEFT', $db->quoteName('#__rem_houses').' AS i ON '.$db->quoteName('i.id').' = '.$db->quoteName('a.iditem'));	
-				// Filter by and return name for idcat level.
-				$query->select($db->quoteName('m.name').' AS m_main_category_name');
-				$query->join('LEFT', $db->quoteName('#__rem_main_categories').' AS m ON '.$db->quoteName('m.id').' = '.$db->quoteName('a.idcat'));	
-																				
-				$db->setQuery($query);
-
-				$item = $db->loadObject();
-
-				if (empty($item))
-				{
-					return JError::raiseError(404, JText::_('COM_REMCA_CATEGORIES_ERROR_ITEM_NOT_FOUND'));
-				}
-				// Include any manipulation of the data on the record e.g. expand out Registry fields
-				// NB The params registry field - if used - is done automatcially in the JAdminModel parent class
+			$object_upper_case = str_replace(' ','',JString::ucwords($params->get('items_to_display')));	
 			
-
-				
-				
-		
-
-							
-
-				// Convert parameter fields to objects.
-				$category_params = new Registry;
-				
-				$item->params = clone $this->getState('params');				
-								
-				// Category params override menu item params only if menu param = 'use_category'
-				// Otherwise, menu item params control the layout
-				// If menu item is 'use_category' and there is no category param, use global
-
-				// create an array of just the params set to 'use_category'
-				$menu_params_array = $this->getState('params')->toArray();
-				$category_array = array();
-
-				foreach ($menu_params_array as $key => $value)
-				{
-					if ($value === 'use_category')
-					{
-						// if the category has a value, use it
-						if ($category_params->get($key) != '')
-						{
-							// get the value from the category
-							$category_array[$key] = $category_params->get($key);
-						}
-						else
-						{
-							// otherwise, use the global value
-							$category_array[$key] = $global_params->get($key);
-						}
-					}
-				}
-
-				// merge the selected category params
-				if (count($category_array) > 0)
-				{
-					$category_params = new Registry;
-					$category_params->loadArray($category_array);
-					$item->params->merge($category_params);
-				}
-
-
-
-
-				$this->_item[$pk] = $item;
-			}
-			catch (Exception $e)
+			if ($this->_items === null AND $category = $this->getCategory())
 			{
-				if ($e->getCode() == 404)
+				$model = JModelLegacy::getInstance($object_upper_case, 'RemcaModel', array('ignore_request' => true));
+				$model->setState('params',  $params);
+				$model->setState('filter.category_id', $category->id);
+				$model->setState('filter.published', $this->getState('filter.published'));
+				$model->setState('filter.archived', $this->getState('filter.archived'));			
+				$model->setState('filter.featured', $this->getState('filter.featured'));
+				$model->setState('filter.language', $this->getState('filter.language'));
+				$model->setState('list.ordering', $this->buildOrderBy());
+				$model->setState('list.start', $this->getState('list.start'));
+				$model->setState('list.limit', $limit);
+				$model->setState('list.direction', $this->getState('list.direction'));
+				$model->setState('filter.search', $this->getState('filter.search'));
+				$model->setState('filter.subcategories', $this->getState('filter.subcategories'));
+				$model->setState('filter.max_category_levels', $this->getState('filter.max_category_levels'));
+				$model->setState('list.links', $this->getState('list.links'));
+
+				if ($limit >= 0)
 				{
-					// Need to go thru the error handler to allow Redirect to work.
-					JError::raiseError(404, $e->getMessage());
+					$this->_items = $model->getItems();
+
+					if ($this->_items === false)
+					{
+						$this->setError($model->getError());
+					}
 				}
 				else
 				{
-					$this->setError($e);
-					$this->_item[$pk] = false;
-				}			
+					$this->_items=array();
+				}
+
+				$this->_pagination = $model->getPagination();
 			}
+
 		}
-
-		return $this->_item[$pk];
+		return $this->_items;	
 	}
-
-		
 	/**
-	 * Method to delete one or more records.
+	 * Method to get a list of items.
 	 *
-	 * @param   array    $pks  An array of record primary keys.
+	 * @return	mixed	An array of objects on success, false on failure.
+	 */
+	public function getItems()
+	{
+
+		$params = $this->getState()->get('params');
+		$limit = $this->getState('list.limit');
+
+		if ($params->get('items_to_display') AND $params->get('items_to_display') !='')
+		{
+			$object_upper_case = str_replace(' ','',JString::ucwords($params->get('items_to_display')));	
+			
+			if ($this->_items === null AND $category = $this->getCategory())
+			{
+				$model = JModelLegacy::getInstance($object_upper_case, 'RemcaModel', array('ignore_request' => true));
+				$model->setState('params',  $params);
+				$model->setState('filter.category_id', $category->id);
+				$model->setState('filter.published', $this->getState('filter.published'));
+				$model->setState('filter.archived', $this->getState('filter.archived'));			
+				$model->setState('list.ordering', $this->buildOrderBy());
+				$model->setState('list.start', $this->getState('list.start'));
+				$model->setState('list.limit', $limit);
+				$model->setState('list.direction', $this->getState('list.direction'));
+				$model->setState('filter.search', $this->getState('filter.search'));
+				$model->setState('filter.subcategories', $this->getState('filter.subcategories'));
+				$model->setState('filter.max_category_levels', $this->getState('filter.max_category_levels'));
+				$model->setState('list.links', $this->getState('list.links'));
+
+				if ($limit >= 0)
+				{
+					$this->_items = $model->getItems();
+
+					if ($this->_items === false)
+					{
+						$this->setError($model->getError());
+					}
+				}
+				else
+				{
+					$this->_items=array();
+				}
+
+				$this->_pagination = $model->getPagination();
+			}
+
+		}
+		return $this->_items;	
+	}
+	/**
+	 * Build the orderby for the query
 	 *
-	 * @return  boolean  True if successful, false if an error occurs.
+	 * @return	string	$order_by portion of query
 	 * 
 	 */
-	public function delete(&$pks)
+	protected function buildOrderBy()
 	{
-		
-		$dispatcher	= JEventDispatcher::getInstance();
-		$pks		= (array) $pks;
-		$table		= $this->getTable();
+		$app		= JFactory::getApplication('site');
+		$db			= $this->getDbo();
+		$params		= $this->state->params;
+		$item_id	= $app->input->getInt('id', 0) . ':' . $app->input->getInt('Itemid', 0);
+		$order_col	= $app->getUserStateFromRequest('com_remca.category.list.' . $item_id . '.filter_order', 'filter_order', '', 'string');
+		$order_dirn	= $app->getUserStateFromRequest('com_remca.category.list.' . $item_id . '.filter_order_Dir', 'filter_order_Dir', '', 'cmd');
+		$order_by	= ' ';
 
-		// Include the remca plugins for the on delete events.
-		JPluginHelper::importPlugin('remca');
-
-		// Iterate the items to delete each one.
-		foreach ($pks as $i => $pk)
+		if (!in_array($order_col, $this->filter_fields))
 		{
+			$order_col = null;
+		}
 
-			if ($table->load($pk))
+		if (!in_array(JString::strtoupper($order_dirn), array('ASC', 'DESC', '')))
+		{
+			$order_dirn = 'ASC';
+		}
+
+		if ($order_col AND $order_dirn)
+		{
+			$order_by .= $db->escape($order_col) . ' ' . $db->escape($order_dirn) . ', ';
+		}
+		switch ($params->get('items_to_display',''))
+		{
+			case 'Inmuebles' :
+				$secondary_order_by	= $params->get('house_orderby_sec', 'none');
+				$order_date			= $params->get('house_order_date');
+				$category_order_by	= $params->def('house_orderby_pri', '');
+				
+				$primary			= RemcaHelperQuery::orderbyPrimary($category_order_by);	
+				$secondary			= RemcaHelperQuery::orderbySecondary($secondary_order_by, $order_date, 'ordering');
+				$order_by			.= $db->escape($primary) . $db->escape($secondary);
+				break;
+			case 'Entradas Conversaciones Wtsapp ' :
+				$secondary_order_by	= $params->get('wa_entry_conversation_orderby_sec', 'none');
+				$order_date			= $params->get('wa_entry_conversation_order_date');
+				$category_order_by	= $params->def('wa_entry_conversation_orderby_pri', '');
+				
+				$primary			= RemcaHelperQuery::orderbyPrimary($category_order_by);	
+				$secondary			= RemcaHelperQuery::orderbySecondary($secondary_order_by, $order_date, 'ordering') . ', ';
+				
+				$order_by			.= $db->escape($primary) . $db->escape($secondary) . $db->quoteName('a.created');
+				break;
+			default :
+				$category_order_by	= 'ordering';
+				$primary			= RemcaHelperQuery::orderbyPrimary($category_order_by);
+				$order_by			.= $db->escape($primary);
+								
+			break;
+		}
+		
+		return JString::trim($order_by);
+	}
+
+	/**
+	 * Method to get a pagination object
+	 *
+	 *
+	 * @return	object
+	 * 
+	 */
+	public function getPagination()
+	{
+		if (empty($this->_pagination))
+		{
+			return null;
+		}
+		return $this->_pagination;
+	}
+
+	/**
+	 * Method to get category data for the current category
+	 *
+	 * @param	integer		An optional ID
+	 *
+	 * @return	object
+	 * 
+	 */
+	public function getCategory()
+	{
+		if(!is_object($this->_item))
+		{
+			$app = JFactory::getApplication();
+			$menu = $app->getMenu();
+			$active = $menu->getActive();
+			$params = new Registry();
+			$params->loadString($active->params);
+			$options = array();
+
+			$options['access'] = $this->getState('filter.access');
+			$options['published'] = $this->getState('filter.published');
+			$options['countItems'] = true;
+			
+			if ($params->get('items_to_display') AND $params->get('items_to_display') !='')
 			{
-					// Trigger the BeforeDelete event.
-					$result = $dispatcher->trigger('onCategoryBeforeDelete', array('com_remca.category', &$table));
-					if (in_array(false, $result, true))
-					{
-						$this->setError($table->getError());
-						return false;
-					}
-					if (!$table->delete($pk))
-					{
-						$this->setError($table->getError());
-						return false;
-					}
-
-					// Trigger the AfterDelete event.
-					$dispatcher->trigger('onCategoryAfterDelete', array('com_remca.category', &$table));
+				$options['table'] = '#__rem_'.JString::strtolower(str_replace(' ','',$params->get('items_to_display')));
 			}
 			else
 			{
-				$this->setError($table->getError());
-				return false;
+				$options['table'] = '';
+			}
+															
+			$categories = JCategories::getInstance('Remca', $options);
+			$this->_item = $categories->get($this->getState('category.id', 'root'));
+			if(is_object($this->_item))
+			{
+				$user	= JFactory::getUser();
+				$asset	= 'com_remca.category.'.$this->_item->id;
+
+				// Check general create permission.
+				if ($user->authorise('core.create', $asset))
+				{
+					$this->_item->getParams()->set('access-create', true);
+				}			
+				$this->_children = $this->_item->getChildren();
+				$this->_parent = false;
+				if($this->_item->getParent())
+				{
+					$this->_parent = $this->_item->getParent();
+				}
+				$this->_rightsibling = $this->_item->getSibling();
+				$this->_leftsibling = $this->_item->getSibling(false);
+			}
+			else
+			{
+				$this->_children = false;
+				$this->_parent = false;
 			}
 		}
 
-		// Clear the component's cache
-		$this->cleanCache();
+		$this->tags = new JHelperTags;
+		$this->tags->getItemTags('com_remca.category', $this->_item->get('id'));
+		return $this->_item;
+	}
+
+	/**
+	 * Get the parent category.
+	 *
+	 * @param	integer		An optional category id. If not supplied, the model state 'category.id' will be used.
+	 *
+	 * @return	mixed	An array of categories or false if an error occurs.
+	 */
+	public function getParent()
+	{
+		if(!is_object($this->_item))
+		{
+			$this->getCategory();
+		}
+		return $this->_parent;
+	}
+
+	/**
+	 * Get the sibling (adjacent) categories.
+	 *
+	 * @return	mixed	An array of categories or false if an error occurs.
+	 */
+	public function &getLeftSibling()
+	{
+		if(!is_object($this->_item))
+		{
+			$this->getCategory();
+		}
+		return $this->_leftsibling;
+	}
+
+	public function &getRightSibling()
+	{
+		if(!is_object($this->_item))
+		{
+			$this->getCategory();
+		}
+		return $this->_rightsibling;
+	}
+
+	/**
+	 * Get the child categories.
+	 *
+	 * @param	integer		An optional category id. If not supplied, the model state 'category.id' will be used.
+	 *
+	 * @return	mixed	An array of categories or false if an error occurs.
+	 */
+	public function &getChildren()
+	{
+		if(!is_object($this->_item))
+		{
+			$this->getCategory();
+		}
+		
+		// Order subcategories
+		if (count($this->_children))
+		{
+			$params = $this->getState()->get('params');
+			if ($params->get('orderby_pri') == 'alpha' OR $params->get('orderby_pri') == 'ralpha')
+			{
+				jimport('joomla.utilities.arrayhelper');
+				JArrayHelper::sortObjects($this->_children, 'title', ($params->get('orderby_pri') == 'alpha') ? 1 : -1);
+			}
+		}		
+		return $this->_children;
+	}
+
+	/**
+	 * Increment the hit counter for the category.
+	 *
+	 * @param   int  $pk  Optional primary key of the category to increment.
+	 *
+	 * @return  boolean True if successful; false otherwise and internal error set.
+	 */
+	public function hit($pk = 0)
+	{
+		$input = JFactory::getApplication()->input;
+		$hitcount = $input->getInt('hitcount', 1);
+
+		if ($hitcount)
+		{
+			$pk = (!empty($pk)) ? $pk : (int) $this->getState('category.id');
+
+			$table = JTable::getInstance('Category', 'JTable');
+			$table->load($pk);
+			$table->hit($pk);
+		}
 
 		return true;
-	}
+	}	
 }
+

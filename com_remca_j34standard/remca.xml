@@ -100,8 +100,8 @@
                     alt="RealEstateManagerCA/Video_source">COM_REMCA_VIDEO_SOURCE</menu>
             <menu link="option=com_remca&amp;view=buying_requests" alias="buying_requests" img="../media/com_remca/images/remca-buying_requests.png"
                     alt="RealEstateManagerCA/Buying Requests">COM_REMCA_BUYING_REQUESTS</menu>
-            <menu link="option=com_remca&amp;view=categories" alias="categories" img="../media/com_remca/images/remca-categories.png"
-                    alt="RealEstateManagerCA/Categories">COM_REMCA_CATEGORIES</menu>
+            <menu link="option=com_remca&amp;view=rem_categories" alias="rem_categories" img="../media/com_remca/images/remca-rem_categories.png"
+                    alt="RealEstateManagerCA/Categories">COM_REMCA_REM_CATEGORIES</menu>
             <menu link="option=com_remca&amp;view=const" alias="const" img="../media/com_remca/images/remca-const.png"
                     alt="RealEstateManagerCA/Const">COM_REMCA_CONST</menu>
             <menu link="option=com_remca&amp;view=const_language" alias="const_language" img="../media/com_remca/images/remca-const_language.png"
@@ -362,12 +362,12 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
-			        name="category_save_history"
+			        name="rem_category_save_history"
 			        type="radio"
 			        class="btn-group btn-group-yesno"
 			        default="1"
-			        label="COM_REMCA_CATEGORIES_FIELD_SAVE_HISTORY_LABEL"
-			        description="COM_REMCA_CATEGORIES_FIELD_SAVE_HISTORY_DESC"
+			        label="COM_REMCA_REM_CATEGORIES_FIELD_SAVE_HISTORY_LABEL"
+			        description="COM_REMCA_REM_CATEGORIES_FIELD_SAVE_HISTORY_DESC"
 			        >
                     <option	value="1">JYES</option>
                     <option	value="0">JNO</option>
@@ -7064,18 +7064,18 @@
 		        />
             </fieldset>
             <fieldset
-                name="category_display"
-                label="COM_REMCA_CATEGORIES_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
-                description="COM_REMCA_CATEGORIES_FIELD_CONFIG_SINGLE_ITEM_DESC"
+                name="rem_category_display"
+                label="COM_REMCA_REM_CATEGORIES_FIELD_CONFIG_SINGLE_ITEM_DISPLAY"
+                description="COM_REMCA_REM_CATEGORIES_FIELD_CONFIG_SINGLE_ITEM_DESC"
 	        >
                 <field
-                    name="category_layout"
+                    name="rem_category_layout"
                     type="componentlayout"
                     label="JGLOBAL_FIELD_LAYOUT_LABEL"
-                    description="COM_REMCA_CATEGORIES_CHOOSE_LAYOUT_DESC"
+                    description="COM_REMCA_REM_CATEGORIES_CHOOSE_LAYOUT_DESC"
                     menuitems="true"
                     extension="com_remca"
-                    view="category"
+                    view="rem_category"
                     default="_:default"
 		        />
                 <field
@@ -7084,7 +7084,7 @@
                     hr="true"
 		        />
                 <field
-                    name="show_category_icons"
+                    name="show_rem_category_icons"
                     type="radio"
                     label="COM_REMCA_SHOW_ICONS_LABEL"
                     description="COM_REMCA_SHOW_ICONS_DESC"
@@ -7096,7 +7096,7 @@
                     <option	value="-1">JHIDE</option>
                 </field>
                 <field
-                    name="show_category_print_icon"
+                    name="show_rem_category_print_icon"
                     type="radio"
                     label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
                     description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -7107,10 +7107,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_category_email_icon"
+                    name="show_rem_category_email_icon"
                     type="radio"
                     label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
-                    description="COM_REMCA_CATEGORIES_SHOW_EMAIL_ICON_DESC"
+                    description="COM_REMCA_REM_CATEGORIES_SHOW_EMAIL_ICON_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 		        >
@@ -7118,10 +7118,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="keep_category_itemid"
+                    name="keep_rem_category_itemid"
                     type="radio"
                     label="COM_REMCA_KEEP_ITEMID_LABEL"
-                    description="COM_REMCA_CATEGORIES_KEEP_ITEMID_DESC"
+                    description="COM_REMCA_REM_CATEGORIES_KEEP_ITEMID_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 		        >
@@ -7129,10 +7129,10 @@
                     <option	value="0">JNO</option>
                 </field>
                 <field
-                    name="show_category_navigation"
+                    name="show_rem_category_navigation"
                     type="radio"
                     label="COM_REMCA_SHOW_NAVIGATION_LABEL"
-                    description="COM_REMCA_CATEGORIES_SHOW_NAVIGATION_DESC"
+                    description="COM_REMCA_REM_CATEGORIES_SHOW_NAVIGATION_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
                 >
@@ -7145,10 +7145,10 @@
                     hr="true"
 		        />
                 <field
-                    name="show_category_readmore"
+                    name="show_rem_category_readmore"
                     type="radio"
                     label="COM_REMCA_SHOW_READMORE_LABEL"
-                    description="COM_REMCA_CATEGORIES_SHOW_READMORE_DESC"
+                    description="COM_REMCA_REM_CATEGORIES_SHOW_READMORE_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 		        >
@@ -7156,10 +7156,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="category_readmore_limit"
+                    name="rem_category_readmore_limit"
                     type="text"
                     label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
-                    description="COM_REMCA_CATEGORIES_SHOW_READMORE_LIMIT_DESC"
+                    description="COM_REMCA_REM_CATEGORIES_SHOW_READMORE_LIMIT_DESC"
                     default="100"
 		        />
                 <field
@@ -7168,10 +7168,10 @@
                     hr="true"
 		        />
                 <field
-                    name="show_category_admin"
+                    name="show_rem_category_admin"
                     type="radio"
                     label="COM_REMCA_SHOW_ADMIN_LABEL"
-                    description="COM_REMCA_CATEGORIES_SHOW_ADMIN_DESC"
+                    description="COM_REMCA_REM_CATEGORIES_SHOW_ADMIN_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 		        >
@@ -7179,10 +7179,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_category_iditem"
+                    name="show_rem_category_iditem"
                     type="radio"
-                    label="COM_REMCA_CATEGORIES_SHOW_FIELD_IDITEM_LABEL"
-                    description="COM_REMCA_CATEGORIES_SHOW_FIELD_IDITEM_DESC"
+                    label="COM_REMCA_REM_CATEGORIES_SHOW_FIELD_IDITEM_LABEL"
+                    description="COM_REMCA_REM_CATEGORIES_SHOW_FIELD_IDITEM_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
                 >
@@ -7190,10 +7190,10 @@
                     <option	value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_category_idcat"
+                    name="show_rem_category_idcat"
                     type="radio"
-                    label="COM_REMCA_CATEGORIES_SHOW_FIELD_IDCAT_LABEL"
-                    description="COM_REMCA_CATEGORIES_SHOW_FIELD_IDCAT_DESC"
+                    label="COM_REMCA_REM_CATEGORIES_SHOW_FIELD_IDCAT_LABEL"
+                    description="COM_REMCA_REM_CATEGORIES_SHOW_FIELD_IDCAT_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
                 >
@@ -7202,23 +7202,23 @@
                 </field>
             </fieldset>
             <fieldset
-                name="categories_list_display"
-                label="COM_REMCA_CATEGORIES_FIELD_CONFIG_BLOG_LIST_LABEL"
-                description="COM_REMCA_CATEGORIES_FIELD_CONFIG_BLOG_LIST_DESC"
+                name="rem_categories_list_display"
+                label="COM_REMCA_REM_CATEGORIES_FIELD_CONFIG_BLOG_LIST_LABEL"
+                description="COM_REMCA_REM_CATEGORIES_FIELD_CONFIG_BLOG_LIST_DESC"
 	        >
                 <field
-                    name="category_initial_sort"
+                    name="rem_category_initial_sort"
                     type="list"
-                    label="COM_REMCA_CATEGORIES_ORDER_LABEL"
-                    description="COM_REMCA_CATEGORIES_ORDER_DESC"
+                    label="COM_REMCA_REM_CATEGORIES_ORDER_LABEL"
+                    description="COM_REMCA_REM_CATEGORIES_ORDER_DESC"
 			        class="chzn-color"
 		        >
                 </field>
                 <field
-                    name="category_initial_direction"
+                    name="rem_category_initial_direction"
                     type="radio"
                     label="COM_REMCA_ORDER_DIRECTION_LABEL"
-                    description="COM_REMCA_CATEGORIES_ORDER_DIRECTION_DESC"
+                    description="COM_REMCA_REM_CATEGORIES_ORDER_DIRECTION_DESC"
                     class="btn-group"
                     default="ASC"
 		        >
@@ -7226,17 +7226,17 @@
                     <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
                 </field>
                 <field
-                    name="show_category_filter_field"
+                    name="show_rem_category_filter_field"
                     type="list"
                     label="JGLOBAL_FILTER_FIELD_LABEL"
-                    description="COM_REMCA_CATEGORIES_FILTER_FIELD_DESC"
+                    description="COM_REMCA_REM_CATEGORIES_FILTER_FIELD_DESC"
                     class="chzn-color"
                     default="hide"
 			    >
                     <option value="hide">JHIDE</option>
                 </field>                
                 <field
-                    name="show_category_headings"
+                    name="show_rem_category_headings"
                     type="radio"
                     label="JGLOBAL_SHOW_HEADINGS_LABEL"
                     description="JGLOBAL_SHOW_HEADINGS_DESC"
@@ -7247,7 +7247,7 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_category_pagination"
+                    name="show_rem_category_pagination"
                     type="radio"
                     label="JGLOBAL_PAGINATION_LABEL"
                     description="JGLOBAL_PAGINATION_DESC"
@@ -7259,7 +7259,7 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_category_pagination_results"
+                    name="show_rem_category_pagination_results"
                     type="radio"
                     label="JGLOBAL_PAGINATION_RESULTS_LABEL"
                     description="JGLOBAL_PAGINATION_RESULTS_DESC"
@@ -7270,10 +7270,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_category_pagination_limit"
+                    name="show_rem_category_pagination_limit"
                     type="radio"
                     label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
-                    description="COM_REMCA_CATEGORIES_SHOW_PAGINATION_LIMIT_DESC"
+                    description="COM_REMCA_REM_CATEGORIES_SHOW_PAGINATION_LIMIT_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 		        >
@@ -7281,10 +7281,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="category_num_per_page"
+                    name="rem_category_num_per_page"
                     type="list"
-                    description="COM_REMCA_CATEGORIES_NUM_PER_PAGE_DESC"
-                    label="COM_REMCA_CATEGORIES_NUM_PER_PAGE_LABEL"
+                    description="COM_REMCA_REM_CATEGORIES_NUM_PER_PAGE_DESC"
+                    label="COM_REMCA_REM_CATEGORIES_NUM_PER_PAGE_LABEL"
 			        class="chzn-color"
                     default="5"
                 >
@@ -7299,10 +7299,10 @@
                     <option value="0">JALL</option>
                 </field>
                 <field
-                    name="show_no_categories"
+                    name="show_no_rem_categories"
                     type="radio"
-                    label="COM_REMCA_CATEGORIES_NO_ITEMS_LABEL"
-                    description="COM_REMCA_CATEGORIES_NO_ITEMS_DESC"
+                    label="COM_REMCA_REM_CATEGORIES_NO_ITEMS_LABEL"
+                    description="COM_REMCA_REM_CATEGORIES_NO_ITEMS_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 			    >
@@ -7310,10 +7310,10 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="show_category_add_link"
+                    name="show_rem_category_add_link"
                     type="radio"
                     label="COM_REMCA_SHOW_ADD_LINK_LABEL"
-                    description="COM_REMCA_CATEGORIES_SHOW_ADD_LINK_DESC"
+                    description="COM_REMCA_REM_CATEGORIES_SHOW_ADD_LINK_DESC"
                     class="btn-group btn-group-yesno"
                     default="1"
 		        >
@@ -7321,17 +7321,17 @@
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="list_show_category_date"
+                    name="list_show_rem_category_date"
                     type="radio"
                     label="COM_REMCA_SHOW_DATE_LABEL"
-                    description="COM_REMCA_CATEGORIES_SHOW_DATE_DESC"
+                    description="COM_REMCA_REM_CATEGORIES_SHOW_DATE_DESC"
                     class="btn-group"
                     default="0"
 		        >
                     <option value="0">JHIDE</option>
                 </field>
                 <field
-                    name="category_date_format"
+                    name="rem_category_date_format"
                     type="text"
                     label="JGLOBAL_DATE_FORMAT_LABEL"
                     description="JGLOBAL_DATE_FORMAT_DESC"

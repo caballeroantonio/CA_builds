@@ -28,21 +28,11 @@
 
 defined('_JEXEC') or die;
 
-/**
- * Frontpage View class
- *
- */
 class RemcaViewCategories extends JViewLegacy
 {
-	protected $items;
-	protected $pagination;
-	protected $state;
-	protected $item;
-
-	protected $lead_items = array();
-	protected $intro_items = array();
-	protected $link_items = array();
-
+	protected $state = null;
+	public $parent = null;
+	protected $children = null;
 	/**
 	 * Execute and display a template script.
 	 *
@@ -52,14 +42,10 @@ class RemcaViewCategories extends JViewLegacy
 	 */
 	public function display($tpl = null)
 	{
-		
-		$app = JFactory::getApplication();
+		// Initialise variables
 		$state		= $this->get('State');
-		$params		= $state->params;
-		$items 		= $this->get('Items');
-		$pagination	= $this->get('Pagination');
-			
-		$dispatcher	= JEventDispatcher::getInstance();		
+		$children	= $this->get('Children');
+		$parent		= $this->get('Parent');
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
@@ -68,40 +54,29 @@ class RemcaViewCategories extends JViewLegacy
 			return false;
 		}
 
-		// PREPARE THE DATA
-		// Compute the category slugs and set the trigger events.
-		foreach ($items as $i => &$item)
+		if ($children === false)
 		{
-			// Add router helpers.
-			$item->slug = $item->id;
-			
-			//
-			// Process the remca plugins.
-			//
-			
-			JPluginHelper::importPlugin('remca');
-			$dispatcher->trigger('onCategoryPrepare', array ('com_remca.category', &$item, &$item->params,$i));
-
-			$item->event = new stdClass;
-
-
-			$results = $dispatcher->trigger('onCategoryBeforeDisplay', array('com_remca.category', &$item, &$item->params, $i));
-			$item->event->beforeDisplayCategory = JString::trim(implode("\n", $results));
-
-			$results = $dispatcher->trigger('onCategoryAfterDisplay', array('com_remca.category', &$item, &$item->params,$i));
-			$item->event->afterDisplayCategory = JString::trim(implode("\n", $results));
-
-			$dispatcher = JEventDispatcher::getInstance();
-
+			JError::raiseWarning(500, JText::_('COM_REMCA_ERROR_CATEGORY_NOT_FOUND'));
+			return false;
 		}
+
+		if ($parent == false)
+		{
+			JError::raiseWarning(500, JText::_('COM_REMCA_ERROR_PARENT_CATEGORY_NOT_FOUND'));
+			return false;
+		}
+
+		$params = &$state->params;
+
+		$children = array($parent->id => $children);
 		
 		//Escape strings for HTML output
 		$this->pageclass_sfx = htmlspecialchars($params->get('pageclass_sfx'));
-		
-		$this->params     = &$params;
-		$this->state      = &$state;
-		$this->items      = &$items;
-		$this->pagination = &$pagination;				
+
+		$this->max_level_categories = $params->get('show_categories_max_level', -1);
+		$this->params = &$params;
+		$this->parent = &$parent;
+		$this->children  = &$children;
 
 		$this->prepareDocument();
 
@@ -113,23 +88,22 @@ class RemcaViewCategories extends JViewLegacy
 	 */
 	protected function prepareDocument()
 	{
-		$app		= JFactory::getApplication();
-		$menus		= $app->getMenu();
-		$lang		= JFactory::getLanguage();		
-		$title 		= null;
-		
+		$app	= JFactory::getApplication();
+		$menus	= $app->getMenu();
+		$lang	= JFactory::getLanguage();		
+		$title	= null;
+
 		// Because the application sets a default page title,
 		// we need to get it from the menu item itself
 		$menu = $menus->getActive();
-		if ($menu  AND $menu->params->get('show_page_heading'))
+		if ($menu)
 		{
 			$this->params->def('page_heading', $this->params->get('page_title', $menu->title));
 		}
 		else
 		{
-			$this->params->def('page_heading', JText::_('COM_REMCA_CATEGORIES'));
+			$this->params->def('page_heading', JText::_('COM_REMCA_CATEGORIES_HEADER'));
 		}
-
 		$title = $this->params->get('page_title', '');
 		if (empty($title))
 		{
@@ -143,6 +117,7 @@ class RemcaViewCategories extends JViewLegacy
 			}
 		}
 		$this->document->setTitle($title);
+		
 		// Get Menu Item meta description, Keywords and robots instruction to insert in page header
 		
 		if ($this->params->get('menu-meta_description'))
@@ -158,18 +133,8 @@ class RemcaViewCategories extends JViewLegacy
 		if ($this->params->get('robots'))
 		{
 			$this->document->setMetadata('robots', $this->params->get('robots'));
-		}	
-		
-		// Add feed links
-		if ($this->params->get('show_feed_link', 1))
-		{
-			$link = '&format=feed&limitstart=';
-			$attribs = array('type' => 'application/rss+xml', 'title' => 'RSS 2.0');
-			$this->document->addHeadLink(JRoute::_($link . '&type=rss'), 'alternate', 'rel', $attribs);
-			$attribs = array('type' => 'application/atom+xml', 'title' => 'Atom 1.0');
-			$this->document->addHeadLink(JRoute::_($link . '&type=atom'), 'alternate', 'rel', $attribs);
 		}
-
+		
 		// Include Helpers
 		JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');	
 	}

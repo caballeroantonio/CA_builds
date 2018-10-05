@@ -587,10 +587,10 @@ abstract class RemcaHelperRoute
 	/**
 	 * @param	integer	The route of the Category
 	 */
-	public static function getCategoryRoute($id, $layout = 'default', $keep_item_id = false)
+	public static function getRem_categoryRoute($id, $layout = 'default', $keep_item_id = false)
 	{
 		$needles = array(
-			'category'  => array((int) $id)
+			'rem_category'  => array((int) $id)
 		);
 		// Remove lead string from the form field value
 		$layout = str_replace('_:', '', $layout);	
@@ -598,12 +598,12 @@ abstract class RemcaHelperRoute
 		if ($layout == '' OR $layout == 'default')
 		{
 			//Create the link
-			$link = 'index.php?option=com_remca&view=category&id='. $id;
+			$link = 'index.php?option=com_remca&view=rem_category&id='. $id;
 		}
 		else
 		{
 			//Create the link with a layout
-			$link = 'index.php?option=com_remca&view=category&layout='.$layout.'&id='. $id;
+			$link = 'index.php?option=com_remca&view=rem_category&layout='.$layout.'&id='. $id;
 		}
 
 		

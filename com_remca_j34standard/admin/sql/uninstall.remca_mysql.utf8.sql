@@ -79,9 +79,9 @@ DELETE FROM `#__menu` WHERE `title`='COM_REMCA_VIDEO_SOURCE' AND `type`='compone
 DROP TABLE IF EXISTS `#__rem_buying_requests`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.buying_request';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_BUYING_REQUESTS' AND `type`='component';
-DROP TABLE IF EXISTS `#__rem_categories`;
-DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.category';
-DELETE FROM `#__menu` WHERE `title`='COM_REMCA_CATEGORIES' AND `type`='component';
+DROP TABLE IF EXISTS `#__rem_rem_categories`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.rem_category';
+DELETE FROM `#__menu` WHERE `title`='COM_REMCA_REM_CATEGORIES' AND `type`='component';
 DROP TABLE IF EXISTS `#__rem_const`;
 DELETE FROM `#__content_types` WHERE `type_alias` = 'com_remca.const';
 DELETE FROM `#__menu` WHERE `title`='COM_REMCA_CONST' AND `type`='component';

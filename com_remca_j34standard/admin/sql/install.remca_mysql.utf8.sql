@@ -452,11 +452,11 @@ CREATE TABLE IF NOT EXISTS `#__rem_buying_requests` (
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
--- Table structure for table `#__rem_categories`
+-- Table structure for table `#__rem_rem_categories`
 --
 
-#DROP TABLE IF EXISTS `#__rem_categories`;
-CREATE TABLE IF NOT EXISTS `#__rem_categories` (
+#DROP TABLE IF EXISTS `#__rem_rem_categories`;
+CREATE TABLE IF NOT EXISTS `#__rem_rem_categories` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `iditem` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'iditem',
   `idcat` INT(10) UNSIGNED  NOT NULL DEFAULT '0' COMMENT 'idcat',
@@ -790,15 +790,15 @@ INSERT INTO `#__content_types` (`type_title`, `type_alias`, `table`, `rules`, `f
 );
         
 --
--- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.category
+-- Unified Content Model (UCM) Content History Options (CHO) Inserts com_remca.rem_category
 --
  INSERT INTO `#__content_types` (`type_title`,`type_alias`,`table`,`rules`,`field_mappings`,`router`,`content_history_options`) VALUES ('category',
-'com_remca.category',
-'{"special":{"dbtable":"#__rem_categories","key":"id","type":"categories","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
+'com_remca.rem_category',
+'{"special":{"dbtable":"#__rem_rem_categories","key":"id","type":"rem_categories","prefix":"remcaTable","config":"array()"},"common":{"dbtable":"#__core_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}',
 '',
 '{"special":[],"common":{"core_content_item_id":"id","core_title":"null","core_state":"null","core_alias":"null","core_created_time":"null","core_modified_time":"null","core_body":"null","core_hits":"null","core_publish_up":"null","core_publish_down":"null","core_access":"null","core_params":"null","core_featured":"null","core_metadata":"null","core_language":"null","core_images":"null","core_urls":"null","core_version":"version","core_ordering":"null","core_metakey":"null","core_metadesc":"null","core_catid":"null","core_xreference":"null","asset_id":"null"}}',
-'remcaHelperRoute::getcategoryRoute',
-'{"formFile":"administrator\/components\/com_remca\/models\/forms\/category.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"iditem","targetTable":"#__rem_houses","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"idcat","targetTable":"#__rem_main_categories","targetColumn":"id","displayColumn":"name"}]}'
+'remcaHelperRoute::getrem_categoryRoute',
+'{"formFile":"administrator\/components\/com_remca\/models\/forms\/rem_category.xml","hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["checked_out","checked_out_time","hits","version"],"convertToInt":["publish_up","publish_down","featured","ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"iditem","targetTable":"#__rem_houses","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"idcat","targetTable":"#__rem_main_categories","targetColumn":"id","displayColumn":"name"}]}'
 );
         
 --

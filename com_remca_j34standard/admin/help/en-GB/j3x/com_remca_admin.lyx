@@ -6568,7 +6568,7 @@ Diagrama entidad relación
 \end_layout
 
 \begin_layout Subsection
-#__rem_categories
+#__rem_rem_categories
 \end_layout
 
 \begin_layout Subparagraph
@@ -6631,7 +6631,7 @@ Descripción
 \begin_inset CommandInset include
 LatexCommand input
 preview true
-filename "category_admin.tex"
+filename "rem_category_admin.tex"
 
 \end_inset
 
@@ -6740,7 +6740,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename der_categories.svg
+	filename der_rem_categories.svg
 	lyxscale 30
 	width 80text%
 
@@ -15410,7 +15410,7 @@ Descripción
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
-filename "category_user.tex"
+filename "rem_category_user.tex"
 
 \end_inset
 
@@ -15502,7 +15502,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_categories.jpg
+	filename D:/projects/my_joomla/com_componentarchitect/components_asset/TSJCDMX/img_manual/view_gridpanel/gridpanel_rem_categories.jpg
 	lyxscale 30
 	width 80col%
 
@@ -15624,7 +15624,7 @@ Blog Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Categories - Single Category Layout"
-target "SERVER?option=com_remca&view=category&id=1"
+target "SERVER?option=com_remca&view=rem_category&id=1"
 
 \end_inset
 
@@ -15670,7 +15670,7 @@ Single Category Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Categories - Single Category Article Layout"
-target "SERVER?option=com_remca&view=category&layout=article&id=1"
+target "SERVER?option=com_remca&view=rem_category&layout=article&id=1"
 
 \end_inset
 
@@ -15716,7 +15716,7 @@ Single Category Article Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "Categories - Create Category"
-target "SERVER?option=com_remca&view=categoryform&layout=edit&id=1"
+target "SERVER?option=com_remca&view=rem_categoryform&layout=edit&id=1"
 
 \end_inset
 

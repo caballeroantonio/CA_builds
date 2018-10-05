@@ -6,18 +6,11 @@ ORDER BY action
 ;
  * */
 
-
-
 Ext.define('remca.store.action', {
     extend: 'Ext.data.Store',
-
-    constructor: function(cfg) {
-        var me = this;
-        cfg = cfg || {};
-        me.callParent([Ext.apply({
-            storeId: 'action',
-            fields:['id', 'value'],
-            data:{'items':[
+    storeId: 'action',
+    
+    data:{'items':[
 {'id': 'Pide',			'value': 'Pide'},
 {'id': 'Ofrece',			'value': 'Ofrece'},
 {'id': '&#8206;',			'value': 'user said'},
@@ -52,14 +45,13 @@ Ext.define('remca.store.action', {
 {'id': 'c_user_removedarg4',		'value': 'user removed phone'},
 {'id': 'delete_message',		'value': '‎Este mensaje fue eliminado.'},
 {'id': 'c_desc',			'value': 'usuario cambió la descripción del grupo'},
-            ]},
-            proxy: {
-                type: 'memory',
-                reader: {
-                    type: 'json',
-                    rootProperty: 'items',//extjs 4.2 and before name is root
-                }
-            }
-        }, cfg)]);
-    }
+    ]},
+    fields:['id', 'value'],
+    proxy: {
+        type: 'memory',
+        reader: {
+            type: 'json',
+            rootProperty: 'items',//extjs 4.2 and before name is root
+        }
+    },
 });

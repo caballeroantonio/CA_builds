@@ -233,11 +233,11 @@ class RemcaHelper extends JHelperContent
 			$active
 		);
 	
-		$active = $view_name == 'categories'? true : false;
+		$active = $view_name == 'rem_categories'? true : false;
 		JHtmlSidebar::addEntry(
-			JText::_('COM_REMCA_CATEGORIES_SUBMENU'),
-			'index.php?option=com_remca&view=categories',
-			$view_name == 'categories',
+			JText::_('COM_REMCA_REM_CATEGORIES_SUBMENU'),
+			'index.php?option=com_remca&view=rem_categories',
+			$view_name == 'rem_categories',
 			$active
 		);
 	

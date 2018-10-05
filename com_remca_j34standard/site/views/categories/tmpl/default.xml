@@ -26,74 +26,386 @@
 
 <metadata>
 	<layout
-	    title="COM_REMCA_CATEGORIES_VIEW_LIST_TITLE"
-	    option="COM_REMCA_CATEGORIES_VIEW_LIST_OPTION"
+	    title="COM_REMCA_CATEGORIES_VIEW_DEFAULT_TITLE"
+	    option="COM_REMCA_CATEGORIES_VIEW_DEFAULT_OPTION"
 	>
         <message>
-			<![CDATA[COM_REMCA_CATEGORIES_VIEW_LIST_DESC]]>
+			<![CDATA[COM_REMCA_CATEGORIES_VIEW_DESC]]>
 		</message>
 	</layout>
+	<!-- Add fields to the request variables for the layout. -->
+	<fields
+	    name="request"
+	>
+		<fieldset
+		    name="request"
+		 >
+			<field
+			    name="id"
+			    type="category"
+				label="JGLOBAL_FIELD_CATEGORIES_CHOOSE_CATEGORY_LABEL"
+                description="JGLOBAL_FIELD_CATEGORIES_CHOOSE_CATEGORY_DESC"
+				extension="com_remca"
+				show_root="true"
+				required="true"
+                addfieldpath="/administrator/components/com_categories/models/fields"
+			/>
+		</fieldset>
+	</fields>
     <!-- Add fields to the parameters object for the layout. -->
     <fields
         name="params"
     >
         <fieldset
-            name="categories_filter_settings"
-            label="COM_REMCA_CATEGORIES_FIELDSET_FILTERS"
-        >
-        </fieldset>
-        <fieldset
-            name="categories_list_settings"
-            label="COM_REMCA_CATEGORIES_LIST_LAYOUT_OPTIONS"
+            name="categories_settings"
+            label="JGLOBAL_CATEGORIES_OPTIONS"
         >
             <field
-                name="category_initial_sort"
-                type="list"
-				label="COM_REMCA_CATEGORIES_ORDER_LABEL"
-				description="COM_REMCA_CATEGORIES_ORDER_DESC"
-			    class="chzn-color"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-            </field>
-            <field
-                name="category_initial_direction"
-                type="radio"
-                label="COM_REMCA_ORDER_DIRECTION_LABEL"
-				description="COM_REMCA_CATEGORIES_ORDER_DIRECTION_DESC"
-				class="btn-group"
-                default="ASC"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="DESC">COM_REMCA_ORDER_DIRECTION_DESCENDING_LABEL</option>
-                <option value="ASC">COM_REMCA_ORDER_DIRECTION_ASCENDING_LABEL</option>
-            </field>
-            <field
-                name="show_category_filter_field"
-                type="list"
-				label="JGLOBAL_FILTER_FIELD_LABEL"
-				description="COM_REMCA_CATEGORIES_FILTER_FIELD_DESC"
-			    class="chzn-color"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="hide">JHIDE</option>
-            </field>
-            <field
-                name="show_category_headings"
-                type="radio"
-                label="JGLOBAL_SHOW_HEADINGS_LABEL"
-				description="JGLOBAL_SHOW_HEADINGS_DESC"
-				class="btn-group"
+			    name="show_base_description"
+			    type="radio"
+				label="JGLOBAL_FIELD_SHOW_BASE_DESCRIPTION_LABEL"
+                description="JGLOBAL_FIELD_SHOW_BASE_DESCRIPTION_DESC"
+                class="btn-group"            
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="show_category_pagination"
+			    name="categories_description"
+			    type="textarea"
+				label="JGLOBAL_FIELD_CATEGORIES_DESC_LABEL"
+                description="JGLOBAL_FIELD_CATEGORIES_DESC_DESC"
+				cols="25"
+				rows="5"
+			/>
+            <field
+			    name="show_empty_categories"
+			    type="radio"
+				label="JGLOBAL_SHOW_EMPTY_CATEGORIES_LABEL"
+                description="COM_REMCA_SHOW_EMPTY_CATEGORIES_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+			    name="show_subcategories_desc"
+			    type="radio"
+			    label="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_LABEL"
+				description="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_categories_max_level"
+                type="list"
+				label="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_LABEL"
+                description="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_DESC"
+			    class="chzn-color"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="-1">JALL</option>
+                <option value="1">J1</option>
+                <option value="2">J2</option>
+                <option value="3">J3</option>
+                <option value="4">J4</option>
+                <option value="5">J5</option>
+            </field>
+            <field
+                name="show_categories_noauth"
+                type="radio"
+                label="COM_REMCA_SHOW_UNAUTH_LINKS_LABEL"
+                description="COM_REMCA_SHOW_CATEGORY_UNAUTH_LINKS_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="items_to_display"
+                type="list"
+			    label="COM_REMCA_CATEGORY_ITEMS_TO_DISPLAY_LABEL"
+    			description="COM_REMCA_CATEGORY_ITEMS_TO_DISPLAY_DESC"
+			    class="chzn-color"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="">JNONE</option>
+                <option value="Inmuebles">COM_REMCA_HOUSES</option>
+                <option value="Entradas Conversaciones Wtsapp ">COM_REMCA_WA_ENTRY_CONVERSATIONS</option>
+
+            </field>
+            <field
+                name="show_categories_num_items"
+                type="radio"
+				label="COM_REMCA_NUMBER_CATEGORY_ITEMS_LABEL"
+                description="COM_REMCA_NUMBER_CATEGORY_ITEMS_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+        </fieldset>
+        <fieldset
+            name="category_settings"
+            label="JGLOBAL_CATEGORY_OPTIONS"
+        >
+            <field
+			    name="show_cat_title"
+			    type="radio"
+				label="JGLOBAL_SHOW_CATEGORY_TITLE"
+                description="JGLOBAL_SHOW_CATEGORY_TITLE_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="cat_page_subheading"
+                type="text"
+				label="JGLOBAL_SUBHEADING_LABEL"
+                description="JGLOBAL_SUBHEADING_DESC"
+				size="20"
+			/>
+            <field
+			    name="show_cat_description"
+			    type="radio"
+				label="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_LABEL"
+                description="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+			    name="show_cat_description_image"
+    			type="radio"
+				label="JGLOBAL_SHOW_CATEGORY_IMAGE_LABEL"
+                description="JGLOBAL_SHOW_CATEGORY_IMAGE_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_empty_cat"
+                type="radio"
+				label="JGLOBAL_SHOW_EMPTY_CATEGORIES_LABEL"
+                description="COM_REMCA_SHOW_EMPTY_CATEGORIES_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_subcat_desc"
+			    type="radio"
+			    label="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_LABEL"
+    			description="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_category_max_level"
+                type="list"
+				label="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_LABEL"
+                description="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_DESC"
+			    class="chzn-color"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="-1">JALL</option>
+                <option value="1">J1</option>
+                <option value="2">J2</option>
+                <option value="3">J3</option>
+                <option value="4">J4</option>
+                <option value="5">J5</option>
+            </field>
+            <field
+                name="show_cat_noauth"
+                type="radio"
+                label="COM_REMCA_SHOW_UNAUTH_LINKS_LABEL"
+                description="COM_REMCA_SHOW_CATEGORY_UNAUTH_LINKS_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="show_cat_num_items"
+                type="radio"
+                label="COM_REMCA_NUMBER_CATEGORY_ITEMS_LABEL"
+                description="COM_REMCA_NUMBER_CATEGORY_ITEMS_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_cat_tags"
+                type="radio"
+                label="COM_REMCA_FIELD_SHOW_CATEGORY_TAGS_LABEL"
+                description="COM_REMCA_FIELD_SHOW_CATEGORY_TAGS_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+        </fieldset>
+        <fieldset
+            name="houses_list_settings"
+            label="COM_REMCA_HOUSES_LIST_LAYOUT_OPTIONS"
+        >
+            <field
+                name="show_house_filter_field"
+                type="list"
+				label="JGLOBAL_FILTER_FIELD_LABEL"
+                description="COM_REMCA_HOUSES_FILTER_FIELD_DESC"
+			    class="chzn-color"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="hide">JHIDE</option>
+                <option value="name">COM_REMCA_FIELD_VALUE_NAME</option>
+                <option value="hits">JGLOBAL_HITS</option>
+            </field>
+            <field
+                name="show_house_headings"
+                type="radio"
+                label="JGLOBAL_SHOW_HEADINGS_LABEL"
+                description="JGLOBAL_SHOW_HEADINGS_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_house_date"
+                type="list"
+				label="COM_REMCA_SHOW_DATE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_DATE_DESC"
+			    class="chzn-color"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="modified">JGLOBAL_MODIFIED</option>
+            </field>
+            <field
+                name="house_date_format"
+                type="text"
+				label="JGLOBAL_DATE_FORMAT_LABEL"
+                description="JGLOBAL_DATE_FORMAT_DESC"
+				size="15"
+			/>
+            <field
+                name="list_show_house_hits"
+                type="radio"
+                label="COM_REMCA_LIST_HITS_LABEL"
+                description="COM_REMCA_HOUSES_LIST_HITS_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_house_site"
+                type="radio"
+                label="COM_REMCA_HOUSES_LIST_SITE_LABEL"
+                description="COM_REMCA_HOUSES_LIST_SITE_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_house_id_country"
+                type="radio"
+                label="COM_REMCA_HOUSES_LIST_ID_COUNTRY_LABEL"
+                description="COM_REMCA_HOUSES_LIST_ID_COUNTRY_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_house_id_lstate"
+                type="radio"
+                label="COM_REMCA_HOUSES_LIST_ID_LSTATE_LABEL"
+                description="COM_REMCA_HOUSES_LIST_ID_LSTATE_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_house_id_lmunicipality"
+                type="radio"
+                label="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_LABEL"
+                description="COM_REMCA_HOUSES_LIST_ID_LMUNICIPALITY_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_house_price"
+                type="radio"
+                label="COM_REMCA_HOUSES_LIST_PRICE_LABEL"
+                description="COM_REMCA_HOUSES_LIST_PRICE_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_house_bathrooms"
+                type="radio"
+                label="COM_REMCA_HOUSES_LIST_BATHROOMS_LABEL"
+                description="COM_REMCA_HOUSES_LIST_BATHROOMS_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_house_bedrooms"
+                type="radio"
+                label="COM_REMCA_HOUSES_LIST_BEDROOMS_LABEL"
+                description="COM_REMCA_HOUSES_LIST_BEDROOMS_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_pagination"
                 type="radio"
 			    label="JGLOBAL_PAGINATION_LABEL"
-			    description="JGLOBAL_PAGINATION_DESC"
-				class="btn-group"
+    			description="JGLOBAL_PAGINATION_DESC"
+                class="btn-group"            
 		    >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="1">JSHOW</option>
@@ -101,32 +413,32 @@
                 <option value="2">JGLOBAL_AUTO</option>
             </field>
             <field
-                name="show_category_pagination_results"
+                name="show_house_pagination_results"
 			    type="radio"
 			    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
-			    description="JGLOBAL_PAGINATION_RESULTS_DESC"
-				class="btn-group"
+    			description="JGLOBAL_PAGINATION_RESULTS_DESC"
+                class="btn-group"            
 		    >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="show_category_pagination_limit"
+                name="show_house_pagination_limit"
                 type="radio"
                 label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
-				description="COM_REMCA_CATEGORIES_SHOW_PAGINATION_LIMIT_DESC"
-				class="btn-group"
+                description="COM_REMCA_HOUSES_SHOW_PAGINATION_LIMIT_DESC"
+                class="btn-group"            
 			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="category_num_per_page"
+                name="house_num_per_page"
                 type="list"
-                label="COM_REMCA_CATEGORIES_NUM_PER_PAGE_LABEL"
-                description="COM_REMCA_CATEGORIES_NUM_PER_PAGE_DESC"
+                label="COM_REMCA_HOUSES_NUM_PER_PAGE_LABEL"
+                description="COM_REMCA_HOUSES_NUM_PER_PAGE_DESC"
 			    class="chzn-color"
             >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -141,93 +453,49 @@
                 <option value="0">JALL</option>
             </field>
             <field
-		        name="show_no_categories"
+                 name="show_no_houses"
+                 type="radio"
+                 label="COM_REMCA_HOUSES_NO_ITEMS_LABEL"
+                 description="COM_REMCA_HOUSES_NO_ITEMS_DESC"
+                 class="btn-group"            
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+		        name="show_house_add_link"
 		        type="radio"
-		        label="COM_REMCA_CATEGORIES_NO_ITEMS_LABEL"
-		        description="COM_REMCA_CATEGORIES_NO_ITEMS_DESC"
-				class="btn-group"
+		        label="COM_REMCA_SHOW_ADD_LINK_LABEL"
+		        description="COM_REMCA_HOUSES_SHOW_ADD_LINK_DESC"
+                class="btn-group"            
 	        >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
             </field>            
-            <field
-		        name="show_category_add_link"
-		        type="radio"
-		        label="COM_REMCA_SHOW_ADD_LINK_LABEL"
-		        description="COM_REMCA_CATEGORIES_SHOW_ADD_LINK_DESC"
-				class="btn-group"
-	        >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
         </fieldset>
         <fieldset
-            name="category_list_field_settings"
-            label="COM_REMCA_CATEGORIES_LIST_FIELD_OPTIONS"
-        >            
-            <field
-		        name="list_show_category_date"
-		        type="list"
-		        label="COM_REMCA_SHOW_DATE_LABEL"
-		        description="COM_REMCA_CATEGORIES_SHOW_DATE_DESC"
-			    class="chzn-color"
-	        >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="category_date_format"
-                type="text"
-				label="JGLOBAL_DATE_FORMAT_LABEL"
-				description="JGLOBAL_DATE_FORMAT_DESC"
-				size="15"
-			/>
-            <field
-                name="list_show_category_iditem"
-                type="radio"
-                label="COM_REMCA_CATEGORIES_LIST_IDITEM_LABEL"
-				description="COM_REMCA_CATEGORIES_LIST_IDITEM_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="list_show_category_idcat"
-                type="radio"
-                label="COM_REMCA_CATEGORIES_LIST_IDCAT_LABEL"
-				description="COM_REMCA_CATEGORIES_LIST_IDCAT_DESC"
-				class="btn-group"
-			>
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-        </fieldset>
-        <fieldset
-            name="category_layout_settings"
-            label="COM_REMCA_CATEGORIES_FIELDSET_LAYOUT"
+            name="house_layout_settings"
+            label="COM_REMCA_HOUSES_FIELDSET_LAYOUT"
         >
             <field
-                name="category_layout"
+                name="house_layout"
                 type="componentlayout"
                 label="JGLOBAL_FIELD_LAYOUT_LABEL"
-				description="COM_REMCA_CATEGORIES_CHOOSE_LAYOUT_DESC"
+                description="COM_REMCA_HOUSES_CHOOSE_LAYOUT_DESC"
                 menuitems="true"
                 extension="com_remca"
-                view="category"
+                view="house"
                 default="_:default"
 		    />
             <field
-                name="spacer1"
-                type="spacer"
-                hr="true"
+                name="spacer2"
+				type="spacer"
+				hr="true"
 			/>
             <field
-                name="show_category_icons"
+                name="show_house_icons"
                 type="radio"
                 label="COM_REMCA_SHOW_ICONS_LABEL"
                 description="COM_REMCA_SHOW_ICONS_DESC"
@@ -239,7 +507,7 @@
                 <option	value="-1">JHIDE</option>
             </field>
             <field
-                name="show_category_print_icon"
+                name="show_house_print_icon"
                 type="radio"
                 label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
                 description="COM_REMCA_SHOW_PRINT_ICON_DESC"
@@ -250,10 +518,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="show_category_email_icon"
+                name="show_house_email_icon"
                 type="radio"
                 label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
-                description="COM_REMCA_CATEGORIES_SHOW_EMAIL_ICON_DESC"
+                description="COM_REMCA_HOUSES_SHOW_EMAIL_ICON_DESC"
                 class="btn-group"            
 		    >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -261,21 +529,21 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-		        name="category_info_block_position"
-		        type="radio"
-		        label="COM_REMCA_CATEGORIES_INFOBLOCK_POSITION_LABEL"
-		        description="COM_REMCA_CATEGORIES_INFOBLOCK_POSITION_DESC"
+				name="house_info_block_position"
+				type="radio"
+				label="COM_REMCA_HOUSES_INFOBLOCK_POSITION_LABEL"
+    			description="COM_REMCA_HOUSES_INFOBLOCK_POSITION_DESC"
                 class="btn-group"            
-	        >
+			>
                 <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="0">COM_REMCA_VALUE_ABOVE</option>
                 <option value="1">COM_REMCA_VALUE_BELOW</option>
             </field>            
             <field
-                name="keep_category_itemid"
+                name="keep_house_itemid"
                 type="radio"
                 label="COM_REMCA_KEEP_ITEMID_LABEL"
-                description="COM_REMCA_CATEGORIES_KEEP_ITEMID_DESC"
+                description="COM_REMCA_HOUSES_KEEP_ITEMID_DESC"
                 class="btn-group"            
 		    >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -283,10 +551,10 @@
                 <option	value="0">JNO</option>
             </field>
             <field
-                name="show_category_navigation"
+                name="show_house_navigation"
                 type="radio"
                 label="COM_REMCA_SHOW_NAVIGATION_LABEL"
-                description="COM_REMCA_CATEGORIES_SHOW_NAVIGATION_DESC"
+                description="COM_REMCA_HOUSES_SHOW_NAVIGATION_DESC"
                 class="btn-group"            
             >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -294,15 +562,10 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="spacer2"
-                type="spacer"
-                hr="true"
-			/>
-            <field
-                name="show_category_readmore"
+                name="show_house_category_breadcrumb"
                 type="radio"
-                label="COM_REMCA_SHOW_READMORE_LABEL"
-                description="COM_REMCA_CATEGORIES_SHOW_READMORE_DESC"
+                label="COM_REMCA_SHOW_CATEGORY_BREADCRUMB_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_CATEGORY_BREADCRUMB_DESC"
                 class="btn-group"            
 		    >
                 <option value="">JGLOBAL_USE_GLOBAL</option>
@@ -310,70 +573,1194 @@
                 <option value="0">JHIDE</option>
             </field>
             <field
-                name="category_readmore_limit"
+                name="limit_category_house_navigation"
+                type="radio"
+                label="COM_REMCA_LIMIT_CATEGORY_NAVIGATION_LABEL"
+                description="COM_REMCA_HOUSES_LIMIT_CATEGORY_NAVIGATION_DESC"
+                class="btn-group"            
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="spacer2"
+                type="spacer"
+                hr="true"
+			/>
+            <field
+                name="show_house_readmore"
+                type="radio"
+                label="COM_REMCA_SHOW_READMORE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_READMORE_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="house_readmore_limit"
                 type="text"
                 label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
-                description="COM_REMCA_CATEGORIES_SHOW_READMORE_LIMIT_DESC"
+                description="COM_REMCA_HOUSES_SHOW_READMORE_LIMIT_DESC"
                 default="100"
-	        />
+		    />
+            <field
+                name="show_house_readmore_name"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_READMORE_NAME_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_READMORE_NAME_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
         </fieldset>
         <fieldset
-            name="category_field_settings"
-	        label="COM_REMCA_CATEGORIES_FIELDSET_FIELDS"
+            name="house_field_settings"
+			label="COM_REMCA_HOUSES_FIELDSET_FIELDS"
+	    >
+            <field
+                name="show_house_name"
+                type="radio"
+                label="COM_REMCA_SHOW_NAME_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_NAME_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="link_house_names"
+                type="radio"
+                label="COM_REMCA_LINKED_NAMES_LABEL"
+                description="COM_REMCA_HOUSES_LINKED_NAMES_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="show_house_image"
+                type="radio"
+                label="COM_REMCA_SHOW_IMAGE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_IMAGE_DESC"
+                class="btn-group"            
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_image_float"
+                type="radio"
+                label="COM_REMCA_SHOW_IMAGE_FLOAT_LABEL"
+                description="COM_REMCA_SHOW_IMAGE_FLOAT_DESC"
+                class="btn-group"            
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="right">COM_REMCA_VALUE_FLOAT_RIGHT</option>
+                <option value="left">COM_REMCA_VALUE_FLOAT_LEFT</option>
+                <option value="none">COM_REMCA_VALUE_FLOAT_NONE</option>
+            </field>
+            <field
+                name="show_house_image_width"
+                type="text"
+                label="COM_REMCA_SHOW_IMAGE_WIDTH_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_IMAGE_WIDTH_DESC"
+                class="validate-numeric"
+                size="5"
+             />
+            <field
+                name="show_house_image_height"
+                type="text"
+                label="COM_REMCA_SHOW_IMAGE_HEIGHT_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_IMAGE_HEIGHT_DESC"
+                class="validate-numeric"
+                size="5"
+             />
+            <field
+                name="spacer3"
+                type="spacer"
+                hr="true"
+			/>
+            <field
+                name="show_house_category"
+                type="radio"
+                label="COM_REMCA_SHOW_CATEGORY_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_CATEGORY_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="link_house_category"
+                type="radio"
+                label="COM_REMCA_LINK_CATEGORY_LABEL"
+                description="COM_REMCA_HOUSES_LINK_CATEGORY_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="show_house_parent_category"
+                type="radio"
+                label="COM_REMCA_SHOW_PARENT_CATEGORY_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_PARENT_CATEGORY_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="link_house_parent_category"
+                type="radio"
+                label="COM_REMCA_LINK_PARENT_CATEGORY_LABEL"
+                description="COM_REMCA_HOUSES_LINK_PARENT_CATEGORY_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="spacer4"
+                type="spacer"
+                hr="true"
+			/>
+            <field
+                name="show_house_modified"
+                type="radio"
+                label="COM_REMCA_SHOW_MODIFIED_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_MODIFIED_DESC"
+                class="btn-group"            
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_hits"
+                type="radio"
+                label="COM_REMCA_SHOW_HITS_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_HITS_DESC"
+                class="btn-group"            
+             >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_vote"
+                type="radio"
+                label="COM_REMCA_SHOW_VOTE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_VOTE_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_share"
+                type="radio"
+                label="COM_REMCA_SHOW_SHARE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_SHARE_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_site"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_SITE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_SITE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_id_country"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_COUNTRY_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_id_lstate"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_LSTATE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_LSTATE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_sid"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_SID_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_SID_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_id_lmunicipality"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_LMUNICIPALITY_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_associate_house"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ASSOCIATE_HOUSE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_houseid"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_HOUSEID_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_HOUSEID_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_id_rent"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_RENT_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_link"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_LINK_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_LINK_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_listing_type"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_LISTING_TYPE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_LISTING_TYPE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_price"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_PRICE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_PRICE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_id_currency"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ID_CURRENCY_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ID_CURRENCY_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_hzipcode"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_HZIPCODE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_HZIPCODE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_hlocation"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_HLOCATION_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_HLOCATION_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_hlatitude"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_HLATITUDE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_HLATITUDE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_hlongitude"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_HLONGITUDE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_HLONGITUDE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_map_zoom"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_MAP_ZOOM_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_MAP_ZOOM_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_rooms"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ROOMS_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ROOMS_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_bathrooms"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_BATHROOMS_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_BATHROOMS_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_bedrooms"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_BEDROOMS_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_BEDROOMS_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_contacts"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_CONTACTS_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_CONTACTS_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_listing_status"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_LISTING_STATUS_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_LISTING_STATUS_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_property_type"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_PROPERTY_TYPE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_PROPERTY_TYPE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_year"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_YEAR_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_YEAR_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_agent"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_AGENT_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_AGENT_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_area_unit"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_AREA_UNIT_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_AREA_UNIT_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_land_area"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_LAND_AREA_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_LAND_AREA_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_land_area_unit"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_LAND_AREA_UNIT_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_LAND_AREA_UNIT_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_expiration_date"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_EXPIRATION_DATE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_EXPIRATION_DATE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_lot_size"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_LOT_SIZE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_LOT_SIZE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_house_size"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_HOUSE_SIZE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_HOUSE_SIZE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_garages"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_GARAGES_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_GARAGES_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_date"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_DATE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_DATE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_edok_link"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_EDOK_LINK_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_EDOK_LINK_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_owneremail"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_OWNEREMAIL_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_OWNEREMAIL_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_featured_clicks"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_FEATURED_CLICKS_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_FEATURED_CLICKS_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_featured_shows"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_FEATURED_SHOWS_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_FEATURED_SHOWS_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_pixUpdtedDt"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_PIXUPDTEDDT_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_PIXUPDTEDDT_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_extra1"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA1_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA1_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_extra2"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA2_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA2_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_extra3"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA3_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA3_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_extra4"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA4_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA4_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_extra5"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA5_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA5_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_extra6"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA6_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA6_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_extra7"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA7_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA7_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_extra8"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA8_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA8_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_extra9"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA9_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA9_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_extra10"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA10_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_EXTRA10_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_energy_value"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_ENERGY_VALUE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_ENERGY_VALUE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_climate_value"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_CLIMATE_VALUE_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_CLIMATE_VALUE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_owner_id"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_OWNER_ID_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_OWNER_ID_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_house_photos"
+                type="radio"
+                label="COM_REMCA_HOUSES_SHOW_FIELD_PHOTOS_LABEL"
+                description="COM_REMCA_HOUSES_SHOW_FIELD_PHOTOS_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+        </fieldset>
+        <fieldset
+            name="wa_entry_conversations_list_settings"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_LAYOUT_OPTIONS"
+        >
+            <field
+                name="show_wa_entry_conversation_filter_field"
+                type="list"
+				label="JGLOBAL_FILTER_FIELD_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_FILTER_FIELD_DESC"
+			    class="chzn-color"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="hide">JHIDE</option>
+                <option value="created_by">COM_REMCA_FIELD_VALUE_CREATED_BY</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_headings"
+                type="radio"
+                label="JGLOBAL_SHOW_HEADINGS_LABEL"
+                description="JGLOBAL_SHOW_HEADINGS_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_wa_entry_conversation_date"
+                type="list"
+				label="COM_REMCA_SHOW_DATE_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_DATE_DESC"
+			    class="chzn-color"
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="created">JGLOBAL_CREATED</option>
+            </field>
+            <field
+                name="wa_entry_conversation_date_format"
+                type="text"
+				label="JGLOBAL_DATE_FORMAT_LABEL"
+                description="JGLOBAL_DATE_FORMAT_DESC"
+				size="15"
+			/>
+            <field
+                name="list_show_wa_entry_conversation_created_by"
+                type="radio"
+				label="COM_REMCA_LIST_CREATED_BY_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_CREATED_BY_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="list_show_wa_entry_conversation_action"
+                type="radio"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_ACTION_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIST_ACTION_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_pagination"
+                type="radio"
+			    label="JGLOBAL_PAGINATION_LABEL"
+    			description="JGLOBAL_PAGINATION_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+                <option value="2">JGLOBAL_AUTO</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_pagination_results"
+			    type="radio"
+			    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+    			description="JGLOBAL_PAGINATION_RESULTS_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_pagination_limit"
+                type="radio"
+                label="COM_REMCA_SHOW_PAGINATION_LIMIT_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_PAGINATION_LIMIT_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="wa_entry_conversation_num_per_page"
+                type="list"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_PER_PAGE_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_NUM_PER_PAGE_DESC"
+			    class="chzn-color"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="5">J5</option>
+                <option value="10">J10</option>
+                <option value="15">J15</option>
+                <option value="20">J20</option>
+                <option value="25">J25</option>
+                <option value="30">J30</option>
+                <option value="50">J50</option>
+                <option value="100">J100</option>
+                <option value="0">JALL</option>
+            </field>
+            <field
+                 name="show_no_wa_entry_conversations"
+                 type="radio"
+                 label="COM_REMCA_WA_ENTRY_CONVERSATIONS_NO_ITEMS_LABEL"
+                 description="COM_REMCA_WA_ENTRY_CONVERSATIONS_NO_ITEMS_DESC"
+                 class="btn-group"            
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+		        name="show_wa_entry_conversation_add_link"
+		        type="radio"
+		        label="COM_REMCA_SHOW_ADD_LINK_LABEL"
+		        description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_ADD_LINK_DESC"
+                class="btn-group"            
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>            
+        </fieldset>
+        <fieldset
+            name="wa_entry_conversation_layout_settings"
+            label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELDSET_LAYOUT"
+        >
+            <field
+                name="wa_entry_conversation_layout"
+                type="componentlayout"
+                label="JGLOBAL_FIELD_LAYOUT_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_CHOOSE_LAYOUT_DESC"
+                menuitems="true"
+                extension="com_remca"
+                view="wa_entry_conversation"
+                default="_:default"
+		    />
+            <field
+                name="spacer2"
+				type="spacer"
+				hr="true"
+			/>
+            <field
+                name="show_wa_entry_conversation_icons"
+                type="radio"
+                label="COM_REMCA_SHOW_ICONS_LABEL"
+                description="COM_REMCA_SHOW_ICONS_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">COM_REMCA_SHOW_ICONS_VALUE_TEXT</option>
+                <option	value="1">COM_REMCA_SHOW_ICONS_VALUE_ICONS</option>
+                <option	value="-1">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_print_icon"
+                type="radio"
+                label="COM_REMCA_SHOW_PRINT_ICON_LABEL"
+                description="COM_REMCA_SHOW_PRINT_ICON_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_email_icon"
+                type="radio"
+                label="COM_REMCA_SHOW_EMAIL_ICON_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_EMAIL_ICON_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+				name="wa_entry_conversation_info_block_position"
+				type="radio"
+				label="COM_REMCA_WA_ENTRY_CONVERSATIONS_INFOBLOCK_POSITION_LABEL"
+    			description="COM_REMCA_WA_ENTRY_CONVERSATIONS_INFOBLOCK_POSITION_DESC"
+                class="btn-group"            
+			>
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">COM_REMCA_VALUE_ABOVE</option>
+                <option value="1">COM_REMCA_VALUE_BELOW</option>
+            </field>            
+            <field
+                name="keep_wa_entry_conversation_itemid"
+                type="radio"
+                label="COM_REMCA_KEEP_ITEMID_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_KEEP_ITEMID_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_navigation"
+                type="radio"
+                label="COM_REMCA_SHOW_NAVIGATION_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_NAVIGATION_DESC"
+                class="btn-group"            
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_category_breadcrumb"
+                type="radio"
+                label="COM_REMCA_SHOW_CATEGORY_BREADCRUMB_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CATEGORY_BREADCRUMB_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="limit_category_wa_entry_conversation_navigation"
+                type="radio"
+                label="COM_REMCA_LIMIT_CATEGORY_NAVIGATION_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LIMIT_CATEGORY_NAVIGATION_DESC"
+                class="btn-group"            
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="spacer2"
+                type="spacer"
+                hr="true"
+			/>
+            <field
+                name="show_wa_entry_conversation_readmore"
+                type="radio"
+                label="COM_REMCA_SHOW_READMORE_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_READMORE_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="wa_entry_conversation_readmore_limit"
+                type="text"
+                label="COM_REMCA_SHOW_READMORE_LIMIT_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_READMORE_LIMIT_DESC"
+                default="100"
+		    />
+        </fieldset>
+        <fieldset
+            name="wa_entry_conversation_field_settings"
+			label="COM_REMCA_WA_ENTRY_CONVERSATIONS_FIELDSET_FIELDS"
 	    >
             <field
                 name="spacer3"
                 type="spacer"
                 hr="true"
-	        />
+			/>
             <field
-                name="show_category_admin"
+                name="show_wa_entry_conversation_category"
                 type="radio"
-                label="COM_REMCA_SHOW_ADMIN_LABEL"
-                description="COM_REMCA_CATEGORIES_SHOW_ADMIN_DESC"
-                class="btn-group"
-           >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option value="1">JSHOW</option>
-                <option value="0">JHIDE</option>
-            </field>
-            <field
-                name="show_category_iditem"
-                type="radio"
-                label="COM_REMCA_CATEGORIES_SHOW_FIELD_IDITEM_LABEL"
-                description="COM_REMCA_CATEGORIES_SHOW_FIELD_IDITEM_DESC"
-                class="btn-group"
-           >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option	value="1">JSHOW</option>
-                <option	value="0">JHIDE</option>
-            </field>
-            <field
-                name="show_category_idcat"
-                type="radio"
-                label="COM_REMCA_CATEGORIES_SHOW_FIELD_IDCAT_LABEL"
-                description="COM_REMCA_CATEGORIES_SHOW_FIELD_IDCAT_DESC"
-                class="btn-group"
-           >
-                <option value="">JGLOBAL_USE_GLOBAL</option>
-                <option	value="1">JSHOW</option>
-                <option	value="0">JHIDE</option>
-            </field>
-        </fieldset>
-        <fieldset
-	        name="integration"
-            label="JGLOBAL_INTEGRATION_LABEL"
-	    >
-            <field
-		        name="show_feed_link"
-		        type="radio"
-			    label="COM_REMCA_SHOW_FEED_LINK_LABEL"
-			    description="COM_REMCA_SHOW_FEED_LINK_DESC"
-                class="btn-group"
-			    default="1"
+                label="COM_REMCA_SHOW_CATEGORY_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CATEGORY_DESC"
+                class="btn-group"            
 		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
                 <option value="1">JSHOW</option>
                 <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="link_wa_entry_conversation_category"
+                type="radio"
+                label="COM_REMCA_LINK_CATEGORY_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LINK_CATEGORY_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_parent_category"
+                type="radio"
+                label="COM_REMCA_SHOW_PARENT_CATEGORY_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_PARENT_CATEGORY_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="link_wa_entry_conversation_parent_category"
+                type="radio"
+                label="COM_REMCA_LINK_PARENT_CATEGORY_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LINK_PARENT_CATEGORY_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="spacer4"
+                type="spacer"
+                hr="true"
+			/>
+            <field
+                name="show_wa_entry_conversation_created_by"
+                type="radio"
+                label="COM_REMCA_SHOW_CREATED_BY_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CREATED_BY_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="link_wa_entry_conversation_created_by"
+                type="radio"
+                label="COM_REMCA_LINK_CREATED_BY_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_LINK_CREATED_BY_DESC"
+                class="btn-group"            
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JYES</option>
+                <option	value="0">JNO</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_created_by_alias"
+                type="radio"
+			    label="COM_REMCA_SHOW_CREATED_BY_ALIAS_LABEL"
+    			description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CREATED_BY_ALIAS_DESC"
+				class="btn-group btn-group-yesno"
+		    >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>            
+            <field
+                name="show_wa_entry_conversation_created"
+                type="radio"
+                label="COM_REMCA_SHOW_CREATED_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_CREATED_DESC"
+                class="btn-group"            
+	        >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_phone"
+                type="radio"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_PHONE_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_id_wa_title_conversation"
+                type="radio"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ID_WA_TITLE_CONVERSATION_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
+            </field>
+            <field
+                name="show_wa_entry_conversation_action"
+                type="radio"
+                label="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ACTION_LABEL"
+                description="COM_REMCA_WA_ENTRY_CONVERSATIONS_SHOW_FIELD_ACTION_DESC"
+                class="btn-group"            
+           >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="1">JSHOW</option>
+                <option	value="0">JHIDE</option>
             </field>
         </fieldset>
     </fields>

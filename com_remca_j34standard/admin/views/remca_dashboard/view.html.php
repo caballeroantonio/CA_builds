@@ -163,10 +163,10 @@ class RemcaViewRemca_Dashboard extends JViewLegacy
 			'text'=>JText::_('COM_REMCA_BUYING_REQUESTS'),
 			'desc'=>JText::_('COM_REMCA_BUYING_REQUEST_DESCRIPTION')
 			);
-		$buttons[] = array('link'=>'index.php?option=com_remca&view=categories',
-			'object'=>'categories',
-			'text'=>JText::_('COM_REMCA_CATEGORIES'),
-			'desc'=>JText::_('COM_REMCA_CATEGORY_DESCRIPTION')
+		$buttons[] = array('link'=>'index.php?option=com_remca&view=rem_categories',
+			'object'=>'rem_categories',
+			'text'=>JText::_('COM_REMCA_REM_CATEGORIES'),
+			'desc'=>JText::_('COM_REMCA_REM_CATEGORY_DESCRIPTION')
 			);
 		$buttons[] = array('link'=>'index.php?option=com_remca&view=const',
 			'object'=>'const',

@@ -119,11 +119,11 @@ ALTER TABLE `#__rem_buying_requests` ADD CONSTRAINT `fk2920_id_user`
 FOREIGN KEY (`id_user`) REFERENCES `#__users` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_categories` ADD CONSTRAINT `fk2927_iditem`
+ALTER TABLE `#__rem_rem_categories` ADD CONSTRAINT `fk2927_iditem`
 FOREIGN KEY (`iditem`) REFERENCES `#__rem_houses` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										
-ALTER TABLE `#__rem_categories` ADD CONSTRAINT `fk2928_idcat`
+ALTER TABLE `#__rem_rem_categories` ADD CONSTRAINT `fk2928_idcat`
 FOREIGN KEY (`idcat`) REFERENCES `#__rem_main_categories` (`id`)
 ON DELETE RESTRICT ON UPDATE CASCADE;
 										

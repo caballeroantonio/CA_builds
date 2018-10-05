@@ -114,7 +114,7 @@ edité el menú login para que hiciera redirect a este componente
 			'filter_wishlist_order'=>'CMD','filter_wishlist_order_Dir'=>'CMD','wishlist-filter-search'=>'STRING',
 			'filter_video_source_order'=>'CMD','filter_video_source_order_Dir'=>'CMD','video_source-filter-search'=>'STRING',
 			'filter_buying_request_order'=>'CMD','filter_buying_request_order_Dir'=>'CMD','buying_request-filter-search'=>'STRING',
-			'filter_category_order'=>'CMD','filter_category_order_Dir'=>'CMD','category-filter-search'=>'STRING',
+			'filter_rem_category_order'=>'CMD','filter_rem_category_order_Dir'=>'CMD','rem_category-filter-search'=>'STRING',
 			'filter_const_order'=>'CMD','filter_const_order_Dir'=>'CMD','const-filter-search'=>'STRING',
 			'filter_const_language_order'=>'CMD','filter_const_language_order_Dir'=>'CMD','const_language-filter-search'=>'STRING',
 			'filter_feature_order'=>'CMD','filter_feature_order_Dir'=>'CMD','feature-filter-search'=>'STRING',
@@ -130,6 +130,104 @@ edité el menú login para que hiciera redirect a este componente
 		return $this;
 	}
         
+        /**
+         * aplicar los filtros que vienen del GRID ExtJS
+         * @param array $filter Los filtros que se van a aplicar
+         * @param object $query la referencia del query
+         * @param boolean $seachJoins se relaciona con $thefilter['data']['type'] == 'hasmany' para hacer joins
+         * @todo re-codificar [$query->where("l.] en index.php?option=com_tsjdf_libros2&task=libros.read&store=admin&store=admin&clave=empleados no me gusta que el alias sea 'l'
+         */
+        protected function applyFilter($filter, &$query, $seachJoins = true){
+                /*
+              en $joins pongo los joins para buscar si se repiten
+              l	libro		jtvl_XXX
+              e	expediente	jt_expedientes
+             */
+            $joins = array();
+            if (!is_array($filter))
+                $filter = json_decode($filter, true);
+            foreach ($filter as $filterIndex => $thefilter) {
+                //ExtJS está enviando filter [{"property":"tipojuicio"}], para cargar asincronamente.
+                if (!isset($thefilter['data']))
+                    break;
+                $thefilter['data']['value'] = $this->db->escape($thefilter['data']['value']);
+                switch ($thefilter['data']['type']) {
+                    case 'string':
+                        $query->where("l.{$thefilter['field']} LIKE '%{$thefilter['data']['value']}%'");
+                        break;
+                    case 'date':
+                        switch ($thefilter['data']['comparison']) {
+                            case 'eq':
+                                $query->where("l.{$thefilter['field']} LIKE '{$thefilter['data']['value']}%'");
+                                break;
+                            case 'lt':
+                                $query->where("l.{$thefilter['field']} < '{$thefilter['data']['value']}'");
+                                break;
+                            case 'gt':
+                                $query->where("l.{$thefilter['field']} > '{$thefilter['data']['value']}'");
+                                break;
+                        }
+                        break;
+                    case 'numeric':
+                        switch ($thefilter['data']['comparison']) {
+                            case 'eq':
+                                $query->where("l.{$thefilter['field']} = '{$thefilter['data']['value']}'");
+                                break;
+                            case 'lt':
+                                $query->where("l.{$thefilter['field']} < '{$thefilter['data']['value']}'");
+                                break;
+                            case 'gt':
+                                $query->where("l.{$thefilter['field']} > '{$thefilter['data']['value']}'");
+                                break;
+                        }
+                        break;
+                    case 'list':
+                        $values = explode(',', $thefilter['data']['value']);
+                        foreach ($values as $value) {
+                            $query->where("l.{$thefilter['field']} = {$value}", 'AND');
+                        }
+                        break;
+                    case 'hasmany':
+                        //$hasmany-> id_field, $hasmany->tabla
+                        if ($thefilter['field'] == 'slpartecontenciosa') {
+                            $hasmany = new stdClass();
+                            $hasmany->id_field = 2156;
+                            $hasmany->tabla = 'jt_vslpartescontenciosas';
+
+                            if ($seachJoins && !in_array("e", $joins)) {
+                                array_push($joins, 'e');
+                                $query->join('INNER', 'jt_expedientes e ON l.id_expediente = e.id');
+                            }
+                            if ($seachJoins && !in_array('p', $joins)) {
+                                array_push($joins, 'p');
+                                $query->join('INNER', "{$hasmany->tabla} p ON e.id = p.id_record AND p.id_field = {$hasmany->id_field} ");
+                            }
+                            $query->where("p.{$thefilter['data']['field']} LIKE '%{$thefilter['data']['value']}%' \n", 'AND');
+                        } else if ($thefilter['field'] == 'id_expediente') {
+                            if ($seachJoins && !in_array("e", $joins)) {
+                                array_push($joins, 'e');
+                                $query->join('INNER', 'jt_expedientes e ON l.id_expediente = e.id');
+                            }
+                            $query->where("e.{$thefilter['data']['field']} = '{$thefilter['data']['value']}' \n", 'AND');
+                        } else {
+                            $this->setQuery("SELECT c.id AS id_field, l.tabla, l.view FROM jt3_campos c
+                                                        INNER JOIN jtc_libros l ON l.clave = c.store
+                                                        WHERE c.clave = '{$this->clave}' 
+                                                        AND c.dataType = 'parent'
+                                                        AND c.dataIndex = '{$thefilter['field']}';");
+                            $hasmany = $this->db->loadObject();
+                            if ($seachJoins && !in_array("c{$hasmany->id_field}", $joins)) {
+                                array_push($joins, "c{$hasmany->id_field}");
+                                $query->join('INNER', "{$hasmany->view} c{$hasmany->id_field} ON l.id = c{$hasmany->id_field}.id_record 
+                                                                        AND c{$hasmany->id_field}.id_field = {$hasmany->id_field}");
+                            }
+                            $query->where("c{$hasmany->id_field}.{$thefilter['data']['field']} LIKE '%{$thefilter['data']['value']}%' \n", 'AND');
+                        }
+                        break;
+                }
+            }
+        }
+
         /*        
          * Function that allows download database information
          * @ToDo implementar ACL
@@ -146,10 +244,18 @@ edité el menú login para que hiciera redirect a este componente
             $limit = $input->get('limit', 25, 'uint');
             $model->setState('filter.state', 1);
             $query = $model->getListQuery4Export($limit, $offset);
+            
+            #sort
             $sort = json_decode(JRequest::getVar('sort'),0);
             if($sort){
                 $query->clear('order');
                 $query->order("a.{$sort[0]->property} {$sort[0]->direction}");
+            }
+            
+            #filter
+            $filter = JRequest::getVar('filter');
+            if($filter){
+                $this->applyFilter( $filter, $query);
             }
             
             $result = array('data'=> array(), 'success' => true, 'warning' => false, 'message' => '');

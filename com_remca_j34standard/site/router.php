@@ -669,7 +669,7 @@ class RemcaRouter extends JComponentRouterBase
 					}
 					unset($query['view']);				
 					break;					
-				case 'category':
+				case 'rem_category':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						if($advanced)
@@ -686,7 +686,7 @@ class RemcaRouter extends JComponentRouterBase
 					unset($query['view']);				
 					unset($query['id']);
 					break;
-				case 'categories':
+				case 'rem_categories':
 					if (!isset($query['id']) OR $menu_id != (int) $query['id'] OR $menu_view != $view)
 					{
 						$segments[] = $view;											
@@ -1400,7 +1400,7 @@ class RemcaRouter extends JComponentRouterBase
 				{
 					$vars['view'] = $view;
 				}				
-				if ($item->query['view'] == 'category' OR $view == 'category')
+				if ($item->query['view'] == 'rem_category' OR $view == 'rem_category')
 				{
 					if($advanced)
 					{
@@ -1408,7 +1408,7 @@ class RemcaRouter extends JComponentRouterBase
 							
 						$query = $db->getQuery(true);
 						$query->select($db->quoteName('id'));
-						$query->from($db->quoteName('#__rem_categories'));
+						$query->from($db->quoteName('#__rem_rem_categories'));
 								
 						$db->setQuery($query);
 						$nid = $db->loadResult();
@@ -1420,7 +1420,7 @@ class RemcaRouter extends JComponentRouterBase
 					$vars['id'] = $nid;
 					$vars['view'] = $view;
 				}
-				if ($item->query['view'] == 'categories'OR $view == 'categories')
+				if ($item->query['view'] == 'rem_categories'OR $view == 'rem_categories')
 				{
 					$vars['view'] = $view;
 				}				

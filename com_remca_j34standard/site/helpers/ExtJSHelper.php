@@ -46,37 +46,10 @@ class ExtJSHelper
         $grid = [
             'title' => JText::_('COM_REMCA_WA_ENTRY_CONVERSATIONS'),
             'store' => $this->_object_plural_name,
-/*
-           _tbar_: [
-              { 
-                xtype: 'button', 
-                text: 'Añadir nuevo registro',
-                icon: 'http://localhost/gpcb/resources_20170226/tsjdf_libros/images/add.png',
-                  handler: function(grid, rowIndex, colIndex) {
-                    jQuery('#collapseModal').modal('show');
-                  }
-              }
-            ],
- */
-            'bbar' => [
-                'xtype' => 'pagingtoolbar',
-                'displayInfo' => true,
-                'store' => $this->_object_plural_name,
-                /*_listeners_: {
-                    beforechange: function( pagingtoolbar, page, eOpts){
-                        this.setActiveRecord(null);
-                    },
-                    scope: this
-                },
-                _items_:[
-                    {
-                        xtype: 'printbookbutton',
-                        scope: this,
-                    }
-                ]*/
-            ],
-            'selType' => 'rowmodel',
             'plugins' => [
+                [
+                    'ptype' => 'gridfilters',
+                ],
                 [
                     'ptype' => 'rowediting',
                 ],
@@ -84,31 +57,25 @@ class ExtJSHelper
             'height' => 300,
             'width' => '100%',
             'renderTo' => 'extjs-content',
-            'viewConfig' => [
-                    'loadingText' => 'Espere un momento...',
-            ],
-            
             'id' => 'myGrid',
         ];
         
         $app = [
             'name' => 'remca',
             'stores' => [],
-            'static_stores' => [],
             'paths' => [
                 'remca' => 'media/com_remca/extjs',
             ],
             'launch' => $this->insertAs_Is(<<<EOD
     function() {
 		Ext.getBody().mask("Loading...");
-        for(i = 0; i < this.static_stores.length; i++ ){
-            Ext.create("remca.store."+this.static_stores[i]);
-        }
         for(i = 0; i < this.stores.length; i++ ){
-                Ext.create(this.stores[i]).load({
-                scope: this,
-                callback: this.onStoresReady
-            });
+                store = Ext.create(this.stores[i]);
+				if(!store.data.length)
+					store.load({
+						scope: this,
+						callback: this.onStoresReady
+					});
         }
     }
 EOD
@@ -133,6 +100,7 @@ EOD
                     'dataIndex' => $name,
                     'text' => $label,
                     'tooltip'=> $description,
+                    'filter' => [],
                 ];
                 
                 $field = [
@@ -242,7 +210,7 @@ EOD
                             'valueField' => 'id',
                             'allowBlank' => !$required,
                         ];
-                        $app['static_stores'][] = $name;
+                        $app['stores'][] = $name;
                         break;
                     default :
                         $vars = explode('_', $type, 2);
